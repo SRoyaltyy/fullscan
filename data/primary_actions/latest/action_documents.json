@@ -1,5 +1,616 @@
 [
   {
+    "title": "Metamitron; Pesticide Tolerance",
+    "url": "https://www.federalregister.gov/documents/2026/11/20/2026-23667/metamitron-pesticide-tolerance",
+    "native_id": "2026-23667",
+    "published_at": "2026-11-20T00:00:00+00:00",
+    "published_raw": "2026-11-20",
+    "document_type": "Rule",
+    "issuer": "Environmental Protection Agency",
+    "issuer_ids": [
+      "us-fr:145"
+    ],
+    "summary": "This regulation establishes a tolerance action for residues of metamitron (CASRN 41394-05-2) in or on the raw agricultural commodity (RAC) of beet, sugar, roots. Under the Federal Food, Drug, and Cosmetic Act (FFDCA), ADAMA Agan Ltd. c/o Makhteshim Agan of North America, Inc. (d/b/a ADAMA) submitted a petition to EPA requesting that EPA establish a maximum permissible level for residues of this pesticide in or on the identified commodity.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-20/pdf/2026-23667.pdf",
+    "source_metadata": {
+      "document_type": "Rule",
+      "document_stage": "final_rule_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Environmental Protection Agency",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 11570,
+    "first_seen": "2026-11-20T08:35:54.872966+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Safety Zone; Annual Fireworks Display Within the Sector Columbia River Captain of the Port Zone, Richland, WA",
+    "url": "https://www.federalregister.gov/documents/2026/11/20/2026-23676/safety-zone-annual-fireworks-display-within-the-sector-columbia-river-captain-of-the-port-zone",
+    "native_id": "2026-23676",
+    "published_at": "2026-11-20T00:00:00+00:00",
+    "published_raw": "2026-11-20",
+    "document_type": "Rule",
+    "issuer": "Homeland Security Department; Coast Guard",
+    "issuer_ids": [
+      "us-fr:227",
+      "us-fr:53"
+    ],
+    "summary": "The Coast Guard will enforce a safety zone for the City of Richland Lighted Boat Parade Fireworks on December 5, 2026, to provide for the safety of life on navigable waters during a fireworks display. Our regulation for the fireworks display within the Northwest Coast Guard District designates safety zones and identifies approximate dates for these events. Specific date and times are identified in this notice. These regulations prohibit persons and vessels from entering or remaining in the safety zone unless authorized by the Captain of the Port Sector Columbia River or a Designated Representative.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-20/pdf/2026-23676.pdf",
+    "source_metadata": {
+      "document_type": "Rule",
+      "document_stage": "final_rule_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Homeland Security Department; Coast Guard",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 11561,
+    "first_seen": "2026-11-20T08:35:54.872966+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Airworthiness Directives; Airbus Helicopters Deutschland GmbH (AHD) Helicopters",
+    "url": "https://www.federalregister.gov/documents/2026/11/20/2026-23679/airworthiness-directives-airbus-helicopters-deutschland-gmbh-ahd-helicopters",
+    "native_id": "2026-23679",
+    "published_at": "2026-11-20T00:00:00+00:00",
+    "published_raw": "2026-11-20",
+    "document_type": "Rule",
+    "issuer": "Transportation Department; Federal Aviation Administration",
+    "issuer_ids": [
+      "us-fr:492",
+      "us-fr:159"
+    ],
+    "summary": "The FAA is adopting a new airworthiness directive (AD) for all Airbus Helicopters Deutschland GmbH (AHD) Model EC135P1, EC135P2, EC135P2+, EC135P3, EC135T1, EC135T2, EC135T2+, EC135T3, and EC635T2+ helicopters. This AD was prompted by a report of a separated tail rotor blade (TRB) assembly due to a crack caused by intergranular corrosion. This AD requires repetitively inspecting a certain TRB assembly for cracks and, depending on the results, removing any cracked TRB assembly from service and replacing an affected part as terminating action for the repetitive inspections. This AD also prohibits installing a certain TRB assembly on any helicopter unless certain requirements are met. The FAA is issuing this AD to address the unsafe condition on these products.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-20/pdf/2026-23679.pdf",
+    "source_metadata": {
+      "document_type": "Rule",
+      "document_stage": "final_rule_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Transportation Department; Federal Aviation Administration",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 11558,
+    "first_seen": "2026-11-20T08:35:54.872966+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Reef Fish Fishery in the Gulf of America; 2026 Recreational Private Angling Component Closure for Red Snapper in Federal Waters off Texas",
+    "url": "https://www.federalregister.gov/documents/2026/11/20/2026-23681/reef-fish-fishery-in-the-gulf-of-america-2026-recreational-private-angling-component-closure-for-red",
+    "native_id": "2026-23681",
+    "published_at": "2026-11-20T00:00:00+00:00",
+    "published_raw": "2026-11-20",
+    "document_type": "Rule",
+    "issuer": "Commerce Department; National Oceanic and Atmospheric Administration",
+    "issuer_ids": [
+      "us-fr:54",
+      "us-fr:361"
+    ],
+    "summary": "NMFS closes the 2026 recreational fishing season for the red snapper private angling component in Federal waters of the Gulf of America (Gulf) off Texas. The recreational private angling component in Federal waters off Texas is closed on November 21, 2026, and this closure continues through the remainder of 2026. This red snapper closure is necessary to prevent the private angling component from exceeding the annual catch limit (ACL) in the Texas regional management area and to prevent overfishing of red snapper.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-20/pdf/2026-23681.pdf",
+    "source_metadata": {
+      "document_type": "Rule",
+      "document_stage": "final_rule_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Commerce Department; National Oceanic and Atmospheric Administration",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 11557,
+    "first_seen": "2026-11-20T08:35:54.872966+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Airworthiness Directives; Airbus Helicopters",
+    "url": "https://www.federalregister.gov/documents/2026/11/20/2026-23684/airworthiness-directives-airbus-helicopters",
+    "native_id": "2026-23684",
+    "published_at": "2026-11-20T00:00:00+00:00",
+    "published_raw": "2026-11-20",
+    "document_type": "Rule",
+    "issuer": "Transportation Department; Federal Aviation Administration",
+    "issuer_ids": [
+      "us-fr:492",
+      "us-fr:159"
+    ],
+    "summary": "The FAA is superseding Airworthiness Directive (AD) 2025-13- 09, which applied to all Airbus Helicopters Model AS-365N2, AS 365 N3, EC 155B, EC155B1, SA-365N, and SA-365N1 helicopters. AD 2025-13-09 required inspecting the tightening torque, reporting the results of the inspections, and, depending on the results of the inspection, taking corrective action. Since the FAA issued AD 2025-13-09, the manufacturer determined that additional inspections of the main rotor (MR) servo-controls nut torque are required. This AD retains some of the actions of AD 2025-13-09 and requires additional inspections and, depending on the results of the inspection, corrective actions. This AD also requires reporting certain information to the manufacturer. The FAA is issuing this AD to address the unsafe condition on these products.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-20/pdf/2026-23684.pdf",
+    "source_metadata": {
+      "document_type": "Rule",
+      "document_stage": "final_rule_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Transportation Department; Federal Aviation Administration",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 11554,
+    "first_seen": "2026-11-20T08:35:54.872966+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Air Plan Approval; Kentucky; Campbell-Clermont Area Maintenance Plan for the 2010 1-Hour SO2 NAAQS; Withdrawal of Direct Final Rule",
+    "url": "https://www.federalregister.gov/documents/2026/11/20/2026-23685/air-plan-approval-kentucky-campbell-clermont-area-maintenance-plan-for-the-2010-1-hour-so2-naaqs",
+    "native_id": "2026-23685",
+    "published_at": "2026-11-20T00:00:00+00:00",
+    "published_raw": "2026-11-20",
+    "document_type": "Rule",
+    "issuer": "Environmental Protection Agency",
+    "issuer_ids": [
+      "us-fr:145"
+    ],
+    "summary": "Due to the receipt of adverse comments, the U.S Environmental Protection Agency (EPA or Agency) is withdrawing the September 25, 2026, direct final rule that approved the second 10-year maintenance plan for the Kentucky portion of the Campbell-Clermont, Kentucky-Ohio maintenance area (\"Campbell-Clermont, KY-OH Area\" or \"Area\") for the 2010 1- hour sulfur dioxide (SO 2 ) National Ambient Air Quality Standards (NAAQS).",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-20/pdf/2026-23685.pdf",
+    "source_metadata": {
+      "document_type": "Rule",
+      "document_stage": "final_rule_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Environmental Protection Agency",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 11553,
+    "first_seen": "2026-11-20T08:35:54.872966+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Air Plan Approval; Arkansas; Update to Materials Incorporated by Reference",
+    "url": "https://www.federalregister.gov/documents/2026/11/20/2026-23686/air-plan-approval-arkansas-update-to-materials-incorporated-by-reference",
+    "native_id": "2026-23686",
+    "published_at": "2026-11-20T00:00:00+00:00",
+    "published_raw": "2026-11-20",
+    "document_type": "Rule",
+    "issuer": "Environmental Protection Agency",
+    "issuer_ids": [
+      "us-fr:145"
+    ],
+    "summary": "The Environmental Protection Agency (EPA) is updating the materials that are incorporated by reference (IBR) into the Arkansas State Implementation Plan (SIP). The regulations affected by this update have been previously submitted by the State of Arkansas and approved by the EPA. This update affects the materials that are available for public inspection at the EPA Regional Office and the National Archives and Records Administration.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-20/pdf/2026-23686.pdf",
+    "source_metadata": {
+      "document_type": "Rule",
+      "document_stage": "final_rule_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Environmental Protection Agency",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 11552,
+    "first_seen": "2026-11-20T08:35:54.872966+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Airworthiness Directives; The Boeing Company Airplanes",
+    "url": "https://www.federalregister.gov/documents/2026/11/20/2026-23688/airworthiness-directives-the-boeing-company-airplanes",
+    "native_id": "2026-23688",
+    "published_at": "2026-11-20T00:00:00+00:00",
+    "published_raw": "2026-11-20",
+    "document_type": "Rule",
+    "issuer": "Transportation Department; Federal Aviation Administration",
+    "issuer_ids": [
+      "us-fr:492",
+      "us-fr:159"
+    ],
+    "summary": "The FAA is adopting a new airworthiness directive (AD) for all The Boeing Company Model 757 airplanes. This AD was prompted by reports of crack damage at existing reinforcing repairs in the fuselage frame lower lobe areas in certain sections. This AD requires doing an inspection for any existing reinforcing repairs in the fuselage frame lower lobe areas in certain sections and applicable on-condition actions. The FAA is issuing this AD to address the unsafe condition on these products.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-20/pdf/2026-23688.pdf",
+    "source_metadata": {
+      "document_type": "Rule",
+      "document_stage": "final_rule_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Transportation Department; Federal Aviation Administration",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 11550,
+    "first_seen": "2026-11-20T08:35:54.872966+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Cotton Board Rules and Regulations: Adjusting Supplemental Assessment on Imports (2025 Amendments)",
+    "url": "https://www.federalregister.gov/documents/2026/11/20/2026-23689/cotton-board-rules-and-regulations-adjusting-supplemental-assessment-on-imports-2025-amendments",
+    "native_id": "2026-23689",
+    "published_at": "2026-11-20T00:00:00+00:00",
+    "published_raw": "2026-11-20",
+    "document_type": "Rule",
+    "issuer": "Agriculture Department; Agricultural Marketing Service",
+    "issuer_ids": [
+      "us-fr:12",
+      "us-fr:9"
+    ],
+    "summary": "The Agricultural Marketing Service (AMS) is amending the Cotton Board Rules and Regulations to decrease the value assigned to imported cotton for the purposes of calculating supplemental assessments collected for use by the Cotton Research and Promotion Program. This amendment is required each year to ensure that assessments collected on imported cotton, and the cotton content of imported products, will be the same as those paid on domestically produced cotton. In addition, AMS is updating the Import Assessment Table to account for changes since the last assessment adjustment in 2024.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-20/pdf/2026-23689.pdf",
+    "source_metadata": {
+      "document_type": "Rule",
+      "document_stage": "final_rule_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Agriculture Department; Agricultural Marketing Service",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 11549,
+    "first_seen": "2026-11-20T08:35:54.872966+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Air Plan Approval; Oklahoma; Update to Materials Incorporated by Reference",
+    "url": "https://www.federalregister.gov/documents/2026/11/20/2026-23690/air-plan-approval-oklahoma-update-to-materials-incorporated-by-reference",
+    "native_id": "2026-23690",
+    "published_at": "2026-11-20T00:00:00+00:00",
+    "published_raw": "2026-11-20",
+    "document_type": "Rule",
+    "issuer": "Environmental Protection Agency",
+    "issuer_ids": [
+      "us-fr:145"
+    ],
+    "summary": "The Environmental Protection Agency (EPA) is updating the materials that are incorporated by reference (IBR) into the Oklahoma State Implementation Plan (SIP). The regulations affected by this update have been previously submitted by the State of Oklahoma and approved by the EPA. This update affects the materials that are available for public inspection at the EPA Regional Office and the National Archives and Records Administration.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-20/pdf/2026-23690.pdf",
+    "source_metadata": {
+      "document_type": "Rule",
+      "document_stage": "final_rule_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Environmental Protection Agency",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 11548,
+    "first_seen": "2026-11-20T08:35:54.872966+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Airworthiness Directives; Airbus SAS Airplanes",
+    "url": "https://www.federalregister.gov/documents/2026/11/20/2026-23691/airworthiness-directives-airbus-sas-airplanes",
+    "native_id": "2026-23691",
+    "published_at": "2026-11-20T00:00:00+00:00",
+    "published_raw": "2026-11-20",
+    "document_type": "Rule",
+    "issuer": "Transportation Department; Federal Aviation Administration",
+    "issuer_ids": [
+      "us-fr:492",
+      "us-fr:159"
+    ],
+    "summary": "The FAA is adopting a new airworthiness directive (AD) for all Airbus SAS Model A330-841 and A330-941 airplanes. This AD was prompted by a report of cracks on the discharge outlet of certain engine fire extinguisher bottles. This AD requires modification of affected fire extinguisher bottles and prohibits the installation of affected parts. The FAA is issuing this AD to address the unsafe condition on these products.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-20/pdf/2026-23691.pdf",
+    "source_metadata": {
+      "document_type": "Rule",
+      "document_stage": "final_rule_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Transportation Department; Federal Aviation Administration",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 11547,
+    "first_seen": "2026-11-20T08:35:54.872966+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Airworthiness Directives; The Boeing Company Airplanes",
+    "url": "https://www.federalregister.gov/documents/2026/11/20/2026-23697/airworthiness-directives-the-boeing-company-airplanes",
+    "native_id": "2026-23697",
+    "published_at": "2026-11-20T00:00:00+00:00",
+    "published_raw": "2026-11-20",
+    "document_type": "Rule",
+    "issuer": "Transportation Department; Federal Aviation Administration",
+    "issuer_ids": [
+      "us-fr:492",
+      "us-fr:159"
+    ],
+    "summary": "The FAA is adopting a new airworthiness directive (AD) for certain The Boeing Company Model 737-600, -700, -700C, -800, and -900 series airplanes. This AD was prompted by a review of the autothrottle (A/T) cruise thrust split monitor (MONFD) and the determination that there is a potential for latent loss of spoiler sensor position data or erroneous spoiler sensor position data. This AD requires repetitive aileron built-in test equipment (BITE) tests of the digital flight control system and applicable on-condition actions. The FAA is issuing this AD to address the unsafe condition on these products.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-20/pdf/2026-23697.pdf",
+    "source_metadata": {
+      "document_type": "Rule",
+      "document_stage": "final_rule_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Transportation Department; Federal Aviation Administration",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 11541,
+    "first_seen": "2026-11-20T08:35:54.872966+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Special Local Regulations; Annual Marine Events on the Colorado River, Between Davis Dam (Bullhead City, Arizona) and Headgate Dam (Parker, Arizona), BlueWater Resort and Casino Thanksgiving Regatta, Colorado River, Parker, AZ",
+    "url": "https://www.federalregister.gov/documents/2026/11/20/2026-23700/special-local-regulations-annual-marine-events-on-the-colorado-river-between-davis-dam-bullhead-city",
+    "native_id": "2026-23700",
+    "published_at": "2026-11-20T00:00:00+00:00",
+    "published_raw": "2026-11-20",
+    "document_type": "Rule",
+    "issuer": "Homeland Security Department; Coast Guard",
+    "issuer_ids": [
+      "us-fr:227",
+      "us-fr:53"
+    ],
+    "summary": "The Coast Guard will enforce special local regulations for the BlueWater Resort and Casino Thanksgiving Regatta from 6 a.m. to 6 p.m. on November 26, 2026, through 28, 2026, to provide for the safety of life on navigable waterways during this event. Our regulation for marine events within the Southwest Coast Guard District identifies the regulated area for this event in Parker, AZ. During the enforcement periods, the operator of any vessel in the regulated area must comply with directions from the Patrol Commander or any Official Patrol displaying a Coast Guard ensign.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-20/pdf/2026-23700.pdf",
+    "source_metadata": {
+      "document_type": "Rule",
+      "document_stage": "final_rule_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Homeland Security Department; Coast Guard",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 11539,
+    "first_seen": "2026-11-20T08:35:54.872966+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Magnuson-Stevens Act Provisions; Fisheries Off West Coast States; Pacific Coast Groundfish Fishery; 2026 Tribal Fishery Allocations for Pacific Whiting; Reapportionment Between Tribal and Non-Tribal Sectors",
+    "url": "https://www.federalregister.gov/documents/2026/11/20/2026-23709/magnuson-stevens-act-provisions-fisheries-off-west-coast-states-pacific-coast-groundfish-fishery",
+    "native_id": "2026-23709",
+    "published_at": "2026-11-20T00:00:00+00:00",
+    "published_raw": "2026-11-20",
+    "document_type": "Rule",
+    "issuer": "Commerce Department; National Oceanic and Atmospheric Administration",
+    "issuer_ids": [
+      "us-fr:54",
+      "us-fr:361"
+    ],
+    "summary": "This document announces the reapportionment of 29,130 metric tons of Pacific whiting from the Tribal allocation to the non-Tribal commercial fishery sectors via automatic actions on September 14, and 23, and October 5, 2026. This reapportionment is to allow full utilization of the Pacific whiting resource.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-20/pdf/2026-23709.pdf",
+    "source_metadata": {
+      "document_type": "Rule",
+      "document_stage": "final_rule_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Commerce Department; National Oceanic and Atmospheric Administration",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 11530,
+    "first_seen": "2026-11-20T08:35:54.872966+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Implementation of HAVANA Act of 2021",
+    "url": "https://www.federalregister.gov/documents/2026/11/20/2026-23713/implementation-of-havana-act-of-2021",
+    "native_id": "2026-23713",
+    "published_at": "2026-11-20T00:00:00+00:00",
+    "published_raw": "2026-11-20",
+    "document_type": "Rule",
+    "issuer": "Homeland Security Department",
+    "issuer_ids": [
+      "us-fr:227"
+    ],
+    "summary": "This rule provides implementation by the Department of Homeland Security (\"the Department\" or \"DHS\") of the HAVANA Act of 2021. The HAVANA Act provides authority for agency heads to provide payments to certain individuals who have incurred qualifying injuries to the brain. This rule covers current and former Department of Homeland Security employees and their dependents.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-20/pdf/2026-23713.pdf",
+    "source_metadata": {
+      "document_type": "Rule",
+      "document_stage": "final_rule_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Homeland Security Department",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 11526,
+    "first_seen": "2026-11-20T08:35:54.872966+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Extension of Import Restrictions Imposed on Archaeological and Ethnological Material of Greece",
+    "url": "https://www.federalregister.gov/documents/2026/11/20/2026-23724/extension-of-import-restrictions-imposed-on-archaeological-and-ethnological-material-of-greece",
+    "native_id": "2026-23724",
+    "published_at": "2026-11-20T00:00:00+00:00",
+    "published_raw": "2026-11-20",
+    "document_type": "Rule",
+    "issuer": "Homeland Security Department; U.S. Customs and Border Protection",
+    "issuer_ids": [
+      "us-fr:227",
+      "us-fr:501"
+    ],
+    "summary": "This document amends U.S. Customs and Border Protection (CBP) regulations to reflect the extension of import restrictions on certain categories of archaeological and ecclesiastical ethnological material from the Hellenic Republic (Greece), which were originally published in CBP Decision (Dec.) 11-25 on December 1, 2011, and subsequently extended in 2016, and amended and extended in 2021 in CBP Dec. 21-16. The CBP regulations are being amended to reflect this further extension through November 21, 2031.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-20/pdf/2026-23724.pdf",
+    "source_metadata": {
+      "document_type": "Rule",
+      "document_stage": "final_rule_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Homeland Security Department; U.S. Customs and Border Protection",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 11515,
+    "first_seen": "2026-11-20T08:35:54.872966+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Federal Employees' Retirement System; Present Value Conversion Factors for Spouses of Deceased Separated Employees",
+    "url": "https://www.federalregister.gov/documents/2026/11/20/2026-23729/federal-employees-retirement-system-present-value-conversion-factors-for-spouses-of-deceased",
+    "native_id": "2026-23729",
+    "published_at": "2026-11-20T00:00:00+00:00",
+    "published_raw": "2026-11-20",
+    "document_type": "Rule",
+    "issuer": "Personnel Management Office",
+    "issuer_ids": [
+      "us-fr:406"
+    ],
+    "summary": "The Office of Personnel Management (OPM) is confirming the effective date of its direct final rule revising the table of reduction factors for early commencing dates of survivor annuities paid to spouses of separated employees who die before the date on which they would be eligible for unreduced deferred annuities. OPM received no significant adverse comments during the comment period and confirms the rule was effective August 24, 2026.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-20/pdf/2026-23729.pdf",
+    "source_metadata": {
+      "document_type": "Rule",
+      "document_stage": "final_rule_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Personnel Management Office",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 11510,
+    "first_seen": "2026-11-20T08:35:54.872966+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "FLSA Claims and Compliance",
+    "url": "https://www.federalregister.gov/documents/2026/11/20/2026-23730/flsa-claims-and-compliance",
+    "native_id": "2026-23730",
+    "published_at": "2026-11-20T00:00:00+00:00",
+    "published_raw": "2026-11-20",
+    "document_type": "Rule",
+    "issuer": "Personnel Management Office",
+    "issuer_ids": [
+      "us-fr:406"
+    ],
+    "summary": "The Office of Personnel Management (OPM) confirms that the direct final rule updating provisions concerning Fair Labor Standards Act (FLSA) claims submissions to OPM became effective as scheduled.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-20/pdf/2026-23730.pdf",
+    "source_metadata": {
+      "document_type": "Rule",
+      "document_stage": "final_rule_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Personnel Management Office",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 11509,
+    "first_seen": "2026-11-20T08:35:54.872966+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Procedures for Settling Claims",
+    "url": "https://www.federalregister.gov/documents/2026/11/20/2026-23731/procedures-for-settling-claims",
+    "native_id": "2026-23731",
+    "published_at": "2026-11-20T00:00:00+00:00",
+    "published_raw": "2026-11-20",
+    "document_type": "Rule",
+    "issuer": "Personnel Management Office",
+    "issuer_ids": [
+      "us-fr:406"
+    ],
+    "summary": "The Office of Personnel Management (OPM) confirms that the direct final rule updating the procedures for submitting certain administrative claims to OPM became effective as scheduled.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-20/pdf/2026-23731.pdf",
+    "source_metadata": {
+      "document_type": "Rule",
+      "document_stage": "final_rule_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Personnel Management Office",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 11508,
+    "first_seen": "2026-11-20T08:35:54.872966+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Updates and Amendments to the Civil Service Rules",
+    "url": "https://www.federalregister.gov/documents/2026/11/20/2026-23732/updates-and-amendments-to-the-civil-service-rules",
+    "native_id": "2026-23732",
+    "published_at": "2026-11-20T00:00:00+00:00",
+    "published_raw": "2026-11-20",
+    "document_type": "Rule",
+    "issuer": "Personnel Management Office",
+    "issuer_ids": [
+      "us-fr:406"
+    ],
+    "summary": "The Office of Personnel Management (OPM) is confirming the effective date of the direct final rule updating and amending obsolete and outdated provisions of the Civil Service Rules. OPM received no significant adverse comments and therefore confirms that the direct final rule became effective as scheduled.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-20/pdf/2026-23732.pdf",
+    "source_metadata": {
+      "document_type": "Rule",
+      "document_stage": "final_rule_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Personnel Management Office",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 11507,
+    "first_seen": "2026-11-20T08:35:54.872966+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
     "title": "DCPD-202600702 - Remarks at a Campaign Rally for Ohio Republican Candidates in Youngstown, Ohio",
     "url": "https://www.govinfo.gov/app/details/DCPD-202600702",
     "native_id": "DCPD-202600702",
@@ -143,7 +754,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 11360,
     "first_seen": "2026-11-19T21:37:53.975841+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -172,7 +783,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 3735,
     "first_seen": "2026-10-16T16:03:14.310875+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -201,7 +812,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 11361,
     "first_seen": "2026-11-19T21:37:53.975841+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -230,7 +841,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 11362,
     "first_seen": "2026-11-19T21:37:53.975841+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -259,7 +870,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 3303,
     "first_seen": "2026-10-16T10:36:18.842579+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -288,7 +899,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 11363,
     "first_seen": "2026-11-19T21:37:53.975841+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -317,7 +928,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 3304,
     "first_seen": "2026-10-16T10:36:18.842579+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -346,7 +957,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 11203,
     "first_seen": "2026-11-19T08:50:38.135120+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -375,7 +986,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 11204,
     "first_seen": "2026-11-19T08:50:38.135120+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -404,7 +1015,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 2103,
     "first_seen": "2026-10-15T12:16:32.997656+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -433,7 +1044,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 11205,
     "first_seen": "2026-11-19T08:50:38.135120+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -462,7 +1073,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 11206,
     "first_seen": "2026-11-19T08:50:38.135120+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -492,7 +1103,7 @@
     "primary_source_id": "us-federal-register",
     "n": 11358,
     "first_seen": "2026-11-19T21:37:53.975841+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -523,7 +1134,7 @@
     "primary_source_id": "us-federal-register",
     "n": 11347,
     "first_seen": "2026-11-19T21:37:53.975841+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -554,7 +1165,7 @@
     "primary_source_id": "us-federal-register",
     "n": 11317,
     "first_seen": "2026-11-19T21:37:53.975841+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -585,7 +1196,7 @@
     "primary_source_id": "us-federal-register",
     "n": 11313,
     "first_seen": "2026-11-19T21:37:53.975841+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -616,7 +1227,7 @@
     "primary_source_id": "us-federal-register",
     "n": 11312,
     "first_seen": "2026-11-19T21:37:53.975841+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -646,7 +1257,7 @@
     "primary_source_id": "us-federal-register",
     "n": 11308,
     "first_seen": "2026-11-19T21:37:53.975841+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -676,7 +1287,7 @@
     "primary_source_id": "us-federal-register",
     "n": 11300,
     "first_seen": "2026-11-19T21:37:53.975841+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -706,7 +1317,7 @@
     "primary_source_id": "us-federal-register",
     "n": 11297,
     "first_seen": "2026-11-19T21:37:53.975841+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -736,7 +1347,7 @@
     "primary_source_id": "us-federal-register",
     "n": 11285,
     "first_seen": "2026-11-19T21:37:53.975841+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -766,7 +1377,7 @@
     "primary_source_id": "us-federal-register",
     "n": 11263,
     "first_seen": "2026-11-19T21:37:53.975841+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -797,7 +1408,7 @@
     "primary_source_id": "us-federal-register",
     "n": 11261,
     "first_seen": "2026-11-19T21:37:53.975841+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1018,7 +1629,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 11078,
     "first_seen": "2026-11-18T21:27:16.206477+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1049,7 +1660,7 @@
     "primary_source_id": "us-federal-register",
     "n": 11028,
     "first_seen": "2026-11-18T08:34:34.027776+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1079,7 +1690,7 @@
     "primary_source_id": "us-federal-register",
     "n": 11010,
     "first_seen": "2026-11-18T08:34:34.027776+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1110,7 +1721,7 @@
     "primary_source_id": "us-federal-register",
     "n": 10996,
     "first_seen": "2026-11-18T08:34:34.027776+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1140,7 +1751,7 @@
     "primary_source_id": "us-federal-register",
     "n": 10995,
     "first_seen": "2026-11-18T08:34:34.027776+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1171,7 +1782,7 @@
     "primary_source_id": "us-federal-register",
     "n": 10974,
     "first_seen": "2026-11-18T08:34:34.027776+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1202,7 +1813,7 @@
     "primary_source_id": "us-federal-register",
     "n": 10972,
     "first_seen": "2026-11-18T08:34:34.027776+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1233,7 +1844,7 @@
     "primary_source_id": "us-federal-register",
     "n": 10938,
     "first_seen": "2026-11-18T08:34:34.027776+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1263,7 +1874,7 @@
     "primary_source_id": "us-federal-register",
     "n": 10933,
     "first_seen": "2026-11-18T08:34:34.027776+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1294,7 +1905,7 @@
     "primary_source_id": "us-federal-register",
     "n": 10932,
     "first_seen": "2026-11-18T08:34:34.027776+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1325,7 +1936,7 @@
     "primary_source_id": "us-federal-register",
     "n": 10930,
     "first_seen": "2026-11-18T08:34:34.027776+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1356,7 +1967,7 @@
     "primary_source_id": "us-federal-register",
     "n": 10928,
     "first_seen": "2026-11-18T08:34:34.027776+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1505,7 +2116,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6834,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1534,7 +2145,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 10819,
     "first_seen": "2026-11-17T21:46:57.732960+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1563,7 +2174,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 10820,
     "first_seen": "2026-11-17T21:46:57.732960+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1592,7 +2203,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 8068,
     "first_seen": "2026-11-02T22:20:55.750782+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1621,7 +2232,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 10821,
     "first_seen": "2026-11-17T21:46:57.732960+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1650,7 +2261,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 10822,
     "first_seen": "2026-11-17T21:46:57.732960+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1679,7 +2290,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 10823,
     "first_seen": "2026-11-17T21:46:57.732960+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1708,7 +2319,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 10824,
     "first_seen": "2026-11-17T21:46:57.732960+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1737,7 +2348,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 5609,
     "first_seen": "2026-10-20T18:00:04.951908+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1766,383 +2377,9 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 5610,
     "first_seen": "2026-10-20T18:00:04.951908+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
     "source_ids": [
       "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "The Whitby High School: 17 November 2026",
-    "url": "https://www.gov.uk/government/publications/the-whitby-high-school-17-november-2026",
-    "native_id": "/government/publications/the-whitby-high-school-17-november-2026",
-    "published_at": "2026-11-17T00:00:00+00:00",
-    "published_raw": "2026-11-17T00:00:00Z",
-    "document_type": "decision",
-    "issuer": "Office of the Schools Adjudicator",
-    "issuer_ids": [
-      "uk-gov:office-of-the-schools-adjudicator"
-    ],
-    "summary": "The schools adjudicator’s admission objection decision about The Whitby High School.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Office of the Schools Adjudicator",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 10825,
-    "first_seen": "2026-11-17T21:46:57.732960+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Appellate Procedures for the Board of Immigration Appeals",
-    "url": "https://www.federalregister.gov/documents/2026/11/17/2026-23320/appellate-procedures-for-the-board-of-immigration-appeals",
-    "native_id": "2026-23320",
-    "published_at": "2026-11-17T00:00:00+00:00",
-    "published_raw": "2026-11-17",
-    "document_type": "Rule",
-    "issuer": "Justice Department; Executive Office for Immigration Review",
-    "issuer_ids": [
-      "us-fr:268",
-      "us-fr:149"
-    ],
-    "summary": "In February 2026, the Department issued an interim final rule (\"IFR\"), effective March 9, 2026, to streamline Board of Immigration Appeals (\"Board\" or \"BIA\") procedures. The IFR's comment period closed on April 8, 2026. In this final rule, the Department responds to comments received and finalizes the IFR with minor changes.",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-17/pdf/2026-23320.pdf",
-    "source_metadata": {
-      "document_type": "Rule",
-      "document_stage": "final_rule_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Justice Department; Executive Office for Immigration Review",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 10765,
-    "first_seen": "2026-11-17T09:14:56.610004+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
-    "source_ids": [
-      "us-federal-register"
-    ]
-  },
-  {
-    "title": "Advisory Committee on Reactor Safeguards Functions",
-    "url": "https://www.federalregister.gov/documents/2026/11/17/2026-23343/advisory-committee-on-reactor-safeguards-functions",
-    "native_id": "2026-23343",
-    "published_at": "2026-11-17T00:00:00+00:00",
-    "published_raw": "2026-11-17",
-    "document_type": "Rule",
-    "issuer": "Nuclear Regulatory Commission",
-    "issuer_ids": [
-      "us-fr:383"
-    ],
-    "summary": "The U.S. Nuclear Regulatory Commission (NRC) is amending its regulations in response to section 4.(b) of Executive Order (E.O.) 14300, \"Ordering the Reform of the Nuclear Regulatory Commission.\" Specifically, this direct final rule revises the NRC's regulations to reduce the personnel and functions of the Advisory Committee on Reactor Safeguards (ACRS) to the minimum necessary to fulfill the ACRS's statutory obligations.",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-17/pdf/2026-23343.pdf",
-    "source_metadata": {
-      "document_type": "Rule",
-      "document_stage": "final_rule_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Nuclear Regulatory Commission",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 10742,
-    "first_seen": "2026-11-17T09:14:56.610004+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
-    "source_ids": [
-      "us-federal-register"
-    ]
-  },
-  {
-    "title": "Small Business Investment Company (SBIC) Leverage Availability",
-    "url": "https://www.federalregister.gov/documents/2026/11/17/2026-23358/small-business-investment-company-sbic-leverage-availability",
-    "native_id": "2026-23358",
-    "published_at": "2026-11-17T00:00:00+00:00",
-    "published_raw": "2026-11-17",
-    "document_type": "Rule",
-    "issuer": "Small Business Administration",
-    "issuer_ids": [
-      "us-fr:468"
-    ],
-    "summary": "The U.S. Small Business Administration (\"SBA\" or \"Agency\") is publishing this interim final rule (\"IFR\") amending the U.S. Small Business Administration's loan guarantee regulations applicable to the Small Business Investment Company (\"SBIC\") program to implement the provisions of the Investing in All of America Act of 2025 (\"the Investing Act\"). These provisions increase the maximum amount of leverage available to SBICs issuing standard debentures in ratios of up to two-to-one against private capital, update the private capital definition to include certain government-sponsored corporations and college/university trusts or endowments, and grant Small Business Investment Companies access to additional \"bonus\" leverage for investments in critical technology areas, small manufacturers, rural areas, and low-income geographic areas, all in conformance with the Investing Act.",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-17/pdf/2026-23358.pdf",
-    "source_metadata": {
-      "document_type": "Rule",
-      "document_stage": "final_rule_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Small Business Administration",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 10729,
-    "first_seen": "2026-11-17T09:14:56.610004+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
-    "source_ids": [
-      "us-federal-register"
-    ]
-  },
-  {
-    "title": "Takes of Marine Mammals Incidental to Specified Activities; Taking Marine Mammals Incidental to the Washington State Parks and Recreation Commission's Marine Facilities Replacement Program in North Puget Sound, Washington",
-    "url": "https://www.federalregister.gov/documents/2026/11/17/2026-23365/takes-of-marine-mammals-incidental-to-specified-activities-taking-marine-mammals-incidental-to-the",
-    "native_id": "2026-23365",
-    "published_at": "2026-11-17T00:00:00+00:00",
-    "published_raw": "2026-11-17",
-    "document_type": "Rule",
-    "issuer": "Commerce Department; National Oceanic and Atmospheric Administration",
-    "issuer_ids": [
-      "us-fr:54",
-      "us-fr:361"
-    ],
-    "summary": "NMFS, upon request from the Washington State Parks and Recreation Commission (State Parks), issues this final rule and associated 5-year letter of authorization (LOA) pursuant to the Marine Mammal Protection Act (MMPA) to govern the taking of marine mammals incidental to construction activities conducted in support of the Marine Facilities Replacement Program (MFRP) in North Puget Sound in Western Washington (WA) over the course of 5 years. This final rule prescribes permissible methods of taking and other means of effecting the least practicable adverse impact on marine mammal species and their habitat and establishes requirements for monitoring and reporting such taking.",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-17/pdf/2026-23365.pdf",
-    "source_metadata": {
-      "document_type": "Rule",
-      "document_stage": "final_rule_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Commerce Department; National Oceanic and Atmospheric Administration",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 10722,
-    "first_seen": "2026-11-17T09:14:56.610004+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
-    "source_ids": [
-      "us-federal-register"
-    ]
-  },
-  {
-    "title": "Louisiana: Approval of State Coal Combustion Residuals Permit Program",
-    "url": "https://www.federalregister.gov/documents/2026/11/17/2026-23383/louisiana-approval-of-state-coal-combustion-residuals-permit-program",
-    "native_id": "2026-23383",
-    "published_at": "2026-11-17T00:00:00+00:00",
-    "published_raw": "2026-11-17",
-    "document_type": "Rule",
-    "issuer": "Environmental Protection Agency",
-    "issuer_ids": [
-      "us-fr:145"
-    ],
-    "summary": "The Environmental Protection Agency (EPA or the Agency) is approving the Louisiana coal combustion residuals (CCR) permit program under the Resource Conservation and Recovery Act (RCRA). After reviewing the CCR permit program application submitted by the Louisiana Department of Environmental Quality (LDEQ), EPA has determined that Louisiana's partial CCR permit program meets the standard for approval under RCRA. Louisiana's CCR permit program will operate in lieu of the Federal CCR program with the exception of the specific provisions noted below.",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-17/pdf/2026-23383.pdf",
-    "source_metadata": {
-      "document_type": "Rule",
-      "document_stage": "final_rule_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Environmental Protection Agency",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 10704,
-    "first_seen": "2026-11-17T09:14:56.610004+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
-    "source_ids": [
-      "us-federal-register"
-    ]
-  },
-  {
-    "title": "Modernizing the Commission's National Environmental Policy Act Rules",
-    "url": "https://www.federalregister.gov/documents/2026/11/17/2026-23385/modernizing-the-commissions-national-environmental-policy-act-rules",
-    "native_id": "2026-23385",
-    "published_at": "2026-11-17T00:00:00+00:00",
-    "published_raw": "2026-11-17",
-    "document_type": "Rule",
-    "issuer": "Federal Communications Commission",
-    "issuer_ids": [
-      "us-fr:161"
-    ],
-    "summary": "In this document (Order), the Federal Communications Commission (\"Commission\" or \"FCC\") takes action to cut through outdated and unnecessary burdens that have slowed deployment of critical communications networks. These reforms restore balance to the Commission's National Environmental Policy Act (NEPA) implementation by providing clear and predictable rules to ensure NEPA serves as a tool for informed decision-making rather than a barrier to investment, innovation, and connectivity.",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-17/pdf/2026-23385.pdf",
-    "source_metadata": {
-      "document_type": "Rule",
-      "document_stage": "final_rule_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 10702,
-    "first_seen": "2026-11-17T09:14:56.610004+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
-    "source_ids": [
-      "us-federal-register"
-    ]
-  },
-  {
-    "title": "Chartering and Field of Membership for Federal Credit Unions; Associational Common Bonds and Client-Customer Relationships",
-    "url": "https://www.federalregister.gov/documents/2026/11/17/2026-23392/chartering-and-field-of-membership-for-federal-credit-unions-associational-common-bonds-and",
-    "native_id": "2026-23392",
-    "published_at": "2026-11-17T00:00:00+00:00",
-    "published_raw": "2026-11-17",
-    "document_type": "Rule",
-    "issuer": "National Credit Union Administration",
-    "issuer_ids": [
-      "us-fr:335"
-    ],
-    "summary": "The NCUA Board (Board) is issuing a final rule to amend its criteria for determining associational common bonds. The amendments clarify that requiring members to buy a good, product, or service from a group as a condition of membership will no longer automatically bar eligibility as a recognized association. After considering public comments, the Board finalizes the proposed rule with certain modifications. The Board's revisions detail how NCUA assesses client- customer relationships (including relevant examples). These changes also simplify NCUA's process for reviewing pre-approved groups.",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-17/pdf/2026-23392.pdf",
-    "source_metadata": {
-      "document_type": "Rule",
-      "document_stage": "final_rule_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "National Credit Union Administration",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 10695,
-    "first_seen": "2026-11-17T09:14:56.610004+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
-    "source_ids": [
-      "us-federal-register"
-    ]
-  },
-  {
-    "title": "Protecting Consumers From SIM-Swap and Port-Out Fraud",
-    "url": "https://www.federalregister.gov/documents/2026/11/17/2026-23400/protecting-consumers-from-sim-swap-and-port-out-fraud",
-    "native_id": "2026-23400",
-    "published_at": "2026-11-17T00:00:00+00:00",
-    "published_raw": "2026-11-17",
-    "document_type": "Rule",
-    "issuer": "Federal Communications Commission",
-    "issuer_ids": [
-      "us-fr:161"
-    ],
-    "summary": "In this document, the Wireline Competition Bureau (Bureau) announces that the Office of Management and Budget (OMB) has approved, for a period of three years, the information collection associated with the Commission's rules adopted in the SIM Swap and Port-Out Fraud Order, FCC 23-95. This document is consistent with that Order, which stated that the revised rules would not become effective until OMB completed its review of any information collection requirements under the Paperwork Reduction Act and that the Bureau would announce the compliance date for the revised rules by subsequent Public Notice and cause the Commission's rules to be revised accordingly.",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-17/pdf/2026-23400.pdf",
-    "source_metadata": {
-      "document_type": "Rule",
-      "document_stage": "final_rule_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 10687,
-    "first_seen": "2026-11-17T09:14:56.610004+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
-    "source_ids": [
-      "us-federal-register"
-    ]
-  },
-  {
-    "title": "Safety Zone; Monongahela River, Pittsburgh, PA",
-    "url": "https://www.federalregister.gov/documents/2026/11/17/2026-23405/safety-zone-monongahela-river-pittsburgh-pa",
-    "native_id": "2026-23405",
-    "published_at": "2026-11-17T00:00:00+00:00",
-    "published_raw": "2026-11-17",
-    "document_type": "Rule",
-    "issuer": "Homeland Security Department; Coast Guard",
-    "issuer_ids": [
-      "us-fr:227",
-      "us-fr:53"
-    ],
-    "summary": "The Coast Guard is establishing a temporary safety zone for navigable waters on the Monongahela River from Mile Marker 15 to Mile Marker 16. This safety zone is necessary to protect personnel and vessels from potential hazards on navigable waters during an operation to install aerial transverse wirelines. Entry of vessels or persons into this zone is prohibited unless specifically authorized by the Captain of the Port, Marine Safety Unit Pittsburgh or their designated representative or their designated representative.",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-17/pdf/2026-23405.pdf",
-    "source_metadata": {
-      "document_type": "Rule",
-      "document_stage": "final_rule_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Homeland Security Department; Coast Guard",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 10684,
-    "first_seen": "2026-11-17T09:14:56.610004+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
-    "source_ids": [
-      "us-federal-register"
-    ]
-  },
-  {
-    "title": "DCPD-202600696 - Remarks in an Exchange With Reporters Upon Arrival at Joint Base Andrews, Maryland",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600696",
-    "native_id": "DCPD-202600696",
-    "published_at": "2026-11-16T21:58:00+00:00",
-    "published_raw": "Mon, 16 Nov 2026 21:58:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 10596,
-    "first_seen": "2026-11-16T22:54:52.991484+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "DCPD-202600694 - Remarks and an Exchange With Reporters Prior to Departure for Clarksville, Tennessee",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600694",
-    "native_id": "DCPD-202600694",
-    "published_at": "2026-11-16T21:58:00+00:00",
-    "published_raw": "Mon, 16 Nov 2026 21:58:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 10595,
-    "first_seen": "2026-11-16T22:54:52.991484+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "DCPD-202600695 - Remarks at a Campaign Rally for Tennessee Republican Candidates in Clarksville, Tennessee",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600695",
-    "native_id": "DCPD-202600695",
-    "published_at": "2026-11-16T21:58:00+00:00",
-    "published_raw": "Mon, 16 Nov 2026 21:58:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 10594,
-    "first_seen": "2026-11-16T22:54:52.991484+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
     ]
   }
 ]

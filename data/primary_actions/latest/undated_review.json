@@ -1,608 +1,32 @@
 [
   {
-    "title": "Hultafors Group North America Recalls Lighted Portfolios, Angle Locators, Calipers and Calculators Due to Risk of Serious Injury or Death from Battery Ingestion; Violate Mandatory Standard for Consumer Products with Button Cell Batteries",
-    "url": "https://www.cpsc.gov/Recalls/2027/Hultafors-Group-North-America-Recalls-Lighted-Portfolios-Angle-Locators-Calipers-and-Calculators-Due-to-Risk-of-Serious-Injury-or-Death-from-Battery-Ingestion-Violate-Mandatory-Standard-for-Consumer-Products-with-Button-Cell-Batteries",
-    "native_id": "https://www.cpsc.gov/_0e058c45-a1f6-4c26-a5e7-9ce905a305e1",
-    "published_at": null,
-    "published_raw": "November 19, 2026",
-    "summary": "The various trade tools violate the mandatory safety standard for consumer products with button cell and coin batteries because the button batteries can be accessed easily by children, posing an ingestion hazard. Additionally, the packaging and product do not have the warnings required under Reese’s Law . When button cell or coin batteries are swallowed, the ingested batteries can cause serious injuries, internal chemical burns and death.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Consumer Product Safety Commission",
-      "jurisdiction": "US",
-      "family": "product_safety"
-    },
-    "primary_source_id": "us-cpsc-99343b5112",
-    "n": 11426,
-    "first_seen": "2026-11-19T21:37:53.975841+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
-    "source_ids": [
-      "us-cpsc-99343b5112"
-    ]
-  },
-  {
-    "title": "Vanderhall Recalls Brawley GTS Electric Recreational Off Highway Vehicles (ROVs) Due to Risk of Serious Injury or Death from Crash Hazard",
-    "url": "https://www.cpsc.gov/Recalls/2027/Vanderhall-Recalls-Brawley-GTS-Electric-Recreational-Off-Highway-Vehicles-ROVs-Due-to-Risk-of-Serious-Injury-or-Death-from-Crash-Hazard",
-    "native_id": "https://www.cpsc.gov/_5e66abc6-7f8a-4e94-be34-19f06455d918",
-    "published_at": null,
-    "published_raw": "November 19, 2026",
-    "summary": "The braking system can unexpectedly engage when the vehicle is airborne causing the operator to experience a sudden brake lockup upon landing, posing a risk of serious injury or death from a crash hazard.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Consumer Product Safety Commission",
-      "jurisdiction": "US",
-      "family": "product_safety"
-    },
-    "primary_source_id": "us-cpsc-99343b5112",
-    "n": 11427,
-    "first_seen": "2026-11-19T21:37:53.975841+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
-    "source_ids": [
-      "us-cpsc-99343b5112"
-    ]
-  },
-  {
-    "title": "Kidsview Recalls Infant Bouncers Due to Risk of Collapse and Impact Injury to Infants",
-    "url": "https://www.cpsc.gov/Recalls/2027/Kidsview-Recalls-Infant-Bouncers-Due-to-Risk-of-Collapse-and-Impact-Injury-to-Infants",
-    "native_id": "https://www.cpsc.gov/_dc617914-f17a-4d6a-a80d-9000b47ffd49",
-    "published_at": null,
-    "published_raw": "November 19, 2026",
-    "summary": "The bouncers can collapse while in use, posing a risk of impact injury to infants in the bouncer.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Consumer Product Safety Commission",
-      "jurisdiction": "US",
-      "family": "product_safety"
-    },
-    "primary_source_id": "us-cpsc-99343b5112",
-    "n": 11428,
-    "first_seen": "2026-11-19T21:37:53.975841+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
-    "source_ids": [
-      "us-cpsc-99343b5112"
-    ]
-  },
-  {
-    "title": "Fidlock GmbH Recalls Hermetic Dry Bags Due to Risk of Serious Injury or Death from Magnet Ingestion Hazard",
-    "url": "https://www.cpsc.gov/Recalls/2027/Fidlock-GmbH-Recalls-Hermetic-Dry-Bags-Due-to-Risk-of-Serious-Injury-or-Death-from-Magnet-Ingestion-Hazard",
-    "native_id": "https://www.cpsc.gov/_c3c88342-566c-4d67-8880-1efc93965b8d",
-    "published_at": null,
-    "published_raw": "November 19, 2026",
-    "summary": "The recalled bags’ adhesive closure strips can detach, causing the magnets to fall out, posing a risk of serious injury or death from a magnet ingestion hazard.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Consumer Product Safety Commission",
-      "jurisdiction": "US",
-      "family": "product_safety"
-    },
-    "primary_source_id": "us-cpsc-99343b5112",
-    "n": 11429,
-    "first_seen": "2026-11-19T21:37:53.975841+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
-    "source_ids": [
-      "us-cpsc-99343b5112"
-    ]
-  },
-  {
-    "title": "Qpancy Recalls Children’s Pajama Sets Due to Risk of Serious Injury or Death from Burn Hazard; Violate Mandatory Standards for Children’s Sleepwear",
-    "url": "https://www.cpsc.gov/Recalls/2027/Qpancy-Recalls-Childrens-Pajama-Sets-Due-to-Risk-of-Serious-Injury-or-Death-from-Burn-Hazard-Violate-Mandatory-Standards-for-Childrens-Sleepwear",
-    "native_id": "https://www.cpsc.gov/_239702a4-d3aa-4601-a85d-a6cc1c4facd1",
-    "published_at": null,
-    "published_raw": "November 19, 2026",
-    "summary": "The recalled children’s pajama sets violate the mandatory safety standards for children’s sleepwear posing a risk of serious burn injuries.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Consumer Product Safety Commission",
-      "jurisdiction": "US",
-      "family": "product_safety"
-    },
-    "primary_source_id": "us-cpsc-99343b5112",
-    "n": 11430,
-    "first_seen": "2026-11-19T21:37:53.975841+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
-    "source_ids": [
-      "us-cpsc-99343b5112"
-    ]
-  },
-  {
-    "title": "CHE-US Recalls Magnetic Robot Toys Due to Risk of Serious Injury or Death from Magnet Ingestion; Violate Mandatory Standard for Toys",
-    "url": "https://www.cpsc.gov/Recalls/2027/CHE-US-Recalls-Magnetic-Robot-Toys-Due-to-Risk-of-Serious-Injury-or-Death-from-Magnet-Ingestion-Violate-Mandatory-Standard-for-Toys",
-    "native_id": "https://www.cpsc.gov/_4e711fcd-a5c1-413a-aab3-20bab68fd7b0",
-    "published_at": null,
-    "published_raw": "November 19, 2026",
-    "summary": "The recalled magnetic stick figures violate the mandatory standard for toys because when pulled apart, the figures’ arms and legs liberate high-powered magnets posing an ingestion hazard to children. When high-powered magnets are swallowed, the ingested magnets can attract each other, or other metal objects, and become lodged in the digestive system. This can result in perforations, twisting, and/or blockage of the intestines, blood poisoning and death.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Consumer Product Safety Commission",
-      "jurisdiction": "US",
-      "family": "product_safety"
-    },
-    "primary_source_id": "us-cpsc-99343b5112",
-    "n": 11431,
-    "first_seen": "2026-11-19T21:37:53.975841+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
-    "source_ids": [
-      "us-cpsc-99343b5112"
-    ]
-  },
-  {
-    "title": "Ororo Recalls Rechargeable Lithium-Ion Battery Packs Due to Risk of Serious Injury from Fire and Burn Hazards",
-    "url": "https://www.cpsc.gov/Recalls/2027/Ororo-Recalls-Rechargeable-Lithium-Ion-Battery-Packs-Due-to-Risk-of-Serious-Injury-from-Fire-and-Burn-Hazards",
-    "native_id": "https://www.cpsc.gov/_6647d9c7-ffec-4806-984f-3d283f571b7e",
-    "published_at": null,
-    "published_raw": "November 19, 2026",
-    "summary": "The recalled lithium-ion battery packs can overheat, posing a risk of serious injury from fire and burn hazards.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Consumer Product Safety Commission",
-      "jurisdiction": "US",
-      "family": "product_safety"
-    },
-    "primary_source_id": "us-cpsc-99343b5112",
-    "n": 11432,
-    "first_seen": "2026-11-19T21:37:53.975841+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
-    "source_ids": [
-      "us-cpsc-99343b5112"
-    ]
-  },
-  {
-    "title": "Cipton Recalls Bicycle Helmets Due to Risk of Serious Injury or Death from Head Injury; Violate Mandatory Standard for Bicycle Helmets",
-    "url": "https://www.cpsc.gov/Recalls/2027/Cipton-Recalls-Bicycle-Helmets-Due-to-Risk-of-Serious-Injury-or-Death-from-Head-Injury-Violate-Mandatory-Standard-for-Bicycle-Helmets",
-    "native_id": "https://www.cpsc.gov/_101fecef-ca3a-4f0b-ab21-294c3a6f98e3",
-    "published_at": null,
-    "published_raw": "November 19, 2026",
-    "summary": "The recalled helmets violate the mandatory safety standard for bicycle helmets because the helmets do not comply with the impact attenuation, positional stability and certification requirements. The helmets can fail to protect the user in the event of a crash, posing a serious risk of injury or death due to head injury.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Consumer Product Safety Commission",
-      "jurisdiction": "US",
-      "family": "product_safety"
-    },
-    "primary_source_id": "us-cpsc-99343b5112",
-    "n": 11433,
-    "first_seen": "2026-11-19T21:37:53.975841+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
-    "source_ids": [
-      "us-cpsc-99343b5112"
-    ]
-  },
-  {
-    "title": "Xentrawave Recalls Adult Portable Bed Rails Due to Risk of Serious Injury or Death from Entrapment and Asphyxiation; Violate Mandatory Standard for Adult Portable Bed Rails; One Death Reported",
-    "url": "https://www.cpsc.gov/Recalls/2027/Xentrawave-Recalls-Adult-Portable-Bed-Rails-Due-to-Risk-of-Serious-Injury-or-Death-from-Entrapment-and-Asphyxiation-Violate-Mandatory-Standard-for-Adult-Portable-Bed-Rails-One-Death-Reported",
-    "native_id": "https://www.cpsc.gov/_f73a7428-f0b9-4be1-8bdf-fb316db0cbdf",
-    "published_at": null,
-    "published_raw": "November 19, 2026",
-    "summary": "The recalled bed rails violate the mandatory standard for adult portable bed rails because users can become entrapped within the bed rail or between the bed rail and the side of the mattress, posing a serious entrapment hazard and risk of death by asphyxiation. In addition, the XT016 model adult bed rail does not meet structural stability or retention strap requirements, posing entrapment hazards, and its push pins and push pin holes are incorrectly sized, posing a laceration hazard.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Consumer Product Safety Commission",
-      "jurisdiction": "US",
-      "family": "product_safety"
-    },
-    "primary_source_id": "us-cpsc-99343b5112",
-    "n": 11434,
-    "first_seen": "2026-11-19T21:37:53.975841+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
-    "source_ids": [
-      "us-cpsc-99343b5112"
-    ]
-  },
-  {
-    "title": "FCC Cracks Down on Bad Actors' Access to U.S. Phone Numbers",
-    "url": "https://www.fcc.gov/edoc/427320",
-    "native_id": "427320",
+    "title": "GoJump Hawaii -- Waialua, Hawaii",
+    "url": "https://www.fcc.gov/edoc/426151",
+    "native_id": "426151",
     "published_at": null,
     "published_raw": "",
-    "summary": ".",
+    "summary": "NOUO for unauthorized operation on licensed aviation frequency",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — News Releases",
+      "issuer": "Federal Communications Commission — Enforcement Bureau",
       "jurisdiction": "US",
       "family": "telecom_rules_and_licences"
     },
-    "primary_source_id": "us-fcc-685c5e7dd2",
-    "n": 11435,
-    "first_seen": "2026-11-19T21:37:53.975841+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
+    "primary_source_id": "us-fcc-364d1b4932",
+    "n": 11663,
+    "first_seen": "2026-11-20T08:35:54.872966+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
     "source_ids": [
-      "us-fcc-685c5e7dd2"
+      "us-fcc-364d1b4932"
     ]
   },
   {
-    "title": "FCC Takes Action to Permit Prisons to Jam Contraband Cellphones",
-    "url": "https://www.fcc.gov/edoc/427316",
-    "native_id": "427316",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — News Releases",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-685c5e7dd2",
-    "n": 11436,
-    "first_seen": "2026-11-19T21:37:53.975841+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
-    "source_ids": [
-      "us-fcc-685c5e7dd2"
-    ]
-  },
-  {
-    "title": "FCC Votes to Release More Spectrum for the Skies",
-    "url": "https://www.fcc.gov/edoc/427319",
-    "native_id": "427319",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — News Releases",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-685c5e7dd2",
-    "n": 11437,
-    "first_seen": "2026-11-19T21:37:53.975841+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
-    "source_ids": [
-      "us-fcc-685c5e7dd2"
-    ]
-  },
-  {
-    "title": "FCC Votes to Modernize Telecommunications Relay Services Compensation",
-    "url": "https://www.fcc.gov/edoc/427324",
-    "native_id": "427324",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — News Releases",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-685c5e7dd2",
-    "n": 11438,
-    "first_seen": "2026-11-19T21:37:53.975841+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
-    "source_ids": [
-      "us-fcc-685c5e7dd2"
-    ]
-  },
-  {
-    "title": "FCC Expands Satellite Connectivity for Ships, Planes, and Drones",
-    "url": "https://www.fcc.gov/edoc/427326",
-    "native_id": "427326",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — News Releases",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-685c5e7dd2",
-    "n": 11439,
-    "first_seen": "2026-11-19T21:37:53.975841+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
-    "source_ids": [
-      "us-fcc-685c5e7dd2"
-    ]
-  },
-  {
-    "title": "Actions",
-    "url": "https://www.fcc.gov/edoc/427309",
-    "native_id": "427309",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 11440,
-    "first_seen": "2026-11-19T21:37:53.975841+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Pleadings",
-    "url": "https://www.fcc.gov/edoc/427310",
-    "native_id": "427310",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 11441,
-    "first_seen": "2026-11-19T21:37:53.975841+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Applications",
-    "url": "https://www.fcc.gov/edoc/427308",
-    "native_id": "427308",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 11442,
-    "first_seen": "2026-11-19T21:37:53.975841+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Comments Invited On Verizon's Section 214 Application To Discontinue Domestic Legacy Voice Service As Part Of A Technology Transition",
-    "url": "https://www.fcc.gov/edoc/427312",
-    "native_id": "427312",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 11443,
-    "first_seen": "2026-11-19T21:37:53.975841+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Comments Invited On Section 214 Application To Discontinue Domestic Non-Dominant Carrier Telecommunications Services",
-    "url": "https://www.fcc.gov/edoc/427314",
-    "native_id": "427314",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 11444,
-    "first_seen": "2026-11-19T21:37:53.975841+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Informal Working Group 1, Informal Working Group 2, Informal Working Group 3, and Informal Working Group 4 of the World Radiocommunication Conference Advisory Committee Schedule Their Meetings",
-    "url": "https://www.fcc.gov/edoc/427322",
-    "native_id": "427322",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 11445,
-    "first_seen": "2026-11-19T21:37:53.975841+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Wireline Competition Bureau Approves Revised Alaska Plan Performance Plan for Nushagak Electric and Telephone Cooperative, Inc.",
-    "url": "https://www.fcc.gov/edoc/427330",
-    "native_id": "427330",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 11446,
-    "first_seen": "2026-11-19T21:37:53.975841+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Geordie Shore star and illegal finfluencer sentenced for promoting high-risk investments on social media",
-    "url": "https://www.fca.org.uk/news/press-releases/geordie-shore-star-illegal-finfluencer-sentenced-promoting-high-risk-investments-social-media",
-    "native_id": "177856",
-    "published_at": null,
-    "published_raw": "Thursday, November 19, 2026 - 17:19",
-    "summary": "Aaron Chalmers, a reality TV star and social media content creator, and finfluencer Jason Agbodza have been sentenced for illegally promoting an unauthorised foreign exchange trading scheme on social media. Chalmers, 39 and from Newcastle, was sentenced at City of London Magistrates Court. He previously pleaded guilty and today (19 November) was fined £3,072 and ordered to pay costs of £2,836.Having risen to fame on Geordie Shore, Chalmers has more than 2 million followers on Instagram. Agbodza, 35, of London, was also fined £1,173 and ordered to pay costs of £2,114 after pleading guilty.Both men encouraged followers to invest in foreign exchange (forex or FX) trading through contracts for difference (CFDs), without being authorised to promote them. CFDs are high-risk derivatives, and the Financial Conduct Authority (FCA) has previously found that approximately 80% of customers lose money when investing in them.Therese Chambers, executive director of enforcement and market integrity at the FCA, said:'With more than two million Instagram followers, Chalmers exploited his online influence to illegally promote investments to a vast audience. Agbodza made significant profits from an un",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Financial Conduct Authority",
-      "jurisdiction": "UK",
-      "family": "financial_enforcement"
-    },
-    "primary_source_id": "uk-fca-7b9977ec8e",
-    "n": 11474,
-    "first_seen": "2026-11-19T21:37:53.975841+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
-    "source_ids": [
-      "uk-fca-7b9977ec8e"
-    ]
-  },
-  {
-    "title": "The courage to change",
-    "url": "https://www.fca.org.uk/news/speeches/courage-change",
-    "native_id": "177836",
-    "published_at": null,
-    "published_raw": "Thursday, November 19, 2026 - 10:50",
-    "summary": "Speech by Sarah Pritchard, deputy chief executive, at TheCityUK National Conference 2026. Our willingness to do things differently in this country has helped make our financial services sector one of the most innovative in the world.We didn’t get here by accident.It took ambitious firms, given the right amount of room to experiment.The FCA recognised the importance of pushing the boundaries with Project Innovate in 2014.And the world’s first Regulatory Sandbox in 2016, allowing firms to test innovative ideas with dedicated FCA support.By 2024, fintech was the most significant job source in UK financial services.Fintech firms contribute positively to growth, productivity and infrastructure.No wonder the UK is Europe’s top spot for fintech investment.But we can’t take that position for granted.Investment is down. Global competition is up. Funding is getting harder to come by.And operational disruption is no longer a matter of if, but when.We’ve recently seen the world’s largest cryptocurrency exchange robbed of more than $6 billion.And a global tech outage that left millions of employees without the tools they need to do their jobs.Market integrity risks have never been greater.That'",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Financial Conduct Authority",
-      "jurisdiction": "UK",
-      "family": "financial_enforcement"
-    },
-    "primary_source_id": "uk-fca-7b9977ec8e",
-    "n": 11475,
-    "first_seen": "2026-11-19T21:37:53.975841+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
-    "source_ids": [
-      "uk-fca-7b9977ec8e"
-    ]
-  },
-  {
-    "title": "Insurance firms called on to improve claims handling",
-    "url": "https://www.fca.org.uk/news/news-stories/insurance-firms-called-improve-claims-handling",
-    "native_id": "177846",
-    "published_at": null,
-    "published_raw": "Thursday, November 19, 2026 - 09:32",
-    "summary": "The FCA and Financial Ombudsman Service have published a report setting out what insurers need to focus on to ensure claims are dealt with promptly, clearly and fairly. We are helping firms learn from Financial Ombudsman complaints and strengthen their claims handling in line with our existing rules to improve service quality for insurance customers.The report highlights where claims handling can improve and explains the key rules firms need to meet.Building on findings in our 2025 review of home and travel insurance, it calls on insurers to:Keep claims moving.Give customers clear and timely updates.Take responsibility when problems arise with third parties working on their behalf.While 79% of people who make a claim are satisfied with claims handling (PDF), improvements are needed in consumer understanding and service quality.Chris Knight, director for insurance at the FCA, said: 'Most insurance customers receive a good service, but we know there is room for improvement – and when standards fall short, firms must put things right. These insights will help firms understand our requirements so that claims are handled promptly, clearly and fairly.'The report comes ahead of proposed l",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Financial Conduct Authority",
-      "jurisdiction": "UK",
-      "family": "financial_enforcement"
-    },
-    "primary_source_id": "uk-fca-7b9977ec8e",
-    "n": 11476,
-    "first_seen": "2026-11-19T21:37:53.975841+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
-    "source_ids": [
-      "uk-fca-7b9977ec8e"
-    ]
-  },
-  {
-    "title": "FCA launches world-first platform giving firms new insight into AI innovation",
-    "url": "https://www.fca.org.uk/news/press-releases/fca-launches-world-first-platform-giving-firms-new-insight-ai-innovation",
-    "native_id": "177851",
-    "published_at": null,
-    "published_raw": "Thursday, November 19, 2026 - 09:01",
-    "summary": "New resource brings together real-world examples of AI adoption across financial services, helping firms identify emerging trends and opportunities. The FCA has launched a world-first AI Spotlight Observatory that provides firms, academics and innovators with a comprehensive view of how AI is being adopted across financial services.Based on practical use cases from more than 200 organisations and spanning 150 areas of activity, the online platform highlights how firms are using AI across the industry and where trends are developing.Developed in partnership with the Centre for Finance, Technology and Entrepreneurship (CFTE) and technology partner NayaOne, the Observatory helps meet the growing demand for greater visibility of AI adoption across the sector.The resource highlights a range of AI use cases shaping financial services, from solutions designed to combat financial crime and enhance compliance processes to emerging technologies such as agentic payments and neurosymbolic AI.By widening access to market intelligence, the Observatory will help firms of all sizes learn from developments across the market, better understand emerging technologies and make more informed decisions a",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Financial Conduct Authority",
-      "jurisdiction": "UK",
-      "family": "financial_enforcement"
-    },
-    "primary_source_id": "uk-fca-7b9977ec8e",
-    "n": 11477,
-    "first_seen": "2026-11-19T21:37:53.975841+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
-    "source_ids": [
-      "uk-fca-7b9977ec8e"
-    ]
-  },
-  {
-    "title": "Minister AKAZAWA Holds Meeting with H.E. Mr. Ekniti Nitithanprapas, Deputy Prime Minister and Minister of Finance, and H.E. Mr. Varawut Silpa-archa, Minister of Industry, of the Kingdom of Thailand",
-    "url": "https://www.meti.go.jp/english/press/2026/11/20261118002.html",
-    "native_id": "https://www.meti.go.jp/english/press/2026/11/20261118002.html",
+    "title": "State Minister TAKAGI Receives Courtesy Call from the Honorable Brad Little, Governor of the State of Idaho",
+    "url": "https://www.meti.go.jp/english/press/2026/11/20261119001.html",
+    "native_id": "https://www.meti.go.jp/english/press/2026/11/20261119001.html",
     "published_at": null,
     "published_raw": null,
     "summary": "",
@@ -616,17 +40,17 @@
       "family": "trade_and_industry_policy"
     },
     "primary_source_id": "jp-meti-index",
-    "n": 11486,
-    "first_seen": "2026-11-19T21:37:53.975841+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
+    "n": 11673,
+    "first_seen": "2026-11-20T08:35:54.872966+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
     "source_ids": [
       "jp-meti-index"
     ]
   },
   {
-    "title": "Showcase Event of Japan Innovation Campus Held at Tokyo Innovation Base",
-    "url": "https://www.meti.go.jp/english/press/2026/11/20261113002.html",
-    "native_id": "https://www.meti.go.jp/english/press/2026/11/20261113002.html",
+    "title": "Parliamentary Vice-Minister WAKAYAMA Receives a Courtesy Call from Washington Lieutenant Governor Denny Heck",
+    "url": "https://www.meti.go.jp/english/press/2026/11/20261112001.html",
+    "native_id": "https://www.meti.go.jp/english/press/2026/11/20261112001.html",
     "published_at": null,
     "published_raw": null,
     "summary": "",
@@ -640,17 +64,41 @@
       "family": "trade_and_industry_policy"
     },
     "primary_source_id": "jp-meti-index",
-    "n": 11487,
-    "first_seen": "2026-11-19T21:37:53.975841+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
+    "n": 11674,
+    "first_seen": "2026-11-20T08:35:54.872966+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
+    "source_ids": [
+      "jp-meti-index"
+    ]
+  },
+  {
+    "title": "Minister AKAZAWA Holds the Eighth Meeting of the Japan-Viet Nam Joint Committee on Cooperation in Industry, Trade and Energy and Pays a Courtesy Call on H.E. Mr. To Lam, General Secretary of the Communist Party and President of Viet Nam",
+    "url": "https://www.meti.go.jp/english/press/2026/11/20261109002.html",
+    "native_id": "https://www.meti.go.jp/english/press/2026/11/20261109002.html",
+    "published_at": null,
+    "published_raw": null,
+    "summary": "",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Japan Ministry of Economy Trade and Industry",
+      "jurisdiction": "JP",
+      "family": "trade_and_industry_policy"
+    },
+    "primary_source_id": "jp-meti-index",
+    "n": 11675,
+    "first_seen": "2026-11-20T08:35:54.872966+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
     "source_ids": [
       "jp-meti-index"
     ]
   },
   {
     "title": "Miscellaneous Order",
-    "url": "https://www.supremecourt.gov/orders/courtorders/111926zr_h3ci.pdf",
-    "native_id": "https://www.supremecourt.gov/orders/courtorders/111926zr_h3ci.pdf",
+    "url": "https://www.supremecourt.gov/orders/courtorders/111926zr1_2dp3.pdf",
+    "native_id": "https://www.supremecourt.gov/orders/courtorders/111926zr1_2dp3.pdf",
     "published_at": null,
     "published_raw": null,
     "summary": "",
@@ -664,9 +112,9 @@
       "family": "judicial_decisions"
     },
     "primary_source_id": "us-supreme-court-orders-index",
-    "n": 11506,
-    "first_seen": "2026-11-19T21:37:53.975841+00:00",
-    "last_seen": "2026-11-19T21:37:53.975841+00:00",
+    "n": 11676,
+    "first_seen": "2026-11-20T08:35:54.872966+00:00",
+    "last_seen": "2026-11-20T08:35:54.872966+00:00",
     "source_ids": [
       "us-supreme-court-orders-index"
     ]
