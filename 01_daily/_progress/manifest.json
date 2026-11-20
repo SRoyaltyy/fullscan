@@ -1,12 +1,6 @@
 {
-  "updated_at": "2026-11-19T21:42:12-05:00",
+  "updated_at": "2026-11-19T21:44:36-05:00",
   "runs": [
-    {
-      "date": "2026-11-11",
-      "workflow": "preopen",
-      "file": "2026-11-11_preopen.json",
-      "updated_at": "2026-11-11T04:42:41-05:00"
-    },
     {
       "date": "2026-11-09",
       "workflow": "postclose",
@@ -200,22 +194,10 @@
       "updated_at": "2026-11-18T23:39:36-05:00"
     },
     {
-      "date": "2026-11-19",
-      "workflow": "fm_preopen",
-      "file": "2026-11-19_fm_preopen.json",
-      "updated_at": "2026-11-19T04:33:04-05:00"
-    },
-    {
       "date": "2026-11-17",
       "workflow": "postclose",
       "file": "2026-11-17_postclose.json",
       "updated_at": "2026-11-19T07:10:32-05:00"
-    },
-    {
-      "date": "2026-11-18",
-      "workflow": "postclose",
-      "file": "2026-11-18_postclose.json",
-      "updated_at": "2026-11-19T07:11:21-05:00"
     },
     {
       "date": "2026-11-19",
@@ -225,21 +207,39 @@
     },
     {
       "date": "2026-11-19",
+      "workflow": "webull_sim",
+      "file": "2026-11-19_webull_sim.json",
+      "updated_at": "2026-11-19T17:42:54-05:00"
+    },
+    {
+      "date": "2026-11-19",
       "workflow": "factor_mine",
       "file": "2026-11-19_factor_mine.json",
       "updated_at": "2026-11-19T19:12:22-05:00"
     },
     {
       "date": "2026-11-19",
-      "workflow": "webull_sim",
-      "file": "2026-11-19_webull_sim.json",
-      "updated_at": "2026-11-19T21:34:38-05:00"
+      "workflow": "homepage_digest",
+      "file": "2026-11-19_homepage_digest.json",
+      "updated_at": "2026-11-19T21:22:23-05:00"
+    },
+    {
+      "date": "2026-11-18",
+      "workflow": "postclose",
+      "file": "2026-11-18_postclose.json",
+      "updated_at": "2026-11-19T21:26:35-05:00"
     },
     {
       "date": "2026-11-19",
       "workflow": "postclose",
       "file": "2026-11-19_postclose.json",
-      "updated_at": "2026-11-19T21:42:12-05:00"
+      "updated_at": "2026-11-19T21:28:45-05:00"
+    },
+    {
+      "date": "2026-11-19",
+      "workflow": "fm_preopen",
+      "file": "2026-11-19_fm_preopen.json",
+      "updated_at": "2026-11-19T21:44:36-05:00"
     }
   ]
 }
