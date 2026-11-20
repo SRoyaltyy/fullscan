@@ -5,8 +5,8 @@
   "run_id": "44712315783",
   "model": "glm-5.3-flash",
   "started_at": "2026-11-20T05:00:19-05:00",
-  "updated_at": "2026-11-20T05:02:36-05:00",
-  "heartbeat_at": "2026-11-20T05:02:36-05:00",
+  "updated_at": "2026-11-20T05:03:01-05:00",
+  "heartbeat_at": "2026-11-20T05:03:01-05:00",
   "stages": [
     {
       "name": "prep",
@@ -21,11 +21,11 @@
     },
     {
       "name": "news",
-      "state": "running",
+      "state": "ok",
       "started_at": "2026-11-20T05:02:06-05:00",
-      "ended_at": "",
-      "heartbeat_at": "2026-11-20T05:02:36-05:00",
-      "done": 1,
+      "ended_at": "2026-11-20T05:03:01-05:00",
+      "heartbeat_at": "2026-11-20T05:03:01-05:00",
+      "done": 4,
       "total": 4,
       "model": "glm-5.3-flash",
       "error": ""
