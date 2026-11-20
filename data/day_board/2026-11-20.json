@@ -1,17 +1,16 @@
 {
   "date": "2026-11-20",
-  "generated_at": "2026-11-20T05:02:30.372444-05:00",
+  "generated_at": "2026-11-20T05:02:49.712840-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-11-20_predict.md` \u2014 missing",
-    "MISSING News actions JSON `01_daily/news/2026-11-20_actions.json` \u2014 missing",
     "MISSING News judge MD `01_daily/news/2026-11-20_judge.md` \u2014 missing"
   ],
   "counts": {
     "ok": 4,
-    "partial": 3,
-    "fail": 1,
+    "partial": 4,
+    "fail": 0,
     "n": 8
   },
   "processes": [
@@ -183,7 +182,7 @@
       "inputs_ready": true,
       "n_req_ok": 2,
       "n_req": 9,
-      "n_opt_ok": 1,
+      "n_opt_ok": 2,
       "n_opt": 14,
       "files": [
         {
@@ -294,11 +293,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-11-20_actions.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 76832,
+          "said": "107 ticker actions \u00b7 6 events \u00b7 7418 headlines \u00b7 COP BUY, EOG BUY, CHRD BUY, SM BUY, REPX BUY, HPK BUY, OXY BUY, FANG BUY",
+          "bullets": [
+            "BUY COP",
+            "BUY EOG",
+            "BUY CHRD",
+            "BUY SM"
+          ]
         },
         {
           "key": "general",
@@ -577,8 +581,8 @@
       "key": "catalyst",
       "name": "Catalyst dossiers",
       "yaml": "catalyst_daily.yml",
-      "status": "FAIL",
-      "inputs_ready": false,
+      "status": "PARTIAL",
+      "inputs_ready": true,
       "n_req_ok": 0,
       "n_req": 0,
       "n_opt_ok": 0,
@@ -589,11 +593,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-11-20_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 76832,
+          "said": "107 ticker actions \u00b7 6 events \u00b7 7418 headlines \u00b7 COP BUY, EOG BUY, CHRD BUY, SM BUY, REPX BUY, HPK BUY, OXY BUY, FANG BUY",
+          "bullets": [
+            "BUY COP",
+            "BUY EOG",
+            "BUY CHRD",
+            "BUY SM"
+          ]
         },
         {
           "key": "in_digest",
@@ -622,8 +631,17 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "107 ticker actions \u00b7 6 events \u00b7 7418 headlines \u00b7 COP BUY, EOG BUY, CHRD BUY, SM BUY, REPX BUY, HPK BUY, OXY BUY, FANG BUY",
+      "bullets": [
+        "BUY COP",
+        "BUY EOG",
+        "BUY CHRD",
+        "BUY SM",
+        "BUY REPX",
+        "BUY HPK",
+        "BUY OXY",
+        "BUY FANG"
+      ]
     },
     {
       "key": "stock_book",
@@ -663,11 +681,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-11-20_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 76832,
+          "said": "107 ticker actions \u00b7 6 events \u00b7 7418 headlines \u00b7 COP BUY, EOG BUY, CHRD BUY, SM BUY, REPX BUY, HPK BUY, OXY BUY, FANG BUY",
+          "bullets": [
+            "BUY COP",
+            "BUY EOG",
+            "BUY CHRD",
+            "BUY SM"
+          ]
         },
         {
           "key": "in_digest",
@@ -1165,6 +1188,31 @@
         }
       ],
       "preview": "raw=7419 usable=415 single=444 \u00b7 Latin American Currencies Tumble on Fed-Rate Hike Repricing - Bloomberg.com | UK's FTSE 100 hits six-week low in broad risk-off move - Reuters | US weekly jobless claims edge up, but labor market remains resilient - Reuters | TSMC tightens China AI chip curbs as new US rules close manufacturing loophole,  | India's October crude oil imports rise over 4% month-on-month - Reuters \u00b7 # News Parse v2 \u2014 2026-11-20T05:02:20.230265-05:00\nWindow\u224848h | news_mode=on | raw=7419 | usable=415 | single_name=444 | noise_dropped=6421\nusable polarity={'+': 15, '-': 120, 'mixed': 0, 'neutral': 280}"
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-11-20",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-20T05:02:48.583319-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-20_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 76832,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-11-20_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 14312,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-11-20T05:02:48.564302-05:00\nraw=7418 unique_events=6 tickers=107"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-11-20T05:02:48.564302-05:00\nraw=7418 unique_events=6 tickers=107"
     }
   ],
   "href": {

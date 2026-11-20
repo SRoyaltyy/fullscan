@@ -1,12 +1,12 @@
 {
   "date": "2026-11-20",
-  "generated_at": "2026-11-20T05:02:30.372444-05:00",
+  "generated_at": "2026-11-20T05:02:49.712840-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
     "ok": 4,
-    "partial": 3,
-    "fail": 1,
+    "partial": 4,
+    "fail": 0,
     "n": 8
   },
   "buy_1d": [],
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-11-20",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-20T05:00:21.229645-05:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-11-20_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 100660,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-11-20_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 10819,
-          "preview": "# Finviz Daily Digest \u2014 2026-11-20\n_Generated 2026-11-20T04:47:42.673004-05:00 \u00b7 export=data/exports/finviz_2026-11-19.csv \u00b7 ticker digests=836 \u00b7 high-signal=204_"
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-11-20\n_Generated 2026-11-20T04:47:42.673004-05:00 \u00b7 export=data/exports/finviz_2026-11-19.csv \u00b7 ticker digests=836 \u00b7 high-signal=204_"
-    },
     {
       "key": "map_heat",
       "title": "Map heat tables",
@@ -200,6 +175,31 @@
         }
       ],
       "preview": "raw=7419 usable=415 single=444 \u00b7 Latin American Currencies Tumble on Fed-Rate Hike Repricing - Bloomberg.com | UK's FTSE 100 hits six-week low in broad risk-off move - Reuters | US weekly jobless claims edge up, but labor market remains resilient - Reuters | TSMC tightens China AI chip curbs as new US rules close manufacturing loophole,  | India's October crude oil imports rise over 4% month-on-month - Reuters \u00b7 # News Parse v2 \u2014 2026-11-20T05:02:20.230265-05:00\nWindow\u224848h | news_mode=on | raw=7419 | usable=415 | single_name=444 | noise_dropped=6421\nusable polarity={'+': 15, '-': 120, 'mixed': 0, 'neutral': 280}"
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-11-20",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-20T05:02:48.583319-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-20_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 76832,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-11-20_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 14312,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-11-20T05:02:48.564302-05:00\nraw=7418 unique_events=6 tickers=107"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-11-20T05:02:48.564302-05:00\nraw=7418 unique_events=6 tickers=107"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
