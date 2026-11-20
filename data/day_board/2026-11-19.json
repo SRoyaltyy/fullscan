@@ -1,8 +1,8 @@
 {
   "date": "2026-11-19",
-  "generated_at": "2026-11-19T21:22:07.570828-05:00",
+  "generated_at": "2026-11-20T03:35:44.090517-05:00",
   "overall": "PARTIAL",
-  "ranker_ready": false,
+  "ranker_ready": true,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-11-19_predict.md` \u2014 missing",
     "MISSING News judge MD `01_daily/news/2026-11-19_judge.md` \u2014 missing"
@@ -341,13 +341,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7572,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 16 fail",
+          "size": 7568,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 15 fail",
           "bullets": [
             "general_predict:missing",
             "events:missing",
             "news_judge:missing",
-            "finviz_market_digest:missing"
+            "map_heat_research:missing"
           ]
         },
         {
@@ -357,7 +357,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False missing=['events', 'news_judge', 'map_heat_research', 'general_predict']",
-          "size": 6641,
+          "size": 6636,
           "said": "all_ok=False \u00b7 qc=False \u00b7 grok=False \u00b7 book=False \u00b7 missing events, news_judge, map_heat_research, general_predict",
           "bullets": []
         },
@@ -2493,6 +2493,52 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-11-19\n**Generated:** 2026-11-19T21:22:06.443089-05:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed sharply lower for a sixth straight session as broad tech and consumer weakness outweighed a record Anthropic IPO ahead of key consumer sentiment data\n**Prior close:** SPX -2.02%  Nasdaq -2.25%  Dow -2.19%\n**SPX:** -2.02%  **Nasdaq:** -2.25%  **Dow:** -2.19%\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** NVDA, AMD, INSM, SNY, PANW, WSM, WMT, INTU, ESTC, BJ, ANT\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-11-20\n**Clock use:** `next_open`"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-11-19",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-20T03:35:43.138894-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-19_finviz_digest.after-freeze-1.json",
+          "ok": true,
+          "reason": "",
+          "size": 97740,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-11-19_finviz_digest.after-freeze-1.md",
+          "ok": true,
+          "reason": "",
+          "size": 11106,
+          "preview": "# Finviz Daily Digest \u2014 2026-11-19\n_Generated 2026-11-20T03:35:42.635727-05:00 \u00b7 export=data/exports/finviz_2026-11-19.csv \u00b7 ticker digests=811 \u00b7 high-signal=195_"
+        },
+        {
+          "path": "data/exports/finviz_2026-11-19.after-freeze-1.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11074214,
+          "preview": "11760 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11074214,
+          "preview": "11760 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
+        },
+        {
+          "path": "01_daily/news/2026-11-19_finviz_digest_preopen.json",
+          "ok": true,
+          "reason": "",
+          "size": 100554,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-11-19\n_Generated 2026-11-20T03:35:42.635727-05:00 \u00b7 export=data/exports/finviz_2026-11-19.csv \u00b7 ticker digests=811 \u00b7 high-signal=195_ \u00b7 11760 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\" \u00b7 11760 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
     }
   ],
   "href": {
@@ -2538,6 +2584,46 @@
       "path": "data/exports/finviz_2026-11-19.csv",
       "at": "2026-11-20T03:35:19-05:00",
       "commit_msg": "auto: land finviz export [2026-11-19]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "44702351273",
+      "manifest": "research/input_freeze/2026-11-19/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-11-19_grok_review.json",
+      "at": "2026-11-20T03:35:44-05:00",
+      "commit_msg": "auto: land finviz_digest [2026-11-19]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "44702351273",
+      "manifest": "research/input_freeze/2026-11-19/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-11-19_preopen_qc.json",
+      "at": "2026-11-20T03:35:44-05:00",
+      "commit_msg": "auto: land finviz_digest [2026-11-19]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "44702351273",
+      "manifest": "research/input_freeze/2026-11-19/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-11-19_preopen_status.json",
+      "at": "2026-11-20T03:35:44-05:00",
+      "commit_msg": "auto: land finviz_digest [2026-11-19]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "44702351273",
+      "manifest": "research/input_freeze/2026-11-19/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-11-19_preopen_status.md",
+      "at": "2026-11-20T03:35:44-05:00",
+      "commit_msg": "auto: land finviz_digest [2026-11-19]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "44702351273",
+      "manifest": "research/input_freeze/2026-11-19/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-11-19.json",
+      "at": "2026-11-20T03:35:44-05:00",
+      "commit_msg": "auto: land finviz_digest [2026-11-19]",
       "workflow": "Finviz ALL (GH-hosted Elite)",
       "run_id": "44702351273",
       "manifest": "research/input_freeze/2026-11-19/manifest.json"
