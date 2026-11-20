@@ -1,6 +1,6 @@
 {
   "date": "2026-11-20",
-  "generated_at": "2026-11-20T13:42:38.518505-05:00",
+  "generated_at": "2026-11-20T14:17:01.385847-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -686,13 +686,13 @@
       "date": "2026-11-20",
       "ok": true,
       "pushed": true,
-      "at": "2026-11-20T13:30:30.730003-05:00",
+      "at": "2026-11-20T13:43:13.587268-05:00",
       "files": [
         {
           "path": "data/day_board/today.json",
           "ok": true,
           "reason": "",
-          "size": 31657,
+          "size": 24083,
           "preview": "2026-11-20 BUY PANW, OKTA, BOX, PM, RBRK, CON, PSN, CLBT \u00b7 SELL QBTS, TE, FLNC, METC, RGTI, FCEL, CWEN, EAF"
         },
         {
@@ -703,17 +703,17 @@
           "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
         },
         {
-          "path": "data/day_board/2026-11-20.after-freeze-1.json",
+          "path": "data/day_board/2026-11-20.after-freeze-2.json",
           "ok": true,
           "reason": "",
-          "size": 101808,
+          "size": 93144,
           "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
         },
         {
           "path": "data/day_board/2026-11-20_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 64182,
+          "size": 55878,
           "preview": "2026-11-20 BUY PANW, OKTA, BOX, PM, RBRK, CON, PSN, CLBT \u00b7 SELL QBTS, TE, FLNC, METC, RGTI, FCEL, CWEN, EAF"
         },
         {
@@ -738,10 +738,10 @@
           "preview": "keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows"
         },
         {
-          "path": "data/day_board/today_strategies.after-freeze-14.json",
+          "path": "data/day_board/today_strategies.after-freeze-15.json",
           "ok": true,
           "reason": "",
-          "size": 1296957,
+          "size": 1402094,
           "preview": "2026-11-20 BUY PANW, OKTA, BOX, PM, RBRK, CON, PSN, CLBT \u00b7 SELL QBTS, TE, FLNC, METC, RGTI, FCEL, CWEN, EAF"
         },
         {
@@ -755,7 +755,7 @@
           "path": "dashboard/factor-mine/today.json",
           "ok": true,
           "reason": "",
-          "size": 64182,
+          "size": 55878,
           "preview": "2026-11-20 BUY PANW, OKTA, BOX, PM, RBRK, CON, PSN, CLBT \u00b7 SELL QBTS, TE, FLNC, METC, RGTI, FCEL, CWEN, EAF"
         },
         {
@@ -783,7 +783,7 @@
           "path": "data/day_board/hold_live_px.json",
           "ok": true,
           "reason": "",
-          "size": 1591,
+          "size": 1542,
           "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
         },
         {
@@ -802,7 +802,7 @@
       "date": "2026-11-20",
       "ok": true,
       "pushed": true,
-      "at": "2026-11-20T13:30:44.267706-05:00",
+      "at": "2026-11-20T13:43:26.286415-05:00",
       "files": [
         {
           "path": "03_scoreboard/PAPER_TRADING.md",
@@ -827,7 +827,7 @@
       "date": "2026-11-20",
       "ok": true,
       "pushed": true,
-      "at": "2026-11-20T13:42:06.485264-05:00",
+      "at": "2026-11-20T14:16:30.685319-05:00",
       "files": [
         {
           "path": "01_daily/weather/2026-11-20_weather.json",
@@ -856,6 +856,13 @@
           "reason": "",
           "size": 9653,
           "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -11.690000000000001, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -4.79, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -4.04, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -3.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -6.4350000000000005, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -4.17, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -8.2, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -5.78, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-11-20_weather.after-freeze-3.json",
+          "ok": true,
+          "reason": "",
+          "size": 9654,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -11.690000000000001, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -4.79, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -4.04, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -3.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -6.4350000000000005, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -4.17, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -8.2, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -5.78, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -11.690000000000001, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -4.79, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -4.04, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -3.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -6.4350000000000005, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -4.17, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -8.2, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -5.78, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-20\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade. \u00b7 weather sectors 11 \u00b7 Basic Materials={'score': -11.690000000000001, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -4.79, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -4.04, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_w"
@@ -866,7 +873,7 @@
       "date": "2026-11-20",
       "ok": true,
       "pushed": true,
-      "at": "2026-11-20T13:42:15.620836-05:00",
+      "at": "2026-11-20T14:16:41.289239-05:00",
       "files": [
         {
           "path": "data/join/2026-11-20_ranked.csv",
@@ -898,7 +905,7 @@
       "date": "2026-11-20",
       "ok": true,
       "pushed": true,
-      "at": "2026-11-20T13:42:23.430024-05:00",
+      "at": "2026-11-20T14:16:48.423317-05:00",
       "files": [
         {
           "path": "data/peers/2026-11-20_peer_rs.csv",
