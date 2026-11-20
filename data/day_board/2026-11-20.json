@@ -1,6 +1,6 @@
 {
   "date": "2026-11-20",
-  "generated_at": "2026-11-20T05:02:21.992434-05:00",
+  "generated_at": "2026-11-20T05:02:30.372444-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -1147,7 +1147,7 @@
       "date": "2026-11-20",
       "ok": true,
       "pushed": true,
-      "at": "2026-11-20T05:02:20.863665-05:00",
+      "at": "2026-11-20T05:02:29.247133-05:00",
       "files": [
         {
           "path": "01_daily/news/2026-11-20_parsed.json",
