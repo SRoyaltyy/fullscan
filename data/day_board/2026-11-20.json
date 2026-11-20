@@ -1,19 +1,16 @@
 {
   "date": "2026-11-20",
-  "generated_at": "2026-11-20T05:04:02.102573-05:00",
+  "generated_at": "2026-11-20T05:04:04.794169-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-11-20_predict.md` \u2014 missing",
-    "MISSING News actions JSON `01_daily/news/2026-11-20_actions.json` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-11-20_judge.md` \u2014 missing",
-    "MISSING Weather JSON `01_daily/weather/2026-11-20_weather.json` \u2014 missing",
-    "MISSING AB checklist enriched `data/ab_checklist/2026-11-20_ab_checklist_enriched.csv` \u2014 missing"
+    "MISSING News judge MD `01_daily/news/2026-11-20_judge.md` \u2014 missing"
   ],
   "counts": {
-    "ok": 1,
-    "partial": 3,
-    "fail": 4,
+    "ok": 4,
+    "partial": 4,
+    "fail": 0,
     "n": 8
   },
   "processes": [
@@ -21,9 +18,9 @@
       "key": "postclose",
       "name": "Post-close research",
       "yaml": "map_heat_postclose.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 2,
       "n_opt": 2,
@@ -58,10 +55,10 @@
           "name": "Map heat tables JSON",
           "path": "01_daily/map_heat/2026-11-20_map_heat.json",
           "role": "required",
-          "status": "FAIL",
-          "reason": "stale_map_heat_md",
-          "size": 0,
-          "said": "stale_map_heat_md \u00b7 morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
+          "status": "OK",
+          "reason": "",
+          "size": 273158,
+          "said": "morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
           "bullets": []
         },
         {
@@ -71,10 +68,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 18060,
-          "said": "MAP HEAT \u2014 2026-11-19",
+          "size": 18219,
+          "said": "MAP HEAT \u2014 2026-11-20",
           "bullets": [
-            "Export `finviz_2026-11-19.csv` \u00b7 11616 names \u00b7 generated 2026-11-19T05:04:57.110980-05:00",
+            "Export `finviz_2026-11-19.csv` \u00b7 11616 names \u00b7 generated 2026-11-20T04:49:53.201630-05:00",
             "TAPE (live futures)"
           ]
         }
@@ -100,12 +97,12 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 97326,
-          "said": "807 tickers \u00b7 192 signals \u00b7 top AJG, AMT, BMY, BSX, COF, CRWD, DDOG, DHR",
+          "size": 100660,
+          "said": "836 tickers \u00b7 204 signals \u00b7 top AMD, AMT, BP, BX, COF, CRWD, DELL, GSK",
           "bullets": [
-            "As Financial Stress Weighs on Workers, Gallagher Introduces a Platform Focused on Better Financial Decision-Making",
+            "Is the AI party over? Anthropic is about to find out.",
             "Deutsche Bank Names Top North America Telecom Services Stock",
-            "Bristol Myers Squibb Demonstrates Breadth and Clinical Momentum Across Blood Cancers and Rare Hematologic Disorders at ASH 2026"
+            "BP shuffles board"
           ]
         },
         {
@@ -115,10 +112,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 10828,
+          "size": 10750,
           "said": "Finviz Daily Digest \u2014 2026-11-20",
           "bullets": [
-            "_Generated 2026-11-20T05:02:28.993383-05:00 \u00b7 export=data/exports/finviz_2026-11-20.csv \u00b7 ticker digests=807 \u00b7 high-signal=192_",
+            "_Generated 2026-11-20T04:47:42.673004-05:00 \u00b7 export=data/exports/finviz_2026-11-19.csv \u00b7 ticker digests=836 \u00b7 high-signal=204_",
             "Major indices (live quote page)"
           ]
         },
@@ -143,7 +140,7 @@
           "size": 2878,
           "said": "Finviz homepage market digest \u2014 2026-11-20",
           "bullets": [
-            "Generated:** 2026-11-20T05:04:01.692811-05:00 (America/New_York)",
+            "Generated:** 2026-11-20T04:47:52.632320-05:00 (America/New_York)",
             "Source:** `live`"
           ]
         },
@@ -170,11 +167,11 @@
           "bullets": []
         }
       ],
-      "said": "807 tickers \u00b7 192 signals \u00b7 top AJG, AMT, BMY, BSX, COF, CRWD, DDOG, DHR",
+      "said": "836 tickers \u00b7 204 signals \u00b7 top AMD, AMT, BP, BX, COF, CRWD, DELL, GSK",
       "bullets": [
-        "As Financial Stress Weighs on Workers, Gallagher Introduces a Platform Focused on Better Financial Decision-Making",
+        "Is the AI party over? Anthropic is about to find out.",
         "Deutsche Bank Names Top North America Telecom Services Stock",
-        "Bristol Myers Squibb Demonstrates Breadth and Clinical Momentum Across Blood Cancers and Rare Hematologic Disorders at ASH 2026"
+        "BP shuffles board"
       ]
     },
     {
@@ -182,10 +179,10 @@
       "name": "Pre-Open ALL",
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
-      "inputs_ready": false,
+      "inputs_ready": true,
       "n_req_ok": 2,
       "n_req": 9,
-      "n_opt_ok": 1,
+      "n_opt_ok": 2,
       "n_opt": 14,
       "files": [
         {
@@ -195,12 +192,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97326,
-          "said": "807 tickers \u00b7 192 signals \u00b7 top AJG, AMT, BMY, BSX, COF, CRWD, DDOG, DHR",
+          "size": 100660,
+          "said": "836 tickers \u00b7 204 signals \u00b7 top AMD, AMT, BP, BX, COF, CRWD, DELL, GSK",
           "bullets": [
-            "As Financial Stress Weighs on Workers, Gallagher Introduces a Platform Focused on Better Financial Decision-Making",
+            "Is the AI party over? Anthropic is about to find out.",
             "Deutsche Bank Names Top North America Telecom Services Stock",
-            "Bristol Myers Squibb Demonstrates Breadth and Clinical Momentum Across Blood Cancers and Rare Hematologic Disorders at ASH 2026"
+            "BP shuffles board"
           ]
         },
         {
@@ -230,10 +227,10 @@
           "name": "Map heat tables JSON",
           "path": "01_daily/map_heat/2026-11-20_map_heat.json",
           "role": "input",
-          "status": "FAIL",
-          "reason": "stale_map_heat_md",
-          "size": 0,
-          "said": "stale_map_heat_md \u00b7 morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
+          "status": "OK",
+          "reason": "",
+          "size": 273158,
+          "said": "morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
           "bullets": []
         },
         {
@@ -241,10 +238,10 @@
           "name": "News parse JSON",
           "path": "01_daily/news/2026-11-20_parsed.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 5345721,
+          "said": "5345721B on disk",
           "bullets": []
         },
         {
@@ -296,11 +293,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-11-20_actions.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 76832,
+          "said": "107 ticker actions \u00b7 6 events \u00b7 7418 headlines \u00b7 COP BUY, EOG BUY, CHRD BUY, SM BUY, REPX BUY, HPK BUY, OXY BUY, FANG BUY",
+          "bullets": [
+            "BUY COP",
+            "BUY EOG",
+            "BUY CHRD",
+            "BUY SM"
+          ]
         },
         {
           "key": "general",
@@ -331,13 +333,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7592,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 20 fail",
+          "size": 7575,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 17 fail",
           "bullets": [
             "general_predict:missing",
             "events:missing",
             "news_judge:missing",
-            "news_parse:missing"
+            "news_actions:missing"
           ]
         },
         {
@@ -356,13 +358,11 @@
           "name": "Grok review JSON",
           "path": "01_daily/2026-11-20_grok_review.json",
           "role": "required",
-          "status": "OK",
-          "reason": "ok=False Grok returned an empty review",
-          "size": 308,
-          "said": "ok=False \u00b7 empty_review_reply (review)",
-          "bullets": [
-            "Grok returned an empty review"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "sector_basic_materials",
@@ -493,9 +493,9 @@
       "key": "weather",
       "name": "Label + weather",
       "yaml": "label_weather.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 1,
       "n_opt_ok": 0,
       "n_opt": 0,
@@ -507,12 +507,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97326,
-          "said": "807 tickers \u00b7 192 signals \u00b7 top AJG, AMT, BMY, BSX, COF, CRWD, DDOG, DHR",
+          "size": 100660,
+          "said": "836 tickers \u00b7 204 signals \u00b7 top AMD, AMT, BP, BX, COF, CRWD, DELL, GSK",
           "bullets": [
-            "As Financial Stress Weighs on Workers, Gallagher Introduces a Platform Focused on Better Financial Decision-Making",
+            "Is the AI party over? Anthropic is about to find out.",
             "Deutsche Bank Names Top North America Telecom Services Stock",
-            "Bristol Myers Squibb Demonstrates Breadth and Clinical Momentum Across Blood Cancers and Rare Hematologic Disorders at ASH 2026"
+            "BP shuffles board"
           ]
         },
         {
@@ -520,25 +520,29 @@
           "name": "Weather JSON",
           "path": "01_daily/weather/2026-11-20_weather.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "sectors=11 bytes=9657 vix=spiking yields=falling",
+          "size": 9657,
+          "said": "hostile 11",
+          "bullets": [
+            "hostile: Basic Materials, Communication Services, Consumer Cyclical, Consumer Defensive, Energy, Financial, Healthcare, Industrials, Real Estate, Technology, Utilities"
+          ]
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "hostile 11",
+      "bullets": [
+        "hostile: Basic Materials, Communication Services, Consumer Cyclical, Consumer Defensive, Energy, Financial, Healthcare, Industrials, Real Estate, Technology, Utilities"
+      ]
     },
     {
       "key": "ab",
       "name": "AB checklist",
       "yaml": "ab_checklist.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 1,
       "files": [
         {
@@ -546,33 +550,39 @@
           "name": "AB checklist raw",
           "path": "data/ab_checklist/2026-11-20_ab_checklist.csv",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2600",
+          "size": 7461892,
+          "said": "27 rows",
+          "bullets": [
+            "SLDE, CBRL, REYN, POWW, SO, CL, AES, SEZL"
+          ]
         },
         {
           "key": "ab_enriched",
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-11-20_ab_checklist_enriched.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2600",
+          "size": 8257770,
+          "said": "25 rows",
+          "bullets": [
+            "CBRL, POWW, SLDE, CL, REYN, SO, AES, SEZL"
+          ]
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "25 rows",
+      "bullets": [
+        "CBRL, POWW, SLDE, CL, REYN"
+      ]
     },
     {
       "key": "catalyst",
       "name": "Catalyst dossiers",
       "yaml": "catalyst_daily.yml",
-      "status": "FAIL",
-      "inputs_ready": false,
+      "status": "PARTIAL",
+      "inputs_ready": true,
       "n_req_ok": 0,
       "n_req": 0,
       "n_opt_ok": 0,
@@ -583,11 +593,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-11-20_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 76832,
+          "said": "107 ticker actions \u00b7 6 events \u00b7 7418 headlines \u00b7 COP BUY, EOG BUY, CHRD BUY, SM BUY, REPX BUY, HPK BUY, OXY BUY, FANG BUY",
+          "bullets": [
+            "BUY COP",
+            "BUY EOG",
+            "BUY CHRD",
+            "BUY SM"
+          ]
         },
         {
           "key": "in_digest",
@@ -596,12 +611,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97326,
-          "said": "807 tickers \u00b7 192 signals \u00b7 top AJG, AMT, BMY, BSX, COF, CRWD, DDOG, DHR",
+          "size": 100660,
+          "said": "836 tickers \u00b7 204 signals \u00b7 top AMD, AMT, BP, BX, COF, CRWD, DELL, GSK",
           "bullets": [
-            "As Financial Stress Weighs on Workers, Gallagher Introduces a Platform Focused on Better Financial Decision-Making",
+            "Is the AI party over? Anthropic is about to find out.",
             "Deutsche Bank Names Top North America Telecom Services Stock",
-            "Bristol Myers Squibb Demonstrates Breadth and Clinical Momentum Across Blood Cancers and Rare Hematologic Disorders at ASH 2026"
+            "BP shuffles board"
           ]
         },
         {
@@ -616,16 +631,25 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "107 ticker actions \u00b7 6 events \u00b7 7418 headlines \u00b7 COP BUY, EOG BUY, CHRD BUY, SM BUY, REPX BUY, HPK BUY, OXY BUY, FANG BUY",
+      "bullets": [
+        "BUY COP",
+        "BUY EOG",
+        "BUY CHRD",
+        "BUY SM",
+        "BUY REPX",
+        "BUY HPK",
+        "BUY OXY",
+        "BUY FANG"
+      ]
     },
     {
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "FAIL",
+      "status": "PARTIAL",
       "inputs_ready": false,
-      "n_req_ok": 0,
+      "n_req_ok": 2,
       "n_req": 4,
       "n_opt_ok": 1,
       "n_opt": 4,
@@ -657,11 +681,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-11-20_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 76832,
+          "said": "107 ticker actions \u00b7 6 events \u00b7 7418 headlines \u00b7 COP BUY, EOG BUY, CHRD BUY, SM BUY, REPX BUY, HPK BUY, OXY BUY, FANG BUY",
+          "bullets": [
+            "BUY COP",
+            "BUY EOG",
+            "BUY CHRD",
+            "BUY SM"
+          ]
         },
         {
           "key": "in_digest",
@@ -670,12 +699,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97326,
-          "said": "807 tickers \u00b7 192 signals \u00b7 top AJG, AMT, BMY, BSX, COF, CRWD, DDOG, DHR",
+          "size": 100660,
+          "said": "836 tickers \u00b7 204 signals \u00b7 top AMD, AMT, BP, BX, COF, CRWD, DELL, GSK",
           "bullets": [
-            "As Financial Stress Weighs on Workers, Gallagher Introduces a Platform Focused on Better Financial Decision-Making",
+            "Is the AI party over? Anthropic is about to find out.",
             "Deutsche Bank Names Top North America Telecom Services Stock",
-            "Bristol Myers Squibb Demonstrates Breadth and Clinical Momentum Across Blood Cancers and Rare Hematologic Disorders at ASH 2026"
+            "BP shuffles board"
           ]
         },
         {
@@ -694,44 +723,52 @@
           "name": "Weather JSON",
           "path": "01_daily/weather/2026-11-20_weather.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "sectors=11 bytes=9657 vix=spiking yields=falling",
+          "size": 9657,
+          "said": "hostile 11",
+          "bullets": [
+            "hostile: Basic Materials, Communication Services, Consumer Cyclical, Consumer Defensive, Energy, Financial, Healthcare, Industrials, Real Estate, Technology, Utilities"
+          ]
         },
         {
           "key": "in_ab",
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-11-20_ab_checklist_enriched.csv",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2600",
+          "size": 8257770,
+          "said": "25 rows",
+          "bullets": [
+            "CBRL, POWW, SLDE, CL, REYN, SO, AES, SEZL"
+          ]
         },
         {
           "key": "join",
           "name": "Join ranked CSV",
           "path": "data/join/2026-11-20_ranked.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=5890",
+          "size": 2330565,
+          "said": "203 rows",
+          "bullets": [
+            "REGN, ONC, KNSA, RDN, RGA, LNG, PLMR, LLY"
+          ]
         },
         {
           "key": "peers",
           "name": "Peer RS CSV",
           "path": "data/peers/2026-11-20_peer_rs.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=5021",
+          "size": 820283,
+          "said": "485 rows",
+          "bullets": [
+            "A, AA, AACG, AAL, AAME, AAMI, AAOI, AAON"
+          ]
         },
         {
           "key": "book_json",
@@ -792,8 +829,10 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "203 rows",
+      "bullets": [
+        "REGN, ONC, KNSA, RDN, RGA"
+      ]
     },
     {
       "key": "publish",
@@ -867,7 +906,12 @@
     "general": {},
     "sectors": {},
     "news": {},
-    "weather": {}
+    "weather": {
+      "said": "hostile 11",
+      "bullets": [
+        "hostile: Basic Materials, Communication Services, Consumer Cyclical, Consumer Defensive, Energy, Financial, Healthcare, Industrials, Real Estate, Technology, Utilities"
+      ]
+    }
   },
   "lands": [
     {
@@ -1265,6 +1309,31 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-11-20\n**Generated:** 2026-11-20T05:04:01.692811-05:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures point to a mixed open as tech and AI weakness persists after sharp Asian losses ahead of Fed speakers and key sentiment data\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** BJ, BKE, IESC, FRO\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-11-20\n**Clock use:** `same_morning`"
+    },
+    {
+      "key": "paper",
+      "title": "Paper dashboard",
+      "date": "2026-11-20",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-20T05:04:03.676947-05:00",
+      "files": [
+        {
+          "path": "03_scoreboard/PAPER_TRADING.md",
+          "ok": true,
+          "reason": "",
+          "size": 1823,
+          "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-11-19** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-11-19** ranker: **weighted** (green pile liquid=0, need 8).\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $8,212.75 | -17.87% | $425.80 | 8 | 642 | $1,376.78 | $-1,770.69 | $-16.55 | 34.1% | 0.0% |\n| 1d_size | $8,828.71 | -11.71% | $376.97 | 7 | 577 | $1"
+        },
+        {
+          "path": "dashboard/index.html",
+          "ok": true,
+          "reason": "",
+          "size": 17231688,
+          "preview": "<!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"data-asof\" content=\"2026-11-19\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;\n--fg:#dfe6f2; --mut:#8b96ab; --dim:#66708a; --pos:#4ade80; --neg:#f87171;\n--chip:#2a3450; --day:#121826; --gold:#fbbf24;\n}\n*{box-sizing:border-box}\nhtml,body{overflow-x:hidden}\nbody{margin:0;background:var(--bg);color:var(--fg);font:14px/1.5 -apple-system,Segoe UI,Roboto,sans-serif}\n.wrap{max-width:1180px;margin:0 auto;padding:16px 16px 48px;width:100%}\nh1{font-size:20px;margin:0 0 4px}\n.sub{color:var(--mut);font-size:12px;margin:0 0 12px}\n.merge-hero{display:block;margin:0 0 14px;padding:14px 16px;border-radius:12px;\nbackground:linear-gradient(180deg,#1a2744,#171e2e);border:1px solid #3b"
+        }
+      ],
+      "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-11-19** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-11-19** ranker: **weighted** (green pile liquid=0, need 8).\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $8,212.75 | -17.87% | $425.80 | 8 | 642 | $1,376.78 | $-1,770.69 | $-16.55 | 34.1% | 0.0% |\n| 1d_size | $8,828.71 | -11.71% | $376.97 | 7 | 577 | $1 \u00b7 <!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"data-asof\" content=\"2026-11-19\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#"
     }
   ],
   "href": {
