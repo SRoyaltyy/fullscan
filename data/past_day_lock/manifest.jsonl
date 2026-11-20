@@ -17024,3 +17024,4 @@
 {"date":"2026-11-18","kind":"day","name":"","record":"paper_skipped","sha256":"a027a3058109f32b06e83d1e791ce13387f2f91f3d947de070bb7a6ea896741e"}
 {"date":"2026-11-19","kind":"day","name":"union_hot_n4_h1_preopen","record":"factor_mine","sha256":"2aed46bb7a336bbe249e2950655359a2e4dbc69c0f86cc0ed9f47a359ef44c61"}
 {"date":"2026-11-19","kind":"day","name":"union_hot_n4_holdup_preopen","record":"factor_mine","sha256":"663bf5063fb19a5ea3ce408e601bb1211e6641bf6b79aa21123ff3e1f77975a1"}
+{"date":"2026-11-19","kind":"day","name":"","record":"flatten_robust","sealed_at":"2026-11-20T14:24:26Z","sha256":"40367ed9d65bf9e76018cc5c11e93f9d342b4f76c044b084f0600bacd31009d9"}
