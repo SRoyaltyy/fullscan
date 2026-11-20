@@ -1,12 +1,12 @@
 {
   "date": "2026-11-20",
-  "generated_at": "2026-11-20T05:00:48.788500-05:00",
+  "generated_at": "2026-11-20T05:01:06.709920-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 2,
+    "ok": 3,
     "partial": 2,
-    "fail": 4,
+    "fail": 3,
     "n": 8
   },
   "buy_1d": [],
@@ -196,6 +196,31 @@
         }
       ],
       "preview": "5890 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-11-20",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-20T05:01:06.408576-05:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-11-20_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9656,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -11.690000000000001, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -4.79, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -4.04, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -3.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -6.4350000000000005, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -4.17, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -8.2, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -5.78, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-11-20_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5186,
+          "preview": "# Weather report \u2014 2026-11-20\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -11.690000000000001, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -4.79, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -4.04, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -3.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -6.4350000000000005, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -4.17, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -8.2, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -5.78, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-20\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
