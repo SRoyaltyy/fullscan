@@ -1,6 +1,6 @@
 {
   "date": "2026-11-20",
-  "generated_at": "2026-11-20T17:00:05.295045-05:00",
+  "generated_at": "2026-11-20T17:00:48.536314-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -834,7 +834,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "live-book poller + today.json (2026-11-20)",
-          "size": 17231458,
+          "size": 17231474,
           "said": "live-book poller + today.json (2026-11-20)",
           "bullets": []
         }
@@ -873,7 +873,7 @@
           "role": "required",
           "status": "OK",
           "reason": "live-book poller + today.json (2026-11-20)",
-          "size": 17231458,
+          "size": 17231474,
           "said": "live-book poller + today.json (2026-11-20)",
           "bullets": []
         },
@@ -1839,6 +1839,59 @@
         }
       ],
       "preview": "5021 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-11-20",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-20T17:00:47.328132-05:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-11-20_stock_book.after-freeze-4.json",
+          "ok": true,
+          "reason": "",
+          "size": 1486561,
+          "preview": "1d BUY PANW, OKTA, BOX, PM, RBRK, CON, PSN, CLBT \u00b7 SELL QBTS, TE, FLNC, METC, RGTI, FCEL, CWEN, EAF"
+        },
+        {
+          "path": "data/stock_book/2026-11-20_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-11-20_input_health.after-freeze-4.json",
+          "ok": true,
+          "reason": "",
+          "size": 2612,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-11-20_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12412,
+          "preview": "2026-11-20 BUY PANW, OKTA, BOX, PM, RBRK, CON, PSN, CLBT \u00b7 SELL QBTS, TE, FLNC, METC, RGTI, FCEL, CWEN, EAF"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12412,
+          "preview": "2026-11-20 BUY PANW, OKTA, BOX, PM, RBRK, CON, PSN, CLBT \u00b7 SELL QBTS, TE, FLNC, METC, RGTI, FCEL, CWEN, EAF"
+        },
+        {
+          "path": "01_daily/2026-11-20_stock_book.after-freeze-4.md",
+          "ok": true,
+          "reason": "",
+          "size": 86260,
+          "preview": "# Stock book \u2014 2026-11-20\n_Generated 2026-11-20T17:00:16.524051-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY PANW, OKTA, BOX, PM, RBRK, CON, PSN, CLBT \u00b7 SELL QBTS, TE, FLNC, METC, RGTI, FCEL, CWEN, EAF \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-11-20 BUY PANW, OKTA, BOX, PM, RBRK, CON, PSN, CLBT \u00b7 SELL QBTS, TE, FLNC, METC, RGTI, FCEL, CWEN, EAF \u00b7 2026-11-20 BUY PANW, OKTA, BOX, PM, RBRK, CON, PSN, CLBT \u00b7 SELL QBTS, TE, FLNC, METC, RGTI, FCEL, CWEN, EAF \u00b7 # Stock book \u2014 2026-11-20\n_Generated 2026-11-20T17:00:16.524051-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
@@ -1892,6 +1945,14 @@
       "path": "data/day_board/2026-11-20.json",
       "at": "2026-11-20T17:00:05-05:00",
       "commit_msg": "auto: land peer_rs [2026-11-20]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "44823720618",
+      "manifest": "research/input_freeze/2026-11-20/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-11-20.json",
+      "at": "2026-11-20T17:00:49-05:00",
+      "commit_msg": "auto: land stock_book [2026-11-20]",
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "44823720618",
       "manifest": "research/input_freeze/2026-11-20/manifest.json"

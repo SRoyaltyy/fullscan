@@ -1,6 +1,6 @@
 {
   "date": "2026-11-20",
-  "generated_at": "2026-11-20T14:17:01.385847-05:00",
+  "generated_at": "2026-11-20T17:00:20.142005-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -686,13 +686,13 @@
       "date": "2026-11-20",
       "ok": true,
       "pushed": true,
-      "at": "2026-11-20T13:43:13.587268-05:00",
+      "at": "2026-11-20T14:17:31.372086-05:00",
       "files": [
         {
           "path": "data/day_board/today.json",
           "ok": true,
           "reason": "",
-          "size": 24083,
+          "size": 25009,
           "preview": "2026-11-20 BUY PANW, OKTA, BOX, PM, RBRK, CON, PSN, CLBT \u00b7 SELL QBTS, TE, FLNC, METC, RGTI, FCEL, CWEN, EAF"
         },
         {
@@ -703,17 +703,17 @@
           "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
         },
         {
-          "path": "data/day_board/2026-11-20.after-freeze-2.json",
+          "path": "data/day_board/2026-11-20.after-freeze-3.json",
           "ok": true,
           "reason": "",
-          "size": 93144,
+          "size": 94366,
           "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
         },
         {
           "path": "data/day_board/2026-11-20_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 55878,
+          "size": 56804,
           "preview": "2026-11-20 BUY PANW, OKTA, BOX, PM, RBRK, CON, PSN, CLBT \u00b7 SELL QBTS, TE, FLNC, METC, RGTI, FCEL, CWEN, EAF"
         },
         {
@@ -738,7 +738,7 @@
           "preview": "keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows"
         },
         {
-          "path": "data/day_board/today_strategies.after-freeze-15.json",
+          "path": "data/day_board/today_strategies.after-freeze-16.json",
           "ok": true,
           "reason": "",
           "size": 1402094,
@@ -755,7 +755,7 @@
           "path": "dashboard/factor-mine/today.json",
           "ok": true,
           "reason": "",
-          "size": 55878,
+          "size": 56804,
           "preview": "2026-11-20 BUY PANW, OKTA, BOX, PM, RBRK, CON, PSN, CLBT \u00b7 SELL QBTS, TE, FLNC, METC, RGTI, FCEL, CWEN, EAF"
         },
         {
@@ -783,7 +783,7 @@
           "path": "data/day_board/hold_live_px.json",
           "ok": true,
           "reason": "",
-          "size": 1542,
+          "size": 1591,
           "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
         },
         {
@@ -802,7 +802,7 @@
       "date": "2026-11-20",
       "ok": true,
       "pushed": true,
-      "at": "2026-11-20T13:43:26.286415-05:00",
+      "at": "2026-11-20T14:17:43.256411-05:00",
       "files": [
         {
           "path": "03_scoreboard/PAPER_TRADING.md",
@@ -827,7 +827,7 @@
       "date": "2026-11-20",
       "ok": true,
       "pushed": true,
-      "at": "2026-11-20T14:16:30.685319-05:00",
+      "at": "2026-11-20T16:59:45.637243-05:00",
       "files": [
         {
           "path": "01_daily/weather/2026-11-20_weather.json",
@@ -863,6 +863,13 @@
           "reason": "",
           "size": 9654,
           "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -11.690000000000001, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -4.79, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -4.04, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -3.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -6.4350000000000005, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -4.17, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -8.2, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -5.78, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-11-20_weather.after-freeze-4.json",
+          "ok": true,
+          "reason": "",
+          "size": 9652,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -11.690000000000001, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -4.79, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -4.04, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -3.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -6.4350000000000005, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -4.17, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -8.2, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -5.78, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -11.690000000000001, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -4.79, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -4.04, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -3.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -6.4350000000000005, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -4.17, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -8.2, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -5.78, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-20\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade. \u00b7 weather sectors 11 \u00b7 Basic Materials={'score': -11.690000000000001, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -4.79, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -4.04, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_w"
@@ -873,7 +880,7 @@
       "date": "2026-11-20",
       "ok": true,
       "pushed": true,
-      "at": "2026-11-20T14:16:41.289239-05:00",
+      "at": "2026-11-20T16:59:56.113692-05:00",
       "files": [
         {
           "path": "data/join/2026-11-20_ranked.csv",
@@ -895,9 +902,16 @@
           "reason": "",
           "size": 2330565,
           "preview": "5890 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, ONC, KNSA, RDN, RGA"
+        },
+        {
+          "path": "data/join/2026-11-20_ranked.after-freeze-3.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2330565,
+          "preview": "5890 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, ONC, KNSA, RDN, RGA"
         }
       ],
-      "preview": "5890 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, ONC, KNSA, RDN, RGA \u00b7 5890 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, ONC, KNSA, RDN, RGA \u00b7 5890 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, ONC, KNSA, RDN, RGA"
+      "preview": "5890 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, ONC, KNSA, RDN, RGA \u00b7 5890 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, ONC, KNSA, RDN, RGA \u00b7 5890 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, ONC, KNSA, RDN, RGA \u00b7 5890 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, ONC, KNSA, RDN, RGA"
     },
     {
       "key": "peer_rs",
@@ -905,7 +919,7 @@
       "date": "2026-11-20",
       "ok": true,
       "pushed": true,
-      "at": "2026-11-20T14:16:48.423317-05:00",
+      "at": "2026-11-20T17:00:04.089452-05:00",
       "files": [
         {
           "path": "data/peers/2026-11-20_peer_rs.csv",
