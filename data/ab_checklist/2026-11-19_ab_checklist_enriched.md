@@ -18,28 +18,28 @@
 
 | Ticker | enr | base | ctx | rs_w | beat% | ind_med_w | sector | board | label |
 |--------|----:|-----:|----:|-----:|------:|----------:|--------|-------|-------|
-| CBRL | +17 | +16 | +1 | +8.6 | 100% | -0.3 | Consumer Cyclical | — | LEAD,peers↑,ind↓ |
-| AES | +16 | +15 | +1 | +0.6 | 70% | -0.3 | Utilities | — | LEAD,peers↑,ind↓ |
-| REYN | +16 | +15 | +1 | +1.0 | 70% | -4.4 | Consumer Cyclical | — | LEAD,peers↑,ind↓ |
-| SLDE | +15 | +16 | -1 | — | — | -0.4 | Financial | — | ind↓ |
-| TGT | +15 | +12 | +3 | +1.9 | 89% | +0.8 | Consumer Defensive | — | LEAD,peers↑,ind↑ |
-| PBH | +15 | +14 | +1 | +14.2 | 100% | -5.0 | Healthcare | — | LEAD,peers↑,ind↓ |
-| POWW | +14 | +15 | -1 | +16.5 | 100% | -8.9 | Industrials | — | LEAD,peers↓,ind↓ |
-| SO | +13 | +14 | -1 | +0.8 | 60% | -0.6 | Utilities | — | LEAD,peers↓,ind↓ |
-| ZIP | +13 | +14 | -1 | +10.3 | 100% | -5.4 | Communication Serv | — | LEAD,peers↓,ind↓ |
-| TAK | +13 | +14 | -1 | +5.8 | 100% | -5.0 | Healthcare | — | LEAD,peers↓,ind↓ |
-| SWBI | +13 | +14 | -1 | +5.9 | 78% | -8.9 | Industrials | — | LEAD,peers↓,ind↓ |
-| SEZL | +13 | +14 | -1 | +7.2 | 100% | -4.3 | Financial | — | LEAD,peers↓,ind↓ |
-| CL | +13 | +14 | -1 | +2.4 | 78% | -2.5 | Consumer Defensive | — | LEAD,peers↓,ind↓ |
-| HTHT | +13 | +14 | -1 | +6.2 | 100% | -0.8 | Consumer Cyclical | — | LEAD,peers↓,ind↓ |
-| BCE | +13 | +14 | -1 | +4.4 | 100% | -3.2 | Communication Serv | — | LEAD,peers↓,ind↓ |
-| Q | +12 | +13 | -1 | — | — | -9.3 | Technology | — | ind↓ |
-| RSG | +12 | +13 | -1 | +1.9 | 71% | -4.8 | Industrials | — | LEAD,peers↓,ind↓ |
-| ALEC | +12 | +13 | -1 | +0.2 | 50% | -11.2 | Healthcare | — | LEAD,peers↓,ind↓ |
-| ALGT | +12 | +13 | -1 | +7.5 | 88% | -7.4 | Industrials | — | LEAD,peers↓,ind↓ |
-| PRVA | +12 | +13 | -1 | +16.2 | 100% | -9.4 | Healthcare | — | LEAD,peers↓,ind↓ |
-| CNC | +12 | +13 | -1 | +2.9 | 67% | -9.1 | Healthcare | — | LEAD,peers↓,ind↓ |
-| DUK | +12 | +11 | +1 | +0.7 | 70% | -0.6 | Utilities | — | LEAD,peers↑,ind↓ |
-| CAKE | +12 | +11 | +1 | +8.1 | 100% | -0.3 | Consumer Cyclical | — | LEAD,peers↑,ind↓ |
-| COST | +12 | +11 | +1 | +1.3 | 80% | +0.8 | Consumer Defensive | — | LEAD,peers↓,ind↑ |
-| PSN | +12 | +13 | -1 | +7.2 | 100% | -6.4 | Technology | — | LEAD,peers↓,ind↓ |
+| PBH | +17 | +16 | +1 | +14.2 | 100% | -5.0 | Healthcare | — | LEAD,peers↑,ind↓ |
+| TENB | +17 | +16 | +1 | +0.6 | 67% | -8.1 | Technology | — | LEAD,peers↑,ind↓ |
+| CBRL | +16 | +15 | +1 | +8.6 | 100% | -0.3 | Consumer Cyclical | — | LEAD,peers↑,ind↓ |
+| SG | +15 | +14 | +1 | +0.8 | 70% | -0.3 | Consumer Cyclical | — | LEAD,peers↑,ind↓ |
+| SJM | +15 | +15 | +0 | +0.5 | 56% | -1.5 | Consumer Defensive | — | LEAD,ind↓ |
+| PLX | +15 | +16 | -1 | +9.3 | 75% | -11.2 | Healthcare | — | LEAD,peers↓,ind↓ |
+| BEKE | +15 | +16 | -1 | +9.9 | 100% | -4.0 | Real Estate | — | LEAD,peers↓,ind↓ |
+| WWW | +14 | +15 | -1 | +18.1 | 100% | -5.3 | Consumer Cyclical | — | LEAD,peers↓,ind↓ |
+| RL | +14 | +15 | -1 | +0.7 | 56% | -2.4 | Consumer Cyclical | — | LEAD,peers↓,ind↓ |
+| CXT | +14 | +17 | -3 | -1.7 | 30% | -5.1 | Industrials | — | LAG,peers↓,ind↓ |
+| CCC | +14 | +15 | -1 | +0.4 | 60% | -6.3 | Technology | — | LEAD,peers↓,ind↓ |
+| TDC | +14 | +15 | -1 | +17.5 | 100% | -8.1 | Technology | — | LEAD,peers↓,ind↓ |
+| BOOT | +14 | +15 | -1 | +5.6 | 100% | -0.4 | Consumer Cyclical | — | LEAD,peers↓,ind↓ |
+| DGX | +14 | +15 | -1 | +5.5 | 100% | -4.7 | Healthcare | — | LEAD,peers↓,ind↓ |
+| PSN | +14 | +15 | -1 | +7.2 | 100% | -6.4 | Technology | — | LEAD,peers↓,ind↓ |
+| LFTO | +14 | +15 | -1 | — | — | -4.5 | Communication Serv | — | ind↓ |
+| CCEP | +14 | +15 | -1 | +1.9 | 89% | -1.4 | Consumer Defensive | — | LEAD,peers↓,ind↓ |
+| WMG | +14 | +15 | -1 | +5.8 | 100% | -2.7 | Communication Serv | — | LEAD,peers↓,ind↓ |
+| PG | +14 | +15 | -1 | +1.7 | 89% | -2.5 | Consumer Defensive | — | LEAD,peers↓,ind↓ |
+| HGTY | +14 | +13 | +1 | +0.9 | 80% | -0.4 | Financial | — | LEAD,peers↑,ind↓ |
+| WEN | +14 | +13 | +1 | +6.2 | 90% | -0.3 | Consumer Cyclical | — | LEAD,peers↑,ind↓ |
+| AVPT | +13 | +14 | -1 | +4.8 | 80% | -8.1 | Technology | — | LEAD,peers↓,ind↓ |
+| FE | +13 | +14 | -1 | +2.7 | 100% | -0.6 | Utilities | — | LEAD,peers↓,ind↓ |
+| GEHC | +13 | +14 | -1 | +4.4 | 100% | -6.5 | Healthcare | — | LEAD,peers↓,ind↓ |
+| WMT | +13 | +12 | +1 | +1.8 | 90% | +0.8 | Consumer Defensive | — | LEAD,peers↓,ind↑ |
