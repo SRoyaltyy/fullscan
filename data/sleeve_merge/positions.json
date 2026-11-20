@@ -1,7 +1,7 @@
 {
   "date": "2026-11-20",
   "policy": "flatten_robust",
-  "generated": "2026-11-20T19:53:36",
+  "generated": "2026-11-20T20:20:59",
   "cash": 111437.27,
   "io": [
     {
@@ -12,10 +12,10 @@
       "entry_date": "2026-11-17",
       "last_px": 24.86,
       "yday_px": 24.86,
-      "open_px": 25.095,
-      "overnight": 1.64,
-      "pct": 0.945,
-      "mv": 175.66,
+      "open_px": 25.09,
+      "overnight": 1.61,
+      "pct": 0.925,
+      "mv": 175.63,
       "exit_date": "2026-11-20",
       "reason": ""
     },
@@ -27,10 +27,10 @@
       "entry_date": "2026-11-17",
       "last_px": 24.99,
       "yday_px": 24.99,
-      "open_px": 24.86,
-      "overnight": -0.91,
-      "pct": -0.52,
-      "mv": 174.02,
+      "open_px": 24.94,
+      "overnight": -0.35,
+      "pct": -0.2,
+      "mv": 174.58,
       "exit_date": "2026-11-20",
       "reason": ""
     },
@@ -42,10 +42,10 @@
       "entry_date": "2026-11-17",
       "last_px": 38.41,
       "yday_px": 38.41,
-      "open_px": 38.12,
-      "overnight": -1.16,
-      "pct": -0.755,
-      "mv": 152.48,
+      "open_px": 38.24,
+      "overnight": -0.68,
+      "pct": -0.443,
+      "mv": 152.96,
       "exit_date": "2026-11-20",
       "reason": ""
     },
@@ -57,10 +57,10 @@
       "entry_date": "2026-11-17",
       "last_px": 21.3,
       "yday_px": 21.3,
-      "open_px": 22.215,
-      "overnight": 7.32,
-      "pct": 4.296,
-      "mv": 177.72,
+      "open_px": 22.315,
+      "overnight": 8.12,
+      "pct": 4.765,
+      "mv": 178.52,
       "exit_date": "2026-11-20",
       "reason": ""
     }
