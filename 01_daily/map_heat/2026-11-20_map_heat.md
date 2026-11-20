@@ -1,6 +1,6 @@
 # MAP HEAT — 2026-11-20
 
-Export `finviz_2026-11-19.csv` · 11616 names · generated 2026-11-20T04:49:53.201630-05:00
+Export `finviz_2026-11-20.csv` · 11616 names · generated 2026-11-20T05:06:12.413798-05:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
@@ -279,31 +279,31 @@ COLD (1w):
 - **Real Estate** -0.5% 1d -1.9% 1w · VNQ, SCHH, XLRE
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 5 min **ANT** US Stock Futures Fall as Anthropic Shares Retreat and AI Concerns Weigh on Global Markets: Dow Jones, S&P, Nasdaq, Wall Street (InvestorsHub)
-- 10 min **ANT** Anthropic Slumps 5% Post-Market After Record $107.3 Billion IPO (Bloomberg)
-- 15 min **INTU,SNDK,ANT,ROST** Intuit slides after earnings, and other early market movers (MarketWatch)
-- 19 min **RLX** RLX Technology Announces Unaudited Third Quarter 2026 Financial Results (PR Newswire)
-- 19 min **DAVA** Kaplan Fox Encourages Endava plc (DAVA) Investors Seeking Recovery to Contact the Firm Before November 30, 2026 (Newsfile)
-- 20 min **ANT,NVDA** Anthropic's Blockbuster IPO Dominated Headlines This Week  AI Anxiety Eased, While Investors And Employees Reaped A Windfall (Stocktwits)
-- 21 min **ANT,NVDA** Stock market today: Dow, S&P 500, Nasdaq futures continue to sell-off after Anthropic IPO fails to quell AI worries (Yahoo Finance)
-- 27 min **NG** European gas gains on fresh Middle East attacks, but Eyes weekly drop (Investing.com)
-- 39 min **GOOG,GOOGL** Kaplan Fox Encourages Alphabet Inc. (GOOGL, GOOG) Investors Seeking Recovery to Contact the Firm Before December 1, 2026 (Newsfile)
-- 46 min **ANT** Dan Niles Says Anthropic Is More Likely To Survive The Agentic AI Commoditization Than OpenAI  Price Competition Is Increasing (Stocktwits)
-- 51 min **NVDA,AAPL** Dean Of Valuation Says Nvidia Is 30% Below Fair Value, Waits For $140  Calls Jensen Huang Great CEO, But Human (Stocktwits)
-- 57 min **ANT** Dollar near 19-month high, set for 4th weekly gain as AI worries fuel haven bid (Reuters)
-- 1 hour **ANT,NVDA,FRO,IESC,BSP** Stock Market Today: Dow, S&P 500 and Nasdaq set for flat-to-lower start in worst week for main index since Trump tariff announcement; Anthropic, Nvidia in focus: live updates (MarketWatch)
-- 1 hour **ANT** Meet Anthropic's 7 co-founders, now worth about $20 billion each (CBS News)
-- 1 hour **ANT,NVDA** Nasdaq set to decline as Anthropic fails to lift tech stocks (MarketWatch)
-- 1 hour **ANT** European shares near 1-month lows as Anthropics debut fails to halt tech rout (Investing.com)
-- 1 hour **AMZN** Bond Sales Hit 2 Trillion Europe Record as AI Surge Takes Hold (Bloomberg)
-- 1 hour **ANT,NVDA** Stocks, gold and silver fall after blockbuster Anthropic IPO (Euronews)
-- 1 hour **ANT,NVDA,TSLA,MSFT,AMZN** Tech takes a beating as Anthropic surge fails to ease AI worries (AFP)
-- 1 hour **ANT** European shares head for steepest weekly drop since March (Reuters)
-- 1 hour **SNDK** SNDK Stock Falls Overnight: NAND Price Forecast Turns Bearish For 2027, According To TrendForce (Stocktwits)
-- 1 hour **BCS** Barclays warns of further equity weakness as hawkish Fed bets build (Investing.com)
-- 1 hour **ANT** Changpeng Zhao Has One Suggestion as Anthropics IPO Mints Thousands of Millionaires (BeInCrypto)
-- 1 hour **SKHY** SK Hynix to Be Kioxias Top Shareholder (Bloomberg)
-- 1 hour **ANT** Anthropic IPO live: Anthropic stock closes up 17% from initial price for $1.27T valuation in first day of trading (Yahoo Finance)
+- 5 min **NVDA** Stock market today: Dow, S&P 500, Nasdaq futures continue to sell-off after Anthropic IPO fails to quell AI worries (Yahoo Finance)
+- 6 min **NA** Nano Labs Announces Postponement of 2026 Annual General Meeting (GlobeNewswire)
+- 6 min **GOLS** Soccer's Manchester United Hit the Skids. Is Its Stock Worth a Gamble? (Barrons.com)
+- 8 min **ANT,SPCX,NVDA** Anthropic Stock Falls. The IPO Buzz Is Already Fading as Reality Hits Home. (Barrons.com)
+- 10 min **NVDA** Democrats open probe into Nvidia influence on US Megaspeed investigation (Reuters)
+- 11 min **ANT** Anthropic stock dives after rip-roaring IPO (Yahoo Finance)
+- 13 min **ING** Sterling today: Pound edges up on UK retail beat, dollar caps gains (Investing.com)
+- 14 min **MFG** Japan's bank shares slide even as Ueda vows more rate rises (IntelliNews)
+- 14 min **GEV** Poland opens door to CfD support for private small nuclear reactors (IntelliNews)
+- 20 min **ANT** Dollar near 19-month high, set for 4th weekly gain as AI worries fuel haven bid (Reuters)
+- 21 min **ANT** US Stock Futures Fall as Anthropic Shares Retreat and AI Concerns Weigh on Global Markets: Dow Jones, S&P, Nasdaq, Wall Street (InvestorsHub)
+- 26 min **ANT** Anthropics hard work starts now as shares slip after record debut (Proactive)
+- 27 min **ANT** Anthropic Slumps 5% Post-Market After Record $107.3 Billion IPO (Bloomberg)
+- 27 min **COIN** Coinbase Plans to Launch Its Own US Prediction Market Contracts in Early 2027 (CCN)
+- 28 min **ANT** Anthropic dips after-hours as AI jitters persist - whats moving markets (Investing.com)
+- 32 min **INTU,ANT,SNDK,ROST** Intuit slides after earnings, and other early market movers (MarketWatch)
+- 36 min **RLX** RLX Technology Announces Unaudited Third Quarter 2026 Financial Results (PR Newswire)
+- 36 min **DAVA** Kaplan Fox Encourages Endava plc (DAVA) Investors Seeking Recovery to Contact the Firm Before November 30, 2026 (Newsfile)
+- 37 min **ANT,NVDA** Anthropic's Blockbuster IPO Dominated Headlines This Week  AI Anxiety Eased, While Investors And Employees Reaped A Windfall (Stocktwits)
+- 37 min **ANT** Stock market today: Dow, S&P 500, Nasdaq futures continue to sell-off after Anthropic IPO fails to quell AI worries (Yahoo Finance)
+- 44 min **NG** European gas gains on fresh Middle East attacks, but Eyes weekly drop (Investing.com)
+- 56 min **GOOG,GOOGL** Kaplan Fox Encourages Alphabet Inc. (GOOGL, GOOG) Investors Seeking Recovery to Contact the Firm Before December 1, 2026 (Newsfile)
+- 1 hour **ANT** Dan Niles Says Anthropic Is More Likely To Survive The Agentic AI Commoditization Than OpenAI  Price Competition Is Increasing (Stocktwits)
+- 1 hour **NVDA,AAPL** Dean Of Valuation Says Nvidia Is 30% Below Fair Value, Waits For $140  Calls Jensen Huang Great CEO, But Human (Stocktwits)
+- 1 hour **ANT,NVDA,IESC,FRO,BSP** Stock Market Today: Dow, S&P 500 and Nasdaq set for flat-to-lower start in worst week for main index since Trump tariff announcement; Anthropic, Nvidia in focus: live updates (MarketWatch)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
