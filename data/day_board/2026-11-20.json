@@ -1,6 +1,6 @@
 {
   "date": "2026-11-20",
-  "generated_at": "2026-11-20T09:13:48.672812-05:00",
+  "generated_at": "2026-11-20T09:13:56.857109-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -1423,6 +1423,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -11.690000000000001, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -4.79, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -4.04, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -3.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -6.4350000000000005, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -4.17, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -8.2, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -5.78, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-20\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-11-20",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-20T09:13:55.823716-05:00",
+      "files": [
+        {
+          "path": "data/join/2026-11-20_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2330565,
+          "preview": "5890 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, ONC, KNSA, RDN, RGA"
+        }
+      ],
+      "preview": "5890 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, ONC, KNSA, RDN, RGA"
     }
   ],
   "href": {
