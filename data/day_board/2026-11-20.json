@@ -1,6 +1,6 @@
 {
   "date": "2026-11-20",
-  "generated_at": "2026-11-20T14:16:42.269750-05:00",
+  "generated_at": "2026-11-20T14:16:49.399563-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -1807,6 +1807,24 @@
         }
       ],
       "preview": "5890 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, ONC, KNSA, RDN, RGA \u00b7 5890 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, ONC, KNSA, RDN, RGA \u00b7 5890 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, ONC, KNSA, RDN, RGA"
+    },
+    {
+      "key": "peer_rs",
+      "title": "Peer RS",
+      "date": "2026-11-20",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-20T14:16:48.423317-05:00",
+      "files": [
+        {
+          "path": "data/peers/2026-11-20_peer_rs.csv",
+          "ok": true,
+          "reason": "",
+          "size": 820283,
+          "preview": "5021 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+        }
+      ],
+      "preview": "5021 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
     }
   ],
   "href": {
@@ -1852,6 +1870,14 @@
       "path": "data/day_board/2026-11-20.json",
       "at": "2026-11-20T14:16:43-05:00",
       "commit_msg": "auto: land join [2026-11-20]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "44798554658",
+      "manifest": "research/input_freeze/2026-11-20/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-11-20.json",
+      "at": "2026-11-20T14:16:49-05:00",
+      "commit_msg": "auto: land peer_rs [2026-11-20]",
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "44798554658",
       "manifest": "research/input_freeze/2026-11-20/manifest.json"
