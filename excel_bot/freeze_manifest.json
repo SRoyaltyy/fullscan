@@ -25892,6 +25892,176 @@
         ""
       ],
       "kind": "lock"
+    },
+    {
+      "signal_date": "2026-11-18",
+      "sha256": "a166d388e8b27d1252b427dc6cc8bbaf169e2c7e7a2e95d964916100117dab6f",
+      "n_picks": 18,
+      "pick_ids": [
+        [
+          "ARMK",
+          "L1_long_green_tp8_lowvol"
+        ],
+        [
+          "ARMK",
+          "L2_long_green_tp3_lowvol"
+        ],
+        [
+          "BSY",
+          "L3_long_green_hold2_midcap"
+        ],
+        [
+          "CAKE",
+          "L3_long_green_hold2_midcap"
+        ],
+        [
+          "CYD",
+          "L3_long_green_hold2_midcap"
+        ],
+        [
+          "DRH",
+          "L3_long_green_hold2_midcap"
+        ],
+        [
+          "HROW",
+          "L3_long_green_hold2_midcap"
+        ],
+        [
+          "IPAR",
+          "L3_long_green_hold2_midcap"
+        ],
+        [
+          "LSTR",
+          "L3_long_green_hold2_midcap"
+        ],
+        [
+          "PBH",
+          "L3_long_green_hold2_midcap"
+        ],
+        [
+          "PVH",
+          "L3_long_green_hold2_midcap"
+        ],
+        [
+          "RUSHA",
+          "L1_long_green_tp8_lowvol"
+        ],
+        [
+          "RUSHA",
+          "L2_long_green_tp3_lowvol"
+        ],
+        [
+          "SA",
+          "L3_long_green_hold2_midcap"
+        ],
+        [
+          "SBH",
+          "L3_long_green_hold2_midcap"
+        ],
+        [
+          "TM",
+          "L1_long_green_tp8_lowvol"
+        ],
+        [
+          "TM",
+          "L2_long_green_tp3_lowvol"
+        ],
+        [
+          "VIA",
+          "L3_long_green_hold2_midcap"
+        ]
+      ],
+      "first_opens": [
+        "57.0350",
+        "57.0350",
+        "43.5200",
+        "118.2000",
+        "22.0500",
+        "14.3800",
+        "31.9900",
+        "131.3800",
+        "152.6600",
+        "50.0600",
+        "96.7700",
+        "46.5800",
+        "46.5800",
+        "21.7500",
+        "18.8800",
+        "210.8700",
+        "210.8700",
+        "46.5000"
+      ],
+      "kind": "first_open"
+    },
+    {
+      "signal_date": "2026-11-19",
+      "sha256": "8b0f81dba0d48b5d6da19473041159d078d8d88895f3dfffb882e8b680df89c5",
+      "n_picks": 12,
+      "pick_ids": [
+        [
+          "ALH",
+          "L3_long_green_hold2_midcap"
+        ],
+        [
+          "BNL",
+          "L1_long_green_tp8_lowvol"
+        ],
+        [
+          "BNL",
+          "L2_long_green_tp3_lowvol"
+        ],
+        [
+          "CBRL",
+          "L3_long_green_hold2_midcap"
+        ],
+        [
+          "COCO",
+          "L3_long_green_hold2_midcap"
+        ],
+        [
+          "DORM",
+          "L3_long_green_hold2_midcap"
+        ],
+        [
+          "POWW",
+          "L1_long_green_tp8_lowvol"
+        ],
+        [
+          "POWW",
+          "L2_long_green_tp3_lowvol"
+        ],
+        [
+          "PSTL",
+          "L1_long_green_tp8_lowvol"
+        ],
+        [
+          "PSTL",
+          "L2_long_green_tp3_lowvol"
+        ],
+        [
+          "RUSHA",
+          "L3_long_green_hold2_midcap"
+        ],
+        [
+          "URGN",
+          "L3_long_green_hold2_midcap"
+        ]
+      ],
+      "first_opens": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "kind": "lock"
     }
   ]
 }
