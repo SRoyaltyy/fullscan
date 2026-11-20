@@ -1,7 +1,7 @@
 {
   "date": "2026-11-20",
   "policy": "flatten_robust",
-  "generated": "2026-11-20T20:20:59",
+  "generated": "2026-11-20T21:35:15",
   "cash": 111437.27,
   "io": [
     {
@@ -12,10 +12,10 @@
       "entry_date": "2026-11-17",
       "last_px": 24.86,
       "yday_px": 24.86,
-      "open_px": 25.09,
-      "overnight": 1.61,
-      "pct": 0.925,
-      "mv": 175.63,
+      "open_px": 24.9,
+      "overnight": 0.28,
+      "pct": 0.161,
+      "mv": 174.3,
       "exit_date": "2026-11-20",
       "reason": ""
     },
@@ -27,10 +27,10 @@
       "entry_date": "2026-11-17",
       "last_px": 24.99,
       "yday_px": 24.99,
-      "open_px": 24.94,
-      "overnight": -0.35,
-      "pct": -0.2,
-      "mv": 174.58,
+      "open_px": 24.76,
+      "overnight": -1.61,
+      "pct": -0.92,
+      "mv": 173.32,
       "exit_date": "2026-11-20",
       "reason": ""
     },
@@ -42,10 +42,10 @@
       "entry_date": "2026-11-17",
       "last_px": 38.41,
       "yday_px": 38.41,
-      "open_px": 38.24,
-      "overnight": -0.68,
-      "pct": -0.443,
-      "mv": 152.96,
+      "open_px": 38.05,
+      "overnight": -1.44,
+      "pct": -0.937,
+      "mv": 152.2,
       "exit_date": "2026-11-20",
       "reason": ""
     },
@@ -57,10 +57,10 @@
       "entry_date": "2026-11-17",
       "last_px": 21.3,
       "yday_px": 21.3,
-      "open_px": 22.315,
-      "overnight": 8.12,
-      "pct": 4.765,
-      "mv": 178.52,
+      "open_px": 22.24,
+      "overnight": 7.52,
+      "pct": 4.413,
+      "mv": 177.92,
       "exit_date": "2026-11-20",
       "reason": ""
     }
