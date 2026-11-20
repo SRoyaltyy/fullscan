@@ -1,110 +1,110 @@
 # Finviz Daily Digest — 2026-11-19
 
-_Generated 2026-11-19T05:02:35.334740-05:00 · export=data/exports/finviz_2026-11-19.csv · ticker digests=836 · high-signal=204_
+_Generated 2026-11-20T03:35:42.635727-05:00 · export=data/exports/finviz_2026-11-19.csv · ticker digests=811 · high-signal=195_
 
 ## Major indices (live quote page)
 
 - **S&P 500 (SPY)**: Stock Market: Will S&P 500 Open Up or Down Today?
-- **Nasdaq-100 (QQQ)**: CNEQ Has Become One of the Years Hottest Active ETFs
-- **Dow Jones (DIA)**: Pre-Markets Lower as Puzzle Pieces Sorted
-- **Russell 2000 (IWM)**: Investors Buy the Dip in Chip ETFs as Inflows Top $44B
+- **Nasdaq-100 (QQQ)**: Anthropic Soared in Its IPO. The ETFs That Held It Didnt
+- **Dow Jones (DIA)**: S&P 500, Nasdaq, Dow End Lower As Anthropic Trading Debut Fails To Provide Adequate Confidence   ANT, META, AAPL, GME In Focus
+- **Russell 2000 (IWM)**: Five Straight Losses, One Divergence: Where the Major Indexes Stand Now
 
 ## High-signal ticker digests (ranked)
 
-- **AMD** [Technology]: Nvidia’s earnings beat and upbeat outlook lift AMD 5.3% during Wednesday’s regular session
+- **AJG** [Financial]: Arthur J. Gallagher & Co. announces acquisition of Iowa crop insurance broker AgriServ, expanding agricultural brokerage capabilities
 - **AMT** [Real Estate]: Deutsche Bank initiated coverage of American Tower with a Buy rating and $222 price target, naming it its top U.S. tower pick.
-- **BP** [Energy]: BP launches cash tender offers to repurchase up to $6 billion of its outstanding dollar-denominated notes.
-- **BX** [Financial]: Mizuho initiated coverage of Blackstone at Outperform with a $139 price target, citing expected fee-growth improvement in 2027.
+- **BMY** [Healthcare]: Bristol Myers Squibb’s Evotec partnership received FDA acceptance of a second IND for a molecular-glue candidate, with Phase 1 testing planned for 2027.
+- **BSX** [Healthcare]: Boston Scientific priced $7.25 billion in senior notes to help finance its planned Penumbra acquisition.
 - **COF** [Financial]: Broad bank selloff and Berkshire’s 62% stake cut push Capital One down 3%
-- **CRWD** [Technology]: Nvidia beat sparks cybersecurity rally, lifting CrowdStrike 6% during Wednesday morning trade
-- **DELL** [Technology]: Nvidia’s earnings beat lifts Dell 5% pre-market on renewed AI-server demand expectations
-- **GSK** [Healthcare]: GSK receives FDA accelerated approval for Nelkarmi to treat ALK-driven advanced or metastatic non-small cell lung cancer after earlier-generation ALK inhibitors
-- **HOOD** [Financial]: Evercore ISI cut Robinhood’s price target to $100 from $130 while maintaining an Outperform rating.
-- **LOW** [Consumer Cyclical]: Lowe’s beats fiscal Q3 2027 estimates, raises 2026 sales outlook but trims margin guidance
-- **LRCX** [Technology]: Nvidia leadership fallout and earnings anxiety pull Lam Research 5.4% lower pre-market
-- **MDT** [Healthcare]: Medtronic says FDA cleared its Hugo robotic-assisted surgery system for a range of U.S. general surgery procedures
-- **NVDA** [Technology]: Moody’s cuts NVIDIA’s credit outlook to stable from positive, citing leadership uncertainty, while affirming its Aa1 rating.
-- **NVS** [Healthcare]: Novartis received FDA approval for Cosentyx to treat adults with polymyalgia rheumatica, adding its 11th U.S. indication.
-- **PANW** [Technology]: Palo Alto Networks raises FY27 revenue outlook to $14.52B-$14.57B after Q1 EPS and revenue beat estimates
-- **PEP** [Consumer Defensive]: Bernstein downgrades PepsiCo to Underperform from Market Perform, cuts price target to $128 on expected earnings shortfall
+- **CRWD** [Technology]: Palo Alto's strong beat-and-raise lifts CrowdStrike 6.3% in pre-market sector sympathy rally
+- **D** [Utilities]: Dominion's proposed $66.8 billion acquisition by NextEra clears DOJ antitrust investigation after safeguards, while FERC approval remains pending
+- **DDOG** [Technology]: CFO’s conservative-guidance comments and Anthropic AI rally lift Datadog 8% in early trade
+- **DHR** [Healthcare]: Danaher subsidiary Masimo receives FDA clearance for its smartSedLine brain function monitoring system.
+- **INTU** [Technology]: Intuit beats Q1 estimates, cuts FY27 Credit Karma outlook but maintains 23–24% non-GAAP EPS growth target
+- **JNJ** [Healthcare]: Johnson & Johnson submits FDA application to expand CAPLYTA for manic or mixed episodes associated with bipolar I disorder.
+- **LOW** [Consumer Cyclical]: Mizuho cuts Lowe’s price target to $248 from $250, maintaining Outperform, citing underlying margin and EPS weakness.
+- **NTES** [Communication Serv]: NetEase Q3 revenue fell 1.8% to RMB27.9b and missed estimates, while non-GAAP EPS of $2.13 (+3% YoY) also missed and margins expanded to 74.3%
+- **PANW** [Technology]: Palo Alto Networks raises FY27 revenue outlook to $14.52B-$14.57B after Q1 non-GAAP EPS of $1.05 (+13% YoY) and revenue beat estimates
+- **PG** [Consumer Defensive]: Procter & Gamble plans to cut up to 30% of its product-supply workforce as it expands automation.
 - **REGN** [Healthcare]: Regeneron won FDA approval for Livsayis, its first approved siRNA therapy and neurology medicine, to treat adults with anti-AChR-positive generalized myasthenia gravis.
-- **TGT** [Consumer Defensive]: Target beats Q3 FY2027 estimates with adjusted EPS of $2.65 (+49% YoY), raises 2026 outlook despite apparel and home drag
+- **TGT** [Consumer Defensive]: Piper Sandler, Baird, Guggenheim, Jefferies and Mizuho raise Target price targets, with Mizuho setting $168 post-earnings
 - **TJX** [Consumer Cyclical]: TJX reports fiscal Q3 2027 EPS of $1.34, misses estimates, raises full-year outlook and trims Q4 margin guidance
-- **TSM** [Technology]: Nvidia's earnings beat and direct TSMC commitments lift ADR 6% after hours
-- **ACM** [Industrials]: AECOM guides to higher fiscal 2027 EPS and margins despite CM project cash headwinds, after Q4 adjusted EPS beat estimates
+- **VRT** [Industrials]: Brunei’s Unified National Networks plans to award Vertiv a data-center tender as part of nearly $1 billion in spending sourced from U.S. vendors.
+- **WMT** [Consumer Defensive]: Walmart raises FY27 sales, profit and EPS outlook as eCommerce mix lifts margins
 - **AES** [Utilities]: AES said it received FERC’s final required regulatory approval for its acquisition, with closing expected December 2, 2026.
-- **ARES** [Financial]: Mizuho initiated coverage of Ares at Outperform with a $159 price target, saying the private-credit selloff has unfairly penalized the company.
-- **AS** [Consumer Cyclical]: Amer Sports raises 2026 revenue growth outlook to ~26% and adjusted EPS guidance to $1.32-$1.35 after Q3 revenue rose 24%
+- **ALNY** [Healthcare]: Alnylam will receive $25 million from Regeneron for Livsayis FDA approval and is eligible for tiered royalties up to 15% on global sales
 - **AWK** [Utilities]: American Water completes $32.8 million acquisition of Indian Creek Valley water system, adding about 2,600 connections
-- **BIDU** [Communication Serv]: Baidu reports Q3 FY2026 EPS $1.02 (-35% YoY), revenue $4.6B, beats EPS but misses revenue estimates as AI cloud grows 94% YoY
-- **CIEN** [Technology]: TD Cowen target cut and AI-infrastructure selloff drive Ciena shares down 8.2%
-- **ESLT** [Industrials]: Elbit Systems reports fiscal Q3 2026 revenue $2.3B (+17% YoY) and non-GAAP EPS $3.70 (+32% YoY), beats EPS but misses revenue estimates
+- **BKR** [Energy]: Baker Hughes’ consortium with McDermott won an INPEX contract to engineer and install subsea infrastructure for the next phase of the Ichthys LNG development.
+- **COHR** [Technology]: Coherent’s $2 billion buyback authorization lifts shares 11% in early regular trading
+- **CPAY** [Technology]: Corpay invests $1.1 billion for about one-third of BILL, with a 2030 option to acquire the rest, expects 2027 cash EPS accretion
+- **CW** [Industrials]: Curtiss-Wright expanded its 2026 share repurchase program by $250 million, bringing expected annual repurchases to a record $710 million.
+- **DKS** [Consumer Cyclical]: Williams Trading downgrades Dick's Sporting Goods to Sell, cuts target to $120 from $130
+- **ELAN** [Healthcare]: Elanco authorizes its first-ever share repurchase program of up to $600 million after reaching its sub-3.0x net leverage target.
+- **F** [Consumer Cyclical]: Ford received a Buy upgrade, according to a Barron’s article published today.
 - **FIVE** [Consumer Cyclical]: Mizuho raised Five Below’s price target to $300 from $295 and named it a Top Pick ahead of Q3 earnings.
 - **GNRC** [Industrials]: Barron’s reported Generac shares jumped after Nvidia’s earnings, making GNRC one of the S&P 500’s top performers Wednesday.
-- **J** [Industrials]: Jacobs was selected for a five-year contract supporting modernization projects at Washington Dulles and Reagan National airports.
+- **INSM** [Healthcare]: Reuters reported that Sanofi is weighing an acquisition of Insmed, and Insmed shares rose.
 - **JBHT** [Industrials]: J.B. Hunt says its price-cost relationship has improved since September’s earnings warning as its dedicated-contract pipeline reaches a record.
+- **KEYS** [Technology]: Keysight beats fiscal Q4 estimates with record revenue of $2.0B (+41% YoY), EPS of $3.61 (+89% YoY), guides 20% FY27 growth on surging AI demand
 - **LDOS** [Technology]: Leidos received a $40.8 million award to build and support 14 low-signature air-defense radar systems for the Marine Corps.
+- **LPLA** [Financial]: LPL Financial raises $750 million through 5.85% senior notes due 2029, primarily to repay revolving-credit borrowings.
 - **LULU** [Consumer Cyclical]: Strong Target and TJX earnings ignite retail rally, lifting Lululemon nearly 8% intraday
+- **MDB** [Technology]: MongoDB announced FedRAMP Class D (High) certification for Atlas for Government and added support for Microsoft Azure Government
 - **MKL** [Financial]: Markel Group’s board approved a $2.5 billion increase to its share repurchase authorization.
-- **OWL** [Financial]: Mizuho initiated coverage of Blue Owl Capital with a $13 price target, saying its discount overshoots fundamentals.
-- **P** [Technology]: Everpure raises FY27 adjusted operating-income guidance to $1.08B–$1.09B from $940M–$960M after Q3 results
-- **RBLX** [Communication Serv]: Friday's Citi downgrade and Monday's technology selloff drive Roblox 8% lower intraday
-- **SGI** [Consumer Cyclical]: Upbeat retailer earnings lift home-furnishings peers, carrying Somnigroup 7% higher during regular trading
-- **VIK** [Consumer Cyclical]: Post-earnings target hikes validating strong 2027 bookings lift Viking nearly 7% intraday
 
 ## By sector (top signal)
 
 ### Technology (n=8)
-- AMD: Nvidia’s earnings beat and upbeat outlook lift AMD 5.3% during Wednesday’s regular session
-- CRWD: Nvidia beat sparks cybersecurity rally, lifting CrowdStrike 6% during Wednesday morning trade
-- DELL: Nvidia’s earnings beat lifts Dell 5% pre-market on renewed AI-server demand expectations
-- LRCX: Nvidia leadership fallout and earnings anxiety pull Lam Research 5.4% lower pre-market
-- NVDA: Moody’s cuts NVIDIA’s credit outlook to stable from positive, citing leadership uncertainty, while affirming its Aa1 rating.
-
-### Industrials (n=8)
-- ACM: AECOM guides to higher fiscal 2027 EPS and margins despite CM project cash headwinds, after Q4 adjusted EPS beat estimates
-- ESLT: Elbit Systems reports fiscal Q3 2026 revenue $2.3B (+17% YoY) and non-GAAP EPS $3.70 (+32% YoY), beats EPS but misses revenue estimates
-- GNRC: Barron’s reported Generac shares jumped after Nvidia’s earnings, making GNRC one of the S&P 500’s top performers Wednesday.
-- J: Jacobs was selected for a five-year contract supporting modernization projects at Washington Dulles and Reagan National airports.
-- JBHT: J.B. Hunt says its price-cost relationship has improved since September’s earnings warning as its dedicated-contract pipeline reaches a record.
-
-### Healthcare (n=8)
-- GSK: GSK receives FDA accelerated approval for Nelkarmi to treat ALK-driven advanced or metastatic non-small cell lung cancer after earlier-generation ALK inhibitors
-- MDT: Medtronic says FDA cleared its Hugo robotic-assisted surgery system for a range of U.S. general surgery procedures
-- NVS: Novartis received FDA approval for Cosentyx to treat adults with polymyalgia rheumatica, adding its 11th U.S. indication.
-- REGN: Regeneron won FDA approval for Livsayis, its first approved siRNA therapy and neurology medicine, to treat adults with anti-AChR-positive generalized myasthenia gravis.
-- VTRS: Viatris completes its acquisition of Pacira and expects $90 million to $100 million in revenue contribution through year-end 2026.
-
-### Financial (n=8)
-- BX: Mizuho initiated coverage of Blackstone at Outperform with a $139 price target, citing expected fee-growth improvement in 2027.
-- COF: Broad bank selloff and Berkshire’s 62% stake cut push Capital One down 3%
-- HOOD: Evercore ISI cut Robinhood’s price target to $100 from $130 while maintaining an Outperform rating.
-- ARES: Mizuho initiated coverage of Ares at Outperform with a $159 price target, saying the private-credit selloff has unfairly penalized the company.
-- MKL: Markel Group’s board approved a $2.5 billion increase to its share repurchase authorization.
+- CRWD: Palo Alto's strong beat-and-raise lifts CrowdStrike 6.3% in pre-market sector sympathy rally
+- DDOG: CFO’s conservative-guidance comments and Anthropic AI rally lift Datadog 8% in early trade
+- INTU: Intuit beats Q1 estimates, cuts FY27 Credit Karma outlook but maintains 23–24% non-GAAP EPS growth target
+- PANW: Palo Alto Networks raises FY27 revenue outlook to $14.52B-$14.57B after Q1 non-GAAP EPS of $1.05 (+13% YoY) and revenue beat estimates
+- COHR: Coherent’s $2 billion buyback authorization lifts shares 11% in early regular trading
 
 ### Consumer Cyclical (n=8)
-- LOW: Lowe’s beats fiscal Q3 2027 estimates, raises 2026 sales outlook but trims margin guidance
+- LOW: Mizuho cuts Lowe’s price target to $248 from $250, maintaining Outperform, citing underlying margin and EPS weakness.
 - TJX: TJX reports fiscal Q3 2027 EPS of $1.34, misses estimates, raises full-year outlook and trims Q4 margin guidance
-- AS: Amer Sports raises 2026 revenue growth outlook to ~26% and adjusted EPS guidance to $1.32-$1.35 after Q3 revenue rose 24%
+- DKS: Williams Trading downgrades Dick's Sporting Goods to Sell, cuts target to $120 from $130
+- F: Ford received a Buy upgrade, according to a Barron’s article published today.
 - FIVE: Mizuho raised Five Below’s price target to $300 from $295 and named it a Top Pick ahead of Q3 earnings.
-- LULU: Strong Target and TJX earnings ignite retail rally, lifting Lululemon nearly 8% intraday
 
-### Consumer Defensive (n=3)
-- PEP: Bernstein downgrades PepsiCo to Underperform from Market Perform, cuts price target to $128 on expected earnings shortfall
-- TGT: Target beats Q3 FY2027 estimates with adjusted EPS of $2.65 (+49% YoY), raises 2026 outlook despite apparel and home drag
-- IPAR: Interparfums forecasts 2027 sales growth of 6% to about $1.58 billion and diluted EPS growth of 3% to about $5.00
+### Healthcare (n=8)
+- BMY: Bristol Myers Squibb’s Evotec partnership received FDA acceptance of a second IND for a molecular-glue candidate, with Phase 1 testing planned for 2027.
+- BSX: Boston Scientific priced $7.25 billion in senior notes to help finance its planned Penumbra acquisition.
+- DHR: Danaher subsidiary Masimo receives FDA clearance for its smartSedLine brain function monitoring system.
+- JNJ: Johnson & Johnson submits FDA application to expand CAPLYTA for manic or mixed episodes associated with bipolar I disorder.
+- REGN: Regeneron won FDA approval for Livsayis, its first approved siRNA therapy and neurology medicine, to treat adults with anti-AChR-positive generalized myasthenia gravis.
 
-### Energy (n=2)
-- BP: BP launches cash tender offers to repurchase up to $6 billion of its outstanding dollar-denominated notes.
-- CNX: Morgan Stanley upgrade lifts CNX 3.8% as 2027 hedges bolster cash-flow resilience
+### Industrials (n=7)
+- VRT: Brunei’s Unified National Networks plans to award Vertiv a data-center tender as part of nearly $1 billion in spending sourced from U.S. vendors.
+- CW: Curtiss-Wright expanded its 2026 share repurchase program by $250 million, bringing expected annual repurchases to a record $710 million.
+- GNRC: Barron’s reported Generac shares jumped after Nvidia’s earnings, making GNRC one of the S&P 500’s top performers Wednesday.
+- JBHT: J.B. Hunt says its price-cost relationship has improved since September’s earnings warning as its dedicated-contract pipeline reaches a record.
+- WWD: Woodward posts record FY26 results and guides FY27 adjusted EPS of $10.20-$10.70, below $10.76 consensus
 
-### Utilities (n=2)
+### Financial (n=4)
+- AJG: Arthur J. Gallagher & Co. announces acquisition of Iowa crop insurance broker AgriServ, expanding agricultural brokerage capabilities
+- COF: Broad bank selloff and Berkshire’s 62% stake cut push Capital One down 3%
+- LPLA: LPL Financial raises $750 million through 5.85% senior notes due 2029, primarily to repay revolving-credit borrowings.
+- MKL: Markel Group’s board approved a $2.5 billion increase to its share repurchase authorization.
+
+### Utilities (n=3)
+- D: Dominion's proposed $66.8 billion acquisition by NextEra clears DOJ antitrust investigation after safeguards, while FERC approval remains pending
 - AES: AES said it received FERC’s final required regulatory approval for its acquisition, with closing expected December 2, 2026.
 - AWK: American Water completes $32.8 million acquisition of Indian Creek Valley water system, adding about 2,600 connections
 
-### Communication Services (n=2)
-- BIDU: Baidu reports Q3 FY2026 EPS $1.02 (-35% YoY), revenue $4.6B, beats EPS but misses revenue estimates as AI cloud grows 94% YoY
-- RBLX: Friday's Citi downgrade and Monday's technology selloff drive Roblox 8% lower intraday
+### Consumer Defensive (n=3)
+- PG: Procter & Gamble plans to cut up to 30% of its product-supply workforce as it expands automation.
+- TGT: Piper Sandler, Baird, Guggenheim, Jefferies and Mizuho raise Target price targets, with Mizuho setting $168 post-earnings
+- WMT: Walmart raises FY27 sales, profit and EPS outlook as eCommerce mix lifts margins
+
+### Energy (n=3)
+- BKR: Baker Hughes’ consortium with McDermott won an INPEX contract to engineer and install subsea infrastructure for the next phase of the Ichthys LNG development.
+- CRK: Morgan Stanley downgrade extends Comstock slide 5.9% during Thursday’s gas-producer weakness session
+- CVI: CVR Energy priced $1.25 billion of 9.25% senior secured notes due 2032 to help fund its refinery acquisition and redeem existing notes.
 
 ### Real Estate (n=1)
 - AMT: Deutsche Bank initiated coverage of American Tower with a Buy rating and $222 price target, naming it its top U.S. tower pick.
+
+### Communication Services (n=1)
+- NTES: NetEase Q3 revenue fell 1.8% to RMB27.9b and missed estimates, while non-GAAP EPS of $2.13 (+3% YoY) also missed and margins expanded to 74.3%
