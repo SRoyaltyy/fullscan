@@ -1,6 +1,6 @@
 # Finviz homepage market digest — 2026-11-20
 
-**Generated:** 2026-11-20T04:47:52.632320-05:00 (America/New_York)
+**Generated:** 2026-11-20T05:04:01.692811-05:00 (America/New_York)
 **Source:** `live`
 **Banner:** US futures point to a mixed open as tech and AI weakness persists after sharp Asian losses ahead of Fed speakers and key sentiment data
 **Prior close:** SPX —  Nasdaq —  Dow —
