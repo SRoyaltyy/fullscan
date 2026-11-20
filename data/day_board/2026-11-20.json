@@ -1170,6 +1170,77 @@
       "date": "2026-11-20",
       "ok": true,
       "pushed": true,
+      "at": "2026-11-20T05:02:20.863665-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-20_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 5345721,
+          "preview": "raw=7419 usable=415 single=444 \u00b7 Latin American Currencies Tumble on Fed-Rate Hike Repricing - Bloomberg.com | UK's FTSE 100 hits six-week low in broad risk-off move - Reuters | US weekly jobless claims edge up, but labor market remains resilient - Reuters | TSMC tightens China AI chip curbs as new US rules close manufacturing loophole,  | India's October crude oil imports rise over 4% month-on-month - Reuters"
+        },
+        {
+          "path": "01_daily/news/2026-11-20_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 11299,
+          "preview": "# News Parse v2 \u2014 2026-11-20T05:02:20.230265-05:00\nWindow\u224848h | news_mode=on | raw=7419 | usable=415 | single_name=444 | noise_dropped=6421\nusable polarity={'+': 15, '-': 120, 'mixed': 0, 'neutral': 280}"
+        }
+      ],
+      "preview": "raw=7419 usable=415 single=444 \u00b7 Latin American Currencies Tumble on Fed-Rate Hike Repricing - Bloomberg.com | UK's FTSE 100 hits six-week low in broad risk-off move - Reuters | US weekly jobless claims edge up, but labor market remains resilient - Reuters | TSMC tightens China AI chip curbs as new US rules close manufacturing loophole,  | India's October crude oil imports rise over 4% month-on-month - Reuters \u00b7 # News Parse v2 \u2014 2026-11-20T05:02:20.230265-05:00\nWindow\u224848h | news_mode=on | raw=7419 | usable=415 | single_name=444 | noise_dropped=6421\nusable polarity={'+': 15, '-': 120, 'mixed': 0, 'neutral': 280}"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-11-20",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-20T05:02:29.210837-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-20_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 97326,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-11-20_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 10899,
+          "preview": "# Finviz Daily Digest \u2014 2026-11-20\n_Generated 2026-11-20T05:02:28.993383-05:00 \u00b7 export=data/exports/finviz_2026-11-20.csv \u00b7 ticker digests=807 \u00b7 high-signal=192_"
+        },
+        {
+          "path": "data/exports/finviz_2026-11-20.csv",
+          "ok": true,
+          "reason": "",
+          "size": 12299322,
+          "preview": "11760 rows \u00b7 Ticker,Company,Industry,Market Cap,Forward P/E,P/S,P/B,P/Cash,P/Free Cash Flow,EPS (ttm),Sales Year Over Year TTM,EPS Su \u00b7 A, AA, AAA, AAAA, AAAB"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11074214,
+          "preview": "11760 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
+        },
+        {
+          "path": "01_daily/news/2026-11-20_finviz_digest_preopen.json",
+          "ok": true,
+          "reason": "",
+          "size": 97326,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-11-20\n_Generated 2026-11-20T05:02:28.993383-05:00 \u00b7 export=data/exports/finviz_2026-11-20.csv \u00b7 ticker digests=807 \u00b7 high-signal=192_ \u00b7 11760 rows \u00b7 Ticker,Company,Industry,Market Cap,Forward P/E,P/S,P/B,P/Cash,P/Free Cash Flow,EPS (ttm),Sales Year Over Year TTM,EPS Su \u00b7 A, AA, AAA, AAAA, AAAB \u00b7 11760 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-11-20",
+      "ok": true,
+      "pushed": true,
       "at": "2026-11-20T05:02:29.247133-05:00",
       "files": [
         {
