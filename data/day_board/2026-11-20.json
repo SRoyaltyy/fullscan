@@ -1,6 +1,6 @@
 {
   "date": "2026-11-20",
-  "generated_at": "2026-11-20T09:14:04.678511-05:00",
+  "generated_at": "2026-11-20T09:19:49.361785-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -8,8 +8,8 @@
     "MISSING News judge MD `01_daily/news/2026-11-20_judge.md` \u2014 missing"
   ],
   "counts": {
-    "ok": 4,
-    "partial": 3,
+    "ok": 6,
+    "partial": 1,
     "fail": 1,
     "n": 8
   },
@@ -654,11 +654,11 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": false,
-      "n_req_ok": 2,
+      "n_req_ok": 4,
       "n_req": 4,
-      "n_opt_ok": 1,
+      "n_opt_ok": 3,
       "n_opt": 4,
       "files": [
         {
@@ -782,10 +782,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-11-20_stock_book.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=216",
+          "size": 1486561,
+          "said": "1d BUY PANW, OKTA, BOX, PM, RBRK, CON, PSN, CLBT \u00b7 SELL QBTS, TE, FLNC, METC, RGTI, FCEL",
           "bullets": []
         },
         {
@@ -793,21 +793,24 @@
           "name": "Stock book MD",
           "path": "01_daily/2026-11-20_stock_book.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 85140,
+          "said": "Stock book \u2014 2026-11-20",
+          "bullets": [
+            "_Generated 2026-11-20T09:14:13.323543-05:00_",
+            "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
+          ]
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-11-20_green.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 585,
+          "said": "0 green \u00b7",
           "bullets": []
         },
         {
@@ -829,10 +832,10 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "session 2026-11-20 not in dashboard dates (last=2026-11-19)",
-          "size": 17231458,
-          "said": "session 2026-11-20 not in dashboard dates (last=2026-11-19)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-11-20)",
+          "size": 17231474,
+          "said": "live-book poller + today.json (2026-11-20)",
           "bullets": []
         }
       ],
@@ -845,9 +848,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "PARTIAL",
-      "inputs_ready": false,
-      "n_req_ok": 1,
+      "status": "OK",
+      "inputs_ready": true,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -857,10 +860,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-11-20_stock_book.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=216",
+          "size": 1486561,
+          "said": "1d BUY PANW, OKTA, BOX, PM, RBRK, CON, PSN, CLBT \u00b7 SELL QBTS, TE, FLNC, METC, RGTI, FCEL",
           "bullets": []
         },
         {
@@ -868,10 +871,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "FAIL",
-          "reason": "session 2026-11-20 not in dashboard dates (last=2026-11-19)",
-          "size": 17231458,
-          "said": "session 2026-11-20 not in dashboard dates (last=2026-11-19)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-11-20)",
+          "size": 17231474,
+          "said": "live-book poller + today.json (2026-11-20)",
           "bullets": []
         },
         {
@@ -907,8 +910,74 @@
   "news_mode": "on",
   "news_mode_reason": "",
   "selections": {
-    "buy_1d": [],
-    "sell_1d": [],
+    "buy_1d": [
+      {
+        "ticker": "PANW",
+        "score": 0.3371503113221585
+      },
+      {
+        "ticker": "OKTA",
+        "score": 0.33553532345221443
+      },
+      {
+        "ticker": "BOX",
+        "score": 0.8295804987151745
+      },
+      {
+        "ticker": "PM",
+        "score": 0.35813001679190737
+      },
+      {
+        "ticker": "RBRK",
+        "score": 0.27444702657404285
+      },
+      {
+        "ticker": "CON",
+        "score": 0.6836454256359343
+      },
+      {
+        "ticker": "PSN",
+        "score": 0.8376865261415929
+      },
+      {
+        "ticker": "CLBT",
+        "score": 0.5791386851051541
+      }
+    ],
+    "sell_1d": [
+      {
+        "ticker": "QBTS",
+        "score": -0.4133768837970108
+      },
+      {
+        "ticker": "TE",
+        "score": -0.46057537247513
+      },
+      {
+        "ticker": "FLNC",
+        "score": -0.4890209261355179
+      },
+      {
+        "ticker": "METC",
+        "score": -0.43909122847162313
+      },
+      {
+        "ticker": "RGTI",
+        "score": -0.44653222776853013
+      },
+      {
+        "ticker": "FCEL",
+        "score": -0.427150207616062
+      },
+      {
+        "ticker": "CWEN",
+        "score": -0.3614234383598361
+      },
+      {
+        "ticker": "EAF",
+        "score": -0.3473234272197431
+      }
+    ],
     "flatten": {},
     "general": {},
     "sectors": {},
@@ -1459,6 +1528,59 @@
         }
       ],
       "preview": "5021 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-11-20",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-20T09:19:48.121435-05:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-11-20_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1486561,
+          "preview": "1d BUY PANW, OKTA, BOX, PM, RBRK, CON, PSN, CLBT \u00b7 SELL QBTS, TE, FLNC, METC, RGTI, FCEL, CWEN, EAF"
+        },
+        {
+          "path": "data/stock_book/2026-11-20_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-11-20_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2612,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-11-20_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12412,
+          "preview": "2026-11-20 BUY PANW, OKTA, BOX, PM, RBRK, CON, PSN, CLBT \u00b7 SELL QBTS, TE, FLNC, METC, RGTI, FCEL, CWEN, EAF"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12412,
+          "preview": "2026-11-20 BUY PANW, OKTA, BOX, PM, RBRK, CON, PSN, CLBT \u00b7 SELL QBTS, TE, FLNC, METC, RGTI, FCEL, CWEN, EAF"
+        },
+        {
+          "path": "01_daily/2026-11-20_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 86260,
+          "preview": "# Stock book \u2014 2026-11-20\n_Generated 2026-11-20T09:14:13.323543-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY PANW, OKTA, BOX, PM, RBRK, CON, PSN, CLBT \u00b7 SELL QBTS, TE, FLNC, METC, RGTI, FCEL, CWEN, EAF \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-11-20 BUY PANW, OKTA, BOX, PM, RBRK, CON, PSN, CLBT \u00b7 SELL QBTS, TE, FLNC, METC, RGTI, FCEL, CWEN, EAF \u00b7 2026-11-20 BUY PANW, OKTA, BOX, PM, RBRK, CON, PSN, CLBT \u00b7 SELL QBTS, TE, FLNC, METC, RGTI, FCEL, CWEN, EAF \u00b7 # Stock book \u2014 2026-11-20\n_Generated 2026-11-20T09:14:13.323543-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
