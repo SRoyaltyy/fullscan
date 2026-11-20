@@ -1,6 +1,6 @@
 {
   "date": "2026-11-20",
-  "generated_at": "2026-11-20T09:13:56.857109-05:00",
+  "generated_at": "2026-11-20T09:14:04.678511-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "news_parse",
-      "title": "News parse",
-      "date": "2026-11-20",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-20T05:02:29.247133-05:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-11-20_parsed.json",
-          "ok": true,
-          "reason": "",
-          "size": 5345721,
-          "preview": "raw=7419 usable=415 single=444 \u00b7 Latin American Currencies Tumble on Fed-Rate Hike Repricing - Bloomberg.com | UK's FTSE 100 hits six-week low in broad risk-off move - Reuters | US weekly jobless claims edge up, but labor market remains resilient - Reuters | TSMC tightens China AI chip curbs as new US rules close manufacturing loophole,  | India's October crude oil imports rise over 4% month-on-month - Reuters"
-        },
-        {
-          "path": "01_daily/news/2026-11-20_parsed.md",
-          "ok": true,
-          "reason": "",
-          "size": 11299,
-          "preview": "# News Parse v2 \u2014 2026-11-20T05:02:20.230265-05:00\nWindow\u224848h | news_mode=on | raw=7419 | usable=415 | single_name=444 | noise_dropped=6421\nusable polarity={'+': 15, '-': 120, 'mixed': 0, 'neutral': 280}"
-        }
-      ],
-      "preview": "raw=7419 usable=415 single=444 \u00b7 Latin American Currencies Tumble on Fed-Rate Hike Repricing - Bloomberg.com | UK's FTSE 100 hits six-week low in broad risk-off move - Reuters | US weekly jobless claims edge up, but labor market remains resilient - Reuters | TSMC tightens China AI chip curbs as new US rules close manufacturing loophole,  | India's October crude oil imports rise over 4% month-on-month - Reuters \u00b7 # News Parse v2 \u2014 2026-11-20T05:02:20.230265-05:00\nWindow\u224848h | news_mode=on | raw=7419 | usable=415 | single_name=444 | noise_dropped=6421\nusable polarity={'+': 15, '-': 120, 'mixed': 0, 'neutral': 280}"
-    },
     {
       "key": "news_actions",
       "title": "News actions (no LLM)",
@@ -214,6 +189,24 @@
         }
       ],
       "preview": "5890 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, ONC, KNSA, RDN, RGA"
+    },
+    {
+      "key": "peer_rs",
+      "title": "Peer RS",
+      "date": "2026-11-20",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-20T09:14:03.639193-05:00",
+      "files": [
+        {
+          "path": "data/peers/2026-11-20_peer_rs.csv",
+          "ok": true,
+          "reason": "",
+          "size": 820283,
+          "preview": "5021 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+        }
+      ],
+      "preview": "5021 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
