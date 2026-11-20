@@ -1,8 +1,8 @@
 {
   "date": "2026-11-20",
-  "generated_at": "2026-11-20T04:49:53.201630-05:00",
+  "generated_at": "2026-11-20T05:06:12.413798-05:00",
   "phase": "morning_overlay",
-  "export": "finviz_2026-11-19.csv",
+  "export": "finviz_2026-11-20.csv",
   "n_tickers": 11616,
   "sectors": [
     {
@@ -8936,6 +8936,98 @@
   "ticker_news": [
     {
       "time": "5 min",
+      "title": "Stock market today: Dow, S&P 500, Nasdaq futures continue to sell-off after Anthropic IPO fails to quell AI worries",
+      "url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-november-19-dow-sp-500-nasdaq-anthropic-nvidia-volatility-092827348.html",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "NVDA"
+      ]
+    },
+    {
+      "time": "6 min",
+      "title": "Nano Labs Announces Postponement of 2026 Annual General Meeting",
+      "url": "/news/425658/nano-labs-announces-postponement-of-2026-annual-general-meeting",
+      "source": "GlobeNewswire",
+      "tickers": [
+        "NA"
+      ]
+    },
+    {
+      "time": "6 min",
+      "title": "Soccer's Manchester United Hit the Skids. Is Its Stock Worth a Gamble?",
+      "url": "https://www.barrons.com/articles/soccer-manchester-united-75f55e7a?mod=bar_FV",
+      "source": "Barrons.com",
+      "tickers": [
+        "GOLS"
+      ]
+    },
+    {
+      "time": "8 min",
+      "title": "Anthropic Stock Falls. The IPO Buzz Is Already Fading as Reality Hits Home.",
+      "url": "https://www.barrons.com/articles/anthropic-stock-price-ipo-falling-04259c4c?mod=bar_FV",
+      "source": "Barrons.com",
+      "tickers": [
+        "ANT",
+        "SPCX",
+        "NVDA"
+      ]
+    },
+    {
+      "time": "10 min",
+      "title": "Democrats open probe into Nvidia influence on US\u00a0Megaspeed investigation",
+      "url": "https://finance.yahoo.com/news/democrats-open-probe-nvidia-influence-094850381.html",
+      "source": "Reuters",
+      "tickers": [
+        "NVDA"
+      ]
+    },
+    {
+      "time": "11 min",
+      "title": "Anthropic stock dives after rip-roaring IPO",
+      "url": "https://finance.yahoo.com/markets/stocks/article/anthropic-stock-dives-after-rip-roaring-ipo-095411951.html",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "ANT"
+      ]
+    },
+    {
+      "time": "13 min",
+      "title": "Sterling today: Pound edges up on UK retail beat, dollar caps gains",
+      "url": "https://finance.yahoo.com/markets/currencies/articles/sterling-today-pound-edges-uk-095209756.html",
+      "source": "Investing.com",
+      "tickers": [
+        "ING"
+      ]
+    },
+    {
+      "time": "14 min",
+      "title": "Japan's bank shares slide even as Ueda vows more rate rises",
+      "url": "https://finance.yahoo.com/economy/policy/articles/japans-bank-shares-slide-even-095123931.html",
+      "source": "IntelliNews",
+      "tickers": [
+        "MFG"
+      ]
+    },
+    {
+      "time": "14 min",
+      "title": "Poland opens door to CfD support for private small nuclear reactors",
+      "url": "https://finance.yahoo.com/energy/articles/poland-opens-door-cfd-support-095121988.html",
+      "source": "IntelliNews",
+      "tickers": [
+        "GEV"
+      ]
+    },
+    {
+      "time": "20 min",
+      "title": "Dollar near 19-month high, set for 4th weekly gain as AI worries fuel haven bid",
+      "url": "https://finance.yahoo.com/markets/currencies/articles/dollar-near-19-month-peak-015038270.html",
+      "source": "Reuters",
+      "tickers": [
+        "ANT"
+      ]
+    },
+    {
+      "time": "21 min",
       "title": "US Stock Futures Fall as Anthropic Shares Retreat and AI Concerns Weigh on Global Markets: Dow Jones, S&P, Nasdaq, Wall Street",
       "url": "/news/425657/us-stock-futures-fall-as-anthropic-shares-retreat-and-ai-concerns-weigh-on-global-markets-dow-jones-sp-nasdaq-wall-street",
       "source": "InvestorsHub",
@@ -8944,7 +9036,16 @@
       ]
     },
     {
-      "time": "10 min",
+      "time": "26 min",
+      "title": "Anthropics hard work starts now as shares slip after record debut",
+      "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-hard-starts-now-shares-094000011.html",
+      "source": "Proactive",
+      "tickers": [
+        "ANT"
+      ]
+    },
+    {
+      "time": "27 min",
       "title": "Anthropic Slumps 5% Post-Market After Record $107.3 Billion IPO",
       "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-slumps-5-post-market-031104281.html",
       "source": "Bloomberg",
@@ -8953,19 +9054,37 @@
       ]
     },
     {
-      "time": "15 min",
+      "time": "27 min",
+      "title": "Coinbase Plans to Launch Its Own US Prediction Market Contracts in Early 2027",
+      "url": "https://finance.yahoo.com/markets/crypto/articles/coinbase-plans-launch-own-us-093900386.html",
+      "source": "CCN",
+      "tickers": [
+        "COIN"
+      ]
+    },
+    {
+      "time": "28 min",
+      "title": "Anthropic dips after-hours as AI jitters persist - whats moving markets",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/anthropic-dips-hours-ai-jitters-093716104.html",
+      "source": "Investing.com",
+      "tickers": [
+        "ANT"
+      ]
+    },
+    {
+      "time": "32 min",
       "title": "Intuit slides after earnings, and other early market movers",
       "url": "https://www.marketwatch.com/livecoverage/stock-market-today-dow-s-p-500-nasdaq-anthropic-ipo-second-day-trading/card/intuit-slides-after-earnings-and-other-early-market-movers-wRBhCBcexB8twdpaSXSq?mod=mw_FV",
       "source": "MarketWatch",
       "tickers": [
         "INTU",
-        "SNDK",
         "ANT",
+        "SNDK",
         "ROST"
       ]
     },
     {
-      "time": "19 min",
+      "time": "36 min",
       "title": "RLX Technology Announces Unaudited Third Quarter 2026 Financial Results",
       "url": "/news/425656/rlx-technology-announces-unaudited-third-quarter-2026-financial-results",
       "source": "PR Newswire",
@@ -8974,7 +9093,7 @@
       ]
     },
     {
-      "time": "19 min",
+      "time": "36 min",
       "title": "Kaplan Fox Encourages Endava plc (DAVA) Investors Seeking Recovery to Contact the Firm Before November 30, 2026",
       "url": "https://www.newsfilecorp.com/release/324347/Kaplan-Fox-Encourages-Endava-plc-DAVA-Investors-Seeking-Recovery-to-Contact-the-Firm-Before-November-30-2026",
       "source": "Newsfile",
@@ -8983,7 +9102,7 @@
       ]
     },
     {
-      "time": "20 min",
+      "time": "37 min",
       "title": "Anthropic's Blockbuster IPO Dominated Headlines This Week  AI Anxiety Eased, While Investors And Employees Reaped A Windfall",
       "url": "https://finance.yahoo.com/markets/stocks/articles/anthropics-blockbuster-ipo-dominated-headlines-092846135.html",
       "source": "Stocktwits",
@@ -8993,17 +9112,16 @@
       ]
     },
     {
-      "time": "21 min",
+      "time": "37 min",
       "title": "Stock market today: Dow, S&P 500, Nasdaq futures continue to sell-off after Anthropic IPO fails to quell AI worries",
       "url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-november-19-dow-sp-500-nasdaq-anthropic-nvidia-volatility-092827348.html",
       "source": "Yahoo Finance",
       "tickers": [
-        "ANT",
-        "NVDA"
+        "ANT"
       ]
     },
     {
-      "time": "27 min",
+      "time": "44 min",
       "title": "European gas gains on fresh Middle East attacks, but Eyes weekly drop",
       "url": "https://finance.yahoo.com/energy/articles/european-gas-gains-fresh-middle-092201456.html",
       "source": "Investing.com",
@@ -9012,7 +9130,7 @@
       ]
     },
     {
-      "time": "39 min",
+      "time": "56 min",
       "title": "Kaplan Fox Encourages Alphabet Inc. (GOOGL, GOOG) Investors Seeking Recovery to Contact the Firm Before December 1, 2026",
       "url": "https://www.newsfilecorp.com/release/324345/Kaplan-Fox-Encourages-Alphabet-Inc.-GOOGL-GOOG-Investors-Seeking-Recovery-to-Contact-the-Firm-Before-December-1-2026",
       "source": "Newsfile",
@@ -9022,7 +9140,7 @@
       ]
     },
     {
-      "time": "46 min",
+      "time": "1 hour",
       "title": "Dan Niles Says Anthropic Is More Likely To Survive The Agentic AI Commoditization Than OpenAI  Price Competition Is Increasing",
       "url": "https://finance.yahoo.com/technology/ai/articles/dan-niles-says-anthropic-more-090311343.html",
       "source": "Stocktwits",
@@ -9031,22 +9149,13 @@
       ]
     },
     {
-      "time": "51 min",
+      "time": "1 hour",
       "title": "Dean Of Valuation Says Nvidia Is 30% Below Fair Value, Waits For $140  Calls Jensen Huang Great CEO, But Human",
       "url": "https://finance.yahoo.com/markets/stocks/articles/dean-valuation-says-nvidia-30-085810133.html",
       "source": "Stocktwits",
       "tickers": [
         "NVDA",
         "AAPL"
-      ]
-    },
-    {
-      "time": "57 min",
-      "title": "Dollar near 19-month high, set for 4th weekly gain as AI worries fuel haven bid",
-      "url": "https://finance.yahoo.com/markets/currencies/articles/dollar-near-19-month-peak-015038270.html",
-      "source": "Reuters",
-      "tickers": [
-        "ANT"
       ]
     },
     {
@@ -9057,8 +9166,8 @@
       "tickers": [
         "ANT",
         "NVDA",
-        "FRO",
         "IESC",
+        "FRO",
         "BSP"
       ]
     },
@@ -9117,9 +9226,9 @@
       "tickers": [
         "ANT",
         "NVDA",
+        "AMZN",
         "TSLA",
-        "MSFT",
-        "AMZN"
+        "MSFT"
       ]
     },
     {
@@ -9150,7 +9259,7 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "2 hours",
       "title": "Changpeng Zhao Has One Suggestion as Anthropics IPO Mints Thousands of Millionaires",
       "url": "https://finance.yahoo.com/markets/stocks/articles/changpeng-zhao-one-suggestion-anthropic-080335489.html",
       "source": "BeInCrypto",
@@ -9159,7 +9268,7 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "2 hours",
       "title": "SK Hynix to Be Kioxias Top Shareholder",
       "url": "https://finance.yahoo.com/markets/stocks/articles/sk-hynix-kioxia-top-shareholder-080137989.html",
       "source": "Bloomberg",
@@ -9168,7 +9277,7 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "2 hours",
       "title": "Anthropic IPO live: Anthropic stock closes up 17% from initial price for $1.27T valuation in first day of trading",
       "url": "https://finance.yahoo.com/technology/live/anthropic-ipo-live-anthropic-stock-begins-trading-in-record-81b-raise-with-15t-valuation-192410598.html",
       "source": "Yahoo Finance",
@@ -9177,7 +9286,7 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "2 hours",
       "title": "Anthropic Is Public  Is OpenAI Ready To Follow?",
       "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-public-openai-ready-075701016.html",
       "source": "Stocktwits",
@@ -9233,7 +9342,7 @@
       ]
     },
     {
-      "time": "2 hours",
+      "time": "3 hours",
       "title": "UBS sees Deutsche Boerse shares overvalued after 49% rally",
       "url": "https://finance.yahoo.com/markets/stocks/articles/ubs-sees-deutsche-boerse-shares-070603573.html",
       "source": "Investing.com",
@@ -9242,7 +9351,7 @@
       ]
     },
     {
-      "time": "2 hours",
+      "time": "3 hours",
       "title": "InterContinental Hotels Group PLC Announces Transaction in Own Shares - November 20",
       "url": "/news/425655/intercontinental-hotels-group-plc-announces-transaction-in-own-shares-november-20",
       "source": "ACCESSWIRE",
@@ -9251,7 +9360,7 @@
       ]
     },
     {
-      "time": "2 hours",
+      "time": "3 hours",
       "title": "BlackRocks Bitcoin ETF Sees Record $541 Million Outflow in a Single Day",
       "url": "https://finance.yahoo.com/markets/crypto/articles/blackrock-bitcoin-etf-sees-record-070000672.html",
       "source": "BeInCrypto",
@@ -9261,7 +9370,7 @@
       ]
     },
     {
-      "time": "2 hours",
+      "time": "3 hours",
       "title": "Bitcoin hits near 5-mth low below $62k as AI rout batters risk appetite",
       "url": "https://finance.yahoo.com/markets/crypto/articles/bitcoin-hits-near-5-mth-065931562.html",
       "source": "Investing.com",
@@ -9270,7 +9379,7 @@
       ]
     },
     {
-      "time": "2 hours",
+      "time": "3 hours",
       "title": "SpaceX Holds Its Orbit As Space Stocks Fall Back To Earth  Inside A Rough Week For FLY, ASTS, RKLB And RDW",
       "url": "https://finance.yahoo.com/markets/stocks/articles/spacex-holds-orbit-space-stocks-065831911.html",
       "source": "Stocktwits",
@@ -9278,12 +9387,12 @@
         "ANT",
         "ASTS",
         "RKLB",
-        "RDW",
-        "SPCX"
+        "FLY",
+        "RDW"
       ]
     },
     {
-      "time": "2 hours",
+      "time": "3 hours",
       "title": "Asian shares head for worst week since 2020 as AI rout deepens",
       "url": "https://finance.yahoo.com/markets/world-indices/articles/asian-shares-head-worst-week-014854250.html",
       "source": "Reuters",
@@ -9292,7 +9401,7 @@
       ]
     },
     {
-      "time": "2 hours",
+      "time": "3 hours",
       "title": "SK Hynix weighs converting Kioxia bonds to shares, report says",
       "url": "https://finance.yahoo.com/markets/stocks/articles/sk-hynix-weighs-converting-kioxia-065103840.html",
       "source": "Investing.com",
@@ -9364,7 +9473,7 @@
       ]
     },
     {
-      "time": "3 hours",
+      "time": "4 hours",
       "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
       "url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-p-500-open-060508766.html",
       "source": "Benzinga Prediction Markets",
@@ -9374,7 +9483,7 @@
       ]
     },
     {
-      "time": "3 hours",
+      "time": "4 hours",
       "title": "Morning Bid: Anthropic's splashy IPO fails to lift AI boat",
       "url": "https://finance.yahoo.com/markets/stocks/articles/morning-bid-anthropics-splashy-ipo-055409747.html",
       "source": "Reuters",
@@ -9444,7 +9553,7 @@
       ]
     },
     {
-      "time": "4 hours",
+      "time": "5 hours",
       "title": "Can Nvidia learn from AIGs mistakes?",
       "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-learn-aig-mistakes-050017609.html",
       "source": "Financial Times",
@@ -9453,7 +9562,7 @@
       ]
     },
     {
-      "time": "4 hours",
+      "time": "5 hours",
       "title": "Okeanis Eco Tankers Corp. - Ex Dividend Date",
       "url": "/news/425653/okeanis-eco-tankers-corp-ex-dividend-date",
       "source": "GlobeNewswire",
@@ -9462,7 +9571,7 @@
       ]
     },
     {
-      "time": "4 hours",
+      "time": "5 hours",
       "title": "Gold and Silver Shed $1 Trillion in Six Hours. What Turned Gold Around Last Time?",
       "url": "https://finance.yahoo.com/markets/commodities/articles/gold-silver-shed-1-trillion-050000175.html",
       "source": "BeInCrypto",
@@ -9471,7 +9580,7 @@
       ]
     },
     {
-      "time": "4 hours",
+      "time": "5 hours",
       "title": "AP Top Extended Financial Headlines at 12:29 a.m. EST",
       "url": "https://finance.yahoo.com/markets/stocks/articles/ap-top-extended-financial-headlines-050000781.html",
       "source": "Associated Press",
@@ -9480,7 +9589,7 @@
       ]
     },
     {
-      "time": "4 hours",
+      "time": "5 hours",
       "title": "AP Top Financial News at 12:29 a.m. EST",
       "url": "https://finance.yahoo.com/markets/world-indices/articles/ap-top-financial-news-12-050000178.html",
       "source": "Associated Press",
@@ -9505,7 +9614,7 @@
       "tickers": [
         "SNDK",
         "LITE",
-        "DELL"
+        "MRVL"
       ]
     },
     {
@@ -9689,122 +9798,6 @@
       "source": "Investing.com",
       "tickers": [
         "ANT"
-      ]
-    },
-    {
-      "time": "Nov-19",
-      "title": "DOJ closes antitrust probe into NextEras $66.8 bln Dominion deal",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/doj-closes-antitrust-probe-nextera-032504407.html",
-      "source": "Investing.com",
-      "tickers": [
-        "NEE",
-        "D"
-      ]
-    },
-    {
-      "time": "Nov-19",
-      "title": "FISV Stock Slumps Most In 5 Months: Portfolio Review Fuels Speculation, But Analyst Casts Doubt On Debit Network Sale",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/fisv-stock-slumps-most-5-032040440.html",
-      "source": "Stocktwits",
-      "tickers": [
-        "FISV"
-      ]
-    },
-    {
-      "time": "Nov-19",
-      "title": "SpaceX lenders seek safeguards against Musk sending AI chips into space - FT",
-      "url": "https://finance.yahoo.com/technology/ai/articles/spacex-lenders-seek-safeguards-against-031830082.html",
-      "source": "Investing.com",
-      "tickers": [
-        "SPCX",
-        "NVDA"
-      ]
-    },
-    {
-      "time": "Nov-19",
-      "title": "Asia shares drop on AI worries, echoing Wall Street's decline despite the strong Anthropic debut",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/asia-shares-drop-ai-worries-031709382.html",
-      "source": "Associated Press",
-      "tickers": [
-        "ANT"
-      ]
-    },
-    {
-      "time": "Nov-19",
-      "title": "Yesway Announces Pricing of Secondary Public Offering",
-      "url": "/news/425649/yesway-announces-pricing-of-secondary-public-offering",
-      "source": "GlobeNewswire",
-      "tickers": [
-        "YSWY"
-      ]
-    },
-    {
-      "time": "Nov-19",
-      "title": "MoonPay Applies for National Trust Bank Charter to Offer Stablecoin and Custody Services",
-      "url": "https://finance.yahoo.com/markets/crypto/articles/moonpay-applies-national-trust-bank-030600024.html",
-      "source": "CryptoProwl",
-      "tickers": [
-        "XYZ",
-        "CRCL"
-      ]
-    },
-    {
-      "time": "Nov-19",
-      "title": "Tom Lee Says Anthropic Debut Selloff Feels Like Max Pain: Will Tech Rebound?",
-      "url": "https://finance.yahoo.com/technology/ai/articles/tom-lee-says-anthropic-debut-030500754.html",
-      "source": "BeInCrypto",
-      "tickers": [
-        "NBIS",
-        "CRWV",
-        "SPCX"
-      ]
-    },
-    {
-      "time": "Nov-19",
-      "title": "FF EAI Robotics Ecosystem (FFR) Appoints Carolyn Kissane as Independent Director, Joining Jason E. Dodier and other Board Members to Bring Critical Expertise to Advance Physical AI Education, Industry Partnerships and Scalable Commercialization",
-      "url": "/news/425648/ff-eai-robotics-ecosystem-ffr-appoints-carolyn-kissane-as-independent-director-joining-jason-e-dodier-and-other-board-members-to-bring-critical-expertise-to-advance-physical-ai-education-industry-partnerships-and-scalable-commercialization",
-      "source": "PR Newswire",
-      "tickers": [
-        "FFR"
-      ]
-    },
-    {
-      "time": "Nov-19",
-      "title": "Nasdaq, Dow, S&P 500 Futures Slip As Anthropics Record Debut Fails To Lift AI Stocks: SLV, GLD, AMD, NVDA In Focus",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/nasdaq-dow-p-500-futures-024814072.html",
-      "source": "Stocktwits",
-      "tickers": [
-        "AMD",
-        "NVDA",
-        "ANT"
-      ]
-    },
-    {
-      "time": "Nov-19",
-      "title": "Bitcoin Falls to Mining Cost Level as Hashrate Nears Record and Indicators Flip Bearish",
-      "url": "https://finance.yahoo.com/markets/crypto/articles/bitcoin-falls-mining-cost-level-023951594.html",
-      "source": "BeInCrypto",
-      "tickers": [
-        "MARA"
-      ]
-    },
-    {
-      "time": "Nov-19",
-      "title": "Google taps Blue Origin's New Glenn for first heavy-lift launch of space-based AI project",
-      "url": "https://www.digitimes.com/news/a20261120VL201/google-launch-demand-electricity-data.html",
-      "source": "DigiTimes",
-      "tickers": [
-        "GOOGL",
-        "GOOG"
-      ]
-    },
-    {
-      "time": "Nov-19",
-      "title": "Cadence sees bigger gains for India in chip commercialization than homegrown EDA tools",
-      "url": "https://www.digitimes.com/news/a20261119VL225/india-cadence-eda-design-ip-manufacturing.html",
-      "source": "DigiTimes",
-      "tickers": [
-        "CDNS"
       ]
     }
   ],
@@ -10349,7 +10342,7 @@
       "company": "Anthropic PBC",
       "datetime": "2026-12-02T12:00:00",
       "session": "BMO",
-      "mcap": 1649187.3549515412,
+      "mcap": 1647618.4159614895,
       "eps_est": null
     },
     {
@@ -10365,7 +10358,7 @@
       "company": "Crowdstrike Holdings Inc",
       "datetime": "2026-12-01T16:30:00",
       "session": "AMC",
-      "mcap": 240624.6844840131,
+      "mcap": 241648.61931160462,
       "eps_est": 0.3115
     },
     {
@@ -10381,7 +10374,7 @@
       "company": "Dell Technologies Inc",
       "datetime": "2026-11-24T16:30:00",
       "session": "AMC",
-      "mcap": 188753.17258430194,
+      "mcap": 189599.37714094805,
       "eps_est": 6.6161
     },
     {
@@ -10389,7 +10382,7 @@
       "company": "Analog Devices Inc",
       "datetime": "2026-11-24T08:30:00",
       "session": "BMO",
-      "mcap": 179943.72821598465,
+      "mcap": 179822.246731347,
       "eps_est": 3.89
     },
     {
@@ -10397,7 +10390,7 @@
       "company": "Deere \\u0026 Co",
       "datetime": "2026-11-25T08:30:00",
       "session": "BMO",
-      "mcap": 168011.6766633777,
+      "mcap": 167526.86439063202,
       "eps_est": 4.026
     },
     {
@@ -10405,7 +10398,7 @@
       "company": "Medtronic Plc",
       "datetime": "2026-11-24T08:30:00",
       "session": "BMO",
-      "mcap": 129132.20310039756,
+      "mcap": 130206.06682453015,
       "eps_est": 1.3344
     },
     {
@@ -10413,7 +10406,7 @@
       "company": "Marvell Technology Inc",
       "datetime": "2026-12-01T16:30:00",
       "session": "AMC",
-      "mcap": 115805.5182421538,
+      "mcap": 116285.71521384564,
       "eps_est": 1.1005
     },
     {
@@ -10445,7 +10438,7 @@
       "company": "Hewlett Packard Enterprise Co",
       "datetime": "2026-11-23T16:30:00",
       "session": "AMC",
-      "mcap": 57426.119332944574,
+      "mcap": 57744.7130814996,
       "eps_est": 1.2821
     },
     {
@@ -10453,7 +10446,7 @@
       "company": "Autodesk Inc",
       "datetime": "2026-11-24T16:30:00",
       "session": "AMC",
-      "mcap": 50753.55987083838,
+      "mcap": 50410.799994105204,
       "eps_est": 3.0684
     },
     {
@@ -10485,7 +10478,7 @@
       "company": "Kroger Co",
       "datetime": "2026-12-03T08:30:00",
       "session": "BMO",
-      "mcap": 40254.53024231693,
+      "mcap": 40697.47179248766,
       "eps_est": 1.1623
     },
     {
@@ -10493,7 +10486,7 @@
       "company": "Okta Inc",
       "datetime": "2026-12-01T16:30:00",
       "session": "AMC",
-      "mcap": 35027.082472724134,
+      "mcap": 35051.55726885314,
       "eps_est": 0.9342
     },
     {
@@ -10509,7 +10502,7 @@
       "company": "Dollar General Corp",
       "datetime": "2026-12-03T08:30:00",
       "session": "BMO",
-      "mcap": 29454.55,
+      "mcap": 29536.18051133346,
       "eps_est": 1.4114
     },
     {
@@ -10517,7 +10510,7 @@
       "company": "Copart Inc",
       "datetime": "2026-12-01T08:30:00",
       "session": "BMO",
-      "mcap": 29129.497429790288,
+      "mcap": 28597.293993442207,
       "eps_est": 0.3962
     },
     {
@@ -10533,7 +10526,7 @@
       "company": "Ulta Beauty Inc",
       "datetime": "2026-12-03T16:30:00",
       "session": "AMC",
-      "mcap": 26908.99,
+      "mcap": 26939.33308796621,
       "eps_est": 5.6425
     },
     {
@@ -10557,7 +10550,7 @@
       "company": "Zoom Communications Inc",
       "datetime": "2026-11-23T16:30:00",
       "session": "AMC",
-      "mcap": 23853.3178212772,
+      "mcap": 23967.113287838525,
       "eps_est": 1.4853
     },
     {
@@ -10565,7 +10558,7 @@
       "company": "MongoDB Inc",
       "datetime": "2026-12-01T16:30:00",
       "session": "AMC",
-      "mcap": 23410.767532224243,
+      "mcap": 23296.895163655015,
       "eps_est": 1.6113
     },
     {
@@ -10573,7 +10566,7 @@
       "company": "Rubrik Inc",
       "datetime": "2026-11-30T16:30:00",
       "session": "AMC",
-      "mcap": 23081.279341655696,
+      "mcap": 22907.144342926375,
       "eps_est": 0.0825
     },
     {
@@ -10581,7 +10574,7 @@
       "company": "Samsara Inc",
       "datetime": "2026-12-03T16:30:00",
       "session": "AMC",
-      "mcap": 22487.24,
+      "mcap": 22036.323739432344,
       "eps_est": 0.1886
     },
     {
@@ -10589,7 +10582,7 @@
       "company": "Credo Technology Group Holding Ltd",
       "datetime": "2026-12-01T16:30:00",
       "session": "AMC",
-      "mcap": 20864.54445406066,
+      "mcap": 21050.616465956453,
       "eps_est": 1.2856
     },
     {
@@ -10597,7 +10590,7 @@
       "company": "Best Buy Co Inc",
       "datetime": "2026-11-24T08:30:00",
       "session": "BMO",
-      "mcap": 20819.67,
+      "mcap": 20863.71422915637,
       "eps_est": 1.4891
     },
     {
@@ -10605,7 +10598,7 @@
       "company": "Symbotic Inc",
       "datetime": "2026-11-23T16:30:00",
       "session": "AMC",
-      "mcap": 19758.8662151013,
+      "mcap": 19664.76048971004,
       "eps_est": 0.0727
     },
     {
@@ -10709,5 +10702,5 @@
   "calendar_window_days": 16,
   "econ_window_count": 159,
   "earnings_window_count": 203,
-  "overlay_at": "2026-11-20T04:49:53.201630-05:00"
+  "overlay_at": "2026-11-20T05:06:12.413798-05:00"
 }
