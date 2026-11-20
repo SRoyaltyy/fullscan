@@ -1,6 +1,6 @@
 {
  "date": "2026-11-20",
- "generated_at": "2026-11-20T08:36:16.190960+00:00",
+ "generated_at": "2026-11-20T21:08:50.167670+00:00",
  "catalog": {
   "generated_at": "2026-11-14T18:45:12.782675+00:00",
   "channels": 365,
@@ -34,53 +34,71 @@
   }
  },
  "collect": {
-  "generated_at": "2026-11-20T08:35:54.872966+00:00",
+  "generated_at": "2026-11-20T21:08:28.339043+00:00",
   "enabled_sources": 118,
-  "sources_ok": 118,
-  "sources_failed": 0,
+  "sources_ok": 117,
+  "sources_failed": 1,
   "coverage_status": "degraded",
   "counts": {
-   "observed": 2106,
-   "old": 1139,
-   "future": 8,
-   "undated": 309,
-   "new": 170,
-   "duplicates": 789
+   "observed": 2375,
+   "old": 1257,
+   "future": 11,
+   "undated": 355,
+   "new": 143,
+   "duplicates": 964
   },
-  "current_dated_documents": 809
+  "current_dated_documents": 847
  },
  "new_today": {
-  "count": 170,
+  "count": 143,
   "by_source": {
-   "us-federal-register": 111,
-   "us-govinfo-bills": 24,
+   "us-govinfo-crpt": 34,
    "us-doj-b3d27e1dc3": 17,
-   "in-rbi-cc71120b98": 7,
-   "jp-meti-index": 3,
-   "us-govinfo-bills-enr": 2,
-   "uk-govuk-regulation": 1,
-   "us-doj-e05071794d": 1,
-   "us-fcc-364d1b4932": 1,
-   "eu-ecb-991c113079": 1,
-   "jp-boj-d488538690": 1,
-   "us-supreme-court-orders-index": 1
+   "us-govinfo-plaw": 11,
+   "us-fcc-e95ecda3bb": 11,
+   "eu-commission-07d4f58ccf": 10,
+   "eu-council-9d9e9444da": 9,
+   "uk-govuk-decision": 8,
+   "in-rbi-cc71120b98": 6,
+   "us-hhs-6f995a5754": 4,
+   "hk-hkma-public-press": 3,
+   "uk-govuk-product_safety_alert_report_recall": 3,
+   "us-doj-e05071794d": 3,
+   "us-itc-index": 3,
+   "us-govinfo-bills": 2,
+   "us-govinfo-dcpd": 2,
+   "us-sec-8940dd7737": 2,
+   "us-sec-2476f14c28": 2,
+   "us-fda-03f7703006": 2,
+   "us-fcc-685c5e7dd2": 2,
+   "uk-govuk-consultation_outcome": 1,
+   "us-ftc-58b0383166": 1,
+   "us-ofac-index": 1,
+   "us-fed-97656cefc7": 1,
+   "us-cpsc-08fe06e2e6": 1,
+   "eu-eba-60bdc59843": 1,
+   "de-bundesbank-027ac4024f": 1,
+   "de-bundesbank-617511c682": 1,
+   "de-bundesbank-fe89ad3ac9": 1
   },
   "by_class": {
-   "routine": 120,
-   "high": 23,
-   "docket": 9,
-   "watch": 18
+   "noise": 4,
+   "watch": 40,
+   "routine": 80,
+   "high": 13,
+   "docket": 6
   }
  },
  "parsed_today": {
-  "count": 53,
+  "count": 196,
   "by_class": {
-   "high": 19,
-   "routine": 25,
-   "watch": 9
+   "high": 35,
+   "watch": 45,
+   "noise": 3,
+   "routine": 118
   }
  },
- "n_failures": 0,
+ "n_failures": 1,
  "dates": [
   "2026-11-20"
  ],
