@@ -1,0 +1,105 @@
+{
+  "date": "2026-11-19",
+  "generated_at": "2026-11-19T21:22:06.443089-05:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": false,
+  "clock_use": "next_open",
+  "clock_legal_for": "2026-11-20",
+  "capture_slot": "close",
+  "clock_rule": "Live post-close answer-key (~16:05 ET). Always next_open for the NEXT session (2026-11-20) — never same_morning. Writes *_finviz_market_digest_close.* only. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest_close",
+  "represents": "Finviz homepage post-close answer-key. clock_use is always next_open; clock_legal_for is the next NYSE session. Lives at *_finviz_market_digest_close.*. Does not replace the same_morning warm-up file. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks closed sharply lower for a sixth straight session as broad tech and consumer weakness outweighed a record Anthropic IPO ahead of key consumer sentiment data",
+  "raw_text": "- The S&P 500 ($SPX) fell 2.02% to 7,175.83, the Dow Jones Industrial Average ($DJI) dropped 2.19% (1,101 points) to 49,097.06, and the Nasdaq Composite ($COMP) lost 2.25% to 23,879.20, with more than 90% of S&P 500 ($SPX) components declining.\n- Anthropic (ANT) completed the largest IPO on record, raising over $81 billion at $83 per share and closing up 17% for a valuation above roughly $1.6 trillion, though the stock slipped in extended trading.\n- Nvidia (NVDA) declined 3.3% after agreeing to invest about $10 billion in Anthropic through the AI company’s $26 billion private placement, as investors also focused on CEO Jensen Huang’s resignation.\n- AMD (AMD) dropped about 7.7% after a Hunterbrook short report cited potential China-related risks that could invite U.S. scrutiny, a claim the company denied.\n- Insmed (INSM) surged 20.6% after Reuters reported that Sanofi (SNY) is weighing an acquisition of the company.\n- Palo Alto Networks (PANW) gained about 6.4% after beating earnings expectations, raising its FY27 forecast, and announcing a $4.5 billion AI-focused acquisition.\n- Williams-Sonoma (WSM) sank 15.2% after missing quarterly estimates, while Walmart (WMT) fell after raising its FY27 sales, profit and EPS outlook.\n- Energy was the only S&P 500 ($SPX) sector to rise, up 0.14%, while industrials fell 2.61% and consumer discretionary and technology stocks lagged the broader market.\n- In after-hours trading, Intuit (INTU) dropped about 10% after beating Q1 estimates but cutting its FY27 Credit Karma outlook, while Elastic (ESTC) reported a Q2 beat and investors looked ahead to Friday results from BJ’s Wholesale Club (BJ) and University of Michigan consumer sentiment data.",
+  "raw_summary_md": "- The **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) fell 2.02% to 7,175.83, the **Dow Jones Industrial Average** ([$DJI](https://finviz.com/index/DJI?p=d)) dropped 2.19% (1,101 points) to 49,097.06, and the **Nasdaq Composite** ([$COMP](https://finviz.com/index/COMP?p=d)) lost 2.25% to 23,879.20, with **more than 90%** of **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) components declining.\n- Anthropic (ANT) completed the **largest IPO on record**, raising over $81 billion at $83 per share and closing **up 17%** for a valuation above roughly $1.6 trillion, though the stock slipped in extended trading.\n- **Nvidia** ([NVDA](https://finviz.com/quote?t=NVDA)) declined 3.3% after agreeing to invest **about $10 billion** in Anthropic through the AI company’s $26 billion private placement, as investors also focused on **CEO Jensen Huang’s resignation**.\n- **AMD** ([AMD](https://finviz.com/quote?t=AMD)) dropped **about 7.7%** after a Hunterbrook short report cited potential **China-related risks** that could invite U.S. scrutiny, a claim the company denied.\n- **Insmed** ([INSM](https://finviz.com/quote?t=INSM)) **surged 20.6%** after Reuters reported that **Sanofi** ([SNY](https://finviz.com/quote?t=SNY)) is **weighing an acquisition** of the company.\n- **Palo Alto Networks** ([PANW](https://finviz.com/quote?t=PANW)) **gained about 6.4%** after beating earnings expectations, raising its FY27 forecast, and announcing a **$4.5 billion AI-focused acquisition**.\n- **Williams-Sonoma** ([WSM](https://finviz.com/quote?t=WSM)) **sank 15.2%** after **missing quarterly estimates**, while **Walmart** ([WMT](https://finviz.com/quote?t=WMT)) fell after raising its FY27 sales, profit and EPS outlook.\n- Energy was the only **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) sector to rise, **up 0.14%**, while industrials fell 2.61% and consumer discretionary and technology stocks lagged the broader market.\n- In after-hours trading, **Intuit** ([INTU](https://finviz.com/quote?t=INTU)) **dropped about 10%** after beating Q1 estimates but cutting its FY27 Credit Karma outlook, while **Elastic** ([ESTC](https://finviz.com/quote?t=ESTC)) reported a Q2 beat and investors looked ahead to Friday results from **BJ’s Wholesale Club** ([BJ](https://finviz.com/quote?t=BJ)) and University of Michigan consumer sentiment data.",
+  "index_moves": [
+    {
+      "name": "S&P 500",
+      "code": "SPX",
+      "change_pct": -2.02,
+      "verb": "fell"
+    },
+    {
+      "name": "Dow Jones Industrial Average",
+      "code": "DJI",
+      "change_pct": -2.19,
+      "verb": "dropped"
+    },
+    {
+      "name": "Nasdaq Composite",
+      "code": "COMP",
+      "change_pct": -2.25,
+      "verb": "lost"
+    }
+  ],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "NVDA",
+    "AMD",
+    "INSM",
+    "SNY",
+    "PANW",
+    "WSM",
+    "WMT",
+    "INTU",
+    "ESTC",
+    "BJ",
+    "ANT"
+  ],
+  "named_leaders": [
+    "NVDA",
+    "AMD",
+    "INSM",
+    "SNY",
+    "PANW",
+    "WSM",
+    "WMT",
+    "INTU",
+    "ESTC",
+    "BJ",
+    "ANT"
+  ],
+  "calendar": [
+    "In after-hours trading, Intuit (INTU) dropped about 10% after beating Q1 estimates but cutting its FY27 Credit Karma outlook, while Elastic (ESTC) reported a Q2 beat and investors looked ahead to Friday results from BJ’s Wholesale Club (BJ) and University of Michigan consumer sentiment data."
+  ],
+  "prior_close": {
+    "spx": -2.02,
+    "nasdaq": -2.25,
+    "dow": -2.19
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": false,
+    "bullets": [],
+    "text": ""
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 349495,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-11-19T20:37:37.033",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "bad"
+}
