@@ -1,45 +1,46 @@
-# Finviz homepage market digest (close) — 2026-11-19
+# Finviz homepage market digest (close) — 2026-11-20
 
-**Generated:** 2026-11-19T21:22:06.443089-05:00 (America/New_York)
+**Generated:** 2026-11-20T21:14:52.586768-05:00 (America/New_York)
 **Source:** `live`
-**Banner:** US stocks closed sharply lower for a sixth straight session as broad tech and consumer weakness outweighed a record Anthropic IPO ahead of key consumer sentiment data
-**Prior close:** SPX -2.02%  Nasdaq -2.25%  Dow -2.19%
-**SPX:** -2.02%  **Nasdaq:** -2.25%  **Dow:** -2.19%
+**Banner:** US stocks closed sharply lower as AI-led selloff and Nvidia accounting probe pushed S&P 500 and Dow into correction territory and erased Nasdaq’s 2026 gains
+**Prior close:** SPX -3.70%  Nasdaq -5.28%  Dow -1.93%
+**SPX:** -3.70%  **Nasdaq:** -5.28%  **Dow:** -1.93%
 **Oil:** —
-**CPI/Fed:** —
-**Leaders:** NVDA, AMD, INSM, SNY, PANW, WSM, WMT, INTU, ESTC, BJ, ANT
+**CPI/Fed:** 12.2% cut (12.2% on reports that Alphabet (GOOGL)’s Google plans to cut)
+**Leaders:** NVDA, AVGO, GOOGL, MU, AMD, ANT, UNH, GPN, GIS, ZS, CRWD
 **Next session:** housing no · retail no · Fed no
 **Earnings slate:** —
 **Geo/grain:** —
-**Clock legal for:** 2026-11-20
+**Clock legal for:** 2026-11-23
 **Clock use:** `next_open`
 
 ## Clock
 
-Live post-close answer-key (~16:05 ET). **Legal for the NEXT session open only** (`clock_legal_for` = 2026-11-20) — **NOT** the same morning. `clock_use` is always `next_open`. File is `*_finviz_market_digest_close.*`; the same_morning warm-up file is left untouched.
+Live post-close answer-key (~16:05 ET). **Legal for the NEXT session open only** (`clock_legal_for` = 2026-11-23) — **NOT** the same morning. `clock_use` is always `next_open`. File is `*_finviz_market_digest_close.*`; the same_morning warm-up file is left untouched.
 
 Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page headlines + ticker blurbs). Capture only. Not wired into tape_anchor / predict / #210.
 
 ## Theme Radar
 
-- **Prior close:** SPX -2.02% · Nasdaq -2.25% · Dow -2.19%
+- **Prior close:** SPX -3.70% · Nasdaq -5.28% · Dow -1.93%
 - **Oil:** —
-- **CPI / Fed-odds:** —
-- **Named leaders:** NVDA, AMD, INSM, SNY, PANW, WSM, WMT, INTU, ESTC, BJ, ANT
+- **CPI / Fed-odds:** 12.2% cut (12.2% on reports that Alphabet (GOOGL)’s Google plans to cut)
+- **Named leaders:** NVDA, AVGO, GOOGL, MU, AMD, ANT, UNH, GPN, GIS, ZS, CRWD
 - **Next-session calendar:** housing no · retail no · Fed no
 - **Earnings slate:** —
 - **Geo / grain:** —
 
 ## Narrative
 
-**US stocks closed sharply lower for a sixth straight session as broad tech and consumer weakness outweighed a record Anthropic IPO ahead of key consumer sentiment data**
+**US stocks closed sharply lower as AI-led selloff and Nvidia accounting probe pushed S&P 500 and Dow into correction territory and erased Nasdaq’s 2026 gains**
 
-- The S&P 500 ($SPX) fell 2.02% to 7,175.83, the Dow Jones Industrial Average ($DJI) dropped 2.19% (1,101 points) to 49,097.06, and the Nasdaq Composite ($COMP) lost 2.25% to 23,879.20, with more than 90% of S&P 500 ($SPX) components declining.
-- Anthropic (ANT) completed the largest IPO on record, raising over $81 billion at $83 per share and closing up 17% for a valuation above roughly $1.6 trillion, though the stock slipped in extended trading.
-- Nvidia (NVDA) declined 3.3% after agreeing to invest about $10 billion in Anthropic through the AI company’s $26 billion private placement, as investors also focused on CEO Jensen Huang’s resignation.
-- AMD (AMD) dropped about 7.7% after a Hunterbrook short report cited potential China-related risks that could invite U.S. scrutiny, a claim the company denied.
-- Insmed (INSM) surged 20.6% after Reuters reported that Sanofi (SNY) is weighing an acquisition of the company.
-- Palo Alto Networks (PANW) gained about 6.4% after beating earnings expectations, raising its FY27 forecast, and announcing a $4.5 billion AI-focused acquisition.
-- Williams-Sonoma (WSM) sank 15.2% after missing quarterly estimates, while Walmart (WMT) fell after raising its FY27 sales, profit and EPS outlook.
-- Energy was the only S&P 500 ($SPX) sector to rise, up 0.14%, while industrials fell 2.61% and consumer discretionary and technology stocks lagged the broader market.
-- In after-hours trading, Intuit (INTU) dropped about 10% after beating Q1 estimates but cutting its FY27 Credit Karma outlook, while Elastic (ESTC) reported a Q2 beat and investors looked ahead to Friday results from BJ’s Wholesale Club (BJ) and University of Michigan consumer sentiment data.
+- The S&P 500 ($SPX) fell 3.70% to 6,910.39, the Dow Jones Industrial Average ($DJI) lost 1.93% to 48,147.33, and the Nasdaq Composite ($COMP) dropped 5.28% to 22,617.73, with the S&P logging a seventh straight decline.
+- Nasdaq’s drop erased its 2026 gains and turned the index negative for the year.
+- Ten of eleven S&P 500 ($SPX) sectors declined, led by technology down over 7%, while the Philadelphia Semiconductor Index slid 10.73%.
+- Nvidia (NVDA) sank 14.01% to $125.53 after a Reuters report that SEC enforcement staff are examining the company’s accounting practices.
+- Broadcom (AVGO) fell 12.2% on reports that Alphabet (GOOGL)’s Google plans to cut its AI chip orders for next year.
+- Micron Technology (MU) lost 13.9%, AMD (AMD) dropped 13.3%, and Anthropic (ANT) shares declined about 8.5% in their first full trading day after the largest IPO on record, deepening the AI-led selloff.
+- UnitedHealth Group (UNH) gained 2.83% after a TD Cowen upgrade.
+- Global Payments (GPN) climbed about 10% on reports that its largest shareholder GTCR is exploring a takeover of the company.
+- General Mills (GIS) rose about 3.7% as investors rotated into defensive groups including consumer staples, healthcare, and utilities.
+- In extended trading, Zscaler (ZS) jumped roughly 16% after Bloomberg and Reuters reported that CrowdStrike (CRWD) is in talks to acquire the cybersecurity firm.
