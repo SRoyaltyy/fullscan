@@ -1,0 +1,111 @@
+{
+  "date": "2026-11-20",
+  "generated_at": "2026-11-20T21:14:52.586768-05:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": false,
+  "clock_use": "next_open",
+  "clock_legal_for": "2026-11-23",
+  "capture_slot": "close",
+  "clock_rule": "Live post-close answer-key (~16:05 ET). Always next_open for the NEXT session (2026-11-23) — never same_morning. Writes *_finviz_market_digest_close.* only. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest_close",
+  "represents": "Finviz homepage post-close answer-key. clock_use is always next_open; clock_legal_for is the next NYSE session. Lives at *_finviz_market_digest_close.*. Does not replace the same_morning warm-up file. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks closed sharply lower as AI-led selloff and Nvidia accounting probe pushed S&P 500 and Dow into correction territory and erased Nasdaq’s 2026 gains",
+  "raw_text": "- The S&P 500 ($SPX) fell 3.70% to 6,910.39, the Dow Jones Industrial Average ($DJI) lost 1.93% to 48,147.33, and the Nasdaq Composite ($COMP) dropped 5.28% to 22,617.73, with the S&P logging a seventh straight decline.\n- Nasdaq’s drop erased its 2026 gains and turned the index negative for the year.\n- Ten of eleven S&P 500 ($SPX) sectors declined, led by technology down over 7%, while the Philadelphia Semiconductor Index slid 10.73%.\n- Nvidia (NVDA) sank 14.01% to $125.53 after a Reuters report that SEC enforcement staff are examining the company’s accounting practices.\n- Broadcom (AVGO) fell 12.2% on reports that Alphabet (GOOGL)’s Google plans to cut its AI chip orders for next year.\n- Micron Technology (MU) lost 13.9%, AMD (AMD) dropped 13.3%, and Anthropic (ANT) shares declined about 8.5% in their first full trading day after the largest IPO on record, deepening the AI-led selloff.\n- UnitedHealth Group (UNH) gained 2.83% after a TD Cowen upgrade.\n- Global Payments (GPN) climbed about 10% on reports that its largest shareholder GTCR is exploring a takeover of the company.\n- General Mills (GIS) rose about 3.7% as investors rotated into defensive groups including consumer staples, healthcare, and utilities.\n- In extended trading, Zscaler (ZS) jumped roughly 16% after Bloomberg and Reuters reported that CrowdStrike (CRWD) is in talks to acquire the cybersecurity firm.",
+  "raw_summary_md": "- The **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) fell 3.70% to 6,910.39, the **Dow Jones Industrial Average** ([$DJI](https://finviz.com/index/DJI?p=d)) lost 1.93% to 48,147.33, and the **Nasdaq Composite** ([$COMP](https://finviz.com/index/COMP?p=d)) dropped 5.28% to 22,617.73, with the S&P logging a **seventh straight decline**.\n- Nasdaq’s drop erased its 2026 gains and turned the index **negative for the year**.\n- Ten of eleven **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) sectors declined, led by technology down over 7%, while the Philadelphia Semiconductor Index slid **10.73%**.\n- **Nvidia** ([NVDA](https://finviz.com/quote?t=NVDA)) sank **14.01%** to $125.53 after a Reuters report that SEC enforcement staff are examining the company’s **accounting practices**.\n- **Broadcom** ([AVGO](https://finviz.com/quote?t=AVGO)) fell **12.2%** on reports that **Alphabet** ([GOOGL](https://finviz.com/quote?t=GOOGL))’s Google plans to cut its **AI chip orders** for next year.\n- **Micron Technology** ([MU](https://finviz.com/quote?t=MU)) lost 13.9%, **AMD** ([AMD](https://finviz.com/quote?t=AMD)) dropped 13.3%, and **Anthropic** ([ANT](https://finviz.com/quote?t=ANT)) shares declined about 8.5% in their first full trading day after the largest IPO on record, deepening the **AI-led selloff**.\n- **UnitedHealth Group** ([UNH](https://finviz.com/quote?t=UNH)) gained 2.83% after a **TD Cowen upgrade**.\n- **Global Payments** ([GPN](https://finviz.com/quote?t=GPN)) climbed about **10%** on reports that its largest shareholder GTCR is **exploring a takeover** of the company.\n- **General Mills** ([GIS](https://finviz.com/quote?t=GIS)) rose about 3.7% as investors rotated into **defensive groups** including consumer staples, healthcare, and utilities.\n- In extended trading, **Zscaler** ([ZS](https://finviz.com/quote?t=ZS)) jumped roughly **16%** after Bloomberg and Reuters reported that **CrowdStrike** ([CRWD](https://finviz.com/quote?t=CRWD)) is **in talks to acquire** the cybersecurity firm.",
+  "index_moves": [
+    {
+      "name": "S&P 500",
+      "code": "SPX",
+      "change_pct": -3.7,
+      "verb": "fell"
+    },
+    {
+      "name": "Dow Jones Industrial Average",
+      "code": "DJI",
+      "change_pct": -1.93,
+      "verb": "lost"
+    },
+    {
+      "name": "Nasdaq Composite",
+      "code": "COMP",
+      "change_pct": -5.28,
+      "verb": "dropped"
+    }
+  ],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": {
+    "pct": 12.2,
+    "action": "cut",
+    "text": "12.2% on reports that Alphabet (GOOGL)’s Google plans to cut"
+  },
+  "named_tickers": [
+    "NVDA",
+    "AVGO",
+    "GOOGL",
+    "MU",
+    "AMD",
+    "ANT",
+    "UNH",
+    "GPN",
+    "GIS",
+    "ZS",
+    "CRWD"
+  ],
+  "named_leaders": [
+    "NVDA",
+    "AVGO",
+    "GOOGL",
+    "MU",
+    "AMD",
+    "ANT",
+    "UNH",
+    "GPN",
+    "GIS",
+    "ZS",
+    "CRWD"
+  ],
+  "calendar": [],
+  "prior_close": {
+    "spx": -3.7,
+    "nasdaq": -5.28,
+    "dow": -1.93
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": {
+      "pct": 12.2,
+      "action": "cut",
+      "text": "12.2% on reports that Alphabet (GOOGL)’s Google plans to cut"
+    }
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": false,
+    "bullets": [],
+    "text": ""
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 350392,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-11-20T20:36:48.293",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "bad"
+}
