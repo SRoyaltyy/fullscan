@@ -1,8 +1,8 @@
 {
   "date": "2026-11-20",
-  "generated_at": "2026-11-20T21:14:53.522144-05:00",
+  "generated_at": "2026-11-21T03:22:49.525503-05:00",
   "overall": "PARTIAL",
-  "ranker_ready": false,
+  "ranker_ready": true,
   "counts": {
     "ok": 6,
     "partial": 1,
@@ -103,31 +103,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "map_heat",
-      "title": "Map heat morning overlay",
-      "date": "2026-11-20",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-20T05:06:12.485196-05:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-11-20_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 272609,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-11-20_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 18611,
-          "preview": "# MAP HEAT \u2014 2026-11-20\nExport `finviz_2026-11-20.csv` \u00b7 11616 names \u00b7 generated 2026-11-20T05:06:12.413798-05:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-11-20\nExport `finviz_2026-11-20.csv` \u00b7 11616 names \u00b7 generated 2026-11-20T05:06:12.413798-05:00"
-    },
     {
       "key": "weather",
       "title": "Weather / regime",
@@ -407,6 +382,52 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-11-20\n**Generated:** 2026-11-20T21:14:52.586768-05:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed sharply lower as AI-led selloff and Nvidia accounting probe pushed S&P 500 and Dow into correction territory and erased Nasdaq\u2019s 2026 gains\n**Prior close:** SPX -3.70%  Nasdaq -5.28%  Dow -1.93%\n**SPX:** -3.70%  **Nasdaq:** -5.28%  **Dow:** -1.93%\n**Oil:** \u2014\n**CPI/Fed:** 12.2% cut (12.2% on reports that Alphabet (GOOGL)\u2019s Google plans to cut)\n**Leaders:** NVDA, AVGO, GOOGL, MU, AMD, ANT, UNH, GPN, GIS, ZS, CRWD\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-11-23\n**Clock use:** `next_open`"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-11-20",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-21T03:22:48.281373-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-20_finviz_digest.after-freeze-1.json",
+          "ok": true,
+          "reason": "",
+          "size": 97179,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-11-20_finviz_digest.after-freeze-1.md",
+          "ok": true,
+          "reason": "",
+          "size": 10907,
+          "preview": "# Finviz Daily Digest \u2014 2026-11-20\n_Generated 2026-11-21T03:22:47.624797-05:00 \u00b7 export=data/exports/finviz_2026-11-20.csv \u00b7 ticker digests=758 \u00b7 high-signal=147_"
+        },
+        {
+          "path": "data/exports/finviz_2026-11-20.after-freeze-1.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11085735,
+          "preview": "11772 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11085735,
+          "preview": "11772 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
+        },
+        {
+          "path": "01_daily/news/2026-11-20_finviz_digest_preopen.json",
+          "ok": true,
+          "reason": "",
+          "size": 97326,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-11-20\n_Generated 2026-11-21T03:22:47.624797-05:00 \u00b7 export=data/exports/finviz_2026-11-20.csv \u00b7 ticker digests=758 \u00b7 high-signal=147_ \u00b7 11772 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\" \u00b7 11772 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
