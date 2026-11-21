@@ -1,10 +1,10 @@
 [
   {
-    "title": "H.R. 11130 (IH) - To authorize certain death-related commemorative uses of the Peace Corps seal, emblem, logo, and name.",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11130ih",
-    "native_id": "BILLS-119hr11130ih",
-    "published_at": "2026-11-21T05:52:03+00:00",
-    "published_raw": "Sat, 21 Nov 2026 05:52:03 +0000",
+    "title": "H.R. 11037 (IH) - Public Archives Resiliency Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11037ih",
+    "native_id": "BILLS-119hr11037ih",
+    "published_at": "2026-11-21T08:51:00+00:00",
+    "published_raw": "Sat, 21 Nov 2026 08:51:00 +0000",
     "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
     "source_metadata": {
       "document_type": "bill",
@@ -16,19 +16,19 @@
       "family": "legislative_and_presidential_documents"
     },
     "primary_source_id": "us-govinfo-bills",
-    "n": 11820,
-    "first_seen": "2026-11-21T08:18:38.026359+00:00",
-    "last_seen": "2026-11-21T08:18:38.026359+00:00",
+    "n": 11851,
+    "first_seen": "2026-11-21T20:09:32.783944+00:00",
+    "last_seen": "2026-11-21T20:09:32.783944+00:00",
     "source_ids": [
       "us-govinfo-bills"
     ]
   },
   {
-    "title": "H.R. 6213 (RH) - Heat Workforce Standards Act of 2026",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr6213rh",
-    "native_id": "BILLS-119hr6213rh",
-    "published_at": "2026-11-21T05:52:03+00:00",
-    "published_raw": "Sat, 21 Nov 2026 05:52:03 +0000",
+    "title": "H.R. 5132 (IH) - Crooked River Ranch Fire Protection Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-114hr5132ih",
+    "native_id": "BILLS-114hr5132ih",
+    "published_at": "2026-11-21T15:58:00+00:00",
+    "published_raw": "Sat, 21 Nov 2026 15:58:00 +0000",
     "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
     "source_metadata": {
       "document_type": "bill",
@@ -40,708 +40,347 @@
       "family": "legislative_and_presidential_documents"
     },
     "primary_source_id": "us-govinfo-bills",
-    "n": 11821,
-    "first_seen": "2026-11-21T08:18:38.026359+00:00",
-    "last_seen": "2026-11-21T08:18:38.026359+00:00",
+    "n": 11852,
+    "first_seen": "2026-11-21T20:09:32.783944+00:00",
+    "last_seen": "2026-11-21T20:09:32.783944+00:00",
     "source_ids": [
       "us-govinfo-bills"
     ]
   },
   {
-    "title": "H.R. 11058 (IH) - Families’ Option to Choose Unplugged Schooling Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11058ih",
-    "native_id": "BILLS-119hr11058ih",
-    "published_at": "2026-11-21T05:53:03+00:00",
-    "published_raw": "Sat, 21 Nov 2026 05:53:03 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "title": "S. Rept. 119-162",
+    "url": "https://www.govinfo.gov/app/details/CRPT-119srpt162",
+    "native_id": "CRPT-119srpt162",
+    "published_at": "2026-11-21T11:06:00+00:00",
+    "published_raw": "Sat, 21 Nov 2026 11:06:00 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
     "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
+      "document_type": "committee_report",
+      "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
+      "issuer": "Congressional Reports",
       "jurisdiction": "US",
       "family": "legislative_and_presidential_documents"
     },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 11822,
-    "first_seen": "2026-11-21T08:18:38.026359+00:00",
-    "last_seen": "2026-11-21T08:18:38.026359+00:00",
+    "primary_source_id": "us-govinfo-crpt",
+    "n": 11853,
+    "first_seen": "2026-11-21T20:09:32.783944+00:00",
+    "last_seen": "2026-11-21T20:09:32.783944+00:00",
     "source_ids": [
-      "us-govinfo-bills"
+      "us-govinfo-crpt"
     ]
   },
   {
-    "title": "H.R. 11067 (IH) - To improve and promote commercial exports of defense articles and defense services by small businesses.",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11067ih",
-    "native_id": "BILLS-119hr11067ih",
-    "published_at": "2026-11-21T05:53:03+00:00",
-    "published_raw": "Sat, 21 Nov 2026 05:53:03 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "title": "S. Rept. 119-160",
+    "url": "https://www.govinfo.gov/app/details/CRPT-119srpt160",
+    "native_id": "CRPT-119srpt160",
+    "published_at": "2026-11-21T11:06:00+00:00",
+    "published_raw": "Sat, 21 Nov 2026 11:06:00 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
     "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
+      "document_type": "committee_report",
+      "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
+      "issuer": "Congressional Reports",
       "jurisdiction": "US",
       "family": "legislative_and_presidential_documents"
     },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 11823,
-    "first_seen": "2026-11-21T08:18:38.026359+00:00",
-    "last_seen": "2026-11-21T08:18:38.026359+00:00",
+    "primary_source_id": "us-govinfo-crpt",
+    "n": 11854,
+    "first_seen": "2026-11-21T20:09:32.783944+00:00",
+    "last_seen": "2026-11-21T20:09:32.783944+00:00",
     "source_ids": [
-      "us-govinfo-bills"
+      "us-govinfo-crpt"
     ]
   },
   {
-    "title": "H.R. 2347 (EAS) - Bipartisan American Affordability and Jobs Act of 2026",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr2347eas",
-    "native_id": "BILLS-119hr2347eas",
-    "published_at": "2026-11-21T05:54:00+00:00",
-    "published_raw": "Sat, 21 Nov 2026 05:54:00 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "title": "S. Rept. 119-164",
+    "url": "https://www.govinfo.gov/app/details/CRPT-119srpt164",
+    "native_id": "CRPT-119srpt164",
+    "published_at": "2026-11-21T12:16:00+00:00",
+    "published_raw": "Sat, 21 Nov 2026 12:16:00 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
     "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
+      "document_type": "committee_report",
+      "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
+      "issuer": "Congressional Reports",
       "jurisdiction": "US",
       "family": "legislative_and_presidential_documents"
     },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 11824,
-    "first_seen": "2026-11-21T08:18:38.026359+00:00",
-    "last_seen": "2026-11-21T08:18:38.026359+00:00",
+    "primary_source_id": "us-govinfo-crpt",
+    "n": 11855,
+    "first_seen": "2026-11-21T20:09:32.783944+00:00",
+    "last_seen": "2026-11-21T20:09:32.783944+00:00",
     "source_ids": [
-      "us-govinfo-bills"
+      "us-govinfo-crpt"
     ]
   },
   {
-    "title": "NATIONAL ADOPTION MONTH, 2026",
-    "url": "https://www.whitehouse.gov/presidential-actions/2026/11/national-adoption-month-2026/",
-    "native_id": "https://www.whitehouse.gov/?p=55072",
-    "published_at": "2026-11-21T02:31:38+00:00",
-    "published_raw": "Sat, 21 Nov 2026 02:31:38 +0000",
-    "summary": "From the moment a child is conceived, they are a gift from God, bringing hope, love, and a future filled with promise into the world. For countless children across our Nation, adoption provides the gift of a loving family and nurturing home where they can feel safe, supported, and encouraged to pursue their own unique […] The post NATIONAL ADOPTION MONTH, 2026 appeared first on The White House .",
+    "title": "H. Rept. 119-870",
+    "url": "https://www.govinfo.gov/app/details/CRPT-119hrpt870",
+    "native_id": "CRPT-119hrpt870",
+    "published_at": "2026-11-21T12:43:00+00:00",
+    "published_raw": "Sat, 21 Nov 2026 12:43:00 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
     "source_metadata": {
-      "document_type": "official_announcement",
+      "document_type": "committee_report",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "White House presidential actions",
+      "issuer": "Congressional Reports",
       "jurisdiction": "US",
-      "family": "executive_instruments"
+      "family": "legislative_and_presidential_documents"
     },
-    "primary_source_id": "us-white-house-0691096d16",
-    "n": 11825,
-    "first_seen": "2026-11-21T08:18:38.026359+00:00",
-    "last_seen": "2026-11-21T08:18:38.026359+00:00",
+    "primary_source_id": "us-govinfo-crpt",
+    "n": 11856,
+    "first_seen": "2026-11-21T20:09:32.783944+00:00",
+    "last_seen": "2026-11-21T20:09:32.783944+00:00",
     "source_ids": [
-      "us-white-house-0691096d16"
+      "us-govinfo-crpt"
     ]
   },
   {
-    "title": "PROTECTING THE EXECUTIVE’S PRIVILEGES AND ENHANCING EFFICIENCIES IN FEDERAL CONTRACTING",
-    "url": "https://www.whitehouse.gov/presidential-actions/2026/11/protecting-the-executives-privileges-and-enhancing-efficiencies-in-federal-contracting/",
-    "native_id": "https://www.whitehouse.gov/?p=55074",
-    "published_at": "2026-11-21T02:31:05+00:00",
-    "published_raw": "Sat, 21 Nov 2026 02:31:05 +0000",
-    "summary": "By the authority vested in me as President by the Constitution and the laws of the United States of America, including the Federal Property and Administrative Services Act (40 U.S.C. 101 et seq.) and the common law, it is hereby ordered: Section 1. Purpose and Policy. In order to protect and serve the American people, […] The post PROTECTING THE EXECUTIVE’S PRIVILEGES AND ENHANCING EFFICIENCIES IN FEDERAL CONTRACTING appeared first on The White House .",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "White House presidential actions",
-      "jurisdiction": "US",
-      "family": "executive_instruments"
-    },
-    "primary_source_id": "us-white-house-0691096d16",
-    "n": 11826,
-    "first_seen": "2026-11-21T08:18:38.026359+00:00",
-    "last_seen": "2026-11-21T08:18:38.026359+00:00",
-    "source_ids": [
-      "us-white-house-0691096d16"
-    ]
-  },
-  {
-    "title": "Attorney General Blanche Honors Goodyear Police Officer Dakota Berry for Distinguished Service",
-    "url": "https://www.justice.gov/usao-az/pr/attorney-general-blanche-honors-goodyear-police-officer-dakota-berry-distinguished",
-    "native_id": "https://www.justice.gov/usao-az/pr/attorney-general-blanche-honors-goodyear-police-officer-dakota-berry-distinguished",
-    "published_at": "2026-11-20T12:00:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 12:00:00 +0000",
-    "summary": "WASHINGTON – Goodyear Police Officer Dakota Berry was among the law enforcement officers from around the nation who were selected to be honored by U.S. Attorney General Todd Blanche today for Distinguished Service in Policing.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 11827,
-    "first_seen": "2026-11-21T08:18:38.026359+00:00",
-    "last_seen": "2026-11-21T08:18:38.026359+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "Federal Prosecutors Add More Than 560 Immigration Cases Through First Half of November in Western District of Texas",
-    "url": "https://www.justice.gov/usao-wdtx/pr/federal-prosecutors-add-more-560-immigration-cases-through-first-half-november-western",
-    "native_id": "https://www.justice.gov/usao-wdtx/pr/federal-prosecutors-add-more-560-immigration-cases-through-first-half-november-western",
-    "published_at": "2026-11-20T12:00:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 12:00:00 +0000",
-    "summary": "Federal prosecutors in the Western District of Texas filed 568 new immigration and immigration-related criminal cases from Nov. 6 through Nov. 20",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 11828,
-    "first_seen": "2026-11-21T08:18:38.026359+00:00",
-    "last_seen": "2026-11-21T08:18:38.026359+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "Federal grand jury indicts Albion man for defrauding the VA out of hundreds of thousands of dollars",
-    "url": "https://www.justice.gov/usao-wdny/pr/federal-grand-jury-indicts-albion-man-defrauding-va-out-hundreds-thousands-dollars",
-    "native_id": "https://www.justice.gov/usao-wdny/pr/federal-grand-jury-indicts-albion-man-defrauding-va-out-hundreds-thousands-dollars",
-    "published_at": "2026-11-20T12:00:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 12:00:00 +0000",
-    "summary": "U.S. Attorney Michael DiGiacomo announced today that a federal grand jury has returned an indictment charging Timmie L. Haynes, 64, of Albion, NY, with five counts of wire fraud, which carries a maximum penalty of 20 years in prison. This action is part of the Trump Administration’s Task Force to Eliminate Fraud.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 11829,
-    "first_seen": "2026-11-21T08:18:38.026359+00:00",
-    "last_seen": "2026-11-21T08:18:38.026359+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "District of Arizona Charges 314 Individuals for Immigration-Related Criminal Conduct this Week",
-    "url": "https://www.justice.gov/usao-az/pr/district-arizona-charges-314-individuals-immigration-related-criminal-conduct-week-1",
-    "native_id": "https://www.justice.gov/usao-az/pr/district-arizona-charges-314-individuals-immigration-related-criminal-conduct-week-1",
-    "published_at": "2026-11-20T12:00:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 12:00:00 +0000",
-    "summary": "PHOENIX, Ariz. – During the week of enforcement operations from Nov. 14 through Nov. 20, 2026, the U.S. Attorney’s Office for the District of Arizona brought immigration-related criminal charges against 314 individuals.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 11830,
-    "first_seen": "2026-11-21T08:18:38.026359+00:00",
-    "last_seen": "2026-11-21T08:18:38.026359+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "Hartford Man Sentenced to 6 Years in Federal Prison for Illegal Gun Possession",
-    "url": "https://www.justice.gov/usao-ct/pr/hartford-man-sentenced-6-years-federal-prison-illegal-gun-possession",
-    "native_id": "https://www.justice.gov/usao-ct/pr/hartford-man-sentenced-6-years-federal-prison-illegal-gun-possession",
-    "published_at": "2026-11-20T12:00:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 12:00:00 +0000",
-    "summary": "LAWRENCE SMALL, 33, of Hartford, was sentenced today by U.S. District Judge Kari A. Dooley in Bridgeport to 72 months of imprisonment and three years of supervised release for unlawfully possessing a firearm.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 11831,
-    "first_seen": "2026-11-21T08:18:38.026359+00:00",
-    "last_seen": "2026-11-21T08:18:38.026359+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "Illegal alien charged with falsely claiming U.S. citizenship at DFW Airport",
-    "url": "https://www.justice.gov/usao-ndtx/pr/illegal-alien-charged-falsely-claiming-us-citizenship-dfw-airport",
-    "native_id": "https://www.justice.gov/usao-ndtx/pr/illegal-alien-charged-falsely-claiming-us-citizenship-dfw-airport",
-    "published_at": "2026-11-20T12:00:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 12:00:00 +0000",
-    "summary": "United States Attorney for the Northern District of Texas Ryan Raybould announced that an illegal alien from Mexico has been indicted for falsely claiming to be a U.S. Citizen after allegedly attempting to enter the country using a fraudulently obtained U.S. passport at Dallas Fort Worth International Airport.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 11832,
-    "first_seen": "2026-11-21T08:18:38.026359+00:00",
-    "last_seen": "2026-11-21T08:18:38.026359+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "Illinois Man Charged with Possession and Transportation of Child Pornography",
-    "url": "https://www.justice.gov/usao-nj/pr/illinois-man-charged-possession-and-transportation-child-pornography",
-    "native_id": "https://www.justice.gov/usao-nj/pr/illinois-man-charged-possession-and-transportation-child-pornography",
-    "published_at": "2026-11-20T12:00:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 12:00:00 +0000",
-    "summary": "An Illinois man was charged with possessing and transporting child sexual abuse material that had been generated using Super Intelligence (SI).",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 11833,
-    "first_seen": "2026-11-21T08:18:38.026359+00:00",
-    "last_seen": "2026-11-21T08:18:38.026359+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "LOCAL OKANAGAN COUNTY DEPUTY HONORED NATIONALLY FOR HIS EXCEPTIONAL BRAVERY",
-    "url": "https://www.justice.gov/usao-edwa/pr/local-okanagan-county-deputy-honored-nationally-his-exceptional-bravery",
-    "native_id": "https://www.justice.gov/usao-edwa/pr/local-okanagan-county-deputy-honored-nationally-his-exceptional-bravery",
-    "published_at": "2026-11-20T12:00:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 12:00:00 +0000",
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 11834,
-    "first_seen": "2026-11-21T08:18:38.026359+00:00",
-    "last_seen": "2026-11-21T08:18:38.026359+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "New Britain Man Admits Role in Firearms Trafficking Conspiracy",
-    "url": "https://www.justice.gov/usao-ct/pr/new-britain-man-admits-role-firearms-trafficking-conspiracy",
-    "native_id": "https://www.justice.gov/usao-ct/pr/new-britain-man-admits-role-firearms-trafficking-conspiracy",
-    "published_at": "2026-11-20T12:00:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 12:00:00 +0000",
-    "summary": "DEMONTE HOLLEY, 38, of New Britain, pleaded guilty yesterday before U.S. District Judge Kari A. Dooley in Bridgeport to a firearms trafficking offense.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 11835,
-    "first_seen": "2026-11-21T08:18:38.026359+00:00",
-    "last_seen": "2026-11-21T08:18:38.026359+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "Albuquerque Man Charged with Diverting Estate Funds for Personal Use",
-    "url": "https://www.justice.gov/usao-nm/pr/albuquerque-man-charged-diverting-estate-funds-personal-use",
-    "native_id": "https://www.justice.gov/usao-nm/pr/albuquerque-man-charged-diverting-estate-funds-personal-use",
-    "published_at": "2026-11-20T12:00:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 12:00:00 +0000",
-    "summary": "James Joseph Owens has been indicted for allegedly transferring estate and trust funds into accounts under his control and using the proceeds for his personal benefit.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 11836,
-    "first_seen": "2026-11-21T08:18:38.026359+00:00",
-    "last_seen": "2026-11-21T08:18:38.026359+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "Cheyenne Resident Charged with Wire Fraud and Money Laundering in Connection with $270,000 Fraud Scheme",
-    "url": "https://www.justice.gov/usao-wy/pr/cheyenne-resident-charged-wire-fraud-and-money-laundering-connection-270000-fraud-scheme",
-    "native_id": "https://www.justice.gov/usao-wy/pr/cheyenne-resident-charged-wire-fraud-and-money-laundering-connection-270000-fraud-scheme",
-    "published_at": "2026-11-20T12:00:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 12:00:00 +0000",
-    "summary": "CHEYENNE, Wyo. – A federal indictment has been unsealed charging Ariyan Devonte Trawick , of Cheyenne, in connection with a scheme to defraud three victims between March and August 2024.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 11837,
-    "first_seen": "2026-11-21T08:18:38.026359+00:00",
-    "last_seen": "2026-11-21T08:18:38.026359+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "Former Middle School Teacher Pleads Guilty to Money Laundering",
-    "url": "https://www.justice.gov/usao-wdtx/pr/former-middle-school-teacher-pleads-guilty-money-laundering",
-    "native_id": "https://www.justice.gov/usao-wdtx/pr/former-middle-school-teacher-pleads-guilty-money-laundering",
-    "published_at": "2026-11-20T12:00:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 12:00:00 +0000",
-    "summary": "Jeremy Jarod Jackson pleaded guilty in federal court for his scheme to launder more than $500,000 of stolen federal tax refunds",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 11838,
-    "first_seen": "2026-11-21T08:18:38.026359+00:00",
-    "last_seen": "2026-11-21T08:18:38.026359+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "Grand Jury for the District of Nebraska - November 2026",
-    "url": "https://www.justice.gov/usao-ne/pr/grand-jury-district-nebraska-november-2026",
-    "native_id": "https://www.justice.gov/usao-ne/pr/grand-jury-district-nebraska-november-2026",
-    "published_at": "2026-11-20T12:00:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 12:00:00 +0000",
-    "summary": "The federal Grand Jury for the District of Nebraska has returned 15 unsealed Indictments charging 15 defendants.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 11839,
-    "first_seen": "2026-11-21T08:18:38.026359+00:00",
-    "last_seen": "2026-11-21T08:18:38.026359+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "Nigerian Man Sentenced to 24 Months for Aggravated Identity Theft",
-    "url": "https://www.justice.gov/usao-ne/pr/nigerian-man-sentenced-24-months-aggravated-identity-theft",
-    "native_id": "https://www.justice.gov/usao-ne/pr/nigerian-man-sentenced-24-months-aggravated-identity-theft",
-    "published_at": "2026-11-20T12:00:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 12:00:00 +0000",
-    "summary": "Chukwuebuka Madueke Arinze, 38, of Nigeria, was sentenced on October 30, 2026, in federal court in Omaha, Nebraska, for aggravated identity theft.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 11840,
-    "first_seen": "2026-11-21T08:18:38.026359+00:00",
-    "last_seen": "2026-11-21T08:18:38.026359+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "DOJ Scores Key Victory in Precedent-Setting Military Attorney Licensing Case",
-    "url": "https://www.justice.gov/opa/pr/doj-scores-key-victory-precedent-setting-military-attorney-licensing-case",
-    "native_id": "https://www.justice.gov/opa/pr/doj-scores-key-victory-precedent-setting-military-attorney-licensing-case",
-    "published_at": "2026-11-20T12:00:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 12:00:00 +0000",
-    "summary": "The Justice Department has defeated New Mexico’s attempt to dismiss a landmark case involving the licensing of servicemember and military spouse attorneys. On Nov. 19, Judge Kea Riggs of the U.S. District for the District of New Mexico denied motions to dismiss filed by the New Mexico Supreme Court and the New Mexico Board of Bar Examiners in the Department’s first-ever lawsuit to enforce the professional license portability provisions of the Servicemembers Civil Relief Act (SCRA).",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice — RSS Feed",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-e05071794d",
-    "n": 11841,
-    "first_seen": "2026-11-21T08:18:38.026359+00:00",
-    "last_seen": "2026-11-21T08:18:38.026359+00:00",
-    "source_ids": [
-      "us-doj-e05071794d"
-    ]
-  },
-  {
-    "title": "Federal Reserve announces College Fed Challenge winners",
-    "url": "https://www.federalreserve.gov/newsevents/pressreleases/other20261120b.htm",
-    "native_id": "https://www.federalreserve.gov/newsevents/pressreleases/other20261120b.htm",
-    "published_at": "2026-11-20T21:15:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 21:15:00 GMT",
-    "summary": "Federal Reserve announces College Fed Challenge winners",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Reserve Board — All Press Releases",
-      "jurisdiction": "US",
-      "family": "monetary_operations"
-    },
-    "primary_source_id": "us-fed-97656cefc7",
-    "n": 11842,
-    "first_seen": "2026-11-21T08:18:38.026359+00:00",
-    "last_seen": "2026-11-21T08:18:38.026359+00:00",
-    "source_ids": [
-      "us-fed-1555c8e0e5",
-      "us-fed-97656cefc7"
-    ]
-  },
-  {
-    "title": "Greenwich Rx Issues Voluntary Nationwide Recall of Compounded Sterile Products Due to Lack of Sterility Assurance",
-    "url": "http://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/greenwich-rx-issues-voluntary-nationwide-recall-compounded-sterile-products-due-lack-sterility",
-    "native_id": "http://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/greenwich-rx-issues-voluntary-nationwide-recall-compounded-sterile-products-due-lack-sterility",
-    "published_at": "2026-11-20T23:30:08+00:00",
-    "published_raw": "Fri, 20 Nov 2026 18:30:08 EST",
-    "summary": "FOR IMMEDIATE RELEASE - Tomball, Texas – November 20, 2026 – Greenwich Rx, a 503A compounding pharmacy, is voluntarily recalling specific lots of compounded sterile products that remain within their beyond-use dates to the consumer level, including some products that were compounded by Greenwich Rx",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Drugs",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-5696b24295",
-    "n": 11843,
-    "first_seen": "2026-11-21T08:18:38.026359+00:00",
-    "last_seen": "2026-11-21T08:18:38.026359+00:00",
-    "source_ids": [
-      "us-fda-5696b24295"
-    ]
-  },
-  {
-    "title": "Breckenridge Pharmaceutical, Inc. Issues Voluntary Nationwide Consumer-Level Recall of One Lot of Propranolol Hydrochloride Extended-Release Capsules, USP, 60 mg, Due to Potential Metal Contamination",
-    "url": "http://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/breckenridge-pharmaceutical-inc-issues-voluntary-nationwide-consumer-level-recall-one-lot",
-    "native_id": "http://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/breckenridge-pharmaceutical-inc-issues-voluntary-nationwide-consumer-level-recall-one-lot",
-    "published_at": "2026-11-20T19:05:14+00:00",
-    "published_raw": "Fri, 20 Nov 2026 14:05:14 EST",
-    "summary": "November 16, 2026— Breckenridge Pharmaceutical, Inc. (Breckenridge) is voluntarily recalling to the consumer level one lot of Propranolol Hydrochloride Extended-Release Capsules, USP, 60 mg, manufactured by Adare Pharma Solutions, due to potential metal contamination.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Drugs",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-5696b24295",
-    "n": 11844,
-    "first_seen": "2026-11-21T08:18:38.026359+00:00",
-    "last_seen": "2026-11-21T08:18:38.026359+00:00",
-    "source_ids": [
-      "us-fda-5696b24295"
-    ]
-  },
-  {
-    "title": "First Generic Drug Approvals",
-    "url": "http://www.fda.gov/drugs/drug-and-biologic-approval-and-ind-activity-reports/first-generic-drug-approvals",
-    "native_id": "http://www.fda.gov/drugs/drug-and-biologic-approval-and-ind-activity-reports/first-generic-drug-approvals",
-    "published_at": "2026-11-20T17:12:45+00:00",
-    "published_raw": "Fri, 20 Nov 2026 12:12:45 EST",
-    "summary": "Each year, FDA’s Center for Drug Evaluation and Research (CDER) approves a wide range of new drug products. FDA provides the scientific and regulatory advice needed to bring safe, effective, high-quality generic alternatives to market, which in turn creates more affordable treatment options for pati",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Drugs",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-5696b24295",
-    "n": 11845,
-    "first_seen": "2026-11-21T08:18:38.026359+00:00",
-    "last_seen": "2026-11-21T08:18:38.026359+00:00",
-    "source_ids": [
-      "us-fda-5696b24295"
-    ]
-  },
-  {
-    "title": "Office of Infectious Diseases Research Activities",
-    "url": "http://www.fda.gov/about-fda/center-drug-evaluation-and-research-cder/office-infectious-diseases-research-activities",
-    "native_id": "http://www.fda.gov/about-fda/center-drug-evaluation-and-research-cder/office-infectious-diseases-research-activities",
-    "published_at": "2026-11-20T17:12:05+00:00",
-    "published_raw": "Fri, 20 Nov 2026 12:12:05 EST",
-    "summary": "Overview of research needs, requests for information (RFIs), public workshops/meetings, opportunities for collaboration (this applies to RFI), notable guidances related to regulatory science, externally awarded research studies, and other important regulatory science and research activities.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Drugs",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-5696b24295",
-    "n": 11846,
-    "first_seen": "2026-11-21T08:18:38.026359+00:00",
-    "last_seen": "2026-11-21T08:18:38.026359+00:00",
-    "source_ids": [
-      "us-fda-5696b24295"
-    ]
-  },
-  {
-    "title": "Ogle Cattle Company, Inc. - 713311 - 09/05/2025",
-    "url": "http://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/ogle-cattle-company-inc-713311-09052025",
-    "native_id": "http://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/ogle-cattle-company-inc-713311-09052025",
-    "published_at": "2026-11-20T15:20:13+00:00",
-    "published_raw": "Fri, 20 Nov 2026 10:20:13 EST",
-    "summary": "New Animal Drug/Adulterated",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Drugs",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-5696b24295",
-    "n": 11847,
-    "first_seen": "2026-11-21T08:18:38.026359+00:00",
-    "last_seen": "2026-11-21T08:18:38.026359+00:00",
-    "source_ids": [
-      "us-fda-5696b24295"
-    ]
-  },
-  {
-    "title": "Statement on Deramiocel BLA for Duchenne Muscular Dystrophy",
-    "url": "http://www.fda.gov/vaccines-blood-biologics/whats-new-biologics/statement-deramiocel-bla-duchenne-muscular-dystrophy",
-    "native_id": "http://www.fda.gov/vaccines-blood-biologics/whats-new-biologics/statement-deramiocel-bla-duchenne-muscular-dystrophy",
-    "published_at": "2026-11-20T23:11:20+00:00",
-    "published_raw": "Fri, 20 Nov 2026 18:11:20 EST",
-    "summary": "FDA determined that the available evidence does not meet the evidentiary standard required for approval",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-03f7703006",
-    "n": 11848,
-    "first_seen": "2026-11-21T08:18:38.026359+00:00",
-    "last_seen": "2026-11-21T08:18:38.026359+00:00",
-    "source_ids": [
-      "us-fda-03f7703006"
-    ]
-  },
-  {
-    "title": "CMS Proposes Reforms to Strengthen Competition, Elevate Care Quality, and Expand Beneficiary Choice in Medicare Advantage",
-    "url": "https://www.hhs.gov/press-room/cms-proposes-medicare-advantage-reforms-competition-quality-beneficiary-choice.html",
-    "native_id": "https://www.hhs.gov/press-room/cms-proposes-medicare-advantage-reforms-competition-quality-beneficiary-choice.html",
-    "published_at": "2026-11-20T22:34:23+00:00",
-    "published_raw": "Fri, 20 Nov 2026 17:34:23 -0500",
-    "summary": "The Centers for Medicare & Medicaid Services issued a proposed rule that is intended to revitalize competition in Medicare Advantage (MA) and Part D.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Health and Human Services",
-      "jurisdiction": "US",
-      "family": "health_administration"
-    },
-    "primary_source_id": "us-hhs-6f995a5754",
-    "n": 11849,
-    "first_seen": "2026-11-21T08:18:38.026359+00:00",
-    "last_seen": "2026-11-21T08:18:38.026359+00:00",
-    "source_ids": [
-      "us-hhs-6f995a5754"
-    ]
-  },
-  {
-    "title": "In the Matter of TeleTarget LLC dba Investorfuel",
-    "url": "https://www.fcc.gov/edoc/427199",
-    "native_id": "427199",
+    "title": "H.R.10159",
+    "url": "https://www.congress.gov/bill/119th-congress/house-bill/10159",
+    "native_id": "H.R.10159",
     "published_at": null,
     "published_raw": "",
-    "summary": "EB issues a citation to TeleTarget LLC dba Investorfuel for failure to comply with a subpoena as part of an investigation into real estate telemarketing by a foreign call center that it operates.",
+    "summary": "To authorize the Secretary of the Army to convey to the State of North Carolina a certain parcel of real property located at Fort Bragg, North Carolina, on which the State shall construct a veterans’ State home, and for other purposes.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Enforcement Bureau",
+      "issuer": "Congress.gov legislative status",
       "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
+      "family": "legislative_procedure"
     },
-    "primary_source_id": "us-fcc-364d1b4932",
-    "n": 11850,
-    "first_seen": "2026-11-21T08:18:38.026359+00:00",
-    "last_seen": "2026-11-21T08:18:38.026359+00:00",
+    "primary_source_id": "us-congress-76128ee9ff",
+    "n": 11857,
+    "first_seen": "2026-11-21T20:09:32.783944+00:00",
+    "last_seen": "2026-11-21T20:09:32.783944+00:00",
     "source_ids": [
-      "us-fcc-364d1b4932"
+      "us-congress-76128ee9ff"
+    ]
+  },
+  {
+    "title": "Shanghai San Niu Food Co., LTD. Is Recalling Sanniu Evergeen Biscuits Due to Undeclared Milk and Sanniu Salt and Pepper Soda Biscuits Due to Undeclared Milk and Shrimp",
+    "url": "http://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/shanghai-san-niu-food-co-ltd-recalling-sanniu-evergeen-biscuits-due-undeclared-milk-and-sanniu-salt",
+    "native_id": "http://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/shanghai-san-niu-food-co-ltd-recalling-sanniu-evergeen-biscuits-due-undeclared-milk-and-sanniu-salt",
+    "published_at": "2026-11-20T17:58:00+00:00",
+    "published_raw": "Fri, 20 Nov 2026 12:58:00 EST",
+    "summary": "Shanghai San Niu Food Co., Ltd.of Shanghai, China is recalling all Sanniu Evergreen Biscuits and Salt and Pepper Soda Biscuits, because it may contain undeclared milk in Sanniu Evergreen Biscuits (三牛万年青饼干) and undeclared milk and shrimp in Sanniu Salt and Pepper Soda Biscuits (三牛苏打饼干椒盐味). People",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — Food Safety Recalls",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-2cdcdcca63",
+    "n": 11858,
+    "first_seen": "2026-11-21T20:09:32.783944+00:00",
+    "last_seen": "2026-11-21T20:09:32.783944+00:00",
+    "source_ids": [
+      "us-fda-2cdcdcca63"
+    ]
+  },
+  {
+    "title": "Statement by President von der Leyen on the signature of the EU-Indonesia Comprehensive Economic Partnership Agreement and the Investment Protection Agreement",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2557",
+    "native_id": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2557",
+    "published_at": "2026-11-21T11:28:47+00:00",
+    "published_raw": "Sat, 21 Nov 2026 11:28:47 GMT",
+    "summary": "European Commission Statement Brussels, 21 Nov 2026 Ladies and Gentlemen, I have just spoken to President Prabowo to mark this momentous day for the European Union and Indonesia. Today we sign our Comprehensive E...",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "European Commission press and decisions",
+      "jurisdiction": "EU",
+      "family": "executive_and_regulatory"
+    },
+    "primary_source_id": "eu-commission-07d4f58ccf",
+    "n": 11859,
+    "first_seen": "2026-11-21T20:09:32.783944+00:00",
+    "last_seen": "2026-11-21T20:09:32.783944+00:00",
+    "source_ids": [
+      "eu-commission-07d4f58ccf"
+    ]
+  },
+  {
+    "title": "Statement by President von der Leyen on the assassination attempt against a US-Ukrainian citizen in Denmark",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2556",
+    "native_id": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2556",
+    "published_at": "2026-11-21T09:01:16+00:00",
+    "published_raw": "Sat, 21 Nov 2026 09:01:16 GMT",
+    "summary": "European Commission Statement Brussels, 21 Nov 2026 I strongly condemn the assassination attempt against a US-Ukrainian citizen in Denmark, orchestrated by Russian intelligence services. This was an attack on EU ...",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "European Commission press and decisions",
+      "jurisdiction": "EU",
+      "family": "executive_and_regulatory"
+    },
+    "primary_source_id": "eu-commission-07d4f58ccf",
+    "n": 11860,
+    "first_seen": "2026-11-21T20:09:32.783944+00:00",
+    "last_seen": "2026-11-21T20:09:32.783944+00:00",
+    "source_ids": [
+      "eu-commission-07d4f58ccf"
+    ]
+  },
+  {
+    "title": "Remarks by Commissioner Šefčovič at the signature of the EU-Indonesia Comprehensive Economic Partnership Agreement and the Investment Protection Agreement",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2539",
+    "native_id": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2539",
+    "published_at": "2026-11-20T23:00:00+00:00",
+    "published_raw": "Fri, 20 Nov 2026 23:00:00 GMT",
+    "summary": "European Commission Statement Brussels, 21 Nov 2026 A warm welcome, dear Ministers. I am truly pleased to host you and your delegation. Because today, we seal a friendship and open a new chapter. After nine years...",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "European Commission press and decisions",
+      "jurisdiction": "EU",
+      "family": "executive_and_regulatory"
+    },
+    "primary_source_id": "eu-commission-07d4f58ccf",
+    "n": 11861,
+    "first_seen": "2026-11-21T20:09:32.783944+00:00",
+    "last_seen": "2026-11-21T20:09:32.783944+00:00",
+    "source_ids": [
+      "eu-commission-07d4f58ccf"
+    ]
+  },
+  {
+    "title": "EU and Indonesia sign ambitious trade and investment agreements",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2532",
+    "native_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2532",
+    "published_at": "2026-11-20T23:00:00+00:00",
+    "published_raw": "Fri, 20 Nov 2026 23:00:00 GMT",
+    "summary": "European Commission Press release Brussels, 21 Nov 2026 The European Union and Indonesia today signed their Comprehensive Economic Partnership Agreement (CEPA), and Investment Protection Agreement (IPA).",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "European Commission press and decisions",
+      "jurisdiction": "EU",
+      "family": "executive_and_regulatory"
+    },
+    "primary_source_id": "eu-commission-07d4f58ccf",
+    "n": 11862,
+    "first_seen": "2026-11-21T20:09:32.783944+00:00",
+    "last_seen": "2026-11-21T20:09:32.783944+00:00",
+    "source_ids": [
+      "eu-commission-07d4f58ccf"
+    ]
+  },
+  {
+    "title": "Factsheet EU-Indonesia - Main benefits",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/fs_25_2169",
+    "native_id": "https://ec.europa.eu/commission/presscorner/detail/en/fs_25_2169",
+    "published_at": "2026-11-20T23:00:00+00:00",
+    "published_raw": "Fri, 20 Nov 2026 23:00:00 GMT",
+    "summary": "European Commission Factsheet Brussels, 23 Sep 2025 Factsheet EU-Indonesia - Main benefits Factsheet EU-Indonesia - Main benefits",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "European Commission press and decisions",
+      "jurisdiction": "EU",
+      "family": "executive_and_regulatory"
+    },
+    "primary_source_id": "eu-commission-07d4f58ccf",
+    "n": 11863,
+    "first_seen": "2026-11-21T20:09:32.783944+00:00",
+    "last_seen": "2026-11-21T20:09:32.783944+00:00",
+    "source_ids": [
+      "eu-commission-07d4f58ccf"
+    ]
+  },
+  {
+    "title": "Factsheet EU-Indonesia - Agriculture",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/fs_25_2170",
+    "native_id": "https://ec.europa.eu/commission/presscorner/detail/en/fs_25_2170",
+    "published_at": "2026-11-20T23:00:00+00:00",
+    "published_raw": "Fri, 20 Nov 2026 23:00:00 GMT",
+    "summary": "European Commission Factsheet Brussels, 23 Sep 2025 Factsheet EU-Indonesia - Agriculture Factsheet EU-Indonesia - Agriculture",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "European Commission press and decisions",
+      "jurisdiction": "EU",
+      "family": "executive_and_regulatory"
+    },
+    "primary_source_id": "eu-commission-07d4f58ccf",
+    "n": 11864,
+    "first_seen": "2026-11-21T20:09:32.783944+00:00",
+    "last_seen": "2026-11-21T20:09:32.783944+00:00",
+    "source_ids": [
+      "eu-commission-07d4f58ccf"
+    ]
+  },
+  {
+    "title": "Factsheet EU-Indonesia - Sustainability",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/fs_25_2171",
+    "native_id": "https://ec.europa.eu/commission/presscorner/detail/en/fs_25_2171",
+    "published_at": "2026-11-20T23:00:00+00:00",
+    "published_raw": "Fri, 20 Nov 2026 23:00:00 GMT",
+    "summary": "European Commission Factsheet Brussels, 23 Sep 2025 Factsheet EU-Indonesia - Sustainability Factsheet EU-Indonesia - Sustainability",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "European Commission press and decisions",
+      "jurisdiction": "EU",
+      "family": "executive_and_regulatory"
+    },
+    "primary_source_id": "eu-commission-07d4f58ccf",
+    "n": 11865,
+    "first_seen": "2026-11-21T20:09:32.783944+00:00",
+    "last_seen": "2026-11-21T20:09:32.783944+00:00",
+    "source_ids": [
+      "eu-commission-07d4f58ccf"
+    ]
+  },
+  {
+    "title": "Multiannual Financial Framework - President Costa’s proposal",
+    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/21/multiannual-financial-framework-president-costa-s-proposal/",
+    "native_id": "152589",
+    "published_at": "2026-11-21T10:43:00+00:00",
+    "published_raw": "2026-11-21T11:43:00+01:00",
+    "summary": "President of the European Council, António Costa, presented his proposal to reach an agreement on the 2028-2034 Multiannual Financial Framework during a press conference on 21 November 2026.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Council of the European Union",
+      "jurisdiction": "EU",
+      "family": "sanctions_and_legislation"
+    },
+    "primary_source_id": "eu-council-9d9e9444da",
+    "n": 11866,
+    "first_seen": "2026-11-21T20:09:32.783944+00:00",
+    "last_seen": "2026-11-21T20:09:32.783944+00:00",
+    "source_ids": [
+      "eu-council-9d9e9444da"
     ]
   }
 ]

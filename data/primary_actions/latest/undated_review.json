@@ -1,26 +1,26 @@
 [
   {
-    "title": "In the Matter of TeleTarget LLC dba Investorfuel",
-    "url": "https://www.fcc.gov/edoc/427199",
-    "native_id": "427199",
+    "title": "H.R.10159",
+    "url": "https://www.congress.gov/bill/119th-congress/house-bill/10159",
+    "native_id": "H.R.10159",
     "published_at": null,
     "published_raw": "",
-    "summary": "EB issues a citation to TeleTarget LLC dba Investorfuel for failure to comply with a subpoena as part of an investigation into real estate telemarketing by a foreign call center that it operates.",
+    "summary": "To authorize the Secretary of the Army to convey to the State of North Carolina a certain parcel of real property located at Fort Bragg, North Carolina, on which the State shall construct a veterans’ State home, and for other purposes.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Enforcement Bureau",
+      "issuer": "Congress.gov legislative status",
       "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
+      "family": "legislative_procedure"
     },
-    "primary_source_id": "us-fcc-364d1b4932",
-    "n": 11850,
-    "first_seen": "2026-11-21T08:18:38.026359+00:00",
-    "last_seen": "2026-11-21T08:18:38.026359+00:00",
+    "primary_source_id": "us-congress-76128ee9ff",
+    "n": 11857,
+    "first_seen": "2026-11-21T20:09:32.783944+00:00",
+    "last_seen": "2026-11-21T20:09:32.783944+00:00",
     "source_ids": [
-      "us-fcc-364d1b4932"
+      "us-congress-76128ee9ff"
     ]
   }
 ]

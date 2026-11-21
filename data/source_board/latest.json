@@ -1,21 +1,21 @@
 {
  "date": "2026-11-21",
- "generated_at": "2026-11-21T08:18:57.412467+00:00",
+ "generated_at": "2026-11-21T20:09:52.490786+00:00",
  "catalog": {
-  "generated_at": "2026-11-14T18:45:12.782675+00:00",
+  "generated_at": "2026-11-21T20:07:43.335432+00:00",
   "channels": 365,
-  "enabled": 118,
-  "verified_ok": 111,
+  "enabled": 115,
+  "verified_ok": 109,
   "by_adapter": {
    "federal_register": 1,
    "hkma_press": 1,
    "govuk_search": 9,
-   "rss": 94,
+   "rss": 91,
    "html_index": 11,
    "google_news_rss": 2
   },
   "by_jurisdiction": {
-   "US": 65,
+   "US": 62,
    "UK": 11,
    "CA": 11,
    "EU": 7,
@@ -34,48 +34,43 @@
   }
  },
  "collect": {
-  "generated_at": "2026-11-21T08:18:38.026359+00:00",
-  "enabled_sources": 118,
-  "sources_ok": 117,
-  "sources_failed": 1,
+  "generated_at": "2026-11-21T20:09:32.783944+00:00",
+  "enabled_sources": 115,
+  "sources_ok": 115,
+  "sources_failed": 0,
   "coverage_status": "degraded",
   "counts": {
-   "observed": 1782,
-   "old": 1007,
+   "observed": 1871,
+   "old": 1096,
    "future": 8,
-   "undated": 252,
-   "new": 31,
-   "duplicates": 736
+   "undated": 293,
+   "new": 16,
+   "duplicates": 751
   },
-  "current_dated_documents": 747
+  "current_dated_documents": 655
  },
  "new_today": {
-  "count": 31,
+  "count": 16,
   "by_source": {
-   "us-doj-b3d27e1dc3": 14,
-   "us-govinfo-bills": 5,
-   "us-fda-5696b24295": 5,
-   "us-white-house-0691096d16": 2,
-   "us-doj-e05071794d": 1,
-   "us-fed-97656cefc7": 1,
-   "us-fda-03f7703006": 1,
-   "us-hhs-6f995a5754": 1,
-   "us-fcc-364d1b4932": 1
+   "eu-commission-07d4f58ccf": 7,
+   "us-govinfo-crpt": 4,
+   "us-govinfo-bills": 2,
+   "us-congress-76128ee9ff": 1,
+   "us-fda-2cdcdcca63": 1,
+   "eu-council-9d9e9444da": 1
   },
   "by_class": {
-   "routine": 7,
-   "watch": 13,
-   "docket": 5,
-   "high": 6
+   "routine": 15,
+   "watch": 1
   }
  },
  "parsed_today": {
-  "count": 7,
+  "count": 16,
   "by_class": {
-   "routine": 7
+   "routine": 16
   }
  },
- "n_failures": 1,
+ "n_failures": 0,
  "dates": [
   "2026-11-21"
  ],
