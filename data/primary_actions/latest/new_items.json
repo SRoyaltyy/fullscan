@@ -1,433 +1,10 @@
 [
   {
-    "title": "Tender of 7-year RMB HKSAR Institutional Government Bonds through re-opening to be held on Thursday, 26 November 2026",
-    "url": "https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/11/20261120-5/",
-    "native_id": "https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/11/20261120-5/",
-    "published_at": "2026-11-20T00:00:00+00:00",
-    "published_raw": "2026-11-20",
-    "issuer": "Hong Kong Monetary Authority",
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Hong Kong Monetary Authority",
-      "jurisdiction": "HK",
-      "family": "monetary_and_supervisory"
-    },
-    "primary_source_id": "hk-hkma-public-press",
-    "n": 11677,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "hk-hkma-public-press"
-    ]
-  },
-  {
-    "title": "Tender of 1-year RMB HKSAR Institutional Government Bonds through re-opening to be held on Thursday, 26 November 2026",
-    "url": "https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/11/20261120-4/",
-    "native_id": "https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/11/20261120-4/",
-    "published_at": "2026-11-20T00:00:00+00:00",
-    "published_raw": "2026-11-20",
-    "issuer": "Hong Kong Monetary Authority",
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Hong Kong Monetary Authority",
-      "jurisdiction": "HK",
-      "family": "monetary_and_supervisory"
-    },
-    "primary_source_id": "hk-hkma-public-press",
-    "n": 11678,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "hk-hkma-public-press"
-    ]
-  },
-  {
-    "title": "Ministry of Finance issues Renminbi Sovereign Bonds through Central Moneymarkets Unit of Hong Kong Monetary Authority",
-    "url": "https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/11/20261120-3/",
-    "native_id": "https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/11/20261120-3/",
-    "published_at": "2026-11-20T00:00:00+00:00",
-    "published_raw": "2026-11-20",
-    "issuer": "Hong Kong Monetary Authority",
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Hong Kong Monetary Authority",
-      "jurisdiction": "HK",
-      "family": "monetary_and_supervisory"
-    },
-    "primary_source_id": "hk-hkma-public-press",
-    "n": 11679,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "hk-hkma-public-press"
-    ]
-  },
-  {
-    "title": "CAC Outcome: TSSA & Cross Country Trains LTD",
-    "url": "https://www.gov.uk/government/publications/cac-outcome-tssa-cross-country-trains-ltd",
-    "native_id": "/government/publications/cac-outcome-tssa-cross-country-trains-ltd",
-    "published_at": "2026-11-20T16:35:11+00:00",
-    "published_raw": "2026-11-20T16:35:11Z",
-    "document_type": "decision",
-    "issuer": "Central Arbitration Committee",
-    "issuer_ids": [
-      "uk-gov:central-arbitration-committee"
-    ],
-    "summary": "Outcome(s) by the Central Arbitration Committee on an application from the TSSA.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Central Arbitration Committee",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 11680,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Tinsley Viaduct Gas Pipeline Diversion (Cadent Gas Ltd): environmental determination",
-    "url": "https://www.gov.uk/government/publications/tinsley-viaduct-gas-pipeline-diversion-cadent-gas-ltd-environmental-determination",
-    "native_id": "/government/publications/tinsley-viaduct-gas-pipeline-diversion-cadent-gas-ltd-environmental-determination",
-    "published_at": "2026-11-20T15:26:55+00:00",
-    "published_raw": "2026-11-20T15:26:55Z",
-    "document_type": "decision",
-    "issuer": "Department for Energy Security and Net Zero",
-    "issuer_ids": [
-      "uk-gov:department-for-energy-security-and-net-zero"
-    ],
-    "summary": "Environmental determination by the Secretary of State.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department for Energy Security and Net Zero",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 11681,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Teaching Regulation Agency outcome: Mr Nicholas Rose",
-    "url": "https://www.gov.uk/government/publications/teaching-regulation-agency-outcome-mr-nicholas-rose",
-    "native_id": "/government/publications/teaching-regulation-agency-outcome-mr-nicholas-rose",
-    "published_at": "2026-11-20T15:10:51+00:00",
-    "published_raw": "2026-11-20T15:10:51Z",
-    "document_type": "decision",
-    "issuer": "Teaching Regulation Agency",
-    "issuer_ids": [
-      "uk-gov:teaching-regulation-agency"
-    ],
-    "summary": "Case to Answer determination",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Teaching Regulation Agency",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 11682,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Teacher misconduct panel outcome: Mr David Brereton",
-    "url": "https://www.gov.uk/government/publications/teacher-misconduct-panel-outcome-mr-david-brereton",
-    "native_id": "/government/publications/teacher-misconduct-panel-outcome-mr-david-brereton",
-    "published_at": "2026-11-20T14:26:10+00:00",
-    "published_raw": "2026-11-20T14:26:10Z",
-    "document_type": "decision",
-    "issuer": "Teaching Regulation Agency",
-    "issuer_ids": [
-      "uk-gov:teaching-regulation-agency"
-    ],
-    "summary": "Professional conduct panel outcome, including decision and reasons.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Teaching Regulation Agency",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 11683,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Trade and Cooperation Agreement Partnership Council Decision number 1 for 2026: Energy",
-    "url": "https://www.gov.uk/government/publications/trade-and-cooperation-agreement-partnership-council-decision-number-1-for-2026-energy",
-    "native_id": "/government/publications/trade-and-cooperation-agreement-partnership-council-decision-number-1-for-2026-energy",
-    "published_at": "2026-11-20T13:18:48+00:00",
-    "published_raw": "2026-11-20T13:18:48Z",
-    "document_type": "decision",
-    "issuer": "Cabinet Office",
-    "issuer_ids": [
-      "uk-gov:cabinet-office"
-    ],
-    "summary": "The Trade and Cooperation Agreement (TCA) Partnership Council oversees UK and EU implementation, application and interpretation of the Trade and Cooperation Agreement",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Cabinet Office",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 11684,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "CIL Appeals 1897675, 1897676, 1897677 — 07 October 26",
-    "url": "https://www.gov.uk/government/publications/cil-appeals-1897675-1897676-1897677-07-october-26",
-    "native_id": "/government/publications/cil-appeals-1897675-1897676-1897677-07-october-26",
-    "published_at": "2026-11-20T09:30:08+00:00",
-    "published_raw": "2026-11-20T09:30:08Z",
-    "document_type": "decision",
-    "issuer": "HM Revenue & Customs",
-    "issuer_ids": [
-      "uk-gov:hm-revenue-customs"
-    ],
-    "summary": "Report issued for lawful use and GIA offset: change of use of the various floors (part of the upper ground floor and part of the first floor) from use class E to flats.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "HM Revenue & Customs",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 11685,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "CIL Appeal 1896473 — 21 September 26 — alterations and extension",
-    "url": "https://www.gov.uk/government/publications/cil-appeal-1896473-21-september-26-alterations-and-extension",
-    "native_id": "/government/publications/cil-appeal-1896473-21-september-26-alterations-and-extension",
-    "published_at": "2026-11-20T09:30:08+00:00",
-    "published_raw": "2026-11-20T09:30:08Z",
-    "document_type": "decision",
-    "issuer": "HM Revenue & Customs",
-    "issuer_ids": [
-      "uk-gov:hm-revenue-customs"
-    ],
-    "summary": "Conversion and extension of agricultural buildings to create 6 residential units, alteration to the existing access, and construction of ancillary buildings and of parking areas.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "HM Revenue & Customs",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 11686,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "A457 Grove Lane / B4135 Cranford Street highway improvement scheme compulsory purchase order",
-    "url": "https://www.gov.uk/government/publications/a457-grove-lane-b4135-cranford-street-highway-improvement-scheme-compulsory-purchase-order",
-    "native_id": "/government/publications/a457-grove-lane-b4135-cranford-street-highway-improvement-scheme-compulsory-purchase-order",
-    "published_at": "2026-11-20T08:38:44+00:00",
-    "published_raw": "2026-11-20T08:38:44Z",
-    "document_type": "decision",
-    "issuer": "Department for Transport",
-    "issuer_ids": [
-      "uk-gov:department-for-transport"
-    ],
-    "summary": "Confirmation of the compulsory purchase order for the Borough Council of Sandwell (the A457 Grove Lane/B4135 Cranford Street multi-modal improvements highway scheme).",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department for Transport",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 11687,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Proposals for a new standard rules permit for mobile medium combustion plant (MCP) which are boilers",
-    "url": "https://www.gov.uk/government/consultations/proposals-for-a-new-standard-rules-permit-for-mobile-medium-combustion-plant-mcp-which-are-boilers",
-    "native_id": "/government/consultations/proposals-for-a-new-standard-rules-permit-for-mobile-medium-combustion-plant-mcp-which-are-boilers",
-    "published_at": "2026-11-20T14:52:26+00:00",
-    "published_raw": "2026-11-20T14:52:26Z",
-    "document_type": "consultation_outcome",
-    "issuer": "Environment Agency",
-    "issuer_ids": [
-      "uk-gov:environment-agency"
-    ],
-    "summary": "We want your views on our proposals for a new standard rules permit for mobile medium combustion plant which are boilers.",
-    "source_metadata": {
-      "document_type": "consultation_outcome",
-      "document_stage": "consultation_response_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Environment Agency",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-consultation_outcome",
-    "n": 11688,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "uk-govuk-consultation_outcome"
-    ]
-  },
-  {
-    "title": "Product Safety Report: Honphier Magnetic Board sold via Amazon (2611-0131)",
-    "url": "https://www.gov.uk/product-safety-alerts-reports-recalls/product-safety-report-honphier-magnetic-board-sold-via-amazon-2611-0131",
-    "native_id": "/product-safety-alerts-reports-recalls/product-safety-report-honphier-magnetic-board-sold-via-amazon-2611-0131",
-    "published_at": "2026-11-20T10:54:59+00:00",
-    "published_raw": "2026-11-20T10:54:59Z",
-    "document_type": "product_safety_alert_report_recall",
-    "issuer": "Office for Product Safety and Standards",
-    "issuer_ids": [
-      "uk-gov:office-for-product-safety-and-standards"
-    ],
-    "summary": "Product Safety Report for Honphier Magnetic Board presenting a serious risk of asphyxiation.",
-    "source_metadata": {
-      "document_type": "product_safety_alert_report_recall",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Office for Product Safety and Standards",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-product_safety_alert_report_recall",
-    "n": 11689,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "uk-govuk-product_safety_alert_report_recall"
-    ]
-  },
-  {
-    "title": "Product Recall: TOOLPAK 115mm Wood Cutting Blade for Mini Grinders (2611-0128)",
-    "url": "https://www.gov.uk/product-safety-alerts-reports-recalls/product-recall-toolpak-115mm-wood-cutting-blade-for-mini-grinders-2611-0128",
-    "native_id": "/product-safety-alerts-reports-recalls/product-recall-toolpak-115mm-wood-cutting-blade-for-mini-grinders-2611-0128",
-    "published_at": "2026-11-20T10:44:57+00:00",
-    "published_raw": "2026-11-20T10:44:57Z",
-    "document_type": "product_safety_alert_report_recall",
-    "issuer": "Office for Product Safety and Standards",
-    "issuer_ids": [
-      "uk-gov:office-for-product-safety-and-standards"
-    ],
-    "summary": "Product Recall for TOOLPAK 115mm Wood Cutting Blade for Mini Grinders presenting a serious risk of injuries.",
-    "source_metadata": {
-      "document_type": "product_safety_alert_report_recall",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Office for Product Safety and Standards",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-product_safety_alert_report_recall",
-    "n": 11690,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "uk-govuk-product_safety_alert_report_recall"
-    ]
-  },
-  {
-    "title": "Product Recall: LeMieux Ltd Junior Vector Balance Stirrup (2611-0124)",
-    "url": "https://www.gov.uk/product-safety-alerts-reports-recalls/product-recall-lemieux-ltd-junior-vector-balance-stirrup-2611-0124",
-    "native_id": "/product-safety-alerts-reports-recalls/product-recall-lemieux-ltd-junior-vector-balance-stirrup-2611-0124",
-    "published_at": "2026-11-20T10:39:40+00:00",
-    "published_raw": "2026-11-20T10:39:40Z",
-    "document_type": "product_safety_alert_report_recall",
-    "issuer": "Office for Product Safety and Standards",
-    "issuer_ids": [
-      "uk-gov:office-for-product-safety-and-standards"
-    ],
-    "summary": "Product Recall for LeMieux Ltd Junior Vector Balance Stirrup presenting a risk of injuries.",
-    "source_metadata": {
-      "document_type": "product_safety_alert_report_recall",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Office for Product Safety and Standards",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-product_safety_alert_report_recall",
-    "n": 11691,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "uk-govuk-product_safety_alert_report_recall"
-    ]
-  },
-  {
-    "title": "H.R. 11062 (IH) - Fighting Post-Traumatic Stress Disorder Act of 2026",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11062ih",
-    "native_id": "BILLS-119hr11062ih",
-    "published_at": "2026-11-20T09:38:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 09:38:00 +0000",
+    "title": "H.R. 11130 (IH) - To authorize certain death-related commemorative uses of the Peace Corps seal, emblem, logo, and name.",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11130ih",
+    "native_id": "BILLS-119hr11130ih",
+    "published_at": "2026-11-21T05:52:03+00:00",
+    "published_raw": "Sat, 21 Nov 2026 05:52:03 +0000",
     "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
     "source_metadata": {
       "document_type": "bill",
@@ -439,19 +16,19 @@
       "family": "legislative_and_presidential_documents"
     },
     "primary_source_id": "us-govinfo-bills",
-    "n": 11692,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
+    "n": 11820,
+    "first_seen": "2026-11-21T08:18:38.026359+00:00",
+    "last_seen": "2026-11-21T08:18:38.026359+00:00",
     "source_ids": [
       "us-govinfo-bills"
     ]
   },
   {
-    "title": "H.R. 11061 (IH) - Commercial Advertisement Loudness Mitigation Modernization Act of 2026",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11061ih",
-    "native_id": "BILLS-119hr11061ih",
-    "published_at": "2026-11-20T09:38:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 09:38:00 +0000",
+    "title": "H.R. 6213 (RH) - Heat Workforce Standards Act of 2026",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr6213rh",
+    "native_id": "BILLS-119hr6213rh",
+    "published_at": "2026-11-21T05:52:03+00:00",
+    "published_raw": "Sat, 21 Nov 2026 05:52:03 +0000",
     "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
     "source_metadata": {
       "document_type": "bill",
@@ -463,1266 +40,305 @@
       "family": "legislative_and_presidential_documents"
     },
     "primary_source_id": "us-govinfo-bills",
-    "n": 11693,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
+    "n": 11821,
+    "first_seen": "2026-11-21T08:18:38.026359+00:00",
+    "last_seen": "2026-11-21T08:18:38.026359+00:00",
     "source_ids": [
       "us-govinfo-bills"
     ]
   },
   {
-    "title": "Public Law 119 - 29 - Filing Relief for Natural Disasters Act",
-    "url": "https://www.govinfo.gov/app/details/PLAW-119publ29",
-    "native_id": "PLAW-119publ29",
-    "published_at": "2026-11-20T16:31:03+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:31:03 +0000",
-    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "title": "H.R. 11058 (IH) - Families’ Option to Choose Unplugged Schooling Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11058ih",
+    "native_id": "BILLS-119hr11058ih",
+    "published_at": "2026-11-21T05:53:03+00:00",
+    "published_raw": "Sat, 21 Nov 2026 05:53:03 +0000",
+    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
     "source_metadata": {
-      "document_type": "public_law",
-      "document_stage": "law_published",
+      "document_type": "bill",
+      "document_stage": "legislative_document_published",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Public and Private Laws",
+      "issuer": "Congressional Bills",
       "jurisdiction": "US",
       "family": "legislative_and_presidential_documents"
     },
-    "primary_source_id": "us-govinfo-plaw",
-    "n": 11694,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
+    "primary_source_id": "us-govinfo-bills",
+    "n": 11822,
+    "first_seen": "2026-11-21T08:18:38.026359+00:00",
+    "last_seen": "2026-11-21T08:18:38.026359+00:00",
     "source_ids": [
-      "us-govinfo-plaw"
+      "us-govinfo-bills"
     ]
   },
   {
-    "title": "Public Law 119 - 72 - Focused Assistance and Skills Training for Veterans' Employment and Transition Success Act\" or the \"FAST VETS Act",
-    "url": "https://www.govinfo.gov/app/details/PLAW-119publ72",
-    "native_id": "PLAW-119publ72",
-    "published_at": "2026-11-20T16:31:03+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:31:03 +0000",
-    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "title": "H.R. 11067 (IH) - To improve and promote commercial exports of defense articles and defense services by small businesses.",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11067ih",
+    "native_id": "BILLS-119hr11067ih",
+    "published_at": "2026-11-21T05:53:03+00:00",
+    "published_raw": "Sat, 21 Nov 2026 05:53:03 +0000",
+    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
     "source_metadata": {
-      "document_type": "public_law",
-      "document_stage": "law_published",
+      "document_type": "bill",
+      "document_stage": "legislative_document_published",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Public and Private Laws",
+      "issuer": "Congressional Bills",
       "jurisdiction": "US",
       "family": "legislative_and_presidential_documents"
     },
-    "primary_source_id": "us-govinfo-plaw",
-    "n": 11695,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
+    "primary_source_id": "us-govinfo-bills",
+    "n": 11823,
+    "first_seen": "2026-11-21T08:18:38.026359+00:00",
+    "last_seen": "2026-11-21T08:18:38.026359+00:00",
     "source_ids": [
-      "us-govinfo-plaw"
+      "us-govinfo-bills"
     ]
   },
   {
-    "title": "Public Law 119 - 87 - An act to amend the FISA Amendments Act of 2008 to extend the authorities of title VII of the Foreign Intelligence Surveillance Act of 1978, and for other purposes.",
-    "url": "https://www.govinfo.gov/app/details/PLAW-119publ87",
-    "native_id": "PLAW-119publ87",
-    "published_at": "2026-11-20T16:31:03+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:31:03 +0000",
-    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "title": "H.R. 2347 (EAS) - Bipartisan American Affordability and Jobs Act of 2026",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr2347eas",
+    "native_id": "BILLS-119hr2347eas",
+    "published_at": "2026-11-21T05:54:00+00:00",
+    "published_raw": "Sat, 21 Nov 2026 05:54:00 +0000",
+    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
     "source_metadata": {
-      "document_type": "public_law",
-      "document_stage": "law_published",
+      "document_type": "bill",
+      "document_stage": "legislative_document_published",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Public and Private Laws",
+      "issuer": "Congressional Bills",
       "jurisdiction": "US",
       "family": "legislative_and_presidential_documents"
     },
-    "primary_source_id": "us-govinfo-plaw",
-    "n": 11696,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
+    "primary_source_id": "us-govinfo-bills",
+    "n": 11824,
+    "first_seen": "2026-11-21T08:18:38.026359+00:00",
+    "last_seen": "2026-11-21T08:18:38.026359+00:00",
     "source_ids": [
-      "us-govinfo-plaw"
+      "us-govinfo-bills"
     ]
   },
   {
-    "title": "Public Law 119 - 109 - Local Access to Courts Act\" or \"LACA",
-    "url": "https://www.govinfo.gov/app/details/PLAW-119publ109",
-    "native_id": "PLAW-119publ109",
-    "published_at": "2026-11-20T16:31:04+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:31:04 +0000",
-    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "public_law",
-      "document_stage": "law_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Public and Private Laws",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-plaw",
-    "n": 11697,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-plaw"
-    ]
-  },
-  {
-    "title": "Public Law 119 - 115 - An act to designate the General George C. Marshall House, in the Commonwealth of Virginia, as an affiliated area of the National Park System, and for other purposes.",
-    "url": "https://www.govinfo.gov/app/details/PLAW-119publ115",
-    "native_id": "PLAW-119publ115",
-    "published_at": "2026-11-20T16:31:04+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:31:04 +0000",
-    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "public_law",
-      "document_stage": "law_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Public and Private Laws",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-plaw",
-    "n": 11698,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-plaw"
-    ]
-  },
-  {
-    "title": "Public Law 119 - 117 - An act to redesignate the National Historic Trails Interpretive Center in Casper, Wyoming, as the \"Barbara L. Cubin National Historic Trails Interpretive Center\".",
-    "url": "https://www.govinfo.gov/app/details/PLAW-119publ117",
-    "native_id": "PLAW-119publ117",
-    "published_at": "2026-11-20T16:31:05+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:31:05 +0000",
-    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "public_law",
-      "document_stage": "law_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Public and Private Laws",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-plaw",
-    "n": 11699,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-plaw"
-    ]
-  },
-  {
-    "title": "Public Law 119 - 113 - An act to reauthorize the Fort Peck Reservation Rural Water System Act of 2000.",
-    "url": "https://www.govinfo.gov/app/details/PLAW-119publ113",
-    "native_id": "PLAW-119publ113",
-    "published_at": "2026-11-20T16:31:05+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:31:05 +0000",
-    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "public_law",
-      "document_stage": "law_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Public and Private Laws",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-plaw",
-    "n": 11700,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-plaw"
-    ]
-  },
-  {
-    "title": "Public Law 119 - 114 - An act to provide for the equitable settlement of certain Indian land disputes regarding land in Illinois, and for other purposes.",
-    "url": "https://www.govinfo.gov/app/details/PLAW-119publ114",
-    "native_id": "PLAW-119publ114",
-    "published_at": "2026-11-20T16:31:05+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:31:05 +0000",
-    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "public_law",
-      "document_stage": "law_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Public and Private Laws",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-plaw",
-    "n": 11701,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-plaw"
-    ]
-  },
-  {
-    "title": "Public Law 119 - 112 - Hydropower Licensing Transparency Act",
-    "url": "https://www.govinfo.gov/app/details/PLAW-119publ112",
-    "native_id": "PLAW-119publ112",
-    "published_at": "2026-11-20T16:31:05+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:31:05 +0000",
-    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "public_law",
-      "document_stage": "law_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Public and Private Laws",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-plaw",
-    "n": 11702,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-plaw"
-    ]
-  },
-  {
-    "title": "Public Law 119 - 116 - Modernizing Access to Our Public Oceans Act",
-    "url": "https://www.govinfo.gov/app/details/PLAW-119publ116",
-    "native_id": "PLAW-119publ116",
-    "published_at": "2026-11-20T16:33:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:33:00 +0000",
-    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "public_law",
-      "document_stage": "law_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Public and Private Laws",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-plaw",
-    "n": 11703,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-plaw"
-    ]
-  },
-  {
-    "title": "Public Law 119 - 118 - Kay Hagan Tick Reauthorization Act",
-    "url": "https://www.govinfo.gov/app/details/PLAW-119publ118",
-    "native_id": "PLAW-119publ118",
-    "published_at": "2026-11-20T16:33:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:33:00 +0000",
-    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "public_law",
-      "document_stage": "law_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Public and Private Laws",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-plaw",
-    "n": 11704,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-plaw"
-    ]
-  },
-  {
-    "title": "DCPD-202600707 - Remarks and an Exchange With Reporters Prior to Departure From Bullhead City, Arizona",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600707",
-    "native_id": "DCPD-202600707",
-    "published_at": "2026-11-20T17:21:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 17:21:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 11705,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "DCPD-202600708 - Message on the Birthday of President Dwight D. Eisenhower",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600708",
-    "native_id": "DCPD-202600708",
-    "published_at": "2026-11-20T17:21:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 17:21:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 11706,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "S. Rept. 119-163",
-    "url": "https://www.govinfo.gov/app/details/CRPT-119srpt163",
-    "native_id": "CRPT-119srpt163",
-    "published_at": "2026-11-20T13:56:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 13:56:00 +0000",
-    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "committee_report",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Reports",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-crpt",
-    "n": 11707,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-crpt"
-    ]
-  },
-  {
-    "title": "S. Rept. 119-156",
-    "url": "https://www.govinfo.gov/app/details/CRPT-119srpt156",
-    "native_id": "CRPT-119srpt156",
-    "published_at": "2026-11-20T14:05:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 14:05:00 +0000",
-    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "committee_report",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Reports",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-crpt",
-    "n": 11708,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-crpt"
-    ]
-  },
-  {
-    "title": "S. Rept. 119-137",
-    "url": "https://www.govinfo.gov/app/details/CRPT-119srpt137",
-    "native_id": "CRPT-119srpt137",
-    "published_at": "2026-11-20T16:31:04+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:31:04 +0000",
-    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "committee_report",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Reports",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-crpt",
-    "n": 11709,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-crpt"
-    ]
-  },
-  {
-    "title": "S. Rept. 119-139",
-    "url": "https://www.govinfo.gov/app/details/CRPT-119srpt139",
-    "native_id": "CRPT-119srpt139",
-    "published_at": "2026-11-20T16:31:04+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:31:04 +0000",
-    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "committee_report",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Reports",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-crpt",
-    "n": 11710,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-crpt"
-    ]
-  },
-  {
-    "title": "S. Rept. 119-138",
-    "url": "https://www.govinfo.gov/app/details/CRPT-119srpt138",
-    "native_id": "CRPT-119srpt138",
-    "published_at": "2026-11-20T16:31:04+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:31:04 +0000",
-    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "committee_report",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Reports",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-crpt",
-    "n": 11711,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-crpt"
-    ]
-  },
-  {
-    "title": "S. Rept. 119-154",
-    "url": "https://www.govinfo.gov/app/details/CRPT-119srpt154",
-    "native_id": "CRPT-119srpt154",
-    "published_at": "2026-11-20T16:31:04+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:31:04 +0000",
-    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "committee_report",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Reports",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-crpt",
-    "n": 11712,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-crpt"
-    ]
-  },
-  {
-    "title": "H. Rept. 119-830",
-    "url": "https://www.govinfo.gov/app/details/CRPT-119hrpt830",
-    "native_id": "CRPT-119hrpt830",
-    "published_at": "2026-11-20T16:31:04+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:31:04 +0000",
-    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "committee_report",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Reports",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-crpt",
-    "n": 11713,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-crpt"
-    ]
-  },
-  {
-    "title": "H. Rept. 119-818",
-    "url": "https://www.govinfo.gov/app/details/CRPT-119hrpt818",
-    "native_id": "CRPT-119hrpt818",
-    "published_at": "2026-11-20T16:31:04+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:31:04 +0000",
-    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "committee_report",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Reports",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-crpt",
-    "n": 11714,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-crpt"
-    ]
-  },
-  {
-    "title": "S. Rept. 119-134",
-    "url": "https://www.govinfo.gov/app/details/CRPT-119srpt134",
-    "native_id": "CRPT-119srpt134",
-    "published_at": "2026-11-20T16:31:04+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:31:04 +0000",
-    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "committee_report",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Reports",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-crpt",
-    "n": 11715,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-crpt"
-    ]
-  },
-  {
-    "title": "S. Rept. 119-136",
-    "url": "https://www.govinfo.gov/app/details/CRPT-119srpt136",
-    "native_id": "CRPT-119srpt136",
-    "published_at": "2026-11-20T16:31:04+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:31:04 +0000",
-    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "committee_report",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Reports",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-crpt",
-    "n": 11716,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-crpt"
-    ]
-  },
-  {
-    "title": "S. Rept. 119-140",
-    "url": "https://www.govinfo.gov/app/details/CRPT-119srpt140",
-    "native_id": "CRPT-119srpt140",
-    "published_at": "2026-11-20T16:31:04+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:31:04 +0000",
-    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "committee_report",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Reports",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-crpt",
-    "n": 11717,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-crpt"
-    ]
-  },
-  {
-    "title": "H. Rept. 119-820",
-    "url": "https://www.govinfo.gov/app/details/CRPT-119hrpt820",
-    "native_id": "CRPT-119hrpt820",
-    "published_at": "2026-11-20T16:31:05+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:31:05 +0000",
-    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "committee_report",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Reports",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-crpt",
-    "n": 11718,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-crpt"
-    ]
-  },
-  {
-    "title": "H. Rept. 119-777",
-    "url": "https://www.govinfo.gov/app/details/CRPT-119hrpt777",
-    "native_id": "CRPT-119hrpt777",
-    "published_at": "2026-11-20T16:31:05+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:31:05 +0000",
-    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "committee_report",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Reports",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-crpt",
-    "n": 11719,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-crpt"
-    ]
-  },
-  {
-    "title": "S. Rept. 119-146",
-    "url": "https://www.govinfo.gov/app/details/CRPT-119srpt146",
-    "native_id": "CRPT-119srpt146",
-    "published_at": "2026-11-20T16:31:05+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:31:05 +0000",
-    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "committee_report",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Reports",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-crpt",
-    "n": 11720,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-crpt"
-    ]
-  },
-  {
-    "title": "H. Rept. 119-829",
-    "url": "https://www.govinfo.gov/app/details/CRPT-119hrpt829",
-    "native_id": "CRPT-119hrpt829",
-    "published_at": "2026-11-20T16:31:05+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:31:05 +0000",
-    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "committee_report",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Reports",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-crpt",
-    "n": 11721,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-crpt"
-    ]
-  },
-  {
-    "title": "H. Rept. 119-823",
-    "url": "https://www.govinfo.gov/app/details/CRPT-119hrpt823",
-    "native_id": "CRPT-119hrpt823",
-    "published_at": "2026-11-20T16:31:05+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:31:05 +0000",
-    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "committee_report",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Reports",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-crpt",
-    "n": 11722,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-crpt"
-    ]
-  },
-  {
-    "title": "S. Rept. 119-152",
-    "url": "https://www.govinfo.gov/app/details/CRPT-119srpt152",
-    "native_id": "CRPT-119srpt152",
-    "published_at": "2026-11-20T16:31:05+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:31:05 +0000",
-    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "committee_report",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Reports",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-crpt",
-    "n": 11723,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-crpt"
-    ]
-  },
-  {
-    "title": "S. Rept. 119-153",
-    "url": "https://www.govinfo.gov/app/details/CRPT-119srpt153",
-    "native_id": "CRPT-119srpt153",
-    "published_at": "2026-11-20T16:31:05+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:31:05 +0000",
-    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "committee_report",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Reports",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-crpt",
-    "n": 11724,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-crpt"
-    ]
-  },
-  {
-    "title": "S. Rept. 119-150",
-    "url": "https://www.govinfo.gov/app/details/CRPT-119srpt150",
-    "native_id": "CRPT-119srpt150",
-    "published_at": "2026-11-20T16:31:05+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:31:05 +0000",
-    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "committee_report",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Reports",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-crpt",
-    "n": 11725,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-crpt"
-    ]
-  },
-  {
-    "title": "S. Rept. 119-148",
-    "url": "https://www.govinfo.gov/app/details/CRPT-119srpt148",
-    "native_id": "CRPT-119srpt148",
-    "published_at": "2026-11-20T16:31:05+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:31:05 +0000",
-    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "committee_report",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Reports",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-crpt",
-    "n": 11726,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-crpt"
-    ]
-  },
-  {
-    "title": "S. Rept. 119-149",
-    "url": "https://www.govinfo.gov/app/details/CRPT-119srpt149",
-    "native_id": "CRPT-119srpt149",
-    "published_at": "2026-11-20T16:31:05+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:31:05 +0000",
-    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "committee_report",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Reports",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-crpt",
-    "n": 11727,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-crpt"
-    ]
-  },
-  {
-    "title": "S. Rept. 119-147",
-    "url": "https://www.govinfo.gov/app/details/CRPT-119srpt147",
-    "native_id": "CRPT-119srpt147",
-    "published_at": "2026-11-20T16:31:05+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:31:05 +0000",
-    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "committee_report",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Reports",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-crpt",
-    "n": 11728,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-crpt"
-    ]
-  },
-  {
-    "title": "S. Rept. 119-135",
-    "url": "https://www.govinfo.gov/app/details/CRPT-119srpt135",
-    "native_id": "CRPT-119srpt135",
-    "published_at": "2026-11-20T16:31:05+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:31:05 +0000",
-    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "committee_report",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Reports",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-crpt",
-    "n": 11729,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-crpt"
-    ]
-  },
-  {
-    "title": "H. Rept. 119-832",
-    "url": "https://www.govinfo.gov/app/details/CRPT-119hrpt832",
-    "native_id": "CRPT-119hrpt832",
-    "published_at": "2026-11-20T16:31:05+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:31:05 +0000",
-    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "committee_report",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Reports",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-crpt",
-    "n": 11730,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-crpt"
-    ]
-  },
-  {
-    "title": "H. Rept. 119-833",
-    "url": "https://www.govinfo.gov/app/details/CRPT-119hrpt833",
-    "native_id": "CRPT-119hrpt833",
-    "published_at": "2026-11-20T16:33:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:33:00 +0000",
-    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "committee_report",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Reports",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-crpt",
-    "n": 11731,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-crpt"
-    ]
-  },
-  {
-    "title": "H. Rept. 119-839",
-    "url": "https://www.govinfo.gov/app/details/CRPT-119hrpt839",
-    "native_id": "CRPT-119hrpt839",
-    "published_at": "2026-11-20T16:33:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:33:00 +0000",
-    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "committee_report",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Reports",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-crpt",
-    "n": 11732,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-crpt"
-    ]
-  },
-  {
-    "title": "H. Rept. 119-826",
-    "url": "https://www.govinfo.gov/app/details/CRPT-119hrpt826",
-    "native_id": "CRPT-119hrpt826",
-    "published_at": "2026-11-20T16:33:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:33:00 +0000",
-    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "committee_report",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Reports",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-crpt",
-    "n": 11733,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-crpt"
-    ]
-  },
-  {
-    "title": "H. Rept. 119-838",
-    "url": "https://www.govinfo.gov/app/details/CRPT-119hrpt838",
-    "native_id": "CRPT-119hrpt838",
-    "published_at": "2026-11-20T16:33:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:33:00 +0000",
-    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "committee_report",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Reports",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-crpt",
-    "n": 11734,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-crpt"
-    ]
-  },
-  {
-    "title": "H. Rept. 119-837",
-    "url": "https://www.govinfo.gov/app/details/CRPT-119hrpt837",
-    "native_id": "CRPT-119hrpt837",
-    "published_at": "2026-11-20T16:33:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:33:00 +0000",
-    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "committee_report",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Reports",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-crpt",
-    "n": 11735,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-crpt"
-    ]
-  },
-  {
-    "title": "H. Rept. 119-836",
-    "url": "https://www.govinfo.gov/app/details/CRPT-119hrpt836",
-    "native_id": "CRPT-119hrpt836",
-    "published_at": "2026-11-20T16:33:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:33:00 +0000",
-    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "committee_report",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Reports",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-crpt",
-    "n": 11736,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-crpt"
-    ]
-  },
-  {
-    "title": "H. Rept. 119-835",
-    "url": "https://www.govinfo.gov/app/details/CRPT-119hrpt835",
-    "native_id": "CRPT-119hrpt835",
-    "published_at": "2026-11-20T16:33:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:33:00 +0000",
-    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "committee_report",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Reports",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-crpt",
-    "n": 11737,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-crpt"
-    ]
-  },
-  {
-    "title": "S. Rept. 119-145",
-    "url": "https://www.govinfo.gov/app/details/CRPT-119srpt145",
-    "native_id": "CRPT-119srpt145",
-    "published_at": "2026-11-20T16:33:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:33:00 +0000",
-    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "committee_report",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Reports",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-crpt",
-    "n": 11738,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-crpt"
-    ]
-  },
-  {
-    "title": "H. Rept. 119-795",
-    "url": "https://www.govinfo.gov/app/details/CRPT-119hrpt795",
-    "native_id": "CRPT-119hrpt795",
-    "published_at": "2026-11-20T16:33:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:33:00 +0000",
-    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "committee_report",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Reports",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-crpt",
-    "n": 11739,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-crpt"
-    ]
-  },
-  {
-    "title": "S. Rept. 119-155",
-    "url": "https://www.govinfo.gov/app/details/CRPT-119srpt155",
-    "native_id": "CRPT-119srpt155",
-    "published_at": "2026-11-20T16:33:01+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:33:01 +0000",
-    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "committee_report",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Reports",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-crpt",
-    "n": 11740,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-crpt"
-    ]
-  },
-  {
-    "title": "SEC Issues Proposal to Restructure the Consolidated Audit Trail",
-    "url": "https://www.sec.gov/newsroom/press-releases/2026-117-sec-issues-proposal-restructure-consolidated-audit-trail",
-    "native_id": "1c720e0a-bf4e-4c42-9b9b-af997adb9b8e",
-    "published_at": "2026-11-20T18:03:24+00:00",
-    "published_raw": "Fri, 20 Nov 2026 13:03:24 -0500",
-    "summary": "The Securities and Exchange Commission today issued a proposal to address the inefficiencies in the current governance and funding model of the Consolidated Audit Trail (CAT). The Commission is proposing to rescind Rule 613 of Regulation NMS, which…",
+    "title": "NATIONAL ADOPTION MONTH, 2026",
+    "url": "https://www.whitehouse.gov/presidential-actions/2026/11/national-adoption-month-2026/",
+    "native_id": "https://www.whitehouse.gov/?p=55072",
+    "published_at": "2026-11-21T02:31:38+00:00",
+    "published_raw": "Sat, 21 Nov 2026 02:31:38 +0000",
+    "summary": "From the moment a child is conceived, they are a gift from God, bringing hope, love, and a future filled with promise into the world. For countless children across our Nation, adoption provides the gift of a loving family and nurturing home where they can feel safe, supported, and encouraged to pursue their own unique […] The post NATIONAL ADOPTION MONTH, 2026 appeared first on The White House .",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Securities and Exchange Commission",
+      "issuer": "White House presidential actions",
       "jurisdiction": "US",
-      "family": "enforcement_and_market_rules"
+      "family": "executive_instruments"
     },
-    "primary_source_id": "us-sec-8940dd7737",
-    "n": 11741,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
+    "primary_source_id": "us-white-house-0691096d16",
+    "n": 11825,
+    "first_seen": "2026-11-21T08:18:38.026359+00:00",
+    "last_seen": "2026-11-21T08:18:38.026359+00:00",
     "source_ids": [
-      "us-sec-8940dd7737"
+      "us-white-house-0691096d16"
     ]
   },
   {
-    "title": "SEC Charges Indianapolis-Based Backward Hat Capital and Its Co-Founders With $560 Million Dollar Offering Fraud and Obtains Emergency Relief",
-    "url": "https://www.sec.gov/newsroom/press-releases/2026-116-sec-charges-indianapolis-based-backward-hat-capital-its-co-founders-560-million-dollar-offering",
-    "native_id": "0ffb24a1-44c1-4fbe-ba45-fb7725313d44",
-    "published_at": "2026-11-20T14:28:28+00:00",
-    "published_raw": "Fri, 20 Nov 2026 09:28:28 -0500",
-    "summary": "The Securities and Exchange Commission today announced that it has obtained a temporary restraining order, asset freeze, expedited discovery, and other relief against Indianapolis-based Backward Hat Capital, its co-founders Phillip Williams and Devin…",
+    "title": "PROTECTING THE EXECUTIVE’S PRIVILEGES AND ENHANCING EFFICIENCIES IN FEDERAL CONTRACTING",
+    "url": "https://www.whitehouse.gov/presidential-actions/2026/11/protecting-the-executives-privileges-and-enhancing-efficiencies-in-federal-contracting/",
+    "native_id": "https://www.whitehouse.gov/?p=55074",
+    "published_at": "2026-11-21T02:31:05+00:00",
+    "published_raw": "Sat, 21 Nov 2026 02:31:05 +0000",
+    "summary": "By the authority vested in me as President by the Constitution and the laws of the United States of America, including the Federal Property and Administrative Services Act (40 U.S.C. 101 et seq.) and the common law, it is hereby ordered: Section 1. Purpose and Policy. In order to protect and serve the American people, […] The post PROTECTING THE EXECUTIVE’S PRIVILEGES AND ENHANCING EFFICIENCIES IN FEDERAL CONTRACTING appeared first on The White House .",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Securities and Exchange Commission",
+      "issuer": "White House presidential actions",
       "jurisdiction": "US",
-      "family": "enforcement_and_market_rules"
+      "family": "executive_instruments"
     },
-    "primary_source_id": "us-sec-8940dd7737",
-    "n": 11742,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
+    "primary_source_id": "us-white-house-0691096d16",
+    "n": 11826,
+    "first_seen": "2026-11-21T08:18:38.026359+00:00",
+    "last_seen": "2026-11-21T08:18:38.026359+00:00",
     "source_ids": [
-      "us-sec-8940dd7737"
+      "us-white-house-0691096d16"
     ]
   },
   {
-    "title": "Jose A. Gamez",
-    "url": "https://www.sec.gov/enforcement-litigation/litigation-releases/lr-26692",
-    "native_id": "f5872ff5-3ede-4e02-a7e9-e70dd2974093",
-    "published_at": "2026-11-20T20:05:57+00:00",
-    "published_raw": "Fri, 20 Nov 2026 15:05:57 -0500",
-    "summary": "Jose A. Gamez",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Securities and Exchange Commission",
-      "jurisdiction": "US",
-      "family": "enforcement_and_market_rules"
-    },
-    "primary_source_id": "us-sec-2476f14c28",
-    "n": 11743,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-sec-2476f14c28"
-    ]
-  },
-  {
-    "title": "Gerard Ryan",
-    "url": "https://www.sec.gov/enforcement-litigation/litigation-releases/lr-26691",
-    "native_id": "6c17003d-7ce7-4966-be4f-b6b3cb8802f7",
-    "published_at": "2026-11-20T15:17:58+00:00",
-    "published_raw": "Fri, 20 Nov 2026 10:17:58 -0500",
-    "summary": "Gerard Ryan",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Securities and Exchange Commission",
-      "jurisdiction": "US",
-      "family": "enforcement_and_market_rules"
-    },
-    "primary_source_id": "us-sec-2476f14c28",
-    "n": 11744,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-sec-2476f14c28"
-    ]
-  },
-  {
-    "title": "Ten Additional States Join FTC Lawsuit Alleging Dollar General Charged Consumers More than Advertised for Many Products",
-    "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ten-additional-states-join-ftc-lawsuit-alleging-dollar-general-charged-consumers-more-advertised",
-    "native_id": "339304",
+    "title": "Attorney General Blanche Honors Goodyear Police Officer Dakota Berry for Distinguished Service",
+    "url": "https://www.justice.gov/usao-az/pr/attorney-general-blanche-honors-goodyear-police-officer-dakota-berry-distinguished",
+    "native_id": "https://www.justice.gov/usao-az/pr/attorney-general-blanche-honors-goodyear-police-officer-dakota-berry-distinguished",
     "published_at": "2026-11-20T12:00:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 07:00:00 -0500",
-    "summary": "The Federal Trade Commission filed an amended complaint adding ten states as co-plaintiffs in a lawsuit alleging that Dollar General Corporation engaged in long-running deceptive pricing practices by routinely charging customers more at the register than the prices displayed on shelves, price tags and advertisements, costing consumers millions of dollars. View Press Release",
+    "published_raw": "Fri, 20 Nov 2026 12:00:00 +0000",
+    "summary": "WASHINGTON – Goodyear Police Officer Dakota Berry was among the law enforcement officers from around the nation who were selected to be honored by U.S. Attorney General Todd Blanche today for Distinguished Service in Policing.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Trade Commission — Press Releases",
+      "issuer": "Department of Justice",
       "jurisdiction": "US",
-      "family": "competition_and_enforcement"
+      "family": "judicial_and_enforcement"
     },
-    "primary_source_id": "us-ftc-58b0383166",
-    "n": 11745,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 11827,
+    "first_seen": "2026-11-21T08:18:38.026359+00:00",
+    "last_seen": "2026-11-21T08:18:38.026359+00:00",
     "source_ids": [
-      "us-ftc-58b0383166",
-      "us-ftc-62f72b4a5d"
+      "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "Federal Jury Finds Couple Guilty of Wire Fraud and Money Laundering in Scheme to Defraud Medicare, Medicaid, and Private Insurers Out of Over $15 Million",
-    "url": "https://www.justice.gov/usao-mn/pr/federal-jury-finds-couple-guilty-wire-fraud-and-money-laundering-scheme-defraud-medicare",
-    "native_id": "https://www.justice.gov/usao-mn/pr/federal-jury-finds-couple-guilty-wire-fraud-and-money-laundering-scheme-defraud-medicare",
+    "title": "Federal Prosecutors Add More Than 560 Immigration Cases Through First Half of November in Western District of Texas",
+    "url": "https://www.justice.gov/usao-wdtx/pr/federal-prosecutors-add-more-560-immigration-cases-through-first-half-november-western",
+    "native_id": "https://www.justice.gov/usao-wdtx/pr/federal-prosecutors-add-more-560-immigration-cases-through-first-half-november-western",
+    "published_at": "2026-11-20T12:00:00+00:00",
+    "published_raw": "Fri, 20 Nov 2026 12:00:00 +0000",
+    "summary": "Federal prosecutors in the Western District of Texas filed 568 new immigration and immigration-related criminal cases from Nov. 6 through Nov. 20",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 11828,
+    "first_seen": "2026-11-21T08:18:38.026359+00:00",
+    "last_seen": "2026-11-21T08:18:38.026359+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "Federal grand jury indicts Albion man for defrauding the VA out of hundreds of thousands of dollars",
+    "url": "https://www.justice.gov/usao-wdny/pr/federal-grand-jury-indicts-albion-man-defrauding-va-out-hundreds-thousands-dollars",
+    "native_id": "https://www.justice.gov/usao-wdny/pr/federal-grand-jury-indicts-albion-man-defrauding-va-out-hundreds-thousands-dollars",
+    "published_at": "2026-11-20T12:00:00+00:00",
+    "published_raw": "Fri, 20 Nov 2026 12:00:00 +0000",
+    "summary": "U.S. Attorney Michael DiGiacomo announced today that a federal grand jury has returned an indictment charging Timmie L. Haynes, 64, of Albion, NY, with five counts of wire fraud, which carries a maximum penalty of 20 years in prison. This action is part of the Trump Administration’s Task Force to Eliminate Fraud.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 11829,
+    "first_seen": "2026-11-21T08:18:38.026359+00:00",
+    "last_seen": "2026-11-21T08:18:38.026359+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "District of Arizona Charges 314 Individuals for Immigration-Related Criminal Conduct this Week",
+    "url": "https://www.justice.gov/usao-az/pr/district-arizona-charges-314-individuals-immigration-related-criminal-conduct-week-1",
+    "native_id": "https://www.justice.gov/usao-az/pr/district-arizona-charges-314-individuals-immigration-related-criminal-conduct-week-1",
+    "published_at": "2026-11-20T12:00:00+00:00",
+    "published_raw": "Fri, 20 Nov 2026 12:00:00 +0000",
+    "summary": "PHOENIX, Ariz. – During the week of enforcement operations from Nov. 14 through Nov. 20, 2026, the U.S. Attorney’s Office for the District of Arizona brought immigration-related criminal charges against 314 individuals.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 11830,
+    "first_seen": "2026-11-21T08:18:38.026359+00:00",
+    "last_seen": "2026-11-21T08:18:38.026359+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "Hartford Man Sentenced to 6 Years in Federal Prison for Illegal Gun Possession",
+    "url": "https://www.justice.gov/usao-ct/pr/hartford-man-sentenced-6-years-federal-prison-illegal-gun-possession",
+    "native_id": "https://www.justice.gov/usao-ct/pr/hartford-man-sentenced-6-years-federal-prison-illegal-gun-possession",
+    "published_at": "2026-11-20T12:00:00+00:00",
+    "published_raw": "Fri, 20 Nov 2026 12:00:00 +0000",
+    "summary": "LAWRENCE SMALL, 33, of Hartford, was sentenced today by U.S. District Judge Kari A. Dooley in Bridgeport to 72 months of imprisonment and three years of supervised release for unlawfully possessing a firearm.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 11831,
+    "first_seen": "2026-11-21T08:18:38.026359+00:00",
+    "last_seen": "2026-11-21T08:18:38.026359+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "Illegal alien charged with falsely claiming U.S. citizenship at DFW Airport",
+    "url": "https://www.justice.gov/usao-ndtx/pr/illegal-alien-charged-falsely-claiming-us-citizenship-dfw-airport",
+    "native_id": "https://www.justice.gov/usao-ndtx/pr/illegal-alien-charged-falsely-claiming-us-citizenship-dfw-airport",
+    "published_at": "2026-11-20T12:00:00+00:00",
+    "published_raw": "Fri, 20 Nov 2026 12:00:00 +0000",
+    "summary": "United States Attorney for the Northern District of Texas Ryan Raybould announced that an illegal alien from Mexico has been indicted for falsely claiming to be a U.S. Citizen after allegedly attempting to enter the country using a fraudulently obtained U.S. passport at Dallas Fort Worth International Airport.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 11832,
+    "first_seen": "2026-11-21T08:18:38.026359+00:00",
+    "last_seen": "2026-11-21T08:18:38.026359+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "Illinois Man Charged with Possession and Transportation of Child Pornography",
+    "url": "https://www.justice.gov/usao-nj/pr/illinois-man-charged-possession-and-transportation-child-pornography",
+    "native_id": "https://www.justice.gov/usao-nj/pr/illinois-man-charged-possession-and-transportation-child-pornography",
+    "published_at": "2026-11-20T12:00:00+00:00",
+    "published_raw": "Fri, 20 Nov 2026 12:00:00 +0000",
+    "summary": "An Illinois man was charged with possessing and transporting child sexual abuse material that had been generated using Super Intelligence (SI).",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 11833,
+    "first_seen": "2026-11-21T08:18:38.026359+00:00",
+    "last_seen": "2026-11-21T08:18:38.026359+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "LOCAL OKANAGAN COUNTY DEPUTY HONORED NATIONALLY FOR HIS EXCEPTIONAL BRAVERY",
+    "url": "https://www.justice.gov/usao-edwa/pr/local-okanagan-county-deputy-honored-nationally-his-exceptional-bravery",
+    "native_id": "https://www.justice.gov/usao-edwa/pr/local-okanagan-county-deputy-honored-nationally-his-exceptional-bravery",
     "published_at": "2026-11-20T12:00:00+00:00",
     "published_raw": "Fri, 20 Nov 2026 12:00:00 +0000",
     "summary": "",
@@ -1736,20 +352,20 @@
       "family": "judicial_and_enforcement"
     },
     "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 11746,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
+    "n": 11834,
+    "first_seen": "2026-11-21T08:18:38.026359+00:00",
+    "last_seen": "2026-11-21T08:18:38.026359+00:00",
     "source_ids": [
       "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "ADA Settlement Requires Accessibility Improvements at Cochran-Bleckley Recreation Department",
-    "url": "https://www.justice.gov/usao-mdga/pr/ada-settlement-requires-accessibility-improvements-cochran-bleckley-recreation",
-    "native_id": "https://www.justice.gov/usao-mdga/pr/ada-settlement-requires-accessibility-improvements-cochran-bleckley-recreation",
+    "title": "New Britain Man Admits Role in Firearms Trafficking Conspiracy",
+    "url": "https://www.justice.gov/usao-ct/pr/new-britain-man-admits-role-firearms-trafficking-conspiracy",
+    "native_id": "https://www.justice.gov/usao-ct/pr/new-britain-man-admits-role-firearms-trafficking-conspiracy",
     "published_at": "2026-11-20T12:00:00+00:00",
     "published_raw": "Fri, 20 Nov 2026 12:00:00 +0000",
-    "summary": "MACON, Ga. – The Cochran-Bleckley Recreation Department has agreed to make accessibility improvements across its facility following an investigation by the U.S. Attorney's Office into allegations that certain areas were not readily accessible to or usable by individuals with disabilities, as required by the Americans with Disabilities Act (ADA).",
+    "summary": "DEMONTE HOLLEY, 38, of New Britain, pleaded guilty yesterday before U.S. District Judge Kari A. Dooley in Bridgeport to a firearms trafficking offense.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -1760,20 +376,20 @@
       "family": "judicial_and_enforcement"
     },
     "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 11747,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
+    "n": 11835,
+    "first_seen": "2026-11-21T08:18:38.026359+00:00",
+    "last_seen": "2026-11-21T08:18:38.026359+00:00",
     "source_ids": [
       "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "Snapchat User Sentenced to 16 Years in Prison for Receiving Child Sexual Abuse Material",
-    "url": "https://www.justice.gov/usao-wdnc/pr/snapchat-user-sentenced-16-years-prison-receiving-child-sexual-abuse-material",
-    "native_id": "https://www.justice.gov/usao-wdnc/pr/snapchat-user-sentenced-16-years-prison-receiving-child-sexual-abuse-material",
+    "title": "Albuquerque Man Charged with Diverting Estate Funds for Personal Use",
+    "url": "https://www.justice.gov/usao-nm/pr/albuquerque-man-charged-diverting-estate-funds-personal-use",
+    "native_id": "https://www.justice.gov/usao-nm/pr/albuquerque-man-charged-diverting-estate-funds-personal-use",
     "published_at": "2026-11-20T12:00:00+00:00",
     "published_raw": "Fri, 20 Nov 2026 12:00:00 +0000",
-    "summary": "",
+    "summary": "James Joseph Owens has been indicted for allegedly transferring estate and trust funds into accounts under his control and using the proceeds for his personal benefit.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -1784,20 +400,20 @@
       "family": "judicial_and_enforcement"
     },
     "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 11748,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
+    "n": 11836,
+    "first_seen": "2026-11-21T08:18:38.026359+00:00",
+    "last_seen": "2026-11-21T08:18:38.026359+00:00",
     "source_ids": [
       "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "Indian National Sentenced to Over 19 Years in Prison for Plotting to Assassinate U.S. Citizen In New York City",
-    "url": "https://www.justice.gov/opa/pr/indian-national-sentenced-over-19-years-prison-plotting-assassinate-us-citizen-new-york-city",
-    "native_id": "https://www.justice.gov/opa/pr/indian-national-sentenced-over-19-years-prison-plotting-assassinate-us-citizen-new-york-city",
+    "title": "Cheyenne Resident Charged with Wire Fraud and Money Laundering in Connection with $270,000 Fraud Scheme",
+    "url": "https://www.justice.gov/usao-wy/pr/cheyenne-resident-charged-wire-fraud-and-money-laundering-connection-270000-fraud-scheme",
+    "native_id": "https://www.justice.gov/usao-wy/pr/cheyenne-resident-charged-wire-fraud-and-money-laundering-connection-270000-fraud-scheme",
     "published_at": "2026-11-20T12:00:00+00:00",
     "published_raw": "Fri, 20 Nov 2026 12:00:00 +0000",
-    "summary": "Nikhil Gupta, also known as “Nick,” 55, an Indian national, was sentenced today to 235 months in prison for his participation in a scheme directed by a government of India employee to assassinate an attorney and political activist in the United States. In February 2026, Gupta pled guilty to a superseding indictment charging him with murder-for-hire, conspiracy to commit murder-for-hire, and conspiracy to commit money laundering.",
+    "summary": "CHEYENNE, Wyo. – A federal indictment has been unsealed charging Ariyan Devonte Trawick , of Cheyenne, in connection with a scheme to defraud three victims between March and August 2024.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -1808,21 +424,20 @@
       "family": "judicial_and_enforcement"
     },
     "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 11749,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
+    "n": 11837,
+    "first_seen": "2026-11-21T08:18:38.026359+00:00",
+    "last_seen": "2026-11-21T08:18:38.026359+00:00",
     "source_ids": [
-      "us-doj-b3d27e1dc3",
-      "us-doj-e05071794d"
+      "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "Cincinnati man sentenced to 16 months for making death threats against ICE agents",
-    "url": "https://www.justice.gov/usao-sdoh/pr/cincinnati-man-sentenced-16-months-making-death-threats-against-ice-agents",
-    "native_id": "https://www.justice.gov/usao-sdoh/pr/cincinnati-man-sentenced-16-months-making-death-threats-against-ice-agents",
+    "title": "Former Middle School Teacher Pleads Guilty to Money Laundering",
+    "url": "https://www.justice.gov/usao-wdtx/pr/former-middle-school-teacher-pleads-guilty-money-laundering",
+    "native_id": "https://www.justice.gov/usao-wdtx/pr/former-middle-school-teacher-pleads-guilty-money-laundering",
     "published_at": "2026-11-20T12:00:00+00:00",
     "published_raw": "Fri, 20 Nov 2026 12:00:00 +0000",
-    "summary": "CINCINNATI – A Cincinnati man who made multiple threats online to shoot and kill ICE officers was sentenced in federal court here today to 16 months.",
+    "summary": "Jeremy Jarod Jackson pleaded guilty in federal court for his scheme to launder more than $500,000 of stolen federal tax refunds",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -1833,20 +448,20 @@
       "family": "judicial_and_enforcement"
     },
     "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 11750,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
+    "n": 11838,
+    "first_seen": "2026-11-21T08:18:38.026359+00:00",
+    "last_seen": "2026-11-21T08:18:38.026359+00:00",
     "source_ids": [
       "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "Tensas Parish Man Sentenced to 25 Years in Federal Prison for Methamphetamine Trafficking",
-    "url": "https://www.justice.gov/usao-wdla/pr/tensas-parish-man-sentenced-25-years-federal-prison-methamphetamine-trafficking",
-    "native_id": "https://www.justice.gov/usao-wdla/pr/tensas-parish-man-sentenced-25-years-federal-prison-methamphetamine-trafficking",
+    "title": "Grand Jury for the District of Nebraska - November 2026",
+    "url": "https://www.justice.gov/usao-ne/pr/grand-jury-district-nebraska-november-2026",
+    "native_id": "https://www.justice.gov/usao-ne/pr/grand-jury-district-nebraska-november-2026",
     "published_at": "2026-11-20T12:00:00+00:00",
     "published_raw": "Fri, 20 Nov 2026 12:00:00 +0000",
-    "summary": "",
+    "summary": "The federal Grand Jury for the District of Nebraska has returned 15 unsealed Indictments charging 15 defendants.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -1857,20 +472,20 @@
       "family": "judicial_and_enforcement"
     },
     "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 11751,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
+    "n": 11839,
+    "first_seen": "2026-11-21T08:18:38.026359+00:00",
+    "last_seen": "2026-11-21T08:18:38.026359+00:00",
     "source_ids": [
       "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "Attorney General Blanche Honors Bradford Police Officer Jacob Hubbard for Exemplary Community Involvement",
-    "url": "https://www.justice.gov/usao-nh/pr/attorney-general-blanche-honors-bradford-police-officer-jacob-hubbard-exemplary",
-    "native_id": "https://www.justice.gov/usao-nh/pr/attorney-general-blanche-honors-bradford-police-officer-jacob-hubbard-exemplary",
+    "title": "Nigerian Man Sentenced to 24 Months for Aggravated Identity Theft",
+    "url": "https://www.justice.gov/usao-ne/pr/nigerian-man-sentenced-24-months-aggravated-identity-theft",
+    "native_id": "https://www.justice.gov/usao-ne/pr/nigerian-man-sentenced-24-months-aggravated-identity-theft",
     "published_at": "2026-11-20T12:00:00+00:00",
     "published_raw": "Fri, 20 Nov 2026 12:00:00 +0000",
-    "summary": "",
+    "summary": "Chukwuebuka Madueke Arinze, 38, of Nigeria, was sentenced on October 30, 2026, in federal court in Omaha, Nebraska, for aggravated identity theft.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -1881,260 +496,20 @@
       "family": "judicial_and_enforcement"
     },
     "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 11752,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
+    "n": 11840,
+    "first_seen": "2026-11-21T08:18:38.026359+00:00",
+    "last_seen": "2026-11-21T08:18:38.026359+00:00",
     "source_ids": [
       "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "Orleans Parish Man Sentenced to 45 Years for Fentanyl Distribution and Machinegun Possession",
-    "url": "https://www.justice.gov/usao-edla/pr/orleans-parish-man-sentenced-45-years-fentanyl-distribution-and-machinegun-possession",
-    "native_id": "https://www.justice.gov/usao-edla/pr/orleans-parish-man-sentenced-45-years-fentanyl-distribution-and-machinegun-possession",
+    "title": "DOJ Scores Key Victory in Precedent-Setting Military Attorney Licensing Case",
+    "url": "https://www.justice.gov/opa/pr/doj-scores-key-victory-precedent-setting-military-attorney-licensing-case",
+    "native_id": "https://www.justice.gov/opa/pr/doj-scores-key-victory-precedent-setting-military-attorney-licensing-case",
     "published_at": "2026-11-20T12:00:00+00:00",
     "published_raw": "Fri, 20 Nov 2026 12:00:00 +0000",
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 11753,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "Five Philadelphia Men Convicted at Trial of Large-Scale Cargo Theft Conspiracy",
-    "url": "https://www.justice.gov/usao-edpa/pr/five-philadelphia-men-convicted-trial-large-scale-cargo-theft-conspiracy",
-    "native_id": "https://www.justice.gov/usao-edpa/pr/five-philadelphia-men-convicted-trial-large-scale-cargo-theft-conspiracy",
-    "published_at": "2026-11-20T12:00:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 12:00:00 +0000",
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 11754,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "Shreveport Woman Sentenced to 33 Months in Prison for Embezzlement",
-    "url": "https://www.justice.gov/usao-edla/pr/shreveport-woman-sentenced-33-months-prison-embezzlement",
-    "native_id": "https://www.justice.gov/usao-edla/pr/shreveport-woman-sentenced-33-months-prison-embezzlement",
-    "published_at": "2026-11-20T12:00:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 12:00:00 +0000",
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 11755,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "El Dorado County TikTok creator charged with coercion and enticement and distribution of child sexual abuse material",
-    "url": "https://www.justice.gov/usao-edca/pr/el-dorado-county-tiktok-creator-charged-coercion-and-enticement-and-distribution-child",
-    "native_id": "https://www.justice.gov/usao-edca/pr/el-dorado-county-tiktok-creator-charged-coercion-and-enticement-and-distribution-child",
-    "published_at": "2026-11-20T12:00:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 12:00:00 +0000",
-    "summary": "A federal grand jury returned a two-count indictment Thursday against Adam Cease, 30, of Cameron Park, charging him with coercion and enticement and distribution of child sexual abuse material (CSAM).",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 11756,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "Attorney General Todd Blanche Honors Decatur Police Detective with Award for Distinguished Service in Policing",
-    "url": "https://www.justice.gov/usao-ndga/pr/attorney-general-todd-blanche-honors-decatur-police-detective-award-distinguished",
-    "native_id": "https://www.justice.gov/usao-ndga/pr/attorney-general-todd-blanche-honors-decatur-police-detective-award-distinguished",
-    "published_at": "2026-11-20T12:00:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 12:00:00 +0000",
-    "summary": "Today, Attorney General Todd Blanche recognized Decatur Police Department Sergeant Robert Lindsey with the Attorney General’s Award for Distinguished Service in Policing during a Washington, D.C. ceremony. United States Attorney Theodore S. Hertzberg attended the ceremony to honor Sgt. Lindsey, who was one of 30 state or local law enforcement officers recognized nationwide.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 11757,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "Bronx Gang Member Sentenced To 40 Years For Murder Of Rap Artist",
-    "url": "https://www.justice.gov/usao-sdny/pr/bronx-gang-member-sentenced-40-years-murder-rap-artist",
-    "native_id": "https://www.justice.gov/usao-sdny/pr/bronx-gang-member-sentenced-40-years-murder-rap-artist",
-    "published_at": "2026-11-20T12:00:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 12:00:00 +0000",
-    "summary": "United States Attorney for the Southern District of New York, Jamie McDonald, announced that PAUL JOHNSON, a/k/a “PJ Glizzy,” was sentenced today to 40 years in prison for the murder of 18-year-old Jayquan McKenley, a rap artist who performed under the name “CHII WVTTZ.”",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 11758,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "Philadelphia Man Admits Multi-Million Dollar Health Care Fraud",
-    "url": "https://www.justice.gov/usao-nj/pr/philadelphia-man-admits-multi-million-dollar-health-care-fraud",
-    "native_id": "https://www.justice.gov/usao-nj/pr/philadelphia-man-admits-multi-million-dollar-health-care-fraud",
-    "published_at": "2026-11-20T12:00:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 12:00:00 +0000",
-    "summary": "A Philadelphia man who owned and operated a purported ambulance transport business admitted to a health care fraud scheme.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 11759,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "U.S. Attorney’s Office Filed 111 Border-Related Cases This Week",
-    "url": "https://www.justice.gov/usao-sdca/pr/us-attorneys-office-filed-111-border-related-cases-week-3",
-    "native_id": "https://www.justice.gov/usao-sdca/pr/us-attorneys-office-filed-111-border-related-cases-week-3",
-    "published_at": "2026-11-20T12:00:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 12:00:00 +0000",
-    "summary": "SAN DIEGO – Federal prosecutors in the Southern District of California filed 111 border-related cases this week, including charges of bringing in aliens for financial gain, reentering the U.S. after deportation, and importation of controlled substances. The U.S. Attorney’s Office for the Southern District of California is the fourth-busiest federal district, largely due to a high volume of border-related crimes. This district, encompassing San Diego and Imperial counties, shares a 140-mile border with Mexico. It includes the San Ysidro Port of Entry, the world’s busiest land border crossing, connecting San Diego (America’s eighth largest city) and Tijuana (Mexico’s second largest city).",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 11760,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "Orangeburg Felon Pleads Guilty to Federal Firearms Charge",
-    "url": "https://www.justice.gov/usao-sc/pr/orangeburg-felon-pleads-guilty-federal-firearms-charge",
-    "native_id": "https://www.justice.gov/usao-sc/pr/orangeburg-felon-pleads-guilty-federal-firearms-charge",
-    "published_at": "2026-11-20T12:00:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 12:00:00 +0000",
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 11761,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "Illegal Alien Pleads Guilty to Healthcare Benefit Fraud",
-    "url": "https://www.justice.gov/usao-ma/pr/illegal-alien-pleads-guilty-healthcare-benefit-fraud",
-    "native_id": "https://www.justice.gov/usao-ma/pr/illegal-alien-pleads-guilty-healthcare-benefit-fraud",
-    "published_at": "2026-11-20T12:00:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 12:00:00 +0000",
-    "summary": "BOSTON – A Dominican national unlawfully residing in Lynn, Mass. pleaded guilty today in federal court in Boston to health care benefit fraud.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-b3d27e1dc3",
-    "n": 11762,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-doj-b3d27e1dc3"
-    ]
-  },
-  {
-    "title": "Honor the Honorable: The Attorney General's Award for Distinguished Service in Policing",
-    "url": "https://www.justice.gov/opa/video/honor-honorable-attorney-generals-award-distinguished-service-policing",
-    "native_id": "https://www.justice.gov/opa/video/honor-honorable-attorney-generals-award-distinguished-service-policing",
-    "published_at": "2026-11-20T12:00:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 12:00:00 +0000",
-    "summary": "",
+    "summary": "The Justice Department has defeated New Mexico’s attempt to dismiss a landmark case involving the licensing of servicemember and military spouse attorneys. On Nov. 19, Judge Kea Riggs of the U.S. District for the District of New Mexico denied motions to dismiss filed by the New Mexico Supreme Court and the New Mexico Board of Bar Examiners in the Department’s first-ever lawsuit to enforce the professional license portability provisions of the Servicemembers Civil Relief Act (SCRA).",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -2145,164 +520,20 @@
       "family": "judicial_and_enforcement"
     },
     "primary_source_id": "us-doj-e05071794d",
-    "n": 11763,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
+    "n": 11841,
+    "first_seen": "2026-11-21T08:18:38.026359+00:00",
+    "last_seen": "2026-11-21T08:18:38.026359+00:00",
     "source_ids": [
       "us-doj-e05071794d"
     ]
   },
   {
-    "title": "Law Firm Owner Indicted for Willful Failure to File Tax Returns",
-    "url": "https://www.justice.gov/opa/pr/law-firm-owner-indicted-willful-failure-file-tax-returns",
-    "native_id": "https://www.justice.gov/opa/pr/law-firm-owner-indicted-willful-failure-file-tax-returns",
-    "published_at": "2026-11-20T12:00:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 12:00:00 +0000",
-    "summary": "An indictment was unsealed today in the District of Colorado charging a Colorado Springs, Colorado, man with willfully failing to file individual and corporate tax returns for the years 2020 to 2025.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice — RSS Feed",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-e05071794d",
-    "n": 11764,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-doj-e05071794d"
-    ]
-  },
-  {
-    "title": "Justice Department Announces Recipients of Honor the Honorable: The Attorney General’s Award for Distinguished Service in Policing",
-    "url": "https://www.justice.gov/opa/pr/justice-department-announces-recipients-honor-honorable-attorney-generals-award",
-    "native_id": "https://www.justice.gov/opa/pr/justice-department-announces-recipients-honor-honorable-attorney-generals-award",
-    "published_at": "2026-11-20T12:00:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 12:00:00 +0000",
-    "summary": "Attorney General Todd Blanche today announced the recipients of Honor the Honorable: The Attorney General’s Award for Distinguished Service in Policing. This award represents the Department of Justice’s reaffirmed commitment to uplifting the valor and exceptional contributions to policing of our great nation’s law enforcement personnel.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Justice — RSS Feed",
-      "jurisdiction": "US",
-      "family": "judicial_and_enforcement"
-    },
-    "primary_source_id": "us-doj-e05071794d",
-    "n": 11765,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-doj-e05071794d"
-    ]
-  },
-  {
-    "title": "Iran Designations; Issuance of Cuba Frequently Asked Questions",
-    "url": "https://ofac.treasury.gov/recent-actions/20261120",
-    "native_id": "https://ofac.treasury.gov/recent-actions/20261120",
-    "published_at": "2026-11-20T00:00:00+00:00",
-    "published_raw": "date in publication URL",
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Treasury Office of Foreign Assets Control",
-      "jurisdiction": "US",
-      "family": "sanctions_and_access"
-    },
-    "primary_source_id": "us-ofac-index",
-    "n": 11766,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-ofac-index"
-    ]
-  },
-  {
-    "title": "USITC Makes Determinations in Five-Year (Sunset) Reviews Concerning Certain Steel Nails from Malaysia, Oman, South Korea, Taiwan, and Vietnam",
-    "url": "https://www.usitc.gov/press_room/news_release/2026/er1120_69540.htm",
-    "native_id": "https://www.usitc.gov/press_room/news_release/2026/er1120_69540.htm",
-    "published_at": null,
-    "published_raw": null,
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "United States International Trade Commission",
-      "jurisdiction": "US",
-      "family": "trade_and_judicial"
-    },
-    "primary_source_id": "us-itc-index",
-    "n": 11767,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-itc-index"
-    ]
-  },
-  {
-    "title": "USITC Releases The Year in Trade 2025",
-    "url": "https://www.usitc.gov/press_room/news_release/2026/er1120_69537.htm",
-    "native_id": "https://www.usitc.gov/press_room/news_release/2026/er1120_69537.htm",
-    "published_at": null,
-    "published_raw": null,
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "United States International Trade Commission",
-      "jurisdiction": "US",
-      "family": "trade_and_judicial"
-    },
-    "primary_source_id": "us-itc-index",
-    "n": 11768,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-itc-index"
-    ]
-  },
-  {
-    "title": "USITC Votes to Continue Investigations on Wooden Fence Components from China",
-    "url": "https://www.usitc.gov/press_room/news_release/2026/er1120_69541.htm",
-    "native_id": "https://www.usitc.gov/press_room/news_release/2026/er1120_69541.htm",
-    "published_at": null,
-    "published_raw": null,
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "United States International Trade Commission",
-      "jurisdiction": "US",
-      "family": "trade_and_judicial"
-    },
-    "primary_source_id": "us-itc-index",
-    "n": 11769,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-itc-index"
-    ]
-  },
-  {
-    "title": "Federal Reserve Board releases results from survey of senior financial officers at banks about their strategies and practices for managing reserve balances",
-    "url": "https://www.federalreserve.gov/newsevents/pressreleases/other20261120a.htm",
-    "native_id": "https://www.federalreserve.gov/newsevents/pressreleases/other20261120a.htm",
-    "published_at": "2026-11-20T15:00:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 15:00:00 GMT",
-    "summary": "Federal Reserve Board releases results from survey of senior financial officers at banks about their strategies and practices for managing reserve balances",
+    "title": "Federal Reserve announces College Fed Challenge winners",
+    "url": "https://www.federalreserve.gov/newsevents/pressreleases/other20261120b.htm",
+    "native_id": "https://www.federalreserve.gov/newsevents/pressreleases/other20261120b.htm",
+    "published_at": "2026-11-20T21:15:00+00:00",
+    "published_raw": "Fri, 20 Nov 2026 21:15:00 GMT",
+    "summary": "Federal Reserve announces College Fed Challenge winners",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -2313,21 +544,141 @@
       "family": "monetary_operations"
     },
     "primary_source_id": "us-fed-97656cefc7",
-    "n": 11770,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
+    "n": 11842,
+    "first_seen": "2026-11-21T08:18:38.026359+00:00",
+    "last_seen": "2026-11-21T08:18:38.026359+00:00",
     "source_ids": [
       "us-fed-1555c8e0e5",
       "us-fed-97656cefc7"
     ]
   },
   {
-    "title": "Stephen J. Fallon, Ph.D. - 728673 - 11/13/2026",
-    "url": "http://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/stephen-j-fallon-phd-728673-11132026",
-    "native_id": "http://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/stephen-j-fallon-phd-728673-11132026",
-    "published_at": "2026-11-20T15:04:59+00:00",
-    "published_raw": "Fri, 20 Nov 2026 10:04:59 EST",
-    "summary": "Bioresearch Monitoring Program/Institutional Review Board (IRB)",
+    "title": "Greenwich Rx Issues Voluntary Nationwide Recall of Compounded Sterile Products Due to Lack of Sterility Assurance",
+    "url": "http://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/greenwich-rx-issues-voluntary-nationwide-recall-compounded-sterile-products-due-lack-sterility",
+    "native_id": "http://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/greenwich-rx-issues-voluntary-nationwide-recall-compounded-sterile-products-due-lack-sterility",
+    "published_at": "2026-11-20T23:30:08+00:00",
+    "published_raw": "Fri, 20 Nov 2026 18:30:08 EST",
+    "summary": "FOR IMMEDIATE RELEASE - Tomball, Texas – November 20, 2026 – Greenwich Rx, a 503A compounding pharmacy, is voluntarily recalling specific lots of compounded sterile products that remain within their beyond-use dates to the consumer level, including some products that were compounded by Greenwich Rx",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 11843,
+    "first_seen": "2026-11-21T08:18:38.026359+00:00",
+    "last_seen": "2026-11-21T08:18:38.026359+00:00",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "Breckenridge Pharmaceutical, Inc. Issues Voluntary Nationwide Consumer-Level Recall of One Lot of Propranolol Hydrochloride Extended-Release Capsules, USP, 60 mg, Due to Potential Metal Contamination",
+    "url": "http://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/breckenridge-pharmaceutical-inc-issues-voluntary-nationwide-consumer-level-recall-one-lot",
+    "native_id": "http://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/breckenridge-pharmaceutical-inc-issues-voluntary-nationwide-consumer-level-recall-one-lot",
+    "published_at": "2026-11-20T19:05:14+00:00",
+    "published_raw": "Fri, 20 Nov 2026 14:05:14 EST",
+    "summary": "November 16, 2026— Breckenridge Pharmaceutical, Inc. (Breckenridge) is voluntarily recalling to the consumer level one lot of Propranolol Hydrochloride Extended-Release Capsules, USP, 60 mg, manufactured by Adare Pharma Solutions, due to potential metal contamination.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 11844,
+    "first_seen": "2026-11-21T08:18:38.026359+00:00",
+    "last_seen": "2026-11-21T08:18:38.026359+00:00",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "First Generic Drug Approvals",
+    "url": "http://www.fda.gov/drugs/drug-and-biologic-approval-and-ind-activity-reports/first-generic-drug-approvals",
+    "native_id": "http://www.fda.gov/drugs/drug-and-biologic-approval-and-ind-activity-reports/first-generic-drug-approvals",
+    "published_at": "2026-11-20T17:12:45+00:00",
+    "published_raw": "Fri, 20 Nov 2026 12:12:45 EST",
+    "summary": "Each year, FDA’s Center for Drug Evaluation and Research (CDER) approves a wide range of new drug products. FDA provides the scientific and regulatory advice needed to bring safe, effective, high-quality generic alternatives to market, which in turn creates more affordable treatment options for pati",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 11845,
+    "first_seen": "2026-11-21T08:18:38.026359+00:00",
+    "last_seen": "2026-11-21T08:18:38.026359+00:00",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "Office of Infectious Diseases Research Activities",
+    "url": "http://www.fda.gov/about-fda/center-drug-evaluation-and-research-cder/office-infectious-diseases-research-activities",
+    "native_id": "http://www.fda.gov/about-fda/center-drug-evaluation-and-research-cder/office-infectious-diseases-research-activities",
+    "published_at": "2026-11-20T17:12:05+00:00",
+    "published_raw": "Fri, 20 Nov 2026 12:12:05 EST",
+    "summary": "Overview of research needs, requests for information (RFIs), public workshops/meetings, opportunities for collaboration (this applies to RFI), notable guidances related to regulatory science, externally awarded research studies, and other important regulatory science and research activities.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 11846,
+    "first_seen": "2026-11-21T08:18:38.026359+00:00",
+    "last_seen": "2026-11-21T08:18:38.026359+00:00",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "Ogle Cattle Company, Inc. - 713311 - 09/05/2025",
+    "url": "http://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/ogle-cattle-company-inc-713311-09052025",
+    "native_id": "http://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/ogle-cattle-company-inc-713311-09052025",
+    "published_at": "2026-11-20T15:20:13+00:00",
+    "published_raw": "Fri, 20 Nov 2026 10:20:13 EST",
+    "summary": "New Animal Drug/Adulterated",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 11847,
+    "first_seen": "2026-11-21T08:18:38.026359+00:00",
+    "last_seen": "2026-11-21T08:18:38.026359+00:00",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "Statement on Deramiocel BLA for Duchenne Muscular Dystrophy",
+    "url": "http://www.fda.gov/vaccines-blood-biologics/whats-new-biologics/statement-deramiocel-bla-duchenne-muscular-dystrophy",
+    "native_id": "http://www.fda.gov/vaccines-blood-biologics/whats-new-biologics/statement-deramiocel-bla-duchenne-muscular-dystrophy",
+    "published_at": "2026-11-20T23:11:20+00:00",
+    "published_raw": "Fri, 20 Nov 2026 18:11:20 EST",
+    "summary": "FDA determined that the available evidence does not meet the evidentiary standard required for approval",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -2338,68 +689,20 @@
       "family": "product_permissions_and_safety"
     },
     "primary_source_id": "us-fda-03f7703006",
-    "n": 11771,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
+    "n": 11848,
+    "first_seen": "2026-11-21T08:18:38.026359+00:00",
+    "last_seen": "2026-11-21T08:18:38.026359+00:00",
     "source_ids": [
       "us-fda-03f7703006"
     ]
   },
   {
-    "title": "Stephen J. Fallon, Ph.D. - 728673 - 08/27/2026",
-    "url": "http://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/stephen-j-fallon-phd-728673-08272026",
-    "native_id": "http://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/stephen-j-fallon-phd-728673-08272026",
-    "published_at": "2026-11-20T15:04:31+00:00",
-    "published_raw": "Fri, 20 Nov 2026 10:04:31 EST",
-    "summary": "Bioresearch Monitoring Program/Institutional Review Board (IRB)",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-03f7703006",
-    "n": 11772,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-fda-03f7703006"
-    ]
-  },
-  {
-    "title": "CPSC Shares Tips for a Safer Holiday Feast",
-    "url": "https://www.cpsc.gov/Newsroom/News-Releases/2027/CPSC-Shares-Tips-for-a-Safer-Holiday-Feast",
-    "native_id": "https://www.cpsc.gov/_700a65d1-4027-4ce7-a11e-3fd94af8521e",
-    "published_at": null,
-    "published_raw": "Thu, 11/19/2026 - 12:00",
-    "summary": "CPSC is reminding everyone to stay alert in the kitchen throughout the holiday season.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Consumer Product Safety Commission",
-      "jurisdiction": "US",
-      "family": "product_safety"
-    },
-    "primary_source_id": "us-cpsc-08fe06e2e6",
-    "n": 11773,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-cpsc-08fe06e2e6"
-    ]
-  },
-  {
-    "title": "HHS Awards $2 Million to Advance Chronic Disease Prevention in American Indian and Alaska Native Communities",
-    "url": "https://www.hhs.gov/press-room/hhs-awards-2-million-chronic-disease-prevention-american-indian-alaska-native-communities.html",
-    "native_id": "https://www.hhs.gov/press-room/hhs-awards-2-million-chronic-disease-prevention-american-indian-alaska-native-communities.html",
-    "published_at": "2026-11-20T20:15:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 15:15:00 -0500",
-    "summary": "HHS has awarded $2 million in grants to two organizations to expand the Center for Indigenous Innovation and Health",
+    "title": "CMS Proposes Reforms to Strengthen Competition, Elevate Care Quality, and Expand Beneficiary Choice in Medicare Advantage",
+    "url": "https://www.hhs.gov/press-room/cms-proposes-medicare-advantage-reforms-competition-quality-beneficiary-choice.html",
+    "native_id": "https://www.hhs.gov/press-room/cms-proposes-medicare-advantage-reforms-competition-quality-beneficiary-choice.html",
+    "published_at": "2026-11-20T22:34:23+00:00",
+    "published_raw": "Fri, 20 Nov 2026 17:34:23 -0500",
+    "summary": "The Centers for Medicare & Medicaid Services issued a proposed rule that is intended to revitalize competition in Medicare Advantage (MA) and Part D.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -2410,1091 +713,35 @@
       "family": "health_administration"
     },
     "primary_source_id": "us-hhs-6f995a5754",
-    "n": 11774,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
+    "n": 11849,
+    "first_seen": "2026-11-21T08:18:38.026359+00:00",
+    "last_seen": "2026-11-21T08:18:38.026359+00:00",
     "source_ids": [
       "us-hhs-6f995a5754"
     ]
   },
   {
-    "title": "HHS Announces $47 Million in MAHA ELEVATE Awards to 15 Organizations to Test Chronic Disease Prevention Approaches in Medicare",
-    "url": "https://www.hhs.gov/press-room/hhs-awards-47-million-maha-elevate-medicare-chronic-disease-prevention.html",
-    "native_id": "https://www.hhs.gov/press-room/hhs-awards-47-million-maha-elevate-medicare-chronic-disease-prevention.html",
-    "published_at": "2026-11-20T17:03:56+00:00",
-    "published_raw": "Fri, 20 Nov 2026 12:03:56 -0500",
-    "summary": "HHS, announced $47 million in awards to 15 organizations to test new approaches to chronic disease prevention.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Health and Human Services",
-      "jurisdiction": "US",
-      "family": "health_administration"
-    },
-    "primary_source_id": "us-hhs-6f995a5754",
-    "n": 11775,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-hhs-6f995a5754"
-    ]
-  },
-  {
-    "title": "Secretary Kennedy Examines Dark Side of Organ Harvesting in China with Journalist Jan Jekielek in Latest Podcast Episode",
-    "url": "https://www.hhs.gov/press-room/secretary-kennedy-podcast-jan-jekielek-china-organ-harvesting.html",
-    "native_id": "https://www.hhs.gov/press-room/secretary-kennedy-podcast-jan-jekielek-china-organ-harvesting.html",
-    "published_at": "2026-11-20T15:00:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 10:00:00 -0500",
-    "summary": "HHS Secretary Robert F. Kennedy, Jr. released “The Dark Side of Organ Harvesting,” a new episode of The Secretary Kennedy Podcast.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Health and Human Services",
-      "jurisdiction": "US",
-      "family": "health_administration"
-    },
-    "primary_source_id": "us-hhs-6f995a5754",
-    "n": 11776,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-hhs-6f995a5754"
-    ]
-  },
-  {
-    "title": "Joint Statement on Controlled Detonation at Iowa Army Ammunition Plant",
-    "url": "https://www.hhs.gov/press-room/hhs-joint-statement-controlled-detonation-middletown-iowa.html",
-    "native_id": "https://www.hhs.gov/press-room/hhs-joint-statement-controlled-detonation-middletown-iowa.html",
-    "published_at": "2026-11-20T14:30:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 09:30:00 -0500",
-    "summary": "The entire interagency is working together to ensure that the controlled detonation in Middletown, Iowa is conducted in the safest fashion possible.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Health and Human Services",
-      "jurisdiction": "US",
-      "family": "health_administration"
-    },
-    "primary_source_id": "us-hhs-6f995a5754",
-    "n": 11777,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-hhs-6f995a5754"
-    ]
-  },
-  {
-    "title": "FCC Announces Latest Conditional Approvals for Covered List Equipment",
-    "url": "https://www.fcc.gov/edoc/427346",
-    "native_id": "427346",
+    "title": "In the Matter of TeleTarget LLC dba Investorfuel",
+    "url": "https://www.fcc.gov/edoc/427199",
+    "native_id": "427199",
     "published_at": null,
     "published_raw": "",
-    "summary": "Process Protects National Security and Spurs Investment in U.S. Companies and Workers",
+    "summary": "EB issues a citation to TeleTarget LLC dba Investorfuel for failure to comply with a subpoena as part of an investigation into real estate telemarketing by a foreign call center that it operates.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — News Releases",
+      "issuer": "Federal Communications Commission — Enforcement Bureau",
       "jurisdiction": "US",
       "family": "telecom_rules_and_licences"
     },
-    "primary_source_id": "us-fcc-685c5e7dd2",
-    "n": 11778,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
+    "primary_source_id": "us-fcc-364d1b4932",
+    "n": 11850,
+    "first_seen": "2026-11-21T08:18:38.026359+00:00",
+    "last_seen": "2026-11-21T08:18:38.026359+00:00",
     "source_ids": [
-      "us-fcc-685c5e7dd2"
-    ]
-  },
-  {
-    "title": "FCC Adopts California Network Modernization Order",
-    "url": "https://www.fcc.gov/edoc/427392",
-    "native_id": "427392",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — News Releases",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-685c5e7dd2",
-    "n": 11779,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-fcc-685c5e7dd2"
-    ]
-  },
-  {
-    "title": "PSHSB Announces Region 1 (Alabama) RPCs to Hold 700 MHZ and 800 MHZ Meetings",
-    "url": "https://www.fcc.gov/edoc/427366",
-    "native_id": "427366",
-    "published_at": null,
-    "published_raw": "",
-    "summary": "Announces Region 1 (Alabama) RPC Meetings for 700 MHZ and 800 MHZ",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 11780,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Wireline Competition Bureau Reminds Rip-and-Replace Program Recipients of Their December 28, 2026 Status Update Filing Obligation",
-    "url": "https://www.fcc.gov/edoc/427369",
-    "native_id": "427369",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 11781,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Actions",
-    "url": "https://www.fcc.gov/edoc/427333",
-    "native_id": "427333",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 11782,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Applications",
-    "url": "https://www.fcc.gov/edoc/427332",
-    "native_id": "427332",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 11783,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Pleadings",
-    "url": "https://www.fcc.gov/edoc/427334",
-    "native_id": "427334",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 11784,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Satellite Licensing Division and Satellite Programs and Policy Division Information - SAT - Actions Taken",
-    "url": "https://www.fcc.gov/edoc/427342",
-    "native_id": "427342",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 11785,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Satellite Licensing Division and Satellite Programs and Policy Division Information - SAT - Accepted for Filing",
-    "url": "https://www.fcc.gov/edoc/427341",
-    "native_id": "427341",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 11786,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Streamlined International Applications Accepted For Filing - ITC",
-    "url": "https://www.fcc.gov/edoc/427337",
-    "native_id": "427337",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 11787,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Non Streamlined International Applications/Petitions Accepted For Filing - ITC",
-    "url": "https://www.fcc.gov/edoc/427335",
-    "native_id": "427335",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 11788,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Non-Streamlined Submarine Cable Landing License Applications - SCL",
-    "url": "https://www.fcc.gov/edoc/427339",
-    "native_id": "427339",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 11789,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Wireline Competition Bureau and Office of Economics and Analytics Announce Results of 2027 Urban Rate Survey for Fixed Voice and Broadband Services, Posting of Survey Data and Explanatory Notes, and Required Minimum Usage Allowance For ETCs",
-    "url": "https://www.fcc.gov/edoc/427368",
-    "native_id": "427368",
-    "published_at": null,
-    "published_raw": "",
-    "summary": "The Wireline Competition Bureau and Office of Economics and Analytics announce results of the 2027 Urban Rate Survey for fixed voice and broadband services, posting of survey data and explanatory notes, and required minimum usage allowance for ETCs.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 11790,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "The EU and the United Kingdom turn closeness into common strength and prosperity at second bilateral summit",
-    "url": "https://ec.europa.eu/commission/presscorner/detail/en/ac_26_2555",
-    "native_id": "https://ec.europa.eu/commission/presscorner/detail/en/ac_26_2555",
-    "published_at": "2026-11-20T17:17:57+00:00",
-    "published_raw": "Fri, 20 Nov 2026 17:17:57 GMT",
-    "summary": "European Commission News Brussels, 20 Nov 2026 Commission President Ursula von der Leyen and European Council President António Costa hosted British Prime Minister Andy Burnham in Brussels today for the sec...",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "European Commission press and decisions",
-      "jurisdiction": "EU",
-      "family": "executive_and_regulatory"
-    },
-    "primary_source_id": "eu-commission-07d4f58ccf",
-    "n": 11791,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "eu-commission-07d4f58ccf"
-    ]
-  },
-  {
-    "title": "Commission partially greenlights Malta's final payment request for €61.7 million under NextGenerationEU",
-    "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2550",
-    "native_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2550",
-    "published_at": "2026-11-20T12:32:21+00:00",
-    "published_raw": "Fri, 20 Nov 2026 12:32:21 GMT",
-    "summary": "European Commission Press release Brussels, 20 Nov 2026 Today, the European Commission partially greenlighted Malta's fifth and final payment request for €61.7 million under the Recovery and Resilience Facility (RRF), the centrepiece of NextGenerationEU.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "European Commission press and decisions",
-      "jurisdiction": "EU",
-      "family": "executive_and_regulatory"
-    },
-    "primary_source_id": "eu-commission-07d4f58ccf",
-    "n": 11792,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "eu-commission-07d4f58ccf"
-    ]
-  },
-  {
-    "title": "Commission greenlights Portugal's final payment request for €4.7 billion under NextGenerationEU",
-    "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2549",
-    "native_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2549",
-    "published_at": "2026-11-20T12:30:50+00:00",
-    "published_raw": "Fri, 20 Nov 2026 12:30:50 GMT",
-    "summary": "European Commission Press release Brussels, 20 Nov 2026 Today, the European Commission positively assessed Portugal's tenth and final payment request of €4.7 billion under the Recovery and Resilience Facility, the centrepiece of NextGenerationEU.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "European Commission press and decisions",
-      "jurisdiction": "EU",
-      "family": "executive_and_regulatory"
-    },
-    "primary_source_id": "eu-commission-07d4f58ccf",
-    "n": 11793,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "eu-commission-07d4f58ccf"
-    ]
-  },
-  {
-    "title": "Commission greenlights Ireland's final payment request for €225 million under NextGenerationEU",
-    "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2548",
-    "native_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2548",
-    "published_at": "2026-11-20T12:29:15+00:00",
-    "published_raw": "Fri, 20 Nov 2026 12:29:15 GMT",
-    "summary": "European Commission Press release Brussels, 20 Nov 2026 Today, the European Commission greenlighted Ireland's fifth and final payment request for €225 million under the Recovery and Resilience Facility (RRF), the centrepiece of NextGenerationEU.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "European Commission press and decisions",
-      "jurisdiction": "EU",
-      "family": "executive_and_regulatory"
-    },
-    "primary_source_id": "eu-commission-07d4f58ccf",
-    "n": 11794,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "eu-commission-07d4f58ccf"
-    ]
-  },
-  {
-    "title": "Commission partially greenlights Poland's final payment request for €12.7 billion under NextGenerationEU",
-    "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2547",
-    "native_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2547",
-    "published_at": "2026-11-20T12:27:35+00:00",
-    "published_raw": "Fri, 20 Nov 2026 12:27:35 GMT",
-    "summary": "European Commission Press release Brussels, 20 Nov 2026 Today, the European Commission partially greenlighted Poland's sixth and final payment request for €12.7 billion under the Recovery and Resilience Facility, the centrepiece of NextGenerationEU.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "European Commission press and decisions",
-      "jurisdiction": "EU",
-      "family": "executive_and_regulatory"
-    },
-    "primary_source_id": "eu-commission-07d4f58ccf",
-    "n": 11795,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "eu-commission-07d4f58ccf"
-    ]
-  },
-  {
-    "title": "Commission partially greenlights Hungary's first and final payment request for €10 billion under NextGenerationEU",
-    "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2546",
-    "native_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2546",
-    "published_at": "2026-11-20T12:24:37+00:00",
-    "published_raw": "Fri, 20 Nov 2026 12:24:37 GMT",
-    "summary": "European Commission Press release Brussels, 20 Nov 2026 Today, the European Commission partially greenlighted Hungary's first and final payment request for €10 billion under the Recovery and Resilience Facility (RRF), the centrepiece of NextGenerationEU.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "European Commission press and decisions",
-      "jurisdiction": "EU",
-      "family": "executive_and_regulatory"
-    },
-    "primary_source_id": "eu-commission-07d4f58ccf",
-    "n": 11796,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "eu-commission-07d4f58ccf"
-    ]
-  },
-  {
-    "title": "Commissioner Tzitzikostas delivers a video address at 50th anniversary of the Hellenic Institute of Transportation Engineers",
-    "url": "https://ec.europa.eu/commission/presscorner/detail/el/speech_26_2544",
-    "native_id": "https://ec.europa.eu/commission/presscorner/detail/el/speech_26_2544",
-    "published_at": "2026-11-20T10:35:32+00:00",
-    "published_raw": "Fri, 20 Nov 2026 10:35:32 GMT",
-    "summary": "European Commission Ομιλία Brussels, 20 Nov 2026 Κύριε Πρόεδρε, Κυρίες και κύριοι, Το Ελληνικό Ινστιτούτο Συγκοινωνιολόγων ιδρύθηκε το 1976. Τον Ιούλιο της ίδιας χρονιάς, η Ελλάδα άνοιγε στις Βρυξέλλες τις δια...",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "European Commission press and decisions",
-      "jurisdiction": "EU",
-      "family": "executive_and_regulatory"
-    },
-    "primary_source_id": "eu-commission-07d4f58ccf",
-    "n": 11797,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "eu-commission-07d4f58ccf"
-    ]
-  },
-  {
-    "title": "Daily News 20 / 11 / 2026",
-    "url": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2543",
-    "native_id": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2543",
-    "published_at": "2026-11-20T10:34:48+00:00",
-    "published_raw": "Fri, 20 Nov 2026 10:34:48 GMT",
-    "summary": "European Commission Daily news Brussels, 20 Nov 2026 Commission greenlights over €16 billion in payment requests for Belgium, Bulgaria, Greece, Slovenia and the Netherlands Today, the European Commission approved...",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "European Commission press and decisions",
-      "jurisdiction": "EU",
-      "family": "executive_and_regulatory"
-    },
-    "primary_source_id": "eu-commission-07d4f58ccf",
-    "n": 11798,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "eu-commission-07d4f58ccf"
-    ]
-  },
-  {
-    "title": "Commission greenlights Slovenia's seventh and final payment request for €271.8 million under NextGenerationEU",
-    "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2535",
-    "native_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2535",
-    "published_at": "2026-11-20T09:04:07+00:00",
-    "published_raw": "Fri, 20 Nov 2026 09:04:07 GMT",
-    "summary": "European Commission Press release Brussels, 20 Nov 2026 Today, the European Commission greenlighted Slovenia's seventh payment request worth €271.8 million under the Recovery and Resilience Facility, the centrepiece of NextGenerationEU.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "European Commission press and decisions",
-      "jurisdiction": "EU",
-      "family": "executive_and_regulatory"
-    },
-    "primary_source_id": "eu-commission-07d4f58ccf",
-    "n": 11799,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "eu-commission-07d4f58ccf"
-    ]
-  },
-  {
-    "title": "Commission greenlights Greece's final payment requests for €11.32 billion under NextGenerationEU",
-    "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2534",
-    "native_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2534",
-    "published_at": "2026-11-20T09:00:19+00:00",
-    "published_raw": "Fri, 20 Nov 2026 09:00:19 GMT",
-    "summary": "European Commission Press release Brussels, 20 Nov 2026 Today, the European Commission greenlighted Greece's eighth and ninth payment requests, amounting to €11.32 billion, under the Recovery and Resilience Facility (RRF), the centrepiece of NextGenerationEU.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "European Commission press and decisions",
-      "jurisdiction": "EU",
-      "family": "executive_and_regulatory"
-    },
-    "primary_source_id": "eu-commission-07d4f58ccf",
-    "n": 11800,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "eu-commission-07d4f58ccf"
-    ]
-  },
-  {
-    "title": "Weekly schedule of President António Costa",
-    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/20/weekly-schedule-of-president-antonio-costa/",
-    "native_id": "152580",
-    "published_at": "2026-11-20T20:15:00+00:00",
-    "published_raw": "2026-11-20T21:15:00+01:00",
-    "summary": "Weekly schedule of President António Costa, 21-29 November 2026.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Council of the European Union",
-      "jurisdiction": "EU",
-      "family": "sanctions_and_legislation"
-    },
-    "primary_source_id": "eu-council-9d9e9444da",
-    "n": 11801,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "eu-council-9d9e9444da"
-    ]
-  },
-  {
-    "title": "Statement by Eurogroup President Kyriakos Pierrakakis on the nominations for the post of ECB executive board members",
-    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/20/statement-by-the-eurogroup-president-on-the-nominations-for-the-post-of-ecb-executive-board-members/",
-    "native_id": "152555",
-    "published_at": "2026-11-20T16:35:00+00:00",
-    "published_raw": "2026-11-20T17:35:00+01:00",
-    "summary": "Eurogroup President issued a statement on the nominations for the post of ECB executive board members.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Council of the European Union",
-      "jurisdiction": "EU",
-      "family": "sanctions_and_legislation"
-    },
-    "primary_source_id": "eu-council-9d9e9444da",
-    "n": 11802,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "eu-council-9d9e9444da"
-    ]
-  },
-  {
-    "title": "European Peace Facility: Council mobilises additional €1 billion in new military aid to Ukraine",
-    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/20/european-peace-facility-council-mobilises-additional-1-billion-in-new-military-aid-to-ukraine/",
-    "native_id": "152571",
-    "published_at": "2026-11-20T14:50:00+00:00",
-    "published_raw": "2026-11-20T15:50:00+01:00",
-    "summary": "The Council has adopted two decisions mobilising €1 billion of European Peace Facility funds in support of the Armed Forces of Ukraine through the joint procurement of both lethal and non-lethal equipment.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Council of the European Union",
-      "jurisdiction": "EU",
-      "family": "sanctions_and_legislation"
-    },
-    "primary_source_id": "eu-council-9d9e9444da",
-    "n": 11803,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "eu-council-9d9e9444da"
-    ]
-  },
-  {
-    "title": "Media advisory - Agriculture and Fisheries Council of 23 November 2026",
-    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/20/media-advisory-agriculture-and-fisheries-council-of-23-november-2026/",
-    "native_id": "152538",
-    "published_at": "2026-11-20T14:30:00+00:00",
-    "published_raw": "2026-11-20T15:30:00+01:00",
-    "summary": "Main agenda items, approximate timing, public sessions and press opportunities.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Council of the European Union",
-      "jurisdiction": "EU",
-      "family": "sanctions_and_legislation"
-    },
-    "primary_source_id": "eu-council-9d9e9444da",
-    "n": 11804,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "eu-council-9d9e9444da"
-    ]
-  },
-  {
-    "title": "Council calls for action to safeguard Europe’s traditional sports and games for future generations",
-    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/20/council-calls-for-action-to-safeguard-europe-s-traditional-sports-and-games-for-future-generations/",
-    "native_id": "152485",
-    "published_at": "2026-11-20T14:10:00+00:00",
-    "published_raw": "2026-11-20T15:10:00+01:00",
-    "summary": "The Council has approved conclusions calling for greater efforts to preserve and promote traditional sports and games in the EU.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Council of the European Union",
-      "jurisdiction": "EU",
-      "family": "sanctions_and_legislation"
-    },
-    "primary_source_id": "eu-council-9d9e9444da",
-    "n": 11805,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "eu-council-9d9e9444da"
-    ]
-  },
-  {
-    "title": "Media advisory - General Affairs Council (Cohesion) of 23 November 2026",
-    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/20/media-advisory-general-affairs-council-cohesion-of-23-november-2026/",
-    "native_id": "152558",
-    "published_at": "2026-11-20T13:54:00+00:00",
-    "published_raw": "2026-11-20T14:54:00+01:00",
-    "summary": "Main agenda items, approximate timing and press opportunities.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Council of the European Union",
-      "jurisdiction": "EU",
-      "family": "sanctions_and_legislation"
-    },
-    "primary_source_id": "eu-council-9d9e9444da",
-    "n": 11806,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "eu-council-9d9e9444da"
-    ]
-  },
-  {
-    "title": "Remarks by President António Costa at the press conference following the EU-UK summit of 20 November 2026",
-    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/20/remarks-by-president-antonio-costa-at-the-press-conference-following-the-eu-uk-summit-of-20-november-2026/",
-    "native_id": "152560",
-    "published_at": "2026-11-20T13:54:00+00:00",
-    "published_raw": "2026-11-20T14:54:00+01:00",
-    "summary": "During the press conference held after at the end of the EU-United Kingdom summit of 20 November 2026, President António Costa addressed the press.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Council of the European Union",
-      "jurisdiction": "EU",
-      "family": "sanctions_and_legislation"
-    },
-    "primary_source_id": "eu-council-9d9e9444da",
-    "n": 11807,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "eu-council-9d9e9444da"
-    ]
-  },
-  {
-    "title": "Joint statement EU-United Kingdom summit, 20 November 2026",
-    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/20/joint-statement-eu-united-kingdom-summit-20-november-2026/",
-    "native_id": "152552",
-    "published_at": "2026-11-20T13:07:00+00:00",
-    "published_raw": "2026-11-20T14:07:00+01:00",
-    "summary": "The leaders of the European Union and United Kingdom held their second EU-UK summit in Brussels on 20 November 2026, and agreed on a joint statement.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Council of the European Union",
-      "jurisdiction": "EU",
-      "family": "sanctions_and_legislation"
-    },
-    "primary_source_id": "eu-council-9d9e9444da",
-    "n": 11808,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "eu-council-9d9e9444da"
-    ]
-  },
-  {
-    "title": "MFF 2028-2034: Council agrees negotiating position on stronger civil protection mechanism and support for health preparedness",
-    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/20/mff-2028-2034-council-agrees-negotiating-position-on-stronger-civil-protection-mechanism-and-support-for-health-preparedness/",
-    "native_id": "152545",
-    "published_at": "2026-11-20T12:30:00+00:00",
-    "published_raw": "2026-11-20T13:30:00+01:00",
-    "summary": "The Council agreed its partial negotiating position on the Union civil protection mechanism and Union support for health emergency preparedness and response.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Council of the European Union",
-      "jurisdiction": "EU",
-      "family": "sanctions_and_legislation"
-    },
-    "primary_source_id": "eu-council-9d9e9444da",
-    "n": 11809,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "eu-council-9d9e9444da"
-    ]
-  },
-  {
-    "title": "The EBA publishes updated information on third-country groups and branches operating in the EU/EEA",
-    "url": "https://www.eba.europa.eu/publications-and-media/press-releases/eba-publishes-updated-information-third-country-groups-and-branches-operating-eueea",
-    "native_id": "https://www.eba.europa.eu/publications-and-media/press-releases/eba-publishes-updated-information-third-country-groups-and-branches-operating-eueea",
-    "published_at": "2026-11-20T08:46:25+00:00",
-    "published_raw": "Fri, 20 Nov 2026 09:46:25 +0100",
-    "summary": "The European Banking Authority (EBA) has published its 2026 update on third-country groups and third-country branches operating in the European Union and the European Economic Area (EU/EEA). The publication provides a comprehensive overview of the presence, ownership structures and organisational arrangements of third-country banking groups active across the EU/EEA, supporting transparency in the European banking sector.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "European Banking Authority",
-      "jurisdiction": "EU",
-      "family": "financial_supervision"
-    },
-    "primary_source_id": "eu-eba-60bdc59843",
-    "n": 11810,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "eu-eba-60bdc59843"
-    ]
-  },
-  {
-    "title": "Conversion/Switch of State Government Securities",
-    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64017",
-    "native_id": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64017",
-    "published_at": "2026-11-20T19:45:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 19:45:00",
-    "summary": "The following State Governments have announced the conversion/switch of their securities through auction for an aggregate amount of ₹10,800 crore (face value). The security-wise details of the conversion/switch are given as under: Date of Auction Source Securities Amount (FV) of Source Securities (in ₹ crore) Destination Securities November 26, 2026 (Thursday) 7.55% Madhya Pradesh SDL 2027 (Maturing on Oct 11, 2027) 1,000 7.91% Madhya Pradesh SGS 2036 (Maturing on Oct 07, 2036) 8.05% Madhya Pradesh SDL 2028 (Maturing on Feb 14, 2028) 1,000 7.61% Madhya Pradesh SGS 2044 (Maturing on Jul 08, 2044) 7.63% Punjab SDL 2027 (Maturing on Apr 12, 2027) 800 7.65% Punjab SGS 2043 (Maturing on Aug 12, 2043) 7.02% Punjab SDL 2028 (Maturing on Mar 10, 2028) 1,000 7.75% Punjab SGS 2035 (Maturing on Sep 09, 2035) 7.45% Rajasthan SDL 2027 (Maturing on Sep 27, 2027) 1,000 7.64% Rajasthan SGS 2036 (Maturing on Apr 22, 2036) 8.07% Rajasthan SDL 2029 (Maturing on May 08, 2029) 1,000 7.68% Rajasthan SGS 2044 (Maturing on Jul 29, 2044) 7.65% Tamil Nadu SDL 2027 (Maturing on Dec 06, 2027) 1,000 7.80% Tamil Nadu SGS 2041 (Maturing on May 06, 2041) 8.08% Tamil Nadu SDL 2028 (Maturing on Dec 26, 2028) 2,000 ",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Reserve Bank of India",
-      "jurisdiction": "IN",
-      "family": "monetary_and_supervisory"
-    },
-    "primary_source_id": "in-rbi-cc71120b98",
-    "n": 11811,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "in-rbi-cc71120b98"
-    ]
-  },
-  {
-    "title": "RBI to conduct 4-day Variable Rate Repo (VRR) auction under LAF on November 23, 2026",
-    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64016",
-    "native_id": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64016",
-    "published_at": "2026-11-20T19:25:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 19:25:00",
-    "summary": "On a review of current and evolving liquidity conditions in the near term, it has been decided to conduct a Variable Rate Repo (VRR) auction on Monday, November 23, 2026, as under: Sl. No. Notified Amount (₹ crore) Tenor (day) Window Timing Date of Reversal 1 50,000 4 9:30 AM to 10:00 AM November 27, 2026 (Friday) 2. The operational guidelines for the auction will be same as given in Reserve Bank’s Press Release 2021-2022/1572 dated January 20, 2022 . Ajit Prasad Deputy General Manager (Communications) Press Release: 2026-2027/1538",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Reserve Bank of India",
-      "jurisdiction": "IN",
-      "family": "monetary_and_supervisory"
-    },
-    "primary_source_id": "in-rbi-cc71120b98",
-    "n": 11812,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "in-rbi-cc71120b98"
-    ]
-  },
-  {
-    "title": "RBI imposes monetary penalty on Fusion Finance Limited",
-    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64015",
-    "native_id": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64015",
-    "published_at": "2026-11-20T17:35:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 17:35:00",
-    "summary": "The Reserve Bank of India (RBI) has, by an order dated November 17, 2026, imposed a monetary penalty of ₹7.50 lakh (Rupees Seven Lakh Fifty Thousand only) on Fusion Finance Limited (the company) for non-compliance with certain provisions of directions issued by RBI on ‘Know Your Customer (KYC)’ and ‘Internal Ombudsman’. This penalty has been imposed in exercise of powers conferred on RBI under section 58G(1)(b) read with section 58B(5)(aa) of the Reserve Bank of India Act, 1934. The statutory inspection of the company was conducted by RBI with reference to its financial position as on March 31, 2026. Based on the supervisory findings of non-compliance with RBI directions and related correspondence in that regard, a notice was issued to the company advising it to show cause as to why penalty should not be imposed on it for failure to comply with the RBI directions. After considering the company's reply to the notice, additional submissions made by it and oral submissions made during the personal hearing, RBI found that the following charges against the company were sustained, warranting imposition of monetary penalty: The company failed to obtain PAN or equivalent e-document thereof",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Reserve Bank of India",
-      "jurisdiction": "IN",
-      "family": "monetary_and_supervisory"
-    },
-    "primary_source_id": "in-rbi-cc71120b98",
-    "n": 11813,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "in-rbi-cc71120b98"
-    ]
-  },
-  {
-    "title": "Auction of 91-Day, 182-Day and 364-Day Treasury Bills",
-    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64014",
-    "native_id": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64014",
-    "published_at": "2026-11-20T17:20:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 17:20:00",
-    "summary": "Reserve Bank of India announces the auction of Government of India Treasury Bills as per the following details: Sr. No. Treasury Bill Notified Amount (₹ crore) Auction Date Settlement Date 1 91-Day 8,000 November 25, 2026 (Wednesday) November 26, 2026 (Thursday) 2 182-Day 8,000 3 364-Day 7,000 Total 23,000 The sale will be subject to the terms and conditions specified in the General Notification F.No.4(2)-B(W&M)/2018 dated March 26, 2025 , issued by Government of India, as amended from time to time. State Governments, Union Territories with legislature, eligible Provident Funds in India, designated Foreign Central Banks and any person or institution specified by the Bank in this regard can participate on non-competitive basis, the allocation for which will be outside the notified amount. Individuals can also participate on non-competitive basis, as retail investors. For retail investors, the allocation will be restricted to a maximum of 5 percent of the notified amount. Individual investors can also place bids as per the non-competitive scheme through the Retail Direct portal ( https://rbiretaildirect.org.in ). The auction will be Price based using multiple price method. Bids for t",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Reserve Bank of India",
-      "jurisdiction": "IN",
-      "family": "monetary_and_supervisory"
-    },
-    "primary_source_id": "in-rbi-cc71120b98",
-    "n": 11814,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "in-rbi-cc71120b98"
-    ]
-  },
-  {
-    "title": "Reserve Bank of India – Bulletin Weekly Statistical Supplement – Extract",
-    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64013",
-    "native_id": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64013",
-    "published_at": "2026-11-20T17:00:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 17:00:00",
-    "summary": "1. Reserve Bank of India - Liabilities and Assets* (₹ Crore) Item 2025 2026 Variation Nov. 14 Nov. 6 Nov. 13 Week Year 1 2 3 4 5 4 Loans and Advances 4.1 Central Government 0 0 0 0 0 4.2 State Governments 31808 15415 21004 5589 -10804 * Data are provisional; difference, if any, is due to rounding off. 2. Foreign Exchange Reserves* Item As on November 13, 2026 Variation over Week End-March 2026 Year ₹ Cr. US$ Mn. ₹ Cr. US$ Mn. ₹ Cr. US$ Mn. ₹ Cr. US$ Mn. 1 2 3 4 5 6 7 8 1 Total Reserves 6647812 705342 -111173 -14205 93951 14234 501730 12765 1.1 Foreign Currency Assets # 5499031 583452 -55669 -7897 261664 31170 509142 21163 1.2 Gold 929430 98613 -54947 -6183 -164879 -16782 -18848 -8244 1.3 SDRs 174527 18517 -281 -92 -2062 -104 9024 -132 1.4 Reserve Position in the IMF 44824 4758 -277 -32 -771 -50 2411 -21 * Difference, if any, is due to rounding off. # Excludes (a) SDR holdings of the Reserve Bank, as they are included under the SDR holdings; (b) investment in bonds issued by IIFC (UK); (c) amounts lent under SAARC and ACU currency swap arrangements; and (d) RBI’s contribution to funding of Nexus Global Payments. 4. Scheduled Commercial Banks - Business in India (₹ Crore) Item Outsta",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Reserve Bank of India",
-      "jurisdiction": "IN",
-      "family": "monetary_and_supervisory"
-    },
-    "primary_source_id": "in-rbi-cc71120b98",
-    "n": 11815,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "in-rbi-cc71120b98"
-    ]
-  },
-  {
-    "title": "Government Stock - Full Auction Results",
-    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64012",
-    "native_id": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64012",
-    "published_at": "2026-11-20T15:30:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 15:30:00",
-    "summary": "(Amount in ₹ Crore) Auction Results 6.53% GS 2031 7.71% GS 2066 I. Notified Amount 19,000 14,000 II. Competitive Bids Received (i) Number 251 292 (ii) Amount 48,923.250 36,969.000 III. Cut-off price (₹) / Yield 97.66 98.80 (YTM: 7.1116%) (YTM: 7.8083%) IV. Competitive Bids Accepted (i) Number 84 89 (ii) Amount 18,990.947 13,980.724 V. Partial Allotment Percentage of Competitive Bids 55.6500% 82.5677% (23 bids) (10 bids) VI. Weighted Average Price (₹) / Yield 97.68 98.86 (WAY: 7.1066%) (WAY: 7.8033%) VII. Non-Competitive Bids Received (i) Number 3 3 (ii) Amount 9.053 19.276 VIII. Non-Competitive Bids Accepted (i) Number 3 3 (ii) Amount 9.053 19.276 (iii) Partial Allotment Percentage IX. Underwriting Notified Amount 19,000 14,000 X. Amount of Underwriting accepted from primary dealers 19,000 14,000 XI. Devolvement on Primary Dealers NIL NIL Ajit Prasad Deputy General Manager (Communications) Press Release: 2026-2027/1534",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Reserve Bank of India",
-      "jurisdiction": "IN",
-      "family": "monetary_and_supervisory"
-    },
-    "primary_source_id": "in-rbi-cc71120b98",
-    "n": 11816,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "in-rbi-cc71120b98"
-    ]
-  },
-  {
-    "title": "Invitation to bid – Federal Treasury discount paper (Bubills)",
-    "url": "https://www.bundesbank.de/en/press/press-releases/federal-securities/-invitation-to-bid-federal-treasury-discount-paper-bubills--1016580",
-    "native_id": "https://www.bundesbank.de/en/press/press-releases/federal-securities/-invitation-to-bid-federal-treasury-discount-paper-bubills--1016580",
-    "published_at": "2026-11-20T09:00:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 09:00:00 GMT",
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Deutsche Bundesbank",
-      "jurisdiction": "DE",
-      "family": "monetary_and_supervisory"
-    },
-    "primary_source_id": "de-bundesbank-027ac4024f",
-    "n": 11817,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "de-bundesbank-027ac4024f"
-    ]
-  },
-  {
-    "title": "Der schlafende Riese – Demografischer Wandel und Finanzindustrie | 14. Regulatorische Fachtagung",
-    "url": "https://www.bundesbank.de/de/presse/reden/der-schlafende-riese-demografischer-wandel-und-finanzindustrie-1016738",
-    "native_id": "https://www.bundesbank.de/de/presse/reden/der-schlafende-riese-demografischer-wandel-und-finanzindustrie-1016738",
-    "published_at": "2026-11-20T09:20:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 09:20:00 GMT",
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Deutsche Bundesbank — Speeches, Interview and Contributions",
-      "jurisdiction": "DE",
-      "family": "monetary_and_supervisory"
-    },
-    "primary_source_id": "de-bundesbank-617511c682",
-    "n": 11818,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "de-bundesbank-617511c682"
-    ]
-  },
-  {
-    "title": "Moderate growth for the German economy",
-    "url": "https://www.bundesbank.de/en/tasks/topics/moderate-growth-for-the-german-economy-1016734",
-    "native_id": "https://www.bundesbank.de/en/tasks/topics/moderate-growth-for-the-german-economy-1016734",
-    "published_at": "2026-11-19T11:00:00+00:00",
-    "published_raw": "Thu, 19 Nov 2026 11:00:00 GMT",
-    "summary": "The German economy continued its recovery in the third quarter of 2026, according to the current issue of the Bundesbank’s Monthly Report. Although industrial and construction output were down, some services sectors and energy production expanded. Overall, economic output increased only slightly more slowly than in the first half of the year. The experts believe it is likely to pick up again in the fourth quarter.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Deutsche Bundesbank — Topics",
-      "jurisdiction": "DE",
-      "family": "monetary_and_supervisory"
-    },
-    "primary_source_id": "de-bundesbank-fe89ad3ac9",
-    "n": 11819,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "de-bundesbank-fe89ad3ac9"
+      "us-fcc-364d1b4932"
     ]
   }
 ]
