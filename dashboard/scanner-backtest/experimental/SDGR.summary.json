@@ -1,0 +1,23 @@
+{
+  "ticker": "SDGR",
+  "name": "Schrodinger, Inc.",
+  "source_sha": "629279628434865e8e8958f31c648822d67f7055",
+  "method": "stock-evidence-graph-2",
+  "source_receipt": {
+    "source": "PR642-full-text",
+    "companies": 1,
+    "filings": 11,
+    "documents": 326,
+    "characters": 13366303,
+    "errors": [],
+    "as_of": null,
+    "full_source_archive": true,
+    "complete": true
+  },
+  "elapsed_seconds": 283.43,
+  "entities": 1999,
+  "assertions": 1356,
+  "asset": "SDGR.json.gz",
+  "sha256": "21e6fadb338bba2a104dee43584cef3ba92e442a6a221914f8f68713b894a195",
+  "bytes": 2358605
+}

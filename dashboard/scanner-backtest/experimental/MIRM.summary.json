@@ -1,0 +1,23 @@
+{
+  "ticker": "MIRM",
+  "name": "Mirum Pharmaceuticals, Inc.",
+  "source_sha": "629279628434865e8e8958f31c648822d67f7055",
+  "method": "stock-evidence-graph-2",
+  "source_receipt": {
+    "source": "PR642-full-text",
+    "companies": 1,
+    "filings": 14,
+    "documents": 396,
+    "characters": 15975705,
+    "errors": [],
+    "as_of": null,
+    "full_source_archive": true,
+    "complete": true
+  },
+  "elapsed_seconds": 559.17,
+  "entities": 2251,
+  "assertions": 1656,
+  "asset": "MIRM.json.gz",
+  "sha256": "3948b4b0e7c819a384938e62c142a195893e6c2bdaca9b4f0e813ee8c89f0a1d",
+  "bytes": 2939131
+}

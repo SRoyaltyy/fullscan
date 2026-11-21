@@ -1,0 +1,23 @@
+{
+  "ticker": "IREN",
+  "name": "IREN Limited",
+  "source_sha": "629279628434865e8e8958f31c648822d67f7055",
+  "method": "stock-evidence-graph-2",
+  "source_receipt": {
+    "source": "PR642-full-text",
+    "companies": 1,
+    "filings": 2,
+    "documents": 176,
+    "characters": 9371618,
+    "errors": [],
+    "as_of": null,
+    "full_source_archive": true,
+    "complete": true
+  },
+  "elapsed_seconds": 486.45,
+  "entities": 3199,
+  "assertions": 657,
+  "asset": "IREN.json.gz",
+  "sha256": "8a2526faa9eebe4c6133eeba4c73bcbfc3b94552246a3b361546f132c05149f4",
+  "bytes": 2835537
+}

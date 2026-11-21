@@ -1,0 +1,23 @@
+{
+  "ticker": "SLDE",
+  "name": "Slide Insurance Holdings, Inc.",
+  "source_sha": "629279628434865e8e8958f31c648822d67f7055",
+  "method": "stock-evidence-graph-2",
+  "source_receipt": {
+    "source": "PR642-full-text",
+    "companies": 1,
+    "filings": 10,
+    "documents": 357,
+    "characters": 20068535,
+    "errors": [],
+    "as_of": null,
+    "full_source_archive": true,
+    "complete": true
+  },
+  "elapsed_seconds": 322.59,
+  "entities": 2146,
+  "assertions": 863,
+  "asset": "SLDE.json.gz",
+  "sha256": "7a75a1ffbb594c4ead94b12f6f243c0d434bb73b3a7631831b40d5724c683bd5",
+  "bytes": 2333765
+}
