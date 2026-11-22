@@ -1,5 +1,5 @@
 {
-  "catalog_refresh_outcome": "success",
-  "state_restore_run": "44884230006",
+  "catalog_refresh_outcome": "skipped",
+  "state_restore_run": "44944555434",
   "state_artifact": "primary-actions-state"
 }
