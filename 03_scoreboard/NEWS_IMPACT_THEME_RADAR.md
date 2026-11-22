@@ -21,12 +21,12 @@ Rubric hit rates count a call only when q5=impulse, direction in {up, down}, tra
 | non-weather | 33863 |
 | reaction-in-title (killed by the router) | 1343 |
 | impulse + up/down + listed | 17826 |
-| graded articles 0-1d | 2002 |
-| graded articles 2d | 1941 |
-| graded articles 3d | 1924 |
-| graded articles 4d | 1901 |
-| graded articles 5d | 1878 |
-| graded articles 1-4w | 9016 |
+| graded articles 0-1d | 2003 |
+| graded articles 2d | 1940 |
+| graded articles 3d | 1923 |
+| graded articles 4d | 1900 |
+| graded articles 5d | 1877 |
+| graded articles 1-4w | 9015 |
 
 ## Hit rates
 
@@ -34,12 +34,12 @@ Rubric column skips long-horizon classes on 0-1d and 2-5d. Broad column keeps th
 
 | horizon | rubric hits | rubric n | rubric rate | broad hits | broad n | broad rate |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| 0-1d | 1808 | 3674 | 1808/3674 = 49.2% | 9486 | 19409 | 9486/19409 = 48.9% |
-| 2d | 1710 | 3529 | 1710/3529 = 48.5% | 9559 | 19145 | 9559/19145 = 49.9% |
-| 3d | 1641 | 3499 | 1641/3499 = 46.9% | 9455 | 19040 | 9455/19040 = 49.7% |
-| 4d | 1623 | 3447 | 1623/3447 = 47.1% | 9406 | 18927 | 9406/18927 = 49.7% |
-| 5d | 1623 | 3413 | 1623/3413 = 47.6% | 9293 | 18827 | 9293/18827 = 49.4% |
-| 1-4w | 6499 | 13909 | 6499/13909 = 46.7% | — | — | — |
+| 0-1d | 1808 | 3675 | 1808/3675 = 49.2% | 9486 | 19410 | 9486/19410 = 48.9% |
+| 2d | 1710 | 3528 | 1710/3528 = 48.5% | 9559 | 19144 | 9559/19144 = 49.9% |
+| 3d | 1641 | 3498 | 1641/3498 = 46.9% | 9455 | 19039 | 9455/19039 = 49.7% |
+| 4d | 1623 | 3446 | 1623/3446 = 47.1% | 9406 | 18926 | 9406/18926 = 49.7% |
+| 5d | 1623 | 3412 | 1623/3412 = 47.6% | 9293 | 18826 | 9293/18826 = 49.4% |
+| 1-4w | 6498 | 13908 | 6498/13908 = 46.7% | — | — | — |
 
 ## Convergence / clash ledger
 
@@ -59,7 +59,7 @@ Hit rates grade the entity once per session. Converge uses that side. Clash uses
 
 | bucket | 0-1d | 2d | 3d | 4d | 5d |
 | --- | --- | --- | --- | --- | --- |
-| singleton | 904/1895 = 47.7% | 914/1836 = 49.8% | 886/1819 = 48.7% | 882/1797 = 49.1% | 878/1773 = 49.5% |
+| singleton | 904/1895 = 47.7% | 914/1835 = 49.8% | 886/1818 = 48.7% | 882/1796 = 49.1% | 878/1772 = 49.5% |
 | converge | 104/204 = 51.0% | 84/197 = 42.6% | 88/195 = 45.1% | 84/190 = 44.2% | 88/190 = 46.3% |
 | clash | 6/17 = 35.3% | 7/16 = 43.8% | 10/16 = 62.5% | 6/16 = 37.5% | 6/15 = 40.0% |
 

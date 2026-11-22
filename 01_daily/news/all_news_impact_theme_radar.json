@@ -21,82 +21,82 @@
     "reaction_in_title": 1343,
     "impulse_updown_listed": 17826,
     "graded_articles": {
-      "0-1d": 2002,
-      "2d": 1941,
-      "3d": 1924,
-      "4d": 1901,
-      "5d": 1878,
-      "1-4w": 9016
+      "0-1d": 2003,
+      "2d": 1940,
+      "3d": 1923,
+      "4d": 1900,
+      "5d": 1877,
+      "1-4w": 9015
     }
   },
   "hit_rates": {
     "0-1d": {
       "hits": 1808,
-      "n_calls": 3674,
-      "hit_rate": 0.4921,
-      "graded_articles": 2002
+      "n_calls": 3675,
+      "hit_rate": 0.492,
+      "graded_articles": 2003
     },
     "2d": {
       "hits": 1710,
-      "n_calls": 3529,
-      "hit_rate": 0.4846,
-      "graded_articles": 1941
+      "n_calls": 3528,
+      "hit_rate": 0.4847,
+      "graded_articles": 1940
     },
     "3d": {
       "hits": 1641,
-      "n_calls": 3499,
-      "hit_rate": 0.469,
-      "graded_articles": 1924
+      "n_calls": 3498,
+      "hit_rate": 0.4691,
+      "graded_articles": 1923
     },
     "4d": {
       "hits": 1623,
-      "n_calls": 3447,
-      "hit_rate": 0.4708,
-      "graded_articles": 1901
+      "n_calls": 3446,
+      "hit_rate": 0.471,
+      "graded_articles": 1900
     },
     "5d": {
       "hits": 1623,
-      "n_calls": 3413,
-      "hit_rate": 0.4755,
-      "graded_articles": 1878
+      "n_calls": 3412,
+      "hit_rate": 0.4757,
+      "graded_articles": 1877
     },
     "1-4w": {
-      "hits": 6499,
-      "n_calls": 13909,
-      "hit_rate": 0.4673,
-      "graded_articles": 9016
+      "hits": 6498,
+      "n_calls": 13908,
+      "hit_rate": 0.4672,
+      "graded_articles": 9015
     }
   },
   "hit_rates_broad_short": {
     "0-1d": {
       "hits": 9486,
-      "n_calls": 19409,
+      "n_calls": 19410,
       "hit_rate": 0.4887,
-      "graded_articles": 13376
+      "graded_articles": 13377
     },
     "2d": {
       "hits": 9559,
-      "n_calls": 19145,
+      "n_calls": 19144,
       "hit_rate": 0.4993,
-      "graded_articles": 13234
+      "graded_articles": 13233
     },
     "3d": {
       "hits": 9455,
-      "n_calls": 19040,
+      "n_calls": 19039,
       "hit_rate": 0.4966,
-      "graded_articles": 13153
+      "graded_articles": 13152
     },
     "4d": {
       "hits": 9406,
-      "n_calls": 18927,
+      "n_calls": 18926,
       "hit_rate": 0.497,
-      "graded_articles": 13074
+      "graded_articles": 13073
     },
     "5d": {
       "hits": 9293,
-      "n_calls": 18827,
+      "n_calls": 18826,
       "hit_rate": 0.4936,
-      "graded_articles": 12998
+      "graded_articles": 12997
     }
   },
   "rippers": {
@@ -375,15 +375,6 @@
           "event_class": "dilution"
         },
         {
-          "ticker": "SCNI",
-          "direction": "down",
-          "ret": -9.72,
-          "entry_date": "2026-10-16",
-          "published_at": "2026-10-16 08:00:00",
-          "title": "Scinai Immunotherapeutics Announces Closing of $4.0 Million Financing Through a Private Placement and Warrant Inducement",
-          "event_class": "dilution"
-        },
-        {
           "ticker": "ICFI",
           "direction": "up",
           "ret": 9.71,
@@ -409,6 +400,15 @@
           "published_at": "2026-08-07 01:12:13",
           "title": "Innovate Corp (VATE) (Q2 2026) Earnings Call Highlights: Record Infrastructure Performance and ...",
           "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "SCNI",
+          "direction": "down",
+          "ret": -9.68,
+          "entry_date": "2026-10-16",
+          "published_at": "2026-10-16 08:00:00",
+          "title": "Scinai Immunotherapeutics Announces Closing of $4.0 Million Financing Through a Private Placement and Warrant Inducement",
+          "event_class": "dilution"
         },
         {
           "ticker": "APPN",
@@ -34378,15 +34378,6 @@
           "event_class": "flow_index"
         },
         {
-          "ticker": "SCNI",
-          "direction": "down",
-          "ret": -18.25,
-          "entry_date": "2026-10-16",
-          "published_at": "2026-10-16 08:00:00",
-          "title": "Scinai Immunotherapeutics Announces Closing of $4.0 Million Financing Through a Private Placement and Warrant Inducement",
-          "event_class": "dilution"
-        },
-        {
           "ticker": "SERV",
           "direction": "up",
           "ret": 18.25,
@@ -34403,6 +34394,15 @@
           "published_at": "2026-11-05 21:39:58",
           "title": "Serve Robotics Beats And Lifts Its Outlook, But A Sequential Revenue Dip And Heavy Cash Burn Keep The Turnaround Unproven",
           "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "SCNI",
+          "direction": "down",
+          "ret": -18.21,
+          "entry_date": "2026-10-16",
+          "published_at": "2026-10-16 08:00:00",
+          "title": "Scinai Immunotherapeutics Announces Closing of $4.0 Million Financing Through a Private Placement and Warrant Inducement",
+          "event_class": "dilution"
         },
         {
           "ticker": "CCOI",
@@ -61487,7 +61487,7 @@
         {
           "ticker": "SCNI",
           "direction": "down",
-          "ret": -26.77,
+          "ret": -26.75,
           "entry_date": "2026-10-16",
           "published_at": "2026-10-16 08:00:00",
           "title": "Scinai Immunotherapeutics Announces Closing of $4.0 Million Financing Through a Private Placement and Warrant Inducement",
@@ -64059,21 +64059,21 @@
           "event_class": "print_vs_priced"
         },
         {
-          "ticker": "WWB",
-          "direction": "down",
-          "ret": -18.15,
-          "entry_date": "2026-11-17",
-          "published_at": "2026-11-16 16:01:00",
-          "title": "Windward Bio Announces Closing of $251.2 Million Initial Public Offering and Concurrent Private Placement, Including Full Exercise of Underwriters' Option to Purchase Additional Sh",
-          "event_class": "dilution"
-        },
-        {
           "ticker": "TNON",
           "direction": "down",
           "ret": -18.13,
           "entry_date": "2026-08-28",
           "published_at": "2026-08-28 09:00:00",
           "title": "WallachBeth Capital Announces Tenon Medical Pricing of $3M Private Placement Offering",
+          "event_class": "dilution"
+        },
+        {
+          "ticker": "WWB",
+          "direction": "down",
+          "ret": -18.13,
+          "entry_date": "2026-11-17",
+          "published_at": "2026-11-16 16:01:00",
+          "title": "Windward Bio Announces Closing of $251.2 Million Initial Public Offering and Concurrent Private Placement, Including Full Exercise of Underwriters' Option to Purchase Additional Sh",
           "event_class": "dilution"
         },
         {
@@ -93868,7 +93868,7 @@
         {
           "ticker": "SCNI",
           "direction": "down",
-          "ret": -26.65,
+          "ret": -26.66,
           "entry_date": "2026-10-16",
           "published_at": "2026-10-16 08:00:00",
           "title": "Scinai Immunotherapeutics Announces Closing of $4.0 Million Financing Through a Private Placement and Warrant Inducement",
@@ -101138,15 +101138,6 @@
           "event_class": "product_harm"
         },
         {
-          "ticker": "SCNI",
-          "direction": "down",
-          "ret": -12.92,
-          "entry_date": "2026-10-14",
-          "published_at": "2026-10-14 08:00:00",
-          "title": "Scinai Immunotherapeutics Announces $4.0 Million Financing Through a Private Placement and Warrant Inducement",
-          "event_class": "dilution"
-        },
-        {
           "ticker": "VNDA",
           "direction": "down",
           "ret": -12.91,
@@ -101172,6 +101163,15 @@
           "published_at": "2026-10-01 21:00:38",
           "title": "Bassett Furniture Industries Inc (BSET) (Q3 2026) Earnings Call Highlights: Revenue Growth and ...",
           "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "SCNI",
+          "direction": "down",
+          "ret": -12.88,
+          "entry_date": "2026-10-14",
+          "published_at": "2026-10-14 08:00:00",
+          "title": "Scinai Immunotherapeutics Announces $4.0 Million Financing Through a Private Placement and Warrant Inducement",
+          "event_class": "dilution"
         },
         {
           "ticker": "JBSS",
@@ -128265,7 +128265,7 @@
         {
           "ticker": "SCNI",
           "direction": "down",
-          "ret": -32.17,
+          "ret": -32.23,
           "entry_date": "2026-10-16",
           "published_at": "2026-10-16 08:00:00",
           "title": "Scinai Immunotherapeutics Announces Closing of $4.0 Million Financing Through a Private Placement and Warrant Inducement",
@@ -130371,7 +130371,7 @@
         {
           "ticker": "SCNI",
           "direction": "down",
-          "ret": -21.99,
+          "ret": -21.97,
           "entry_date": "2026-10-14",
           "published_at": "2026-10-14 08:00:00",
           "title": "Scinai Immunotherapeutics Announces $4.0 Million Financing Through a Private Placement and Warrant Inducement",
@@ -143064,23 +143064,23 @@
         },
         "2d": {
           "hits": 914,
-          "n": 1836,
-          "hit_rate": 0.4978
+          "n": 1835,
+          "hit_rate": 0.4981
         },
         "3d": {
           "hits": 886,
-          "n": 1819,
-          "hit_rate": 0.4871
+          "n": 1818,
+          "hit_rate": 0.4873
         },
         "4d": {
           "hits": 882,
-          "n": 1797,
-          "hit_rate": 0.4908
+          "n": 1796,
+          "hit_rate": 0.4911
         },
         "5d": {
           "hits": 878,
-          "n": 1773,
-          "hit_rate": 0.4952
+          "n": 1772,
+          "hit_rate": 0.4955
         }
       },
       "converge": {
