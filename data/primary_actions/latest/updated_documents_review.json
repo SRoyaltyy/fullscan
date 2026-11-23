@@ -1,1 +1,243 @@
-[]
+[
+  {
+    "title": "Roster of the Vaccines and Related Biological Products Advisory Committee",
+    "url": "http://www.fda.gov/advisory-committees/vaccines-and-related-biological-products-advisory-committee/roster-vaccines-and-related-biological-products-advisory-committee",
+    "native_id": "http://www.fda.gov/advisory-committees/vaccines-and-related-biological-products-advisory-committee/roster-vaccines-and-related-biological-products-advisory-committee",
+    "published_at": "2026-11-22T20:47:19+00:00",
+    "published_raw": "Sun, 22 Nov 2026 15:47:19 EST",
+    "summary": "This is the Roster of the Vaccines and Related Biological Products Advisory Committee",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-03f7703006",
+    "n": 1416,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-11-23T09:08:57.097368+00:00",
+    "source_ids": [
+      "us-fda-03f7703006"
+    ]
+  },
+  {
+    "title": "Don’t Be Left Out in the Cold This Holiday Season with Unsafe Presents: Buy from Trusted Sources",
+    "url": "https://www.cpsc.gov/Newsroom/News-Releases/2026/Dont-Be-Left-Out-in-the-Cold-This-Holiday-Season-with-Unsafe-Presents-Buy-from-Trusted-Sources",
+    "native_id": "https://www.cpsc.gov/_6d039050-7fba-4cdf-8361-f7db2f5e3963",
+    "published_at": null,
+    "published_raw": "Tue, 12/09/2025 - 12:00",
+    "summary": "CPSC Reminds Consumers to Shop Safely This Holiday Season",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-08fe06e2e6",
+    "n": 3537,
+    "first_seen": "2026-10-16T10:36:18.842579+00:00",
+    "last_seen": "2026-11-23T09:08:57.097368+00:00",
+    "source_ids": [
+      "us-cpsc-08fe06e2e6"
+    ]
+  },
+  {
+    "title": "Put Safety on the Menu: Consumer Product Safety Commission Offers Safe Cooking Tips for a Joyful Holiday Season",
+    "url": "https://www.cpsc.gov/Newsroom/News-Releases/2026/Put-Safety-on-the-Menu-Consumer-Product-Safety-Commission-Offers-Safe-Cooking-Tips-for-a-Joyful-Holiday-Season",
+    "native_id": "https://www.cpsc.gov/_59de4207-4ace-44ca-ace0-3cde0cfb8ddb",
+    "published_at": null,
+    "published_raw": "Wed, 11/19/2025 - 12:00",
+    "summary": "WASHINGTON, D.C. – As families across America prepare to gather for Thanksgiving, the U.S. Consumer Product Safety Commission (CPSC) is issuing an urgent reminder that the holiday season marks the most dangerous time of year for cooking-related fires and",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-08fe06e2e6",
+    "n": 3538,
+    "first_seen": "2026-10-16T10:36:18.842579+00:00",
+    "last_seen": "2026-11-23T09:08:57.097368+00:00",
+    "source_ids": [
+      "us-cpsc-08fe06e2e6"
+    ]
+  },
+  {
+    "title": "Early-Phase IND Protocol Recommendations for Solid Tumors | Draft Guidance for Industry",
+    "url": "http://www.fda.gov/regulatory-information/search-fda-guidance-documents/early-phase-ind-protocol-recommendations-solid-tumors-draft-guidance-industry",
+    "native_id": "http://www.fda.gov/regulatory-information/search-fda-guidance-documents/early-phase-ind-protocol-recommendations-solid-tumors-draft-guidance-industry",
+    "published_at": "2026-11-22T21:05:15+00:00",
+    "published_raw": "Sun, 22 Nov 2026 16:05:15 EST",
+    "summary": "This document is intended to provide recommendations to sponsors and clinical investigators developing early-phase trials, which include FIH protocols or protocols for drugs and biologic products with limited human experience.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-03f7703006",
+    "n": 9621,
+    "first_seen": "2026-11-10T20:28:57.994479+00:00",
+    "last_seen": "2026-11-23T09:08:57.097368+00:00",
+    "source_ids": [
+      "us-fda-03f7703006",
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "Eco-NAMs Webinar Series | Enhancing Regulatory Application of Ecotoxicological QSARs - 12/03/2026",
+    "url": "http://www.fda.gov/news-events/fda-meetings-conferences-and-workshops/eco-nams-webinar-series-enhancing-regulatory-application-ecotoxicological-qsars-12032026",
+    "native_id": "http://www.fda.gov/news-events/fda-meetings-conferences-and-workshops/eco-nams-webinar-series-enhancing-regulatory-application-ecotoxicological-qsars-12032026",
+    "published_at": "2026-11-22T21:08:35+00:00",
+    "published_raw": "Sun, 22 Nov 2026 16:08:35 EST",
+    "summary": "Eco-NAMs Webinar Series is on 3 December 2026: Enhancing regulatory application of ecotoxicological QSARs",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 10878,
+    "first_seen": "2026-11-17T21:46:57.732960+00:00",
+    "last_seen": "2026-11-23T09:08:57.097368+00:00",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "FDA Introduces New Approach to Drug Quality Sampling and Testing",
+    "url": "http://www.fda.gov/drugs/drug-alerts-and-statements/fda-introduces-new-approach-drug-quality-sampling-and-testing",
+    "native_id": "http://www.fda.gov/drugs/drug-alerts-and-statements/fda-introduces-new-approach-drug-quality-sampling-and-testing",
+    "published_at": "2026-11-22T21:10:51+00:00",
+    "published_raw": "Sun, 22 Nov 2026 16:10:51 EST",
+    "summary": "FDA announced the launch of its Enhanced Approach for Sampling and Testing (EAST) initiative, a new approach to monitoring the quality of drug products available to Americans. Learn more",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 11135,
+    "first_seen": "2026-11-18T21:27:16.206477+00:00",
+    "last_seen": "2026-11-23T09:08:57.097368+00:00",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "Pediatric Exclusivity Granted",
+    "url": "http://www.fda.gov/drugs/development-resources/pediatric-exclusivity-granted",
+    "native_id": "http://www.fda.gov/drugs/development-resources/pediatric-exclusivity-granted",
+    "published_at": "2026-11-22T20:49:29+00:00",
+    "published_raw": "Sun, 22 Nov 2026 15:49:29 EST",
+    "summary": "Approved active drugs with sponsors to which FDA has granted exclusivity for pediatric studies under Section 505A of the Federal Food, Drug, and Cosmetic Act (FD&C Act)",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 11414,
+    "first_seen": "2026-11-19T21:37:53.975841+00:00",
+    "last_seen": "2026-11-23T09:08:57.097368+00:00",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "FDA Publishes New Batch of Product-Specific Guidances to Facilitate Generic Drug Development",
+    "url": "http://www.fda.gov/drugs/drug-alerts-and-statements/fda-publishes-new-batch-product-specific-guidances-facilitate-generic-drug-development",
+    "native_id": "http://www.fda.gov/drugs/drug-alerts-and-statements/fda-publishes-new-batch-product-specific-guidances-facilitate-generic-drug-development",
+    "published_at": "2026-11-22T21:04:13+00:00",
+    "published_raw": "Sun, 22 Nov 2026 16:04:13 EST",
+    "summary": "FDA Publishes New Batch of Product-Specific Guidances to Facilitate Generic Drug Development",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 11419,
+    "first_seen": "2026-11-19T21:37:53.975841+00:00",
+    "last_seen": "2026-11-23T09:08:57.097368+00:00",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "FDA Establishes CBER Safety Council to Strengthen Postmarketing Oversight of Biological Products",
+    "url": "http://www.fda.gov/vaccines-blood-biologics/whats-new-biologics/fda-establishes-cber-safety-council-strengthen-postmarketing-oversight-biological-products",
+    "native_id": "http://www.fda.gov/vaccines-blood-biologics/whats-new-biologics/fda-establishes-cber-safety-council-strengthen-postmarketing-oversight-biological-products",
+    "published_at": "2026-11-22T20:53:18+00:00",
+    "published_raw": "Sun, 22 Nov 2026 15:53:18 EST",
+    "summary": "The FDA announced the establishment of the CBER Safety Council (CSC), a new governance body dedicated to strengthening post-market safety oversight for biological products regulated by CBER.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-03f7703006",
+    "n": 11423,
+    "first_seen": "2026-11-19T21:37:53.975841+00:00",
+    "last_seen": "2026-11-23T09:08:57.097368+00:00",
+    "source_ids": [
+      "us-fda-03f7703006"
+    ]
+  },
+  {
+    "title": "Office of Infectious Diseases Research Activities",
+    "url": "http://www.fda.gov/about-fda/center-drug-evaluation-and-research-cder/office-infectious-diseases-research-activities",
+    "native_id": "http://www.fda.gov/about-fda/center-drug-evaluation-and-research-cder/office-infectious-diseases-research-activities",
+    "published_at": "2026-11-22T20:27:33+00:00",
+    "published_raw": "Sun, 22 Nov 2026 15:27:33 EST",
+    "summary": "Overview of research needs, requests for information (RFIs), public workshops/meetings, opportunities for collaboration (this applies to RFI), notable guidances related to regulatory science, externally awarded research studies, and other important regulatory science and research activities.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 11846,
+    "first_seen": "2026-11-21T08:18:38.026359+00:00",
+    "last_seen": "2026-11-23T09:08:57.097368+00:00",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  }
+]

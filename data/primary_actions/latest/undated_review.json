@@ -1,1 +1,50 @@
-[]
+[
+  {
+    "title": "Is Your Turkey Done? Let the Thermometer Decide!",
+    "url": "http://www.fsis.usda.gov/news-events/news-press-releases/your-turkey-done-let-thermometer-decide",
+    "native_id": "08fe0362-6a2b-4173-b3de-de7cd9e2d78b",
+    "published_at": null,
+    "published_raw": "Mon, 11/23/2026 - 12:00",
+    "summary": "<p>A safe Thanksgiving meal starts with proper preparation and ends with safely stored leftovers. But how can you tell when your Thanksgiving turkey is safe to serve? Even if your</p>",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "USDA Food Safety and Inspection Service — News & Events",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-fsis-2f49ece915",
+    "n": 11961,
+    "first_seen": "2026-11-23T09:08:57.097368+00:00",
+    "last_seen": "2026-11-23T09:08:57.097368+00:00",
+    "source_ids": [
+      "us-fsis-2f49ece915"
+    ]
+  },
+  {
+    "title": "Bereaved families need support, not a battle with paperwork",
+    "url": "https://www.fca.org.uk/news/press-releases/bereaved-families-need-support-not-battle-paperwork",
+    "native_id": "177776",
+    "published_at": null,
+    "published_raw": "Monday, November 23, 2026 - 09:01",
+    "summary": "Investment firms must do more to help people dealing with the death of a loved one, after a review found confusing communications, delays and gaps in support. The FCA reviewed how financial advisers, wealth managers and investment platforms support bereaved families and those handling someone’s estate.Some firms provided thoughtful, personal support. Others had processes that risked adding to people’s distress and financial pressure.Some firms left people unclear about what to do next or offered limited ways to get in touch. In some cases, advice fees were still being taken until an original death certificate was provided.Kate Tuckley, head of department, consumer investments at the FCA, said, 'Dealing with someone’s finances after a death should not mean a battle with paperwork. Firms should ease the burden, not add to it.'Families need clear information and help without needless delays, not fees for advice they no longer receive. Some firms get this right and do it really well, now others must follow their lead.'The review identified useful steps firms can take, such as:Explain what happens next in plain English and give people options about how they can report a death, such as b",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Financial Conduct Authority",
+      "jurisdiction": "UK",
+      "family": "financial_enforcement"
+    },
+    "primary_source_id": "uk-fca-7b9977ec8e",
+    "n": 11963,
+    "first_seen": "2026-11-23T09:08:57.097368+00:00",
+    "last_seen": "2026-11-23T09:08:57.097368+00:00",
+    "source_ids": [
+      "uk-fca-7b9977ec8e"
+    ]
+  }
+]
