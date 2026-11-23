@@ -1,6 +1,6 @@
 {
   "date": "2026-11-23",
-  "generated_at": "2026-11-23T09:11:44.868527-05:00",
+  "generated_at": "2026-11-23T09:11:53.404196-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "finviz_market_digest",
-      "title": "Finviz homepage market digest",
-      "date": "2026-11-23",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-23T05:02:01.433569-05:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-11-23_finviz_market_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 6150,
-          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
-        },
-        {
-          "path": "01_daily/news/2026-11-23_finviz_market_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 2774,
-          "preview": "# Finviz homepage market digest \u2014 2026-11-23\n**Generated:** 2026-11-23T05:02:01.415808-05:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures point to a strong rebound led by Nasdaq and AI-linked names ahead of S&P Global PMI data and a 2-year note auction\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** NVDA, ANT, ANF, BURL, DKS, HPE, A, ZM, SPGI\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** ANF, BURL, DKS, HPE, A, ZM\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-11-23\n**Clock use:** `same_morning`"
-        }
-      ],
-      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-11-23\n**Generated:** 2026-11-23T05:02:01.415808-05:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures point to a strong rebound led by Nasdaq and AI-linked names ahead of S&P Global PMI data and a 2-year note auction\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** NVDA, ANT, ANF, BURL, DKS, HPE, A, ZM, SPGI\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** ANF, BURL, DKS, HPE, A, ZM\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-11-23\n**Clock use:** `same_morning`"
-    },
     {
       "key": "news_parse",
       "title": "News parse",
@@ -214,6 +189,24 @@
         }
       ],
       "preview": "5891 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, LLY, COCO, KNSA, RDN"
+    },
+    {
+      "key": "peer_rs",
+      "title": "Peer RS",
+      "date": "2026-11-23",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-23T09:11:52.805476-05:00",
+      "files": [
+        {
+          "path": "data/peers/2026-11-23_peer_rs.csv",
+          "ok": true,
+          "reason": "",
+          "size": 830916,
+          "preview": "5020 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+        }
+      ],
+      "preview": "5020 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
