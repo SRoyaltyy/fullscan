@@ -1,6 +1,6 @@
 {
   "date": "2026-11-23",
-  "generated_at": "2026-11-23T04:49:23.108809-05:00",
+  "generated_at": "2026-11-23T04:49:33.736583-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -103,6 +103,24 @@
         }
       ],
       "preview": "11772 rows \u00b7 Ticker,Company,Industry,Market Cap,Forward P/E,P/S,P/B,P/Cash,P/Free Cash Flow,EPS (ttm),Sales Year Over Year TTM,EPS Su \u00b7 A, AA, AAA, AAAA, AAAB \u00b7 11772 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
+    },
+    {
+      "key": "universe",
+      "title": "Universe labels",
+      "date": "2026-11-23",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-23T04:49:33.469009-05:00",
+      "files": [
+        {
+          "path": "data/universe/2026-11-23_membership.csv",
+          "ok": true,
+          "reason": "",
+          "size": 1131875,
+          "preview": "5891 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+        }
+      ],
+      "preview": "5891 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
