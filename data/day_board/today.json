@@ -1,6 +1,6 @@
 {
   "date": "2026-11-23",
-  "generated_at": "2026-11-23T09:11:35.160731-05:00",
+  "generated_at": "2026-11-23T09:11:44.868527-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "news_parse",
-      "title": "News parse",
-      "date": "2026-11-23",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-23T05:01:57.679727-05:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-11-23_parsed.json",
-          "ok": true,
-          "reason": "",
-          "size": 2903763,
-          "preview": "raw=3945 usable=365 single=167 \u00b7 US denies Iranian account that missile damaged F-16 over Gulf - Reuters | Iran unveils dual-missile launcher, new \u2018missile city\u2019: What to know | Saudi Arabia intercepts drone, missile as Houthis report attack on Sanaa | Dollar Retreats From 19-Month High, Traders Scale Back Fed Rate Hike Bets - Busi | Bitcoin rises as Federal Reserve rate hike expectations and risk-off sentiment c"
-        },
-        {
-          "path": "01_daily/news/2026-11-23_parsed.md",
-          "ok": true,
-          "reason": "",
-          "size": 11045,
-          "preview": "# News Parse v2 \u2014 2026-11-23T05:01:57.535881-05:00\nWindow\u224848h | news_mode=on | raw=3945 | usable=365 | single_name=167 | noise_dropped=3341\nusable polarity={'+': 7, '-': 59, 'mixed': 0, 'neutral': 299}"
-        }
-      ],
-      "preview": "raw=3945 usable=365 single=167 \u00b7 US denies Iranian account that missile damaged F-16 over Gulf - Reuters | Iran unveils dual-missile launcher, new \u2018missile city\u2019: What to know | Saudi Arabia intercepts drone, missile as Houthis report attack on Sanaa | Dollar Retreats From 19-Month High, Traders Scale Back Fed Rate Hike Bets - Busi | Bitcoin rises as Federal Reserve rate hike expectations and risk-off sentiment c \u00b7 # News Parse v2 \u2014 2026-11-23T05:01:57.535881-05:00\nWindow\u224848h | news_mode=on | raw=3945 | usable=365 | single_name=167 | noise_dropped=3341\nusable polarity={'+': 7, '-': 59, 'mixed': 0, 'neutral': 299}"
-    },
     {
       "key": "finviz_market_digest",
       "title": "Finviz homepage market digest",
@@ -221,6 +196,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -15.77, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -8.71, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -7.36, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -6.4399999999999995, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -9.385000000000002, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -6.24, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -9.7, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -8.86, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-23\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-11-23",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-23T09:11:44.266761-05:00",
+      "files": [
+        {
+          "path": "data/join/2026-11-23_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2345391,
+          "preview": "5891 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, LLY, COCO, KNSA, RDN"
+        }
+      ],
+      "preview": "5891 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, LLY, COCO, KNSA, RDN"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
