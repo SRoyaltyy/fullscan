@@ -1,6 +1,6 @@
 {
   "date": "2026-11-23",
-  "generated_at": "2026-11-23T09:21:43.433041-05:00",
+  "generated_at": "2026-11-23T17:04:28.631349-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -979,10 +979,10 @@
       }
     ],
     "flatten": {
-      "said": "0 priced buys \u00b7 cash $17,628.98 \u00b7 morning S missing",
+      "said": "0 priced buys \u00b7 cash $20,792.28 \u00b7 morning S missing",
       "bullets": [
         "0 priced buys",
-        "cash $17,628.98",
+        "cash $20,792.28",
         "morning S missing"
       ]
     },
@@ -1951,6 +1951,38 @@
         }
       ],
       "preview": "# flatten_robust card \u2014 2026-11-23\n_Generated 2026-11-23T14:21:41 \u2014 live `flatten_robust`._\n**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **\u2014** (\u2014) \u00b7 route **io**\n- Cash leftover **$17,628.98** (after 09:30 $17,628.98 \u00b7 after 16:00 $17,628.98)\n- Prior close **$104,020.02** \u00b7 09:30 **$104,020.02** \u00b7 overnight **$+0.00** \u00b7 session **$-1,430.08** \u00b7 16:00 **$102,589.94**\n- Overnight lots **5** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$17,628.98** \u00b7 2026-11-20 BUY \u2014 \u00b7 SELL \u2014 \u00b7 keys: date, policy, generated, score, predict, hard_red, flatten_ok, n_priced_buys, prior_book, route, cash_open, cash_after_0930 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\":"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-11-23",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-23T17:04:27.431238-05:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-11-23_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9640,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -15.77, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -8.71, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -7.36, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -6.4399999999999995, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -9.385000000000002, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -6.24, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -9.7, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -8.86, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-11-23_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5110,
+          "preview": "# Weather report \u2014 2026-11-23\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        },
+        {
+          "path": "01_daily/weather/2026-11-23_weather.after-freeze-1.json",
+          "ok": true,
+          "reason": "",
+          "size": 9537,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -15.77, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -8.71, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -7.36, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -6.4399999999999995, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -9.385000000000002, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -6.24, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -9.7, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -8.86, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -15.77, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -8.71, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -7.36, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -6.4399999999999995, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -9.385000000000002, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -6.24, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -9.7, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -8.86, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-23\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade. \u00b7 weather sectors 11 \u00b7 Basic Materials={'score': -15.77, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -8.71, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -7.36, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consum"
     }
   ],
   "href": {
@@ -2020,6 +2052,14 @@
       "path": "01_daily/2026-11-23_preopen_qc.json",
       "at": "2026-11-23T17:03:24-05:00",
       "commit_msg": "auto: pre-open leftover sweep [2026-11-23_2203]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "45272650981",
+      "manifest": "research/input_freeze/2026-11-23/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-11-23.json",
+      "at": "2026-11-23T17:04:29-05:00",
+      "commit_msg": "auto: land weather [2026-11-23]",
       "workflow": "Pre-Open ALL (predictive one-shot)",
       "run_id": "45272650981",
       "manifest": "research/input_freeze/2026-11-23/manifest.json"
