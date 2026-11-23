@@ -1,6 +1,6 @@
 # Finviz homepage market digest — 2026-11-23
 
-**Generated:** 2026-11-23T04:48:26.638692-05:00 (America/New_York)
+**Generated:** 2026-11-23T05:02:01.415808-05:00 (America/New_York)
 **Source:** `live`
 **Banner:** US futures point to a strong rebound led by Nasdaq and AI-linked names ahead of S&P Global PMI data and a 2-year note auction
 **Prior close:** SPX —  Nasdaq —  Dow —
