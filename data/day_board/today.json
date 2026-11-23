@@ -16,31 +16,6 @@
   "sectors": {},
   "lands": [
     {
-      "key": "map_heat",
-      "title": "Map heat tables",
-      "date": "2026-11-23",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-23T05:00:34.370238-05:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-11-23_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 273713,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-11-23_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 18422,
-          "preview": "# MAP HEAT \u2014 2026-11-23\nExport `finviz_2026-11-20.csv` \u00b7 11616 names \u00b7 generated 2026-11-23T04:50:38.759627-05:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-11-23\nExport `finviz_2026-11-20.csv` \u00b7 11616 names \u00b7 generated 2026-11-23T04:50:38.759627-05:00"
-    },
-    {
       "key": "map_heat_baseline",
       "title": "Map heat night baseline",
       "date": "2026-11-23",
@@ -196,6 +171,31 @@
         }
       ],
       "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-11-23\n_Generated 2026-11-23T05:01:42.762238-05:00 \u00b7 export=data/exports/finviz_2026-11-23.csv \u00b7 ticker digests=758 \u00b7 high-signal=147_ \u00b7 11772 rows \u00b7 Ticker,Company,Industry,Market Cap,Forward P/E,P/S,P/B,P/Cash,P/Free Cash Flow,EPS (ttm),Sales Year Over Year TTM,EPS Su \u00b7 A, AA, AAA, AAAA, AAAB \u00b7 11772 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-11-23",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-23T05:01:57.679727-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-23_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 2903763,
+          "preview": "raw=3945 usable=365 single=167 \u00b7 US denies Iranian account that missile damaged F-16 over Gulf - Reuters | Iran unveils dual-missile launcher, new \u2018missile city\u2019: What to know | Saudi Arabia intercepts drone, missile as Houthis report attack on Sanaa | Dollar Retreats From 19-Month High, Traders Scale Back Fed Rate Hike Bets - Busi | Bitcoin rises as Federal Reserve rate hike expectations and risk-off sentiment c"
+        },
+        {
+          "path": "01_daily/news/2026-11-23_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 11045,
+          "preview": "# News Parse v2 \u2014 2026-11-23T05:01:57.535881-05:00\nWindow\u224848h | news_mode=on | raw=3945 | usable=365 | single_name=167 | noise_dropped=3341\nusable polarity={'+': 7, '-': 59, 'mixed': 0, 'neutral': 299}"
+        }
+      ],
+      "preview": "raw=3945 usable=365 single=167 \u00b7 US denies Iranian account that missile damaged F-16 over Gulf - Reuters | Iran unveils dual-missile launcher, new \u2018missile city\u2019: What to know | Saudi Arabia intercepts drone, missile as Houthis report attack on Sanaa | Dollar Retreats From 19-Month High, Traders Scale Back Fed Rate Hike Bets - Busi | Bitcoin rises as Federal Reserve rate hike expectations and risk-off sentiment c \u00b7 # News Parse v2 \u2014 2026-11-23T05:01:57.535881-05:00\nWindow\u224848h | news_mode=on | raw=3945 | usable=365 | single_name=167 | noise_dropped=3341\nusable polarity={'+': 7, '-': 59, 'mixed': 0, 'neutral': 299}"
     },
     {
       "key": "finviz_market_digest",
