@@ -1,0 +1,109 @@
+{
+  "date": "2026-11-23",
+  "generated_at": "2026-11-23T18:26:06.202266-05:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": false,
+  "clock_use": "next_open",
+  "clock_legal_for": "2026-11-24",
+  "capture_slot": "close",
+  "clock_rule": "Live post-close answer-key (~16:05 ET). Always next_open for the NEXT session (2026-11-24) — never same_morning. Writes *_finviz_market_digest_close.* only. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest_close",
+  "represents": "Finviz homepage post-close answer-key. clock_use is always next_open; clock_legal_for is the next NYSE session. Lives at *_finviz_market_digest_close.*. Does not replace the same_morning warm-up file. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks closed sharply higher as Nvidia leadership reversal ignited a powerful rebound in AI and semiconductor names ahead of key earnings and PCE inflation data",
+  "raw_text": "- The S&P 500 ($SPX) rose 4.73% to 7,237.17, the Nasdaq Composite ($COMP) gained 6.51% to 24,089.56, and the Dow Jones Industrial Average ($DJI) climbed 3.01% to 49,595.31, marking the best session for the S&P 500 ($SPX) and Nasdaq since April 2025 and ending a multi-day losing streak and prior week’s correction.\n- Nvidia (NVDA) jumped 31.48% to $165.05 after its board reinstated Jensen Huang as CEO effective immediately, with multiple reports citing Trump administration input in reversing the prior board decision amid a recent scandal.\n- AI and semiconductor stocks rallied alongside Nvidia (NVDA), with Dell Technologies (DELL) up roughly 20%, Micron Technology (MU) up about 19%, Marvell Technology (MRVL) up about 18%, Astera Labs (ALAB) up about 23%, Credo Technology (CRDO) up about 23%, and Taiwan Semiconductor Manufacturing (TSM) up about 14% as the semiconductor index gained over 14%.\n- The technology sector climbed about 8.7–8.9%, while 9 of 11 primary sectors and roughly 9–11 of the 16 S&P sector groupings finished higher, and consumer non-cyclicals lagged with a 0.5% decline.\n- CrowdStrike Holdings (CRWD) fell 8.92% after announcing an all-stock acquisition of Zscaler (ZS) valued at $44 billion.\n- Hewlett Packard Enterprise (HPE) reported after the bell fiscal Q4 revenue of $14.5 billion, up 50% and above estimates, and non-GAAP EPS of $1.43 above outlook, though the stock fell about 6.5% in the extended session.\n- Investors are watching upcoming earnings from Dell Technologies (DELL), Analog Devices (ADI), and Medtronic (MDT) on November 24, along with consumer confidence data and PCE inflation readings during the short holiday week.",
+  "raw_summary_md": "- The **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) rose **4.73%** to 7,237.17, the **Nasdaq Composite** ([$COMP](https://finviz.com/index/COMP?p=d)) gained 6.51% to 24,089.56, and the **Dow Jones Industrial Average** ([$DJI](https://finviz.com/index/DJI?p=d)) climbed 3.01% to 49,595.31, marking the **best session** for the **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) and Nasdaq since April 2025 and ending a multi-day losing streak and prior week’s correction.\n- **Nvidia** ([NVDA](https://finviz.com/quote?t=NVDA)) jumped **31.48%** to $165.05 after its board **reinstated Jensen Huang** as CEO effective immediately, with multiple reports citing Trump administration input in reversing the prior board decision amid a recent scandal.\n- AI and semiconductor stocks **rallied** alongside **Nvidia** ([NVDA](https://finviz.com/quote?t=NVDA)), with **Dell Technologies** ([DELL](https://finviz.com/quote?t=DELL)) up roughly 20%, **Micron Technology** ([MU](https://finviz.com/quote?t=MU)) up about 19%, **Marvell Technology** ([MRVL](https://finviz.com/quote?t=MRVL)) up about 18%, **Astera Labs** ([ALAB](https://finviz.com/quote?t=ALAB)) up about 23%, **Credo Technology** ([CRDO](https://finviz.com/quote?t=CRDO)) up about 23%, and **Taiwan Semiconductor Manufacturing** ([TSM](https://finviz.com/quote?t=TSM)) up about 14% as the semiconductor index gained **over 14%**.\n- The technology sector climbed about **8.7–8.9%**, while 9 of 11 primary sectors and roughly 9–11 of the 16 S&P sector groupings finished higher, and consumer non-cyclicals lagged with a **0.5% decline**.\n- **CrowdStrike Holdings** ([CRWD](https://finviz.com/quote?t=CRWD)) **fell 8.92%** after announcing an **all-stock acquisition** of **Zscaler** ([ZS](https://finviz.com/quote?t=ZS)) valued at $44 billion.\n- **Hewlett Packard Enterprise** ([HPE](https://finviz.com/quote?t=HPE)) reported after the bell fiscal Q4 revenue of $14.5 billion, up 50% and above estimates, and non-GAAP EPS of $1.43 above outlook, though the stock **fell about 6.5%** in the extended session.\n- Investors are watching upcoming earnings from **Dell Technologies** ([DELL](https://finviz.com/quote?t=DELL)), **Analog Devices** ([ADI](https://finviz.com/quote?t=ADI)), and **Medtronic** ([MDT](https://finviz.com/quote?t=MDT)) on November 24, along with **consumer confidence data** and **PCE inflation readings** during the short holiday week.",
+  "index_moves": [
+    {
+      "name": "S&P 500",
+      "code": "SPX",
+      "change_pct": 4.73,
+      "verb": "rose"
+    },
+    {
+      "name": "Nasdaq Composite",
+      "code": "COMP",
+      "change_pct": 6.51,
+      "verb": "gained"
+    },
+    {
+      "name": "Dow Jones Industrial Average",
+      "code": "DJI",
+      "change_pct": 3.01,
+      "verb": "climbed"
+    }
+  ],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "NVDA",
+    "DELL",
+    "MU",
+    "MRVL",
+    "ALAB",
+    "CRDO",
+    "TSM",
+    "CRWD",
+    "ZS",
+    "HPE",
+    "ADI",
+    "MDT"
+  ],
+  "named_leaders": [
+    "NVDA",
+    "DELL",
+    "MU",
+    "MRVL",
+    "ALAB",
+    "CRDO",
+    "TSM",
+    "CRWD",
+    "ZS",
+    "HPE",
+    "ADI",
+    "MDT"
+  ],
+  "calendar": [],
+  "prior_close": {
+    "spx": 4.73,
+    "nasdaq": 6.51,
+    "dow": 3.01
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": false,
+    "bullets": [],
+    "text": ""
+  },
+  "earnings_slate": {
+    "tickers": [
+      "DELL",
+      "ADI",
+      "MDT"
+    ],
+    "text": "Investors are watching upcoming earnings from Dell Technologies (DELL), Analog Devices (ADI), and Medtronic (MDT) on November 24, along with consumer confidence data and PCE inflation readings during the short holiday week."
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 351758,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-11-23T18:06:52.273",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "good"
+}
