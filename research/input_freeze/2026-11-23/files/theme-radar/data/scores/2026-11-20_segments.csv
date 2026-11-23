@@ -1,0 +1,133 @@
+Industry,n,med_total,pct_positive,med_ret,n_squeeze,n_extreme
+Utilities - Regulated Electric,41,1.01,63.4,-2.22,0,0
+Shell Companies,324,0.51,63.9,0.0,0,0
+Discount Stores,9,0.24,55.6,-1.04,0,0
+Utilities - Regulated Gas,15,0.11,53.3,-3.39,0,0
+REIT - Healthcare Facilities,17,-0.2,41.2,-1.71,1,0
+Insurance - Property & Casualty,45,-0.49,44.4,-2.21,0,0
+Medical Distribution,11,-0.64,36.4,-3.89,0,0
+REIT - Retail,26,-0.74,34.6,-2.12,0,0
+Insurance - Reinsurance,8,-0.82,37.5,-2.21,0,0
+Footwear & Accessories,14,-0.86,35.7,-6.28,0,0
+Recreational Vehicles,17,-1.22,29.4,-2.55,1,1
+Electronics & Computer Distribution,8,-1.36,25.0,-4.23,0,0
+Lodging,11,-1.67,18.2,-4.7,0,0
+Apparel Manufacturing,23,-1.68,21.7,-5.89,0,0
+Insurance Brokers,24,-1.68,16.7,-2.41,0,0
+Gambling,14,-1.72,28.6,-8.88,0,0
+REIT - Hotel & Motel,15,-1.77,20.0,-3.75,0,0
+Apparel Retail,33,-1.83,21.2,-4.27,0,0
+Beverages - Non-Alcoholic,20,-1.84,10.0,-3.56,0,0
+Pollution & Treatment Controls,16,-1.84,25.0,-9.7,0,0
+REIT - Residential,20,-1.86,30.0,-2.58,0,0
+Packaged Foods,60,-1.89,26.7,-3.87,0,0
+Utilities - Regulated Water,12,-1.92,33.3,-1.44,0,0
+Drug Manufacturers - General,21,-1.95,23.8,-5.91,0,0
+Consulting Services,21,-2.0,23.8,-5.52,0,0
+Specialty Retail,43,-2.03,30.2,-5.22,0,0
+Household & Personal Products,30,-2.04,26.7,-5.11,0,0
+Diagnostics & Research,44,-2.06,11.4,-3.7,0,0
+Integrated Freight & Logistics,32,-2.12,12.5,-7.16,0,1
+REIT - Industrial,14,-2.15,28.6,-3.34,0,0
+Waste Management,22,-2.26,18.2,-7.42,0,0
+Food Distribution,11,-2.27,36.4,-3.32,0,0
+Security & Protection Services,22,-2.28,22.7,-3.7,0,0
+Mortgage Finance,13,-2.29,15.4,-4.89,0,0
+Farm Products,20,-2.3,25.0,-4.59,0,0
+Other Precious Metals & Mining,17,-2.32,0.0,-14.64,0,0
+Restaurants,51,-2.37,25.5,-5.29,0,0
+Aerospace & Defense,97,-2.37,26.8,-7.74,0,0
+Copper,10,-2.38,10.0,-18.12,0,0
+Resorts & Casinos,17,-2.4,29.4,-2.98,0,0
+Medical Devices,140,-2.41,22.1,-5.9,0,0
+Engineering & Construction,52,-2.44,34.6,-5.96,0,0
+Conglomerates,28,-2.45,25.0,-5.91,0,0
+Telecom Services,55,-2.47,23.6,-5.34,0,0
+Electronic Gaming & Multimedia,21,-2.47,38.1,-5.01,0,0
+Communication Equipment,45,-2.54,13.3,-9.3,0,0
+Biotechnology,600,-2.55,19.7,-7.34,1,1
+Industrial Distribution,24,-2.58,25.0,-6.19,0,0
+Leisure,29,-2.58,31.0,-5.38,0,0
+REIT - Diversified,17,-2.61,29.4,-3.74,0,0
+Trucking,16,-2.62,12.5,-7.36,0,0
+Airports & Air Services,8,-2.62,12.5,-7.82,0,0
+Oil & Gas Midstream,58,-2.63,5.2,-4.19,0,0
+Real Estate - Development,12,-2.64,8.3,-3.82,0,0
+"Furnishings, Fixtures & Appliances",28,-2.7,10.7,-4.76,0,0
+Real Estate Services,45,-2.7,13.3,-5.9,1,0
+Insurance - Life,18,-2.71,5.6,-4.84,0,0
+Airlines,18,-2.72,33.3,-6.18,0,0
+Travel Services,17,-2.72,29.4,-8.41,0,0
+Financial Data & Stock Exchanges,14,-2.74,14.3,-6.52,0,0
+Medical Instruments & Supplies,52,-2.78,11.5,-5.13,0,0
+REIT - Office,20,-2.78,5.0,-4.47,0,0
+Scientific & Technical Instruments,32,-2.78,15.6,-7.97,0,1
+Information Technology Services,80,-2.79,10.0,-8.39,0,0
+Oil & Gas E&P,78,-2.8,16.7,-6.1,0,0
+Building Products & Equipment,38,-2.8,15.8,-4.85,0,0
+Software - Infrastructure,183,-2.83,18.6,-10.07,1,0
+Healthcare Plans,11,-2.83,0.0,-14.73,0,0
+Marine Shipping,38,-2.84,10.5,-7.58,0,0
+Health Information Services,40,-2.85,12.5,-11.02,0,0
+Building Materials,17,-2.86,29.4,-3.63,0,0
+Specialty Industrial Machinery,78,-2.87,17.9,-6.73,0,0
+Packaging & Containers,22,-2.87,9.1,-6.38,0,0
+Specialty Business Services,42,-2.88,19.0,-5.35,0,0
+Advertising Agencies,37,-2.88,10.8,-9.9,0,0
+Banks - Regional,326,-2.9,10.4,-4.72,0,0
+Staffing & Employment Services,17,-2.9,0.0,-5.62,0,0
+Uranium,13,-2.91,7.7,-16.51,0,0
+Metal Fabrication,17,-2.93,23.5,-5.51,0,0
+Entertainment,48,-3.03,20.8,-5.62,0,1
+Software - Application,224,-3.1,12.9,-9.52,0,0
+Luxury Goods,11,-3.11,9.1,-6.3,0,0
+Oil & Gas Equipment & Services,49,-3.15,8.2,-7.93,0,0
+REIT - Mortgage,38,-3.16,15.8,-3.06,0,0
+Auto Manufacturers,26,-3.17,3.8,-10.38,0,0
+Capital Markets,96,-3.17,10.4,-10.1,0,0
+Insurance - Diversified,12,-3.17,8.3,-3.78,0,0
+Auto & Truck Dealerships,24,-3.2,8.3,-2.77,0,0
+Internet Retail,40,-3.22,12.5,-9.4,0,0
+Residential Construction,18,-3.26,11.1,-3.57,0,0
+Computer Hardware,46,-3.3,2.2,-11.56,0,0
+Closed-End Fund - Debt,195,-3.31,4.6,-2.19,0,0
+Drug Manufacturers - Specialty & Generic,82,-3.36,18.3,-6.33,0,1
+Farm & Heavy Construction Machinery,25,-3.36,8.0,-7.88,0,1
+REIT - Specialty,19,-3.36,21.1,-7.12,0,0
+Education & Training Services,43,-3.38,9.3,-7.76,0,0
+Auto Parts,55,-3.38,18.2,-5.97,0,0
+Specialty Chemicals,62,-3.38,11.3,-5.42,0,0
+Asset Management,147,-3.39,7.5,-5.77,0,0
+Electronic Components,43,-3.42,4.7,-10.08,0,0
+Electrical Equipment & Parts,55,-3.47,10.9,-11.89,0,0
+Oil & Gas Integrated,20,-3.5,0.0,-6.34,0,0
+Semiconductor Equipment & Materials,30,-3.58,3.3,-11.12,0,0
+Semiconductors,67,-3.58,4.5,-13.07,0,0
+Medical Care Facilities,48,-3.6,12.5,-7.07,0,0
+Gold,57,-3.61,1.8,-14.08,0,0
+Credit Services,52,-3.7,9.6,-6.64,0,0
+Oil & Gas Refining & Marketing,19,-3.7,15.8,-9.62,0,0
+Rental & Leasing Services,20,-3.76,10.0,-6.31,0,0
+Utilities - Independent Power Producers,10,-3.76,10.0,-10.28,0,0
+Steel,21,-3.77,14.3,-7.24,0,0
+Beverages - Wineries & Distilleries,11,-3.86,9.1,-5.68,0,0
+Consumer Electronics,19,-3.88,15.8,-9.17,0,0
+Railroads,12,-3.94,25.0,-7.26,0,0
+Publishing,8,-3.94,12.5,-7.54,0,0
+Personal Services,13,-3.96,7.7,-6.39,0,0
+Broadcasting,14,-4.02,14.3,-12.85,0,0
+Oil & Gas Drilling,10,-4.05,10.0,-10.93,0,0
+Insurance - Specialty,15,-4.06,13.3,-2.5,0,0
+Utilities - Renewable,19,-4.06,10.5,-9.02,0,0
+Grocery Stores,13,-4.11,15.4,-5.32,0,0
+Tools & Accessories,11,-4.13,9.1,-5.58,0,0
+Internet Content & Information,69,-4.13,13.0,-8.58,0,0
+Chemicals,16,-4.16,6.2,-10.09,0,0
+Other Industrial Metals & Mining,59,-4.18,6.8,-16.48,0,0
+Banks - Diversified,20,-4.28,0.0,-8.37,0,0
+Tobacco,11,-4.31,9.1,-13.22,0,0
+Exchange Traded Fund,5835,-4.38,15.4,-5.44,0,3
+Solar,23,-4.52,4.3,-18.99,0,0
+Closed-End Fund - Equity,112,-4.81,2.7,-6.51,0,0
+Closed-End Fund - Foreign,27,-4.81,3.7,-6.83,0,0
+Agricultural Inputs,14,-5.36,7.1,-9.4,0,0
