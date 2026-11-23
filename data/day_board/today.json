@@ -1,12 +1,12 @@
 {
   "date": "2026-11-23",
-  "generated_at": "2026-11-23T04:49:33.736583-05:00",
+  "generated_at": "2026-11-23T04:50:39.218813-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 1,
+    "ok": 2,
     "partial": 2,
-    "fail": 5,
+    "fail": 4,
     "n": 8
   },
   "buy_1d": [],
@@ -121,6 +121,31 @@
         }
       ],
       "preview": "5891 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+    },
+    {
+      "key": "map_heat",
+      "title": "Map heat morning overlay",
+      "date": "2026-11-23",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-23T04:50:38.829860-05:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-11-23_map_heat.json",
+          "ok": true,
+          "reason": "",
+          "size": 273713,
+          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
+        },
+        {
+          "path": "01_daily/map_heat/2026-11-23_map_heat.md",
+          "ok": true,
+          "reason": "",
+          "size": 18422,
+          "preview": "# MAP HEAT \u2014 2026-11-23\nExport `finviz_2026-11-20.csv` \u00b7 11616 names \u00b7 generated 2026-11-23T04:50:38.759627-05:00"
+        }
+      ],
+      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-11-23\nExport `finviz_2026-11-20.csv` \u00b7 11616 names \u00b7 generated 2026-11-23T04:50:38.759627-05:00"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
