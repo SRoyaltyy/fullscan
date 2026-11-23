@@ -1,6 +1,6 @@
 # MAP HEAT — 2026-11-23
 
-Export `finviz_2026-11-20.csv` · 11616 names · generated 2026-11-23T04:50:38.759627-05:00
+Export `finviz_2026-11-23.csv` · 11616 names · generated 2026-11-23T05:04:23.075084-05:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
@@ -114,8 +114,8 @@ Mega-cap earnings:
 - AMC **AVGO**  EPS est 3.8302  (Broadcom Inc)
 - BMO **RY**  EPS est 2.9589  (Royal Bank Of Canada)
 - AMC **CRWD**  EPS est 0.3116  (Crowdstrike Holdings Inc)
-- AMC **DELL**  EPS est 6.6161  (Dell Technologies Inc)
 - BMO **TD**  EPS est 1.8017  (Toronto Dominion Bank)
+- AMC **DELL**  EPS est 6.6161  (Dell Technologies Inc)
 - BMO **ADI**  EPS est 3.8961  (Analog Devices Inc)
 - BMO **DE**  EPS est 4.026  (Deere \u0026 Co)
 - AMC **CRM**  EPS est 3.4468  (Salesforce Inc)
@@ -140,8 +140,8 @@ Mega-cap earnings:
 - BMO **SUNB**  EPS est 1.2649  (Sunbelt Rentals Holdings Inc)
 - BMO **DG**  EPS est 1.4114  (Dollar General Corp)
 - BMO **CPRT**  EPS est 0.3962  (Copart Inc)
-- AMC **ULTA**  EPS est 5.6475  (Ulta Beauty Inc)
 - AMC **TCOM**  EPS est 1.2355  (Trip.com Group Ltd ADR)
+- AMC **ULTA**  EPS est 5.6475  (Ulta Beauty Inc)
 - BMO **DLTR**  EPS est 0.9124  (Dollar Tree Inc)
 - AMC **HPQ**  EPS est 0.7482  (HP Inc)
 - AMC **CASY**  EPS est 5.8504  (Casey\u0027s General Stores Inc)
@@ -156,8 +156,8 @@ Options event-vol flags (NOT direction):
 - **AVGO** exp 2026-11-23 ATM IV 0.0078 implied move +0.0% put/call OI —
 - **RY** exp 2026-12-18 ATM IV 0.0039 implied move +0.1% put/call OI —
 - **CRWD** exp 2026-11-27 ATM IV 0.0039 implied move +0.0% put/call OI —
-- **DELL** exp 2026-11-27 ATM IV 0.002 implied move +0.0% put/call OI nan
 - **TD** exp 2026-12-18 ATM IV 0.0078 implied move +0.2% put/call OI —
+- **DELL** exp 2026-11-27 ATM IV 0.002 implied move +0.0% put/call OI nan
 - **ADI** exp 2026-11-27 ATM IV 0.0195 implied move +0.2% put/call OI —
 - **DE** exp 2026-11-27 ATM IV 0.002 implied move +0.0% put/call OI —
 - **CRM** exp 2026-11-27 ATM IV 0.0039 implied move +0.0% put/call OI —
@@ -280,31 +280,31 @@ COLD (1w):
 - **Real Estate** -0.5% 1d -1.9% 1w · VNQ, SCHH, XLRE
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 5 min **MSTR,QQQ,STRC** MSTR Stock Jumps In Premarket As Bitcoin Reclaims $61K After Brutal Nasdaq Sell-Off (Stocktwits)
-- 9 min **NVDA** US Stock Futures Rebound After AI Sell-Off as Nvidia Investigation and Fed Outlook Remain in Focus: Dow Jones, S&P, Nasdaq, Wall Street (InvestorsHub)
-- 10 min **MS** Stocks are serving up a 'fat pitch' for investors right now, as Morgan Stanley's top strategist (MarketWatch)
-- 18 min **NVDA** US futures rally as AI rout pauses, Asian authorities prop up stocks (Reuters)
-- 25 min **RIVN,GRPN,TJX,XLP,TSN** Consumer Stocks Snap Winning Streaks As AI Selloff Rocks Markets  TSN, PDD, TJX Buck Trend (Stocktwits)
-- 32 min **BLK** Robert Kiyosaki Says a Crash Bigger Than 2008 Has Begun: How Often Has He Been Right? (BeInCrypto)
-- 35 min **WMT** Walmart raises fiscal 2027 outlook again after Q3 growth (Retail Insight Network)
-- 38 min **NBIS,CRWV,NVDA,IREN** CRWV, IREN, NBIS Rally After Sell-Off  New US Curbs Threaten Southeast Asia Neocloud Business (Stocktwits)
-- 38 min **AMZN** Asda plans 15 Express convenience store openings (Retail Insight Network)
-- 39 min **NVDA,ANT** Stock market today: Dow, S&P 500, Nasdaq futures surge amid relief rally (Yahoo Finance)
-- 44 min **ABVX** Abivax stock surges after rejecting short seller claims (Investing.com)
-- 47 min **GPN** GTCR considers potential takeover of Global Payments (Electronic Payments)
-- 48 min **XRP** XRP Faces Worst November On Record As ETF Outflows Top $30M, Breaking 7-Month Inflow Streak (Stocktwits)
-- 50 min **GPUS** Hyperscale Data Names William B. Horne Co-Executive Chairman Alongside Milton "Todd" Ault III (PR Newswire)
-- 50 min **VNET** VNET Reports Unaudited Third Quarter 2026 Financial Results (PR Newswire)
-- 50 min **FCN** Two Senior Hires Enhance FTI Consulting's Investigations and Business Intelligence Capabilities in the UK (GlobeNewswire)
-- 52 min **RIO** FTSE 100 today: Stocks edge up on miners; Burnham utility plan awaited (Investing.com)
+- 4 min **NVDA,ANT** Stock market today: Dow, S&P 500, Nasdaq futures surge amid relief rally (Yahoo Finance)
+- 5 min **SKHY,SNDK,MU,WDC,STX** Micron Stock Rallies After Brutal Selloff. 3 Reasons Its Surge Has Legs. (Barrons.com)
+- 6 min **DX** Sterling today: Pound firms as equity rebound trims dollar bid (Investing.com)
+- 10 min **SPCX,PS** Billionaire Bill Ackman Sounds the Alarm on Wall Street's Next Big Risk (Yahoo Finance)
+- 19 min **MSTR,QQQ,STRC** MSTR Stock Jumps In Premarket As Bitcoin Reclaims $61K After Brutal Nasdaq Sell-Off (Stocktwits)
+- 22 min **NVDA** US Stock Futures Rebound After AI Sell-Off as Nvidia Investigation and Fed Outlook Remain in Focus: Dow Jones, S&P, Nasdaq, Wall Street (InvestorsHub)
+- 24 min **MS** Stocks are serving up a 'fat pitch' for investors right now, as Morgan Stanley's top strategist (MarketWatch)
+- 32 min **NVDA** US futures rally as AI rout pauses, Asian authorities prop up stocks (Reuters)
+- 39 min **RIVN,GRPN,TJX,XLP,TSN** Consumer Stocks Snap Winning Streaks As AI Selloff Rocks Markets  TSN, PDD, TJX Buck Trend (Stocktwits)
+- 46 min **BLK** Robert Kiyosaki Says a Crash Bigger Than 2008 Has Begun: How Often Has He Been Right? (BeInCrypto)
+- 49 min **WMT** Walmart raises fiscal 2027 outlook again after Q3 growth (Retail Insight Network)
+- 52 min **NBIS,CRWV,NVDA,IREN** CRWV, IREN, NBIS Rally After Sell-Off  New US Curbs Threaten Southeast Asia Neocloud Business (Stocktwits)
+- 52 min **AMZN** Asda plans 15 Express convenience store openings (Retail Insight Network)
+- 58 min **ABVX** Abivax stock surges after rejecting short seller claims (Investing.com)
+- 1 hour **GPN** GTCR considers potential takeover of Global Payments (Electronic Payments)
+- 1 hour **XRP** XRP Faces Worst November On Record As ETF Outflows Top $30M, Breaking 7-Month Inflow Streak (Stocktwits)
+- 1 hour **GPUS** Hyperscale Data Names William B. Horne Co-Executive Chairman Alongside Milton "Todd" Ault III (PR Newswire)
+- 1 hour **VNET** VNET Reports Unaudited Third Quarter 2026 Financial Results (PR Newswire)
+- 1 hour **FCN** Two Senior Hires Enhance FTI Consulting's Investigations and Business Intelligence Capabilities in the UK (GlobeNewswire)
+- 1 hour **RIO** FTSE 100 today: Stocks edge up on miners; Burnham utility plan awaited (Investing.com)
 - 1 hour **DOO** AI gives chartered accountants more time for strategic work, study finds (The Accountant)
 - 1 hour **JPM** JPMorgan AM Says AI Borrowing Binge Is Holding Back Bond Rally (Bloomberg)
 - 1 hour **ANT,CL,LCO** European shares catch modest bid after brutal sell-off (Investing.com)
 - 1 hour **NVDA,ANT** Stock Market Today: Dow, S&P 500 and Nasdaq set to bounce after 10% weekly slide in tech stocks; Nvidia, AMD bounce (MarketWatch)
 - 1 hour **NVDA,ANT** U.S. stocks set to climb after last week's declines (MarketWatch)
-- 1 hour **NVDA,DELL,SMCI,HPE** Why Is HPE Stock Up 6% Overnight? (Stocktwits)
-- 1 hour **SKHY,NVDA,ANT** Asian tech back in the firing line as traders track Wall St rout (AFP)
-- 1 hour **ASML,ANT** European stocks recover after steep technology-led selloff (Reuters)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
