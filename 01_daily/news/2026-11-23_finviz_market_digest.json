@@ -1,0 +1,90 @@
+{
+  "date": "2026-11-23",
+  "generated_at": "2026-11-23T04:48:26.638692-05:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": true,
+  "clock_use": "same_morning",
+  "clock_legal_for": "2026-11-23",
+  "clock_rule": "Live: Generated must be before 09:30 ET on this date or leave missing. Wayback: capture before 09:30 ET that day is legal for that morning's Pre-Open. Afternoon Wayback is legal for the NEXT session open only (prior-day close recap), marked by clock_legal_for. Gaps stay gaps. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US futures point to a strong rebound led by Nasdaq and AI-linked names ahead of S&P Global PMI data and a 2-year note auction",
+  "raw_text": "- S&P 500 futures (@ES) rise 2.74%, Dow Jones futures (@YM) gain 1.88%, Nasdaq 100 futures (@NQ) advance 3.56%, and Russell 2000 futures (@ER2) add 2.21% as US stocks are set to gap sharply higher.\n- Nvidia (NVDA) climbs roughly 9% pre-market after Trump publicly urges NVIDIA’s board to reinstate Jensen Huang as CEO, helping lead a rebound in AI-linked names.\n- Anthropic (ANT) gains about 4.4% in pre-market trading as growth and technology stocks lead the rebound in futures.\n- Abercrombie & Fitch (ANF), Burlington Stores (BURL), and Dick’s Sporting Goods (DKS) are scheduled to report earnings before the bell with notable implied moves indicated.\n- Hewlett Packard Enterprise (HPE), Agilent Technologies (A), and Zoom Video Communications (ZM) are among key companies slated to report earnings after the close.\n- S&P Global (SPGI) flash Manufacturing and Services PMI data are due at 9:45 AM ET and are highlighted as the primary scheduled macro releases for the day.\n- The US Treasury will hold a 2-year note auction later today, adding to the macro events alongside PMI data.\n- Asian equity markets are higher as Japan’s Nikkei (@NKD) futures advance about 3.4%, while European shares are set to open higher as gold futures (@GC) rise and oil (@CL) edges lower.",
+  "raw_summary_md": "- **S&P 500 futures** ([@ES](https://finviz.com/futures_charts?t=ES)) rise 2.74%, **Dow Jones futures** ([@YM](https://finviz.com/futures_charts?t=YM)) gain 1.88%, **Nasdaq 100 futures** ([@NQ](https://finviz.com/futures_charts?t=NQ)) advance 3.56%, and **Russell 2000 futures** ([@ER2](https://finviz.com/futures_charts?t=ER2)) add 2.21% as US stocks are set to **gap sharply higher**.\n- **Nvidia** ([NVDA](https://finviz.com/quote?t=NVDA)) climbs **roughly 9%** pre-market after Trump publicly urges NVIDIA’s board to **reinstate Jensen Huang** as CEO, helping lead a rebound in AI-linked names.\n- **Anthropic** ([ANT](https://finviz.com/quote?t=ANT)) gains **about 4.4%** in pre-market trading as growth and technology stocks lead the rebound in futures.\n- **Abercrombie & Fitch** ([ANF](https://finviz.com/quote?t=ANF)), **Burlington Stores** ([BURL](https://finviz.com/quote?t=BURL)), and **Dick’s Sporting Goods** ([DKS](https://finviz.com/quote?t=DKS)) are scheduled to report earnings before the bell with **notable implied moves** indicated.\n- **Hewlett Packard Enterprise** ([HPE](https://finviz.com/quote?t=HPE)), **Agilent Technologies** ([A](https://finviz.com/quote?t=A)), and **Zoom Video Communications** ([ZM](https://finviz.com/quote?t=ZM)) are among key companies slated to report **earnings after the close**.\n- **S&P Global** ([SPGI](https://finviz.com/quote?t=SPGI)) flash **Manufacturing and Services PMI** data are due at 9:45 AM ET and are highlighted as the primary scheduled macro releases for the day.\n- The US Treasury will hold a **2-year note auction** later today, adding to the macro events alongside PMI data.\n- Asian equity markets are higher as Japan’s **Nikkei** ([@NKD](https://finviz.com/futures_charts?t=NKD)) futures advance **about 3.4%**, while European shares are set to open higher as **gold futures** ([@GC](https://finviz.com/futures_charts?t=GC)) rise and **oil** ([@CL](https://finviz.com/futures_charts?t=CL)) **edges lower**.",
+  "index_moves": [],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "NVDA",
+    "ANT",
+    "ANF",
+    "BURL",
+    "DKS",
+    "HPE",
+    "A",
+    "ZM",
+    "SPGI"
+  ],
+  "named_leaders": [
+    "NVDA",
+    "ANT",
+    "ANF",
+    "BURL",
+    "DKS",
+    "HPE",
+    "A",
+    "ZM",
+    "SPGI"
+  ],
+  "calendar": [
+    "The US Treasury will hold a 2-year note auction later today, adding to the macro events alongside PMI data."
+  ],
+  "prior_close": {
+    "spx": null,
+    "nasdaq": null,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": false,
+    "bullets": [
+      "The US Treasury will hold a 2-year note auction later today, adding to the macro events alongside PMI data."
+    ],
+    "text": "The US Treasury will hold a 2-year note auction later today, adding to the macro events alongside PMI data."
+  },
+  "earnings_slate": {
+    "tickers": [
+      "ANF",
+      "BURL",
+      "DKS",
+      "HPE",
+      "A",
+      "ZM"
+    ],
+    "text": "Abercrombie & Fitch (ANF), Burlington Stores (BURL), and Dick’s Sporting Goods (DKS) are scheduled to report earnings before the bell with notable implied moves indicated. Hewlett Packard Enterprise (HPE), Agilent Technologies (A), and Zoom Video Communications (ZM) are among key companies slated to report earnings after the close."
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 350767,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-11-23T04:38:12.75",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "good"
+}
