@@ -1,45 +1,86 @@
 {
   "date": "2026-11-23",
-  "generated_at": "2026-11-23T09:11:53.404196-05:00",
+  "generated_at": "2026-11-23T09:16:45.498047-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 4,
-    "partial": 3,
+    "ok": 6,
+    "partial": 1,
     "fail": 1,
     "n": 8
   },
-  "buy_1d": [],
-  "sell_1d": [],
+  "buy_1d": [
+    {
+      "ticker": "LFST",
+      "score": 0.812463318070574
+    },
+    {
+      "ticker": "CON",
+      "score": 0.6995519739174112
+    },
+    {
+      "ticker": "MD",
+      "score": 0.6766899680271575
+    },
+    {
+      "ticker": "AMN",
+      "score": 0.6445272012839329
+    },
+    {
+      "ticker": "EHC",
+      "score": 0.21617485435615452
+    },
+    {
+      "ticker": "HCSG",
+      "score": 0.5718769453075245
+    },
+    {
+      "ticker": "TGT",
+      "score": 0.3214958916125264
+    },
+    {
+      "ticker": "GRDN",
+      "score": 0.5561906376272425
+    }
+  ],
+  "sell_1d": [
+    {
+      "ticker": "QBTS",
+      "score": -0.41686398681333997
+    },
+    {
+      "ticker": "FCEL",
+      "score": -0.4577222956327998
+    },
+    {
+      "ticker": "TE",
+      "score": -0.46814752030787715
+    },
+    {
+      "ticker": "METC",
+      "score": -0.4618747415762467
+    },
+    {
+      "ticker": "TLN",
+      "score": -0.3940628002146309
+    },
+    {
+      "ticker": "CWEN",
+      "score": -0.35663793628325813
+    },
+    {
+      "ticker": "RGTI",
+      "score": -0.3721752606604096
+    },
+    {
+      "ticker": "EAF",
+      "score": -0.3670026809737018
+    }
+  ],
   "flatten": {},
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "news_parse",
-      "title": "News parse",
-      "date": "2026-11-23",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-23T05:02:38.196948-05:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-11-23_parsed.json",
-          "ok": true,
-          "reason": "",
-          "size": 2903763,
-          "preview": "raw=3945 usable=365 single=167 \u00b7 US denies Iranian account that missile damaged F-16 over Gulf - Reuters | Iran unveils dual-missile launcher, new \u2018missile city\u2019: What to know | Saudi Arabia intercepts drone, missile as Houthis report attack on Sanaa | Dollar Retreats From 19-Month High, Traders Scale Back Fed Rate Hike Bets - Busi | Bitcoin rises as Federal Reserve rate hike expectations and risk-off sentiment c"
-        },
-        {
-          "path": "01_daily/news/2026-11-23_parsed.md",
-          "ok": true,
-          "reason": "",
-          "size": 11045,
-          "preview": "# News Parse v2 \u2014 2026-11-23T05:01:57.535881-05:00\nWindow\u224848h | news_mode=on | raw=3945 | usable=365 | single_name=167 | noise_dropped=3341\nusable polarity={'+': 7, '-': 59, 'mixed': 0, 'neutral': 299}"
-        }
-      ],
-      "preview": "raw=3945 usable=365 single=167 \u00b7 US denies Iranian account that missile damaged F-16 over Gulf - Reuters | Iran unveils dual-missile launcher, new \u2018missile city\u2019: What to know | Saudi Arabia intercepts drone, missile as Houthis report attack on Sanaa | Dollar Retreats From 19-Month High, Traders Scale Back Fed Rate Hike Bets - Busi | Bitcoin rises as Federal Reserve rate hike expectations and risk-off sentiment c \u00b7 # News Parse v2 \u2014 2026-11-23T05:01:57.535881-05:00\nWindow\u224848h | news_mode=on | raw=3945 | usable=365 | single_name=167 | noise_dropped=3341\nusable polarity={'+': 7, '-': 59, 'mixed': 0, 'neutral': 299}"
-    },
     {
       "key": "news_actions",
       "title": "News actions (no LLM)",
@@ -207,6 +248,59 @@
         }
       ],
       "preview": "5020 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-11-23",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-23T09:16:44.663319-05:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-11-23_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1481823,
+          "preview": "1d BUY LFST, CON, MD, AMN, EHC, HCSG, TGT, GRDN \u00b7 SELL QBTS, FCEL, TE, METC, TLN, CWEN, RGTI, EAF"
+        },
+        {
+          "path": "data/stock_book/2026-11-23_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-11-23_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2615,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-11-23_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12414,
+          "preview": "2026-11-23 BUY LFST, CON, MD, AMN, EHC, HCSG, TGT, GRDN \u00b7 SELL QBTS, FCEL, TE, METC, TLN, CWEN, RGTI, EAF"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12414,
+          "preview": "2026-11-23 BUY LFST, CON, MD, AMN, EHC, HCSG, TGT, GRDN \u00b7 SELL QBTS, FCEL, TE, METC, TLN, CWEN, RGTI, EAF"
+        },
+        {
+          "path": "01_daily/2026-11-23_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 87849,
+          "preview": "# Stock book \u2014 2026-11-23\n_Generated 2026-11-23T09:12:01.140943-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY LFST, CON, MD, AMN, EHC, HCSG, TGT, GRDN \u00b7 SELL QBTS, FCEL, TE, METC, TLN, CWEN, RGTI, EAF \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-11-23 BUY LFST, CON, MD, AMN, EHC, HCSG, TGT, GRDN \u00b7 SELL QBTS, FCEL, TE, METC, TLN, CWEN, RGTI, EAF \u00b7 2026-11-23 BUY LFST, CON, MD, AMN, EHC, HCSG, TGT, GRDN \u00b7 SELL QBTS, FCEL, TE, METC, TLN, CWEN, RGTI, EAF \u00b7 # Stock book \u2014 2026-11-23\n_Generated 2026-11-23T09:12:01.140943-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

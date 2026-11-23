@@ -1,6 +1,6 @@
 {
   "date": "2026-11-23",
-  "generated_at": "2026-11-23T09:11:53.404196-05:00",
+  "generated_at": "2026-11-23T09:16:45.498047-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -8,8 +8,8 @@
     "MISSING News judge MD `01_daily/news/2026-11-23_judge.md` \u2014 missing"
   ],
   "counts": {
-    "ok": 4,
-    "partial": 3,
+    "ok": 6,
+    "partial": 1,
     "fail": 1,
     "n": 8
   },
@@ -654,11 +654,11 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": false,
-      "n_req_ok": 2,
+      "n_req_ok": 4,
       "n_req": 4,
-      "n_opt_ok": 1,
+      "n_opt_ok": 3,
       "n_opt": 4,
       "files": [
         {
@@ -782,10 +782,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-11-23_stock_book.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=216",
+          "size": 1481823,
+          "said": "1d BUY LFST, CON, MD, AMN, EHC, HCSG, TGT, GRDN \u00b7 SELL QBTS, FCEL, TE, METC, TLN, CWEN",
           "bullets": []
         },
         {
@@ -793,21 +793,24 @@
           "name": "Stock book MD",
           "path": "01_daily/2026-11-23_stock_book.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 86719,
+          "said": "Stock book \u2014 2026-11-23",
+          "bullets": [
+            "_Generated 2026-11-23T09:12:01.140943-05:00_",
+            "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
+          ]
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-11-23_green.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 585,
+          "said": "0 green \u00b7",
           "bullets": []
         },
         {
@@ -829,10 +832,10 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "session 2026-11-23 not in dashboard dates (last=2026-11-20)",
-          "size": 17386235,
-          "said": "session 2026-11-23 not in dashboard dates (last=2026-11-20)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-11-23)",
+          "size": 17386251,
+          "said": "live-book poller + today.json (2026-11-23)",
           "bullets": []
         }
       ],
@@ -845,9 +848,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "PARTIAL",
-      "inputs_ready": false,
-      "n_req_ok": 1,
+      "status": "OK",
+      "inputs_ready": true,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -857,10 +860,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-11-23_stock_book.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=216",
+          "size": 1481823,
+          "said": "1d BUY LFST, CON, MD, AMN, EHC, HCSG, TGT, GRDN \u00b7 SELL QBTS, FCEL, TE, METC, TLN, CWEN",
           "bullets": []
         },
         {
@@ -868,10 +871,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "FAIL",
-          "reason": "session 2026-11-23 not in dashboard dates (last=2026-11-20)",
-          "size": 17386235,
-          "said": "session 2026-11-23 not in dashboard dates (last=2026-11-20)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-11-23)",
+          "size": 17386251,
+          "said": "live-book poller + today.json (2026-11-23)",
           "bullets": []
         },
         {
@@ -907,8 +910,74 @@
   "news_mode": "on",
   "news_mode_reason": "",
   "selections": {
-    "buy_1d": [],
-    "sell_1d": [],
+    "buy_1d": [
+      {
+        "ticker": "LFST",
+        "score": 0.812463318070574
+      },
+      {
+        "ticker": "CON",
+        "score": 0.6995519739174112
+      },
+      {
+        "ticker": "MD",
+        "score": 0.6766899680271575
+      },
+      {
+        "ticker": "AMN",
+        "score": 0.6445272012839329
+      },
+      {
+        "ticker": "EHC",
+        "score": 0.21617485435615452
+      },
+      {
+        "ticker": "HCSG",
+        "score": 0.5718769453075245
+      },
+      {
+        "ticker": "TGT",
+        "score": 0.3214958916125264
+      },
+      {
+        "ticker": "GRDN",
+        "score": 0.5561906376272425
+      }
+    ],
+    "sell_1d": [
+      {
+        "ticker": "QBTS",
+        "score": -0.41686398681333997
+      },
+      {
+        "ticker": "FCEL",
+        "score": -0.4577222956327998
+      },
+      {
+        "ticker": "TE",
+        "score": -0.46814752030787715
+      },
+      {
+        "ticker": "METC",
+        "score": -0.4618747415762467
+      },
+      {
+        "ticker": "TLN",
+        "score": -0.3940628002146309
+      },
+      {
+        "ticker": "CWEN",
+        "score": -0.35663793628325813
+      },
+      {
+        "ticker": "RGTI",
+        "score": -0.3721752606604096
+      },
+      {
+        "ticker": "EAF",
+        "score": -0.3670026809737018
+      }
+    ],
     "flatten": {},
     "general": {},
     "sectors": {},
@@ -1502,6 +1571,59 @@
         }
       ],
       "preview": "5020 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-11-23",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-23T09:16:44.663319-05:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-11-23_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1481823,
+          "preview": "1d BUY LFST, CON, MD, AMN, EHC, HCSG, TGT, GRDN \u00b7 SELL QBTS, FCEL, TE, METC, TLN, CWEN, RGTI, EAF"
+        },
+        {
+          "path": "data/stock_book/2026-11-23_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-11-23_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2615,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-11-23_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12414,
+          "preview": "2026-11-23 BUY LFST, CON, MD, AMN, EHC, HCSG, TGT, GRDN \u00b7 SELL QBTS, FCEL, TE, METC, TLN, CWEN, RGTI, EAF"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12414,
+          "preview": "2026-11-23 BUY LFST, CON, MD, AMN, EHC, HCSG, TGT, GRDN \u00b7 SELL QBTS, FCEL, TE, METC, TLN, CWEN, RGTI, EAF"
+        },
+        {
+          "path": "01_daily/2026-11-23_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 87849,
+          "preview": "# Stock book \u2014 2026-11-23\n_Generated 2026-11-23T09:12:01.140943-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY LFST, CON, MD, AMN, EHC, HCSG, TGT, GRDN \u00b7 SELL QBTS, FCEL, TE, METC, TLN, CWEN, RGTI, EAF \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-11-23 BUY LFST, CON, MD, AMN, EHC, HCSG, TGT, GRDN \u00b7 SELL QBTS, FCEL, TE, METC, TLN, CWEN, RGTI, EAF \u00b7 2026-11-23 BUY LFST, CON, MD, AMN, EHC, HCSG, TGT, GRDN \u00b7 SELL QBTS, FCEL, TE, METC, TLN, CWEN, RGTI, EAF \u00b7 # Stock book \u2014 2026-11-23\n_Generated 2026-11-23T09:12:01.140943-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
