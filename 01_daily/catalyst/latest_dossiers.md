@@ -1,4 +1,4 @@
-# CATALYST DAILY — 2026-11-20
+# CATALYST DAILY — 2026-11-23
 
 0/5 dossiers · max=8 · routing=Grok → DeepSeek
 
