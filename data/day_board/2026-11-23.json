@@ -1,19 +1,17 @@
 {
   "date": "2026-11-23",
-  "generated_at": "2026-11-23T05:02:01.851349-05:00",
+  "generated_at": "2026-11-23T05:02:38.709220-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-11-23_predict.md` \u2014 missing",
     "MISSING News actions JSON `01_daily/news/2026-11-23_actions.json` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-11-23_judge.md` \u2014 missing",
-    "MISSING Weather JSON `01_daily/weather/2026-11-23_weather.json` \u2014 missing",
-    "MISSING AB checklist enriched `data/ab_checklist/2026-11-23_ab_checklist_enriched.csv` \u2014 missing"
+    "MISSING News judge MD `01_daily/news/2026-11-23_judge.md` \u2014 missing"
   ],
   "counts": {
-    "ok": 1,
+    "ok": 4,
     "partial": 3,
-    "fail": 4,
+    "fail": 1,
     "n": 8
   },
   "processes": [
@@ -21,9 +19,9 @@
       "key": "postclose",
       "name": "Post-close research",
       "yaml": "map_heat_postclose.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 2,
       "n_opt": 2,
@@ -58,10 +56,10 @@
           "name": "Map heat tables JSON",
           "path": "01_daily/map_heat/2026-11-23_map_heat.json",
           "role": "required",
-          "status": "FAIL",
-          "reason": "stale_map_heat_md",
-          "size": 0,
-          "said": "stale_map_heat_md \u00b7 morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
+          "status": "OK",
+          "reason": "",
+          "size": 273713,
+          "said": "morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
           "bullets": []
         },
         {
@@ -71,10 +69,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 18209,
-          "said": "MAP HEAT \u2014 2026-11-20",
+          "size": 18049,
+          "said": "MAP HEAT \u2014 2026-11-23",
           "bullets": [
-            "Export `finviz_2026-11-20.csv` \u00b7 11616 names \u00b7 generated 2026-11-20T05:06:12.413798-05:00",
+            "Export `finviz_2026-11-20.csv` \u00b7 11616 names \u00b7 generated 2026-11-23T04:50:38.759627-05:00",
             "TAPE (live futures)"
           ]
         }
@@ -100,12 +98,12 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 97131,
-          "said": "758 tickers \u00b7 147 signals \u00b7 top AJG, BMY, BSX, CRWD, D, DDOG, DHR, FDX",
+          "size": 97362,
+          "said": "807 tickers \u00b7 192 signals \u00b7 top AJG, AMT, BMY, BSX, COF, CRWD, DDOG, DHR",
           "bullets": [
             "As Financial Stress Weighs on Workers, Gallagher Introduces a Platform Focused on Better Financial Decision-Making",
-            "Big Pharma, with eye on Anthropic, says AI is shrinking drug discovery timelines",
-            "Boston Scientific announces pricing of $3.0 billion and 4.25 billion offerings of senior notes"
+            "Deutsche Bank Names Top North America Telecom Services Stock",
+            "Bristol Myers Squibb Demonstrates Breadth and Clinical Momentum Across Blood Cancers and Rare Hematologic Disorders at ASH 2026"
           ]
         },
         {
@@ -115,10 +113,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 10820,
+          "size": 10864,
           "said": "Finviz Daily Digest \u2014 2026-11-23",
           "bullets": [
-            "_Generated 2026-11-23T05:01:42.762238-05:00 \u00b7 export=data/exports/finviz_2026-11-23.csv \u00b7 ticker digests=758 \u00b7 high-signal=147_",
+            "_Generated 2026-11-23T04:48:16.440657-05:00 \u00b7 export=data/exports/finviz_2026-11-20.csv \u00b7 ticker digests=807 \u00b7 high-signal=192_",
             "Major indices (live quote page)"
           ]
         },
@@ -143,7 +141,7 @@
           "size": 2774,
           "said": "Finviz homepage market digest \u2014 2026-11-23",
           "bullets": [
-            "Generated:** 2026-11-23T05:02:01.415808-05:00 (America/New_York)",
+            "Generated:** 2026-11-23T04:48:26.638692-05:00 (America/New_York)",
             "Source:** `live`"
           ]
         },
@@ -170,11 +168,11 @@
           "bullets": []
         }
       ],
-      "said": "758 tickers \u00b7 147 signals \u00b7 top AJG, BMY, BSX, CRWD, D, DDOG, DHR, FDX",
+      "said": "807 tickers \u00b7 192 signals \u00b7 top AJG, AMT, BMY, BSX, COF, CRWD, DDOG, DHR",
       "bullets": [
         "As Financial Stress Weighs on Workers, Gallagher Introduces a Platform Focused on Better Financial Decision-Making",
-        "Big Pharma, with eye on Anthropic, says AI is shrinking drug discovery timelines",
-        "Boston Scientific announces pricing of $3.0 billion and 4.25 billion offerings of senior notes"
+        "Deutsche Bank Names Top North America Telecom Services Stock",
+        "Bristol Myers Squibb Demonstrates Breadth and Clinical Momentum Across Blood Cancers and Rare Hematologic Disorders at ASH 2026"
       ]
     },
     {
@@ -182,7 +180,7 @@
       "name": "Pre-Open ALL",
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
-      "inputs_ready": false,
+      "inputs_ready": true,
       "n_req_ok": 2,
       "n_req": 9,
       "n_opt_ok": 1,
@@ -195,12 +193,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97131,
-          "said": "758 tickers \u00b7 147 signals \u00b7 top AJG, BMY, BSX, CRWD, D, DDOG, DHR, FDX",
+          "size": 97362,
+          "said": "807 tickers \u00b7 192 signals \u00b7 top AJG, AMT, BMY, BSX, COF, CRWD, DDOG, DHR",
           "bullets": [
             "As Financial Stress Weighs on Workers, Gallagher Introduces a Platform Focused on Better Financial Decision-Making",
-            "Big Pharma, with eye on Anthropic, says AI is shrinking drug discovery timelines",
-            "Boston Scientific announces pricing of $3.0 billion and 4.25 billion offerings of senior notes"
+            "Deutsche Bank Names Top North America Telecom Services Stock",
+            "Bristol Myers Squibb Demonstrates Breadth and Clinical Momentum Across Blood Cancers and Rare Hematologic Disorders at ASH 2026"
           ]
         },
         {
@@ -230,10 +228,10 @@
           "name": "Map heat tables JSON",
           "path": "01_daily/map_heat/2026-11-23_map_heat.json",
           "role": "input",
-          "status": "FAIL",
-          "reason": "stale_map_heat_md",
-          "size": 0,
-          "said": "stale_map_heat_md \u00b7 morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
+          "status": "OK",
+          "reason": "",
+          "size": 273713,
+          "said": "morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
           "bullets": []
         },
         {
@@ -241,10 +239,10 @@
           "name": "News parse JSON",
           "path": "01_daily/news/2026-11-23_parsed.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 2903763,
+          "said": "2903763B on disk",
           "bullets": []
         },
         {
@@ -331,13 +329,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7592,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 20 fail",
+          "size": 7574,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 17 fail",
           "bullets": [
             "general_predict:missing",
             "events:missing",
             "news_judge:missing",
-            "news_parse:missing"
+            "news_actions:missing"
           ]
         },
         {
@@ -356,13 +354,11 @@
           "name": "Grok review JSON",
           "path": "01_daily/2026-11-23_grok_review.json",
           "role": "required",
-          "status": "OK",
-          "reason": "ok=False Grok returned an empty review",
-          "size": 308,
-          "said": "ok=False \u00b7 empty_review_reply (review)",
-          "bullets": [
-            "Grok returned an empty review"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "sector_basic_materials",
@@ -493,9 +489,9 @@
       "key": "weather",
       "name": "Label + weather",
       "yaml": "label_weather.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 1,
       "n_opt_ok": 0,
       "n_opt": 0,
@@ -507,12 +503,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97131,
-          "said": "758 tickers \u00b7 147 signals \u00b7 top AJG, BMY, BSX, CRWD, D, DDOG, DHR, FDX",
+          "size": 97362,
+          "said": "807 tickers \u00b7 192 signals \u00b7 top AJG, AMT, BMY, BSX, COF, CRWD, DDOG, DHR",
           "bullets": [
             "As Financial Stress Weighs on Workers, Gallagher Introduces a Platform Focused on Better Financial Decision-Making",
-            "Big Pharma, with eye on Anthropic, says AI is shrinking drug discovery timelines",
-            "Boston Scientific announces pricing of $3.0 billion and 4.25 billion offerings of senior notes"
+            "Deutsche Bank Names Top North America Telecom Services Stock",
+            "Bristol Myers Squibb Demonstrates Breadth and Clinical Momentum Across Blood Cancers and Rare Hematologic Disorders at ASH 2026"
           ]
         },
         {
@@ -520,25 +516,29 @@
           "name": "Weather JSON",
           "path": "01_daily/weather/2026-11-23_weather.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "sectors=11 bytes=9534 vix=falling yields=falling",
+          "size": 9534,
+          "said": "hostile 11",
+          "bullets": [
+            "hostile: Basic Materials, Communication Services, Consumer Cyclical, Consumer Defensive, Energy, Financial, Healthcare, Industrials, Real Estate, Technology, Utilities"
+          ]
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "hostile 11",
+      "bullets": [
+        "hostile: Basic Materials, Communication Services, Consumer Cyclical, Consumer Defensive, Energy, Financial, Healthcare, Industrials, Real Estate, Technology, Utilities"
+      ]
     },
     {
       "key": "ab",
       "name": "AB checklist",
       "yaml": "ab_checklist.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 1,
       "files": [
         {
@@ -546,26 +546,32 @@
           "name": "AB checklist raw",
           "path": "data/ab_checklist/2026-11-23_ab_checklist.csv",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2590",
+          "size": 7436165,
+          "said": "27 rows",
+          "bullets": [
+            "SLDE, CBRL, SO, REYN, POWW, ELV, AES, LIVN"
+          ]
         },
         {
           "key": "ab_enriched",
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-11-23_ab_checklist_enriched.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2590",
+          "size": 8227968,
+          "said": "25 rows",
+          "bullets": [
+            "SLDE, CBRL, REYN, AES, SO, POWW, ELV, LIVN"
+          ]
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "25 rows",
+      "bullets": [
+        "SLDE, CBRL, REYN, AES, SO"
+      ]
     },
     {
       "key": "catalyst",
@@ -596,12 +602,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97131,
-          "said": "758 tickers \u00b7 147 signals \u00b7 top AJG, BMY, BSX, CRWD, D, DDOG, DHR, FDX",
+          "size": 97362,
+          "said": "807 tickers \u00b7 192 signals \u00b7 top AJG, AMT, BMY, BSX, COF, CRWD, DDOG, DHR",
           "bullets": [
             "As Financial Stress Weighs on Workers, Gallagher Introduces a Platform Focused on Better Financial Decision-Making",
-            "Big Pharma, with eye on Anthropic, says AI is shrinking drug discovery timelines",
-            "Boston Scientific announces pricing of $3.0 billion and 4.25 billion offerings of senior notes"
+            "Deutsche Bank Names Top North America Telecom Services Stock",
+            "Bristol Myers Squibb Demonstrates Breadth and Clinical Momentum Across Blood Cancers and Rare Hematologic Disorders at ASH 2026"
           ]
         },
         {
@@ -623,9 +629,9 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "FAIL",
+      "status": "PARTIAL",
       "inputs_ready": false,
-      "n_req_ok": 0,
+      "n_req_ok": 2,
       "n_req": 4,
       "n_opt_ok": 1,
       "n_opt": 4,
@@ -670,12 +676,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97131,
-          "said": "758 tickers \u00b7 147 signals \u00b7 top AJG, BMY, BSX, CRWD, D, DDOG, DHR, FDX",
+          "size": 97362,
+          "said": "807 tickers \u00b7 192 signals \u00b7 top AJG, AMT, BMY, BSX, COF, CRWD, DDOG, DHR",
           "bullets": [
             "As Financial Stress Weighs on Workers, Gallagher Introduces a Platform Focused on Better Financial Decision-Making",
-            "Big Pharma, with eye on Anthropic, says AI is shrinking drug discovery timelines",
-            "Boston Scientific announces pricing of $3.0 billion and 4.25 billion offerings of senior notes"
+            "Deutsche Bank Names Top North America Telecom Services Stock",
+            "Bristol Myers Squibb Demonstrates Breadth and Clinical Momentum Across Blood Cancers and Rare Hematologic Disorders at ASH 2026"
           ]
         },
         {
@@ -694,44 +700,52 @@
           "name": "Weather JSON",
           "path": "01_daily/weather/2026-11-23_weather.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "sectors=11 bytes=9534 vix=falling yields=falling",
+          "size": 9534,
+          "said": "hostile 11",
+          "bullets": [
+            "hostile: Basic Materials, Communication Services, Consumer Cyclical, Consumer Defensive, Energy, Financial, Healthcare, Industrials, Real Estate, Technology, Utilities"
+          ]
         },
         {
           "key": "in_ab",
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-11-23_ab_checklist_enriched.csv",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2590",
+          "size": 8227968,
+          "said": "25 rows",
+          "bullets": [
+            "SLDE, CBRL, REYN, AES, SO, POWW, ELV, LIVN"
+          ]
         },
         {
           "key": "join",
           "name": "Join ranked CSV",
           "path": "data/join/2026-11-23_ranked.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=5891",
+          "size": 2330158,
+          "said": "192 rows",
+          "bullets": [
+            "REGN, LLY, COCO, KNSA, CDNA, ATAT, ETON, RDN"
+          ]
         },
         {
           "key": "peers",
           "name": "Peer RS CSV",
           "path": "data/peers/2026-11-23_peer_rs.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=5020",
+          "size": 830916,
+          "said": "479 rows",
+          "bullets": [
+            "A, AA, AACG, AAL, AAME, AAMI, AAOI, AAON"
+          ]
         },
         {
           "key": "book_json",
@@ -792,8 +806,10 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "192 rows",
+      "bullets": [
+        "REGN, LLY, COCO, KNSA, CDNA"
+      ]
     },
     {
       "key": "publish",
@@ -867,7 +883,12 @@
     "general": {},
     "sectors": {},
     "news": {},
-    "weather": {}
+    "weather": {
+      "said": "hostile 11",
+      "bullets": [
+        "hostile: Basic Materials, Communication Services, Consumer Cyclical, Consumer Defensive, Energy, Financial, Healthcare, Industrials, Real Estate, Technology, Utilities"
+      ]
+    }
   },
   "lands": [
     {
@@ -1258,6 +1279,31 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-11-23\n**Generated:** 2026-11-23T05:02:01.415808-05:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures point to a strong rebound led by Nasdaq and AI-linked names ahead of S&P Global PMI data and a 2-year note auction\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** NVDA, ANT, ANF, BURL, DKS, HPE, A, ZM, SPGI\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** ANF, BURL, DKS, HPE, A, ZM\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-11-23\n**Clock use:** `same_morning`"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-11-23",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-23T05:02:38.196948-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-23_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 2903763,
+          "preview": "raw=3945 usable=365 single=167 \u00b7 US denies Iranian account that missile damaged F-16 over Gulf - Reuters | Iran unveils dual-missile launcher, new \u2018missile city\u2019: What to know | Saudi Arabia intercepts drone, missile as Houthis report attack on Sanaa | Dollar Retreats From 19-Month High, Traders Scale Back Fed Rate Hike Bets - Busi | Bitcoin rises as Federal Reserve rate hike expectations and risk-off sentiment c"
+        },
+        {
+          "path": "01_daily/news/2026-11-23_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 11045,
+          "preview": "# News Parse v2 \u2014 2026-11-23T05:01:57.535881-05:00\nWindow\u224848h | news_mode=on | raw=3945 | usable=365 | single_name=167 | noise_dropped=3341\nusable polarity={'+': 7, '-': 59, 'mixed': 0, 'neutral': 299}"
+        }
+      ],
+      "preview": "raw=3945 usable=365 single=167 \u00b7 US denies Iranian account that missile damaged F-16 over Gulf - Reuters | Iran unveils dual-missile launcher, new \u2018missile city\u2019: What to know | Saudi Arabia intercepts drone, missile as Houthis report attack on Sanaa | Dollar Retreats From 19-Month High, Traders Scale Back Fed Rate Hike Bets - Busi | Bitcoin rises as Federal Reserve rate hike expectations and risk-off sentiment c \u00b7 # News Parse v2 \u2014 2026-11-23T05:01:57.535881-05:00\nWindow\u224848h | news_mode=on | raw=3945 | usable=365 | single_name=167 | noise_dropped=3341\nusable polarity={'+': 7, '-': 59, 'mixed': 0, 'neutral': 299}"
     }
   ],
   "href": {

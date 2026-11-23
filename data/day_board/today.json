@@ -1,12 +1,12 @@
 {
   "date": "2026-11-23",
-  "generated_at": "2026-11-23T05:02:01.851349-05:00",
+  "generated_at": "2026-11-23T05:02:38.709220-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 1,
+    "ok": 4,
     "partial": 3,
-    "fail": 4,
+    "fail": 1,
     "n": 8
   },
   "buy_1d": [],
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "map_heat_baseline",
-      "title": "Map heat night baseline",
-      "date": "2026-11-23",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-23T05:00:39.046430-05:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-11-23_research_baseline.json",
-          "ok": true,
-          "reason": "",
-          "size": 187526,
-          "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate"
-        },
-        {
-          "path": "01_daily/map_heat/2026-11-23_research_baseline.md",
-          "ok": true,
-          "reason": "",
-          "size": 25855,
-          "preview": "# MAP HEAT RESEARCH \u2014 2026-11-23\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
-        }
-      ],
-      "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-11-23\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
-    },
     {
       "key": "universe",
       "title": "Universe labels",
@@ -221,6 +196,31 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-11-23\n**Generated:** 2026-11-23T05:02:01.415808-05:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures point to a strong rebound led by Nasdaq and AI-linked names ahead of S&P Global PMI data and a 2-year note auction\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** NVDA, ANT, ANF, BURL, DKS, HPE, A, ZM, SPGI\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** ANF, BURL, DKS, HPE, A, ZM\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-11-23\n**Clock use:** `same_morning`"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-11-23",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-23T05:02:38.196948-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-23_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 2903763,
+          "preview": "raw=3945 usable=365 single=167 \u00b7 US denies Iranian account that missile damaged F-16 over Gulf - Reuters | Iran unveils dual-missile launcher, new \u2018missile city\u2019: What to know | Saudi Arabia intercepts drone, missile as Houthis report attack on Sanaa | Dollar Retreats From 19-Month High, Traders Scale Back Fed Rate Hike Bets - Busi | Bitcoin rises as Federal Reserve rate hike expectations and risk-off sentiment c"
+        },
+        {
+          "path": "01_daily/news/2026-11-23_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 11045,
+          "preview": "# News Parse v2 \u2014 2026-11-23T05:01:57.535881-05:00\nWindow\u224848h | news_mode=on | raw=3945 | usable=365 | single_name=167 | noise_dropped=3341\nusable polarity={'+': 7, '-': 59, 'mixed': 0, 'neutral': 299}"
+        }
+      ],
+      "preview": "raw=3945 usable=365 single=167 \u00b7 US denies Iranian account that missile damaged F-16 over Gulf - Reuters | Iran unveils dual-missile launcher, new \u2018missile city\u2019: What to know | Saudi Arabia intercepts drone, missile as Houthis report attack on Sanaa | Dollar Retreats From 19-Month High, Traders Scale Back Fed Rate Hike Bets - Busi | Bitcoin rises as Federal Reserve rate hike expectations and risk-off sentiment c \u00b7 # News Parse v2 \u2014 2026-11-23T05:01:57.535881-05:00\nWindow\u224848h | news_mode=on | raw=3945 | usable=365 | single_name=167 | noise_dropped=3341\nusable polarity={'+': 7, '-': 59, 'mixed': 0, 'neutral': 299}"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
