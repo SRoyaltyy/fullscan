@@ -1,6 +1,6 @@
 {
   "date": "2026-11-23",
-  "generated_at": "2026-11-23T17:04:38.022808-05:00",
+  "generated_at": "2026-11-23T17:04:46.317751-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -88,24 +88,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "join",
-      "title": "Join / match rank",
-      "date": "2026-11-23",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-23T09:11:44.266761-05:00",
-      "files": [
-        {
-          "path": "data/join/2026-11-23_ranked.csv",
-          "ok": true,
-          "reason": "",
-          "size": 2345391,
-          "preview": "5891 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, LLY, COCO, KNSA, RDN"
-        }
-      ],
-      "preview": "5891 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, LLY, COCO, KNSA, RDN"
-    },
     {
       "key": "peer_rs",
       "title": "Peer RS",
@@ -553,6 +535,24 @@
         }
       ],
       "preview": "5891 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, LLY, COCO, KNSA, RDN \u00b7 5891 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, LLY, COCO, KNSA, ATAT"
+    },
+    {
+      "key": "peer_rs",
+      "title": "Peer RS",
+      "date": "2026-11-23",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-23T17:04:45.233193-05:00",
+      "files": [
+        {
+          "path": "data/peers/2026-11-23_peer_rs.csv",
+          "ok": true,
+          "reason": "",
+          "size": 830916,
+          "preview": "5020 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+        }
+      ],
+      "preview": "5020 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
