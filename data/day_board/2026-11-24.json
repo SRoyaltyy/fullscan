@@ -1,6 +1,6 @@
 {
   "date": "2026-11-24",
-  "generated_at": "2026-11-24T05:25:41.433590-05:00",
+  "generated_at": "2026-11-24T05:26:03.303717-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -181,7 +181,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 9,
       "n_opt_ok": 1,
       "n_opt": 14,
@@ -239,10 +239,10 @@
           "name": "News parse JSON",
           "path": "01_daily/news/2026-11-24_parsed.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 3538470,
+          "said": "3538470B on disk",
           "bullets": []
         },
         {
@@ -329,13 +329,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7576,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 18 fail",
+          "size": 7575,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 17 fail",
           "bullets": [
             "general_predict:missing",
             "events:missing",
             "news_judge:missing",
-            "news_parse:missing"
+            "news_actions:missing"
           ]
         },
         {
@@ -1172,6 +1172,31 @@
         }
       ],
       "preview": "2604 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CBRL, SLDE, CL, POWW, ELV \u00b7 2604 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 POWW, SLDE, CBRL, CL, REYN"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-11-24",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-24T05:26:02.622641-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-24_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 3538470,
+          "preview": "raw=4899 usable=328 single=343 \u00b7 UK midcaps outperform as Nvidia sparks global risk-on rally - Reuters | US imposes sanctions on dozens linked to Iran's shadow banking networks - Reuter | Brazil Mining Agency Shortfalls Threaten Critical Minerals Push - Bloomberg.com | COMMENTARY: China's steel sector bifurcates as iron ore remains robust - Reuters | US escalates sanctions on Iran, targets \u2018shadow banking\u2019 networks"
+        },
+        {
+          "path": "01_daily/news/2026-11-24_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 10496,
+          "preview": "# News Parse v2 \u2014 2026-11-24T05:26:02.407909-05:00\nWindow\u224848h | news_mode=on | raw=4899 | usable=328 | single_name=343 | noise_dropped=4136\nusable polarity={'+': 19, '-': 53, 'mixed': 1, 'neutral': 255}"
+        }
+      ],
+      "preview": "raw=4899 usable=328 single=343 \u00b7 UK midcaps outperform as Nvidia sparks global risk-on rally - Reuters | US imposes sanctions on dozens linked to Iran's shadow banking networks - Reuter | Brazil Mining Agency Shortfalls Threaten Critical Minerals Push - Bloomberg.com | COMMENTARY: China's steel sector bifurcates as iron ore remains robust - Reuters | US escalates sanctions on Iran, targets \u2018shadow banking\u2019 networks \u00b7 # News Parse v2 \u2014 2026-11-24T05:26:02.407909-05:00\nWindow\u224848h | news_mode=on | raw=4899 | usable=328 | single_name=343 | noise_dropped=4136\nusable polarity={'+': 19, '-': 53, 'mixed': 1, 'neutral': 255}"
     }
   ],
   "href": {
