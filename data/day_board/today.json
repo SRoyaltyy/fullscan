@@ -1,6 +1,6 @@
 {
   "date": "2026-11-24",
-  "generated_at": "2026-11-24T05:22:27.359599-05:00",
+  "generated_at": "2026-11-24T05:24:41.411436-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -135,6 +135,31 @@
         }
       ],
       "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-11-24\nExport `finviz_2026-11-24.csv` \u00b7 11616 names \u00b7 generated 2026-11-24T05:22:26.899799-05:00"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-11-24",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-24T05:24:41.129490-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-24_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 100081,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-11-24_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 10989,
+          "preview": "# Finviz Daily Digest \u2014 2026-11-24\n_Generated 2026-11-24T05:19:58.828531-05:00 \u00b7 export=data/exports/finviz_2026-11-24.csv \u00b7 ticker digests=632 \u00b7 high-signal=102_"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-11-24\n_Generated 2026-11-24T05:19:58.828531-05:00 \u00b7 export=data/exports/finviz_2026-11-24.csv \u00b7 ticker digests=632 \u00b7 high-signal=102_"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
