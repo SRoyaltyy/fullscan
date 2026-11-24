@@ -1,0 +1,96 @@
+{
+  "date": "2026-11-24",
+  "generated_at": "2026-11-24T05:20:06.519878-05:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": true,
+  "clock_use": "same_morning",
+  "clock_legal_for": "2026-11-24",
+  "clock_rule": "Live: Generated must be before 09:30 ET on this date or leave missing. Wayback: capture before 09:30 ET that day is legal for that morning's Pre-Open. Afternoon Wayback is legal for the NEXT session open only (prior-day close recap), marked by clock_legal_for. Gaps stay gaps. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US futures point lower as Nvidia-led tech pause follows AI-driven rebound ahead of earnings and housing and confidence data",
+  "raw_text": "- S&P 500 futures (@ES) are down about 0.39%, Dow Jones futures (@YM) are off 0.09%, Nasdaq 100 futures (@NQ) are lower by 1.05%, and Russell 2000 futures (@ER2) are down 0.26% as investors take profits after Monday’s Nvidia-led rebound\n- Nvidia (NVDA) trades roughly 5% lower pre-market after a 31% surge on Jensen Huang’s return as CEO, pressuring the broader tech and chip complex as traders book gains\n- Asian markets extend AI momentum, with Japan’s Nikkei (@NKD) up nearly 4% and South Korea’s Kospi up 7%\n- European shares and oil (@CL) prices edge modestly lower in early trading\n- Medtronic (MDT), Analog Devices (ADI), Best Buy (BBY), and Dollar Tree (DLTR) report earnings before the bell, with key numbers versus estimates expected to set the intraday tone\n- Dell (DELL), Workday (WDAY), HP (HPQ), and Autodesk (ADSK) are scheduled to report earnings after the close\n- Today’s macro calendar features ADP (ADP) employment change at 8:15 a.m. ET, S&P Case-Shiller home prices and the FHFA house price index at 9:00 a.m. ET, and Conference Board consumer confidence at 10:00 a.m. ET, with no major surprises expected",
+  "raw_summary_md": "- **S&P 500 futures** ([@ES](https://finviz.com/futures_charts?t=ES)) are down about 0.39%, **Dow Jones futures** ([@YM](https://finviz.com/futures_charts?t=YM)) are off 0.09%, **Nasdaq 100 futures** ([@NQ](https://finviz.com/futures_charts?t=NQ)) are lower by 1.05%, and **Russell 2000 futures** ([@ER2](https://finviz.com/futures_charts?t=ER2)) are down 0.26% as investors **take profits** after Monday’s Nvidia-led rebound\n- **Nvidia** ([NVDA](https://finviz.com/quote?t=NVDA)) trades roughly **5% lower** pre-market after a **31% surge** on Jensen Huang’s return as CEO, pressuring the broader tech and chip complex as traders book gains\n- Asian markets extend AI momentum, with Japan’s **Nikkei** ([@NKD](https://finviz.com/futures_charts?t=NKD)) up nearly 4% and South Korea’s Kospi **up 7%**\n- European shares and **oil** ([@CL](https://finviz.com/futures_charts?t=CL)) prices **edge modestly lower** in early trading\n- **Medtronic** ([MDT](https://finviz.com/quote?t=MDT)), **Analog Devices** ([ADI](https://finviz.com/quote?t=ADI)), **Best Buy** ([BBY](https://finviz.com/quote?t=BBY)), and **Dollar Tree** ([DLTR](https://finviz.com/quote?t=DLTR)) report **earnings before the bell**, with key numbers versus estimates expected to set the intraday tone\n- **Dell** ([DELL](https://finviz.com/quote?t=DELL)), **Workday** ([WDAY](https://finviz.com/quote?t=WDAY)), **HP** ([HPQ](https://finviz.com/quote?t=HPQ)), and **Autodesk** ([ADSK](https://finviz.com/quote?t=ADSK)) are scheduled to report earnings **after the close**\n- Today’s macro calendar features **ADP** ([ADP](https://finviz.com/quote?t=ADP)) employment change at 8:15 a.m. ET, S&P Case-Shiller home prices and the FHFA house price index at 9:00 a.m. ET, and Conference Board consumer confidence at 10:00 a.m. ET, with **no major surprises expected**",
+  "index_moves": [],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "NVDA",
+    "MDT",
+    "ADI",
+    "BBY",
+    "DLTR",
+    "DELL",
+    "WDAY",
+    "HPQ",
+    "ADSK",
+    "ADP"
+  ],
+  "named_leaders": [
+    "NVDA",
+    "MDT",
+    "ADI",
+    "BBY",
+    "DLTR",
+    "DELL",
+    "WDAY",
+    "HPQ",
+    "ADSK",
+    "ADP"
+  ],
+  "calendar": [
+    "S&P 500 futures (@ES) are down about 0.39%, Dow Jones futures (@YM) are off 0.09%, Nasdaq 100 futures (@NQ) are lower by 1.05%, and Russell 2000 futures (@ER2) are down 0.26% as investors take profits after Monday’s Nvidia-led rebound",
+    "Today’s macro calendar features ADP (ADP) employment change at 8:15 a.m. ET, S&P Case-Shiller home prices and the FHFA house price index at 9:00 a.m. ET, and Conference Board consumer confidence at 10:00 a.m. ET, with no major surprises expected"
+  ],
+  "prior_close": {
+    "spx": null,
+    "nasdaq": null,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": false,
+    "bullets": [
+      "S&P 500 futures (@ES) are down about 0.39%, Dow Jones futures (@YM) are off 0.09%, Nasdaq 100 futures (@NQ) are lower by 1.05%, and Russell 2000 futures (@ER2) are down 0.26% as investors take profits after Monday’s Nvidia-led rebound",
+      "Today’s macro calendar features ADP (ADP) employment change at 8:15 a.m. ET, S&P Case-Shiller home prices and the FHFA house price index at 9:00 a.m. ET, and Conference Board consumer confidence at 10:00 a.m. ET, with no major surprises expected"
+    ],
+    "text": "S&P 500 futures (@ES) are down about 0.39%, Dow Jones futures (@YM) are off 0.09%, Nasdaq 100 futures (@NQ) are lower by 1.05%, and Russell 2000 futures (@ER2) are down 0.26% as investors take profits after Monday’s Nvidia-led rebound Today’s macro calendar features ADP (ADP) employment change at 8:15 a.m. ET, S&P Case-Shiller home prices and the FHFA house price index at 9:00 a.m. ET, and Conference Board consumer confidence at 10:00 a.m. ET, with no major surprises expected"
+  },
+  "earnings_slate": {
+    "tickers": [
+      "MDT",
+      "ADI",
+      "BBY",
+      "DLTR",
+      "DELL",
+      "WDAY",
+      "HPQ",
+      "ADSK"
+    ],
+    "text": "Medtronic (MDT), Analog Devices (ADI), Best Buy (BBY), and Dollar Tree (DLTR) report earnings before the bell, with key numbers versus estimates expected to set the intraday tone Dell (DELL), Workday (WDAY), HP (HPQ), and Autodesk (ADSK) are scheduled to report earnings after the close"
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 352009,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-11-24T05:06:52.217",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "bad"
+}
