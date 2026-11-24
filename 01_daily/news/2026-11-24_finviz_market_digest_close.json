@@ -1,0 +1,117 @@
+{
+  "date": "2026-11-24",
+  "generated_at": "2026-11-24T17:01:08.036564-05:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": false,
+  "clock_use": "next_open",
+  "clock_legal_for": "2026-11-25",
+  "capture_slot": "close",
+  "clock_rule": "Live post-close answer-key (~16:05 ET). Always next_open for the NEXT session (2026-11-25) — never same_morning. Writes *_finviz_market_digest_close.* only. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest_close",
+  "represents": "Finviz homepage post-close answer-key. clock_use is always next_open; clock_legal_for is the next NYSE session. Lives at *_finviz_market_digest_close.*. Does not replace the same_morning warm-up file. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks ended mixed as AI names came under pressure on Nvidia governance concerns and China tariff reports ahead of GDP and PCE data",
+  "raw_text": "- The Dow Jones Industrial Average ($DJI) rose 0.85% to 50,017 while the S&P 500 ($SPX) fell 0.50% to 7,201 and the Nasdaq Composite ($COMP) declined 1.48% to 23,734 as Monday’s Nvidia (NVDA)-led AI gains were partly reversed.\n- Nvidia (NVDA) dropped about 6% as investors weighed governance and political risks around Jensen Huang’s reinstatement as CEO, bipartisan backlash to President Trump’s role and reports of new US tariffs on China, while Anthropic fell below its $83 IPO price.\n- Healthcare led the market with a roughly 3.0% gain, with Pfizer (PFE) among the top performers, and Insmed (INSM) jumped 14% after Sanofi (SNY) announced a $41 billion all-cash acquisition.\n- Technology lagged with a 2.7% decline, making it the weakest S&P 500 ($SPX) sector on the day.\n- Market breadth was positive as 9 of 11 S&P 500 ($SPX) sectors rose and the Russell 2000 (IWM) gained 0.57%.\n- Abercrombie & Fitch (ANF) climbed about 20% after beating Q3 estimates and raising its full-year sales and profit outlook on strong apparel demand.\n- Dick’s Sporting Goods (DKS) gained about 15% after reporting adjusted EPS of $1.94 that beat forecasts by 38% and lifting its outlook.\n- Dollar Tree (DLTR) rose about 11% following a 25% earnings beat.\n- Analog Devices (ADI) fell 17.6% and Hewlett Packard Enterprise (HPE) declined 16% as margin concerns overshadowed their earnings beats and raised outlooks.\n- US consumer confidence rose in November to its highest level in nearly two years, while after the bell Dell Technologies (DELL) beat with fiscal Q3 revenue of $54.9 billion and EPS of $9.45 as AI-related sales more than doubled, and Workday (WDAY), Autodesk (ADSK), HP (HPQ) and Nutanix (NTNX) also reported ahead of Wednesday’s Q3 GDP, October PCE inflation data and Deere (DE) earnings.",
+  "raw_summary_md": "- The **Dow Jones Industrial Average** ([$DJI](https://finviz.com/index/DJI?p=d)) rose 0.85% to 50,017 while the **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) fell 0.50% to 7,201 and the **Nasdaq Composite** ([$COMP](https://finviz.com/index/COMP?p=d)) declined **1.48%** to 23,734 as Monday’s **Nvidia** ([NVDA](https://finviz.com/quote?t=NVDA))-led AI gains were partly reversed.\n- **Nvidia** ([NVDA](https://finviz.com/quote?t=NVDA)) dropped **about 6%** as investors weighed governance and political risks around Jensen Huang’s reinstatement as CEO, bipartisan backlash to President Trump’s role and reports of new US tariffs on China, while Anthropic fell below its $83 IPO price.\n- Healthcare led the market with a roughly 3.0% gain, with **Pfizer** ([PFE](https://finviz.com/quote?t=PFE)) among the top performers, and **Insmed** ([INSM](https://finviz.com/quote?t=INSM)) jumped **14%** after **Sanofi** ([SNY](https://finviz.com/quote?t=SNY)) announced a **$41 billion all-cash acquisition**.\n- Technology lagged with a **2.7% decline**, making it the weakest **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) sector on the day.\n- Market breadth was positive as **9 of 11** **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) sectors rose and the **Russell 2000** ([IWM](https://finviz.com/quote?t=IWM)) gained 0.57%.\n- **Abercrombie & Fitch** ([ANF](https://finviz.com/quote?t=ANF)) climbed **about 20%** after beating Q3 estimates and raising its full-year sales and profit outlook on strong apparel demand.\n- **Dick’s Sporting Goods** ([DKS](https://finviz.com/quote?t=DKS)) gained **about 15%** after reporting adjusted EPS of $1.94 that **beat forecasts by 38%** and lifting its outlook.\n- **Dollar Tree** ([DLTR](https://finviz.com/quote?t=DLTR)) rose about 11% following a **25% earnings beat**.\n- **Analog Devices** ([ADI](https://finviz.com/quote?t=ADI)) fell 17.6% and **Hewlett Packard Enterprise** ([HPE](https://finviz.com/quote?t=HPE)) declined 16% as **margin concerns** overshadowed their earnings beats and raised outlooks.\n- US consumer confidence rose in November to its **highest level** in nearly two years, while after the bell **Dell Technologies** ([DELL](https://finviz.com/quote?t=DELL)) beat with fiscal Q3 revenue of $54.9 billion and EPS of $9.45 as AI-related **sales more than doubled**, and **Workday** ([WDAY](https://finviz.com/quote?t=WDAY)), **Autodesk** ([ADSK](https://finviz.com/quote?t=ADSK)), **HP** ([HPQ](https://finviz.com/quote?t=HPQ)) and **Nutanix** ([NTNX](https://finviz.com/quote?t=NTNX)) also reported ahead of Wednesday’s Q3 GDP, October PCE inflation data and **Deere** ([DE](https://finviz.com/quote?t=DE)) earnings.",
+  "index_moves": [
+    {
+      "name": "Dow Jones Industrial Average",
+      "code": "DJI",
+      "change_pct": 0.85,
+      "verb": "rose"
+    },
+    {
+      "name": "S&P 500",
+      "code": "SPX",
+      "change_pct": -0.5,
+      "verb": "fell"
+    },
+    {
+      "name": "Nasdaq Composite",
+      "code": "COMP",
+      "change_pct": -1.48,
+      "verb": "declined"
+    }
+  ],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "NVDA",
+    "PFE",
+    "INSM",
+    "SNY",
+    "ANF",
+    "DKS",
+    "DLTR",
+    "ADI",
+    "HPE",
+    "DELL",
+    "WDAY",
+    "ADSK",
+    "HPQ",
+    "NTNX",
+    "DE"
+  ],
+  "named_leaders": [
+    "NVDA",
+    "PFE",
+    "INSM",
+    "SNY",
+    "ANF",
+    "DKS",
+    "DLTR",
+    "ADI",
+    "HPE",
+    "DELL",
+    "WDAY",
+    "ADSK",
+    "HPQ",
+    "NTNX",
+    "DE"
+  ],
+  "calendar": [
+    "The Dow Jones Industrial Average ($DJI) rose 0.85% to 50,017 while the S&P 500 ($SPX) fell 0.50% to 7,201 and the Nasdaq Composite ($COMP) declined 1.48% to 23,734 as Monday’s Nvidia (NVDA)-led AI gains were partly reversed.",
+    "US consumer confidence rose in November to its highest level in nearly two years, while after the bell Dell Technologies (DELL) beat with fiscal Q3 revenue of $54.9 billion and EPS of $9.45 as AI-related sales more than doubled, and Workday (WDAY), Autodesk (ADSK), HP (HPQ) and Nutanix (NTNX) also reported ahead of Wednesday’s Q3 GDP, October PCE inflation data and Deere (DE) earnings."
+  ],
+  "prior_close": {
+    "spx": -0.5,
+    "nasdaq": -1.48,
+    "dow": 0.85
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": false,
+    "bullets": [
+      "The Dow Jones Industrial Average ($DJI) rose 0.85% to 50,017 while the S&P 500 ($SPX) fell 0.50% to 7,201 and the Nasdaq Composite ($COMP) declined 1.48% to 23,734 as Monday’s Nvidia (NVDA)-led AI gains were partly reversed.",
+      "US consumer confidence rose in November to its highest level in nearly two years, while after the bell Dell Technologies (DELL) beat with fiscal Q3 revenue of $54.9 billion and EPS of $9.45 as AI-related sales more than doubled, and Workday (WDAY), Autodesk (ADSK), HP (HPQ) and Nutanix (NTNX) also reported ahead of Wednesday’s Q3 GDP, October PCE inflation data and Deere (DE) earnings."
+    ],
+    "text": "The Dow Jones Industrial Average ($DJI) rose 0.85% to 50,017 while the S&P 500 ($SPX) fell 0.50% to 7,201 and the Nasdaq Composite ($COMP) declined 1.48% to 23,734 as Monday’s Nvidia (NVDA)-led AI gains were partly reversed. US consumer confidence rose in November to its highest level in nearly two years, while after the bell Dell Technologies (DELL) beat with fiscal Q3 revenue of $54.9 billion and EPS of $9.45 as AI-related sales more than doubled, and Workday (WDAY), Autodesk (ADSK), HP (HPQ) and Nutanix (NTNX) also reported ahead of Wednesday’s Q3 GDP, October PCE inflation data and Deere (DE) earnings."
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 352902,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-11-24T16:38:32.457",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "bad"
+}
