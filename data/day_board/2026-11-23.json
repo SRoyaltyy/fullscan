@@ -1,6 +1,6 @@
 {
   "date": "2026-11-23",
-  "generated_at": "2026-11-23T20:52:12.577650-05:00",
+  "generated_at": "2026-11-23T20:52:47.579289-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -854,7 +854,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "live-book poller + today.json (2026-11-23)",
-          "size": 17546872,
+          "size": 17546888,
           "said": "live-book poller + today.json (2026-11-23)",
           "bullets": []
         }
@@ -893,7 +893,7 @@
           "role": "required",
           "status": "OK",
           "reason": "live-book poller + today.json (2026-11-23)",
-          "size": 17546872,
+          "size": 17546888,
           "said": "live-book poller + today.json (2026-11-23)",
           "bullets": []
         },
@@ -2314,6 +2314,59 @@
         }
       ],
       "preview": "5020 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-11-23",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-23T20:52:46.704755-05:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-11-23_stock_book.after-freeze-4.json",
+          "ok": true,
+          "reason": "",
+          "size": 1481821,
+          "preview": "1d BUY LFST, CON, MD, AMN, EHC, HCSG, TGT, GRDN \u00b7 SELL QBTS, FCEL, TE, METC, TLN, CWEN, RGTI, EAF"
+        },
+        {
+          "path": "data/stock_book/2026-11-23_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-11-23_input_health.after-freeze-4.json",
+          "ok": true,
+          "reason": "",
+          "size": 2615,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-11-23_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12414,
+          "preview": "2026-11-23 BUY LFST, CON, MD, AMN, EHC, HCSG, TGT, GRDN \u00b7 SELL QBTS, FCEL, TE, METC, TLN, CWEN, RGTI, EAF"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12414,
+          "preview": "2026-11-23 BUY LFST, CON, MD, AMN, EHC, HCSG, TGT, GRDN \u00b7 SELL QBTS, FCEL, TE, METC, TLN, CWEN, RGTI, EAF"
+        },
+        {
+          "path": "01_daily/2026-11-23_stock_book.after-freeze-4.md",
+          "ok": true,
+          "reason": "",
+          "size": 87813,
+          "preview": "# Stock book \u2014 2026-11-23\n_Generated 2026-11-23T20:52:21.748729-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY LFST, CON, MD, AMN, EHC, HCSG, TGT, GRDN \u00b7 SELL QBTS, FCEL, TE, METC, TLN, CWEN, RGTI, EAF \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-11-23 BUY LFST, CON, MD, AMN, EHC, HCSG, TGT, GRDN \u00b7 SELL QBTS, FCEL, TE, METC, TLN, CWEN, RGTI, EAF \u00b7 2026-11-23 BUY LFST, CON, MD, AMN, EHC, HCSG, TGT, GRDN \u00b7 SELL QBTS, FCEL, TE, METC, TLN, CWEN, RGTI, EAF \u00b7 # Stock book \u2014 2026-11-23\n_Generated 2026-11-23T20:52:21.748729-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
@@ -2375,6 +2428,14 @@
       "path": "data/day_board/2026-11-23.json",
       "at": "2026-11-23T20:52:12-05:00",
       "commit_msg": "auto: land peer_rs [2026-11-23]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "45306912874",
+      "manifest": "research/input_freeze/2026-11-23/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-11-23.json",
+      "at": "2026-11-23T20:52:48-05:00",
+      "commit_msg": "auto: land stock_book [2026-11-23]",
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "45306912874",
       "manifest": "research/input_freeze/2026-11-23/manifest.json"
