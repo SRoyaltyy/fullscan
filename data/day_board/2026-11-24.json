@@ -1,6 +1,6 @@
 {
   "date": "2026-11-24",
-  "generated_at": "2026-11-24T09:23:22.149219-05:00",
+  "generated_at": "2026-11-24T09:30:10.451770-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -8,8 +8,8 @@
     "MISSING News judge MD `01_daily/news/2026-11-24_judge.md` \u2014 missing"
   ],
   "counts": {
-    "ok": 4,
-    "partial": 3,
+    "ok": 6,
+    "partial": 1,
     "fail": 1,
     "n": 8
   },
@@ -654,11 +654,11 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": false,
-      "n_req_ok": 2,
+      "n_req_ok": 4,
       "n_req": 4,
-      "n_opt_ok": 1,
+      "n_opt_ok": 3,
       "n_opt": 4,
       "files": [
         {
@@ -782,10 +782,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-11-24_stock_book.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=210",
+          "size": 1472401,
+          "said": "1d BUY SRRK, RZLT \u00b7 SELL CSIQ, BTDR, DKNG, IE, MSTR, HYMC",
           "bullets": []
         },
         {
@@ -793,21 +793,24 @@
           "name": "Stock book MD",
           "path": "01_daily/2026-11-24_stock_book.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 75522,
+          "said": "Stock book \u2014 2026-11-24",
+          "bullets": [
+            "_Generated 2026-11-24T09:23:33.494499-05:00_",
+            "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
+          ]
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-11-24_green.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 585,
+          "said": "0 green \u00b7",
           "bullets": []
         },
         {
@@ -829,10 +832,10 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "session 2026-11-24 not in dashboard dates (last=2026-11-23)",
-          "size": 17546872,
-          "said": "session 2026-11-24 not in dashboard dates (last=2026-11-23)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-11-24)",
+          "size": 17546888,
+          "said": "live-book poller + today.json (2026-11-24)",
           "bullets": []
         }
       ],
@@ -845,9 +848,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "PARTIAL",
-      "inputs_ready": false,
-      "n_req_ok": 1,
+      "status": "OK",
+      "inputs_ready": true,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -857,10 +860,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-11-24_stock_book.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=210",
+          "size": 1472401,
+          "said": "1d BUY SRRK, RZLT \u00b7 SELL CSIQ, BTDR, DKNG, IE, MSTR, HYMC",
           "bullets": []
         },
         {
@@ -868,10 +871,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "FAIL",
-          "reason": "session 2026-11-24 not in dashboard dates (last=2026-11-23)",
-          "size": 17546872,
-          "said": "session 2026-11-24 not in dashboard dates (last=2026-11-23)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-11-24)",
+          "size": 17546888,
+          "said": "live-book poller + today.json (2026-11-24)",
           "bullets": []
         },
         {
@@ -907,8 +910,50 @@
   "news_mode": "on",
   "news_mode_reason": "",
   "selections": {
-    "buy_1d": [],
-    "sell_1d": [],
+    "buy_1d": [
+      {
+        "ticker": "SRRK",
+        "score": 0.7438544437872028
+      },
+      {
+        "ticker": "RZLT",
+        "score": 0.7231405116854523
+      }
+    ],
+    "sell_1d": [
+      {
+        "ticker": "CSIQ",
+        "score": -0.4497061887432902
+      },
+      {
+        "ticker": "BTDR",
+        "score": -0.42320184298798086
+      },
+      {
+        "ticker": "DKNG",
+        "score": -0.6729627955575861
+      },
+      {
+        "ticker": "IE",
+        "score": -0.4604530670049421
+      },
+      {
+        "ticker": "MSTR",
+        "score": -0.44710660008289416
+      },
+      {
+        "ticker": "HYMC",
+        "score": -0.33556720282802116
+      },
+      {
+        "ticker": "WRD",
+        "score": -0.34483687578730476
+      },
+      {
+        "ticker": "HTZ",
+        "score": -0.46173754719346677
+      }
+    ],
     "flatten": {},
     "general": {},
     "sectors": {},
@@ -1416,6 +1461,59 @@
         }
       ],
       "preview": "5010 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-11-24",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-24T09:30:09.053315-05:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-11-24_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1472401,
+          "preview": "1d BUY SRRK, RZLT \u00b7 SELL CSIQ, BTDR, DKNG, IE, MSTR, HYMC, WRD, HTZ"
+        },
+        {
+          "path": "data/stock_book/2026-11-24_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-11-24_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2615,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-11-24_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 11836,
+          "preview": "2026-11-24 BUY SRRK, RZLT \u00b7 SELL CSIQ, BTDR, DKNG, IE, MSTR, HYMC, WRD, HTZ"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 11836,
+          "preview": "2026-11-24 BUY SRRK, RZLT \u00b7 SELL CSIQ, BTDR, DKNG, IE, MSTR, HYMC, WRD, HTZ"
+        },
+        {
+          "path": "01_daily/2026-11-24_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 76624,
+          "preview": "# Stock book \u2014 2026-11-24\n_Generated 2026-11-24T09:23:33.494499-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY SRRK, RZLT \u00b7 SELL CSIQ, BTDR, DKNG, IE, MSTR, HYMC, WRD, HTZ \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-11-24 BUY SRRK, RZLT \u00b7 SELL CSIQ, BTDR, DKNG, IE, MSTR, HYMC, WRD, HTZ \u00b7 2026-11-24 BUY SRRK, RZLT \u00b7 SELL CSIQ, BTDR, DKNG, IE, MSTR, HYMC, WRD, HTZ \u00b7 # Stock book \u2014 2026-11-24\n_Generated 2026-11-24T09:23:33.494499-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
@@ -1461,6 +1559,14 @@
       "path": "data/day_board/2026-11-24.json",
       "at": "2026-11-24T09:23:22-05:00",
       "commit_msg": "auto: land peer_rs [2026-11-24]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "45409518977",
+      "manifest": "research/input_freeze/2026-11-24/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-11-24.json",
+      "at": "2026-11-24T09:30:11-05:00",
+      "commit_msg": "auto: land stock_book [2026-11-24]",
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "45409518977",
       "manifest": "research/input_freeze/2026-11-24/manifest.json"

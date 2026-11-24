@@ -1,45 +1,62 @@
 {
   "date": "2026-11-24",
-  "generated_at": "2026-11-24T09:23:22.149219-05:00",
+  "generated_at": "2026-11-24T09:30:10.451770-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 4,
-    "partial": 3,
+    "ok": 6,
+    "partial": 1,
     "fail": 1,
     "n": 8
   },
-  "buy_1d": [],
-  "sell_1d": [],
+  "buy_1d": [
+    {
+      "ticker": "SRRK",
+      "score": 0.7438544437872028
+    },
+    {
+      "ticker": "RZLT",
+      "score": 0.7231405116854523
+    }
+  ],
+  "sell_1d": [
+    {
+      "ticker": "CSIQ",
+      "score": -0.4497061887432902
+    },
+    {
+      "ticker": "BTDR",
+      "score": -0.42320184298798086
+    },
+    {
+      "ticker": "DKNG",
+      "score": -0.6729627955575861
+    },
+    {
+      "ticker": "IE",
+      "score": -0.4604530670049421
+    },
+    {
+      "ticker": "MSTR",
+      "score": -0.44710660008289416
+    },
+    {
+      "ticker": "HYMC",
+      "score": -0.33556720282802116
+    },
+    {
+      "ticker": "WRD",
+      "score": -0.34483687578730476
+    },
+    {
+      "ticker": "HTZ",
+      "score": -0.46173754719346677
+    }
+  ],
   "flatten": {},
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "news_parse",
-      "title": "News parse",
-      "date": "2026-11-24",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-24T05:26:16.337739-05:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-11-24_parsed.json",
-          "ok": true,
-          "reason": "",
-          "size": 3538470,
-          "preview": "raw=4899 usable=328 single=343 \u00b7 UK midcaps outperform as Nvidia sparks global risk-on rally - Reuters | US imposes sanctions on dozens linked to Iran's shadow banking networks - Reuter | Brazil Mining Agency Shortfalls Threaten Critical Minerals Push - Bloomberg.com | COMMENTARY: China's steel sector bifurcates as iron ore remains robust - Reuters | US escalates sanctions on Iran, targets \u2018shadow banking\u2019 networks"
-        },
-        {
-          "path": "01_daily/news/2026-11-24_parsed.md",
-          "ok": true,
-          "reason": "",
-          "size": 10496,
-          "preview": "# News Parse v2 \u2014 2026-11-24T05:26:02.407909-05:00\nWindow\u224848h | news_mode=on | raw=4899 | usable=328 | single_name=343 | noise_dropped=4136\nusable polarity={'+': 19, '-': 53, 'mixed': 1, 'neutral': 255}"
-        }
-      ],
-      "preview": "raw=4899 usable=328 single=343 \u00b7 UK midcaps outperform as Nvidia sparks global risk-on rally - Reuters | US imposes sanctions on dozens linked to Iran's shadow banking networks - Reuter | Brazil Mining Agency Shortfalls Threaten Critical Minerals Push - Bloomberg.com | COMMENTARY: China's steel sector bifurcates as iron ore remains robust - Reuters | US escalates sanctions on Iran, targets \u2018shadow banking\u2019 networks \u00b7 # News Parse v2 \u2014 2026-11-24T05:26:02.407909-05:00\nWindow\u224848h | news_mode=on | raw=4899 | usable=328 | single_name=343 | noise_dropped=4136\nusable polarity={'+': 19, '-': 53, 'mixed': 1, 'neutral': 255}"
-    },
     {
       "key": "news_actions",
       "title": "News actions (no LLM)",
@@ -228,6 +245,59 @@
         }
       ],
       "preview": "5010 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-11-24",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-24T09:30:09.053315-05:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-11-24_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1472401,
+          "preview": "1d BUY SRRK, RZLT \u00b7 SELL CSIQ, BTDR, DKNG, IE, MSTR, HYMC, WRD, HTZ"
+        },
+        {
+          "path": "data/stock_book/2026-11-24_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-11-24_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2615,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-11-24_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 11836,
+          "preview": "2026-11-24 BUY SRRK, RZLT \u00b7 SELL CSIQ, BTDR, DKNG, IE, MSTR, HYMC, WRD, HTZ"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 11836,
+          "preview": "2026-11-24 BUY SRRK, RZLT \u00b7 SELL CSIQ, BTDR, DKNG, IE, MSTR, HYMC, WRD, HTZ"
+        },
+        {
+          "path": "01_daily/2026-11-24_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 76624,
+          "preview": "# Stock book \u2014 2026-11-24\n_Generated 2026-11-24T09:23:33.494499-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY SRRK, RZLT \u00b7 SELL CSIQ, BTDR, DKNG, IE, MSTR, HYMC, WRD, HTZ \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-11-24 BUY SRRK, RZLT \u00b7 SELL CSIQ, BTDR, DKNG, IE, MSTR, HYMC, WRD, HTZ \u00b7 2026-11-24 BUY SRRK, RZLT \u00b7 SELL CSIQ, BTDR, DKNG, IE, MSTR, HYMC, WRD, HTZ \u00b7 # Stock book \u2014 2026-11-24\n_Generated 2026-11-24T09:23:33.494499-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
