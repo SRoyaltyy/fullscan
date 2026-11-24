@@ -1,0 +1,102 @@
+{
+  "date": "2026-11-24",
+  "generated_at": "2026-11-24T00:27:01.968138-05:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": true,
+  "clock_use": "same_morning",
+  "clock_legal_for": "2026-11-24",
+  "clock_rule": "Live: Generated must be before 09:30 ET on this date or leave missing. Wayback: capture before 09:30 ET that day is legal for that morning's Pre-Open. Afternoon Wayback is legal for the NEXT session open only (prior-day close recap), marked by clock_legal_for. Gaps stay gaps. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks logged their strongest session since April 2025 as major indexes rebounded from correction territory on Nvidia-led tech surge and AI momentum",
+  "raw_text": "- The S&P 500 ($SPX) jumped 4.73% to 7,237.17, the Nasdaq Composite ($COMP) climbed 6.51% to 24,089.56, the Dow Jones Industrial Average ($DJI) rose 3.01% to 49,595.31, and the Russell 2000 (IWM) advanced 3.40% to 2,669.66, ending a seven-session losing streak and lifting the S&P 500 out of correction territory after last week’s 8.6% decline\n- Nvidia (NVDA) rallied 31.48% to $165.05 after its board reinstated Jensen Huang as CEO, president, and director effective immediately, adding roughly $950 billion in market value\n- President Trump publicly urged Nvidia (NVDA)’s board to reinstate Jensen Huang and personally assured that his return posed no national-security risk\n- Micron Technology (MU) gained about 19% as Jensen Huang’s reinstatement at Nvidia (NVDA) fueled a broad AI-chip rebound\n- Dell Technologies (DELL) climbed about 21% and CoreWeave (CRWV) rose 22% as Jensen Huang’s reinstatement at Nvidia (NVDA) sparked a rebound in AI-related infrastructure names\n- Tesla (TSLA) advanced 11.5% on its FSD v15 rollout and JPMorgan praise amid the broader AI rebound\n- CrowdStrike (CRWD) fell 8.9% after announcing an all-stock $44 billion deal to acquire Zscaler (ZS), whose shares rose 17.7% on the takeover news\n- Nine of 11 S&P 500 sectors closed higher, led by technology, which gained 9%, while the VIX (@VX) fell to 23.60\n- After the close, Hewlett Packard Enterprise (HPE) forecast first-quarter revenue below the highest analyst estimate even as fiscal fourth-quarter revenue rose 50% to $14.5 billion, sending shares down about 7% in extended trading, and Fed’s John Williams reiterated that higher interest rates are likely over time to address inflation",
+  "raw_summary_md": "- The **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) jumped 4.73% to 7,237.17, the **Nasdaq Composite** ([$COMP](https://finviz.com/index/COMP?p=d)) climbed 6.51% to 24,089.56, the **Dow Jones Industrial Average** ([$DJI](https://finviz.com/index/DJI?p=d)) rose 3.01% to 49,595.31, and the **Russell 2000** ([IWM](https://finviz.com/quote?t=IWM)) advanced 3.40% to 2,669.66, ending a **seven-session losing streak** and lifting the S&P 500 **out of correction territory** after last week’s 8.6% decline\n- **Nvidia** ([NVDA](https://finviz.com/quote?t=NVDA)) rallied **31.48%** to $165.05 after its board **reinstated Jensen Huang** as CEO, president, and director effective immediately, adding roughly $950 billion in market value\n- President Trump publicly urged **Nvidia** ([NVDA](https://finviz.com/quote?t=NVDA))’s board to **reinstate Jensen Huang** and personally assured that his return posed **no national-security risk**\n- **Micron Technology** ([MU](https://finviz.com/quote?t=MU)) gained **about 19%** as Jensen Huang’s reinstatement at **Nvidia** ([NVDA](https://finviz.com/quote?t=NVDA)) fueled a **broad AI-chip rebound**\n- **Dell Technologies** ([DELL](https://finviz.com/quote?t=DELL)) climbed about 21% and **CoreWeave** ([CRWV](https://finviz.com/quote?t=CRWV)) rose 22% as Jensen Huang’s reinstatement at **Nvidia** ([NVDA](https://finviz.com/quote?t=NVDA)) sparked a rebound in **AI-related infrastructure names**\n- **Tesla** ([TSLA](https://finviz.com/quote?t=TSLA)) advanced **11.5%** on its **FSD v15 rollout** and JPMorgan praise amid the broader AI rebound\n- **CrowdStrike** ([CRWD](https://finviz.com/quote?t=CRWD)) **fell 8.9%** after announcing an **all-stock $44 billion deal** to acquire **Zscaler** ([ZS](https://finviz.com/quote?t=ZS)), whose shares rose 17.7% on the takeover news\n- Nine of 11 S&P 500 sectors closed higher, led by technology, which **gained 9%**, while the **VIX** ([@VX](https://finviz.com/futures_charts?t=VX)) **fell to 23.60**\n- After the close, **Hewlett Packard Enterprise** ([HPE](https://finviz.com/quote?t=HPE)) forecast first-quarter revenue below the highest analyst estimate even as fiscal fourth-quarter revenue rose 50% to $14.5 billion, sending **shares down about 7%** in extended trading, and Fed’s John Williams reiterated that higher interest rates are likely over time to address inflation",
+  "index_moves": [
+    {
+      "name": "S&P 500",
+      "code": "SPX",
+      "change_pct": 4.73,
+      "verb": "jumped"
+    },
+    {
+      "name": "Nasdaq Composite",
+      "code": "COMP",
+      "change_pct": 6.51,
+      "verb": "climbed"
+    },
+    {
+      "name": "Dow Jones Industrial Average",
+      "code": "DJI",
+      "change_pct": 3.01,
+      "verb": "rose"
+    },
+    {
+      "name": "Russell 2000",
+      "code": "RUT",
+      "change_pct": 3.4,
+      "verb": "advanced"
+    }
+  ],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "NVDA",
+    "MU",
+    "DELL",
+    "CRWV",
+    "TSLA",
+    "CRWD",
+    "ZS",
+    "HPE"
+  ],
+  "named_leaders": [
+    "NVDA",
+    "MU",
+    "DELL",
+    "CRWV",
+    "TSLA",
+    "CRWD",
+    "ZS",
+    "HPE"
+  ],
+  "calendar": [],
+  "prior_close": {
+    "spx": 4.73,
+    "nasdaq": 6.51,
+    "dow": 3.01
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": true,
+    "bullets": [],
+    "text": ""
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 351892,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-11-23T20:37:22.12",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "good"
+}
