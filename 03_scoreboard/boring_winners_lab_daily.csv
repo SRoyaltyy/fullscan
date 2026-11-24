@@ -75,6 +75,7 @@ book_25_h1,book,25,1,all,none,2026-11-18,7,0,7,1,-13.338,222.66
 book_25_h1,book,25,1,all,none,2026-11-19,8,0,8,0,0.0,222.66
 book_25_h1,book,25,1,all,none,2026-11-20,8,0,8,0,0.0,222.66
 book_25_h1,book,25,1,all,none,2026-11-23,8,0,8,0,0.0,222.66
+book_25_h1,book,25,1,all,none,2026-11-24,2,0,2,0,0.0,222.66
 overlay_25_h1,overlay,25,1,all,none,2026-08-13,17,17,8,0,-0.446,9955.38
 overlay_25_h1,overlay,25,1,all,none,2026-08-14,17,17,8,17,0.191,9974.38
 overlay_25_h1,overlay,25,1,all,none,2026-08-17,23,10,2,6,0.007,9975.08
@@ -151,6 +152,7 @@ overlay_25_h1,overlay,25,1,all,none,2026-11-18,12,0,12,2,-16.933,242.33
 overlay_25_h1,overlay,25,1,all,none,2026-11-19,13,0,13,0,0.0,242.33
 overlay_25_h1,overlay,25,1,all,none,2026-11-20,11,0,11,0,0.0,242.33
 overlay_25_h1,overlay,25,1,all,none,2026-11-23,11,0,11,0,0.0,242.33
+overlay_25_h1,overlay,25,1,all,none,2026-11-24,6,0,6,0,0.0,242.33
 mine_25_h1,mine,25,1,all,none,2026-08-13,25,25,0,0,-1.193,9880.7
 mine_25_h1,mine,25,1,all,none,2026-08-14,25,13,2,15,-0.565,9824.92
 mine_25_h1,mine,25,1,all,none,2026-08-17,24,24,0,23,661.884,74854.48
@@ -227,6 +229,7 @@ mine_25_h1,mine,25,1,all,none,2026-11-18,23,0,23,9,-27.792,325.1
 mine_25_h1,mine,25,1,all,none,2026-11-19,24,0,24,0,0.0,325.1
 mine_25_h1,mine,25,1,all,none,2026-11-20,24,0,24,0,0.0,325.1
 mine_25_h1,mine,25,1,all,none,2026-11-23,24,0,24,0,0.0,325.1
+mine_25_h1,mine,25,1,all,none,2026-11-24,25,0,25,0,0.0,325.1
 overlay_10_h1,overlay,10,1,all,none,2026-08-13,2,2,8,0,-0.813,9918.74
 overlay_10_h1,overlay,10,1,all,none,2026-08-14,10,10,0,2,1.141,10031.93
 overlay_10_h1,overlay,10,1,all,none,2026-08-17,10,7,1,8,-0.034,10028.49
@@ -303,6 +306,7 @@ overlay_10_h1,overlay,10,1,all,none,2026-11-18,10,0,10,2,-11.509,189.91
 overlay_10_h1,overlay,10,1,all,none,2026-11-19,10,0,10,0,0.0,189.91
 overlay_10_h1,overlay,10,1,all,none,2026-11-20,10,0,10,0,0.0,189.91
 overlay_10_h1,overlay,10,1,all,none,2026-11-23,10,0,10,0,0.0,189.91
+overlay_10_h1,overlay,10,1,all,none,2026-11-24,6,0,6,0,0.0,189.91
 overlay_50_h1,overlay,50,1,all,none,2026-08-13,17,17,8,0,-0.446,9955.38
 overlay_50_h1,overlay,50,1,all,none,2026-08-14,17,17,8,17,0.191,9974.38
 overlay_50_h1,overlay,50,1,all,none,2026-08-17,23,10,2,6,0.007,9975.08
@@ -379,6 +383,7 @@ overlay_50_h1,overlay,50,1,all,none,2026-11-18,14,0,14,4,-22.998,243.11
 overlay_50_h1,overlay,50,1,all,none,2026-11-19,14,0,14,0,0.0,243.11
 overlay_50_h1,overlay,50,1,all,none,2026-11-20,16,0,16,0,0.0,243.11
 overlay_50_h1,overlay,50,1,all,none,2026-11-23,13,0,13,0,0.0,243.11
+overlay_50_h1,overlay,50,1,all,none,2026-11-24,8,0,8,0,0.0,243.11
 overlay_25_h2,overlay,25,2,all,none,2026-08-13,17,17,8,0,-0.446,9955.38
 overlay_25_h2,overlay,25,2,all,none,2026-08-14,25,8,17,0,0.848,10039.85
 overlay_25_h2,overlay,25,2,all,none,2026-08-17,24,14,2,17,-0.006,10039.21
@@ -455,6 +460,7 @@ overlay_25_h2,overlay,25,2,all,none,2026-11-18,14,0,12,2,-10.848,220.41
 overlay_25_h2,overlay,25,2,all,none,2026-11-19,13,0,13,2,-15.816,185.55
 overlay_25_h2,overlay,25,2,all,none,2026-11-20,11,0,11,0,0.0,185.55
 overlay_25_h2,overlay,25,2,all,none,2026-11-23,11,0,11,0,0.0,185.55
+overlay_25_h2,overlay,25,2,all,none,2026-11-24,6,0,6,0,0.0,185.55
 overlay_25_h3,overlay,25,3,all,none,2026-08-13,17,17,8,0,-0.446,9955.38
 overlay_25_h3,overlay,25,3,all,none,2026-08-14,25,8,17,0,0.848,10039.85
 overlay_25_h3,overlay,25,3,all,none,2026-08-17,25,0,16,0,0.736,10113.7
@@ -531,6 +537,7 @@ overlay_25_h3,overlay,25,3,all,none,2026-11-18,22,0,12,6,-21.428,1009.22
 overlay_25_h3,overlay,25,3,all,none,2026-11-19,16,0,10,4,-20.327,804.08
 overlay_25_h3,overlay,25,3,all,none,2026-11-20,11,0,11,6,-40.714,476.71
 overlay_25_h3,overlay,25,3,all,none,2026-11-23,11,0,11,0,0.0,476.71
+overlay_25_h3,overlay,25,3,all,none,2026-11-24,6,0,6,0,0.0,476.71
 overlay_25_h5,overlay,25,5,all,none,2026-08-13,17,17,8,0,-0.446,9955.38
 overlay_25_h5,overlay,25,5,all,none,2026-08-14,25,8,17,0,0.848,10039.85
 overlay_25_h5,overlay,25,5,all,none,2026-08-17,25,0,16,0,0.736,10113.7
@@ -607,6 +614,7 @@ overlay_25_h5,overlay,25,5,all,none,2026-11-18,25,0,12,4,-11.74,917.99
 overlay_25_h5,overlay,25,5,all,none,2026-11-19,23,0,11,3,-16.454,766.94
 overlay_25_h5,overlay,25,5,all,none,2026-11-20,19,0,10,3,-12.486,671.18
 overlay_25_h5,overlay,25,5,all,none,2026-11-23,14,0,9,4,-21.726,525.36
+overlay_25_h5,overlay,25,5,all,none,2026-11-24,6,0,6,5,-36.272,334.8
 book_25_h3,book,25,3,all,none,2026-08-13,17,17,8,0,-0.464,9953.57
 book_25_h3,book,25,3,all,none,2026-08-14,25,8,17,0,1.525,10105.38
 book_25_h3,book,25,3,all,none,2026-08-17,25,0,16,0,0.786,10184.76
@@ -683,6 +691,7 @@ book_25_h3,book,25,3,all,none,2026-11-18,13,0,6,4,-18.606,3040.89
 book_25_h3,book,25,3,all,none,2026-11-19,10,0,5,2,-30.976,2098.93
 book_25_h3,book,25,3,all,none,2026-11-20,8,0,8,5,-58.665,867.59
 book_25_h3,book,25,3,all,none,2026-11-23,8,0,8,0,0.0,867.59
+book_25_h3,book,25,3,all,none,2026-11-24,2,0,2,0,0.0,867.59
 overlay_10_h3,overlay,10,3,all,none,2026-08-13,2,2,8,0,-0.813,9918.74
 overlay_10_h3,overlay,10,3,all,none,2026-08-14,10,7,3,0,2.097,10126.7
 overlay_10_h3,overlay,10,3,all,none,2026-08-17,10,1,7,0,-0.555,10070.52
@@ -759,6 +768,7 @@ overlay_10_h3,overlay,10,3,all,none,2026-11-18,10,0,10,2,-29.266,911.29
 overlay_10_h3,overlay,10,3,all,none,2026-11-19,10,0,8,4,-37.905,565.87
 overlay_10_h3,overlay,10,3,all,none,2026-11-20,10,0,10,2,-37.067,356.12
 overlay_10_h3,overlay,10,3,all,none,2026-11-23,10,0,10,0,0.0,356.12
+overlay_10_h3,overlay,10,3,all,none,2026-11-24,6,0,6,0,0.0,356.12
 overlay_25_h1_blue,overlay,25,1,blue,none,2026-08-13,0,0,0,0,0.0,10000.0
 overlay_25_h1_blue,overlay,25,1,blue,none,2026-08-14,13,13,0,0,-0.26,9973.96
 overlay_25_h1_blue,overlay,25,1,blue,none,2026-08-17,8,7,1,13,-0.122,9961.81
@@ -835,6 +845,7 @@ overlay_25_h1_blue,overlay,25,1,blue,none,2026-11-18,11,0,11,2,-15.511,189.89
 overlay_25_h1_blue,overlay,25,1,blue,none,2026-11-19,11,0,11,0,0.0,189.89
 overlay_25_h1_blue,overlay,25,1,blue,none,2026-11-20,10,0,10,0,0.0,189.89
 overlay_25_h1_blue,overlay,25,1,blue,none,2026-11-23,4,0,4,0,0.0,189.89
+overlay_25_h1_blue,overlay,25,1,blue,none,2026-11-24,5,0,5,0,0.0,189.89
 overlay_25_h1_green,overlay,25,1,green,none,2026-08-13,17,17,8,0,-0.446,9955.38
 overlay_25_h1_green,overlay,25,1,green,none,2026-08-14,17,17,8,17,0.191,9974.38
 overlay_25_h1_green,overlay,25,1,green,none,2026-08-17,23,10,2,6,0.007,9975.08
@@ -911,6 +922,7 @@ overlay_25_h1_green,overlay,25,1,green,none,2026-11-18,12,0,12,2,-15.267,193.48
 overlay_25_h1_green,overlay,25,1,green,none,2026-11-19,13,0,13,0,0.0,193.48
 overlay_25_h1_green,overlay,25,1,green,none,2026-11-20,11,0,11,0,0.0,193.48
 overlay_25_h1_green,overlay,25,1,green,none,2026-11-23,10,0,10,0,0.0,193.48
+overlay_25_h1_green,overlay,25,1,green,none,2026-11-24,5,0,5,0,0.0,193.48
 overlay_10_h1_green,overlay,10,1,green,none,2026-08-13,2,2,8,0,-0.813,9918.74
 overlay_10_h1_green,overlay,10,1,green,none,2026-08-14,10,10,0,2,1.141,10031.93
 overlay_10_h1_green,overlay,10,1,green,none,2026-08-17,10,7,1,8,-0.034,10028.49
@@ -987,6 +999,7 @@ overlay_10_h1_green,overlay,10,1,green,none,2026-11-18,10,0,10,2,-16.454,177.0
 overlay_10_h1_green,overlay,10,1,green,none,2026-11-19,10,0,10,0,0.0,177.0
 overlay_10_h1_green,overlay,10,1,green,none,2026-11-20,10,0,10,0,0.0,177.0
 overlay_10_h1_green,overlay,10,1,green,none,2026-11-23,10,0,10,0,0.0,177.0
+overlay_10_h1_green,overlay,10,1,green,none,2026-11-24,5,0,5,0,0.0,177.0
 overlay_25_h3_blue,overlay,25,3,blue,none,2026-08-13,0,0,0,0,0.0,10000.0
 overlay_25_h3_blue,overlay,25,3,blue,none,2026-08-14,13,13,0,0,-0.26,9973.96
 overlay_25_h3_blue,overlay,25,3,blue,none,2026-08-17,21,6,2,0,0.184,9992.29
@@ -1063,6 +1076,7 @@ overlay_25_h3_blue,overlay,25,3,blue,none,2026-11-18,23,0,11,5,-16.02,1271.86
 overlay_25_h3_blue,overlay,25,3,blue,none,2026-11-19,17,0,11,6,-29.472,897.02
 overlay_25_h3_blue,overlay,25,3,blue,none,2026-11-20,10,0,10,6,-45.938,484.95
 overlay_25_h3_blue,overlay,25,3,blue,none,2026-11-23,4,0,4,0,0.0,484.95
+overlay_25_h3_blue,overlay,25,3,blue,none,2026-11-24,5,0,5,0,0.0,484.95
 overlay_25_h1_stand,overlay,25,1,all,stand_down,2026-08-13,17,17,8,0,-0.446,9955.38
 overlay_25_h1_stand,overlay,25,1,all,stand_down,2026-08-14,17,17,8,17,0.191,9974.38
 overlay_25_h1_stand,overlay,25,1,all,stand_down,2026-08-17,23,10,2,6,0.007,9975.08
@@ -1139,6 +1153,7 @@ overlay_25_h1_stand,overlay,25,1,all,stand_down,2026-11-18,12,0,12,2,-16.152,256
 overlay_25_h1_stand,overlay,25,1,all,stand_down,2026-11-19,13,0,13,0,0.0,256.45
 overlay_25_h1_stand,overlay,25,1,all,stand_down,2026-11-20,11,0,11,0,0.0,256.45
 overlay_25_h1_stand,overlay,25,1,all,stand_down,2026-11-23,11,0,11,0,0.0,256.45
+overlay_25_h1_stand,overlay,25,1,all,stand_down,2026-11-24,6,0,6,0,0.0,256.45
 overlay_25_h1_cut5,overlay,25,1,all,haircut_5,2026-08-13,17,17,8,0,-0.446,9955.38
 overlay_25_h1_cut5,overlay,25,1,all,haircut_5,2026-08-14,17,17,8,17,0.191,9974.38
 overlay_25_h1_cut5,overlay,25,1,all,haircut_5,2026-08-17,23,10,2,6,0.007,9975.08
@@ -1215,6 +1230,7 @@ overlay_25_h1_cut5,overlay,25,1,all,haircut_5,2026-11-18,12,0,12,2,-16.933,242.3
 overlay_25_h1_cut5,overlay,25,1,all,haircut_5,2026-11-19,13,0,13,0,0.0,242.33
 overlay_25_h1_cut5,overlay,25,1,all,haircut_5,2026-11-20,11,0,11,0,0.0,242.33
 overlay_25_h1_cut5,overlay,25,1,all,haircut_5,2026-11-23,11,0,11,0,0.0,242.33
+overlay_25_h1_cut5,overlay,25,1,all,haircut_5,2026-11-24,6,0,6,0,0.0,242.33
 overlay_25_h1_lim5,overlay,25,1,all,limit_5,2026-08-13,17,17,8,0,-0.446,9955.38
 overlay_25_h1_lim5,overlay,25,1,all,limit_5,2026-08-14,17,17,8,17,0.191,9974.38
 overlay_25_h1_lim5,overlay,25,1,all,limit_5,2026-08-17,23,10,2,6,0.007,9975.08
@@ -1291,6 +1307,7 @@ overlay_25_h1_lim5,overlay,25,1,all,limit_5,2026-11-18,12,0,12,2,-12.233,250.1
 overlay_25_h1_lim5,overlay,25,1,all,limit_5,2026-11-19,13,0,13,0,0.0,250.1
 overlay_25_h1_lim5,overlay,25,1,all,limit_5,2026-11-20,11,0,11,0,0.0,250.1
 overlay_25_h1_lim5,overlay,25,1,all,limit_5,2026-11-23,11,0,11,0,0.0,250.1
+overlay_25_h1_lim5,overlay,25,1,all,limit_5,2026-11-24,6,0,6,0,0.0,250.1
 overlay_50_h1_cut5,overlay,50,1,all,haircut_5,2026-08-13,17,17,8,0,-0.446,9955.38
 overlay_50_h1_cut5,overlay,50,1,all,haircut_5,2026-08-14,17,17,8,17,0.191,9974.38
 overlay_50_h1_cut5,overlay,50,1,all,haircut_5,2026-08-17,23,10,2,6,0.007,9975.08
@@ -1367,3 +1384,4 @@ overlay_50_h1_cut5,overlay,50,1,all,haircut_5,2026-11-18,14,0,14,4,-24.25,226.81
 overlay_50_h1_cut5,overlay,50,1,all,haircut_5,2026-11-19,14,0,14,0,0.0,226.81
 overlay_50_h1_cut5,overlay,50,1,all,haircut_5,2026-11-20,16,0,16,0,0.0,226.81
 overlay_50_h1_cut5,overlay,50,1,all,haircut_5,2026-11-23,13,0,13,0,0.0,226.81
+overlay_50_h1_cut5,overlay,50,1,all,haircut_5,2026-11-24,8,0,8,0,0.0,226.81
