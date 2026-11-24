@@ -1,12 +1,12 @@
 {
   "date": "2026-11-24",
-  "generated_at": "2026-11-24T05:26:17.009449-05:00",
+  "generated_at": "2026-11-24T05:26:30.640447-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
     "ok": 4,
-    "partial": 3,
-    "fail": 1,
+    "partial": 4,
+    "fail": 0,
     "n": 8
   },
   "buy_1d": [],
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-11-24",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-24T05:24:41.129490-05:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-11-24_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 100081,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-11-24_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 10989,
-          "preview": "# Finviz Daily Digest \u2014 2026-11-24\n_Generated 2026-11-24T05:19:58.828531-05:00 \u00b7 export=data/exports/finviz_2026-11-24.csv \u00b7 ticker digests=632 \u00b7 high-signal=102_"
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-11-24\n_Generated 2026-11-24T05:19:58.828531-05:00 \u00b7 export=data/exports/finviz_2026-11-24.csv \u00b7 ticker digests=632 \u00b7 high-signal=102_"
-    },
     {
       "key": "map_heat",
       "title": "Map heat tables",
@@ -200,6 +175,31 @@
         }
       ],
       "preview": "raw=4899 usable=328 single=343 \u00b7 UK midcaps outperform as Nvidia sparks global risk-on rally - Reuters | US imposes sanctions on dozens linked to Iran's shadow banking networks - Reuter | Brazil Mining Agency Shortfalls Threaten Critical Minerals Push - Bloomberg.com | COMMENTARY: China's steel sector bifurcates as iron ore remains robust - Reuters | US escalates sanctions on Iran, targets \u2018shadow banking\u2019 networks \u00b7 # News Parse v2 \u2014 2026-11-24T05:26:02.407909-05:00\nWindow\u224848h | news_mode=on | raw=4899 | usable=328 | single_name=343 | noise_dropped=4136\nusable polarity={'+': 19, '-': 53, 'mixed': 1, 'neutral': 255}"
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-11-24",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-24T05:26:29.987849-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-24_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 50544,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-11-24_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 10271,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-11-24T05:26:29.979191-05:00\nraw=4898 unique_events=4 tickers=77"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-11-24T05:26:29.979191-05:00\nraw=4898 unique_events=4 tickers=77"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

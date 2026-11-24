@@ -1,17 +1,16 @@
 {
   "date": "2026-11-24",
-  "generated_at": "2026-11-24T05:26:17.009449-05:00",
+  "generated_at": "2026-11-24T05:26:30.640447-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-11-24_predict.md` \u2014 missing",
-    "MISSING News actions JSON `01_daily/news/2026-11-24_actions.json` \u2014 missing",
     "MISSING News judge MD `01_daily/news/2026-11-24_judge.md` \u2014 missing"
   ],
   "counts": {
     "ok": 4,
-    "partial": 3,
-    "fail": 1,
+    "partial": 4,
+    "fail": 0,
     "n": 8
   },
   "processes": [
@@ -183,7 +182,7 @@
       "inputs_ready": true,
       "n_req_ok": 2,
       "n_req": 9,
-      "n_opt_ok": 1,
+      "n_opt_ok": 2,
       "n_opt": 14,
       "files": [
         {
@@ -294,11 +293,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-11-24_actions.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 50544,
+          "said": "77 ticker actions \u00b7 4 events \u00b7 4898 headlines \u00b7 COP BUY, EOG BUY, CHRD BUY, SM BUY, KOS BUY, REPX BUY, OXY BUY, FANG BUY",
+          "bullets": [
+            "BUY COP",
+            "BUY EOG",
+            "BUY CHRD",
+            "BUY SM"
+          ]
         },
         {
           "key": "general",
@@ -577,8 +581,8 @@
       "key": "catalyst",
       "name": "Catalyst dossiers",
       "yaml": "catalyst_daily.yml",
-      "status": "FAIL",
-      "inputs_ready": false,
+      "status": "PARTIAL",
+      "inputs_ready": true,
       "n_req_ok": 0,
       "n_req": 0,
       "n_opt_ok": 0,
@@ -589,11 +593,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-11-24_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 50544,
+          "said": "77 ticker actions \u00b7 4 events \u00b7 4898 headlines \u00b7 COP BUY, EOG BUY, CHRD BUY, SM BUY, KOS BUY, REPX BUY, OXY BUY, FANG BUY",
+          "bullets": [
+            "BUY COP",
+            "BUY EOG",
+            "BUY CHRD",
+            "BUY SM"
+          ]
         },
         {
           "key": "in_digest",
@@ -622,8 +631,17 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "77 ticker actions \u00b7 4 events \u00b7 4898 headlines \u00b7 COP BUY, EOG BUY, CHRD BUY, SM BUY, KOS BUY, REPX BUY, OXY BUY, FANG BUY",
+      "bullets": [
+        "BUY COP",
+        "BUY EOG",
+        "BUY CHRD",
+        "BUY SM",
+        "BUY KOS",
+        "BUY REPX",
+        "BUY OXY",
+        "BUY FANG"
+      ]
     },
     {
       "key": "stock_book",
@@ -663,11 +681,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-11-24_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 50544,
+          "said": "77 ticker actions \u00b7 4 events \u00b7 4898 headlines \u00b7 COP BUY, EOG BUY, CHRD BUY, SM BUY, KOS BUY, REPX BUY, OXY BUY, FANG BUY",
+          "bullets": [
+            "BUY COP",
+            "BUY EOG",
+            "BUY CHRD",
+            "BUY SM"
+          ]
         },
         {
           "key": "in_digest",
@@ -1197,6 +1220,31 @@
         }
       ],
       "preview": "raw=4899 usable=328 single=343 \u00b7 UK midcaps outperform as Nvidia sparks global risk-on rally - Reuters | US imposes sanctions on dozens linked to Iran's shadow banking networks - Reuter | Brazil Mining Agency Shortfalls Threaten Critical Minerals Push - Bloomberg.com | COMMENTARY: China's steel sector bifurcates as iron ore remains robust - Reuters | US escalates sanctions on Iran, targets \u2018shadow banking\u2019 networks \u00b7 # News Parse v2 \u2014 2026-11-24T05:26:02.407909-05:00\nWindow\u224848h | news_mode=on | raw=4899 | usable=328 | single_name=343 | noise_dropped=4136\nusable polarity={'+': 19, '-': 53, 'mixed': 1, 'neutral': 255}"
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-11-24",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-24T05:26:29.987849-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-24_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 50544,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-11-24_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 10271,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-11-24T05:26:29.979191-05:00\nraw=4898 unique_events=4 tickers=77"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-11-24T05:26:29.979191-05:00\nraw=4898 unique_events=4 tickers=77"
     }
   ],
   "href": {
