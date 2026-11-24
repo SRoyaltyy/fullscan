@@ -1,6 +1,6 @@
 {
  "date": "2026-11-24",
- "generated_at": "2026-11-24T15:59:07.383106-05:00",
+ "generated_at": "2026-11-24T16:16:45.492382-05:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -14,23 +14,23 @@
   "fed_score": null,
   "dollar_oil_score": null,
   "futures_score": null,
-  "yields": "falling",
+  "yields": "flat",
   "yields_source": "fred_dgs10",
-  "dgs10_delta_1d": -0.12,
+  "dgs10_delta_1d": 0.0,
   "dgs10_current": 4.92,
   "dollar": "soft",
   "dollar_source": "dxy",
-  "dxy_pct_1d": -0.48,
-  "vix_ratio": 1.043,
-  "vix_spot": 26.99,
-  "vix_delta_1d": 0.37,
+  "dxy_pct_1d": -0.47,
+  "vix_ratio": 1.033,
+  "vix_spot": 26.13,
+  "vix_delta_1d": -0.49,
   "vix_ratio_source": "vix/vix3m",
   "vix": "spiking",
-  "oil_pct_1d": 1.5,
+  "oil_pct_1d": 1.6,
   "oil": "rising",
   "fear_greed": null,
   "fear_greed_label": null,
-  "regime_corr": 0.711,
+  "regime_corr": 0.712,
   "sectors": {
    "Basic Materials": {
     "score": -7.73,
@@ -337,14 +337,14 @@
   },
   "style": {
    "growth": {
-    "stance": "favorable",
-    "confidence": "medium",
-    "why": "yields falling — duration/growth re-rates [factor: Bond yields]"
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "yields flat/unknown"
    },
    "value": {
     "stance": "neutral",
     "confidence": "low",
-    "why": "value lags duration rallies"
+    "why": "yields flat/unknown"
    },
    "blend": {
     "stance": "neutral",
