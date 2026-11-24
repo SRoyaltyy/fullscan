@@ -2218,6 +2218,30 @@
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "45306912874",
       "manifest": "research/input_freeze/2026-11-23/manifest.json"
+    },
+    {
+      "path": "data/ab_checklist/2026-11-23_ab_checklist.csv",
+      "at": "2026-11-24T05:15:50-05:00",
+      "commit_msg": "chore: ab checklist 2026-11-24",
+      "workflow": "A+B1 Checklist (liquid universe)",
+      "run_id": "45369589690",
+      "manifest": "research/input_freeze/2026-11-23/manifest.json"
+    },
+    {
+      "path": "data/ab_checklist/2026-11-23_ab_checklist.json",
+      "at": "2026-11-24T05:15:50-05:00",
+      "commit_msg": "chore: ab checklist 2026-11-24",
+      "workflow": "A+B1 Checklist (liquid universe)",
+      "run_id": "45369589690",
+      "manifest": "research/input_freeze/2026-11-23/manifest.json"
+    },
+    {
+      "path": "data/ab_checklist/2026-11-23_ab_checklist_enriched.csv",
+      "at": "2026-11-24T05:15:50-05:00",
+      "commit_msg": "chore: ab checklist 2026-11-24",
+      "workflow": "A+B1 Checklist (liquid universe)",
+      "run_id": "45369589690",
+      "manifest": "research/input_freeze/2026-11-23/manifest.json"
     }
   ]
 }
