@@ -1166,7 +1166,7 @@
         "3d": 2.65,
         "5d": 4.2
       },
-      "mfe_pct": 5.14,
+      "mfe_pct": 5.25,
       "mfe_day": "2026-11-23",
       "ever_profitable": true,
       "first_profitable_day": "2026-11-16"
@@ -1757,12 +1757,12 @@
       "window_through": "2026-11-23",
       "trading_days_elapsed": 5,
       "complete": false,
-      "latest_close": 150.555,
-      "current_return_pct": 0.69,
+      "latest_close": 150.56,
+      "current_return_pct": 0.7,
       "horizon_returns_pct": {
         "1d": 1.01,
         "3d": 1.53,
-        "5d": 0.69
+        "5d": 0.7
       },
       "mfe_pct": 3.1,
       "mfe_day": "2026-11-18",
@@ -2677,7 +2677,7 @@
         "3d": 44.23,
         "5d": 47.06
       },
-      "mfe_pct": 78.56,
+      "mfe_pct": 78.57,
       "mfe_day": "2026-11-23",
       "ever_profitable": true,
       "first_profitable_day": "2026-11-16"

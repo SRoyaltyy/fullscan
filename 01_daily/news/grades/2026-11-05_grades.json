@@ -2272,8 +2272,8 @@
       "window_through": "2026-11-23",
       "trading_days_elapsed": 12,
       "complete": false,
-      "latest_close": 150.555,
-      "current_return_pct": 0.62,
+      "latest_close": 150.56,
+      "current_return_pct": 0.63,
       "horizon_returns_pct": {
         "1d": -4.2,
         "3d": -2.61,

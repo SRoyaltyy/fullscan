@@ -1655,14 +1655,14 @@
       "window_through": "2026-11-23",
       "trading_days_elapsed": 14,
       "complete": true,
-      "latest_close": 0.4708,
-      "current_return_pct": -73.99,
+      "latest_close": 0.471,
+      "current_return_pct": -73.98,
       "horizon_returns_pct": {
         "1d": 13.26,
         "3d": -2.21,
         "5d": -65.8,
         "10d": -70.28,
-        "14d": -73.99
+        "14d": -73.98
       },
       "mfe_pct": 29.28,
       "mfe_day": "2026-11-04",

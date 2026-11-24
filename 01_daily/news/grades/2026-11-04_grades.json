@@ -1427,8 +1427,8 @@
       "window_through": "2026-11-23",
       "trading_days_elapsed": 13,
       "complete": false,
-      "latest_close": 0.9526,
-      "current_return_pct": -53.3,
+      "latest_close": 0.953,
+      "current_return_pct": -53.28,
       "horizon_returns_pct": {
         "1d": -5.88,
         "3d": -3.92,
@@ -1994,8 +1994,8 @@
       "window_through": "2026-11-23",
       "trading_days_elapsed": 13,
       "complete": false,
-      "latest_close": 150.555,
-      "current_return_pct": -1.87,
+      "latest_close": 150.56,
+      "current_return_pct": -1.86,
       "horizon_returns_pct": {
         "1d": -5.07,
         "3d": -4.53,
