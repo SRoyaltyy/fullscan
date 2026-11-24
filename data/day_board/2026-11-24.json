@@ -1,6 +1,6 @@
 {
   "date": "2026-11-24",
-  "generated_at": "2026-11-24T06:00:29.238778-05:00",
+  "generated_at": "2026-11-24T09:23:04.426714-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -57,8 +57,8 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 275130,
-          "said": "morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
+          "size": 274285,
+          "said": "postclose \u00b7 11786 names \u00b7 hot Mortgage Finance, Metal Fabrication, Apparel Retail, Furnishings, Fixtures & Appliances \u00b7 cold Shell Companies, Silver, Other Precious Metals & Mining \u00b7 macro_gate",
           "bullets": []
         },
         {
@@ -68,10 +68,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 18080,
+          "size": 17993,
           "said": "MAP HEAT \u2014 2026-11-24",
           "bullets": [
-            "Export `finviz_2026-11-24.csv` \u00b7 11616 names \u00b7 generated 2026-11-24T05:22:26.899799-05:00",
+            "Export `finviz_2026-11-24.csv` \u00b7 11786 names \u00b7 generated 2026-11-24T06:02:55.728806-05:00",
             "TAPE (live futures)"
           ]
         }
@@ -229,8 +229,8 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 275130,
-          "said": "morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
+          "size": 274285,
+          "said": "postclose \u00b7 11786 names \u00b7 hot Mortgage Finance, Metal Fabrication, Apparel Retail, Furnishings, Fixtures & Appliances \u00b7 cold Shell Companies, Silver, Other Precious Metals & Mining \u00b7 macro_gate",
           "bullets": []
         },
         {
@@ -523,8 +523,8 @@
           "path": "01_daily/weather/2026-11-24_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9604 vix=spiking yields=falling",
-          "size": 9604,
+          "reason": "sectors=11 bytes=9606 vix=spiking yields=falling",
+          "size": 9606,
           "said": "hostile 11",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Cyclical, Consumer Defensive, Energy, Financial, Healthcare, Industrials, Real Estate, Technology, Utilities"
@@ -731,8 +731,8 @@
           "path": "01_daily/weather/2026-11-24_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9604 vix=spiking yields=falling",
-          "size": 9604,
+          "reason": "sectors=11 bytes=9606 vix=spiking yields=falling",
+          "size": 9606,
           "said": "hostile 11",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Cyclical, Consumer Defensive, Energy, Financial, Healthcare, Industrials, Real Estate, Technology, Utilities"
@@ -1355,6 +1355,31 @@
         }
       ],
       "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-11-24\n_Generated 2026-11-24T06:00:27.526543-05:00 \u00b7 export=data/exports/finviz_2026-11-24.csv \u00b7 ticker digests=678 \u00b7 high-signal=140_ \u00b7 11787 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\" \u00b7 11787 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-11-24",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-24T09:23:03.267908-05:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-11-24_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9606,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -7.73, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -5.585, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -2.65, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -4.29, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -5.85, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -2.15, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -3.0549999999999997, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -3.17, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-11-24_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5184,
+          "preview": "# Weather report \u2014 2026-11-24\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -7.73, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -5.585, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -2.65, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -4.29, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -5.85, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -2.15, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -3.0549999999999997, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -3.17, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-24\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
@@ -1362,5 +1387,23 @@
     "readiness_action": "https://github.com/SRoyaltyy/fullscan/actions/workflows/stock_book_diag.yml",
     "factor_mine": "https://sroyaltyy.github.io/fullscan/dashboard/factor-mine/",
     "paper": "https://sroyaltyy.github.io/fullscan/dashboard/"
-  }
+  },
+  "frozen_write_skips": [
+    {
+      "path": "01_daily/weather/2026-11-24_weather.json",
+      "at": "2026-11-24T09:23:04-05:00",
+      "commit_msg": "auto: land weather [2026-11-24]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "45409518977",
+      "manifest": "research/input_freeze/2026-11-24/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-11-24.json",
+      "at": "2026-11-24T09:23:04-05:00",
+      "commit_msg": "auto: land weather [2026-11-24]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "45409518977",
+      "manifest": "research/input_freeze/2026-11-24/manifest.json"
+    }
+  ]
 }
