@@ -2005,6 +2005,14 @@
       "workflow": "Finviz homepage market digest",
       "run_id": "45495329154",
       "manifest": "research/input_freeze/2026-11-24/manifest.json"
+    },
+    {
+      "path": "01_daily/_channel1/2026-11-24_predict.json",
+      "at": "2026-11-24T18:52:49-05:00",
+      "commit_msg": "auto: stock book leftover sweep",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "45510375589",
+      "manifest": "research/input_freeze/2026-11-24/manifest.json"
     }
   ]
 }
