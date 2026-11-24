@@ -1,5 +1,531 @@
 [
   {
+    "title": "Public Law 119 - 133 - Chiricahua National Park Act",
+    "url": "https://www.govinfo.gov/app/details/PLAW-119publ133",
+    "native_id": "PLAW-119publ133",
+    "published_at": "2026-11-23T21:22:00+00:00",
+    "published_raw": "Mon, 23 Nov 2026 21:22:00 +0000",
+    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "public_law",
+      "document_stage": "law_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Public and Private Laws",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-plaw",
+    "n": 7141,
+    "first_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-11-24T00:54:48.966450+00:00",
+    "source_ids": [
+      "us-govinfo-plaw"
+    ]
+  },
+  {
+    "title": "Public Law 119 - 131 - Enhancing Detection of Human Trafficking Act",
+    "url": "https://www.govinfo.gov/app/details/PLAW-119publ131",
+    "native_id": "PLAW-119publ131",
+    "published_at": "2026-11-23T20:48:00+00:00",
+    "published_raw": "Mon, 23 Nov 2026 20:48:00 +0000",
+    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "public_law",
+      "document_stage": "law_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Public and Private Laws",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-plaw",
+    "n": 6846,
+    "first_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-11-24T00:54:48.966450+00:00",
+    "source_ids": [
+      "us-govinfo-plaw"
+    ]
+  },
+  {
+    "title": "Public Law 119 - 119 - Improving Social Security's Service to Victims of Identity Theft Act",
+    "url": "https://www.govinfo.gov/app/details/PLAW-119publ119",
+    "native_id": "PLAW-119publ119",
+    "published_at": "2026-11-23T20:45:00+00:00",
+    "published_raw": "Mon, 23 Nov 2026 20:45:00 +0000",
+    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "public_law",
+      "document_stage": "law_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Public and Private Laws",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-plaw",
+    "n": 5409,
+    "first_seen": "2026-10-19T19:21:25.980956+00:00",
+    "last_seen": "2026-11-24T00:54:48.966450+00:00",
+    "source_ids": [
+      "us-govinfo-plaw"
+    ]
+  },
+  {
+    "title": "Public Law 119 - 129 - Romance Scam Prevention Act",
+    "url": "https://www.govinfo.gov/app/details/PLAW-119publ129",
+    "native_id": "PLAW-119publ129",
+    "published_at": "2026-11-23T20:43:00+00:00",
+    "published_raw": "Mon, 23 Nov 2026 20:43:00 +0000",
+    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "public_law",
+      "document_stage": "law_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Public and Private Laws",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-plaw",
+    "n": 6842,
+    "first_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-11-24T00:54:48.966450+00:00",
+    "source_ids": [
+      "us-govinfo-plaw"
+    ]
+  },
+  {
+    "title": "Public Law 119 - 132 - Vicksburg National Military Park Boundary Modification Act",
+    "url": "https://www.govinfo.gov/app/details/PLAW-119publ132",
+    "native_id": "PLAW-119publ132",
+    "published_at": "2026-11-23T20:39:01+00:00",
+    "published_raw": "Mon, 23 Nov 2026 20:39:01 +0000",
+    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "public_law",
+      "document_stage": "law_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Public and Private Laws",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-plaw",
+    "n": 6840,
+    "first_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-11-24T00:54:48.966450+00:00",
+    "source_ids": [
+      "us-govinfo-plaw"
+    ]
+  },
+  {
+    "title": "Orphan registered medicinal products",
+    "url": "https://www.gov.uk/government/publications/orphan-registered-medicinal-products",
+    "native_id": "/government/publications/orphan-registered-medicinal-products",
+    "published_at": "2026-11-23T17:02:52+00:00",
+    "published_raw": "2026-11-23T17:02:52Z",
+    "document_type": "decision",
+    "issuer": "Medicines and Healthcare products Regulatory Agency",
+    "issuer_ids": [
+      "uk-gov:medicines-and-healthcare-products-regulatory-agency"
+    ],
+    "summary": "A list of authorised orphan medicinal products registered by the UK licensing authority.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Medicines and Healthcare products Regulatory Agency",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 4,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-11-24T00:54:48.966450+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "CAC Outcome: UCU & Ravensbourne University London",
+    "url": "https://www.gov.uk/government/publications/cac-outcome-ucu-ravensbourne-university-london",
+    "native_id": "/government/publications/cac-outcome-ucu-ravensbourne-university-london",
+    "published_at": "2026-11-23T16:53:14+00:00",
+    "published_raw": "2026-11-23T16:53:14Z",
+    "document_type": "decision",
+    "issuer": "Central Arbitration Committee",
+    "issuer_ids": [
+      "uk-gov:central-arbitration-committee"
+    ],
+    "summary": "Outcome(s) by the Central Arbitration Committee on an application from UCU.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Central Arbitration Committee",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 11975,
+    "first_seen": "2026-11-24T00:54:48.966450+00:00",
+    "last_seen": "2026-11-24T00:54:48.966450+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Acquisition by Simcomm Science & Technology Co., Limited and Hytera Communications (UK) Corporation Limited of rights related to TTG Global Solutions Limited’s intellectual property and know-how for digital mobile radio technology",
+    "url": "https://www.gov.uk/government/publications/acquisition-by-simcomm-science-technology-co-limited-and-hytera-communications-uk-corporation-limited-of-rights-related-to-ttg-global-solutions-limite",
+    "native_id": "/government/publications/acquisition-by-simcomm-science-technology-co-limited-and-hytera-communications-uk-corporation-limited-of-rights-related-to-ttg-global-solutions-limite",
+    "published_at": "2026-11-23T15:32:34+00:00",
+    "published_raw": "2026-11-23T15:32:34Z",
+    "document_type": "decision",
+    "issuer": "Cabinet Office",
+    "issuer_ids": [
+      "uk-gov:cabinet-office"
+    ],
+    "summary": "Acquisition by Simcomm Science & Technology Co., Limited and Hytera Communications (UK) Corporation Limited of rights related to TTG Global Solutions Limited’s intellectual property and know-how for digital mobile radio technology",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Cabinet Office",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 11976,
+    "first_seen": "2026-11-24T00:54:48.966450+00:00",
+    "last_seen": "2026-11-24T00:54:48.966450+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Medical devices given exceptional use authorisations",
+    "url": "https://www.gov.uk/government/publications/medical-devices-given-exceptional-use-authorisations",
+    "native_id": "/government/publications/medical-devices-given-exceptional-use-authorisations",
+    "published_at": "2026-11-23T15:30:36+00:00",
+    "published_raw": "2026-11-23T15:30:36Z",
+    "document_type": "decision",
+    "issuer": "Medicines and Healthcare products Regulatory Agency",
+    "issuer_ids": [
+      "uk-gov:medicines-and-healthcare-products-regulatory-agency"
+    ],
+    "summary": "List of manufacturers and their medical devices granted an exemption by MHRA. The list also includes manufacturers whose exemption expired or was cancelled.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Medicines and Healthcare products Regulatory Agency",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 6834,
+    "first_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-11-24T00:54:48.966450+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Teacher misconduct panel outcome: Mr Asif Pandor",
+    "url": "https://www.gov.uk/government/publications/teacher-misconduct-panel-outcome-mr-asif-pandor",
+    "native_id": "/government/publications/teacher-misconduct-panel-outcome-mr-asif-pandor",
+    "published_at": "2026-11-23T14:38:54+00:00",
+    "published_raw": "2026-11-23T14:38:54Z",
+    "document_type": "decision",
+    "issuer": "Teaching Regulation Agency",
+    "issuer_ids": [
+      "uk-gov:teaching-regulation-agency"
+    ],
+    "summary": "Professional conduct panel outcome, including decision and reasons.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Teaching Regulation Agency",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 11977,
+    "first_seen": "2026-11-24T00:54:48.966450+00:00",
+    "last_seen": "2026-11-24T00:54:48.966450+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Company Names Tribunal undefended decisions and orders",
+    "url": "https://www.gov.uk/government/publications/company-names-tribunal-undefended-decisions-and-orders",
+    "native_id": "/government/publications/company-names-tribunal-undefended-decisions-and-orders",
+    "published_at": "2026-11-23T14:32:25+00:00",
+    "published_raw": "2026-11-23T14:32:25Z",
+    "document_type": "decision",
+    "issuer": "Company Names Tribunal",
+    "issuer_ids": [
+      "uk-gov:company-names-tribunal"
+    ],
+    "summary": "Decisions and orders of the Company Names Tribunal - undefended.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Company Names Tribunal",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 2103,
+    "first_seen": "2026-10-15T12:16:32.997656+00:00",
+    "last_seen": "2026-11-24T00:54:48.966450+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Company Names Tribunal decision: Business Energy Direct Ltd",
+    "url": "https://www.gov.uk/government/publications/company-names-tribunal-decision-business-energy-direct-ltd",
+    "native_id": "/government/publications/company-names-tribunal-decision-business-energy-direct-ltd",
+    "published_at": "2026-11-23T14:31:35+00:00",
+    "published_raw": "2026-11-23T14:31:35Z",
+    "document_type": "decision",
+    "issuer": "Company Names Tribunal",
+    "issuer_ids": [
+      "uk-gov:company-names-tribunal"
+    ],
+    "summary": "Decision for applicant Business Energy Direct (UK) Limited registration number 08671597 applicant successful.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Company Names Tribunal",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 11978,
+    "first_seen": "2026-11-24T00:54:48.966450+00:00",
+    "last_seen": "2026-11-24T00:54:48.966450+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Company Names Tribunal decision: Laura Ashley By Uskees Ltd",
+    "url": "https://www.gov.uk/government/publications/company-names-tribunal-decision-laura-ashley-by-uskees-ltd",
+    "native_id": "/government/publications/company-names-tribunal-decision-laura-ashley-by-uskees-ltd",
+    "published_at": "2026-11-23T14:31:15+00:00",
+    "published_raw": "2026-11-23T14:31:15Z",
+    "document_type": "decision",
+    "issuer": "Company Names Tribunal",
+    "issuer_ids": [
+      "uk-gov:company-names-tribunal"
+    ],
+    "summary": "Decision for applicant Laura Ashley IP Holdings LLC registration number 17147396 applicant successful.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Company Names Tribunal",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 11979,
+    "first_seen": "2026-11-24T00:54:48.966450+00:00",
+    "last_seen": "2026-11-24T00:54:48.966450+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Company Names Tribunal decision: London Trinity College Ltd",
+    "url": "https://www.gov.uk/government/publications/company-names-tribunal-decision-london-trinity-college-ltd",
+    "native_id": "/government/publications/company-names-tribunal-decision-london-trinity-college-ltd",
+    "published_at": "2026-11-23T14:30:21+00:00",
+    "published_raw": "2026-11-23T14:30:21Z",
+    "document_type": "decision",
+    "issuer": "Company Names Tribunal",
+    "issuer_ids": [
+      "uk-gov:company-names-tribunal"
+    ],
+    "summary": "Decision for applicant Trinity College London registration number 16579140 applicant successful.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Company Names Tribunal",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 11980,
+    "first_seen": "2026-11-24T00:54:48.966450+00:00",
+    "last_seen": "2026-11-24T00:54:48.966450+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Company Names Tribunal decision: Livingstone Trade Point Ltd",
+    "url": "https://www.gov.uk/government/publications/company-names-tribunal-decision-livingstone-trade-point-ltd",
+    "native_id": "/government/publications/company-names-tribunal-decision-livingstone-trade-point-ltd",
+    "published_at": "2026-11-23T14:30:03+00:00",
+    "published_raw": "2026-11-23T14:30:03Z",
+    "document_type": "decision",
+    "issuer": "Company Names Tribunal",
+    "issuer_ids": [
+      "uk-gov:company-names-tribunal"
+    ],
+    "summary": "Decision for applicant B&Q Limited registration number SC876324 applicant successful.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Company Names Tribunal",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 11981,
+    "first_seen": "2026-11-24T00:54:48.966450+00:00",
+    "last_seen": "2026-11-24T00:54:48.966450+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Company Names Tribunal decision: Yara International Trade Marks Ltd",
+    "url": "https://www.gov.uk/government/publications/company-names-tribunal-decision-yara-international-trade-marks-ltd",
+    "native_id": "/government/publications/company-names-tribunal-decision-yara-international-trade-marks-ltd",
+    "published_at": "2026-11-23T14:29:26+00:00",
+    "published_raw": "2026-11-23T14:29:26Z",
+    "document_type": "decision",
+    "issuer": "Company Names Tribunal",
+    "issuer_ids": [
+      "uk-gov:company-names-tribunal"
+    ],
+    "summary": "Decision for applicant Yara International ASA registration number 17058396 applicant successful.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Company Names Tribunal",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 11982,
+    "first_seen": "2026-11-24T00:54:48.966450+00:00",
+    "last_seen": "2026-11-24T00:54:48.966450+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "CAC Outcome: IWGB & Influence Map CIC",
+    "url": "https://www.gov.uk/government/publications/cac-outcome-iwgb-influence-map-cic",
+    "native_id": "/government/publications/cac-outcome-iwgb-influence-map-cic",
+    "published_at": "2026-11-23T13:25:48+00:00",
+    "published_raw": "2026-11-23T13:25:48Z",
+    "document_type": "decision",
+    "issuer": "Central Arbitration Committee",
+    "issuer_ids": [
+      "uk-gov:central-arbitration-committee"
+    ],
+    "summary": "Outcome(s) by the Central Arbitration Committee on an application from IWGB.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Central Arbitration Committee",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 11983,
+    "first_seen": "2026-11-24T00:54:48.966450+00:00",
+    "last_seen": "2026-11-24T00:54:48.966450+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "EX32 7QN, Higher Meadows Poultry Ltd: environmental permit issued - EPR/FP3722MA/A001",
+    "url": "https://www.gov.uk/government/publications/ex32-7qn-higher-meadows-poultry-ltd-environmental-permit-issued-eprfp3722maa001",
+    "native_id": "/government/publications/ex32-7qn-higher-meadows-poultry-ltd-environmental-permit-issued-eprfp3722maa001",
+    "published_at": "2026-11-23T11:54:36+00:00",
+    "published_raw": "2026-11-23T11:54:36Z",
+    "document_type": "decision",
+    "issuer": "Environment Agency",
+    "issuer_ids": [
+      "uk-gov:environment-agency"
+    ],
+    "summary": "View the permit issued for Higher Hall Farm, High Bray under the Industrial Emissions Directive.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Environment Agency",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 11984,
+    "first_seen": "2026-11-24T00:54:48.966450+00:00",
+    "last_seen": "2026-11-24T00:54:48.966450+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Deep Drilling Screening Directions – 2026",
+    "url": "https://www.gov.uk/government/publications/deep-drilling-screening-directions-2026",
+    "native_id": "/government/publications/deep-drilling-screening-directions-2026",
+    "published_at": "2026-11-23T09:43:21+00:00",
+    "published_raw": "2026-11-23T09:43:21Z",
+    "document_type": "decision",
+    "issuer": "Offshore Petroleum Regulator for Environment and Decommissioning",
+    "issuer_ids": [
+      "uk-gov:offshore-petroleum-regulator-for-environment-and-decommissioning"
+    ],
+    "summary": "Screening Directions",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Offshore Petroleum Regulator for Environment and Decommissioning",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 3303,
+    "first_seen": "2026-10-16T10:36:18.842579+00:00",
+    "last_seen": "2026-11-24T00:54:48.966450+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
     "title": "Employee or Independent Contractor Status Under the Fair Labor Standards Act, Family and Medical Leave Act, and Migrant and Seasonal Agricultural Worker Protection Act",
     "url": "https://www.federalregister.gov/documents/2026/11/23/2026-23777/employee-or-independent-contractor-status-under-the-fair-labor-standards-act-family-and-medical",
     "native_id": "2026-23777",
@@ -25,7 +551,7 @@
     "primary_source_id": "us-federal-register",
     "n": 11915,
     "first_seen": "2026-11-23T09:08:57.097368+00:00",
-    "last_seen": "2026-11-23T09:08:57.097368+00:00",
+    "last_seen": "2026-11-24T00:54:48.966450+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -56,7 +582,7 @@
     "primary_source_id": "us-federal-register",
     "n": 11906,
     "first_seen": "2026-11-23T09:08:57.097368+00:00",
-    "last_seen": "2026-11-23T09:08:57.097368+00:00",
+    "last_seen": "2026-11-24T00:54:48.966450+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -87,7 +613,7 @@
     "primary_source_id": "us-federal-register",
     "n": 11897,
     "first_seen": "2026-11-23T09:08:57.097368+00:00",
-    "last_seen": "2026-11-23T09:08:57.097368+00:00",
+    "last_seen": "2026-11-24T00:54:48.966450+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -118,7 +644,7 @@
     "primary_source_id": "us-federal-register",
     "n": 11874,
     "first_seen": "2026-11-23T09:08:57.097368+00:00",
-    "last_seen": "2026-11-23T09:08:57.097368+00:00",
+    "last_seen": "2026-11-24T00:54:48.966450+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -149,1084 +675,9 @@
     "primary_source_id": "us-federal-register",
     "n": 11870,
     "first_seen": "2026-11-23T09:08:57.097368+00:00",
-    "last_seen": "2026-11-23T09:08:57.097368+00:00",
+    "last_seen": "2026-11-24T00:54:48.966450+00:00",
     "source_ids": [
       "us-federal-register"
-    ]
-  },
-  {
-    "title": "DCPD-202600708 - Message on the Birthday of President Dwight D. Eisenhower",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600708",
-    "native_id": "DCPD-202600708",
-    "published_at": "2026-11-20T17:21:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 17:21:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 11706,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "DCPD-202600707 - Remarks and an Exchange With Reporters Prior to Departure From Bullhead City, Arizona",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600707",
-    "native_id": "DCPD-202600707",
-    "published_at": "2026-11-20T17:21:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 17:21:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 11705,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "DCPD-202600702 - Remarks at a Campaign Rally for Ohio Republican Candidates in Youngstown, Ohio",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600702",
-    "native_id": "DCPD-202600702",
-    "published_at": "2026-11-20T17:21:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 17:21:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 11384,
-    "first_seen": "2026-11-19T21:37:53.975841+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "DCPD-202600703 - Remarks in an Exchange With Reporters Prior to Departure for Wasilla, Alaska",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600703",
-    "native_id": "DCPD-202600703",
-    "published_at": "2026-11-20T17:21:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 17:21:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 11382,
-    "first_seen": "2026-11-19T21:37:53.975841+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "DCPD-202600700 - Remarks During a Telerally for Nevada Republican Candidates",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600700",
-    "native_id": "DCPD-202600700",
-    "published_at": "2026-11-20T17:21:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 17:21:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 11381,
-    "first_seen": "2026-11-19T21:37:53.975841+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "DCPD-202600688 - Remarks at a Campaign Rally for Texas Republican Candidates in San Antonio, Texas",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600688",
-    "native_id": "DCPD-202600688",
-    "published_at": "2026-11-20T17:21:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 17:21:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 10837,
-    "first_seen": "2026-11-17T21:46:57.732960+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "DCPD-202600695 - Remarks at a Campaign Rally for Tennessee Republican Candidates in Clarksville, Tennessee",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600695",
-    "native_id": "DCPD-202600695",
-    "published_at": "2026-11-20T17:21:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 17:21:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 10594,
-    "first_seen": "2026-11-16T22:54:52.991484+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "DCPD-202600693 - Remarks at a Campaign Rally for New York Republican Candidates in Syracuse, New York",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600693",
-    "native_id": "DCPD-202600693",
-    "published_at": "2026-11-20T17:21:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 17:21:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 10434,
-    "first_seen": "2026-11-14T07:37:52.310222+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "CAC Outcome: TSSA & Cross Country Trains LTD",
-    "url": "https://www.gov.uk/government/publications/cac-outcome-tssa-cross-country-trains-ltd",
-    "native_id": "/government/publications/cac-outcome-tssa-cross-country-trains-ltd",
-    "published_at": "2026-11-20T16:35:11+00:00",
-    "published_raw": "2026-11-20T16:35:11Z",
-    "document_type": "decision",
-    "issuer": "Central Arbitration Committee",
-    "issuer_ids": [
-      "uk-gov:central-arbitration-committee"
-    ],
-    "summary": "Outcome(s) by the Central Arbitration Committee on an application from the TSSA.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Central Arbitration Committee",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 11680,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-23T09:08:57.097368+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Public Law 119 - 133 - Chiricahua National Park Act",
-    "url": "https://www.govinfo.gov/app/details/PLAW-119publ133",
-    "native_id": "PLAW-119publ133",
-    "published_at": "2026-11-20T16:33:02+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:33:02 +0000",
-    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "public_law",
-      "document_stage": "law_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Public and Private Laws",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-plaw",
-    "n": 7141,
-    "first_seen": "2026-10-28T19:21:07.640451+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-plaw"
-    ]
-  },
-  {
-    "title": "Public Law 119 - 131 - Enhancing Detection of Human Trafficking Act",
-    "url": "https://www.govinfo.gov/app/details/PLAW-119publ131",
-    "native_id": "PLAW-119publ131",
-    "published_at": "2026-11-20T16:33:02+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:33:02 +0000",
-    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "public_law",
-      "document_stage": "law_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Public and Private Laws",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-plaw",
-    "n": 6846,
-    "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-plaw"
-    ]
-  },
-  {
-    "title": "Public Law 119 - 134 - License to Drill Act",
-    "url": "https://www.govinfo.gov/app/details/PLAW-119publ134",
-    "native_id": "PLAW-119publ134",
-    "published_at": "2026-11-20T16:33:02+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:33:02 +0000",
-    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "public_law",
-      "document_stage": "law_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Public and Private Laws",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-plaw",
-    "n": 6843,
-    "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-plaw"
-    ]
-  },
-  {
-    "title": "Public Law 119 - 129 - Romance Scam Prevention Act",
-    "url": "https://www.govinfo.gov/app/details/PLAW-119publ129",
-    "native_id": "PLAW-119publ129",
-    "published_at": "2026-11-20T16:33:02+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:33:02 +0000",
-    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "public_law",
-      "document_stage": "law_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Public and Private Laws",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-plaw",
-    "n": 6842,
-    "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-plaw"
-    ]
-  },
-  {
-    "title": "Public Law 119 - 127 - Critical Infrastructure Manufacturing Feasibility Act",
-    "url": "https://www.govinfo.gov/app/details/PLAW-119publ127",
-    "native_id": "PLAW-119publ127",
-    "published_at": "2026-11-20T16:33:02+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:33:02 +0000",
-    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "public_law",
-      "document_stage": "law_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Public and Private Laws",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-plaw",
-    "n": 6841,
-    "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-plaw"
-    ]
-  },
-  {
-    "title": "Public Law 119 - 132 - Vicksburg National Military Park Boundary Modification Act",
-    "url": "https://www.govinfo.gov/app/details/PLAW-119publ132",
-    "native_id": "PLAW-119publ132",
-    "published_at": "2026-11-20T16:33:02+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:33:02 +0000",
-    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "public_law",
-      "document_stage": "law_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Public and Private Laws",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-plaw",
-    "n": 6840,
-    "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-plaw"
-    ]
-  },
-  {
-    "title": "Public Law 119 - 126 - An act to require the Secretary of Agriculture to convey the Pleasant Valley Ranger District Administrative Site to Gila County, Arizona.",
-    "url": "https://www.govinfo.gov/app/details/PLAW-119publ126",
-    "native_id": "PLAW-119publ126",
-    "published_at": "2026-11-20T16:33:02+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:33:02 +0000",
-    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "public_law",
-      "document_stage": "law_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Public and Private Laws",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-plaw",
-    "n": 6839,
-    "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-plaw"
-    ]
-  },
-  {
-    "title": "Public Law 119 - 122 - Crow Tribe Water Rights Settlement Amendments Act of 2025",
-    "url": "https://www.govinfo.gov/app/details/PLAW-119publ122",
-    "native_id": "PLAW-119publ122",
-    "published_at": "2026-11-20T16:33:01+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:33:01 +0000",
-    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "public_law",
-      "document_stage": "law_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Public and Private Laws",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-plaw",
-    "n": 6090,
-    "first_seen": "2026-10-22T17:59:58.860252+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-plaw"
-    ]
-  },
-  {
-    "title": "Public Law 119 - 123 - Illegal Red Snapper and Tuna Enforcement Act",
-    "url": "https://www.govinfo.gov/app/details/PLAW-119publ123",
-    "native_id": "PLAW-119publ123",
-    "published_at": "2026-11-20T16:33:01+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:33:01 +0000",
-    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "public_law",
-      "document_stage": "law_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Public and Private Laws",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-plaw",
-    "n": 5633,
-    "first_seen": "2026-10-20T18:00:04.951908+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-plaw"
-    ]
-  },
-  {
-    "title": "Public Law 119 - 124 - Retire through Ownership Act",
-    "url": "https://www.govinfo.gov/app/details/PLAW-119publ124",
-    "native_id": "PLAW-119publ124",
-    "published_at": "2026-11-20T16:33:01+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:33:01 +0000",
-    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "public_law",
-      "document_stage": "law_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Public and Private Laws",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-plaw",
-    "n": 5632,
-    "first_seen": "2026-10-20T18:00:04.951908+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-plaw"
-    ]
-  },
-  {
-    "title": "Public Law 119 - 119 - Improving Social Security's Service to Victims of Identity Theft Act",
-    "url": "https://www.govinfo.gov/app/details/PLAW-119publ119",
-    "native_id": "PLAW-119publ119",
-    "published_at": "2026-11-20T16:33:01+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:33:01 +0000",
-    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "public_law",
-      "document_stage": "law_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Public and Private Laws",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-plaw",
-    "n": 5409,
-    "first_seen": "2026-10-19T19:21:25.980956+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-plaw"
-    ]
-  },
-  {
-    "title": "Public Law 119 - 121 - American Music Tourism Act of 2025",
-    "url": "https://www.govinfo.gov/app/details/PLAW-119publ121",
-    "native_id": "PLAW-119publ121",
-    "published_at": "2026-11-20T16:33:01+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:33:01 +0000",
-    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "public_law",
-      "document_stage": "law_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Public and Private Laws",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-plaw",
-    "n": 4295,
-    "first_seen": "2026-10-17T05:37:40.086992+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-plaw"
-    ]
-  },
-  {
-    "title": "Public Law 119 - 120 - Billion Dollar Boondoggle Act of 2025",
-    "url": "https://www.govinfo.gov/app/details/PLAW-119publ120",
-    "native_id": "PLAW-119publ120",
-    "published_at": "2026-11-20T16:33:01+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:33:01 +0000",
-    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "public_law",
-      "document_stage": "law_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Public and Private Laws",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-plaw",
-    "n": 2109,
-    "first_seen": "2026-10-15T12:16:32.997656+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-plaw"
-    ]
-  },
-  {
-    "title": "Public Law 119 - 118 - Kay Hagan Tick Reauthorization Act",
-    "url": "https://www.govinfo.gov/app/details/PLAW-119publ118",
-    "native_id": "PLAW-119publ118",
-    "published_at": "2026-11-20T16:33:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:33:00 +0000",
-    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "public_law",
-      "document_stage": "law_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Public and Private Laws",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-plaw",
-    "n": 11704,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-plaw"
-    ]
-  },
-  {
-    "title": "Public Law 119 - 116 - Modernizing Access to Our Public Oceans Act",
-    "url": "https://www.govinfo.gov/app/details/PLAW-119publ116",
-    "native_id": "PLAW-119publ116",
-    "published_at": "2026-11-20T16:33:00+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:33:00 +0000",
-    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "public_law",
-      "document_stage": "law_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Public and Private Laws",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-plaw",
-    "n": 11703,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-plaw"
-    ]
-  },
-  {
-    "title": "Public Law 119 - 112 - Hydropower Licensing Transparency Act",
-    "url": "https://www.govinfo.gov/app/details/PLAW-119publ112",
-    "native_id": "PLAW-119publ112",
-    "published_at": "2026-11-20T16:31:05+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:31:05 +0000",
-    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "public_law",
-      "document_stage": "law_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Public and Private Laws",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-plaw",
-    "n": 11702,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-plaw"
-    ]
-  },
-  {
-    "title": "Public Law 119 - 114 - An act to provide for the equitable settlement of certain Indian land disputes regarding land in Illinois, and for other purposes.",
-    "url": "https://www.govinfo.gov/app/details/PLAW-119publ114",
-    "native_id": "PLAW-119publ114",
-    "published_at": "2026-11-20T16:31:05+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:31:05 +0000",
-    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "public_law",
-      "document_stage": "law_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Public and Private Laws",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-plaw",
-    "n": 11701,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-plaw"
-    ]
-  },
-  {
-    "title": "Public Law 119 - 113 - An act to reauthorize the Fort Peck Reservation Rural Water System Act of 2000.",
-    "url": "https://www.govinfo.gov/app/details/PLAW-119publ113",
-    "native_id": "PLAW-119publ113",
-    "published_at": "2026-11-20T16:31:05+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:31:05 +0000",
-    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "public_law",
-      "document_stage": "law_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Public and Private Laws",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-plaw",
-    "n": 11700,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-plaw"
-    ]
-  },
-  {
-    "title": "Public Law 119 - 117 - An act to redesignate the National Historic Trails Interpretive Center in Casper, Wyoming, as the \"Barbara L. Cubin National Historic Trails Interpretive Center\".",
-    "url": "https://www.govinfo.gov/app/details/PLAW-119publ117",
-    "native_id": "PLAW-119publ117",
-    "published_at": "2026-11-20T16:31:05+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:31:05 +0000",
-    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "public_law",
-      "document_stage": "law_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Public and Private Laws",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-plaw",
-    "n": 11699,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-plaw"
-    ]
-  },
-  {
-    "title": "Public Law 119 - 115 - An act to designate the General George C. Marshall House, in the Commonwealth of Virginia, as an affiliated area of the National Park System, and for other purposes.",
-    "url": "https://www.govinfo.gov/app/details/PLAW-119publ115",
-    "native_id": "PLAW-119publ115",
-    "published_at": "2026-11-20T16:31:04+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:31:04 +0000",
-    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "public_law",
-      "document_stage": "law_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Public and Private Laws",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-plaw",
-    "n": 11698,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-plaw"
-    ]
-  },
-  {
-    "title": "Public Law 119 - 109 - Local Access to Courts Act\" or \"LACA",
-    "url": "https://www.govinfo.gov/app/details/PLAW-119publ109",
-    "native_id": "PLAW-119publ109",
-    "published_at": "2026-11-20T16:31:04+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:31:04 +0000",
-    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "public_law",
-      "document_stage": "law_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Public and Private Laws",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-plaw",
-    "n": 11697,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-plaw"
-    ]
-  },
-  {
-    "title": "Public Law 119 - 111 - Lindsey O. Graham Sanctioning Russia and Iran Act of 2026",
-    "url": "https://www.govinfo.gov/app/details/PLAW-119publ111",
-    "native_id": "PLAW-119publ111",
-    "published_at": "2026-11-20T16:31:04+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:31:04 +0000",
-    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "public_law",
-      "document_stage": "law_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Public and Private Laws",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-plaw",
-    "n": 7712,
-    "first_seen": "2026-10-30T18:57:21.617502+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-plaw"
-    ]
-  },
-  {
-    "title": "Public Law 119 - 104 - Hershel `Woody' Williams National Medal of Honor Monument Location Act",
-    "url": "https://www.govinfo.gov/app/details/PLAW-119publ104",
-    "native_id": "PLAW-119publ104",
-    "published_at": "2026-11-20T16:31:04+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:31:04 +0000",
-    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "public_law",
-      "document_stage": "law_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Public and Private Laws",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-plaw",
-    "n": 7711,
-    "first_seen": "2026-10-30T18:57:21.617502+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-plaw"
-    ]
-  },
-  {
-    "title": "Public Law 119 - 108 - Doug LaMalfa Federal Disaster Tax Relief Certainty Act",
-    "url": "https://www.govinfo.gov/app/details/PLAW-119publ108",
-    "native_id": "PLAW-119publ108",
-    "published_at": "2026-11-20T16:31:04+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:31:04 +0000",
-    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "public_law",
-      "document_stage": "law_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Public and Private Laws",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-plaw",
-    "n": 7710,
-    "first_seen": "2026-10-30T18:57:21.617502+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-plaw"
-    ]
-  },
-  {
-    "title": "Public Law 119 - 87 - An act to amend the FISA Amendments Act of 2008 to extend the authorities of title VII of the Foreign Intelligence Surveillance Act of 1978, and for other purposes.",
-    "url": "https://www.govinfo.gov/app/details/PLAW-119publ87",
-    "native_id": "PLAW-119publ87",
-    "published_at": "2026-11-20T16:31:03+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:31:03 +0000",
-    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "public_law",
-      "document_stage": "law_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Public and Private Laws",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-plaw",
-    "n": 11696,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-plaw"
-    ]
-  },
-  {
-    "title": "Public Law 119 - 72 - Focused Assistance and Skills Training for Veterans' Employment and Transition Success Act\" or the \"FAST VETS Act",
-    "url": "https://www.govinfo.gov/app/details/PLAW-119publ72",
-    "native_id": "PLAW-119publ72",
-    "published_at": "2026-11-20T16:31:03+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:31:03 +0000",
-    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "public_law",
-      "document_stage": "law_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Public and Private Laws",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-plaw",
-    "n": 11695,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-plaw"
-    ]
-  },
-  {
-    "title": "Public Law 119 - 29 - Filing Relief for Natural Disasters Act",
-    "url": "https://www.govinfo.gov/app/details/PLAW-119publ29",
-    "native_id": "PLAW-119publ29",
-    "published_at": "2026-11-20T16:31:03+00:00",
-    "published_raw": "Fri, 20 Nov 2026 16:31:03 +0000",
-    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "public_law",
-      "document_stage": "law_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Public and Private Laws",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-plaw",
-    "n": 11694,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-20T21:08:28.339043+00:00",
-    "source_ids": [
-      "us-govinfo-plaw"
-    ]
-  },
-  {
-    "title": "Tinsley Viaduct Gas Pipeline Diversion (Cadent Gas Ltd): environmental determination",
-    "url": "https://www.gov.uk/government/publications/tinsley-viaduct-gas-pipeline-diversion-cadent-gas-ltd-environmental-determination",
-    "native_id": "/government/publications/tinsley-viaduct-gas-pipeline-diversion-cadent-gas-ltd-environmental-determination",
-    "published_at": "2026-11-20T15:26:55+00:00",
-    "published_raw": "2026-11-20T15:26:55Z",
-    "document_type": "decision",
-    "issuer": "Department for Energy Security and Net Zero",
-    "issuer_ids": [
-      "uk-gov:department-for-energy-security-and-net-zero"
-    ],
-    "summary": "Environmental determination by the Secretary of State.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department for Energy Security and Net Zero",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 11681,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-23T09:08:57.097368+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Teaching Regulation Agency outcome: Mr Nicholas Rose",
-    "url": "https://www.gov.uk/government/publications/teaching-regulation-agency-outcome-mr-nicholas-rose",
-    "native_id": "/government/publications/teaching-regulation-agency-outcome-mr-nicholas-rose",
-    "published_at": "2026-11-20T15:10:51+00:00",
-    "published_raw": "2026-11-20T15:10:51Z",
-    "document_type": "decision",
-    "issuer": "Teaching Regulation Agency",
-    "issuer_ids": [
-      "uk-gov:teaching-regulation-agency"
-    ],
-    "summary": "Case to Answer determination",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Teaching Regulation Agency",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 11682,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-23T09:08:57.097368+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Teacher misconduct panel outcome: Mr David Brereton",
-    "url": "https://www.gov.uk/government/publications/teacher-misconduct-panel-outcome-mr-david-brereton",
-    "native_id": "/government/publications/teacher-misconduct-panel-outcome-mr-david-brereton",
-    "published_at": "2026-11-20T14:26:10+00:00",
-    "published_raw": "2026-11-20T14:26:10Z",
-    "document_type": "decision",
-    "issuer": "Teaching Regulation Agency",
-    "issuer_ids": [
-      "uk-gov:teaching-regulation-agency"
-    ],
-    "summary": "Professional conduct panel outcome, including decision and reasons.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Teaching Regulation Agency",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 11683,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-23T09:08:57.097368+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Gangmasters Licensing Appeals results and judgements",
-    "url": "https://www.gov.uk/government/publications/gangmasters-licensing-appeals-results-and-judgements",
-    "native_id": "/government/publications/gangmasters-licensing-appeals-results-and-judgements",
-    "published_at": "2026-11-20T13:19:09+00:00",
-    "published_raw": "2026-11-20T13:19:09Z",
-    "document_type": "decision",
-    "issuer": "Fair Work Agency; HM Courts & Tribunals Service; Department for Business, Innovation, Science and Trade; Department for Business and Trade",
-    "issuer_ids": [
-      "uk-gov:fair-work-agency",
-      "uk-gov:hm-courts-and-tribunals-service",
-      "uk-gov:department-for-business-innovation-science-and-trade",
-      "uk-gov:department-for-business-and-trade"
-    ],
-    "summary": "Appeal results and judgements from the Gangmasters Licensing Appeals.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Fair Work Agency; HM Courts & Tribunals Service; Department for Business, Innovation, Science and Trade; Department for Business and Trade",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 21,
-    "first_seen": "2026-10-15T10:17:11.133023+00:00",
-    "last_seen": "2026-11-23T09:08:57.097368+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Trade and Cooperation Agreement Partnership Council Decision number 1 for 2026: Energy",
-    "url": "https://www.gov.uk/government/publications/trade-and-cooperation-agreement-partnership-council-decision-number-1-for-2026-energy",
-    "native_id": "/government/publications/trade-and-cooperation-agreement-partnership-council-decision-number-1-for-2026-energy",
-    "published_at": "2026-11-20T13:18:48+00:00",
-    "published_raw": "2026-11-20T13:18:48Z",
-    "document_type": "decision",
-    "issuer": "Cabinet Office",
-    "issuer_ids": [
-      "uk-gov:cabinet-office"
-    ],
-    "summary": "The Trade and Cooperation Agreement (TCA) Partnership Council oversees UK and EU implementation, application and interpretation of the Trade and Cooperation Agreement",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Cabinet Office",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 11684,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-23T09:08:57.097368+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "CIL Appeal 1896473 — 21 September 26 — alterations and extension",
-    "url": "https://www.gov.uk/government/publications/cil-appeal-1896473-21-september-26-alterations-and-extension",
-    "native_id": "/government/publications/cil-appeal-1896473-21-september-26-alterations-and-extension",
-    "published_at": "2026-11-20T09:30:08+00:00",
-    "published_raw": "2026-11-20T09:30:08Z",
-    "document_type": "decision",
-    "issuer": "HM Revenue & Customs",
-    "issuer_ids": [
-      "uk-gov:hm-revenue-customs"
-    ],
-    "summary": "Conversion and extension of agricultural buildings to create 6 residential units, alteration to the existing access, and construction of ancillary buildings and of parking areas.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "HM Revenue & Customs",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 11686,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-23T09:08:57.097368+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "CIL Appeals 1897675, 1897676, 1897677 — 07 October 26",
-    "url": "https://www.gov.uk/government/publications/cil-appeals-1897675-1897676-1897677-07-october-26",
-    "native_id": "/government/publications/cil-appeals-1897675-1897676-1897677-07-october-26",
-    "published_at": "2026-11-20T09:30:08+00:00",
-    "published_raw": "2026-11-20T09:30:08Z",
-    "document_type": "decision",
-    "issuer": "HM Revenue & Customs",
-    "issuer_ids": [
-      "uk-gov:hm-revenue-customs"
-    ],
-    "summary": "Report issued for lawful use and GIA offset: change of use of the various floors (part of the upper ground floor and part of the first floor) from use class E to flats.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "HM Revenue & Customs",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 11685,
-    "first_seen": "2026-11-20T21:08:28.339043+00:00",
-    "last_seen": "2026-11-23T09:08:57.097368+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
     ]
   }
 ]

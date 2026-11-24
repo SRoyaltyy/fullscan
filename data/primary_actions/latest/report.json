@@ -1,33 +1,32 @@
 {
   "version": "primary-actions-v1",
-  "generated_at": "2026-11-23T09:08:57.097368+00:00",
-  "window_start": "2026-11-20T09:08:57.097368+00:00",
-  "window_end": "2026-11-23T09:08:57.097368+00:00",
+  "generated_at": "2026-11-24T00:54:48.966450+00:00",
+  "window_start": "2026-11-21T00:54:48.966450+00:00",
+  "window_end": "2026-11-24T00:54:48.966450+00:00",
   "scope": "official primary publication titles and supplied metadata; no article bodies or inferred policy enactment",
   "enabled_sources": 115,
-  "sources_ok": 114,
-  "sources_failed": 1,
+  "sources_ok": 115,
+  "sources_failed": 0,
   "coverage_status": "degraded",
   "counts": {
-    "observed": 1664,
-    "old": 1192,
-    "future": 3,
-    "undated": 293,
-    "new": 104,
-    "duplicates": 365
+    "observed": 1950,
+    "old": 1349,
+    "future": 8,
+    "undated": 350,
+    "new": 119,
+    "duplicates": 474
   },
-  "current_dated_documents": 319,
-  "new_undated_review": 2,
+  "current_dated_documents": 253,
+  "new_undated_review": 13,
   "stage_counts": {
-    "requires_semantic_review": 175,
+    "requires_semantic_review": 134,
+    "law_published": 5,
+    "decision_published": 14,
+    "consultation_response_published": 2,
     "notice_published": 79,
     "proposal_published": 7,
     "final_rule_published": 5,
-    "legislative_document_published": 9,
-    "presidential_document_published": 8,
-    "decision_published": 8,
-    "law_published": 27,
-    "consultation_response_published": 1
+    "legislative_document_published": 7
   },
   "llm_calls": 0,
   "paid_api_calls": 0,
@@ -38,12 +37,12 @@
       "status": "ok",
       "http_status": 200,
       "requests": 1,
-      "fetched_rows": 202,
+      "fetched_rows": 91,
       "latest_published_at": "2026-11-23T00:00:00+00:00",
       "warnings": [],
       "etag": null,
       "last_modified": null,
-      "response_sha256": "1c3c0b4454bbb886665e91e184094979576a88f8b36b7c4b1435ab9703640718"
+      "response_sha256": "25ecf23d005b100217ee664817b25ac3ee49e68fa4e3a252f71152bf9fcec490"
     },
     {
       "source_id": "hk-hkma-public-press",
@@ -52,13 +51,11 @@
       "http_status": 200,
       "requests": 1,
       "fetched_rows": 100,
-      "latest_published_at": "2026-11-20T00:00:00+00:00",
-      "warnings": [
-        "stale_feed_outside_requested_window"
-      ],
+      "latest_published_at": "2026-11-23T00:00:00+00:00",
+      "warnings": [],
       "etag": null,
       "last_modified": null,
-      "response_sha256": "4250e2a9211b82e49d8bc20f71d207d7b464cbda997b14d8a30d461305c31996"
+      "response_sha256": "61d6bf88f52d9d07277bcb053bfe67a5fd5bd7c8cf688cfaabbd61d40d28e3e1"
     },
     {
       "source_id": "uk-govuk-decision",
@@ -66,25 +63,25 @@
       "status": "ok",
       "http_status": 200,
       "requests": 1,
-      "fetched_rows": 8,
-      "latest_published_at": "2026-11-20T16:35:11+00:00",
+      "fetched_rows": 14,
+      "latest_published_at": "2026-11-23T17:02:52+00:00",
       "warnings": [],
       "etag": null,
       "last_modified": null,
-      "response_sha256": "f1829741b678d5ace3df51ca95771f63bda8abfda0874234e09cca49908c8552"
+      "response_sha256": "3017f6e665b763b06c3be277b5d4db0b30114838e70b721c229a929905e4ee91"
     },
     {
       "source_id": "uk-govuk-regulation",
       "url": "https://www.gov.uk/api/search.json",
-      "status": "valid_empty",
+      "status": "ok",
       "http_status": 200,
       "requests": 1,
-      "fetched_rows": 0,
-      "latest_published_at": null,
+      "fetched_rows": 1,
+      "latest_published_at": "2026-11-23T16:59:06+00:00",
       "warnings": [],
       "etag": null,
       "last_modified": null,
-      "response_sha256": "fab7a5bec91fed14cf54a2998f1855834bdfe5d00df3df6a1b2e0e15568d0cee"
+      "response_sha256": "2886e69566930d794b5cca319853980cc65f561d34ecc428a4a36899e5dffd9b"
     },
     {
       "source_id": "uk-govuk-statutory_instrument",
@@ -105,12 +102,12 @@
       "status": "ok",
       "http_status": 200,
       "requests": 1,
-      "fetched_rows": 1,
-      "latest_published_at": "2026-11-20T14:52:26+00:00",
+      "fetched_rows": 2,
+      "latest_published_at": "2026-11-23T14:00:37+00:00",
       "warnings": [],
       "etag": null,
       "last_modified": null,
-      "response_sha256": "7cc88752d5e81d88b993930f2751586508e1212e154398bf4e8564a4d5287851"
+      "response_sha256": "68fe650adc852447c5b7441850c244dadd85c314099187041b730958a0c1712a"
     },
     {
       "source_id": "uk-govuk-government_response",
@@ -157,12 +154,12 @@
       "status": "ok",
       "http_status": 200,
       "requests": 1,
-      "fetched_rows": 4,
-      "latest_published_at": "2026-11-20T10:54:59+00:00",
+      "fetched_rows": 2,
+      "latest_published_at": "2026-11-23T10:23:59+00:00",
       "warnings": [],
       "etag": null,
       "last_modified": null,
-      "response_sha256": "554eceb0119148488dc7041a98c4bf67d2f5d1ce64e049c845f19925a119b1ad"
+      "response_sha256": "de81108900d552e4cea84e89e95cd164f41f31f1df2d43986d1e51f1d6d4c8f1"
     },
     {
       "source_id": "uk-govuk-international_treaty",
@@ -180,17 +177,15 @@
     {
       "source_id": "us-govinfo-bills",
       "url": "https://www.govinfo.gov/rss/bills.xml",
-      "status": "unchanged",
-      "http_status": 304,
+      "status": "ok",
+      "http_status": 200,
       "requests": 1,
-      "fetched_rows": 43,
+      "fetched_rows": 41,
       "latest_published_at": "2026-11-21T15:58:00+00:00",
-      "warnings": [
-        "feed_at_capacity_in_requested_window; snapshots may miss overflow"
-      ],
+      "warnings": [],
       "etag": null,
-      "last_modified": "Sat, 21 Nov 2026 15:58:00 GMT",
-      "response_sha256": "e74626fd8119f741eb87f151a97187798ae830e1290b8d22b5ec0e1246c4bab2"
+      "last_modified": "Mon, 23 Nov 2026 20:53:00 GMT",
+      "response_sha256": "fd09e5a10f392a50e159c4d9b90c9e774e1d91aa644bfcf15d9886718e717bc5"
     },
     {
       "source_id": "us-govinfo-bills-enr",
@@ -208,15 +203,15 @@
     {
       "source_id": "us-govinfo-plaw",
       "url": "https://www.govinfo.gov/rss/plaw.xml",
-      "status": "unchanged",
-      "http_status": 304,
+      "status": "ok",
+      "http_status": 200,
       "requests": 1,
       "fetched_rows": 99,
-      "latest_published_at": "2026-11-20T16:33:02+00:00",
+      "latest_published_at": "2026-11-23T21:22:00+00:00",
       "warnings": [],
       "etag": null,
-      "last_modified": "Fri, 20 Nov 2026 16:33:02 GMT",
-      "response_sha256": "07c32494123c07057a95e04342f37260114c181104b40f0e5f24f2ce44f0ea6a"
+      "last_modified": "Mon, 23 Nov 2026 21:22:01 GMT",
+      "response_sha256": "935e755e800e52423818bb5f2f91a7335983b83d629dcabc0e73a421d6a6c8f5"
     },
     {
       "source_id": "us-govinfo-dcpd",
@@ -234,28 +229,28 @@
     {
       "source_id": "us-govinfo-crpt",
       "url": "https://www.govinfo.gov/rss/crpt.xml",
-      "status": "unchanged",
-      "http_status": 304,
+      "status": "ok",
+      "http_status": 200,
       "requests": 1,
-      "fetched_rows": 100,
-      "latest_published_at": "2026-11-21T12:43:00+00:00",
+      "fetched_rows": 99,
+      "latest_published_at": "2026-11-23T12:55:00+00:00",
       "warnings": [],
       "etag": null,
-      "last_modified": "Sat, 21 Nov 2026 12:43:00 GMT",
-      "response_sha256": "ab14ad746891f6bd051b9427dc1090895f52df484092e333443fb10f779abc61"
+      "last_modified": "Mon, 23 Nov 2026 12:55:00 GMT",
+      "response_sha256": "68ee7b1cdf0b14c9b70fe6dec4485c7b522c7c3bfd3750383acec6722696ce4e"
     },
     {
       "source_id": "us-white-house-0691096d16",
       "url": "https://www.whitehouse.gov/presidential-actions/feed/",
-      "status": "unchanged",
-      "http_status": 304,
+      "status": "ok",
+      "http_status": 200,
       "requests": 1,
       "fetched_rows": 30,
-      "latest_published_at": "2026-11-21T02:31:38+00:00",
+      "latest_published_at": "2026-11-23T23:36:12+00:00",
       "warnings": [],
-      "etag": "\"b7ccd6631c3d23bfec7636a61af8f499\"",
-      "last_modified": "Sat, 21 Nov 2026 02:46:26 GMT",
-      "response_sha256": "04b471a929bcf82162e7565898a46845031344ce2f026f5dc6e4cd8d67513211"
+      "etag": "\"649d6b2d59a7eaab4191cccca77fc82b\"",
+      "last_modified": "Mon, 23 Nov 2026 22:32:23 GMT",
+      "response_sha256": "b15c7cb9a2ff218f19bed7927ac3656bafacc4c624b8539c653da4fcfa6874cd"
     },
     {
       "source_id": "us-congress-76128ee9ff",
@@ -263,12 +258,12 @@
       "status": "ok",
       "http_status": 200,
       "requests": 1,
-      "fetched_rows": 6,
+      "fetched_rows": 3,
       "latest_published_at": null,
       "warnings": [],
       "etag": null,
       "last_modified": null,
-      "response_sha256": "20a7e12a250630a9511ba82879afbfb8a18f0a13ba353aad275439d6f138e497"
+      "response_sha256": "1c2dfbd8a98d799f4f2be5168461f3402e2d5f7f6d7bf83f2667171e33eea092"
     },
     {
       "source_id": "us-supreme-court-index",
@@ -293,9 +288,11 @@
       "requests": 1,
       "fetched_rows": 25,
       "latest_published_at": "2026-11-20T18:03:24+00:00",
-      "warnings": [],
-      "etag": "\"1795400309\"",
-      "last_modified": "Mon, 23 Nov 2026 02:18:29 GMT",
+      "warnings": [
+        "stale_feed_outside_requested_window"
+      ],
+      "etag": "\"1795481320\"",
+      "last_modified": "Tue, 24 Nov 2026 00:48:40 GMT",
       "response_sha256": "de19a5354d5f86993530bf946af67d108d50bf21b2946236e2e14f7e2b80cc3a"
     },
     {
@@ -305,11 +302,11 @@
       "http_status": 200,
       "requests": 1,
       "fetched_rows": 25,
-      "latest_published_at": "2026-11-20T20:05:57+00:00",
+      "latest_published_at": "2026-11-23T16:50:05+00:00",
       "warnings": [],
-      "etag": "W/\"1795395177\"",
-      "last_modified": "Mon, 23 Nov 2026 00:52:57 GMT",
-      "response_sha256": "1e85c7428032ee1a0f464e78bf9c563d39049f6a7fcd629c859b47557b3e2acc"
+      "etag": "W/\"1795477984\"",
+      "last_modified": "Mon, 23 Nov 2026 23:53:04 GMT",
+      "response_sha256": "619719bb2532a5d124f0f68a5f4d279e8ba571c6d78a745da0591c4a5926b499"
     },
     {
       "source_id": "us-ftc-58b0383166",
@@ -319,7 +316,9 @@
       "requests": 1,
       "fetched_rows": 10,
       "latest_published_at": "2026-11-20T12:00:00+00:00",
-      "warnings": [],
+      "warnings": [
+        "stale_feed_outside_requested_window"
+      ],
       "etag": null,
       "last_modified": null,
       "response_sha256": "c0b1d7574955d64e86b670bac4f3ee3bed6f5a09f685d77f527a6b76c780c135"
@@ -347,10 +346,12 @@
       "requests": 1,
       "fetched_rows": 30,
       "latest_published_at": "2026-11-20T12:00:00+00:00",
-      "warnings": [],
+      "warnings": [
+        "stale_feed_outside_requested_window"
+      ],
       "etag": null,
       "last_modified": null,
-      "response_sha256": "6621624a32976180164f7ba73116f24552a301128bfe909046108eafc1b28228"
+      "response_sha256": "a8cf6922599329220f82a56cad31b233d87673035b00802c7b53c660d95202fd"
     },
     {
       "source_id": "us-ftc-df73e297e1",
@@ -365,7 +366,7 @@
       ],
       "etag": null,
       "last_modified": null,
-      "response_sha256": "2f258edb8a9692d4730476588fd6c8a7b06349fb2f04edfeb6b5e8fe7d5fd442"
+      "response_sha256": "65353019456b6eeae5f2acb4554ad1ae060cb06d31d2bd2a852f554d425ffac0"
     },
     {
       "source_id": "us-ftc-69601f2e49",
@@ -380,33 +381,33 @@
       ],
       "etag": null,
       "last_modified": null,
-      "response_sha256": "680d3f8549da5cf2f196f7d6271e3ca8f38e2de3ff631a394d984c5a97223b3b"
+      "response_sha256": "a518176e20259377e433553ce2ec9a93c101f9d480ab52aa33582239848a37ca"
     },
     {
       "source_id": "us-doj-b3d27e1dc3",
       "url": "https://www.justice.gov/news/rss",
-      "status": "unchanged",
-      "http_status": 304,
+      "status": "ok",
+      "http_status": 200,
       "requests": 1,
       "fetched_rows": 25,
       "latest_published_at": "2027-10-29T12:00:00+00:00",
       "warnings": [],
-      "etag": "\"1795303326\"",
-      "last_modified": "Sat, 21 Nov 2026 23:22:06 GMT",
-      "response_sha256": "8a52693e8ebc747aca796277fec2146b40dc28246e13d2c9a445df9ca63fb82c"
+      "etag": "\"1795481294\"",
+      "last_modified": "Tue, 24 Nov 2026 00:48:14 GMT",
+      "response_sha256": "c010d681ee5afa56808c5a5918dcb9eb01843be13a1c0a790fd682f0be53260c"
     },
     {
       "source_id": "us-doj-e05071794d",
       "url": "https://www.justice.gov/news/rss?m=1",
-      "status": "unchanged",
-      "http_status": 304,
+      "status": "ok",
+      "http_status": 200,
       "requests": 1,
       "fetched_rows": 25,
-      "latest_published_at": "2026-11-21T12:00:00+00:00",
+      "latest_published_at": "2026-11-23T12:00:00+00:00",
       "warnings": [],
-      "etag": "\"1795303329\"",
-      "last_modified": "Sat, 21 Nov 2026 23:22:09 GMT",
-      "response_sha256": "e099719f12806f8a6686e68e547496d56d698f15aa65e6e14ad89bdb3e56ed36"
+      "etag": "\"1795481286\"",
+      "last_modified": "Tue, 24 Nov 2026 00:48:06 GMT",
+      "response_sha256": "5bb74778e046aabc35852bc4eb1a1fbf8a49d1b2fa2d86f4fc3cf674716681fb"
     },
     {
       "source_id": "us-ofac-index",
@@ -415,13 +416,11 @@
       "http_status": 200,
       "requests": 1,
       "fetched_rows": 10,
-      "latest_published_at": "2026-11-20T00:00:00+00:00",
-      "warnings": [
-        "stale_feed_outside_requested_window"
-      ],
+      "latest_published_at": "2026-11-23T00:00:00+00:00",
+      "warnings": [],
       "etag": null,
       "last_modified": null,
-      "response_sha256": "29811c9307164116195bc171a493d85f6d90f0865e33329525c9dbd79764fa25"
+      "response_sha256": "aefc51d9767418312c12ed48c15ee4e77d5dfe70a27f97699ebd5d5de502a6fd"
     },
     {
       "source_id": "us-treasury-a69e5b5ef0",
@@ -449,7 +448,7 @@
       "warnings": [],
       "etag": null,
       "last_modified": null,
-      "response_sha256": "42a35f626567a5135e20b99de64085b6f1c25e3ca7cdb924d8927daecdb2eab9"
+      "response_sha256": "67d75f32df04ec7ef7980729d6fd0a5a2fdcc824f02b3cd207616b0f80000863"
     },
     {
       "source_id": "us-ustr-index",
@@ -462,22 +461,22 @@
       "warnings": [
         "stale_feed_outside_requested_window"
       ],
-      "etag": "\"1795424667\"",
-      "last_modified": "Mon, 23 Nov 2026 09:04:27 GMT",
+      "etag": "\"1795481107\"",
+      "last_modified": "Tue, 24 Nov 2026 00:45:07 GMT",
       "response_sha256": "f5e363d61fe81b414a429ad175a5b3083df75652feac6549b387e07cd74d6e2b"
     },
     {
       "source_id": "us-itc-index",
       "url": "https://www.usitc.gov/press_room/",
-      "status": "unchanged",
-      "http_status": 304,
+      "status": "ok",
+      "http_status": 200,
       "requests": 1,
       "fetched_rows": 10,
       "latest_published_at": null,
       "warnings": [],
-      "etag": "\"1795366811\"",
-      "last_modified": "Sun, 22 Nov 2026 17:00:11 GMT",
-      "response_sha256": "83a66a76f8e5df5f76be1050341e89871e085ffa3fa5fc911b9cc16a8ad0a02e"
+      "etag": "\"1795472321\"",
+      "last_modified": "Mon, 23 Nov 2026 22:18:41 GMT",
+      "response_sha256": "def2950b890bfd5020cc0e884b9eb90145ea9302c65e292f64d1cf5a56096cca"
     },
     {
       "source_id": "us-fed-a12cd46677",
@@ -532,7 +531,9 @@
       "requests": 1,
       "fetched_rows": 20,
       "latest_published_at": "2026-11-20T21:15:00+00:00",
-      "warnings": [],
+      "warnings": [
+        "stale_feed_outside_requested_window"
+      ],
       "etag": "\"f37fd93c3479dd1:0\"",
       "last_modified": "Fri, 20 Nov 2026 21:15:15 GMT",
       "response_sha256": "72529d13594fbe7456a5701eb087c253b2cff213510b8d76e442bd97d570aa4e"
@@ -560,7 +561,9 @@
       "requests": 1,
       "fetched_rows": 15,
       "latest_published_at": "2026-11-20T21:15:00+00:00",
-      "warnings": [],
+      "warnings": [
+        "stale_feed_outside_requested_window"
+      ],
       "etag": "\"708f2d3f3479dd1:0\"",
       "last_modified": "Fri, 20 Nov 2026 21:15:19 GMT",
       "response_sha256": "4cd1ecdf0151fc2c14e1a7b2a3128d911f1260369b8bde714ae11fd738b0f618"
@@ -634,9 +637,9 @@
       "warnings": [
         "stale_feed_outside_requested_window"
       ],
-      "etag": "\"1795421703-gzip\"",
-      "last_modified": "Mon, 23 Nov 2026 08:15:03 GMT",
-      "response_sha256": "965734703d3791f59b34281ce32c1e68c5c9abf4d60e3b6308289bffe3f4b6cd"
+      "etag": "\"1795479902-gzip\"",
+      "last_modified": "Tue, 24 Nov 2026 00:25:02 GMT",
+      "response_sha256": "27096dbcb3dd65932508e4f6eee4fed5ff88903a34dd23e96eb0c9d79008913e"
     },
     {
       "source_id": "us-occ-6f63126133",
@@ -669,15 +672,15 @@
     {
       "source_id": "us-fincen-index",
       "url": "https://www.fincen.gov/news/press-releases",
-      "status": "unchanged",
-      "http_status": 304,
+      "status": "ok",
+      "http_status": 200,
       "requests": 1,
-      "fetched_rows": 14,
+      "fetched_rows": 13,
       "latest_published_at": null,
       "warnings": [],
-      "etag": "\"9520e1e0a6fa186db9d47c995f8991c1\"",
-      "last_modified": "Thu, 19 Nov 2026 14:58:15 GMT",
-      "response_sha256": "f6f5fdf5d13112a7b3866e69f98e385aa883a4e5a38d44f13df8d6348f8ab103"
+      "etag": "\"0d0bb2ebba813b40427ffc7c677d1e7f\"",
+      "last_modified": "Mon, 23 Nov 2026 18:31:55 GMT",
+      "response_sha256": "4efa6a375b06a2913d7eebc5bf9b9d323cca306b5a8d585bd7abca64bd306038"
     },
     {
       "source_id": "us-cftc-fda5c3631d",
@@ -686,13 +689,11 @@
       "http_status": 200,
       "requests": 1,
       "fetched_rows": 10,
-      "latest_published_at": "2026-11-17T15:18:19+00:00",
-      "warnings": [
-        "stale_feed_outside_requested_window"
-      ],
+      "latest_published_at": "2026-11-23T22:00:00+00:00",
+      "warnings": [],
       "etag": null,
       "last_modified": null,
-      "response_sha256": "dc6a99fe097c14b08e098987d443ec96ca8cd4652eea2f543702cde53cb7508c"
+      "response_sha256": "93d26c7883dc1f96f144b80fc94d10211bab3b2c22a98c0fe680bfccaa958d66"
     },
     {
       "source_id": "us-fda-1a1096082f",
@@ -705,8 +706,8 @@
       "warnings": [
         "stale_feed_outside_requested_window"
       ],
-      "etag": "\"1795395070\"",
-      "last_modified": "Mon, 23 Nov 2026 00:51:10 GMT",
+      "etag": "\"1795481680\"",
+      "last_modified": "Tue, 24 Nov 2026 00:54:40 GMT",
       "response_sha256": "c80a090b03b5d142af5e02e73ff3f58fdb9c61958b392d937991bc7f6a336527"
     },
     {
@@ -720,8 +721,8 @@
       "warnings": [
         "stale_feed_outside_requested_window"
       ],
-      "etag": "\"1795394292\"",
-      "last_modified": "Mon, 23 Nov 2026 00:38:12 GMT",
+      "etag": "\"1795481664\"",
+      "last_modified": "Tue, 24 Nov 2026 00:54:24 GMT",
       "response_sha256": "e41ab228874134961efe01a17f39289b54a805d75a83559c617702c5da808db5"
     },
     {
@@ -735,8 +736,8 @@
       "warnings": [
         "stale_feed_outside_requested_window"
       ],
-      "etag": "\"1795423644\"",
-      "last_modified": "Mon, 23 Nov 2026 08:47:24 GMT",
+      "etag": "\"1795477956\"",
+      "last_modified": "Mon, 23 Nov 2026 23:52:36 GMT",
       "response_sha256": "b2559143ee5069412154c430209ca7e2b4749bfc8c73c6f53ba3ed9b5193e04a"
     },
     {
@@ -747,9 +748,11 @@
       "requests": 1,
       "fetched_rows": 20,
       "latest_published_at": "2026-11-20T17:58:00+00:00",
-      "warnings": [],
-      "etag": "\"1795385397\"",
-      "last_modified": "Sun, 22 Nov 2026 22:09:57 GMT",
+      "warnings": [
+        "stale_feed_outside_requested_window"
+      ],
+      "etag": "\"1795479485\"",
+      "last_modified": "Tue, 24 Nov 2026 00:18:05 GMT",
       "response_sha256": "7c66b0d008d67b5f0c2176c734ae6f9ba7a335034d82a4c753ec78e3b4e2b51f"
     },
     {
@@ -759,13 +762,11 @@
       "http_status": 200,
       "requests": 1,
       "fetched_rows": 20,
-      "latest_published_at": "2026-11-18T19:13:26+00:00",
-      "warnings": [
-        "stale_feed_outside_requested_window"
-      ],
-      "etag": "\"1795424386\"",
-      "last_modified": "Mon, 23 Nov 2026 08:59:46 GMT",
-      "response_sha256": "90ab567533968755dcc0d7336cea7387bd5918da0f948442f782790ac78a1529"
+      "latest_published_at": "2026-11-23T18:25:08+00:00",
+      "warnings": [],
+      "etag": "\"1795461702\"",
+      "last_modified": "Mon, 23 Nov 2026 19:21:42 GMT",
+      "response_sha256": "30a4cb92a7cb76c67a9936edc2aaa40ceb5014b5de61532d6b65e80602d6b534"
     },
     {
       "source_id": "us-fda-5696b24295",
@@ -774,11 +775,11 @@
       "http_status": 200,
       "requests": 1,
       "fetched_rows": 20,
-      "latest_published_at": "2026-11-22T21:13:50+00:00",
+      "latest_published_at": "2026-11-23T22:34:04+00:00",
       "warnings": [],
-      "etag": "\"1795423164\"",
-      "last_modified": "Mon, 23 Nov 2026 08:39:24 GMT",
-      "response_sha256": "2c7c916fd83339f4e181f6e23c22143be6179a0895cb29e31053489218f64b44"
+      "etag": "\"1795478688\"",
+      "last_modified": "Tue, 24 Nov 2026 00:04:48 GMT",
+      "response_sha256": "a0795f2b97c44d891030c0a2474e2a8025805ed3a28a014c341a83678c55ea51"
     },
     {
       "source_id": "us-fda-03f7703006",
@@ -787,23 +788,23 @@
       "http_status": 200,
       "requests": 1,
       "fetched_rows": 20,
-      "latest_published_at": "2026-11-22T21:05:15+00:00",
+      "latest_published_at": "2026-11-23T19:44:36+00:00",
       "warnings": [],
-      "etag": "\"1795423644\"",
-      "last_modified": "Mon, 23 Nov 2026 08:47:24 GMT",
-      "response_sha256": "da9cb9a989403a5574cc2a9b64b6c1c55a358ecaa3b97dc699b8879ba887828c"
+      "etag": "\"1795480863\"",
+      "last_modified": "Tue, 24 Nov 2026 00:41:03 GMT",
+      "response_sha256": "4855d1ba8c70713d5fa56b7b8609eb99f36e8ba6505acee5984e984ed9a41fe2"
     },
     {
       "source_id": "us-cpsc-99343b5112",
       "url": "https://www.cpsc.gov/Newsroom/CPSC-RSS-Feed/Recalls-RSS",
-      "status": "unchanged",
-      "http_status": 304,
+      "status": "ok",
+      "http_status": 200,
       "requests": 1,
       "fetched_rows": 40,
       "latest_published_at": null,
       "warnings": [],
-      "etag": "\"1795370322\"",
-      "last_modified": "Sun, 22 Nov 2026 17:58:42 GMT",
+      "etag": "\"1795462653\"",
+      "last_modified": "Mon, 23 Nov 2026 19:37:33 GMT",
       "response_sha256": "c4ecfac0e5a45a71260c0e10d5c9f9a7fb6bf5e96dfa0f0ced07344488d7dcb8"
     },
     {
@@ -815,9 +816,9 @@
       "fetched_rows": 50,
       "latest_published_at": null,
       "warnings": [],
-      "etag": "\"1795275816\"",
-      "last_modified": "Sat, 21 Nov 2026 15:43:36 GMT",
-      "response_sha256": "c6eb2bc90cdff202e8380457e93268ab4307d116838151f08c49c0c3becb4312"
+      "etag": "\"1795355907\"",
+      "last_modified": "Sun, 22 Nov 2026 13:58:27 GMT",
+      "response_sha256": "f1226ae9e99ae93b9eb09c09007a98a45e6205ea39f2dcf01cd16bce6fbc6150"
     },
     {
       "source_id": "us-fsis-2f49ece915",
@@ -830,7 +831,7 @@
       "warnings": [],
       "etag": null,
       "last_modified": null,
-      "response_sha256": "00dd3f1e81bcaa51c81d921003d9150fb73333d23774853b8e574a8fc792a47d"
+      "response_sha256": "825a612b2d8d616c584b75026ac02e4f22557585c49c74701779e1767073e94e"
     },
     {
       "source_id": "us-epa-172ef7885f",
@@ -841,8 +842,8 @@
       "fetched_rows": 0,
       "latest_published_at": null,
       "warnings": [],
-      "etag": "\"1795395128\"",
-      "last_modified": "Mon, 23 Nov 2026 00:52:08 GMT",
+      "etag": "\"1795473000\"",
+      "last_modified": "Mon, 23 Nov 2026 22:30:00 GMT",
       "response_sha256": "949383c0326b2a6971862334746c19e6fed821961b8aa89af90fb72bd58f05b3"
     },
     {
@@ -866,12 +867,12 @@
       "status": "ok",
       "http_status": 200,
       "requests": 1,
-      "fetched_rows": 2,
+      "fetched_rows": 3,
       "latest_published_at": null,
       "warnings": [],
       "etag": null,
       "last_modified": null,
-      "response_sha256": "c156eb3d22f47cf1cb17591a745da6a9c1c466eeab7632242977ad7ebae55d47"
+      "response_sha256": "8e5964e3a8d890dc3f015d52459afe708a2f297388d6619a12364afdb9e2d608"
     },
     {
       "source_id": "us-fcc-60691b9c1e",
@@ -884,7 +885,7 @@
       "warnings": [],
       "etag": null,
       "last_modified": null,
-      "response_sha256": "8eaded16e83b657fc45c527a02c05219437fb481a349965d9b6ced96ac5dfd04"
+      "response_sha256": "28ae2c1fd24e3a1faee505d11697cce0ddd70f66159f2c4da9d073b77ae6fa15"
     },
     {
       "source_id": "us-fcc-3f3ed2ec7c",
@@ -897,7 +898,7 @@
       "warnings": [],
       "etag": null,
       "last_modified": null,
-      "response_sha256": "c95f144db3639c5070764e87aff6b3243f2d1b59a8598efdb55123c2acf54886"
+      "response_sha256": "b2264bbb17c1cecdcafbb70d4e0a7eab807f2ec453a6f5520c548c282b57ef01"
     },
     {
       "source_id": "us-fcc-e95ecda3bb",
@@ -905,12 +906,12 @@
       "status": "ok",
       "http_status": 200,
       "requests": 1,
-      "fetched_rows": 11,
+      "fetched_rows": 7,
       "latest_published_at": null,
       "warnings": [],
       "etag": null,
       "last_modified": null,
-      "response_sha256": "d359ef753aa8e7f530c2a23e53c36be071c25999cb5a3807cfda654e88249bce"
+      "response_sha256": "0765dcc757c203a843477ac27d7ecefffd2d80090281515d0e7bd7b48ed0eca4"
     },
     {
       "source_id": "us-fcc-364d1b4932",
@@ -923,7 +924,7 @@
       "warnings": [],
       "etag": null,
       "last_modified": null,
-      "response_sha256": "185c2af59bcc92bbcf49ab8a5777788910cd093ccfac1097c503ae34ccab2d41"
+      "response_sha256": "d53f3f73a793d40391386ed41fd86d1cd0f31d2e9103a534f9821d9cabbeb1ee"
     },
     {
       "source_id": "us-dol-99f477805a",
@@ -932,20 +933,26 @@
       "http_status": 200,
       "requests": 1,
       "fetched_rows": 10,
-      "latest_published_at": "2026-11-19T12:00:00+00:00",
+      "latest_published_at": "2026-11-23T12:00:00+00:00",
+      "warnings": [],
+      "etag": null,
+      "last_modified": null,
+      "response_sha256": "41119da4d9d01627171e56a1823c3cb4c249c33b534ab37c61043d148f0d5421"
+    },
+    {
+      "source_id": "us-osha-d8e445af0b",
+      "url": "https://www.osha.gov/laws-regs/federalregisters.xml",
+      "status": "ok",
+      "http_status": 200,
+      "requests": 1,
+      "fetched_rows": 5,
+      "latest_published_at": "2026-11-18T12:00:00+00:00",
       "warnings": [
         "stale_feed_outside_requested_window"
       ],
       "etag": null,
       "last_modified": null,
-      "response_sha256": "e28fd27d91c5cc62882b669c0e78ecab7074217d4f6c480737b7524a7d2a93bf"
-    },
-    {
-      "source_id": "us-osha-d8e445af0b",
-      "url": "https://www.osha.gov/laws-regs/federalregisters.xml",
-      "status": "parse_or_network_error",
-      "exception_type": "ParseError",
-      "requests": 1
+      "response_sha256": "42076b9841291547282c8af7ab3aa2423d77d721f25057164659efa7a135817f"
     },
     {
       "source_id": "us-nlrb-3db5e72bf9",
@@ -954,13 +961,11 @@
       "http_status": 200,
       "requests": 1,
       "fetched_rows": 10,
-      "latest_published_at": "2026-11-13T12:26:22+00:00",
-      "warnings": [
-        "stale_feed_outside_requested_window"
-      ],
-      "etag": "\"1795419192\"",
-      "last_modified": "Mon, 23 Nov 2026 07:33:12 GMT",
-      "response_sha256": "5cf036ebcb9a54ea6341f111936b587e37662f705944b81ab3f9ce24283a437f"
+      "latest_published_at": "2026-11-23T19:31:32+00:00",
+      "warnings": [],
+      "etag": "\"1795476092\"",
+      "last_modified": "Mon, 23 Nov 2026 23:21:32 GMT",
+      "response_sha256": "ffa3d14c3b54608da8d1873438180b350d96b4ff4854619cce6c036e11b0d514"
     },
     {
       "source_id": "us-nlrb-7c63020d7d",
@@ -973,23 +978,23 @@
       "warnings": [
         "stale_feed_outside_requested_window"
       ],
-      "etag": "\"1795419391\"",
-      "last_modified": "Mon, 23 Nov 2026 07:36:31 GMT",
+      "etag": "\"1795476151\"",
+      "last_modified": "Mon, 23 Nov 2026 23:22:31 GMT",
       "response_sha256": "5716a27efbe0186f33d5326cb21d587d8b01a16ef6e490b47225bb925dd445a7"
     },
     {
       "source_id": "us-fmc-fe8f0538ae",
       "url": "https://www.fmc.gov/feed/",
-      "status": "unchanged",
-      "http_status": 304,
+      "status": "ok",
+      "http_status": 200,
       "requests": 1,
       "fetched_rows": 3,
       "latest_published_at": "2024-05-10T01:57:41+00:00",
       "warnings": [
         "stale_feed_outside_requested_window"
       ],
-      "etag": "\"dfd2215102762a2deaecc144a3d9eba2\"",
-      "last_modified": "Fri, 20 Nov 2026 22:01:52 GMT",
+      "etag": "\"5685737a338944c6a60854e944d3fe70\"",
+      "last_modified": "Mon, 23 Nov 2026 18:38:44 GMT",
       "response_sha256": "ac687c74f993c37a6f997fb16ac5ad17d6f67c35d5259a851267c166640896bf"
     },
     {
@@ -999,13 +1004,11 @@
       "http_status": 200,
       "requests": 1,
       "fetched_rows": 10,
-      "latest_published_at": "2026-11-16T12:00:00+00:00",
-      "warnings": [
-        "stale_feed_outside_requested_window"
-      ],
-      "etag": "W/\"1795424575-gzip\"",
-      "last_modified": "Mon, 23 Nov 2026 09:02:55 GMT",
-      "response_sha256": "029955552904f0f9b6b10b153fa836a2cb33357118d2809639372f6c5ceba879"
+      "latest_published_at": "2026-11-23T12:00:00+00:00",
+      "warnings": [],
+      "etag": "W/\"1795480451-gzip\"",
+      "last_modified": "Tue, 24 Nov 2026 00:34:11 GMT",
+      "response_sha256": "af35259338312cbf19a88a5378ef9882398537a311f3615e7a9f7f91a142da50"
     },
     {
       "source_id": "us-ca-oal-c1209cfd66",
@@ -1029,11 +1032,11 @@
       "http_status": 200,
       "requests": 1,
       "fetched_rows": 10,
-      "latest_published_at": "2026-11-23T08:50:45+00:00",
+      "latest_published_at": "2026-11-23T17:35:56+00:00",
       "warnings": [],
       "etag": null,
       "last_modified": null,
-      "response_sha256": "99298176f993f92aa155af33c6b35ebfee6d961b2c0366876b0a0aa165fbb439"
+      "response_sha256": "dc9f4c90c4cc7a23123e873e1ea95d64182aa37a2b712d4711b95d94bef8a099"
     },
     {
       "source_id": "eu-council-9d9e9444da",
@@ -1042,11 +1045,11 @@
       "http_status": 200,
       "requests": 1,
       "fetched_rows": 20,
-      "latest_published_at": "2026-11-21T10:43:00+00:00",
+      "latest_published_at": "2026-11-23T13:50:00+00:00",
       "warnings": [],
       "etag": null,
       "last_modified": null,
-      "response_sha256": "3853540c6b405e29cfd5f3f2947903d3cb11a3f59c07be30ff8e92e34595d139"
+      "response_sha256": "df09021f22442b67a4aa7e352ca5a877a918af68ef3250bf6fa67ba473404ee3"
     },
     {
       "source_id": "eu-court-1433471e58",
@@ -1061,7 +1064,7 @@
       ],
       "etag": null,
       "last_modified": null,
-      "response_sha256": "ad02027d48b51fe8f8134cc3f432238487c32ae501a421b592763d0a41f0ff05"
+      "response_sha256": "b8c6850c4c234f7bcd504d81ddb479fb1d8fa6e00105f0c5fb8eb768010fc4c0"
     },
     {
       "source_id": "eu-ecb-991c113079",
@@ -1070,13 +1073,11 @@
       "http_status": 200,
       "requests": 1,
       "fetched_rows": 15,
-      "latest_published_at": "2026-11-20T08:30:00+00:00",
-      "warnings": [
-        "stale_feed_outside_requested_window"
-      ],
-      "etag": "\"myra-9971453d\"",
+      "latest_published_at": "2026-11-23T14:30:00+00:00",
+      "warnings": [],
+      "etag": "\"myra-99dc26c1\"",
       "last_modified": null,
-      "response_sha256": "6b3a5ddee3fcab48800464dcdb23e0ee57da0e6d62cdbff94f2419c4e47627cb"
+      "response_sha256": "a92025d25eecee4d0dff0af8edb05d57626cf20f89b753ae3359d86e158db0c7"
     },
     {
       "source_id": "eu-ecb-fb5fd59aed",
@@ -1089,7 +1090,7 @@
       "warnings": [
         "stale_feed_outside_requested_window"
       ],
-      "etag": "\"myra-2daa4a98\"",
+      "etag": "\"myra-2e152c1d\"",
       "last_modified": null,
       "response_sha256": "669f6684fed3673ddff9d7e19203a73d69d2842e1411ff8999400d3c540d6068"
     },
@@ -1102,8 +1103,8 @@
       "fetched_rows": 10,
       "latest_published_at": null,
       "warnings": [],
-      "etag": "W/\"1795421673-gzip\"",
-      "last_modified": "Mon, 23 Nov 2026 08:14:33 GMT",
+      "etag": "W/\"1795479801-gzip\"",
+      "last_modified": "Tue, 24 Nov 2026 00:23:21 GMT",
       "response_sha256": "dd34df8a6b4a2e82064d2fa70dddc4bb65773bda77da0450888e96338f5c7343"
     },
     {
@@ -1128,13 +1129,11 @@
       "http_status": 200,
       "requests": 1,
       "fetched_rows": 50,
-      "latest_published_at": "2026-11-19T08:00:00+00:00",
-      "warnings": [
-        "stale_feed_outside_requested_window"
-      ],
+      "latest_published_at": "2026-11-23T10:00:00+00:00",
+      "warnings": [],
       "etag": null,
       "last_modified": null,
-      "response_sha256": "70b89f91376c7b3fee5ec00a8d3d3ab64b8b5784f4e16b262c3044355ff29dc2"
+      "response_sha256": "49a0d04a0d7be4e1d3ac6d50d8afed14b278e728a7a2369e4d7a3c00f546ed94"
     },
     {
       "source_id": "uk-fca-7b9977ec8e",
@@ -1147,7 +1146,7 @@
       "warnings": [],
       "etag": null,
       "last_modified": null,
-      "response_sha256": "8095ddca470fcf34bf4671d7624b6a5a9a744bcb942da59927037171b56242a7"
+      "response_sha256": "7559a019c7fdcfde38d1f78c6098784c38722ddbb4876612ead172446a759822"
     },
     {
       "source_id": "ca-gazette-2d47daa483",
@@ -1174,8 +1173,8 @@
         "stale_feed_outside_requested_window"
       ],
       "etag": null,
-      "last_modified": "Mon, 23 Nov 2026 02:35:09 GMT",
-      "response_sha256": "e3c37afc14abd4b54d93fb194495448026c27944a870034426b68407acf66bbf"
+      "last_modified": "Mon, 23 Nov 2026 22:13:29 GMT",
+      "response_sha256": "871c371bc09ee9619458c3969dbcc8c8907efaf360879246a2a98a0978ba32a7"
     },
     {
       "source_id": "ca-boc-1f26bb2971",
@@ -1189,8 +1188,8 @@
         "stale_feed_outside_requested_window"
       ],
       "etag": null,
-      "last_modified": "Mon, 23 Nov 2026 06:17:19 GMT",
-      "response_sha256": "c945c8f592698b57256358094ef4b411b2130083b8749bf9ecec8809ae8c86de"
+      "last_modified": "Mon, 23 Nov 2026 21:14:38 GMT",
+      "response_sha256": "f51d9836a1df14405224591da05252ddb92cdf914bab61e7b5c10f3f1e3854a7"
     },
     {
       "source_id": "ca-boc-30d6d14378",
@@ -1202,8 +1201,8 @@
       "latest_published_at": "2026-11-24T14:00:14+00:00",
       "warnings": [],
       "etag": null,
-      "last_modified": "Mon, 23 Nov 2026 00:55:29 GMT",
-      "response_sha256": "ae9ec66222fec51c99bce7904e4b7012b46522d14a9369a6e366936159cf4d86"
+      "last_modified": "Mon, 23 Nov 2026 19:46:40 GMT",
+      "response_sha256": "7366f83146837788c20221b2912972a78525fcfd857a9683826c76ea59d93351"
     },
     {
       "source_id": "ca-boc-4192a605ae",
@@ -1217,8 +1216,8 @@
         "stale_feed_outside_requested_window"
       ],
       "etag": null,
-      "last_modified": "Mon, 23 Nov 2026 00:57:52 GMT",
-      "response_sha256": "f15b1880232b4c7a934f1612f026bf7091c47c593bcef76e3071d8fe7393ad37"
+      "last_modified": "Mon, 23 Nov 2026 21:38:18 GMT",
+      "response_sha256": "2e33ddb7e5cd9537448890943c687789f2ffc4b5ec348a8872a6dbfeef7ad38c"
     },
     {
       "source_id": "ca-boc-5cc0603f1f",
@@ -1232,8 +1231,8 @@
         "stale_feed_outside_requested_window"
       ],
       "etag": null,
-      "last_modified": "Mon, 23 Nov 2026 00:55:53 GMT",
-      "response_sha256": "14f90d097a23717ca7b4fa3347016a05221cbd43e6a787bfdee404aabb25d831"
+      "last_modified": "Mon, 23 Nov 2026 19:46:36 GMT",
+      "response_sha256": "214a132e4c84e7f762088364c89e48dafec5c8d4da4959a49738ae9f2d7d5a45"
     },
     {
       "source_id": "ca-boc-1c9979e6ac",
@@ -1247,8 +1246,8 @@
         "stale_feed_outside_requested_window"
       ],
       "etag": null,
-      "last_modified": "Mon, 23 Nov 2026 00:55:21 GMT",
-      "response_sha256": "e49ce4ca785d657ec8aa7f603a19e81309c29fe5ecd3627adcae739f3555822c"
+      "last_modified": "Mon, 23 Nov 2026 21:14:29 GMT",
+      "response_sha256": "73d1ec4d78a2cb6f47b43f4b7f086eef28b5407650e48704a9246a8a4604886e"
     },
     {
       "source_id": "ca-boc-e24c58f2d0",
@@ -1262,8 +1261,8 @@
         "stale_feed_outside_requested_window"
       ],
       "etag": null,
-      "last_modified": "Mon, 23 Nov 2026 01:02:10 GMT",
-      "response_sha256": "55f411313b2be3c8d06367eaefd87a3099817c0f6797fba4d666d59ed646e934"
+      "last_modified": "Mon, 23 Nov 2026 21:38:17 GMT",
+      "response_sha256": "34bb84ed56cf49b00f041d8341c45b2f1cd3608ee7392911af263df81ee33065"
     },
     {
       "source_id": "ca-boc-cffefa81f7",
@@ -1277,8 +1276,8 @@
         "stale_feed_outside_requested_window"
       ],
       "etag": null,
-      "last_modified": "Mon, 23 Nov 2026 00:55:35 GMT",
-      "response_sha256": "9bbcf3340269c79346b15fd0598f7b10cf0d494152aa869d595ff6b8bdaab2a8"
+      "last_modified": "Mon, 23 Nov 2026 21:21:30 GMT",
+      "response_sha256": "501856378aa012956c4dacdccb8c9b3416ce277c0396f79fd24483690a2b4339"
     },
     {
       "source_id": "ca-boc-49364b93d8",
@@ -1292,8 +1291,8 @@
         "stale_feed_outside_requested_window"
       ],
       "etag": null,
-      "last_modified": "Mon, 23 Nov 2026 00:55:36 GMT",
-      "response_sha256": "581518933fe70b70bcbf4f7df17e0ed407921db56cca0f671594b74b18ca5bed"
+      "last_modified": "Mon, 23 Nov 2026 19:49:19 GMT",
+      "response_sha256": "94587c427649042fa9cabb4c8428dc5b5c375b8e90876ce94a74e562b5adb5ac"
     },
     {
       "source_id": "ca-boc-a5cb9e38c1",
@@ -1307,8 +1306,8 @@
         "stale_feed_outside_requested_window"
       ],
       "etag": null,
-      "last_modified": "Mon, 23 Nov 2026 01:30:48 GMT",
-      "response_sha256": "33d2cea420abf6be2149a9118d2f5540cfd99088d6685b412156629034ae17bd"
+      "last_modified": "Mon, 23 Nov 2026 19:47:34 GMT",
+      "response_sha256": "5754d851953e044069fb2c4808d268107fc48409142f23d736e8c514472e1ef8"
     },
     {
       "source_id": "au-rba-c3677bbece",
@@ -1357,14 +1356,12 @@
       "status": "ok",
       "http_status": 200,
       "requests": 1,
-      "fetched_rows": 23,
-      "latest_published_at": "2026-11-20T08:00:00+00:00",
-      "warnings": [
-        "stale_feed_outside_requested_window"
-      ],
+      "fetched_rows": 27,
+      "latest_published_at": "2026-11-23T23:33:43+00:00",
+      "warnings": [],
       "etag": null,
       "last_modified": null,
-      "response_sha256": "e3201c97d02980a80652c1199ad42aa1e66679f84b7a3d6b7ed4bad4c3c4fdb6"
+      "response_sha256": "2ccd85c9bb17a3946974ec17c45cd7474da4ca416588f1d31c8f071df26c01a6"
     },
     {
       "source_id": "in-rbi-cc71120b98",
@@ -1373,11 +1370,11 @@
       "http_status": 200,
       "requests": 1,
       "fetched_rows": 10,
-      "latest_published_at": "2026-11-23T11:45:00+00:00",
+      "latest_published_at": "2026-11-23T19:25:00+00:00",
       "warnings": [],
-      "etag": "W/\"455233d6297bdd1:0\"",
-      "last_modified": "Mon, 23 Nov 2026 09:05:50 GMT",
-      "response_sha256": "4280716030b7e1c1c35a5a0e271b8a6dea1f07a82a244d468c9d925743eb9771"
+      "etag": "W/\"e8df20d2ad7bdd1:0\"",
+      "last_modified": "Tue, 24 Nov 2026 00:50:37 GMT",
+      "response_sha256": "13d3f3e31a3b46c63dff84de1f2c3312001fefd1f2f2fefe01853e48198f9ae5"
     },
     {
       "source_id": "in-rbi-738b09bded",
@@ -1386,13 +1383,11 @@
       "http_status": 200,
       "requests": 1,
       "fetched_rows": 10,
-      "latest_published_at": "2026-11-11T17:00:00+00:00",
-      "warnings": [
-        "stale_feed_outside_requested_window"
-      ],
-      "etag": "W/\"dfef30d6297bdd1:0\"",
-      "last_modified": "Mon, 23 Nov 2026 09:05:50 GMT",
-      "response_sha256": "fea2d3ca4966d514cbb2bebe9bdc67266784589c3748f46eaec28562c0d1f2a7"
+      "latest_published_at": "2026-11-23T17:00:00+00:00",
+      "warnings": [],
+      "etag": "W/\"518cad9ad7bdd1:0\"",
+      "last_modified": "Tue, 24 Nov 2026 00:50:50 GMT",
+      "response_sha256": "b272fb4b784575aee0292a7c6e0d5704ea829c75a57d8ab50d946b4e8662a994"
     },
     {
       "source_id": "cn-state-council-index",
@@ -1413,14 +1408,12 @@
       "status": "ok",
       "http_status": 200,
       "requests": 1,
-      "fetched_rows": 43,
-      "latest_published_at": "2026-11-20T02:00:00+00:00",
-      "warnings": [
-        "stale_feed_outside_requested_window"
-      ],
+      "fetched_rows": 44,
+      "latest_published_at": "2026-11-23T23:50:00+00:00",
+      "warnings": [],
       "etag": null,
       "last_modified": null,
-      "response_sha256": "e27b1ae700f8e511179b3916ea72e240f46fbc45ba3c62155ba565067cd72b73"
+      "response_sha256": "834d85e99b0620921e804b07f376d912dc7e49c3795cbc90a8b4c3ab5df1d3a2"
     },
     {
       "source_id": "jp-meti-index",
@@ -1448,7 +1441,7 @@
       ],
       "etag": null,
       "last_modified": null,
-      "response_sha256": "2aa787c098e7322aa01c48bd0b69da7e2e6447007e4c403ca90ca3463bc5512a"
+      "response_sha256": "e50e6d6c7410bba4e17729ba441aa76963e91124f75b8c41db260553f5ed8ddb"
     },
     {
       "source_id": "ch-snb-4a868c4407",
@@ -1463,7 +1456,7 @@
       ],
       "etag": null,
       "last_modified": null,
-      "response_sha256": "ab3f670ef0c720fa98bee7ae6ec63e0cb26b6f735d2923a3249f7ab04525eb9b"
+      "response_sha256": "e253b6c1a624acce8479f91bfc3f83a9584374069010e27948285a756b501577"
     },
     {
       "source_id": "ch-snb-b0f42db828",
@@ -1476,7 +1469,7 @@
       "warnings": [],
       "etag": null,
       "last_modified": null,
-      "response_sha256": "dd87149a7f621818b4f200b6c16ebf0b2c868ae43f61d77abbceb7f0717ed5c8"
+      "response_sha256": "6f5a027113e2b4e27916e1f41800709e240b5b32d5119f53ca39e26f69390097"
     },
     {
       "source_id": "se-riksbank-8ea6f8481e",
@@ -1491,7 +1484,7 @@
       ],
       "etag": null,
       "last_modified": null,
-      "response_sha256": "fe492acd35ea954f920d0b8889b02714ca51ffdac36a893381556eb98beff8ba"
+      "response_sha256": "ae18205077c72dd24903b9d2d32b8d4fa79112b88eebb376abc71acca3d1bc6f"
     },
     {
       "source_id": "no-norges-5079edc79e",
@@ -1506,7 +1499,7 @@
       ],
       "etag": null,
       "last_modified": null,
-      "response_sha256": "5307328b6e08316eb6c1e0ebf86e23f1361d011e2d13573eecd72c46d55d662d"
+      "response_sha256": "c7c1d886d1bbb941fe8b4564ca2ede26dc265c3e04ead75e2d1ba79810a8b3d6"
     },
     {
       "source_id": "de-bundesbank-027ac4024f",
@@ -1515,13 +1508,11 @@
       "http_status": 200,
       "requests": 1,
       "fetched_rows": 10,
-      "latest_published_at": "2026-11-20T09:00:00+00:00",
-      "warnings": [
-        "stale_feed_outside_requested_window"
-      ],
+      "latest_published_at": "2026-11-23T11:00:00+00:00",
+      "warnings": [],
       "etag": null,
       "last_modified": null,
-      "response_sha256": "6564f2581baf28c5028f55dfedd621b830372678d64122b89d2b56be1ab5ad06"
+      "response_sha256": "c2fe69c047c4fa2549887473ed72225bca4fcd4bb193ef4597862632b30479a4"
     },
     {
       "source_id": "de-bundesbank-e5b1c4a067",
@@ -1529,14 +1520,12 @@
       "status": "ok",
       "http_status": 200,
       "requests": 1,
-      "fetched_rows": 5,
-      "latest_published_at": "2026-11-18T09:50:24+00:00",
-      "warnings": [
-        "stale_feed_outside_requested_window"
-      ],
+      "fetched_rows": 7,
+      "latest_published_at": "2026-11-23T14:55:53+00:00",
+      "warnings": [],
       "etag": null,
       "last_modified": null,
-      "response_sha256": "cb6ee7079730b2e5391b9f0149f36f9d84adf7ecb03792f4a551409aa918110b"
+      "response_sha256": "1876854d55b0a7b892db25b6c14f9a59343ee2400fe90f27e9ceaac869b9e5d5"
     },
     {
       "source_id": "de-bundesbank-617511c682",
@@ -1546,7 +1535,9 @@
       "requests": 1,
       "fetched_rows": 10,
       "latest_published_at": "2026-11-20T09:20:00+00:00",
-      "warnings": [],
+      "warnings": [
+        "stale_feed_outside_requested_window"
+      ],
       "etag": null,
       "last_modified": null,
       "response_sha256": "f6a536dff179826f11e891a35d03fb4790e34906cade748a6c5d93873b63c36e"
@@ -1573,13 +1564,11 @@
       "http_status": 200,
       "requests": 1,
       "fetched_rows": 10,
-      "latest_published_at": "2026-11-19T00:00:00+00:00",
-      "warnings": [
-        "stale_feed_outside_requested_window"
-      ],
+      "latest_published_at": "2026-11-23T00:00:00+00:00",
+      "warnings": [],
       "etag": null,
       "last_modified": null,
-      "response_sha256": "6585337a89ef32d758f28eae921f638628c0aa2996a4808f36953759a707e164"
+      "response_sha256": "eb5ae62d3991b2e8cfe5264fa17ab76e38be82d9c1c5bbbc204c5a84d5c2ce1a"
     },
     {
       "source_id": "io-bis-8d1fbea6ca",
@@ -1609,7 +1598,7 @@
       ],
       "etag": null,
       "last_modified": null,
-      "response_sha256": "bd9013933052991fe0e6f6c287a70233c1a871447ff7395f59a22ca33a3ed441"
+      "response_sha256": "5674cd41eeee80e479943b8ea64b9d8386f6fe8f413b9b3c1b7e4a8e0a3d4a4a"
     },
     {
       "source_id": "io-bis-140216a5b6",
@@ -1624,7 +1613,7 @@
       ],
       "etag": null,
       "last_modified": null,
-      "response_sha256": "17acdbc272c2a1aefe780098caaa5ce9d56a9dedbdf422c6e8a9786ca29318ac"
+      "response_sha256": "ca644ab1c045e317cc95b47857a65bb5c78ef7d2dcb4f98a1c4641602387189b"
     },
     {
       "source_id": "us-supreme-court-orders-index",
@@ -1641,5 +1630,5 @@
     }
   ],
   "catalog_disabled_channels": 250,
-  "changed_existing_documents": 10
+  "changed_existing_documents": 22
 }

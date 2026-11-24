@@ -1,11 +1,35 @@
 [
   {
-    "title": "Is Your Turkey Done? Let the Thermometer Decide!",
-    "url": "http://www.fsis.usda.gov/news-events/news-press-releases/your-turkey-done-let-thermometer-decide",
-    "native_id": "08fe0362-6a2b-4173-b3de-de7cd9e2d78b",
+    "title": "USITC Seeks Public Input on Updating Economic Models and Analytical Tools Used to Evaluate U.S. Trade",
+    "url": "https://www.usitc.gov/press_room/news_release/2026/er1123_69557.htm",
+    "native_id": "https://www.usitc.gov/press_room/news_release/2026/er1123_69557.htm",
+    "published_at": null,
+    "published_raw": null,
+    "summary": "",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "United States International Trade Commission",
+      "jurisdiction": "US",
+      "family": "trade_and_judicial"
+    },
+    "primary_source_id": "us-itc-index",
+    "n": 12019,
+    "first_seen": "2026-11-24T00:54:48.966450+00:00",
+    "last_seen": "2026-11-24T00:54:48.966450+00:00",
+    "source_ids": [
+      "us-itc-index"
+    ]
+  },
+  {
+    "title": "Constituent Update - November 23, 2026",
+    "url": "http://www.fsis.usda.gov/news-events/news-press-releases/constituent-update-november-23-2026",
+    "native_id": "274d3eaf-fbf3-4112-822c-4101f8038c7a",
     "published_at": null,
     "published_raw": "Mon, 11/23/2026 - 12:00",
-    "summary": "<p>A safe Thanksgiving meal starts with proper preparation and ends with safely stored leftovers. But how can you tell when your Thanksgiving turkey is safe to serve? Even if your</p>",
+    "summary": "FSIS Launches Import Data Enhancements FSIS has updated two datasets that provide information on imported FSIS-regulated products. The datasets track import lots presented for entry into the U.S., which lots",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -16,20 +40,260 @@
       "family": "product_safety"
     },
     "primary_source_id": "us-fsis-2f49ece915",
-    "n": 11961,
-    "first_seen": "2026-11-23T09:08:57.097368+00:00",
-    "last_seen": "2026-11-23T09:08:57.097368+00:00",
+    "n": 12037,
+    "first_seen": "2026-11-24T00:54:48.966450+00:00",
+    "last_seen": "2026-11-24T00:54:48.966450+00:00",
     "source_ids": [
       "us-fsis-2f49ece915"
     ]
   },
   {
-    "title": "Bereaved families need support, not a battle with paperwork",
-    "url": "https://www.fca.org.uk/news/press-releases/bereaved-families-need-support-not-battle-paperwork",
-    "native_id": "177776",
+    "title": "FCC to Vote on Modernizing Radio and TV Broadcast Ownership Rules",
+    "url": "https://www.fcc.gov/edoc/427490",
+    "native_id": "427490",
     "published_at": null,
-    "published_raw": "Monday, November 23, 2026 - 09:01",
-    "summary": "Investment firms must do more to help people dealing with the death of a loved one, after a review found confusing communications, delays and gaps in support. The FCA reviewed how financial advisers, wealth managers and investment platforms support bereaved families and those handling someone’s estate.Some firms provided thoughtful, personal support. Others had processes that risked adding to people’s distress and financial pressure.Some firms left people unclear about what to do next or offered limited ways to get in touch. In some cases, advice fees were still being taken until an original death certificate was provided.Kate Tuckley, head of department, consumer investments at the FCA, said, 'Dealing with someone’s finances after a death should not mean a battle with paperwork. Firms should ease the burden, not add to it.'Families need clear information and help without needless delays, not fees for advice they no longer receive. Some firms get this right and do it really well, now others must follow their lead.'The review identified useful steps firms can take, such as:Explain what happens next in plain English and give people options about how they can report a death, such as b",
+    "published_raw": "",
+    "summary": "Proposal to Update Local Ownership Limits as Part of 2022 Quadrennial Review Would Empower Local Stations to Invest, Compete, and Serve the Public Interest",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — News Releases",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-685c5e7dd2",
+    "n": 12038,
+    "first_seen": "2026-11-24T00:54:48.966450+00:00",
+    "last_seen": "2026-11-24T00:54:48.966450+00:00",
+    "source_ids": [
+      "us-fcc-685c5e7dd2"
+    ]
+  },
+  {
+    "title": "FCC Proposes New Rules for Foreign Satellite Systems Operating in America",
+    "url": "https://www.fcc.gov/edoc/427492",
+    "native_id": "427492",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — News Releases",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-685c5e7dd2",
+    "n": 12039,
+    "first_seen": "2026-11-24T00:54:48.966450+00:00",
+    "last_seen": "2026-11-24T00:54:48.966450+00:00",
+    "source_ids": [
+      "us-fcc-685c5e7dd2"
+    ]
+  },
+  {
+    "title": "Chairman Carr Proposes Stronger Robocall Blocking Rules to Prevent More Scam Calls from Reaching Consumers",
+    "url": "https://www.fcc.gov/edoc/427493",
+    "native_id": "427493",
+    "published_at": null,
+    "published_raw": "",
+    "summary": "Chairman Carr proposes stronger robocall blocking rules to prevent more scam calls from reaching consumers",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — News Releases",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-685c5e7dd2",
+    "n": 12040,
+    "first_seen": "2026-11-24T00:54:48.966450+00:00",
+    "last_seen": "2026-11-24T00:54:48.966450+00:00",
+    "source_ids": [
+      "us-fcc-685c5e7dd2"
+    ]
+  },
+  {
+    "title": "Media Bureau Announces Close of the Filing Window for New Noncommercial Educational Reserved Band FM Translator Station Applications and Temporary Freeze on Amendments to Applications Submitted in the November 2026, Filing Window",
+    "url": "https://www.fcc.gov/edoc/427373",
+    "native_id": "427373",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 12041,
+    "first_seen": "2026-11-24T00:54:48.966450+00:00",
+    "last_seen": "2026-11-24T00:54:48.966450+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Applications",
+    "url": "https://www.fcc.gov/edoc/427477",
+    "native_id": "427477",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 12042,
+    "first_seen": "2026-11-24T00:54:48.966450+00:00",
+    "last_seen": "2026-11-24T00:54:48.966450+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Pleadings",
+    "url": "https://www.fcc.gov/edoc/427479",
+    "native_id": "427479",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 12043,
+    "first_seen": "2026-11-24T00:54:48.966450+00:00",
+    "last_seen": "2026-11-24T00:54:48.966450+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Actions",
+    "url": "https://www.fcc.gov/edoc/427478",
+    "native_id": "427478",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 12044,
+    "first_seen": "2026-11-24T00:54:48.966450+00:00",
+    "last_seen": "2026-11-24T00:54:48.966450+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Public Safety and Homeland Security Bureau Announces Comment Dates for U.S. Cyber Trust Mark Label Design, Certification Renewal, and Post-Market Surveillance Public Notice",
+    "url": "https://www.fcc.gov/edoc/427482",
+    "native_id": "427482",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 12045,
+    "first_seen": "2026-11-24T00:54:48.966450+00:00",
+    "last_seen": "2026-11-24T00:54:48.966450+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Wireline Competition Bureau Releases the 2027 Telecommunications Reporting Worksheets and Accompanying Instructions",
+    "url": "https://www.fcc.gov/edoc/427391",
+    "native_id": "427391",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 12046,
+    "first_seen": "2026-11-24T00:54:48.966450+00:00",
+    "last_seen": "2026-11-24T00:54:48.966450+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Proposed First Quarter 2027 Universal Service Fund Contribution Factor",
+    "url": "https://www.fcc.gov/edoc/427329",
+    "native_id": "427329",
+    "published_at": null,
+    "published_raw": "",
+    "summary": "In this Public Notice, the Office of Managing Director (OMD) announces the proposed Universal Service Fund (USF) contribution factor will be 0.483 or 48.3 percent for the first quarter of 2027.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 12047,
+    "first_seen": "2026-11-24T00:54:48.966450+00:00",
+    "last_seen": "2026-11-24T00:54:48.966450+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Kandoo Car Credit Ltd enters administration",
+    "url": "https://www.fca.org.uk/news/news-stories/kandoo-car-credit-ltd-enters-administration",
+    "native_id": "178011",
+    "published_at": null,
+    "published_raw": "Monday, November 23, 2026 - 14:54",
+    "summary": "On 23 November 2026, Kandoo Car Credit Ltd (Kandoo) was placed into administration. Steve Kenny and Richard Cole of KBL Advisory Limited were appointed as joint administrators. Kandoo Car Credit (firm reference number 936619) operated as a motor finance credit broker arranging finance for consumers purchasing vehicles from third-party car dealerships. The joint administrators, Steve Kenny and Richard Cole of KBL Advisory Ltd, are now responsible for Kandoo while it is in administration. If you have questions about the administration or a claim against Kandoo, contact the joint administrators.Email: kandoo.queries@kbl-advisory.comKandoo is no longer arranging finance. If you have an existing loan agreement arranged by Kandoo, your agreement is with your lender, not Kandoo. Continue making repayments to your lender as usual. If you have not received your vehicle, a payment has not reached the dealership, or you are unsure about the status of your agreement, contact your lender and the joint administrators to discuss your circumstances.If your finance arrangements are still being completed, you have not collected your vehicle, or you are seeking to unwind your agreement, contact your ",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -40,9 +304,9 @@
       "family": "financial_enforcement"
     },
     "primary_source_id": "uk-fca-7b9977ec8e",
-    "n": 11963,
-    "first_seen": "2026-11-23T09:08:57.097368+00:00",
-    "last_seen": "2026-11-23T09:08:57.097368+00:00",
+    "n": 12068,
+    "first_seen": "2026-11-24T00:54:48.966450+00:00",
+    "last_seen": "2026-11-24T00:54:48.966450+00:00",
     "source_ids": [
       "uk-fca-7b9977ec8e"
     ]
