@@ -1,6 +1,6 @@
-# MAP HEAT — 2026-11-23
+# MAP HEAT — 2026-11-24
 
-Export `finviz_2026-11-23.csv` · 11616 names · generated 2026-11-23T05:04:23.075084-05:00
+Export `finviz_2026-11-24.csv` · 11616 names · generated 2026-11-24T05:22:26.899799-05:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
@@ -69,30 +69,28 @@ Export `finviz_2026-11-23.csv` · 11616 names · generated 2026-11-23T05:04:23.0
 **SIZE GATE on** — high-impact print and/or mega-cap earnings today.
 
 Econ (importance ≥ 2):
-- 08:30 ET  Chicago Fed National Activity Index  actual —  cons —  surprise —  prev 0.07
-- 16:00 ET  Fed Williams Speech  actual —  cons —  surprise —  prev —
 - 08:15 ET  ADP Employment Change Weekly  actual —  cons —  surprise —  prev 23.75K
 - 09:00 ET  S&P/Case-Shiller Home Price YoY  actual —  cons 2.7%  surprise —  prev 2.7%
-- 10:00 ET  CB Consumer Confidence  actual —  cons 92  surprise —  prev 91.7
+- 10:00 ET  CB Consumer Confidence  actual —  cons 92.5  surprise —  prev 91.7
 - 16:30 ET  API Crude Oil Stock Change  actual —  cons —  surprise —  prev 5.3M
 - 07:00 ET  MBA 30-Year Mortgage Rate  actual —  cons —  surprise —  prev 7.35%
 - 08:30 ET  Core PCE Price Index MoM  actual —  cons 0.3%  surprise —  prev 0.3%
-- 08:30 ET  Durable Goods Orders MoM  actual —  cons 0.5%  surprise —  prev 1.9%
-- 08:30 ET  GDP Growth Rate QoQ 2nd Est  actual —  cons 3.5%  surprise —  prev 2.2%
-- 08:30 ET  Personal Income MoM  actual —  cons 0.3%  surprise —  prev 0.2%
+- 08:30 ET  Durable Goods Orders MoM  actual —  cons 0.4%  surprise —  prev 1.9%
+- 08:30 ET  GDP Growth Rate QoQ 2nd Est  actual —  cons 3.4%  surprise —  prev 2.2%
+- 08:30 ET  Personal Income MoM  actual —  cons 0.4%  surprise —  prev 0.2%
 - 08:30 ET  Personal Spending MoM  actual —  cons 0.4%  surprise —  prev 0.5%
 - 08:30 ET  Corporate Profits QoQ Prel  actual —  cons —  surprise —  prev 7.7%
 - 08:30 ET  Durable Goods Orders Ex Transp MoM  actual —  cons 0.5%  surprise —  prev 0.5%
 - 08:30 ET  GDP Price Index QoQ 2nd Est  actual —  cons 2.3%  surprise —  prev 6.1%
 - 08:30 ET  Initial Jobless Claims  actual —  cons 200K  surprise —  prev 203K
 - 08:30 ET  PCE Price Index MoM  actual —  cons 0.3%  surprise —  prev 0.5%
-- 08:30 ET  PCE Price Index YoY  actual —  cons —  surprise —  prev 3.6%
-- 10:00 ET  New Home Sales  actual —  cons 0.67M  surprise —  prev 0.676M
+- 08:30 ET  PCE Price Index YoY  actual —  cons 3.8%  surprise —  prev 3.6%
+- 10:00 ET  New Home Sales  actual —  cons 0.65M  surprise —  prev 0.676M
 - 10:00 ET  New Home Sales MoM  actual —  cons —  surprise —  prev -0.6%
 - 10:30 ET  EIA Crude Oil Stocks Change  actual —  cons —  surprise —  prev 3.38M
 - 10:30 ET  EIA Gasoline Stocks Change  actual —  cons —  surprise —  prev 5.192M
 - 11:00 ET  Atlanta Fed GDPNow  actual —  cons —  surprise —  prev 3.2%
-- 08:30 ET  Goods Trade Balance Adv  actual —  cons -$133.1B  surprise —  prev -$135.1B
+- 08:30 ET  Goods Trade Balance Adv  actual —  cons -$131B  surprise —  prev -$135.1B
 - 08:30 ET  Retail Inventories Ex Autos MoM Adv  actual —  cons —  surprise —  prev 0.5%
 - 08:30 ET  Wholesale Inventories MoM Adv  actual —  cons 0.7%  surprise —  prev 0.7%
 - 09:45 ET  Chicago PMI  actual —  cons —  surprise —  prev 55.3
@@ -109,57 +107,59 @@ Econ (importance ≥ 2):
 - 08:30 ET  Initial Jobless Claims  actual —  cons —  surprise —  prev —
 - 10:00 ET  ISM Services PMI  actual —  cons —  surprise —  prev 54.5
 - 10:00 ET  Factory Orders MoM  actual —  cons —  surprise —  prev 1.8%
+- 08:30 ET  Non Farm Payrolls  actual —  cons —  surprise —  prev 165K
+- 08:30 ET  Unemployment Rate  actual —  cons —  surprise —  prev 4.1%
 
 Mega-cap earnings:
 - AMC **AVGO**  EPS est 3.8302  (Broadcom Inc)
-- BMO **RY**  EPS est 2.9589  (Royal Bank Of Canada)
-- AMC **CRWD**  EPS est 0.3116  (Crowdstrike Holdings Inc)
-- BMO **TD**  EPS est 1.8017  (Toronto Dominion Bank)
-- AMC **DELL**  EPS est 6.6161  (Dell Technologies Inc)
+- AMC **COST**  EPS est 4.9241  (Costco Wholesale Corp)
+- BMO **RY**  EPS est 2.9246  (Royal Bank Of Canada)
+- AMC **DELL**  EPS est 6.5953  (Dell Technologies Inc)
+- BMO **TD**  EPS est 1.7779  (Toronto Dominion Bank)
 - BMO **ADI**  EPS est 3.8961  (Analog Devices Inc)
 - BMO **DE**  EPS est 4.026  (Deere \u0026 Co)
-- AMC **CRM**  EPS est 3.4468  (Salesforce Inc)
-- BMO **MDT**  EPS est 1.3344  (Medtronic Plc)
+- AMC **CRM**  EPS est 3.4471  (Salesforce Inc)
+- BMO **MDT**  EPS est 1.3345  (Medtronic Plc)
 - AMC **MRVL**  EPS est 1.1005  (Marvell Technology Inc)
-- BMO **BMO**  EPS est 2.6786  (Bank of Montreal)
-- BMO **BNS**  EPS est 1.5571  (Bank Of Nova Scotia)
-- AMC **SNOW**  EPS est 0.5988  (Snowflake Inc)
-- BMO **CM**  EPS est 1.795  (Canadian Imperial Bank Of Commerce)
+- BMO **BMO**  EPS est 2.6538  (Bank of Montreal)
+- BMO **BNS**  EPS est 1.5375  (Bank Of Nova Scotia)
+- BMO **CM**  EPS est 1.7791  (Canadian Imperial Bank Of Commerce)
+- AMC **SNOW**  EPS est 0.598  (Snowflake Inc)
 - AMC **ADBE**  EPS est 6.3298  (Adobe Inc)
 - AMC **SNPS**  EPS est 4.1206  (Synopsys Inc)
-- AMC **HPE**  EPS est 1.2821  (Hewlett Packard Enterprise Co)
-- BMO **AZO**  EPS est 35.4016  (Autozone Inc)
 - AMC **ADSK**  EPS est 3.0685  (Autodesk Inc)
-- AMC **A**  EPS est 1.7269  (Agilent Technologies Inc)
+- BMO **AZO**  EPS est 35.4016  (Autozone Inc)
 - AMC **VEEV**  EPS est 2.3443  (Veeva Systems Inc)
 - AMC **WDAY**  EPS est 2.7445  (Workday Inc)
 - BMO **KR**  EPS est 1.1623  (Kroger Co)
-- AMC **ZS**  EPS est 1.1598  (Zscaler Inc)
+- BMO **CIEN**  EPS est 2.0771  (CIENA Corp)
 - AMC **OKTA**  EPS est 0.9342  (Okta Inc)
 - AMC **NTAP**  EPS est 2.6125  (Netapp Inc)
 - BMO **SUNB**  EPS est 1.2649  (Sunbelt Rentals Holdings Inc)
-- BMO **DG**  EPS est 1.4114  (Dollar General Corp)
+- BMO **DG**  EPS est 1.4115  (Dollar General Corp)
 - BMO **CPRT**  EPS est 0.3962  (Copart Inc)
+- AMC **ULTA**  EPS est 5.6664  (Ulta Beauty Inc)
 - AMC **TCOM**  EPS est 1.2355  (Trip.com Group Ltd ADR)
-- AMC **ULTA**  EPS est 5.6475  (Ulta Beauty Inc)
-- BMO **DLTR**  EPS est 0.9124  (Dollar Tree Inc)
 - AMC **HPQ**  EPS est 0.7482  (HP Inc)
-- AMC **CASY**  EPS est 5.8504  (Casey\u0027s General Stores Inc)
-- AMC **ZM**  EPS est 1.4853  (Zoom Communications Inc)
-- AMC **MDB**  EPS est 1.6113  (MongoDB Inc)
-- AMC **RBRK**  EPS est 0.0825  (Rubrik Inc)
+- BMO **DLTR**  EPS est 0.9124  (Dollar Tree Inc)
+- AMC **CASY**  EPS est 5.8349  (Casey\u0027s General Stores Inc)
+- AMC **MDB**  EPS est 1.611  (MongoDB Inc)
+- AMC **RBRK**  EPS est 0.0823  (Rubrik Inc)
 - AMC **IOT**  EPS est 0.1882  (Samsara Inc)
-- BMO **BBY**  EPS est 1.4895  (Best Buy Co Inc)
 - AMC **CRDO**  EPS est 1.2856  (Credo Technology Group Holding Ltd)
+- BMO **BBY**  EPS est 1.4895  (Best Buy Co Inc)
+- AMC **NTNX**  EPS est 0.6087  (Nutanix Inc)
+- BMO **BURL**  EPS est 1.727  (Burlington Stores Inc)
+- AMC **DOCU**  EPS est 1.1793  (DocuSign Inc)
 
 Options event-vol flags (NOT direction):
-- **AVGO** exp 2026-11-23 ATM IV 0.0078 implied move +0.0% put/call OI —
+- **AVGO** exp 2026-11-25 ATM IV 0.0078 implied move +0.0% put/call OI —
+- **COST** exp 2026-11-27 ATM IV 0.002 implied move +0.0% put/call OI —
 - **RY** exp 2026-12-18 ATM IV 0.0039 implied move +0.1% put/call OI —
-- **CRWD** exp 2026-11-27 ATM IV 0.0039 implied move +0.0% put/call OI —
-- **TD** exp 2026-12-18 ATM IV 0.0078 implied move +0.2% put/call OI —
-- **DELL** exp 2026-11-27 ATM IV 0.002 implied move +0.0% put/call OI nan
-- **ADI** exp 2026-11-27 ATM IV 0.0195 implied move +0.2% put/call OI —
-- **DE** exp 2026-11-27 ATM IV 0.002 implied move +0.0% put/call OI —
+- **DELL** exp 2026-11-27 ATM IV 0.0005 implied move 0.0% put/call OI —
+- **TD** exp 2026-12-18 ATM IV 0.0039 implied move +0.1% put/call OI —
+- **ADI** exp 2026-11-27 ATM IV 0.0039 implied move +0.0% put/call OI —
+- **DE** exp 2026-11-27 ATM IV — implied move 0.0% put/call OI —
 - **CRM** exp 2026-11-27 ATM IV 0.0039 implied move +0.0% put/call OI —
 
 ## SECTOR RS (live groups, else export median)
@@ -280,31 +280,31 @@ COLD (1w):
 - **Real Estate** -0.5% 1d -1.9% 1w · VNQ, SCHH, XLRE
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 4 min **NVDA,ANT** Stock market today: Dow, S&P 500, Nasdaq futures surge amid relief rally (Yahoo Finance)
-- 5 min **SKHY,SNDK,MU,WDC,STX** Micron Stock Rallies After Brutal Selloff. 3 Reasons Its Surge Has Legs. (Barrons.com)
-- 6 min **DX** Sterling today: Pound firms as equity rebound trims dollar bid (Investing.com)
-- 10 min **SPCX,PS** Billionaire Bill Ackman Sounds the Alarm on Wall Street's Next Big Risk (Yahoo Finance)
-- 19 min **MSTR,QQQ,STRC** MSTR Stock Jumps In Premarket As Bitcoin Reclaims $61K After Brutal Nasdaq Sell-Off (Stocktwits)
-- 22 min **NVDA** US Stock Futures Rebound After AI Sell-Off as Nvidia Investigation and Fed Outlook Remain in Focus: Dow Jones, S&P, Nasdaq, Wall Street (InvestorsHub)
-- 24 min **MS** Stocks are serving up a 'fat pitch' for investors right now, as Morgan Stanley's top strategist (MarketWatch)
-- 32 min **NVDA** US futures rally as AI rout pauses, Asian authorities prop up stocks (Reuters)
-- 39 min **RIVN,GRPN,TJX,XLP,TSN** Consumer Stocks Snap Winning Streaks As AI Selloff Rocks Markets  TSN, PDD, TJX Buck Trend (Stocktwits)
-- 46 min **BLK** Robert Kiyosaki Says a Crash Bigger Than 2008 Has Begun: How Often Has He Been Right? (BeInCrypto)
-- 49 min **WMT** Walmart raises fiscal 2027 outlook again after Q3 growth (Retail Insight Network)
-- 52 min **NBIS,CRWV,NVDA,IREN** CRWV, IREN, NBIS Rally After Sell-Off  New US Curbs Threaten Southeast Asia Neocloud Business (Stocktwits)
-- 52 min **AMZN** Asda plans 15 Express convenience store openings (Retail Insight Network)
-- 58 min **ABVX** Abivax stock surges after rejecting short seller claims (Investing.com)
-- 1 hour **GPN** GTCR considers potential takeover of Global Payments (Electronic Payments)
-- 1 hour **XRP** XRP Faces Worst November On Record As ETF Outflows Top $30M, Breaking 7-Month Inflow Streak (Stocktwits)
-- 1 hour **GPUS** Hyperscale Data Names William B. Horne Co-Executive Chairman Alongside Milton "Todd" Ault III (PR Newswire)
-- 1 hour **VNET** VNET Reports Unaudited Third Quarter 2026 Financial Results (PR Newswire)
-- 1 hour **FCN** Two Senior Hires Enhance FTI Consulting's Investigations and Business Intelligence Capabilities in the UK (GlobeNewswire)
-- 1 hour **RIO** FTSE 100 today: Stocks edge up on miners; Burnham utility plan awaited (Investing.com)
-- 1 hour **DOO** AI gives chartered accountants more time for strategic work, study finds (The Accountant)
-- 1 hour **JPM** JPMorgan AM Says AI Borrowing Binge Is Holding Back Bond Rally (Bloomberg)
-- 1 hour **ANT,CL,LCO** European shares catch modest bid after brutal sell-off (Investing.com)
-- 1 hour **NVDA,ANT** Stock Market Today: Dow, S&P 500 and Nasdaq set to bounce after 10% weekly slide in tech stocks; Nvidia, AMD bounce (MarketWatch)
-- 1 hour **NVDA,ANT** U.S. stocks set to climb after last week's declines (MarketWatch)
+- 7 min **NVDA** US Stock Futures Mixed After Nvidia-Led Rally as Investors Assess Federal Reserve Rate Outlook: Dow Jones, S&P, Nasdaq, Wall Street (InvestorsHub)
+- 9 min **NVDA** Nasdaq Futures Fall as Questions Linger Over AI Trade (The Wall Street Journal)
+- 10 min **ZS,CRWD** CrowdStrike to acquire Zscaler in $44bn all-stock deal (Verdict)
+- 13 min **AMZN** Amazon to acquire Decarts AI optimisation technology (Verdict)
+- 14 min **NVDA** US targets chip smuggling to China after Huang's return to scandal-hit Nvidia (AFP)
+- 15 min **NVDA** Jensen Huang is back as Nvidia CEO after 12 days  Steve Jobs needed 12 years, Sam Altman less than a week (Yahoo Finance)
+- 20 min **NVDA,ING** Sterling today: Pound edges higher after dollar-led slide as rally risks overshoot (Investing.com)
+- 22 min **NVDA** Stock market today: Dow, S&P 500, Nasdaq futures mixed as investors test Nvidia-fueled rally (Yahoo Finance)
+- 22 min **IMOS** ChipMOS to Present at Cathay Securities 2026 Q4 Industry Forum (PR Newswire)
+- 22 min **VIPS** Vipshop Reports Unaudited Third Quarter 2026 Financial Results (PR Newswire)
+- 22 min **BZUN** Baozun Announces Third Quarter 2026 Unaudited Financial Results (PR Newswire)
+- 22 min **VIOT** Viomi Technology Appoints Zhigang (Sam) Yang as Chief Financial Officer and Enters into Agreement to Acquire Brondell Inc. (GlobeNewswire)
+- 22 min **BILI** Bilibili Inc. Announces Third Quarter 2026 Financial Results (GlobeNewswire)
+- 22 min **GCL** GCL Global Holdings Ltd. Regains Compliance with Nasdaq Minimum Bid Price Requirement (GlobeNewswire)
+- 22 min **NVDA** AI market whipsaw puts Kevin Warsh's rate-hike strategy to the test (Yahoo Finance)
+- 23 min **NVDA** Nvidia's long-time CFO and now former interim CEO Colette Kress was left in the dark about Jensen Huang's return: Report (Yahoo Finance)
+- 23 min **INSM,HPE,SMTC,A,NVDA** Insmed jumps on takeover, and other early market movers (MarketWatch)
+- 36 min **NVDA** Big Short Investor Steve Eisman Says Bitcoin Is Nothing  Claims Crypto Just Tracks Nvidia: Never Would He Buy It (Stocktwits)
+- 36 min **NVDA** Nvidia stock falls after epic rally on Jensen Huang's return as CEO (Yahoo Finance)
+- 37 min **FCX,BHP,RIO,VALE** Deutsche Bank cuts price targets on 13 miners and upgrades Norsk Hydro to 'buy' (Proactive)
+- 37 min **INSM,SNY,NVDA** European shares pause as tech rally fades, Sanofi gains (Reuters)
+- 37 min **BMNR** Bitmine Stock: Tom Lee Calls ETH Hard Money  But BMNR Share Count Jumps 164% (Coinspeaker)
+- 38 min **NVDA** Jensen Huang Is Back at Nvidia, but Bettors Are Already Wagering on His Exit and Divorce (Benzinga Prediction Markets)
+- 45 min **INSM,SNY** Sanofi shares jump 5% to more than one-year high after $41 bln Insmed deal (Investing.com)
+- 46 min **NVDA** Huang comeback in focus; Feds Williams on rates - whats moving markets (Investing.com)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
