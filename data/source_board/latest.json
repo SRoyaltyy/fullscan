@@ -1,6 +1,6 @@
 {
  "date": "2026-11-24",
- "generated_at": "2026-11-24T10:58:35.231250+00:00",
+ "generated_at": "2026-11-24T23:02:42.394128+00:00",
  "catalog": {
   "generated_at": "2026-11-21T20:07:43.335432+00:00",
   "channels": 365,
@@ -34,60 +34,74 @@
   }
  },
  "collect": {
-  "generated_at": "2026-11-24T10:58:10.173411+00:00",
+  "generated_at": "2026-11-24T23:02:21.350972+00:00",
   "enabled_sources": 115,
-  "sources_ok": 114,
-  "sources_failed": 1,
+  "sources_ok": 115,
+  "sources_failed": 0,
   "coverage_status": "degraded",
   "counts": {
-   "observed": 2074,
-   "old": 1363,
+   "observed": 2377,
+   "old": 1534,
    "future": 8,
-   "undated": 289,
-   "new": 189,
-   "duplicates": 514
+   "undated": 371,
+   "new": 89,
+   "duplicates": 746
   },
-  "current_dated_documents": 431
+  "current_dated_documents": 504
  },
  "new_today": {
-  "count": 189,
+  "count": 89,
   "by_source": {
-   "us-federal-register": 122,
-   "us-govinfo-bills": 35,
-   "us-govinfo-dcpd": 6,
-   "hk-hkma-public-press": 3,
-   "uk-govuk-decision": 3,
-   "uk-govuk-consultation_outcome": 2,
-   "us-govinfo-bills-enr": 2,
+   "us-doj-b3d27e1dc3": 17,
+   "us-fcc-e95ecda3bb": 9,
+   "eu-commission-07d4f58ccf": 8,
+   "uk-govuk-decision": 7,
+   "us-fda-5696b24295": 5,
+   "eu-council-9d9e9444da": 4,
+   "us-govinfo-dcpd": 3,
+   "us-fda-03f7703006": 3,
+   "us-fhfa-index": 3,
+   "ca-boc-30d6d14378": 3,
+   "uk-govuk-medical_safety_alert": 2,
    "us-govinfo-crpt": 2,
-   "eu-commission-07d4f58ccf": 2,
+   "us-doj-e05071794d": 2,
+   "us-fdic-index": 2,
+   "us-occ-6f63126133": 2,
    "jp-meti-index": 2,
-   "ch-snb-4a868c4407": 2,
-   "de-bundesbank-027ac4024f": 2,
-   "uk-govuk-medical_safety_alert": 1,
-   "us-doj-b3d27e1dc3": 1,
-   "us-fda-2cdcdcca63": 1,
-   "eu-council-9d9e9444da": 1,
+   "io-wto-497f28e20d": 2,
+   "uk-govuk-government_response": 1,
+   "uk-govuk-international_treaty": 1,
+   "us-ftc-58b0383166": 1,
+   "us-itc-index": 1,
+   "us-fed-a12cd46677": 1,
+   "us-cfpb-8e157aee85": 1,
+   "us-fcc-685c5e7dd2": 1,
+   "eu-ecb-991c113079": 1,
+   "uk-boe-4feb372611": 1,
+   "uk-fca-7b9977ec8e": 1,
+   "nz-rbnz-gnews": 1,
    "de-bundesbank-e5b1c4a067": 1,
-   "de-bundesbank-fe89ad3ac9": 1
+   "us-supreme-court-orders-index": 1
   },
   "by_class": {
-   "routine": 158,
-   "high": 19,
-   "noise": 3,
-   "watch": 9
+   "routine": 37,
+   "watch": 25,
+   "high": 22,
+   "docket": 3,
+   "noise": 2
   }
  },
  "parsed_today": {
-  "count": 77,
+  "count": 161,
   "by_class": {
-   "high": 18,
-   "watch": 11,
-   "noise": 3,
-   "routine": 47
+   "high": 46,
+   "watch": 32,
+   "noise": 6,
+   "routine": 82,
+   "docket": 3
   }
  },
- "n_failures": 1,
+ "n_failures": 0,
  "dates": [
   "2026-11-24"
  ],

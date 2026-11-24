@@ -1,5 +1,304 @@
 [
   {
+    "title": "DCPD-202600717 - Remarks and an Exchange With Reporters Prior to Departure for Dalton, Georgia",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202600717",
+    "native_id": "DCPD-202600717",
+    "published_at": "2026-11-24T20:35:02+00:00",
+    "published_raw": "Tue, 24 Nov 2026 20:35:02 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 12294,
+    "first_seen": "2026-11-24T23:02:21.350972+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "DCPD-202600715 - Remarks During a Telerally for South Carolina Republican Candidates",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202600715",
+    "native_id": "DCPD-202600715",
+    "published_at": "2026-11-24T20:35:02+00:00",
+    "published_raw": "Tue, 24 Nov 2026 20:35:02 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 12293,
+    "first_seen": "2026-11-24T23:02:21.350972+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "DCPD-202600716 - Remarks During a Telerally for Iowa Republican Candidates",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202600716",
+    "native_id": "DCPD-202600716",
+    "published_at": "2026-11-24T20:35:01+00:00",
+    "published_raw": "Tue, 24 Nov 2026 20:35:01 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 12292,
+    "first_seen": "2026-11-24T23:02:21.350972+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "CAC Outcome: Unite the Union, The FDA Union & The Financial Conduct Authority",
+    "url": "https://www.gov.uk/government/publications/cac-outcome-unite-the-union-the-fda-union-the-financial-conduct-authority",
+    "native_id": "/government/publications/cac-outcome-unite-the-union-the-fda-union-the-financial-conduct-authority",
+    "published_at": "2026-11-24T17:08:38+00:00",
+    "published_raw": "2026-11-24T17:08:38Z",
+    "document_type": "decision",
+    "issuer": "Central Arbitration Committee",
+    "issuer_ids": [
+      "uk-gov:central-arbitration-committee"
+    ],
+    "summary": "Outcome(s) by the Central Arbitration Committee on an application from Unite the Union and The FDA Union.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Central Arbitration Committee",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 12281,
+    "first_seen": "2026-11-24T23:02:21.350972+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Teacher misconduct panel outcome: Mr Andrew Wilson",
+    "url": "https://www.gov.uk/government/publications/teacher-misconduct-panel-outcome-mr-andrew-wilson--2",
+    "native_id": "/government/publications/teacher-misconduct-panel-outcome-mr-andrew-wilson--2",
+    "published_at": "2026-11-24T16:45:54+00:00",
+    "published_raw": "2026-11-24T16:45:54Z",
+    "document_type": "decision",
+    "issuer": "Teaching Regulation Agency",
+    "issuer_ids": [
+      "uk-gov:teaching-regulation-agency"
+    ],
+    "summary": "Professional conduct panel outcome, including decision and reasons.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Teaching Regulation Agency",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 12282,
+    "first_seen": "2026-11-24T23:02:21.350972+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Public Law 119 - 133 - Chiricahua National Park Act",
+    "url": "https://www.govinfo.gov/app/details/PLAW-119publ133",
+    "native_id": "PLAW-119publ133",
+    "published_at": "2026-11-24T16:38:00+00:00",
+    "published_raw": "Tue, 24 Nov 2026 16:38:00 +0000",
+    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "public_law",
+      "document_stage": "law_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Public and Private Laws",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-plaw",
+    "n": 7141,
+    "first_seen": "2026-10-28T19:21:07.640451+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
+    "source_ids": [
+      "us-govinfo-plaw"
+    ]
+  },
+  {
+    "title": "CAC Outcome: Equality for Workers Union & Medical Protection Society",
+    "url": "https://www.gov.uk/government/publications/cac-outcome-equality-for-workers-union-medical-protection-society",
+    "native_id": "/government/publications/cac-outcome-equality-for-workers-union-medical-protection-society",
+    "published_at": "2026-11-24T16:01:59+00:00",
+    "published_raw": "2026-11-24T16:01:59Z",
+    "document_type": "decision",
+    "issuer": "Central Arbitration Committee",
+    "issuer_ids": [
+      "uk-gov:central-arbitration-committee"
+    ],
+    "summary": "Outcome(s) by the Central Arbitration Committee on an application from Equality for Workers Union.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Central Arbitration Committee",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 12283,
+    "first_seen": "2026-11-24T23:02:21.350972+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "CAC Outcome: Unite the Union & AXA Partners",
+    "url": "https://www.gov.uk/government/publications/cac-outcome-unite-the-union-axa-partners",
+    "native_id": "/government/publications/cac-outcome-unite-the-union-axa-partners",
+    "published_at": "2026-11-24T15:56:23+00:00",
+    "published_raw": "2026-11-24T15:56:23Z",
+    "document_type": "decision",
+    "issuer": "Central Arbitration Committee",
+    "issuer_ids": [
+      "uk-gov:central-arbitration-committee"
+    ],
+    "summary": "Outcome(s) by the Central Arbitration Committee on an application from Unite the Union.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Central Arbitration Committee",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 12284,
+    "first_seen": "2026-11-24T23:02:21.350972+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Teacher misconduct panel outcome: Mr Peter Roberts",
+    "url": "https://www.gov.uk/government/publications/teacher-misconduct-panel-outcome-mr-peter-roberts",
+    "native_id": "/government/publications/teacher-misconduct-panel-outcome-mr-peter-roberts",
+    "published_at": "2026-11-24T14:29:48+00:00",
+    "published_raw": "2026-11-24T14:29:48Z",
+    "document_type": "decision",
+    "issuer": "Teaching Regulation Agency",
+    "issuer_ids": [
+      "uk-gov:teaching-regulation-agency"
+    ],
+    "summary": "Professional conduct panel outcome, including decision and reasons.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Teaching Regulation Agency",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 12285,
+    "first_seen": "2026-11-24T23:02:21.350972+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Deep Drilling Screening Directions – 2026",
+    "url": "https://www.gov.uk/government/publications/deep-drilling-screening-directions-2026",
+    "native_id": "/government/publications/deep-drilling-screening-directions-2026",
+    "published_at": "2026-11-24T12:57:03+00:00",
+    "published_raw": "2026-11-24T12:57:03Z",
+    "document_type": "decision",
+    "issuer": "Offshore Petroleum Regulator for Environment and Decommissioning",
+    "issuer_ids": [
+      "uk-gov:offshore-petroleum-regulator-for-environment-and-decommissioning"
+    ],
+    "summary": "Screening Directions",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Offshore Petroleum Regulator for Environment and Decommissioning",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 3303,
+    "first_seen": "2026-10-16T10:36:18.842579+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Redacted decision in the case of Tracey Connelly",
+    "url": "https://www.gov.uk/government/publications/redacted-decision-in-the-case-of-tracey-connelly",
+    "native_id": "/government/publications/redacted-decision-in-the-case-of-tracey-connelly",
+    "published_at": "2026-11-24T11:21:51+00:00",
+    "published_raw": "2026-11-24T11:21:51Z",
+    "document_type": "decision",
+    "issuer": "Parole Board",
+    "issuer_ids": [
+      "uk-gov:parole-board"
+    ],
+    "summary": "You will find attached the redacted decision following the public hearing for Tracey Connelly held on 22 & 23 October 2025 and 13 October 2026.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Parole Board",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 12286,
+    "first_seen": "2026-11-24T23:02:21.350972+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
     "title": "Trade mark disputes: unpaid costs orders",
     "url": "https://www.gov.uk/government/publications/trade-mark-disputes-unpaid-costs-orders",
     "native_id": "/government/publications/trade-mark-disputes-unpaid-costs-orders",
@@ -23,7 +322,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 5623,
     "first_seen": "2026-10-20T18:00:04.951908+00:00",
-    "last_seen": "2026-11-24T10:58:10.173411+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -52,7 +351,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 12217,
     "first_seen": "2026-11-24T10:58:10.173411+00:00",
-    "last_seen": "2026-11-24T10:58:10.173411+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -81,7 +380,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 12218,
     "first_seen": "2026-11-24T10:58:10.173411+00:00",
-    "last_seen": "2026-11-24T10:58:10.173411+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -110,7 +409,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 12219,
     "first_seen": "2026-11-24T10:58:10.173411+00:00",
-    "last_seen": "2026-11-24T10:58:10.173411+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -134,7 +433,7 @@
     "primary_source_id": "us-govinfo-dcpd",
     "n": 12265,
     "first_seen": "2026-11-24T10:58:10.173411+00:00",
-    "last_seen": "2026-11-24T10:58:10.173411+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
     ]
@@ -158,7 +457,7 @@
     "primary_source_id": "us-govinfo-dcpd",
     "n": 12264,
     "first_seen": "2026-11-24T10:58:10.173411+00:00",
-    "last_seen": "2026-11-24T10:58:10.173411+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
     ]
@@ -182,7 +481,7 @@
     "primary_source_id": "us-govinfo-dcpd",
     "n": 12263,
     "first_seen": "2026-11-24T10:58:10.173411+00:00",
-    "last_seen": "2026-11-24T10:58:10.173411+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
     ]
@@ -206,7 +505,7 @@
     "primary_source_id": "us-govinfo-dcpd",
     "n": 12262,
     "first_seen": "2026-11-24T10:58:10.173411+00:00",
-    "last_seen": "2026-11-24T10:58:10.173411+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
     ]
@@ -230,7 +529,7 @@
     "primary_source_id": "us-govinfo-dcpd",
     "n": 12261,
     "first_seen": "2026-11-24T10:58:10.173411+00:00",
-    "last_seen": "2026-11-24T10:58:10.173411+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
     ]
@@ -254,7 +553,7 @@
     "primary_source_id": "us-govinfo-dcpd",
     "n": 12260,
     "first_seen": "2026-11-24T10:58:10.173411+00:00",
-    "last_seen": "2026-11-24T10:58:10.173411+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
     ]
@@ -285,7 +584,7 @@
     "primary_source_id": "us-federal-register",
     "n": 12187,
     "first_seen": "2026-11-24T10:58:10.173411+00:00",
-    "last_seen": "2026-11-24T10:58:10.173411+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -316,7 +615,7 @@
     "primary_source_id": "us-federal-register",
     "n": 12179,
     "first_seen": "2026-11-24T10:58:10.173411+00:00",
-    "last_seen": "2026-11-24T10:58:10.173411+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -346,7 +645,7 @@
     "primary_source_id": "us-federal-register",
     "n": 12173,
     "first_seen": "2026-11-24T10:58:10.173411+00:00",
-    "last_seen": "2026-11-24T10:58:10.173411+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -377,7 +676,7 @@
     "primary_source_id": "us-federal-register",
     "n": 12169,
     "first_seen": "2026-11-24T10:58:10.173411+00:00",
-    "last_seen": "2026-11-24T10:58:10.173411+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -408,7 +707,7 @@
     "primary_source_id": "us-federal-register",
     "n": 12166,
     "first_seen": "2026-11-24T10:58:10.173411+00:00",
-    "last_seen": "2026-11-24T10:58:10.173411+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -439,7 +738,7 @@
     "primary_source_id": "us-federal-register",
     "n": 12163,
     "first_seen": "2026-11-24T10:58:10.173411+00:00",
-    "last_seen": "2026-11-24T10:58:10.173411+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -470,7 +769,7 @@
     "primary_source_id": "us-federal-register",
     "n": 12161,
     "first_seen": "2026-11-24T10:58:10.173411+00:00",
-    "last_seen": "2026-11-24T10:58:10.173411+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -501,7 +800,7 @@
     "primary_source_id": "us-federal-register",
     "n": 12156,
     "first_seen": "2026-11-24T10:58:10.173411+00:00",
-    "last_seen": "2026-11-24T10:58:10.173411+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -532,7 +831,7 @@
     "primary_source_id": "us-federal-register",
     "n": 12140,
     "first_seen": "2026-11-24T10:58:10.173411+00:00",
-    "last_seen": "2026-11-24T10:58:10.173411+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -562,7 +861,7 @@
     "primary_source_id": "us-federal-register",
     "n": 12123,
     "first_seen": "2026-11-24T10:58:10.173411+00:00",
-    "last_seen": "2026-11-24T10:58:10.173411+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -593,7 +892,7 @@
     "primary_source_id": "us-federal-register",
     "n": 12114,
     "first_seen": "2026-11-24T10:58:10.173411+00:00",
-    "last_seen": "2026-11-24T10:58:10.173411+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -624,7 +923,7 @@
     "primary_source_id": "us-federal-register",
     "n": 12094,
     "first_seen": "2026-11-24T10:58:10.173411+00:00",
-    "last_seen": "2026-11-24T10:58:10.173411+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -655,33 +954,9 @@
     "primary_source_id": "us-federal-register",
     "n": 12092,
     "first_seen": "2026-11-24T10:58:10.173411+00:00",
-    "last_seen": "2026-11-24T10:58:10.173411+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
     "source_ids": [
       "us-federal-register"
-    ]
-  },
-  {
-    "title": "Public Law 119 - 133 - Chiricahua National Park Act",
-    "url": "https://www.govinfo.gov/app/details/PLAW-119publ133",
-    "native_id": "PLAW-119publ133",
-    "published_at": "2026-11-23T21:22:00+00:00",
-    "published_raw": "Mon, 23 Nov 2026 21:22:00 +0000",
-    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "public_law",
-      "document_stage": "law_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Public and Private Laws",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-plaw",
-    "n": 7141,
-    "first_seen": "2026-10-28T19:21:07.640451+00:00",
-    "last_seen": "2026-11-24T00:54:48.966450+00:00",
-    "source_ids": [
-      "us-govinfo-plaw"
     ]
   },
   {
@@ -703,7 +978,7 @@
     "primary_source_id": "us-govinfo-plaw",
     "n": 6846,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-11-24T00:54:48.966450+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
     "source_ids": [
       "us-govinfo-plaw"
     ]
@@ -727,7 +1002,7 @@
     "primary_source_id": "us-govinfo-plaw",
     "n": 5409,
     "first_seen": "2026-10-19T19:21:25.980956+00:00",
-    "last_seen": "2026-11-24T00:54:48.966450+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
     "source_ids": [
       "us-govinfo-plaw"
     ]
@@ -751,7 +1026,7 @@
     "primary_source_id": "us-govinfo-plaw",
     "n": 6842,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-11-24T00:54:48.966450+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
     "source_ids": [
       "us-govinfo-plaw"
     ]
@@ -775,7 +1050,7 @@
     "primary_source_id": "us-govinfo-plaw",
     "n": 6840,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-11-24T00:54:48.966450+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
     "source_ids": [
       "us-govinfo-plaw"
     ]
@@ -804,7 +1079,36 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 4,
     "first_seen": "2026-10-15T10:17:11.133023+00:00",
-    "last_seen": "2026-11-24T10:58:10.173411+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "All Saints’ Church of England Primary School: 23 November 2026",
+    "url": "https://www.gov.uk/government/publications/all-saints-church-of-england-primary-school-23-november-2026",
+    "native_id": "/government/publications/all-saints-church-of-england-primary-school-23-november-2026",
+    "published_at": "2026-11-23T17:00:00+00:00",
+    "published_raw": "2026-11-23T17:00:00Z",
+    "document_type": "decision",
+    "issuer": "Office of the Schools Adjudicator",
+    "issuer_ids": [
+      "uk-gov:office-of-the-schools-adjudicator"
+    ],
+    "summary": "The schools adjudicator’s variation decision about All Saints’ Church of England Primary School.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Office of the Schools Adjudicator",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 12287,
+    "first_seen": "2026-11-24T23:02:21.350972+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -833,7 +1137,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 11975,
     "first_seen": "2026-11-24T00:54:48.966450+00:00",
-    "last_seen": "2026-11-24T10:58:10.173411+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -862,7 +1166,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 11976,
     "first_seen": "2026-11-24T00:54:48.966450+00:00",
-    "last_seen": "2026-11-24T10:58:10.173411+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -891,7 +1195,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6834,
     "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-11-24T10:58:10.173411+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -920,7 +1224,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 11977,
     "first_seen": "2026-11-24T00:54:48.966450+00:00",
-    "last_seen": "2026-11-24T10:58:10.173411+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -949,7 +1253,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 2103,
     "first_seen": "2026-10-15T12:16:32.997656+00:00",
-    "last_seen": "2026-11-24T10:58:10.173411+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -978,7 +1282,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 11978,
     "first_seen": "2026-11-24T00:54:48.966450+00:00",
-    "last_seen": "2026-11-24T10:58:10.173411+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1007,7 +1311,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 11979,
     "first_seen": "2026-11-24T00:54:48.966450+00:00",
-    "last_seen": "2026-11-24T10:58:10.173411+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1036,7 +1340,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 11980,
     "first_seen": "2026-11-24T00:54:48.966450+00:00",
-    "last_seen": "2026-11-24T10:58:10.173411+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1065,7 +1369,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 11981,
     "first_seen": "2026-11-24T00:54:48.966450+00:00",
-    "last_seen": "2026-11-24T10:58:10.173411+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1094,7 +1398,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 11982,
     "first_seen": "2026-11-24T00:54:48.966450+00:00",
-    "last_seen": "2026-11-24T10:58:10.173411+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1123,7 +1427,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 11983,
     "first_seen": "2026-11-24T00:54:48.966450+00:00",
-    "last_seen": "2026-11-24T10:58:10.173411+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1152,36 +1456,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 11984,
     "first_seen": "2026-11-24T00:54:48.966450+00:00",
-    "last_seen": "2026-11-24T10:58:10.173411+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Deep Drilling Screening Directions – 2026",
-    "url": "https://www.gov.uk/government/publications/deep-drilling-screening-directions-2026",
-    "native_id": "/government/publications/deep-drilling-screening-directions-2026",
-    "published_at": "2026-11-23T09:43:21+00:00",
-    "published_raw": "2026-11-23T09:43:21Z",
-    "document_type": "decision",
-    "issuer": "Offshore Petroleum Regulator for Environment and Decommissioning",
-    "issuer_ids": [
-      "uk-gov:offshore-petroleum-regulator-for-environment-and-decommissioning"
-    ],
-    "summary": "Screening Directions",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Offshore Petroleum Regulator for Environment and Decommissioning",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 3303,
-    "first_seen": "2026-10-16T10:36:18.842579+00:00",
-    "last_seen": "2026-11-24T10:58:10.173411+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1212,7 +1487,7 @@
     "primary_source_id": "us-federal-register",
     "n": 11915,
     "first_seen": "2026-11-23T09:08:57.097368+00:00",
-    "last_seen": "2026-11-24T10:58:10.173411+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1243,7 +1518,7 @@
     "primary_source_id": "us-federal-register",
     "n": 11906,
     "first_seen": "2026-11-23T09:08:57.097368+00:00",
-    "last_seen": "2026-11-24T10:58:10.173411+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1274,7 +1549,7 @@
     "primary_source_id": "us-federal-register",
     "n": 11897,
     "first_seen": "2026-11-23T09:08:57.097368+00:00",
-    "last_seen": "2026-11-24T10:58:10.173411+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1305,7 +1580,7 @@
     "primary_source_id": "us-federal-register",
     "n": 11874,
     "first_seen": "2026-11-23T09:08:57.097368+00:00",
-    "last_seen": "2026-11-24T10:58:10.173411+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1336,7 +1611,7 @@
     "primary_source_id": "us-federal-register",
     "n": 11870,
     "first_seen": "2026-11-23T09:08:57.097368+00:00",
-    "last_seen": "2026-11-24T10:58:10.173411+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
     "source_ids": [
       "us-federal-register"
     ]

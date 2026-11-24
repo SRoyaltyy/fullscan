@@ -1,8 +1,296 @@
 [
   {
-    "title": "Joint Statement on the Saudi Arabia-Japan Energy System Resilience Task Force Issued",
-    "url": "https://www.meti.go.jp/english/press/2026/11/20261120001.html",
-    "native_id": "https://www.meti.go.jp/english/press/2026/11/20261120001.html",
+    "title": "USITC Releases Report Concerning Developments Within the Fine Denier Polyester Staple Fiber Industry Since Imposition of Global Safeguard Remedies",
+    "url": "https://www.usitc.gov/press_room/news_release/2026/er1124_69561.htm",
+    "native_id": "https://www.usitc.gov/press_room/news_release/2026/er1124_69561.htm",
+    "published_at": null,
+    "published_raw": null,
+    "summary": "",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "United States International Trade Commission",
+      "jurisdiction": "US",
+      "family": "trade_and_judicial"
+    },
+    "primary_source_id": "us-itc-index",
+    "n": 12317,
+    "first_seen": "2026-11-24T23:02:21.350972+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
+    "source_ids": [
+      "us-itc-index"
+    ]
+  },
+  {
+    "title": "FCC Announces Tentative Agenda for December Open Meeting",
+    "url": "https://www.fcc.gov/edoc/427531",
+    "native_id": "427531",
+    "published_at": null,
+    "published_raw": "",
+    "summary": "Federal Communications Commission Chairman Brendan Carr announced that the items below are tentatively on the agenda for the December Open Commission Meeting scheduled for December 17, 2026",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — News Releases",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-685c5e7dd2",
+    "n": 12332,
+    "first_seen": "2026-11-24T23:02:21.350972+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
+    "source_ids": [
+      "us-fcc-685c5e7dd2"
+    ]
+  },
+  {
+    "title": "Actions",
+    "url": "https://www.fcc.gov/edoc/427496",
+    "native_id": "427496",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 12333,
+    "first_seen": "2026-11-24T23:02:21.350972+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Wireless Telecommunications Bureau Announces that Application for Auction 113 License Is Accepted for Filing",
+    "url": "https://www.fcc.gov/edoc/427498",
+    "native_id": "427498",
+    "published_at": null,
+    "published_raw": "",
+    "summary": "Public Notice announcing that a certain Auction 113 license is accepted for filing",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 12334,
+    "first_seen": "2026-11-24T23:02:21.350972+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Applications",
+    "url": "https://www.fcc.gov/edoc/427495",
+    "native_id": "427495",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 12335,
+    "first_seen": "2026-11-24T23:02:21.350972+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Domestic Section 214 Application Granted for the Transfer of Control of Sledge Telephone Company, Inc. and Varicom Telecommunications, Inc. to Muleops, LLC",
+    "url": "https://www.fcc.gov/edoc/427506",
+    "native_id": "427506",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 12336,
+    "first_seen": "2026-11-24T23:02:21.350972+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Domestic Section 214 Application Granted for the Transfer of Control of Smithville Telephone Company, Inc. and Traceroad Communications, Inc., d/b/a Traceroad Long Distance to Muleops, LLC",
+    "url": "https://www.fcc.gov/edoc/427508",
+    "native_id": "427508",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 12337,
+    "first_seen": "2026-11-24T23:02:21.350972+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Pleadings",
+    "url": "https://www.fcc.gov/edoc/427497",
+    "native_id": "427497",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 12338,
+    "first_seen": "2026-11-24T23:02:21.350972+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "International Authorizations Granted - ITC",
+    "url": "https://www.fcc.gov/edoc/427523",
+    "native_id": "427523",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 12339,
+    "first_seen": "2026-11-24T23:02:21.350972+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Section 1.767(a) Submarine Cable Landing Licenses, Modifications, and Assignments or Transfers of Control of Interests in Submarine Cable Landing Licenses (47 C.F.R. § 1.767(a)) - SCL",
+    "url": "https://www.fcc.gov/edoc/427525",
+    "native_id": "427525",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 12340,
+    "first_seen": "2026-11-24T23:02:21.350972+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Application Of Verizon To Discontinue Domestic Legacy Voice Service As Part Of A Technology Transition Is Granted",
+    "url": "https://www.fcc.gov/edoc/427522",
+    "native_id": "427522",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 12341,
+    "first_seen": "2026-11-24T23:02:21.350972+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Smarter regulation means understanding the trade-offs",
+    "url": "https://www.fca.org.uk/news/blogs/smarter-regulation-means-understanding-trade-offs",
+    "native_id": "177901",
+    "published_at": null,
+    "published_raw": "Tuesday, November 24, 2026 - 14:04",
+    "summary": "Regulation inevitably involves choices.Protecting consumers and maintaining confidence in our markets are fundamental to what we do. But rules also have costs. They can affect businesses’ decisions to invest, innovate and compete. Good regulation means recognising those trade-offs and using evidence to decide where intervention will make the biggest difference.That is why economics matters so much to good regulation.At our annual Economics Conference, economists, academics, regulators and industry experts came together to explore how smarter financial regulation can support sustainable growth and innovation. Across the day, speakers challenged us to think carefully about how regulation affects behaviour, markets and investment, and how better evidence can help us make better decisions.Being proportionate about riskA well-functioning financial system cannot be risk-free, nor should we try to make it one.Our role is to understand where intervention is necessary, where the costs could outweigh the benefits, and how we can achieve the outcomes we want in the most proportionate way.That means being proportionate. Accepting that risk exists does not mean lowering standards. It means thin",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Financial Conduct Authority",
+      "jurisdiction": "UK",
+      "family": "financial_enforcement"
+    },
+    "primary_source_id": "uk-fca-7b9977ec8e",
+    "n": 12359,
+    "first_seen": "2026-11-24T23:02:21.350972+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
+    "source_ids": [
+      "uk-fca-7b9977ec8e"
+    ]
+  },
+  {
+    "title": "State Minister MIYAMOTO Signs Memorandum of Cooperation on Critical Minerals with the Ministry of Energy and Mines of the Republic of Peru",
+    "url": "https://www.meti.go.jp/english/press/2026/11/20261120003.html",
+    "native_id": "https://www.meti.go.jp/english/press/2026/11/20261120003.html",
     "published_at": null,
     "published_raw": null,
     "summary": "",
@@ -16,17 +304,17 @@
       "family": "trade_and_industry_policy"
     },
     "primary_source_id": "jp-meti-index",
-    "n": 12273,
-    "first_seen": "2026-11-24T10:58:10.173411+00:00",
-    "last_seen": "2026-11-24T10:58:10.173411+00:00",
+    "n": 12364,
+    "first_seen": "2026-11-24T23:02:21.350972+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
     "source_ids": [
       "jp-meti-index"
     ]
   },
   {
-    "title": "State Minister TAKAGI Attends an Event Commemorating the Establishment of the Mexican Chamber of Commerce in Japan (CCMJ)",
-    "url": "https://www.meti.go.jp/english/press/2026/11/20261113001.html",
-    "native_id": "https://www.meti.go.jp/english/press/2026/11/20261113001.html",
+    "title": "State Minister MIYAMOTO Receives a Courtesy Call from Chair YASUNAGA of the Japan-Brazil Economic Committee and Acting Chair Oliveira of the Brazil-Japan Business Council",
+    "url": "https://www.meti.go.jp/english/press/2026/11/20261120002.html",
+    "native_id": "https://www.meti.go.jp/english/press/2026/11/20261120002.html",
     "published_at": null,
     "published_raw": null,
     "summary": "",
@@ -40,11 +328,35 @@
       "family": "trade_and_industry_policy"
     },
     "primary_source_id": "jp-meti-index",
-    "n": 12274,
-    "first_seen": "2026-11-24T10:58:10.173411+00:00",
-    "last_seen": "2026-11-24T10:58:10.173411+00:00",
+    "n": 12365,
+    "first_seen": "2026-11-24T23:02:21.350972+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
     "source_ids": [
       "jp-meti-index"
+    ]
+  },
+  {
+    "title": "Miscellaneous Order",
+    "url": "https://www.supremecourt.gov/orders/courtorders/112426zr_q86b.pdf",
+    "native_id": "https://www.supremecourt.gov/orders/courtorders/112426zr_q86b.pdf",
+    "published_at": null,
+    "published_raw": null,
+    "summary": "",
+    "source_metadata": {
+      "document_type": "court_order",
+      "document_stage": "judicial_order_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Supreme Court orders of the Court",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-supreme-court-orders-index",
+    "n": 12369,
+    "first_seen": "2026-11-24T23:02:21.350972+00:00",
+    "last_seen": "2026-11-24T23:02:21.350972+00:00",
+    "source_ids": [
+      "us-supreme-court-orders-index"
     ]
   }
 ]
