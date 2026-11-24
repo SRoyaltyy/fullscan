@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-24T00:32:04.265542-05:00",
+  "updated_at": "2026-11-24T00:42:36.874552-05:00",
   "grading_rule": {
     "entry": "open of first trading day at/after generated_at (same day if signal < 09:30 ET, else next day)",
     "window_trading_days": 14,
