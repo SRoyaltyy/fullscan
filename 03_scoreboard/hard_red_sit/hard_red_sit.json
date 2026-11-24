@@ -2901,7 +2901,7 @@
   },
   "per_sleeve": {
     "tag": "RESEARCH",
-    "date": "2026-11-23",
+    "date": "2026-11-24",
     "live_sit": true,
     "keep_bar_unchanged": true,
     "n_sit": 1,
@@ -2928,7 +2928,7 @@
             "ticker": "PRVA",
             "side": "long",
             "open": null,
-            "px": 25.05,
+            "px": 24.71,
             "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
@@ -2964,7 +2964,7 @@
             "ticker": "CHKP",
             "side": "long",
             "open": null,
-            "px": 154.88,
+            "px": 159.25,
             "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
@@ -3000,7 +3000,7 @@
             "ticker": "TSCO",
             "side": "long",
             "open": null,
-            "px": 38.44,
+            "px": 37.86,
             "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
@@ -3036,7 +3036,7 @@
             "ticker": "RCI",
             "side": "long",
             "open": null,
-            "px": 35.45,
+            "px": 35.47,
             "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
@@ -3072,7 +3072,7 @@
             "ticker": "TDC",
             "side": "long",
             "open": null,
-            "px": 35.45,
+            "px": 36.63,
             "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
@@ -3108,7 +3108,7 @@
             "ticker": "KVYO",
             "side": "long",
             "open": null,
-            "px": 22.24,
+            "px": 23.3,
             "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
@@ -3144,7 +3144,7 @@
             "ticker": "COP",
             "side": "long",
             "open": null,
-            "px": 136.12,
+            "px": 132.72,
             "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
@@ -3180,7 +3180,7 @@
             "ticker": "ADMA",
             "side": "long",
             "open": null,
-            "px": 13.17,
+            "px": 13.5,
             "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
@@ -3216,7 +3216,7 @@
             "ticker": "TFX",
             "side": "long",
             "open": null,
-            "px": 161.58,
+            "px": 163.78,
             "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
@@ -3252,7 +3252,7 @@
             "ticker": "VCYT",
             "side": "long",
             "open": null,
-            "px": 25.13,
+            "px": 26.0,
             "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {

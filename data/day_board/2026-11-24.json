@@ -1921,6 +1921,30 @@
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "45409518977",
       "manifest": "research/input_freeze/2026-11-24/manifest.json"
+    },
+    {
+      "path": "01_daily/_channel1/2026-11-24_predict.json",
+      "at": "2026-11-24T09:36:25-05:00",
+      "commit_msg": "auto: stock book leftover sweep",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "45409518977",
+      "manifest": "research/input_freeze/2026-11-24/manifest.json"
+    },
+    {
+      "path": "01_daily/weather/2026-11-24_weather.json",
+      "at": "2026-11-24T09:36:25-05:00",
+      "commit_msg": "auto: stock book leftover sweep",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "45409518977",
+      "manifest": "research/input_freeze/2026-11-24/manifest.json"
+    },
+    {
+      "path": "data/join/2026-11-24_ranked.csv",
+      "at": "2026-11-24T09:36:25-05:00",
+      "commit_msg": "auto: stock book leftover sweep",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "45409518977",
+      "manifest": "research/input_freeze/2026-11-24/manifest.json"
     }
   ]
 }

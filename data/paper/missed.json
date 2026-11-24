@@ -9,6 +9,10 @@
     "2026-11-13": {
       "reason": "stock book was not on main before 09:30 ET",
       "status": "missed"
+    },
+    "2026-11-24": {
+      "reason": "stock book was not on main before 09:30 ET",
+      "status": "missed"
     }
   }
 }
