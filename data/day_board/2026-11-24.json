@@ -1,6 +1,6 @@
 {
   "date": "2026-11-24",
-  "generated_at": "2026-11-24T09:23:04.426714-05:00",
+  "generated_at": "2026-11-24T09:23:14.960693-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -1380,6 +1380,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -7.73, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -5.585, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -2.65, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -4.29, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -5.85, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -2.15, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -3.0549999999999997, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -3.17, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-24\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-11-24",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-24T09:23:13.904512-05:00",
+      "files": [
+        {
+          "path": "data/join/2026-11-24_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2316514,
+          "preview": "5881 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, ONC, SUPN, COCO, KNSA"
+        }
+      ],
+      "preview": "5881 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, ONC, SUPN, COCO, KNSA"
     }
   ],
   "href": {
@@ -1401,6 +1419,22 @@
       "path": "data/day_board/2026-11-24.json",
       "at": "2026-11-24T09:23:04-05:00",
       "commit_msg": "auto: land weather [2026-11-24]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "45409518977",
+      "manifest": "research/input_freeze/2026-11-24/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-11-24.json",
+      "at": "2026-11-24T09:23:15-05:00",
+      "commit_msg": "auto: land join [2026-11-24]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "45409518977",
+      "manifest": "research/input_freeze/2026-11-24/manifest.json"
+    },
+    {
+      "path": "data/join/2026-11-24_ranked.csv",
+      "at": "2026-11-24T09:23:15-05:00",
+      "commit_msg": "auto: land join [2026-11-24]",
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "45409518977",
       "manifest": "research/input_freeze/2026-11-24/manifest.json"
