@@ -1,11 +1,11 @@
-# Weather report — 2026-11-23
+# Weather report — 2026-11-24
 
 Is today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade.
 
 ## Snapshot
 
 - **Risk state:** UNKNOWN
-- **Yields:** falling (fred_dgs10) | **Dollar:** strong (dxy) | **Oil:** falling | **VIX:** falling (ratio 1.04 via vix/vix3m) spot 26.62
+- **Yields:** unknown (llm_factor_fallback) | **Dollar:** flat (dxy) | **Oil:** flat | **VIX:** spiking (ratio 1.08 via vix/vix3m) spot 27.54
 - **Fear & Greed:** n/a | **Yield/SPX 5d corr:** +0.70
 - **High-impact events:** 0 bullish vs 0 bearish
 - ⚠️ **Data gaps:** general predict run, general predict factor scoreboard, event scanner output
@@ -14,17 +14,17 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| sector:Basic Materials | 🌧️ hostile | medium | finviz sector median week -15.77% [tape] |
-| sector:Communication Services | 🌧️ hostile | medium | finviz sector median week -8.71% [tape] |
-| sector:Consumer Cyclical | 🌧️ hostile | medium | finviz sector median week -7.36% [tape] |
-| sector:Consumer Defensive | 🌧️ hostile | medium | finviz sector median week -6.44% [tape] |
-| sector:Energy | 🌧️ hostile | medium | finviz sector median week -9.39% [tape] |
-| sector:Financial | 🌧️ hostile | medium | finviz sector median week -6.24% [tape] |
-| sector:Healthcare | 🌧️ hostile | medium | finviz sector median week -9.70% [tape] |
+| sector:Basic Materials | 🌧️ hostile | medium | finviz sector median week -7.31% [tape] |
+| sector:Communication Services | 🌧️ hostile | medium | finviz sector median week -5.83% [tape] |
+| sector:Consumer Cyclical | 🌧️ hostile | medium | finviz sector median week -3.17% [tape] |
+| sector:Consumer Defensive | 🌧️ hostile | medium | finviz sector median week -4.98% [tape] |
+| sector:Energy | 🌧️ hostile | medium | finviz sector median week -6.39% [tape] |
+| sector:Financial | 🌧️ hostile | medium | finviz sector median week -2.19% [tape] |
+| sector:Healthcare | 🌧️ hostile | medium | finviz sector median week -3.59% [tape] |
 | sector:Industrials | 🌧️ hostile | medium | news_judge SECTOR Industrials [bearish] |
-| sector:Real Estate | 🌧️ hostile | medium | finviz sector median week -3.94% [tape] |
-| sector:Technology | 🌧️ hostile | medium | finviz sector median week -13.09% [tape] |
-| sector:Utilities | 🌧️ hostile | medium | finviz sector median week -3.60% [tape] |
+| sector:Real Estate | 🌧️ hostile | medium | finviz sector median week -2.58% [tape] |
+| sector:Technology | 🌧️ hostile | medium | finviz sector median week -4.52% [tape] |
+| sector:Utilities | 🌧️ hostile | medium | finviz sector median week -1.98% [tape] |
 
 ## Size
 
@@ -40,8 +40,8 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| beta:high | ⛅ neutral | low | risk-unknown, VIX falling |
-| beta:low | ⛅ neutral | low | risk-unknown, VIX falling |
+| beta:high | 🌧️ hostile | high | VIX spiking — high beta is the exit door [channel1 + general] |
+| beta:low | 🌤️ favorable | medium | defensive ballast bid in stress [general + channel1] |
 | beta:mid | ⛅ neutral | low | beta-neutral zone |
 
 ## Short interest (multiplier, not direction)
@@ -57,26 +57,26 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| profit:no | ⛅ neutral | low | risk-unknown, F&G None |
-| profit:yes | ⛅ neutral | low | — |
-| profit:thin | ⛅ neutral | low | — |
+| profit:no | ❔ unknown | low | no yields/risk signals |
+| profit:thin | ❔ unknown | low | no yields/risk signals |
+| profit:yes | ❔ unknown | low | no yields/risk signals |
 
 ## Style (growth/value)
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| style:growth | 🌤️ favorable | medium | yields falling — duration/growth re-rates [factor: Bond yields] |
-| style:value | ⛅ neutral | low | value lags duration rallies |
-| style:blend | ⛅ neutral | low | — |
+| style:growth | ❔ unknown | low | no yields/risk signals |
+| style:blend | ❔ unknown | low | no yields/risk signals |
+| style:value | ❔ unknown | low | no yields/risk signals |
 
 ## Leverage
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| lev:high | ⛅ neutral | low | — |
-| lev:low | ⛅ neutral | low | — |
-| lev:mid | ⛅ neutral | low | — |
-| lev:neg_equity | 🌧️ hostile | low | negative equity is distressed in any regime |
+| lev:low | ❔ unknown | low | no signals |
+| lev:mid | ❔ unknown | low | no signals |
+| lev:high | ❔ unknown | low | no signals |
+| lev:neg_equity | ❔ unknown | low | no signals |
 
 ## Momentum state
 
