@@ -1,6 +1,6 @@
 {
   "date": "2026-11-24",
-  "generated_at": "2026-11-24T05:27:48.349655-05:00",
+  "generated_at": "2026-11-24T06:00:27.858914-05:00",
   "run_id": "45369588705",
   "runner": "GitHub Actions 1000071775",
   "all_ok": false,
@@ -155,7 +155,7 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/news/2026-11-24_finviz_digest.json",
-        "size": 100081
+        "size": 96675
       },
       {
         "kind": "finviz_market_digest",

@@ -1,6 +1,6 @@
 {
   "date": "2026-11-24",
-  "generated_at": "2026-11-24T05:27:49.089341-05:00",
+  "generated_at": "2026-11-24T06:00:29.238778-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -9,8 +9,8 @@
   ],
   "counts": {
     "ok": 4,
-    "partial": 4,
-    "fail": 0,
+    "partial": 3,
+    "fail": 1,
     "n": 8
   },
   "processes": [
@@ -97,12 +97,12 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 100081,
-          "said": "632 tickers \u00b7 102 signals \u00b7 top ABBV, ARM, CCEP, CRWD, CVS, DASH, ELV, HPE",
+          "size": 96675,
+          "said": "678 tickers \u00b7 140 signals \u00b7 top A, ABBV, ADI, ADSK, ARM, BA, BABA, BHP",
           "bullets": [
-            "AbbVie's RINVOQ (upadacitinib) Approved as the First Systemic Therapy in the U.S. to Treat Adult and Pediatric Patients With Nonsegmental Vitiligo",
-            "Nvidia soars 31% as board reinstates Jensen Huang as CEO, chip stocks jump",
-            "EU Probes Coca-Cola Bottler, Citing Antitrust Concerns"
+            "Insmed jumps on takeover, and other early market movers",
+            "Biotech Loses Ground In Novembers Market Slide  These 5 Stocks Bucked The Selloff As Lilly, AbbVie And Amgen Fell",
+            "Analog Devices, HP and Dell Technologies among Tuesday's batch of earnings"
           ]
         },
         {
@@ -112,10 +112,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 10958,
+          "size": 10253,
           "said": "Finviz Daily Digest \u2014 2026-11-24",
           "bullets": [
-            "_Generated 2026-11-24T05:19:58.828531-05:00 \u00b7 export=data/exports/finviz_2026-11-24.csv \u00b7 ticker digests=632 \u00b7 high-signal=102_",
+            "_Generated 2026-11-24T06:00:27.526543-05:00 \u00b7 export=data/exports/finviz_2026-11-24.csv \u00b7 ticker digests=678 \u00b7 high-signal=140_",
             "Major indices (live quote page)"
           ]
         },
@@ -167,11 +167,11 @@
           "bullets": []
         }
       ],
-      "said": "632 tickers \u00b7 102 signals \u00b7 top ABBV, ARM, CCEP, CRWD, CVS, DASH, ELV, HPE",
+      "said": "678 tickers \u00b7 140 signals \u00b7 top A, ABBV, ADI, ADSK, ARM, BA, BABA, BHP",
       "bullets": [
-        "AbbVie's RINVOQ (upadacitinib) Approved as the First Systemic Therapy in the U.S. to Treat Adult and Pediatric Patients With Nonsegmental Vitiligo",
-        "Nvidia soars 31% as board reinstates Jensen Huang as CEO, chip stocks jump",
-        "EU Probes Coca-Cola Bottler, Citing Antitrust Concerns"
+        "Insmed jumps on takeover, and other early market movers",
+        "Biotech Loses Ground In Novembers Market Slide  These 5 Stocks Bucked The Selloff As Lilly, AbbVie And Amgen Fell",
+        "Analog Devices, HP and Dell Technologies among Tuesday's batch of earnings"
       ]
     },
     {
@@ -192,12 +192,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 100081,
-          "said": "632 tickers \u00b7 102 signals \u00b7 top ABBV, ARM, CCEP, CRWD, CVS, DASH, ELV, HPE",
+          "size": 96675,
+          "said": "678 tickers \u00b7 140 signals \u00b7 top A, ABBV, ADI, ADSK, ARM, BA, BABA, BHP",
           "bullets": [
-            "AbbVie's RINVOQ (upadacitinib) Approved as the First Systemic Therapy in the U.S. to Treat Adult and Pediatric Patients With Nonsegmental Vitiligo",
-            "Nvidia soars 31% as board reinstates Jensen Huang as CEO, chip stocks jump",
-            "EU Probes Coca-Cola Bottler, Citing Antitrust Concerns"
+            "Insmed jumps on takeover, and other early market movers",
+            "Biotech Loses Ground In Novembers Market Slide  These 5 Stocks Bucked The Selloff As Lilly, AbbVie And Amgen Fell",
+            "Analog Devices, HP and Dell Technologies among Tuesday's batch of earnings"
           ]
         },
         {
@@ -333,7 +333,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7572,
+          "size": 7571,
           "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 16 fail",
           "bullets": [
             "general_predict:missing",
@@ -349,7 +349,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False missing=['events', 'news_judge', 'map_heat_research', 'general_predict']",
-          "size": 6641,
+          "size": 6640,
           "said": "all_ok=False \u00b7 qc=False \u00b7 grok=False \u00b7 book=False \u00b7 missing events, news_judge, map_heat_research, general_predict",
           "bullets": []
         },
@@ -509,12 +509,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 100081,
-          "said": "632 tickers \u00b7 102 signals \u00b7 top ABBV, ARM, CCEP, CRWD, CVS, DASH, ELV, HPE",
+          "size": 96675,
+          "said": "678 tickers \u00b7 140 signals \u00b7 top A, ABBV, ADI, ADSK, ARM, BA, BABA, BHP",
           "bullets": [
-            "AbbVie's RINVOQ (upadacitinib) Approved as the First Systemic Therapy in the U.S. to Treat Adult and Pediatric Patients With Nonsegmental Vitiligo",
-            "Nvidia soars 31% as board reinstates Jensen Huang as CEO, chip stocks jump",
-            "EU Probes Coca-Cola Bottler, Citing Antitrust Concerns"
+            "Insmed jumps on takeover, and other early market movers",
+            "Biotech Loses Ground In Novembers Market Slide  These 5 Stocks Bucked The Selloff As Lilly, AbbVie And Amgen Fell",
+            "Analog Devices, HP and Dell Technologies among Tuesday's batch of earnings"
           ]
         },
         {
@@ -583,7 +583,7 @@
       "key": "catalyst",
       "name": "Catalyst dossiers",
       "yaml": "catalyst_daily.yml",
-      "status": "PARTIAL",
+      "status": "FAIL",
       "inputs_ready": true,
       "n_req_ok": 0,
       "n_req": 0,
@@ -613,12 +613,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 100081,
-          "said": "632 tickers \u00b7 102 signals \u00b7 top ABBV, ARM, CCEP, CRWD, CVS, DASH, ELV, HPE",
+          "size": 96675,
+          "said": "678 tickers \u00b7 140 signals \u00b7 top A, ABBV, ADI, ADSK, ARM, BA, BABA, BHP",
           "bullets": [
-            "AbbVie's RINVOQ (upadacitinib) Approved as the First Systemic Therapy in the U.S. to Treat Adult and Pediatric Patients With Nonsegmental Vitiligo",
-            "Nvidia soars 31% as board reinstates Jensen Huang as CEO, chip stocks jump",
-            "EU Probes Coca-Cola Bottler, Citing Antitrust Concerns"
+            "Insmed jumps on takeover, and other early market movers",
+            "Biotech Loses Ground In Novembers Market Slide  These 5 Stocks Bucked The Selloff As Lilly, AbbVie And Amgen Fell",
+            "Analog Devices, HP and Dell Technologies among Tuesday's batch of earnings"
           ]
         },
         {
@@ -626,11 +626,16 @@
           "name": "Catalyst dossiers JSON",
           "path": "01_daily/catalyst/2026-11-24_dossiers.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "FAIL",
+          "reason": "zero usable dossiers (n=7)",
+          "size": 2390,
+          "said": "zero usable dossiers (n=7) \u00b7 0/7 usable \u00b7 Grok \u2192 DeepSeek \u00b7 AVGO, CRM, UEC, UUUU, SLB, BKR, KGS",
+          "bullets": [
+            "AVGO: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 AVGO",
+            "CRM: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 CRM",
+            "UEC: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 UEC",
+            "UUUU: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 UUUU"
+          ]
         }
       ],
       "said": "77 ticker actions \u00b7 4 events \u00b7 4898 headlines \u00b7 COP BUY, EOG BUY, CHRD BUY, SM BUY, KOS BUY, REPX BUY, OXY BUY, FANG BUY",
@@ -701,12 +706,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 100081,
-          "said": "632 tickers \u00b7 102 signals \u00b7 top ABBV, ARM, CCEP, CRWD, CVS, DASH, ELV, HPE",
+          "size": 96675,
+          "said": "678 tickers \u00b7 140 signals \u00b7 top A, ABBV, ADI, ADSK, ARM, BA, BABA, BHP",
           "bullets": [
-            "AbbVie's RINVOQ (upadacitinib) Approved as the First Systemic Therapy in the U.S. to Treat Adult and Pediatric Patients With Nonsegmental Vitiligo",
-            "Nvidia soars 31% as board reinstates Jensen Huang as CEO, chip stocks jump",
-            "EU Probes Coca-Cola Bottler, Citing Antitrust Concerns"
+            "Insmed jumps on takeover, and other early market movers",
+            "Biotech Loses Ground In Novembers Market Slide  These 5 Stocks Bucked The Selloff As Lilly, AbbVie And Amgen Fell",
+            "Analog Devices, HP and Dell Technologies among Tuesday's batch of earnings"
           ]
         },
         {
@@ -1304,6 +1309,52 @@
         }
       ],
       "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, sectors_required, all_ok \u00b7 keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs \u00b7 # Pre-open ALL status \u2014 2026-11-24\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  news_mode=on  missing=['events', 'news_judge', 'map_heat_research', 'general_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- News actions (no LLM): exit 0"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-11-24",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-24T06:00:27.860276-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-24_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 96675,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-11-24_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 10272,
+          "preview": "# Finviz Daily Digest \u2014 2026-11-24\n_Generated 2026-11-24T06:00:27.526543-05:00 \u00b7 export=data/exports/finviz_2026-11-24.csv \u00b7 ticker digests=678 \u00b7 high-signal=140_"
+        },
+        {
+          "path": "data/exports/finviz_2026-11-24.csv",
+          "ok": true,
+          "reason": "",
+          "size": 10788345,
+          "preview": "11787 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 10788345,
+          "preview": "11787 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
+        },
+        {
+          "path": "01_daily/news/2026-11-24_finviz_digest_preopen.json",
+          "ok": true,
+          "reason": "",
+          "size": 100081,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-11-24\n_Generated 2026-11-24T06:00:27.526543-05:00 \u00b7 export=data/exports/finviz_2026-11-24.csv \u00b7 ticker digests=678 \u00b7 high-signal=140_ \u00b7 11787 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\" \u00b7 11787 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
     }
   ],
   "href": {
