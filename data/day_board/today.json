@@ -1,12 +1,12 @@
 {
   "date": "2026-11-24",
-  "generated_at": "2026-11-24T05:25:20.106301-05:00",
+  "generated_at": "2026-11-24T05:25:41.433590-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 3,
+    "ok": 4,
     "partial": 3,
-    "fail": 2,
+    "fail": 1,
     "n": 8
   },
   "buy_1d": [],
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "finviz_market_digest",
-      "title": "Finviz homepage market digest",
-      "date": "2026-11-24",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-24T05:20:06.537401-05:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-11-24_finviz_market_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 7017,
-          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
-        },
-        {
-          "path": "01_daily/news/2026-11-24_finviz_market_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 3063,
-          "preview": "# Finviz homepage market digest \u2014 2026-11-24\n**Generated:** 2026-11-24T05:20:06.519878-05:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures point lower as Nvidia-led tech pause follows AI-driven rebound ahead of earnings and housing and confidence data\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** NVDA, MDT, ADI, BBY, DLTR, DELL, WDAY, HPQ, ADSK, ADP\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** MDT, ADI, BBY, DLTR, DELL, WDAY, HPQ, ADSK\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-11-24\n**Clock use:** `same_morning`"
-        }
-      ],
-      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-11-24\n**Generated:** 2026-11-24T05:20:06.519878-05:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures point lower as Nvidia-led tech pause follows AI-driven rebound ahead of earnings and housing and confidence data\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** NVDA, MDT, ADI, BBY, DLTR, DELL, WDAY, HPQ, ADSK, ADP\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** MDT, ADI, BBY, DLTR, DELL, WDAY, HPQ, ADSK\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-11-24\n**Clock use:** `same_morning`"
-    },
     {
       "key": "map_heat",
       "title": "Map heat morning overlay",
@@ -200,6 +175,31 @@
         }
       ],
       "preview": "5881 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, ONC, SUPN, COCO, KNSA"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-11-24",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-24T05:25:40.819552-05:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-11-24_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7475886,
+          "preview": "2604 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CBRL, SLDE, CL, POWW, ELV"
+        },
+        {
+          "path": "data/ab_checklist/2026-11-24_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8263536,
+          "preview": "2604 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 POWW, SLDE, CBRL, CL, REYN"
+        }
+      ],
+      "preview": "2604 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CBRL, SLDE, CL, POWW, ELV \u00b7 2604 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 POWW, SLDE, CBRL, CL, REYN"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

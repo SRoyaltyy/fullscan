@@ -1,18 +1,17 @@
 {
   "date": "2026-11-24",
-  "generated_at": "2026-11-24T05:25:20.106301-05:00",
+  "generated_at": "2026-11-24T05:25:41.433590-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-11-24_predict.md` \u2014 missing",
     "MISSING News actions JSON `01_daily/news/2026-11-24_actions.json` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-11-24_judge.md` \u2014 missing",
-    "MISSING AB checklist enriched `data/ab_checklist/2026-11-24_ab_checklist_enriched.csv` \u2014 missing"
+    "MISSING News judge MD `01_daily/news/2026-11-24_judge.md` \u2014 missing"
   ],
   "counts": {
-    "ok": 3,
+    "ok": 4,
     "partial": 3,
-    "fail": 2,
+    "fail": 1,
     "n": 8
   },
   "processes": [
@@ -535,11 +534,11 @@
       "key": "ab",
       "name": "AB checklist",
       "yaml": "ab_checklist.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 1,
       "files": [
         {
@@ -547,26 +546,32 @@
           "name": "AB checklist raw",
           "path": "data/ab_checklist/2026-11-24_ab_checklist.csv",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2604",
+          "size": 7475886,
+          "said": "27 rows",
+          "bullets": [
+            "CBRL, SLDE, CL, POWW, ELV, AES, REYN, PBH"
+          ]
         },
         {
           "key": "ab_enriched",
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-11-24_ab_checklist_enriched.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2604",
+          "size": 8263536,
+          "said": "25 rows",
+          "bullets": [
+            "POWW, SLDE, CBRL, CL, REYN, AES, ELV, Q"
+          ]
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "25 rows",
+      "bullets": [
+        "POWW, SLDE, CBRL, CL, REYN"
+      ]
     },
     {
       "key": "catalyst",
@@ -626,7 +631,7 @@
       "yaml": "stock_book_all.yml",
       "status": "PARTIAL",
       "inputs_ready": false,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 4,
       "n_opt_ok": 1,
       "n_opt": 4,
@@ -708,11 +713,13 @@
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-11-24_ab_checklist_enriched.csv",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2604",
+          "size": 8263536,
+          "said": "25 rows",
+          "bullets": [
+            "POWW, SLDE, CBRL, CL, REYN, AES, ELV, Q"
+          ]
         },
         {
           "key": "join",
@@ -732,11 +739,13 @@
           "name": "Peer RS CSV",
           "path": "data/peers/2026-11-24_peer_rs.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=5010",
+          "size": 815140,
+          "said": "491 rows",
+          "bullets": [
+            "A, AA, AACG, AAL, AAME, AAMI, AAOI, AAON"
+          ]
         },
         {
           "key": "book_json",
@@ -1138,6 +1147,31 @@
         }
       ],
       "preview": "5881 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, ONC, SUPN, COCO, KNSA"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-11-24",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-24T05:25:40.819552-05:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-11-24_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7475886,
+          "preview": "2604 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CBRL, SLDE, CL, POWW, ELV"
+        },
+        {
+          "path": "data/ab_checklist/2026-11-24_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8263536,
+          "preview": "2604 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 POWW, SLDE, CBRL, CL, REYN"
+        }
+      ],
+      "preview": "2604 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CBRL, SLDE, CL, POWW, ELV \u00b7 2604 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 POWW, SLDE, CBRL, CL, REYN"
     }
   ],
   "href": {
