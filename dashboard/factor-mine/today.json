@@ -1,6 +1,6 @@
 {
   "date": "2026-11-23",
-  "generated_at": "2026-11-23T17:44:36.723886-05:00",
+  "generated_at": "2026-11-23T20:52:24.286123-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -1004,13 +1004,13 @@
       "date": "2026-11-23",
       "ok": true,
       "pushed": true,
-      "at": "2026-11-23T17:17:42.972146-05:00",
+      "at": "2026-11-23T17:45:10.291426-05:00",
       "files": [
         {
           "path": "data/day_board/today.json",
           "ok": true,
           "reason": "",
-          "size": 40134,
+          "size": 41599,
           "preview": "2026-11-23 BUY LFST, CON, MD, AMN, EHC, HCSG, TGT, GRDN \u00b7 SELL QBTS, FCEL, TE, METC, TLN, CWEN, RGTI, EAF"
         },
         {
@@ -1021,17 +1021,17 @@
           "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
         },
         {
-          "path": "data/day_board/2026-11-23.after-freeze-2.json",
+          "path": "data/day_board/2026-11-23.after-freeze-3.json",
           "ok": true,
           "reason": "",
-          "size": 114944,
+          "size": 116705,
           "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
         },
         {
-          "path": "data/day_board/2026-11-23_tickets.after-freeze-2.json",
+          "path": "data/day_board/2026-11-23_tickets.after-freeze-3.json",
           "ok": true,
           "reason": "",
-          "size": 77449,
+          "size": 78914,
           "preview": "2026-11-23 BUY LFST, CON, MD, AMN, EHC, HCSG, TGT, GRDN \u00b7 SELL QBTS, FCEL, TE, METC, TLN, CWEN, RGTI, EAF"
         },
         {
@@ -1073,7 +1073,7 @@
           "path": "dashboard/factor-mine/today.json",
           "ok": true,
           "reason": "",
-          "size": 77449,
+          "size": 78914,
           "preview": "2026-11-23 BUY LFST, CON, MD, AMN, EHC, HCSG, TGT, GRDN \u00b7 SELL QBTS, FCEL, TE, METC, TLN, CWEN, RGTI, EAF"
         },
         {
@@ -1239,7 +1239,7 @@
       "date": "2026-11-23",
       "ok": true,
       "pushed": true,
-      "at": "2026-11-23T17:18:19.036688-05:00",
+      "at": "2026-11-23T17:45:22.133909-05:00",
       "files": [
         {
           "path": "03_scoreboard/PAPER_TRADING.md",
@@ -1252,11 +1252,36 @@
           "path": "dashboard/index.html",
           "ok": true,
           "reason": "",
-          "size": 17611480,
+          "size": 17547102,
           "preview": "<!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"data-asof\" content=\"2026-11-23\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;\n--fg:#dfe6f2; --mut:#8b96ab; --dim:#66708a; --pos:#4ade80; --neg:#f87171;\n--chip:#2a3450; --day:#121826; --gold:#fbbf24;\n}\n*{box-sizing:border-box}\nhtml,body{overflow-x:hidden}\nbody{margin:0;background:var(--bg);color:var(--fg);font:14px/1.5 -apple-system,Segoe UI,Roboto,sans-serif}\n.wrap{max-width:1180px;margin:0 auto;padding:16px 16px 48px;width:100%}\nh1{font-size:20px;margin:0 0 4px}\n.sub{color:var(--mut);font-size:12px;margin:0 0 12px}\n.merge-hero{display:block;margin:0 0 14px;padding:14px 16px;border-radius:12px;\nbackground:linear-gradient(180deg,#1a2744,#171e2e);border:1px solid #3b"
         }
       ],
       "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-11-23** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-11-23** ranker: **weighted** (green pile liquid=0, need 8).\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $8,340.02 | -16.60% | $197.72 | 8 | 670 | $1,435.10 | $-1,676.61 | $+16.63 | 34.7% | 12.5% |\n| 1d_size | $8,900.03 | -11.00% | $121.29 | 7 | 599 | $ \u00b7 <!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"data-asof\" content=\"2026-11-23\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#"
+    },
+    {
+      "key": "finviz_market_digest_close",
+      "title": "Finviz homepage market digest (close)",
+      "date": "2026-11-23",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-23T18:26:06.276250-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-23_finviz_market_digest_close.json",
+          "ok": true,
+          "reason": "",
+          "size": 6912,
+          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
+        },
+        {
+          "path": "01_daily/news/2026-11-23_finviz_market_digest_close.md",
+          "ok": true,
+          "reason": "",
+          "size": 3331,
+          "preview": "# Finviz homepage market digest (close) \u2014 2026-11-23\n**Generated:** 2026-11-23T18:26:06.202266-05:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed sharply higher as Nvidia leadership reversal ignited a powerful rebound in AI and semiconductor names ahead of key earnings and PCE inflation data\n**Prior close:** SPX +4.73%  Nasdaq +6.51%  Dow +3.01%\n**SPX:** +4.73%  **Nasdaq:** +6.51%  **Dow:** +3.01%\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** NVDA, DELL, MU, MRVL, ALAB, CRDO, TSM, CRWD, ZS, HPE, ADI, MDT\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** DELL, ADI, MDT\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-11-24\n**Clock use:** `next_open`"
+        }
+      ],
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-11-23\n**Generated:** 2026-11-23T18:26:06.202266-05:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed sharply higher as Nvidia leadership reversal ignited a powerful rebound in AI and semiconductor names ahead of key earnings and PCE inflation data\n**Prior close:** SPX +4.73%  Nasdaq +6.51%  Dow +3.01%\n**SPX:** +4.73%  **Nasdaq:** +6.51%  **Dow:** +3.01%\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** NVDA, DELL, MU, MRVL, ALAB, CRDO, TSM, CRWD, ZS, HPE, ADI, MDT\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** DELL, ADI, MDT\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-11-24\n**Clock use:** `next_open`"
     },
     {
       "key": "weather",
@@ -1264,7 +1289,7 @@
       "date": "2026-11-23",
       "ok": true,
       "pushed": true,
-      "at": "2026-11-23T17:43:56.055747-05:00",
+      "at": "2026-11-23T20:51:54.960294-05:00",
       "files": [
         {
           "path": "01_daily/weather/2026-11-23_weather.json",
@@ -1300,6 +1325,13 @@
           "reason": "",
           "size": 9537,
           "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -15.77, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -8.71, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -7.36, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -6.4399999999999995, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -9.385000000000002, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -6.24, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -9.7, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -8.86, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-11-23_weather.after-freeze-4.json",
+          "ok": true,
+          "reason": "",
+          "size": 9538,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -15.77, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -8.71, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -7.36, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -6.4399999999999995, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -9.385000000000002, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -6.24, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -9.7, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -8.86, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -15.77, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -8.71, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -7.36, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -6.4399999999999995, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -9.385000000000002, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -6.24, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -9.7, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -8.86, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-23\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade. \u00b7 weather sectors 11 \u00b7 Basic Materials={'score': -15.77, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -8.71, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -7.36, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consum"
@@ -1310,7 +1342,7 @@
       "date": "2026-11-23",
       "ok": true,
       "pushed": true,
-      "at": "2026-11-23T17:44:05.867451-05:00",
+      "at": "2026-11-23T20:52:05.345343-05:00",
       "files": [
         {
           "path": "data/join/2026-11-23_ranked.csv",
@@ -1342,7 +1374,7 @@
       "date": "2026-11-23",
       "ok": true,
       "pushed": true,
-      "at": "2026-11-23T17:44:13.653196-05:00",
+      "at": "2026-11-23T20:52:11.715098-05:00",
       "files": [
         {
           "path": "data/peers/2026-11-23_peer_rs.csv",
