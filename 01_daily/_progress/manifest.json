@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-24T23:43:17-05:00",
+  "updated_at": "2026-11-24T23:42:50-05:00",
   "runs": [
     {
       "date": "2026-11-16",
@@ -194,16 +194,16 @@
       "updated_at": "2026-11-23T21:54:04-05:00"
     },
     {
+      "date": "2026-11-24",
+      "workflow": "fm_preopen",
+      "file": "2026-11-24_fm_preopen.json",
+      "updated_at": "2026-11-24T06:42:57-05:00"
+    },
+    {
       "date": "2026-11-20",
       "workflow": "postclose",
       "file": "2026-11-20_postclose.json",
       "updated_at": "2026-11-24T09:21:07-05:00"
-    },
-    {
-      "date": "2026-11-23",
-      "workflow": "postclose",
-      "file": "2026-11-23_postclose.json",
-      "updated_at": "2026-11-24T09:21:39-05:00"
     },
     {
       "date": "2026-11-24",
@@ -213,33 +213,33 @@
     },
     {
       "date": "2026-11-24",
-      "workflow": "factor_mine",
-      "file": "2026-11-24_factor_mine.json",
-      "updated_at": "2026-11-24T16:15:34-05:00"
+      "workflow": "webull_sim",
+      "file": "2026-11-24_webull_sim.json",
+      "updated_at": "2026-11-24T19:18:46-05:00"
     },
     {
       "date": "2026-11-24",
       "workflow": "homepage_digest",
       "file": "2026-11-24_homepage_digest.json",
-      "updated_at": "2026-11-24T17:01:34-05:00"
+      "updated_at": "2026-11-24T23:13:14-05:00"
+    },
+    {
+      "date": "2026-11-23",
+      "workflow": "postclose",
+      "file": "2026-11-23_postclose.json",
+      "updated_at": "2026-11-24T23:20:43-05:00"
     },
     {
       "date": "2026-11-24",
       "workflow": "postclose",
       "file": "2026-11-24_postclose.json",
-      "updated_at": "2026-11-24T19:33:06-05:00"
+      "updated_at": "2026-11-24T23:21:53-05:00"
     },
     {
       "date": "2026-11-24",
-      "workflow": "webull_sim",
-      "file": "2026-11-24_webull_sim.json",
-      "updated_at": "2026-11-24T23:24:11-05:00"
-    },
-    {
-      "date": "2026-11-24",
-      "workflow": "fm_preopen",
-      "file": "2026-11-24_fm_preopen.json",
-      "updated_at": "2026-11-24T23:43:17-05:00"
+      "workflow": "factor_mine",
+      "file": "2026-11-24_factor_mine.json",
+      "updated_at": "2026-11-24T23:42:50-05:00"
     }
   ]
 }
