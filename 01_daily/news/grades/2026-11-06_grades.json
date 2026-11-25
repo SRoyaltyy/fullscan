@@ -380,7 +380,7 @@
         "5d": -2.6,
         "10d": 21.32
       },
-      "mfe_pct": 22.86,
+      "mfe_pct": 22.85,
       "mfe_day": "2026-11-24",
       "ever_profitable": true,
       "first_profitable_day": "2026-11-06"
@@ -617,8 +617,8 @@
       "window_through": "2026-11-24",
       "trading_days_elapsed": 12,
       "complete": false,
-      "latest_close": 12.605,
-      "current_return_pct": 3.85,
+      "latest_close": 12.61,
+      "current_return_pct": 3.81,
       "horizon_returns_pct": {
         "1d": -7.56,
         "3d": -7.16,
