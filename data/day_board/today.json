@@ -1,6 +1,6 @@
 {
   "date": "2026-11-25",
-  "generated_at": "2026-11-25T05:11:03.209245-05:00",
+  "generated_at": "2026-11-25T05:11:10.530386-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -15,24 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "universe",
-      "title": "Universe labels",
-      "date": "2026-11-25",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-25T04:50:25.922664-05:00",
-      "files": [
-        {
-          "path": "data/universe/2026-11-25_membership.csv",
-          "ok": true,
-          "reason": "",
-          "size": 1124742,
-          "preview": "5882 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-        }
-      ],
-      "preview": "5882 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-    },
     {
       "key": "finviz_digest",
       "title": "Finviz digest",
@@ -242,6 +224,31 @@
         }
       ],
       "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-11-25\n_Generated 2026-11-25T05:07:24.996570-05:00 \u00b7 export=data/exports/finviz_2026-11-25.csv \u00b7 ticker digests=855 \u00b7 high-signal=188_"
+    },
+    {
+      "key": "map_heat",
+      "title": "Map heat tables",
+      "date": "2026-11-25",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-25T05:11:10.223789-05:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-11-25_map_heat.json",
+          "ok": true,
+          "reason": "",
+          "size": 276312,
+          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
+        },
+        {
+          "path": "01_daily/map_heat/2026-11-25_map_heat.md",
+          "ok": true,
+          "reason": "",
+          "size": 18339,
+          "preview": "# MAP HEAT \u2014 2026-11-25\nExport `finviz_2026-11-25.csv` \u00b7 11786 names \u00b7 generated 2026-11-25T05:09:58.312210-05:00"
+        }
+      ],
+      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-11-25\nExport `finviz_2026-11-25.csv` \u00b7 11786 names \u00b7 generated 2026-11-25T05:09:58.312210-05:00"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
