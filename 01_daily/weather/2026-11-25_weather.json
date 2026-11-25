@@ -1,6 +1,6 @@
 {
  "date": "2026-11-25",
- "generated_at": "2026-11-25T05:11:52.471606-05:00",
+ "generated_at": "2026-11-25T05:14:46.623817-05:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -20,13 +20,13 @@
   "dgs10_current": 4.92,
   "dollar": "strong",
   "dollar_source": "dxy",
-  "dxy_pct_1d": 0.25,
+  "dxy_pct_1d": 0.22,
   "vix_ratio": 1.141,
   "vix_spot": 29.06,
   "vix_delta_1d": 2.7,
   "vix_ratio_source": "vix/vix3m",
   "vix": "spiking",
-  "oil_pct_1d": -0.68,
+  "oil_pct_1d": -0.46,
   "oil": "flat",
   "fear_greed": null,
   "fear_greed_label": null,
