@@ -1,0 +1,69 @@
+{
+  "date": "2026-11-25",
+  "generated_at": "2026-11-25T04:50:50.201304-05:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": true,
+  "clock_use": "same_morning",
+  "clock_legal_for": "2026-11-25",
+  "clock_rule": "Live: Generated must be before 09:30 ET on this date or leave missing. Wayback: capture before 09:30 ET that day is legal for that morning's Pre-Open. Afternoon Wayback is legal for the NEXT session open only (prior-day close recap), marked by clock_legal_for. Gaps stay gaps. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US futures point to a lower open as tech weakness persists ahead of 8:30 AM ET macro data releases",
+  "raw_text": "- S&P 500 Futures (@ES) fall 1.22%, Nasdaq 100 Futures (@NQ) decline 2.12%, Dow Jones Futures (@YM) drop 0.65%, and Russell 2000 Futures (@ER2) edge 0.86% lower in early trade\n- Technology and AI names remain under pressure after Nvidia’s board reinstated Jensen Huang as CEO, with Nvidia (NVDA) falling about 5% pre-market amid governance questions and mixed analyst reactions\n- Deere & Company (DE) reports earnings before the bell, with traders watching agricultural cycle guidance and early trade reactions\n- Li Auto (LI) gains about 5% pre-market after reporting Q3 revenue of RMB28.8 billion and a net loss of RMB309.7 million, and forecasting Q4 deliveries of 110,000–115,000 vehicles\n- At 8:30 AM ET, the Q3 GDP second estimate, October core PCE inflation, durable goods orders, personal income and spending, and initial jobless claims data are due and expected to drive early volatility\n- Overnight weakness in Japan and South Korea and mixed European trade set a cautious global backdrop for US markets\n- Oil (@CL) and gold (@GC) futures trade lower in early dealings, with no major new geopolitical or corporate catalysts cited",
+  "raw_summary_md": "- **S&P 500 Futures** ([@ES](https://finviz.com/futures_charts?t=ES)) fall 1.22%, **Nasdaq 100 Futures** ([@NQ](https://finviz.com/futures_charts?t=NQ)) decline **2.12%**, **Dow Jones Futures** ([@YM](https://finviz.com/futures_charts?t=YM)) drop 0.65%, and **Russell 2000 Futures** ([@ER2](https://finviz.com/futures_charts?t=ER2)) edge 0.86% lower in early trade\n- Technology and AI names remain under pressure after Nvidia’s board reinstated Jensen Huang as CEO, with **Nvidia** ([NVDA](https://finviz.com/quote?t=NVDA)) falling about 5% pre-market amid **governance questions** and mixed analyst reactions\n- **Deere & Company** ([DE](https://finviz.com/quote?t=DE)) reports earnings before the bell, with traders watching **agricultural cycle guidance** and early trade reactions\n- **Li Auto** ([LI](https://finviz.com/quote?t=LI)) gains **about 5%** pre-market after reporting Q3 revenue of RMB28.8 billion and a net loss of RMB309.7 million, and forecasting Q4 deliveries of 110,000–115,000 vehicles\n- At 8:30 AM ET, the Q3 GDP second estimate, October core PCE inflation, durable goods orders, personal income and spending, and initial jobless claims data are due and expected to drive **early volatility**\n- Overnight weakness in Japan and South Korea and mixed European trade set a **cautious global backdrop** for US markets\n- **Oil** ([@CL](https://finviz.com/futures_charts?t=CL)) and **gold** ([@GC](https://finviz.com/futures_charts?t=GC)) futures **trade lower** in early dealings, with no major new geopolitical or corporate catalysts cited",
+  "index_moves": [],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "NVDA",
+    "DE",
+    "LI"
+  ],
+  "named_leaders": [
+    "NVDA",
+    "DE",
+    "LI"
+  ],
+  "calendar": [],
+  "prior_close": {
+    "spx": null,
+    "nasdaq": null,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": false,
+    "bullets": [],
+    "text": ""
+  },
+  "earnings_slate": {
+    "tickers": [
+      "DE"
+    ],
+    "text": "Deere & Company (DE) reports earnings before the bell, with traders watching agricultural cycle guidance and early trade reactions"
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 353207,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-11-25T04:36:56.217",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "bad"
+}
