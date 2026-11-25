@@ -1,0 +1,599 @@
+{
+  "date": "2026-11-25",
+  "horizons": {
+    "1d": {
+      "buy": [
+        {
+          "ticker": "BBIO",
+          "score": 0.4184269639462147
+        },
+        {
+          "ticker": "ANF",
+          "score": 0.8526580909999133
+        },
+        {
+          "ticker": "VCEL",
+          "score": 0.8314075024673995
+        },
+        {
+          "ticker": "EWTX",
+          "score": 0.7464408017491004
+        },
+        {
+          "ticker": "PLX",
+          "score": 0.45252857189539836
+        },
+        {
+          "ticker": "TGTX",
+          "score": 0.4773759552024491
+        },
+        {
+          "ticker": "CDNA",
+          "score": 0.7078866978082368
+        },
+        {
+          "ticker": "IDXX",
+          "score": 0.45070835224461525
+        }
+      ],
+      "sell": [
+        {
+          "ticker": "CSIQ",
+          "score": -0.4030715134999896
+        },
+        {
+          "ticker": "BTDR",
+          "score": -0.3615682264374368
+        },
+        {
+          "ticker": "MSTR",
+          "score": -0.5163213643603836
+        },
+        {
+          "ticker": "WRD",
+          "score": -0.3900077258129439
+        },
+        {
+          "ticker": "NCMI",
+          "score": -0.49424603897894104
+        },
+        {
+          "ticker": "ALIT",
+          "score": -0.4337518872915179
+        },
+        {
+          "ticker": "EXFY",
+          "score": -0.47322274679277077
+        },
+        {
+          "ticker": "TOYO",
+          "score": -0.2640718428353318
+        }
+      ]
+    },
+    "3d": {
+      "buy": [
+        {
+          "ticker": "VCEL",
+          "score": 0.9219999914023487
+        },
+        {
+          "ticker": "PBH",
+          "score": 0.8891546814904614
+        },
+        {
+          "ticker": "SRRK",
+          "score": 0.8853825804978059
+        },
+        {
+          "ticker": "ANF",
+          "score": 0.8673031188266762
+        },
+        {
+          "ticker": "PRCH",
+          "score": 0.8582050503563479
+        },
+        {
+          "ticker": "ETON",
+          "score": 0.8535398837053119
+        },
+        {
+          "ticker": "PTON",
+          "score": 0.8420394192989507
+        },
+        {
+          "ticker": "CSGP",
+          "score": 0.8247746551518916
+        },
+        {
+          "ticker": "AEO",
+          "score": 0.8165300108585909
+        },
+        {
+          "ticker": "SPNT",
+          "score": 0.8098893185462732
+        },
+        {
+          "ticker": "CRI",
+          "score": 0.7934526441541849
+        },
+        {
+          "ticker": "SLDE",
+          "score": 0.773664984990128
+        },
+        {
+          "ticker": "SEZL",
+          "score": 0.711623350942604
+        },
+        {
+          "ticker": "LTC",
+          "score": 0.7113212411069612
+        },
+        {
+          "ticker": "HLF",
+          "score": 0.6762721043341882
+        }
+      ],
+      "sell": [
+        {
+          "ticker": "VOD",
+          "score": -0.6616267511518027
+        },
+        {
+          "ticker": "DKNG",
+          "score": -0.6492068996216878
+        },
+        {
+          "ticker": "ANT",
+          "score": -0.6101767915572232
+        },
+        {
+          "ticker": "RKLB",
+          "score": -0.6088783794758411
+        },
+        {
+          "ticker": "MSTR",
+          "score": -0.6056008386002485
+        },
+        {
+          "ticker": "RCAT",
+          "score": -0.6029623641145149
+        },
+        {
+          "ticker": "NCMI",
+          "score": -0.584811008648034
+        },
+        {
+          "ticker": "DAL",
+          "score": -0.5783823589203088
+        },
+        {
+          "ticker": "CNDT",
+          "score": -0.5642590595670568
+        },
+        {
+          "ticker": "PLAY",
+          "score": -0.5639464597879097
+        },
+        {
+          "ticker": "META",
+          "score": -0.5597481954792206
+        },
+        {
+          "ticker": "HTZ",
+          "score": -0.5591630226561455
+        },
+        {
+          "ticker": "EXFY",
+          "score": -0.5514976474681087
+        },
+        {
+          "ticker": "FMC",
+          "score": -0.5454866485927996
+        },
+        {
+          "ticker": "RYDE",
+          "score": -0.5429535608722011
+        }
+      ]
+    },
+    "1w": {
+      "buy": [
+        {
+          "ticker": "VCEL",
+          "score": 0.9876717351163204
+        },
+        {
+          "ticker": "PBH",
+          "score": 0.9574982828761207
+        },
+        {
+          "ticker": "SRRK",
+          "score": 0.948002047905709
+        },
+        {
+          "ticker": "PRCH",
+          "score": 0.9214798083652613
+        },
+        {
+          "ticker": "ETON",
+          "score": 0.9190578478475555
+        },
+        {
+          "ticker": "PTON",
+          "score": 0.8955912206702636
+        },
+        {
+          "ticker": "ANF",
+          "score": 0.8851722708080134
+        },
+        {
+          "ticker": "AEO",
+          "score": 0.8801098338358349
+        },
+        {
+          "ticker": "SPNT",
+          "score": 0.8750779608728123
+        },
+        {
+          "ticker": "CSGP",
+          "score": 0.863679049288507
+        },
+        {
+          "ticker": "CRI",
+          "score": 0.8593890053142461
+        },
+        {
+          "ticker": "SLDE",
+          "score": 0.8387780263021898
+        },
+        {
+          "ticker": "SEZL",
+          "score": 0.7700317563331802
+        },
+        {
+          "ticker": "LTC",
+          "score": 0.7694648511019764
+        },
+        {
+          "ticker": "SMA",
+          "score": 0.7142015528563626
+        }
+      ],
+      "sell": [
+        {
+          "ticker": "VOD",
+          "score": -0.7043708311276811
+        },
+        {
+          "ticker": "DKNG",
+          "score": -0.6858508968571402
+        },
+        {
+          "ticker": "RKLB",
+          "score": -0.6751054868808004
+        },
+        {
+          "ticker": "RCAT",
+          "score": -0.673397624481398
+        },
+        {
+          "ticker": "MSTR",
+          "score": -0.6688637642794043
+        },
+        {
+          "ticker": "NCMI",
+          "score": -0.6527671503280716
+        },
+        {
+          "ticker": "PLAY",
+          "score": -0.6303079780591797
+        },
+        {
+          "ticker": "CNDT",
+          "score": -0.6292609815221127
+        },
+        {
+          "ticker": "HTZ",
+          "score": -0.6289755194105004
+        },
+        {
+          "ticker": "FMC",
+          "score": -0.615704368677561
+        },
+        {
+          "ticker": "EXFY",
+          "score": -0.6097670662151122
+        },
+        {
+          "ticker": "META",
+          "score": -0.605643185552993
+        },
+        {
+          "ticker": "SID",
+          "score": -0.604291872931308
+        },
+        {
+          "ticker": "QBTS",
+          "score": -0.5976266184474175
+        },
+        {
+          "ticker": "KLXE",
+          "score": -0.5956279092528458
+        }
+      ]
+    },
+    "2w": {
+      "buy": [
+        {
+          "ticker": "VCEL",
+          "score": 1.0340262129980313
+        },
+        {
+          "ticker": "PBH",
+          "score": 1.0041582505366748
+        },
+        {
+          "ticker": "SRRK",
+          "score": 0.9911175010604083
+        },
+        {
+          "ticker": "ETON",
+          "score": 0.9652568955015528
+        },
+        {
+          "ticker": "PRCH",
+          "score": 0.9627823634443426
+        },
+        {
+          "ticker": "PTON",
+          "score": 0.9301926621887133
+        },
+        {
+          "ticker": "AEO",
+          "score": 0.9234235530118711
+        },
+        {
+          "ticker": "SPNT",
+          "score": 0.920092581653466
+        },
+        {
+          "ticker": "CRI",
+          "score": 0.9032009990512098
+        },
+        {
+          "ticker": "CSGP",
+          "score": 0.8925197280718898
+        },
+        {
+          "ticker": "ATAT",
+          "score": 0.8908987385942573
+        },
+        {
+          "ticker": "SLDE",
+          "score": 0.8814698810910206
+        },
+        {
+          "ticker": "LTC",
+          "score": 0.8102743527193024
+        },
+        {
+          "ticker": "SEZL",
+          "score": 0.8087767106500774
+        },
+        {
+          "ticker": "SMA",
+          "score": 0.7548690734039929
+        }
+      ],
+      "sell": [
+        {
+          "ticker": "VOD",
+          "score": -0.7340337263066435
+        },
+        {
+          "ticker": "RKLB",
+          "score": -0.7230837916863738
+        },
+        {
+          "ticker": "RCAT",
+          "score": -0.7226771747794637
+        },
+        {
+          "ticker": "MSTR",
+          "score": -0.7150007959929399
+        },
+        {
+          "ticker": "DKNG",
+          "score": -0.7074055591205731
+        },
+        {
+          "ticker": "NCMI",
+          "score": -0.6983875203799658
+        },
+        {
+          "ticker": "PLAY",
+          "score": -0.6784266236222246
+        },
+        {
+          "ticker": "HTZ",
+          "score": -0.6781432060203367
+        },
+        {
+          "ticker": "CNDT",
+          "score": -0.6733464700339603
+        },
+        {
+          "ticker": "FMC",
+          "score": -0.664326948245241
+        },
+        {
+          "ticker": "SID",
+          "score": -0.6507903573609535
+        },
+        {
+          "ticker": "EXFY",
+          "score": -0.6493413583284053
+        },
+        {
+          "ticker": "QBTS",
+          "score": -0.6459085767992665
+        },
+        {
+          "ticker": "RUM",
+          "score": -0.6395369088069294
+        },
+        {
+          "ticker": "META",
+          "score": -0.6390762674700654
+        }
+      ]
+    },
+    "1m": {
+      "buy": [
+        {
+          "ticker": "VCEL",
+          "score": 1.1064356930838612
+        },
+        {
+          "ticker": "PBH",
+          "score": 1.0794732430022975
+        },
+        {
+          "ticker": "SRRK",
+          "score": 1.0601168060786121
+        },
+        {
+          "ticker": "ETON",
+          "score": 1.0375010720870401
+        },
+        {
+          "ticker": "PRCH",
+          "score": 1.0324522431974543
+        },
+        {
+          "ticker": "AEO",
+          "score": 0.9934993357913837
+        },
+        {
+          "ticker": "SPNT",
+          "score": 0.9919605009425523
+        },
+        {
+          "ticker": "PTON",
+          "score": 0.9891355648001932
+        },
+        {
+          "ticker": "CRI",
+          "score": 0.9758583098665519
+        },
+        {
+          "ticker": "ATAT",
+          "score": 0.9556785663647118
+        },
+        {
+          "ticker": "SLDE",
+          "score": 0.9532196221326701
+        },
+        {
+          "ticker": "CSGP",
+          "score": 0.9354334575092469
+        },
+        {
+          "ticker": "LTC",
+          "score": 0.8744208736203531
+        },
+        {
+          "ticker": "SEZL",
+          "score": 0.8731535611667027
+        },
+        {
+          "ticker": "SMA",
+          "score": 0.8188656143018442
+        }
+      ],
+      "sell": [
+        {
+          "ticker": "RCAT",
+          "score": -0.8003128870386341
+        },
+        {
+          "ticker": "RKLB",
+          "score": -0.7961262205500054
+        },
+        {
+          "ticker": "MSTR",
+          "score": -0.7847788259212755
+        },
+        {
+          "ticker": "VOD",
+          "score": -0.781103226965976
+        },
+        {
+          "ticker": "NCMI",
+          "score": -0.7732394673485599
+        },
+        {
+          "ticker": "KOS",
+          "score": -0.7580646899746291
+        },
+        {
+          "ticker": "HTZ",
+          "score": -0.7551005009920555
+        },
+        {
+          "ticker": "PLAY",
+          "score": -0.7516172997648752
+        },
+        {
+          "ticker": "DKNG",
+          "score": -0.7476386810710008
+        },
+        {
+          "ticker": "CNDT",
+          "score": -0.744948164265767
+        },
+        {
+          "ticker": "FMC",
+          "score": -0.741713858242278
+        },
+        {
+          "ticker": "SID",
+          "score": -0.7249345250166619
+        },
+        {
+          "ticker": "QBTS",
+          "score": -0.7203531288395932
+        },
+        {
+          "ticker": "ASTS",
+          "score": -0.7139078906973497
+        },
+        {
+          "ticker": "EXFY",
+          "score": -0.7135270267402953
+        }
+      ]
+    }
+  },
+  "buy_1d": [
+    "BBIO",
+    "ANF",
+    "VCEL",
+    "EWTX",
+    "PLX",
+    "TGTX",
+    "CDNA",
+    "IDXX"
+  ],
+  "sell_1d": [
+    "CSIQ",
+    "BTDR",
+    "MSTR",
+    "WRD",
+    "NCMI",
+    "ALIT",
+    "EXFY",
+    "TOYO"
+  ]
+}

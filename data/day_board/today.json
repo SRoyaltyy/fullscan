@@ -1,45 +1,86 @@
 {
   "date": "2026-11-25",
-  "generated_at": "2026-11-25T09:14:11.045210-05:00",
+  "generated_at": "2026-11-25T09:18:31.109658-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 4,
-    "partial": 3,
+    "ok": 6,
+    "partial": 1,
     "fail": 1,
     "n": 8
   },
-  "buy_1d": [],
-  "sell_1d": [],
+  "buy_1d": [
+    {
+      "ticker": "BBIO",
+      "score": 0.4184269639462147
+    },
+    {
+      "ticker": "ANF",
+      "score": 0.8526580909999133
+    },
+    {
+      "ticker": "VCEL",
+      "score": 0.8314075024673995
+    },
+    {
+      "ticker": "EWTX",
+      "score": 0.7464408017491004
+    },
+    {
+      "ticker": "PLX",
+      "score": 0.45252857189539836
+    },
+    {
+      "ticker": "TGTX",
+      "score": 0.4773759552024491
+    },
+    {
+      "ticker": "CDNA",
+      "score": 0.7078866978082368
+    },
+    {
+      "ticker": "IDXX",
+      "score": 0.45070835224461525
+    }
+  ],
+  "sell_1d": [
+    {
+      "ticker": "CSIQ",
+      "score": -0.4030715134999896
+    },
+    {
+      "ticker": "BTDR",
+      "score": -0.3615682264374368
+    },
+    {
+      "ticker": "MSTR",
+      "score": -0.5163213643603836
+    },
+    {
+      "ticker": "WRD",
+      "score": -0.3900077258129439
+    },
+    {
+      "ticker": "NCMI",
+      "score": -0.49424603897894104
+    },
+    {
+      "ticker": "ALIT",
+      "score": -0.4337518872915179
+    },
+    {
+      "ticker": "EXFY",
+      "score": -0.47322274679277077
+    },
+    {
+      "ticker": "TOYO",
+      "score": -0.2640718428353318
+    }
+  ],
   "flatten": {},
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "ab",
-      "title": "AB checklist",
-      "date": "2026-11-25",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-25T05:12:32.587223-05:00",
-      "files": [
-        {
-          "path": "data/ab_checklist/2026-11-25_ab_checklist.csv",
-          "ok": true,
-          "reason": "",
-          "size": 7464860,
-          "preview": "2602 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CL, CBRL, SLDE, AES, POWW"
-        },
-        {
-          "path": "data/ab_checklist/2026-11-25_ab_checklist_enriched.csv",
-          "ok": true,
-          "reason": "",
-          "size": 8241455,
-          "preview": "2602 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ALGT, SO, POWW, SLDE, AES"
-        }
-      ],
-      "preview": "2602 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CL, CBRL, SLDE, AES, POWW \u00b7 2602 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ALGT, SO, POWW, SLDE, AES"
-    },
     {
       "key": "news_parse",
       "title": "News parse",
@@ -207,6 +248,59 @@
         }
       ],
       "preview": "5009 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-11-25",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-25T09:18:30.213480-05:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-11-25_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1500413,
+          "preview": "1d BUY BBIO, ANF, VCEL, EWTX, PLX, TGTX, CDNA, IDXX \u00b7 SELL CSIQ, BTDR, MSTR, WRD, NCMI, ALIT, EXFY, TOYO"
+        },
+        {
+          "path": "data/stock_book/2026-11-25_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-11-25_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2616,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-11-25_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12443,
+          "preview": "2026-11-25 BUY BBIO, ANF, VCEL, EWTX, PLX, TGTX, CDNA, IDXX \u00b7 SELL CSIQ, BTDR, MSTR, WRD, NCMI, ALIT, EXFY, TOYO"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12443,
+          "preview": "2026-11-25 BUY BBIO, ANF, VCEL, EWTX, PLX, TGTX, CDNA, IDXX \u00b7 SELL CSIQ, BTDR, MSTR, WRD, NCMI, ALIT, EXFY, TOYO"
+        },
+        {
+          "path": "01_daily/2026-11-25_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 83954,
+          "preview": "# Stock book \u2014 2026-11-25\n_Generated 2026-11-25T09:14:18.272159-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY BBIO, ANF, VCEL, EWTX, PLX, TGTX, CDNA, IDXX \u00b7 SELL CSIQ, BTDR, MSTR, WRD, NCMI, ALIT, EXFY, TOYO \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-11-25 BUY BBIO, ANF, VCEL, EWTX, PLX, TGTX, CDNA, IDXX \u00b7 SELL CSIQ, BTDR, MSTR, WRD, NCMI, ALIT, EXFY, TOYO \u00b7 2026-11-25 BUY BBIO, ANF, VCEL, EWTX, PLX, TGTX, CDNA, IDXX \u00b7 SELL CSIQ, BTDR, MSTR, WRD, NCMI, ALIT, EXFY, TOYO \u00b7 # Stock book \u2014 2026-11-25\n_Generated 2026-11-25T09:14:18.272159-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
