@@ -1,6 +1,6 @@
-# Finviz Daily Digest — 2026-11-24
+# Finviz Daily Digest — 2026-11-25
 
-_Generated 2026-11-25T04:54:30.173783-05:00 · export=data/exports/finviz_2026-11-24.csv · ticker digests=872 · high-signal=203_
+_Generated 2026-11-25T05:07:24.996570-05:00 · export=data/exports/finviz_2026-11-25.csv · ticker digests=855 · high-signal=188_
 
 ## Major indices (live quote page)
 
@@ -21,11 +21,9 @@ _Generated 2026-11-25T04:54:30.173783-05:00 · export=data/exports/finviz_2026-1
 - **CCEP** [Consumer Defensive]: The European Commission opened a formal antitrust investigation into CCEP over possible restrictions on cross-border drinks trade and wholesale customer procurement.
 - **CVS** [Healthcare]: CVS faces proposed Medicare Advantage rating changes that could cut industry payments by $107 billion through 2037
 - **DASH** [Consumer Cyclical]: DoorDash disclosed a $1.79 billion delayed-draw loan and a $1.5 billion expansion of its revolving credit facility to support its proposed Instacart acquisition.
-- **DE** [Industrials]: Deere & Co is scheduled to announce earnings today before market open
 - **DELL** [Technology]: Dell posts record AI-driven quarter, raises FY27 outlook to $202B revenue and $29.68 EPS as memory shortages push server prices higher into 2027
 - **ELV** [Healthcare]: Elevance faces proposed CMS Medicare Advantage ratings changes estimated to cut industry payments by $107 billion over 2028–2037
 - **FCX** [Basic Materials]: Deutsche Bank cut its Freeport-McMoRan price target to $70 from $80 while maintaining a Buy rating.
-- **HOOD** [Financial]: Wedbush initiated coverage of Robinhood with an Outperform rating and an $80 price target.
 - **HPE** [Technology]: HPE guides FY27 Cloud & AI margins to about 14%, down from 18.4%, as Susquehanna cuts target to $55 from $62
 - **MRVL** [Technology]: Susquehanna cut Marvell’s price target to $225 from $300 while maintaining its Positive rating, as shares fell 5% premarket.
 - **NKE** [Consumer Cyclical]: Nike rises after Dick's reports Foot Locker progress and raises its profit outlook
@@ -45,12 +43,14 @@ _Generated 2026-11-25T04:54:30.173783-05:00 · export=data/exports/finviz_2026-1
 - **BG** [Consumer Defensive]: Bunge falls with agribusiness peers as tariff reports revive trade-war risks
 - **BURL** [Consumer Cyclical]: Burlington beats Q3 EPS but cuts Q4 margin guidance on freight and weather risk
 - **COHR** [Technology]: Coherent falls with AI-optics peers as Nvidia rally fades and tariff fears return
-- **COIN** [Financial]: Coinbase CEO Brian Armstrong says the company repurchased shares this quarter, with about $2 billion remaining under its $4 billion buyback plan as of Sept. 30.
-- **CRCL** [Financial]: Wedbush initiated coverage of Circle with a Neutral rating and a $55 price target.
 - **CRWV** [Technology]: CoreWeave falls after HPE flags neocloud financing risks and Evercore cuts target
 - **CSGP** [Real Estate]: CoStar extends rally after Friday’s U.S. hotel forecast upgrade
 - **DG** [Consumer Defensive]: Piper Sandler upgraded Dollar General to Overweight from Neutral and raised its price target to $170, citing potential for 17%–18% annual EPS growth over three years.
 - **DKNG** [Consumer Cyclical]: Morgan Stanley downgrades DraftKings to Equal Weight from Overweight and cuts price target to $23 from $31
+- **DKS** [Consumer Cyclical]: DICK’S reports Q3 EPS of $1.94, raises 2026 guidance and discloses Foot Locker closed 134 stores in fiscal 2026
+- **DLTR** [Consumer Defensive]: Dollar Tree beats fiscal Q3 2027 estimates with adjusted EPS of $1.16 and revenue of $5.1B, raises FY2026 comp-sales forecast to 3.5%–4%
+- **DPZ** [Consumer Cyclical]: Domino’s shares edged higher after BNP Paribas Exane initiated coverage with an Outperform rating and a $295 price target.
+- **FISV** [Technology]: Citizens initiated coverage of Fiserv with a Market Perform rating and no price target.
 
 ## By sector (top signal)
 
@@ -76,18 +76,11 @@ _Generated 2026-11-25T04:54:30.173783-05:00 · export=data/exports/finviz_2026-1
 - BURL: Burlington beats Q3 EPS but cuts Q4 margin guidance on freight and weather risk
 
 ### Industrials (n=7)
-- DE: Deere & Co is scheduled to announce earnings today before market open
 - NOC: Mizuho initiated coverage of Northrop Grumman, naming it one of its favored defense contractors.
 - PH: Parker Hannifin completed its acquisition of CIRCOR Aerospace, a business expected to add about $270 million in annual sales at an adjusted EBITDA margin above 40%.
 - SPCX: SpaceX falls as merger talks advance amid renewed AI-stock selling
 - VRT: Vertiv falls with AI peers as Evercore cuts its price target
-
-### Financial (n=5)
-- BN: Brookfield’s property subsidiary cut the value of its Catalyst Brands investment by 50%, from $551 million to $276 million.
-- HOOD: Wedbush initiated coverage of Robinhood with an Outperform rating and an $80 price target.
-- TFC: Baird upgrade to Outperform lifts Truist 3% pre-market on new CEO turnaround outlook
-- COIN: Coinbase CEO Brian Armstrong says the company repurchased shares this quarter, with about $2 billion remaining under its $4 billion buyback plan as of Sept. 30.
-- CRCL: Wedbush initiated coverage of Circle with a Neutral rating and a $55 price target.
+- HII: HII won a £142 million UK Ministry of Defence contract to supply REMUS 620 unmanned underwater vehicles, its largest international unmanned systems order.
 
 ### Consumer Defensive (n=5)
 - CCEP: The European Commission opened a formal antitrust investigation into CCEP over possible restrictions on cross-border drinks trade and wholesale customer procurement.
@@ -101,8 +94,12 @@ _Generated 2026-11-25T04:54:30.173783-05:00 · export=data/exports/finviz_2026-1
 - FCX: Deutsche Bank cut its Freeport-McMoRan price target to $70 from $80 while maintaining a Buy rating.
 - RIO: Deutsche Bank cut its Rio Tinto price target to 6,900p from 7,600p in its 2027 mining-sector outlook.
 
+### Financial (n=2)
+- BN: Brookfield’s property subsidiary cut the value of its Catalyst Brands investment by 50%, from $551 million to $276 million.
+- TFC: Baird upgrade to Outperform lifts Truist 3% pre-market on new CEO turnaround outlook
+
 ### Real Estate (n=1)
 - CSGP: CoStar extends rally after Friday’s U.S. hotel forecast upgrade
 
-### Utilities (n=1)
-- ES: S&P 500 futures fall as reported US tariff plans deepen the AI-led selloff
+### Energy (n=1)
+- TPL: Texas Pacific Land's approximately $3 billion all-stock EagleRock acquisition would create New Titan Holdings as go-forward public company for both businesses
