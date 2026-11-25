@@ -1,6 +1,6 @@
 {
   "date": "2026-11-25",
-  "generated_at": "2026-11-25T18:17:33.876427-05:00",
+  "generated_at": "2026-11-25T18:18:16.230555-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -837,7 +837,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "live-book poller + today.json (2026-11-25)",
-          "size": 17546899,
+          "size": 17546915,
           "said": "live-book poller + today.json (2026-11-25)",
           "bullets": []
         }
@@ -876,7 +876,7 @@
           "role": "required",
           "status": "OK",
           "reason": "live-book poller + today.json (2026-11-25)",
-          "size": 17546899,
+          "size": 17546915,
           "said": "live-book poller + today.json (2026-11-25)",
           "bullets": []
         },
@@ -2250,6 +2250,59 @@
         }
       ],
       "preview": "5009 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-11-25",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-25T18:18:14.935707-05:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-11-25_stock_book.after-freeze-4.json",
+          "ok": true,
+          "reason": "",
+          "size": 1500413,
+          "preview": "1d BUY BBIO, ANF, VCEL, EWTX, PLX, TGTX, CDNA, IDXX \u00b7 SELL CSIQ, BTDR, MSTR, WRD, NCMI, ALIT, EXFY, TOYO"
+        },
+        {
+          "path": "data/stock_book/2026-11-25_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-11-25_input_health.after-freeze-4.json",
+          "ok": true,
+          "reason": "",
+          "size": 2616,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-11-25_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12443,
+          "preview": "2026-11-25 BUY BBIO, ANF, VCEL, EWTX, PLX, TGTX, CDNA, IDXX \u00b7 SELL CSIQ, BTDR, MSTR, WRD, NCMI, ALIT, EXFY, TOYO"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12443,
+          "preview": "2026-11-25 BUY BBIO, ANF, VCEL, EWTX, PLX, TGTX, CDNA, IDXX \u00b7 SELL CSIQ, BTDR, MSTR, WRD, NCMI, ALIT, EXFY, TOYO"
+        },
+        {
+          "path": "01_daily/2026-11-25_stock_book.after-freeze-4.md",
+          "ok": true,
+          "reason": "",
+          "size": 83954,
+          "preview": "# Stock book \u2014 2026-11-25\n_Generated 2026-11-25T18:17:44.274064-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY BBIO, ANF, VCEL, EWTX, PLX, TGTX, CDNA, IDXX \u00b7 SELL CSIQ, BTDR, MSTR, WRD, NCMI, ALIT, EXFY, TOYO \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-11-25 BUY BBIO, ANF, VCEL, EWTX, PLX, TGTX, CDNA, IDXX \u00b7 SELL CSIQ, BTDR, MSTR, WRD, NCMI, ALIT, EXFY, TOYO \u00b7 2026-11-25 BUY BBIO, ANF, VCEL, EWTX, PLX, TGTX, CDNA, IDXX \u00b7 SELL CSIQ, BTDR, MSTR, WRD, NCMI, ALIT, EXFY, TOYO \u00b7 # Stock book \u2014 2026-11-25\n_Generated 2026-11-25T18:17:44.274064-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
@@ -2311,6 +2364,14 @@
       "path": "data/day_board/2026-11-25.json",
       "at": "2026-11-25T18:17:34-05:00",
       "commit_msg": "auto: land peer_rs [2026-11-25]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "45718745071",
+      "manifest": "research/input_freeze/2026-11-25/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-11-25.json",
+      "at": "2026-11-25T18:18:16-05:00",
+      "commit_msg": "auto: land stock_book [2026-11-25]",
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "45718745071",
       "manifest": "research/input_freeze/2026-11-25/manifest.json"
