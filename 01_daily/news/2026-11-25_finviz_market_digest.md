@@ -1,6 +1,6 @@
 # Finviz homepage market digest — 2026-11-25
 
-**Generated:** 2026-11-25T04:50:50.201304-05:00 (America/New_York)
+**Generated:** 2026-11-25T05:07:34.040471-05:00 (America/New_York)
 **Source:** `live`
 **Banner:** US futures point to a lower open as tech weakness persists ahead of 8:30 AM ET macro data releases
 **Prior close:** SPX —  Nasdaq —  Dow —
