@@ -1,6 +1,6 @@
 {
   "date": "2026-11-25",
-  "generated_at": "2026-11-25T15:11:51.901895-05:00",
+  "generated_at": "2026-11-25T15:38:41.147006-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -964,13 +964,13 @@
       "date": "2026-11-25",
       "ok": true,
       "pushed": true,
-      "at": "2026-11-25T14:59:12.684585-05:00",
+      "at": "2026-11-25T15:12:25.056347-05:00",
       "files": [
         {
           "path": "data/day_board/today.json",
           "ok": true,
           "reason": "",
-          "size": 32376,
+          "size": 39337,
           "preview": "2026-11-25 BUY BBIO, ANF, VCEL, EWTX, PLX, TGTX, CDNA, IDXX \u00b7 SELL CSIQ, BTDR, MSTR, WRD, NCMI, ALIT, EXFY, TOYO"
         },
         {
@@ -981,17 +981,17 @@
           "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
         },
         {
-          "path": "data/day_board/2026-11-25.after-freeze-1.json",
+          "path": "data/day_board/2026-11-25.after-freeze-2.json",
           "ok": true,
           "reason": "",
-          "size": 101466,
+          "size": 110926,
           "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
         },
         {
-          "path": "data/day_board/2026-11-25_tickets.after-freeze-1.json",
+          "path": "data/day_board/2026-11-25_tickets.after-freeze-2.json",
           "ok": true,
           "reason": "",
-          "size": 64822,
+          "size": 74340,
           "preview": "2026-11-25 BUY BBIO, ANF, VCEL, EWTX, PLX, TGTX, CDNA, IDXX \u00b7 SELL CSIQ, BTDR, MSTR, WRD, NCMI, ALIT, EXFY, TOYO"
         },
         {
@@ -1033,7 +1033,7 @@
           "path": "dashboard/factor-mine/today.json",
           "ok": true,
           "reason": "",
-          "size": 64822,
+          "size": 74340,
           "preview": "2026-11-25 BUY BBIO, ANF, VCEL, EWTX, PLX, TGTX, CDNA, IDXX \u00b7 SELL CSIQ, BTDR, MSTR, WRD, NCMI, ALIT, EXFY, TOYO"
         },
         {
@@ -1061,7 +1061,7 @@
           "path": "data/day_board/hold_live_px.json",
           "ok": true,
           "reason": "",
-          "size": 1591,
+          "size": 1542,
           "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
         },
         {
@@ -1199,7 +1199,7 @@
       "date": "2026-11-25",
       "ok": true,
       "pushed": true,
-      "at": "2026-11-25T14:59:24.096733-05:00",
+      "at": "2026-11-25T15:12:36.947773-05:00",
       "files": [
         {
           "path": "03_scoreboard/PAPER_TRADING.md",
@@ -1224,7 +1224,7 @@
       "date": "2026-11-25",
       "ok": true,
       "pushed": true,
-      "at": "2026-11-25T15:11:20.999566-05:00",
+      "at": "2026-11-25T15:38:12.112138-05:00",
       "files": [
         {
           "path": "01_daily/weather/2026-11-25_weather.json",
@@ -1253,6 +1253,13 @@
           "reason": "",
           "size": 9536,
           "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -8.295, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -3.86, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.85, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -2.74, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -4.95, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.36, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': 0.9, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -3.33, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-11-25_weather.after-freeze-3.json",
+          "ok": true,
+          "reason": "",
+          "size": 9536,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -8.295, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -3.86, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.85, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -2.74, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -4.95, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.36, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': 0.9, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -3.33, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -8.295, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -3.86, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.85, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -2.74, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -4.95, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.36, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': 0.9, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -3.33, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-25\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade. \u00b7 weather sectors 11 \u00b7 Basic Materials={'score': -8.295, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -3.86, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.85, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -2.74"
@@ -1263,7 +1270,7 @@
       "date": "2026-11-25",
       "ok": true,
       "pushed": true,
-      "at": "2026-11-25T15:11:31.676774-05:00",
+      "at": "2026-11-25T15:38:22.002970-05:00",
       "files": [
         {
           "path": "data/join/2026-11-25_ranked.csv",
@@ -1281,7 +1288,7 @@
       "date": "2026-11-25",
       "ok": true,
       "pushed": true,
-      "at": "2026-11-25T15:11:37.881898-05:00",
+      "at": "2026-11-25T15:38:27.738026-05:00",
       "files": [
         {
           "path": "data/peers/2026-11-25_peer_rs.csv",
