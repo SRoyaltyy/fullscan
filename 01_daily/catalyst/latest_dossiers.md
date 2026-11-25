@@ -1,23 +1,23 @@
-# CATALYST DAILY — 2026-11-24
+# CATALYST DAILY — 2026-11-25
 
 0/7 dossiers · max=8 · routing=Grok → DeepSeek
 
 ## TARGETS
 - **AVGO** [earnings] earnings AMC
 - **CRM** [earnings] earnings AMC
-- **UEC** [override_captain] OVERRIDE Uranium
-- **UUUU** [override_captain] OVERRIDE Uranium
-- **SLB** [override_captain] OVERRIDE Oil & Gas Equipment & Services
-- **BKR** [override_captain] OVERRIDE Oil & Gas Equipment & Services
-- **KGS** [override_captain] OVERRIDE Oil & Gas Equipment & Services
+- **UNH** [override_captain] OVERRIDE Healthcare Plans
+- **CVS** [override_captain] OVERRIDE Healthcare Plans
+- **OSCR** [override_captain] OVERRIDE Healthcare Plans
+- **PGNY** [override_captain] OVERRIDE Healthcare Plans
+- **SGHC** [override_captain] OVERRIDE Gambling
 
 ## DOSSIERS
 - **AVGO** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 AVGO
 - **CRM** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 CRM
-- **UEC** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 UEC
-- **UUUU** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 UUUU
-- **SLB** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 SLB
-- **BKR** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 BKR
-- **KGS** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 KGS
+- **UNH** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 UNH
+- **CVS** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 CVS
+- **OSCR** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 OSCR
+- **PGNY** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 PGNY
+- **SGHC** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 SGHC
 
 CATALYST_DAILY_FAIL 0/7
