@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-25T05:10:05-05:00",
+  "updated_at": "2026-11-25T05:11:22-05:00",
   "runs": [
     {
       "date": "2026-11-16",
@@ -237,9 +237,9 @@
     },
     {
       "date": "2026-11-25",
-      "workflow": "finviz_scrape",
-      "file": "2026-11-25_finviz_scrape.json",
-      "updated_at": "2026-11-25T05:10:05-05:00"
+      "workflow": "preopen",
+      "file": "2026-11-25_preopen.json",
+      "updated_at": "2026-11-25T05:11:22-05:00"
     }
   ]
 }
