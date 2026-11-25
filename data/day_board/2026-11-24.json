@@ -1,8 +1,8 @@
 {
   "date": "2026-11-24",
-  "generated_at": "2026-11-24T17:01:08.963440-05:00",
+  "generated_at": "2026-11-25T04:54:31.683576-05:00",
   "overall": "PARTIAL",
-  "ranker_ready": false,
+  "ranker_ready": true,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-11-24_predict.md` \u2014 missing",
     "MISSING News judge MD `01_daily/news/2026-11-24_judge.md` \u2014 missing"
@@ -185,7 +185,7 @@
       "inputs_ready": true,
       "n_req_ok": 4,
       "n_req": 9,
-      "n_opt_ok": 2,
+      "n_opt_ok": 3,
       "n_opt": 14,
       "files": [
         {
@@ -323,11 +323,16 @@
           "name": "Sector board JSON",
           "path": "01_daily/sectors/2026-11-24/_board.json",
           "role": "optional",
-          "status": "SKIP",
-          "reason": "optional \u2014 sector board not required",
-          "size": 0,
-          "said": "optional \u2014 sector board not required",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 6085,
+          "said": "0 up / 0 down / 0 flat",
+          "bullets": [
+            "XLB missing",
+            "XLC missing",
+            "XLY missing",
+            "XLP missing"
+          ]
         },
         {
           "key": "qc",
@@ -336,13 +341,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7571,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 16 fail",
+          "size": 7567,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 15 fail",
           "bullets": [
             "general_predict:missing",
             "events:missing",
             "news_judge:missing",
-            "finviz_market_digest:missing"
+            "map_heat_research:missing"
           ]
         },
         {
@@ -352,7 +357,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False missing=['events', 'news_judge', 'map_heat_research', 'general_predict']",
-          "size": 6640,
+          "size": 6635,
           "said": "all_ok=False \u00b7 qc=False \u00b7 grok=False \u00b7 book=False \u00b7 missing events, news_judge, map_heat_research, general_predict",
           "bullets": []
         },
@@ -491,8 +496,15 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "sectors 0 up / 0 down / 0 flat",
+      "bullets": [
+        "XLB missing",
+        "XLC missing",
+        "XLY missing",
+        "XLP missing",
+        "XLE missing",
+        "XLF missing"
+      ]
     },
     {
       "key": "weather",
@@ -662,7 +674,7 @@
       "n_req_ok": 4,
       "n_req": 4,
       "n_opt_ok": 3,
-      "n_opt": 4,
+      "n_opt": 3,
       "files": [
         {
           "key": "in_general",
@@ -679,12 +691,17 @@
           "key": "in_board",
           "name": "Sector board JSON",
           "path": "01_daily/sectors/2026-11-24/_board.json",
-          "role": "optional",
-          "status": "SKIP",
-          "reason": "optional \u2014 sector board not required",
-          "size": 0,
-          "said": "optional \u2014 sector board not required",
-          "bullets": []
+          "role": "input",
+          "status": "OK",
+          "reason": "",
+          "size": 6085,
+          "said": "0 up / 0 down / 0 flat",
+          "bullets": [
+            "XLB missing",
+            "XLC missing",
+            "XLY missing",
+            "XLP missing"
+          ]
         },
         {
           "key": "in_actions",
@@ -966,7 +983,22 @@
       ]
     },
     "general": {},
-    "sectors": {},
+    "sectors": {
+      "said": "0 up / 0 down / 0 flat",
+      "bullets": [
+        "XLB missing",
+        "XLC missing",
+        "XLY missing",
+        "XLP missing",
+        "XLE missing",
+        "XLF missing",
+        "XLV missing",
+        "XLI missing",
+        "XLRE missing",
+        "XLK missing",
+        "XLU missing"
+      ]
+    },
     "news": {},
     "weather": {
       "said": "hostile 11",
@@ -1869,6 +1901,52 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-11-24\n**Generated:** 2026-11-24T17:01:08.036564-05:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks ended mixed as AI names came under pressure on Nvidia governance concerns and China tariff reports ahead of GDP and PCE data\n**Prior close:** SPX -0.50%  Nasdaq -1.48%  Dow +0.85%\n**SPX:** -0.50%  **Nasdaq:** -1.48%  **Dow:** +0.85%\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** NVDA, PFE, INSM, SNY, ANF, DKS, DLTR, ADI, HPE, DELL, WDAY, ADSK, HPQ, NTNX, DE\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-11-25\n**Clock use:** `next_open`"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-11-24",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-25T04:54:30.551128-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-24_finviz_digest.after-freeze-1.json",
+          "ok": true,
+          "reason": "",
+          "size": 97350,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-11-24_finviz_digest.after-freeze-1.md",
+          "ok": true,
+          "reason": "",
+          "size": 10327,
+          "preview": "# Finviz Daily Digest \u2014 2026-11-24\n_Generated 2026-11-25T04:54:30.173783-05:00 \u00b7 export=data/exports/finviz_2026-11-24.csv \u00b7 ticker digests=872 \u00b7 high-signal=203_"
+        },
+        {
+          "path": "data/exports/finviz_2026-11-24.after-freeze-1.csv",
+          "ok": true,
+          "reason": "",
+          "size": 10813862,
+          "preview": "11787 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 10813862,
+          "preview": "11787 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
+        },
+        {
+          "path": "01_daily/news/2026-11-24_finviz_digest_preopen.json",
+          "ok": true,
+          "reason": "",
+          "size": 100081,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-11-24\n_Generated 2026-11-25T04:54:30.173783-05:00 \u00b7 export=data/exports/finviz_2026-11-24.csv \u00b7 ticker digests=872 \u00b7 high-signal=203_ \u00b7 11787 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\" \u00b7 11787 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
     }
   ],
   "href": {
@@ -2018,6 +2096,38 @@
       "path": "data/exports/finviz_2026-11-24.csv",
       "at": "2026-11-25T04:54:05-05:00",
       "commit_msg": "auto: land finviz export [2026-11-24]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "45588363324",
+      "manifest": "research/input_freeze/2026-11-24/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-11-24_grok_review.json",
+      "at": "2026-11-25T04:54:32-05:00",
+      "commit_msg": "auto: land finviz_digest [2026-11-24]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "45588363324",
+      "manifest": "research/input_freeze/2026-11-24/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-11-24_preopen_qc.json",
+      "at": "2026-11-25T04:54:32-05:00",
+      "commit_msg": "auto: land finviz_digest [2026-11-24]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "45588363324",
+      "manifest": "research/input_freeze/2026-11-24/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-11-24_preopen_status.json",
+      "at": "2026-11-25T04:54:32-05:00",
+      "commit_msg": "auto: land finviz_digest [2026-11-24]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "45588363324",
+      "manifest": "research/input_freeze/2026-11-24/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-11-24.json",
+      "at": "2026-11-25T04:54:32-05:00",
+      "commit_msg": "auto: land finviz_digest [2026-11-24]",
       "workflow": "Finviz ALL (GH-hosted Elite)",
       "run_id": "45588363324",
       "manifest": "research/input_freeze/2026-11-24/manifest.json"
