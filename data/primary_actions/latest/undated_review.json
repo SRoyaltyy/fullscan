@@ -1,218 +1,722 @@
 [
   {
-    "title": "H.R.8454",
-    "url": "https://www.congress.gov/bill/119th-congress/house-bill/8454",
-    "native_id": "H.R.8454",
+    "title": "YALE-Direct Recalls YATORP Youth All-Terrain Vehicles (ATVs) Due to Risk of Serious Injury or Death from Crash Hazard; Violate Mandatory Standard for ATVs",
+    "url": "https://www.cpsc.gov/Recalls/2027/YALE-Direct-Recalls-YATORP-Youth-All-Terrain-Vehicles-ATVs-Due-to-Risk-of-Serious-Injury-or-Death-from-Crash-Hazard-Violate-Mandatory-Standard-for-ATVs",
+    "native_id": "https://www.cpsc.gov/_9fde3e7e-d680-4a36-b83c-0bbda97e2f0e",
+    "published_at": null,
+    "published_raw": "November 25, 2026",
+    "summary": "The recalled youth ATVs violate the federal mandatory ATV safety standard posing a risk of serious injury or death. The youth ATVs fail to meet mechanical suspension and maximum speed requirements for ATVs intended for children ages six and older, posing a high-speed crash hazard. Additionally, the youth ATVs are missing safety reflectors, reducing visibility of the youth ATVs to other vehicles, posing a deadly crash hazard. The youth ATVs lack a mandated CPSC-approved ATV action plan, which is required for any manufacturer or distributor to manufacture, import, sell, or distribute any newly assembled or unassembled ATV in the United States. ATV action plans are required to promote ATV safety, including free rider training, dissemination of safety information, age recommendations and other safety measures.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-99343b5112",
+    "n": 12610,
+    "first_seen": "2026-11-25T22:35:05.627821+00:00",
+    "last_seen": "2026-11-25T22:35:05.627821+00:00",
+    "source_ids": [
+      "us-cpsc-99343b5112"
+    ]
+  },
+  {
+    "title": "Justforjoyful Recalls Farm Animals Refrigerator Magnets Due to Risk of Serious Injury from Lead and Phthalate Exposure; Violate Federal Lead Content and Phthalates Bans",
+    "url": "https://www.cpsc.gov/Recalls/2027/Justforjoyful-Recalls-Farm-Animals-Refrigerator-Magnets-Due-to-Risk-of-Serious-Injury-from-Lead-and-Phthalate-Exposure-Violate-Federal-Lead-Content-and-Phthalates-Bans",
+    "native_id": "https://www.cpsc.gov/_a1e586e8-5648-4997-818b-c2e5652e157c",
+    "published_at": null,
+    "published_raw": "November 25, 2026",
+    "summary": "The refrigerator magnets contain levels of lead that exceed the federal lead content ban and levels of phthalates that exceed the federal phthalates ban . Lead and phthalates are toxic if ingested by young children and can cause adverse health issues.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-99343b5112",
+    "n": 12611,
+    "first_seen": "2026-11-25T22:35:05.627821+00:00",
+    "last_seen": "2026-11-25T22:35:05.627821+00:00",
+    "source_ids": [
+      "us-cpsc-99343b5112"
+    ]
+  },
+  {
+    "title": "HOMEAL US Recalls Portable Bed Rails Due to Risk of Serious Injury or Death from Entrapment and Asphyxiation; Violate Mandatory Standard for Adult Portable Bed Rails",
+    "url": "https://www.cpsc.gov/Recalls/2027/HOMEAL-US-Recalls-Portable-Bed-Rails-Due-to-Risk-of-Serious-Injury-or-Death-from-Entrapment-and-Asphyxiation-Violate-Mandatory-Standard-for-Adult-Portable-Bed-Rails",
+    "native_id": "https://www.cpsc.gov/_4d563de6-1620-41e6-b521-f5576813b3a4",
+    "published_at": null,
+    "published_raw": "November 25, 2026",
+    "summary": "The recalled bed rails violate the mandatory standard for adult portable bed rails because when the bed rails are attached to a bed, users can become entrapped within the bed rail or between the bed rail and the side of the mattress, posing a serious entrapment hazard and risk of death by asphyxiation.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-99343b5112",
+    "n": 12612,
+    "first_seen": "2026-11-25T22:35:05.627821+00:00",
+    "last_seen": "2026-11-25T22:35:05.627821+00:00",
+    "source_ids": [
+      "us-cpsc-99343b5112"
+    ]
+  },
+  {
+    "title": "YY Vertical Recalls VerticalBase Hangboard Doorway Mount Holders Due to Risk of Serious Injury or Death from Fall Hazard",
+    "url": "https://www.cpsc.gov/Recalls/2027/YY-Vertical-Recalls-VerticalBase-Hangboard-Doorway-Mount-Holders-Due-to-Risk-of-Serious-Injury-or-Death-from-Fall-Hazard",
+    "native_id": "https://www.cpsc.gov/_eea7d794-62c0-4bd4-89eb-33dbcc981701",
+    "published_at": null,
+    "published_raw": "November 25, 2026",
+    "summary": "The expansion system can lose pressure over time, causing the recalled doorframe mount to detach during use, posing a risk of serious injury or death from a fall hazard.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-99343b5112",
+    "n": 12613,
+    "first_seen": "2026-11-25T22:35:05.627821+00:00",
+    "last_seen": "2026-11-25T22:35:05.627821+00:00",
+    "source_ids": [
+      "us-cpsc-99343b5112"
+    ]
+  },
+  {
+    "title": "YiHe-US Recalls Easymake Bed Rails Due to Risk of Serious Injury or Death from Entrapment and Asphyxiation; Violate Mandatory Standard for Adult Portable Bed Rails",
+    "url": "https://www.cpsc.gov/Recalls/2027/YiHe-US-Recalls-Easymake-Bed-Rails-Due-to-Risk-of-Serious-Injury-or-Death-from-Entrapment-and-Asphyxiation-Violate-Mandatory-Standard-for-Adult-Portable-Bed-Rails",
+    "native_id": "https://www.cpsc.gov/_aeff0b61-1107-406d-8cc1-6052039405bc",
+    "published_at": null,
+    "published_raw": "November 25, 2026",
+    "summary": "The recalled bed rails violate the mandatory standard for adult portable bed rails because users can become entrapped within the bed rail or between the bed rail and the side of the mattress, posing a serious entrapment hazard and risk of death by asphyxiation. In addition, the bed rails do not bear the required hazard warning labels.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-99343b5112",
+    "n": 12614,
+    "first_seen": "2026-11-25T22:35:05.627821+00:00",
+    "last_seen": "2026-11-25T22:35:05.627821+00:00",
+    "source_ids": [
+      "us-cpsc-99343b5112"
+    ]
+  },
+  {
+    "title": "Zero Motorcycles Recalls Zero Off-Road Motorcycles Due to Risk of Serious Injury or Death from Crash Hazard",
+    "url": "https://www.cpsc.gov/Recalls/2027/Zero-Motorcycles-Recalls-Zero-Off-Road-Motorcycles-Due-to-Risk-of-Serious-Injury-or-Death-from-Crash-Hazard",
+    "native_id": "https://www.cpsc.gov/_72bc9f11-5ef4-43b7-891f-89070c891033",
+    "published_at": null,
+    "published_raw": "November 25, 2026",
+    "summary": "The recalled motorcycles’ cruise control can malfunction and cause power to increase, posing a risk of serious injury or death from a crash hazard.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-99343b5112",
+    "n": 12615,
+    "first_seen": "2026-11-25T22:35:05.627821+00:00",
+    "last_seen": "2026-11-25T22:35:05.627821+00:00",
+    "source_ids": [
+      "us-cpsc-99343b5112"
+    ]
+  },
+  {
+    "title": "Zenara Recalls 4-in-1 Plug in Steadfast Haven Carbon Monoxide (CO) and Natural Gas Detectors Due to Risk of Serious Injury or Death from Failure to Alert Consumers to Hazardous Levels of Gas and CO",
+    "url": "https://www.cpsc.gov/Recalls/2027/Zenara-Recalls-4-in-1-Plug-in-Steadfast-Haven-Carbon-Monoxide-CO-and-Natural-Gas-Detectors-Due-to-Risk-of-Serious-Injury-or-Death-from-Failure-to-Alert-Consumers-to-Hazardous-Levels-of-Gas-and-CO",
+    "native_id": "https://www.cpsc.gov/_04a9bce2-4bb5-4e05-8936-dab2a2b846e9",
+    "published_at": null,
+    "published_raw": "November 25, 2026",
+    "summary": "The detectors can fail to alert consumers to the presence of hazardous levels of CO posing a risk of serious injury or death.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-99343b5112",
+    "n": 12616,
+    "first_seen": "2026-11-25T22:35:05.627821+00:00",
+    "last_seen": "2026-11-25T22:35:05.627821+00:00",
+    "source_ids": [
+      "us-cpsc-99343b5112"
+    ]
+  },
+  {
+    "title": "FCC Authorizes 1 Million Satellites for Data Centers in Space",
+    "url": "https://www.fcc.gov/edoc/427572",
+    "native_id": "427572",
     "published_at": null,
     "published_raw": "",
-    "summary": "To provide for the transfer of administrative jurisdiction over certain Federal land in the State of California, and for other purposes.",
+    "summary": "'Starmind' Satellites to Support America's Booming Super Intelligence Economy",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congress.gov legislative status",
+      "issuer": "Federal Communications Commission — News Releases",
       "jurisdiction": "US",
-      "family": "legislative_procedure"
+      "family": "telecom_rules_and_licences"
     },
-    "primary_source_id": "us-congress-76128ee9ff",
-    "n": 12494,
-    "first_seen": "2026-11-25T09:53:11.156018+00:00",
-    "last_seen": "2026-11-25T09:53:11.156018+00:00",
+    "primary_source_id": "us-fcc-685c5e7dd2",
+    "n": 12617,
+    "first_seen": "2026-11-25T22:35:05.627821+00:00",
+    "last_seen": "2026-11-25T22:35:05.627821+00:00",
     "source_ids": [
-      "us-congress-76128ee9ff"
+      "us-fcc-685c5e7dd2"
     ]
   },
   {
-    "title": "H.R.7834",
-    "url": "https://www.congress.gov/bill/119th-congress/house-bill/7834",
-    "native_id": "H.R.7834",
+    "title": "Satellite Communications Services - SES",
+    "url": "https://www.fcc.gov/edoc/427557",
+    "native_id": "427557",
     "published_at": null,
     "published_raw": "",
-    "summary": "Safe Cloud Storage Act",
+    "summary": ".",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congress.gov legislative status",
+      "issuer": "Federal Communications Commission — Public Notices",
       "jurisdiction": "US",
-      "family": "legislative_procedure"
+      "family": "telecom_rules_and_licences"
     },
-    "primary_source_id": "us-congress-76128ee9ff",
-    "n": 12495,
-    "first_seen": "2026-11-25T09:53:11.156018+00:00",
-    "last_seen": "2026-11-25T09:53:11.156018+00:00",
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 12618,
+    "first_seen": "2026-11-25T22:35:05.627821+00:00",
+    "last_seen": "2026-11-25T22:35:05.627821+00:00",
     "source_ids": [
-      "us-congress-76128ee9ff"
+      "us-fcc-e95ecda3bb"
     ]
   },
   {
-    "title": "H.R.5254",
-    "url": "https://www.congress.gov/bill/119th-congress/house-bill/5254",
-    "native_id": "H.R.5254",
+    "title": "Wireless Telecommunications Bureau Market-Based Applications Accepted for Filing",
+    "url": "https://www.fcc.gov/edoc/427503",
+    "native_id": "427503",
     "published_at": null,
     "published_raw": "",
-    "summary": "Gateway Partnership Act",
+    "summary": ".",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congress.gov legislative status",
+      "issuer": "Federal Communications Commission — Public Notices",
       "jurisdiction": "US",
-      "family": "legislative_procedure"
+      "family": "telecom_rules_and_licences"
     },
-    "primary_source_id": "us-congress-76128ee9ff",
-    "n": 12496,
-    "first_seen": "2026-11-25T09:53:11.156018+00:00",
-    "last_seen": "2026-11-25T09:53:11.156018+00:00",
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 12619,
+    "first_seen": "2026-11-25T22:35:05.627821+00:00",
+    "last_seen": "2026-11-25T22:35:05.627821+00:00",
     "source_ids": [
-      "us-congress-76128ee9ff"
+      "us-fcc-e95ecda3bb"
     ]
   },
   {
-    "title": "H.R.2400",
-    "url": "https://www.congress.gov/bill/119th-congress/house-bill/2400",
-    "native_id": "H.R.2400",
+    "title": "Public Safety and Homeland Security Bureau Market-Based Applications Accepted for Filing",
+    "url": "https://www.fcc.gov/edoc/427502",
+    "native_id": "427502",
     "published_at": null,
     "published_raw": "",
-    "summary": "Pit River Land Transfer Act of 2026",
+    "summary": ".",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congress.gov legislative status",
+      "issuer": "Federal Communications Commission — Public Notices",
       "jurisdiction": "US",
-      "family": "legislative_procedure"
+      "family": "telecom_rules_and_licences"
     },
-    "primary_source_id": "us-congress-76128ee9ff",
-    "n": 12497,
-    "first_seen": "2026-11-25T09:53:11.156018+00:00",
-    "last_seen": "2026-11-25T09:53:11.156018+00:00",
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 12620,
+    "first_seen": "2026-11-25T22:35:05.627821+00:00",
+    "last_seen": "2026-11-25T22:35:05.627821+00:00",
     "source_ids": [
-      "us-congress-76128ee9ff"
+      "us-fcc-e95ecda3bb"
     ]
   },
   {
-    "title": "H.R.2302",
-    "url": "https://www.congress.gov/bill/119th-congress/house-bill/2302",
-    "native_id": "H.R.2302",
+    "title": "Public Safety and Homeland Security Bureau Market-Based Applications Action",
+    "url": "https://www.fcc.gov/edoc/427504",
+    "native_id": "427504",
     "published_at": null,
     "published_raw": "",
-    "summary": "Shingle Springs Band of Miwok Indians Land Transfer Act of 2025",
+    "summary": ".",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congress.gov legislative status",
+      "issuer": "Federal Communications Commission — Public Notices",
       "jurisdiction": "US",
-      "family": "legislative_procedure"
+      "family": "telecom_rules_and_licences"
     },
-    "primary_source_id": "us-congress-76128ee9ff",
-    "n": 12498,
-    "first_seen": "2026-11-25T09:53:11.156018+00:00",
-    "last_seen": "2026-11-25T09:53:11.156018+00:00",
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 12621,
+    "first_seen": "2026-11-25T22:35:05.627821+00:00",
+    "last_seen": "2026-11-25T22:35:05.627821+00:00",
     "source_ids": [
-      "us-congress-76128ee9ff"
+      "us-fcc-e95ecda3bb"
     ]
   },
   {
-    "title": "Parliamentary Vice-Minister ISHII Holds Meeting with H.E. Mrs. Marieta Petrova ARABADJIEVA de Descalzi, Ambassador of the Republic of Bulgaria to Japan",
-    "url": "https://www.meti.go.jp/english/press/2026/11/20261124002.html",
-    "native_id": "https://www.meti.go.jp/english/press/2026/11/20261124002.html",
+    "title": "Wireless Telecommunications Bureau Market-Based Applications Action",
+    "url": "https://www.fcc.gov/edoc/427505",
+    "native_id": "427505",
     "published_at": null,
-    "published_raw": null,
-    "summary": "",
+    "published_raw": "",
+    "summary": ".",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Japan Ministry of Economy Trade and Industry",
-      "jurisdiction": "JP",
-      "family": "trade_and_industry_policy"
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
     },
-    "primary_source_id": "jp-meti-index",
-    "n": 12536,
-    "first_seen": "2026-11-25T09:53:11.156018+00:00",
-    "last_seen": "2026-11-25T09:53:11.156018+00:00",
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 12622,
+    "first_seen": "2026-11-25T22:35:05.627821+00:00",
+    "last_seen": "2026-11-25T22:35:05.627821+00:00",
     "source_ids": [
-      "jp-meti-index"
+      "us-fcc-e95ecda3bb"
     ]
   },
   {
-    "title": "Cabinet Approves the Cabinet Order for Stipulating the Enforcement Date of the Act for Partially Amending the Electricity Business Act and the Cabinet Order for the Arrangement of Relevant Cabinet Orders Accompanying the Enforcement of the Act for Partially Amending the Electricity Business Act",
-    "url": "https://www.meti.go.jp/english/press/2026/11/20261124001.html",
-    "native_id": "https://www.meti.go.jp/english/press/2026/11/20261124001.html",
+    "title": "Wireless Telecommunications Bureau Site-By-Site Action",
+    "url": "https://www.fcc.gov/edoc/427513",
+    "native_id": "427513",
     "published_at": null,
-    "published_raw": null,
-    "summary": "",
+    "published_raw": "",
+    "summary": ".",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Japan Ministry of Economy Trade and Industry",
-      "jurisdiction": "JP",
-      "family": "trade_and_industry_policy"
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
     },
-    "primary_source_id": "jp-meti-index",
-    "n": 12537,
-    "first_seen": "2026-11-25T09:53:11.156018+00:00",
-    "last_seen": "2026-11-25T09:53:11.156018+00:00",
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 12623,
+    "first_seen": "2026-11-25T22:35:05.627821+00:00",
+    "last_seen": "2026-11-25T22:35:05.627821+00:00",
     "source_ids": [
-      "jp-meti-index"
+      "us-fcc-e95ecda3bb"
     ]
   },
   {
-    "title": "State Minister MIYAMOTO Holds Meeting with Mr. Daniel Mas, Minister of Economy, Development, and Tourism and Minister of Mining of the Republic of Chile",
-    "url": "https://www.meti.go.jp/english/press/2026/11/20261120004.html",
-    "native_id": "https://www.meti.go.jp/english/press/2026/11/20261120004.html",
+    "title": "Public Safety and Homeland Security Bureau Site-By-Site Accepted for Filing",
+    "url": "https://www.fcc.gov/edoc/427510",
+    "native_id": "427510",
     "published_at": null,
-    "published_raw": null,
-    "summary": "",
+    "published_raw": "",
+    "summary": ".",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Japan Ministry of Economy Trade and Industry",
-      "jurisdiction": "JP",
-      "family": "trade_and_industry_policy"
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
     },
-    "primary_source_id": "jp-meti-index",
-    "n": 12538,
-    "first_seen": "2026-11-25T09:53:11.156018+00:00",
-    "last_seen": "2026-11-25T09:53:11.156018+00:00",
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 12624,
+    "first_seen": "2026-11-25T22:35:05.627821+00:00",
+    "last_seen": "2026-11-25T22:35:05.627821+00:00",
     "source_ids": [
-      "jp-meti-index"
+      "us-fcc-e95ecda3bb"
     ]
   },
   {
-    "title": "Release of the Joint Statement on Japan-U.S. Seabed Mineral Resource Development",
-    "url": "https://www.meti.go.jp/english/press/2026/11/20261112002.html",
-    "native_id": "https://www.meti.go.jp/english/press/2026/11/20261112002.html",
+    "title": "Wireless Telecommunications Bureau Site-By-Site Accepted for Filing",
+    "url": "https://www.fcc.gov/edoc/427511",
+    "native_id": "427511",
     "published_at": null,
-    "published_raw": null,
-    "summary": "",
+    "published_raw": "",
+    "summary": ".",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Japan Ministry of Economy Trade and Industry",
-      "jurisdiction": "JP",
-      "family": "trade_and_industry_policy"
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
     },
-    "primary_source_id": "jp-meti-index",
-    "n": 12539,
-    "first_seen": "2026-11-25T09:53:11.156018+00:00",
-    "last_seen": "2026-11-25T09:53:11.156018+00:00",
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 12625,
+    "first_seen": "2026-11-25T22:35:05.627821+00:00",
+    "last_seen": "2026-11-25T22:35:05.627821+00:00",
     "source_ids": [
-      "jp-meti-index"
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Public Safety and Homeland Security Bureau Site-By-Site Action",
+    "url": "https://www.fcc.gov/edoc/427512",
+    "native_id": "427512",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 12626,
+    "first_seen": "2026-11-25T22:35:05.627821+00:00",
+    "last_seen": "2026-11-25T22:35:05.627821+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Wireless Telecommunications Bureau Assignment of License Authorization Applications, Transfer of Control of Licensee Applications, and De Facto Transfer Lease Applications, and Designated Entity Reportable Eligibility Event Applications Accepted for",
+    "url": "https://www.fcc.gov/edoc/427530",
+    "native_id": "427530",
+    "published_at": null,
+    "published_raw": "",
+    "summary": "Filing",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 12627,
+    "first_seen": "2026-11-25T22:35:05.627821+00:00",
+    "last_seen": "2026-11-25T22:35:05.627821+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Public Safety and Homeland Security Bureau Assignment of License Authorization Applications, Transfer of Control of Licensee Applications, and De Facto Transfer Lease Applications, and Designated Entity Reportable Eligibility Event Applications Accepted",
+    "url": "https://www.fcc.gov/edoc/427533",
+    "native_id": "427533",
+    "published_at": null,
+    "published_raw": "",
+    "summary": "For Filing",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 12628,
+    "first_seen": "2026-11-25T22:35:05.627821+00:00",
+    "last_seen": "2026-11-25T22:35:05.627821+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Wireless Telecommunications Bureau Market Based Licenses Termination Pending Public Notice",
+    "url": "https://www.fcc.gov/edoc/427541",
+    "native_id": "427541",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 12629,
+    "first_seen": "2026-11-25T22:35:05.627821+00:00",
+    "last_seen": "2026-11-25T22:35:05.627821+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Satellite Communications Services - SES",
+    "url": "https://www.fcc.gov/edoc/427558",
+    "native_id": "427558",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 12630,
+    "first_seen": "2026-11-25T22:35:05.627821+00:00",
+    "last_seen": "2026-11-25T22:35:05.627821+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Wireless Telecommunications Bureau Assignment of License Authorization Applications, Transfer of Control of Licensee Applications, De Facto Transfer Lease Applications and Spectrum Manager Lease Notifications, Designated Entity Reportable Eligibility",
+    "url": "https://www.fcc.gov/edoc/427535",
+    "native_id": "427535",
+    "published_at": null,
+    "published_raw": "",
+    "summary": "Event Applications, And Designated Entity Annual Reports Action",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 12631,
+    "first_seen": "2026-11-25T22:35:05.627821+00:00",
+    "last_seen": "2026-11-25T22:35:05.627821+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Wireless Telecommunications Bureau Site Based Licenses Termination Pending Public Notice",
+    "url": "https://www.fcc.gov/edoc/427544",
+    "native_id": "427544",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 12632,
+    "first_seen": "2026-11-25T22:35:05.627821+00:00",
+    "last_seen": "2026-11-25T22:35:05.627821+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Public Safety and Homeland Security Bureau Market Based Licenses Termination Pending Public Notice",
+    "url": "https://www.fcc.gov/edoc/427546",
+    "native_id": "427546",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 12633,
+    "first_seen": "2026-11-25T22:35:05.627821+00:00",
+    "last_seen": "2026-11-25T22:35:05.627821+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Public Safety and Homeland Security Bureau Site Based Licenses Termination Pending Public Notice",
+    "url": "https://www.fcc.gov/edoc/427548",
+    "native_id": "427548",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 12634,
+    "first_seen": "2026-11-25T22:35:05.627821+00:00",
+    "last_seen": "2026-11-25T22:35:05.627821+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Applications",
+    "url": "https://www.fcc.gov/edoc/427567",
+    "native_id": "427567",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 12635,
+    "first_seen": "2026-11-25T22:35:05.627821+00:00",
+    "last_seen": "2026-11-25T22:35:05.627821+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Pleadings",
+    "url": "https://www.fcc.gov/edoc/427569",
+    "native_id": "427569",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 12636,
+    "first_seen": "2026-11-25T22:35:05.627821+00:00",
+    "last_seen": "2026-11-25T22:35:05.627821+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Actions",
+    "url": "https://www.fcc.gov/edoc/427568",
+    "native_id": "427568",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 12637,
+    "first_seen": "2026-11-25T22:35:05.627821+00:00",
+    "last_seen": "2026-11-25T22:35:05.627821+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Public Safety and Homeland Security Bureau Assignment of License authorization Applications, Transfer of Control of Licensee Applications, De Facto Transfer Lease Applications and Spectrum Manager Lease Notifications, Designated Entity Reportable",
+    "url": "https://www.fcc.gov/edoc/427538",
+    "native_id": "427538",
+    "published_at": null,
+    "published_raw": "",
+    "summary": "Eligibility Event Applications, And Designated Entity Annual Reports Action",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 12638,
+    "first_seen": "2026-11-25T22:35:05.627821+00:00",
+    "last_seen": "2026-11-25T22:35:05.627821+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "How should investors evaluate performance?",
+    "url": "https://www.fca.org.uk/news/blogs/how-should-investors-evaluate-performance",
+    "native_id": "178081",
+    "published_at": null,
+    "published_raw": "Wednesday, November 25, 2026 - 14:45",
+    "summary": "Why fund performance needs a detailed review in concentrated marketsA fund’s headline return tells only part of the story. Before selling a fund that has underperformed its benchmark, investors should ask why and whether it still meets their needs.This matters when a small group of companies dominate stock market returns. A fund that spreads its investments more widely may underperform a concentrated index. That does not necessarily mean its manager has made poor decisions. Equally, diversification should not become an excuse for weak stock picking.There could also be a big impact on pensions, which play a vital role in people’s financial futures. We want pension schemes to deliver long-term value for savers. Firms and asset owners should look at the bigger picture, including a fund manager’s stated investment objective, strategy and style.How market concentration makes a real difference to returnsWhen a handful of stocks drive market performance, a manager’s decision on how much to invest in them can have a significant effect on returns.The ‘Magnificent Seven’ (Alphabet, Amazon, Apple, Meta, Microsoft, NVIDIA and Tesla) illustrate the point. Together, they made up about 34% of the",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Financial Conduct Authority",
+      "jurisdiction": "UK",
+      "family": "financial_enforcement"
+    },
+    "primary_source_id": "uk-fca-7b9977ec8e",
+    "n": 12657,
+    "first_seen": "2026-11-25T22:35:05.627821+00:00",
+    "last_seen": "2026-11-25T22:35:05.627821+00:00",
+    "source_ids": [
+      "uk-fca-7b9977ec8e"
     ]
   }
 ]
