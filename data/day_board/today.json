@@ -1,6 +1,6 @@
 {
   "date": "2026-11-25",
-  "generated_at": "2026-11-25T05:12:33.444337-05:00",
+  "generated_at": "2026-11-25T05:13:04.242895-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "map_heat",
-      "title": "Map heat morning overlay",
-      "date": "2026-11-25",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-25T05:09:58.417189-05:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-11-25_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 276312,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-11-25_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 18339,
-          "preview": "# MAP HEAT \u2014 2026-11-25\nExport `finviz_2026-11-25.csv` \u00b7 11786 names \u00b7 generated 2026-11-25T05:09:58.312210-05:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-11-25\nExport `finviz_2026-11-25.csv` \u00b7 11786 names \u00b7 generated 2026-11-25T05:09:58.312210-05:00"
-    },
     {
       "key": "finviz_digest",
       "title": "Finviz digest",
@@ -200,6 +175,31 @@
         }
       ],
       "preview": "2602 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CL, CBRL, SLDE, AES, POWW \u00b7 2602 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ALGT, SO, POWW, SLDE, AES"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-11-25",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-25T05:13:03.015859-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-25_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 6677524,
+          "preview": "raw=9337 usable=662 single=526 \u00b7 OPEC+ Faces Its Most Consequential Supply Decision of the Year - Bloomberg.com | Canadian dollar hits 11-day high as investors raise BoC rate hike bets - Reuters | Bank of Canada Fades Core Inflation, Switches Gauges - Bloomberg.com | China Halts Critical Minerals Ban to Maintain Truce With US - Bloomberg.com | TSMC unit seeks Texas property tax limit for proposed $22.6 billion chip making "
+        },
+        {
+          "path": "01_daily/news/2026-11-25_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 11603,
+          "preview": "# News Parse v2 \u2014 2026-11-25T05:13:02.233576-05:00\nWindow\u224848h | news_mode=on | raw=9337 | usable=662 | single_name=526 | noise_dropped=7893\nusable polarity={'+': 50, '-': 120, 'mixed': 1, 'neutral': 491}"
+        }
+      ],
+      "preview": "raw=9337 usable=662 single=526 \u00b7 OPEC+ Faces Its Most Consequential Supply Decision of the Year - Bloomberg.com | Canadian dollar hits 11-day high as investors raise BoC rate hike bets - Reuters | Bank of Canada Fades Core Inflation, Switches Gauges - Bloomberg.com | China Halts Critical Minerals Ban to Maintain Truce With US - Bloomberg.com | TSMC unit seeks Texas property tax limit for proposed $22.6 billion chip making  \u00b7 # News Parse v2 \u2014 2026-11-25T05:13:02.233576-05:00\nWindow\u224848h | news_mode=on | raw=9337 | usable=662 | single_name=526 | noise_dropped=7893\nusable polarity={'+': 50, '-': 120, 'mixed': 1, 'neutral': 491}"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
