@@ -2150,6 +2150,14 @@
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "45690634670",
       "manifest": "research/input_freeze/2026-11-25/manifest.json"
+    },
+    {
+      "path": "01_daily/_channel1/2026-11-25_predict.json",
+      "at": "2026-11-25T15:13:52-05:00",
+      "commit_msg": "auto: stock book leftover sweep",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "45690634670",
+      "manifest": "research/input_freeze/2026-11-25/manifest.json"
     }
   ]
 }
