@@ -1,15 +1,16 @@
 {
-  "date": "2026-11-24",
-  "generated_at": "2026-11-25T04:54:31.683576-05:00",
+  "date": "2026-11-25",
+  "generated_at": "2026-11-25T05:07:25.729639-05:00",
   "overall": "PARTIAL",
-  "ranker_ready": true,
+  "ranker_ready": false,
   "counts": {
-    "ok": 6,
-    "partial": 1,
-    "fail": 1,
+    "ok": 2,
+    "partial": 2,
+    "fail": 4,
     "n": 8
   },
   "dates": [
+    "2026-11-25",
     "2026-11-24",
     "2026-11-23",
     "2026-11-20",
@@ -48,9 +49,8 @@
     "2026-10-07",
     "2026-10-06",
     "2026-10-05",
-    "2026-10-02",
-    "2026-10-01"
+    "2026-10-02"
   ],
-  "href": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/day_board/2026-11-24.json",
+  "href": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/day_board/2026-11-25.json",
   "pages": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
 }
