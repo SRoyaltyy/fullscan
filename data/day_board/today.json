@@ -1,6 +1,6 @@
 {
   "date": "2026-11-25",
-  "generated_at": "2026-11-25T18:17:14.982480-05:00",
+  "generated_at": "2026-11-25T18:17:24.713545-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -88,24 +88,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "peer_rs",
-      "title": "Peer RS",
-      "date": "2026-11-25",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-25T09:14:10.189578-05:00",
-      "files": [
-        {
-          "path": "data/peers/2026-11-25_peer_rs.csv",
-          "ok": true,
-          "reason": "",
-          "size": 810435,
-          "preview": "5009 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-        }
-      ],
-      "preview": "5009 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-    },
     {
       "key": "stock_book",
       "title": "Stock book + green",
@@ -756,6 +738,31 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -8.295, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -3.86, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.85, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -2.74, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -4.95, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.36, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': 0.9, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -3.33, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-25\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade. \u00b7 weather sectors 11 \u00b7 Basic Materials={'score': -8.295, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -3.86, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.85, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -2.74"
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-11-25",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-25T18:17:23.415816-05:00",
+      "files": [
+        {
+          "path": "data/join/2026-11-25_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2254384,
+          "preview": "5882 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 LLY, ONC, SUPN, REGN, ASND"
+        },
+        {
+          "path": "data/join/2026-11-25_ranked.after-freeze-1.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2254384,
+          "preview": "5882 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 LLY, ONC, SUPN, ASND, REGN"
+        }
+      ],
+      "preview": "5882 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 LLY, ONC, SUPN, REGN, ASND \u00b7 5882 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 LLY, ONC, SUPN, ASND, REGN"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
