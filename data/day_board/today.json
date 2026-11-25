@@ -1,6 +1,6 @@
 {
   "date": "2026-11-25",
-  "generated_at": "2026-11-25T09:18:31.109658-05:00",
+  "generated_at": "2026-11-25T09:18:45.443130-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -81,31 +81,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "news_parse",
-      "title": "News parse",
-      "date": "2026-11-25",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-25T05:13:12.162458-05:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-11-25_parsed.json",
-          "ok": true,
-          "reason": "",
-          "size": 6677524,
-          "preview": "raw=9337 usable=662 single=526 \u00b7 OPEC+ Faces Its Most Consequential Supply Decision of the Year - Bloomberg.com | Canadian dollar hits 11-day high as investors raise BoC rate hike bets - Reuters | Bank of Canada Fades Core Inflation, Switches Gauges - Bloomberg.com | China Halts Critical Minerals Ban to Maintain Truce With US - Bloomberg.com | TSMC unit seeks Texas property tax limit for proposed $22.6 billion chip making "
-        },
-        {
-          "path": "01_daily/news/2026-11-25_parsed.md",
-          "ok": true,
-          "reason": "",
-          "size": 11603,
-          "preview": "# News Parse v2 \u2014 2026-11-25T05:13:02.233576-05:00\nWindow\u224848h | news_mode=on | raw=9337 | usable=662 | single_name=526 | noise_dropped=7893\nusable polarity={'+': 50, '-': 120, 'mixed': 1, 'neutral': 491}"
-        }
-      ],
-      "preview": "raw=9337 usable=662 single=526 \u00b7 OPEC+ Faces Its Most Consequential Supply Decision of the Year - Bloomberg.com | Canadian dollar hits 11-day high as investors raise BoC rate hike bets - Reuters | Bank of Canada Fades Core Inflation, Switches Gauges - Bloomberg.com | China Halts Critical Minerals Ban to Maintain Truce With US - Bloomberg.com | TSMC unit seeks Texas property tax limit for proposed $22.6 billion chip making  \u00b7 # News Parse v2 \u2014 2026-11-25T05:13:02.233576-05:00\nWindow\u224848h | news_mode=on | raw=9337 | usable=662 | single_name=526 | noise_dropped=7893\nusable polarity={'+': 50, '-': 120, 'mixed': 1, 'neutral': 491}"
-    },
     {
       "key": "news_actions",
       "title": "News actions (no LLM)",
@@ -301,6 +276,241 @@
         }
       ],
       "preview": "1d BUY BBIO, ANF, VCEL, EWTX, PLX, TGTX, CDNA, IDXX \u00b7 SELL CSIQ, BTDR, MSTR, WRD, NCMI, ALIT, EXFY, TOYO \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-11-25 BUY BBIO, ANF, VCEL, EWTX, PLX, TGTX, CDNA, IDXX \u00b7 SELL CSIQ, BTDR, MSTR, WRD, NCMI, ALIT, EXFY, TOYO \u00b7 2026-11-25 BUY BBIO, ANF, VCEL, EWTX, PLX, TGTX, CDNA, IDXX \u00b7 SELL CSIQ, BTDR, MSTR, WRD, NCMI, ALIT, EXFY, TOYO \u00b7 # Stock book \u2014 2026-11-25\n_Generated 2026-11-25T09:14:18.272159-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "live_boards",
+      "title": "Live 1d BUY/SELL strip",
+      "date": "2026-11-25",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-25T09:18:44.550647-05:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 16663,
+          "preview": "2026-11-25 BUY BBIO, ANF, VCEL, EWTX, PLX, TGTX, CDNA, IDXX \u00b7 SELL CSIQ, BTDR, MSTR, WRD, NCMI, ALIT, EXFY, TOYO"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 1116,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-11-25.json",
+          "ok": true,
+          "reason": "",
+          "size": 71244,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-11-25_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 36579,
+          "preview": "2026-11-25 BUY BBIO, ANF, VCEL, EWTX, PLX, TGTX, CDNA, IDXX \u00b7 SELL CSIQ, BTDR, MSTR, WRD, NCMI, ALIT, EXFY, TOYO"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 798796,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-11-25_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 798796,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/factor_mine/morning_look/2026-11-25.json",
+          "ok": true,
+          "reason": "",
+          "size": 181087,
+          "preview": "keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 1120230,
+          "preview": "2026-11-25 BUY BBIO, ANF, VCEL, EWTX, PLX, TGTX, CDNA, IDXX \u00b7 SELL CSIQ, BTDR, MSTR, WRD, NCMI, ALIT, EXFY, TOYO"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 798796,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 36579,
+          "preview": "2026-11-25 BUY BBIO, ANF, VCEL, EWTX, PLX, TGTX, CDNA, IDXX \u00b7 SELL CSIQ, BTDR, MSTR, WRD, NCMI, ALIT, EXFY, TOYO"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 798796,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 798796,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 1120230,
+          "preview": "2026-11-25 BUY BBIO, ANF, VCEL, EWTX, PLX, TGTX, CDNA, IDXX \u00b7 SELL CSIQ, BTDR, MSTR, WRD, NCMI, ALIT, EXFY, TOYO"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1557,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1557,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "data/day_board/today_strategies.after-freeze-1.json",
+          "ok": true,
+          "reason": "",
+          "size": 281364,
+          "preview": "2026-11-04 BUY CDNA, BLFS, VEEV, ILMN, PRCH, LAUR, CNK, CHEF \u00b7 SELL NEOV, BIDU, ROIV, BAK, PAL, GFL, VNET, NOK"
+        },
+        {
+          "path": "data/day_board/today_strategies.after-freeze-10.json",
+          "ok": true,
+          "reason": "",
+          "size": 1259490,
+          "preview": "2026-11-18 BUY UHS, PAYS, PSN, TTEC, VIV, VRSK, FTNT \u00b7 SELL QBTS, FLNC, QUBT, CWEN, FCEL, RGTI, METC, TE"
+        },
+        {
+          "path": "data/day_board/today_strategies.after-freeze-11.json",
+          "ok": true,
+          "reason": "",
+          "size": 1362800,
+          "preview": "2026-11-18 BUY UHS, PAYS, PSN, TTEC, VIV, VRSK, FTNT \u00b7 SELL QBTS, FLNC, QUBT, CWEN, FCEL, RGTI, METC, TE"
+        },
+        {
+          "path": "data/day_board/today_strategies.after-freeze-12.json",
+          "ok": true,
+          "reason": "",
+          "size": 1362800,
+          "preview": "2026-11-18 BUY UHS, PAYS, PSN, TTEC, VIV, VRSK, FTNT \u00b7 SELL QBTS, FLNC, QUBT, CWEN, FCEL, RGTI, METC, TE"
+        },
+        {
+          "path": "data/day_board/today_strategies.after-freeze-13.json",
+          "ok": true,
+          "reason": "",
+          "size": 1362859,
+          "preview": "2026-11-18 BUY UHS, PAYS, PSN, TTEC, VIV, VRSK, FTNT \u00b7 SELL QBTS, FLNC, QUBT, CWEN, FCEL, RGTI, METC, TE"
+        },
+        {
+          "path": "data/day_board/today_strategies.after-freeze-14.json",
+          "ok": true,
+          "reason": "",
+          "size": 1296957,
+          "preview": "2026-11-20 BUY PANW, OKTA, BOX, PM, RBRK, CON, PSN, CLBT \u00b7 SELL QBTS, TE, FLNC, METC, RGTI, FCEL, CWEN, EAF"
+        },
+        {
+          "path": "data/day_board/today_strategies.after-freeze-15.json",
+          "ok": true,
+          "reason": "",
+          "size": 1402094,
+          "preview": "2026-11-20 BUY PANW, OKTA, BOX, PM, RBRK, CON, PSN, CLBT \u00b7 SELL QBTS, TE, FLNC, METC, RGTI, FCEL, CWEN, EAF"
+        },
+        {
+          "path": "data/day_board/today_strategies.after-freeze-16.json",
+          "ok": true,
+          "reason": "",
+          "size": 1402094,
+          "preview": "2026-11-20 BUY PANW, OKTA, BOX, PM, RBRK, CON, PSN, CLBT \u00b7 SELL QBTS, TE, FLNC, METC, RGTI, FCEL, CWEN, EAF"
+        },
+        {
+          "path": "data/day_board/today_strategies.after-freeze-17.json",
+          "ok": true,
+          "reason": "",
+          "size": 1402094,
+          "preview": "2026-11-20 BUY PANW, OKTA, BOX, PM, RBRK, CON, PSN, CLBT \u00b7 SELL QBTS, TE, FLNC, METC, RGTI, FCEL, CWEN, EAF"
+        },
+        {
+          "path": "data/day_board/today_strategies.after-freeze-2.json",
+          "ok": true,
+          "reason": "",
+          "size": 1165723,
+          "preview": "2026-11-04 BUY CDNA, BLFS, VEEV, ILMN, PRCH, LAUR, CNK, TRU \u00b7 SELL NEOV, BIDU, ROIV, BAK, GFL, PAL, VNET, NFLX"
+        },
+        {
+          "path": "data/day_board/today_strategies.after-freeze-3.json",
+          "ok": true,
+          "reason": "",
+          "size": 885881,
+          "preview": "2026-11-05 BUY XYZ, CDW, KD, JKHY, APPN, VRSN, DBX, MSFT \u00b7 SELL ENVX, AMKR, FCEL, METC, AMPX, EAF, HYLN, RGTI"
+        },
+        {
+          "path": "data/day_board/today_strategies.after-freeze-4.json",
+          "ok": true,
+          "reason": "",
+          "size": 1462227,
+          "preview": "2026-11-10 BUY MGNI, TMDX, ETON, WRBY, ADPT, RBLX, SG, SEZL \u00b7 SELL XPRO, KOS, ACDC, BTU, VET, AESI, IEP, SOC"
+        },
+        {
+          "path": "data/day_board/today_strategies.after-freeze-5.json",
+          "ok": true,
+          "reason": "",
+          "size": 1410192,
+          "preview": "2026-11-11 BUY HNST, HLF, CLX, PRCH, PFGC, TTD, GCT, ZETA \u00b7 SELL GTM, VSAT, ZS, ENPH, EXFY, ASTS, ECX, CGC"
+        },
+        {
+          "path": "data/day_board/today_strategies.after-freeze-6.json",
+          "ok": true,
+          "reason": "",
+          "size": 1388700,
+          "preview": "2026-11-13 BUY PM, CON, NET, ARDT, ATEN \u00b7 SELL BLDP, FLNC, BEP, LTBR, CWEN, AXON, FMC, JBI"
+        },
+        {
+          "path": "data/day_board/today_strategies.after-freeze-7.json",
+          "ok": true,
+          "reason": "",
+          "size": 1373415,
+          "preview": "2026-11-13 BUY PM, CON, NET, ARDT, ATEN \u00b7 SELL BLDP, FLNC, BEP, LTBR, CWEN, AXON, FMC, JBI"
+        },
+        {
+          "path": "data/day_board/today_strategies.after-freeze-8.json",
+          "ok": true,
+          "reason": "",
+          "size": 1373415,
+          "preview": "2026-11-13 BUY PM, CON, NET, ARDT, ATEN \u00b7 SELL BLDP, FLNC, BEP, LTBR, CWEN, AXON, FMC, JBI"
+        },
+        {
+          "path": "data/day_board/today_strategies.after-freeze-9.json",
+          "ok": true,
+          "reason": "",
+          "size": 1373578,
+          "preview": "2026-11-13 BUY PM, CON, NET, ARDT, ATEN \u00b7 SELL BLDP, FLNC, BEP, LTBR, CWEN, AXON, FMC, JBI"
+        }
+      ],
+      "preview": "2026-11-25 BUY BBIO, ANF, VCEL, EWTX, PLX, TGTX, CDNA, IDXX \u00b7 SELL CSIQ, BTDR, MSTR, WRD, NCMI, ALIT, EXFY, TOYO \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-11-25 BUY BBIO, ANF, VCEL, EWTX, PLX, TGTX, CDNA, IDXX \u00b7 SELL CSIQ, BTDR, MSTR, WRD, NCMI, ALIT, EXFY, TOYO \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows \u00b7 2026-11-25 BUY BBIO, ANF, VCEL, EWTX, PLX, TGTX, CDNA, IDXX \u00b7 SELL CSIQ, BTDR, MSTR, WRD, NCMI, ALIT, EXFY, TOYO \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-11-25 BUY BBIO, ANF, VCEL, EWTX, PLX, TGTX, CDNA, IDXX \u00b7 SELL CSIQ, BTDR, MSTR, WRD, NCMI, ALIT, EXFY, TOYO \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, c"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
