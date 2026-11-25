@@ -1,13 +1,13 @@
-# Finviz Daily Digest — 2026-11-24
+# Finviz Daily Digest — 2026-11-25
 
-_Generated 2026-11-24T06:00:27.526543-05:00 · export=data/exports/finviz_2026-11-24.csv · ticker digests=678 · high-signal=140_
+_Generated 2026-11-25T04:50:40.850800-05:00 · export=data/exports/finviz_2026-11-24.csv · ticker digests=678 · high-signal=140_
 
 ## Major indices (live quote page)
 
 - **S&P 500 (SPY)**: Stock Market: Will S&P 500 Open Up or Down Today?
-- **Nasdaq-100 (QQQ)**: ANT Stock Drops Further Despite Tech Rally  Why This Analyst Thinks Jensen Huangs Return As Nvidia CEO Is A Threat To Anthropic
-- **Dow Jones (DIA)**: S&P 500, Nasdaq End Best Session Since April Last Year On Optimism Led By Jensen Huangs Reinstatement  NVDA, NASA, TTWO, AMZN In Focus
-- **Russell 2000 (IWM)**: Five Straight Losses, One Divergence: Where the Major Indexes Stand Now
+- **Nasdaq-100 (QQQ)**: AI Concerns Resurface? ORCL, GOOGL, SPCX, CRWV Credit Default Swap Spreads Hit Records As NVDA, ANT Tumble
+- **Dow Jones (DIA)**: Pre-Markets Seeking Post-NVIDIA Equilibrium
+- **Russell 2000 (IWM)**: Why Tax Alpha is the New Everything Alpha
 
 ## High-signal ticker digests (ranked)
 
