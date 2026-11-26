@@ -1,141 +1,9 @@
 [
   {
-    "n": 12544,
-    "title": "CAC Outcome: Unite the Union & Rushlift GSE Ltd",
-    "url": "https://www.gov.uk/government/publications/cac-outcome-unite-the-union-rushlift-gse-ltd",
-    "published_at": "2026-11-25T16:02:49+00:00",
-    "official_issuer": "Central Arbitration Committee",
-    "document_type": "decision",
-    "document_stage": "decision_published",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "n": 12545,
-    "title": "CAC Outcome: Equality for Workers Union & Ellio CX Ltd",
-    "url": "https://www.gov.uk/government/publications/cac-outcome-equality-for-workers-union-ellio-cx-ltd",
-    "published_at": "2026-11-25T16:00:28+00:00",
-    "official_issuer": "Central Arbitration Committee",
-    "document_type": "decision",
-    "document_stage": "decision_published",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "n": 12546,
-    "title": "CAC Outcome: UNISON & Northern Life Care Limited",
-    "url": "https://www.gov.uk/government/publications/cac-outcome-unison-northern-life-care-limited",
-    "published_at": "2026-11-25T16:00:26+00:00",
-    "official_issuer": "Central Arbitration Committee",
-    "document_type": "decision",
-    "document_stage": "decision_published",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "n": 12547,
-    "title": "CAC Outcome: UNISON & Highgate Care Services Ltd",
-    "url": "https://www.gov.uk/government/publications/cac-outcome-unison-highgate-care-services-ltd",
-    "published_at": "2026-11-25T16:00:24+00:00",
-    "official_issuer": "Central Arbitration Committee",
-    "document_type": "decision",
-    "document_stage": "decision_published",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "n": 12548,
-    "title": "CAC Outcome: UNISON & Crown Care Group",
-    "url": "https://www.gov.uk/government/publications/cac-outcome-unison-crown-care-group",
-    "published_at": "2026-11-25T16:00:22+00:00",
-    "official_issuer": "Central Arbitration Committee",
-    "document_type": "decision",
-    "document_stage": "decision_published",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "n": 12549,
-    "title": "Breach of union rules decision: Richardson v The Social Workers Union",
-    "url": "https://www.gov.uk/government/publications/breach-of-union-rules-decision-richardson-v-the-social-workers-union",
-    "published_at": "2026-11-25T14:33:21+00:00",
-    "official_issuer": "Certification Officer",
-    "document_type": "decision",
-    "document_stage": "decision_published",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "n": 12550,
-    "title": "St Day and Carharrack Community School: 25 November 2026",
-    "url": "https://www.gov.uk/government/publications/st-day-and-carharrack-community-school-25-november-2026",
-    "published_at": "2026-11-25T12:50:42+00:00",
-    "official_issuer": "Office of the Schools Adjudicator",
-    "document_type": "decision",
-    "document_stage": "decision_published",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "n": 12551,
-    "title": "Jurisdictional sift: Tarrant v Unite the Union",
-    "url": "https://www.gov.uk/government/publications/jurisdictional-sift-tarrant-v-unite-the-union",
-    "published_at": "2026-11-25T12:25:19+00:00",
-    "official_issuer": "Certification Officer",
-    "document_type": "decision",
-    "document_stage": "decision_published",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "n": 12552,
-    "title": "Class 4 Medicines Defect Notification: Takeda UK Limited, PROSTAP PD DCS 1.88 mg powder and solvent for prolonged-release suspension for injection in pre-filled syringe, EL(26)A/52",
-    "url": "https://www.gov.uk/drug-device-alerts/class-4-medicines-defect-notification-takeda-uk-limited-prostap-pd-dcs-1-dot-88-mg-powder-and-solvent-for-prolonged-release-suspension-for-injection-in-pre-filled-syringe-el-26-a-slash-52",
-    "published_at": "2026-11-25T14:00:05+00:00",
-    "official_issuer": "Medicines and Healthcare products Regulatory Agency",
-    "document_type": "medical_safety_alert",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "uk-govuk-medical_safety_alert"
-    ]
-  },
-  {
-    "n": 12553,
-    "title": "Class 3 Medicines Recall: Mercury Pharmaceuticals Limited, Bexarotene 75 mg soft capsules, EL(26)A/51",
-    "url": "https://www.gov.uk/drug-device-alerts/class-3-medicines-recall-mercury-pharmaceuticals-limited-bexarotene-75-mg-soft-capsules-el-26-a-slash-51",
-    "published_at": "2026-11-25T10:00:05+00:00",
-    "official_issuer": "Medicines and Healthcare products Regulatory Agency",
-    "document_type": "medical_safety_alert",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "uk-govuk-medical_safety_alert"
-    ]
-  },
-  {
-    "n": 12554,
-    "title": "New Zealand: tax treaties",
-    "url": "https://www.gov.uk/government/publications/new-zealand-tax-treaties",
-    "published_at": "2026-11-25T12:12:20+00:00",
-    "official_issuer": "HM Revenue & Customs",
-    "document_type": "international_treaty",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "uk-govuk-international_treaty"
-    ]
-  },
-  {
-    "n": 12555,
-    "title": "H.R. 11151 (IH) - Smarter Pretrial Detention for Drug Charges Act of 2026",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11151ih",
-    "published_at": "2026-11-25T09:55:00+00:00",
+    "n": 12673,
+    "title": "H.R. 11119 (IH) - Freight Rail Cybersecurity Enhancement Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11119ih",
+    "published_at": "2026-11-26T04:36:00+00:00",
     "official_issuer": "Congressional Bills",
     "document_type": "bill",
     "document_stage": "legislative_document_published",
@@ -144,10 +12,10 @@
     ]
   },
   {
-    "n": 12556,
-    "title": "H.R. 11149 (IH) - Correctional Facilities Occupational Safety and Health Act of 2026",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11149ih",
-    "published_at": "2026-11-25T09:55:00+00:00",
+    "n": 12674,
+    "title": "H.R. 11147 (IH) - Combating Workplace Discrimination in Correctional Facilities Act of 2026",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11147ih",
+    "published_at": "2026-11-26T04:36:00+00:00",
     "official_issuer": "Congressional Bills",
     "document_type": "bill",
     "document_stage": "legislative_document_published",
@@ -156,10 +24,10 @@
     ]
   },
   {
-    "n": 12557,
-    "title": "H.R. 11152 (IH) - ERISA Health Plan Anti-Kickback Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11152ih",
-    "published_at": "2026-11-25T09:55:00+00:00",
+    "n": 12675,
+    "title": "H.R. 11120 (IH) - Protect Our Neighbors Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11120ih",
+    "published_at": "2026-11-26T04:37:02+00:00",
     "official_issuer": "Congressional Bills",
     "document_type": "bill",
     "document_stage": "legislative_document_published",
@@ -168,10 +36,10 @@
     ]
   },
   {
-    "n": 12558,
-    "title": "H.R. 11163 (IH) - MediKids Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11163ih",
-    "published_at": "2026-11-25T10:10:00+00:00",
+    "n": 12676,
+    "title": "H.R. 11116 (IH) - Improving Mental Health Access from the Emergency Department Act of 2026",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11116ih",
+    "published_at": "2026-11-26T04:37:02+00:00",
     "official_issuer": "Congressional Bills",
     "document_type": "bill",
     "document_stage": "legislative_document_published",
@@ -180,10 +48,10 @@
     ]
   },
   {
-    "n": 12559,
-    "title": "H.R. 11155 (IH) - To amend title 38, United States Code, to establish a presumption that sarcoidosis is a service-connected disease for certain veterans.",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11155ih",
-    "published_at": "2026-11-25T10:11:00+00:00",
+    "n": 12677,
+    "title": "H.R. 11110 (IH) - Servicemember Experience Recognition and Validation for Industry Credentials and Employment Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11110ih",
+    "published_at": "2026-11-26T04:37:03+00:00",
     "official_issuer": "Congressional Bills",
     "document_type": "bill",
     "document_stage": "legislative_document_published",
@@ -192,10 +60,10 @@
     ]
   },
   {
-    "n": 12560,
-    "title": "H.R. 11157 (IH) - RSI Safety Act of 2026",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11157ih",
-    "published_at": "2026-11-25T10:11:00+00:00",
+    "n": 12678,
+    "title": "H.R. 11148 (IH) - Ensuring Work Opportunities in Correctional Facilities Act of 2026",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11148ih",
+    "published_at": "2026-11-26T04:37:03+00:00",
     "official_issuer": "Congressional Bills",
     "document_type": "bill",
     "document_stage": "legislative_document_published",
@@ -204,10 +72,10 @@
     ]
   },
   {
-    "n": 12561,
-    "title": "H.R. 11154 (IH) - Fight Fires and Fight Cancer Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11154ih",
-    "published_at": "2026-11-25T10:11:00+00:00",
+    "n": 12679,
+    "title": "H.R. 11118 (IH) - Right-of-Way Infrastructure Development Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11118ih",
+    "published_at": "2026-11-26T04:37:03+00:00",
     "official_issuer": "Congressional Bills",
     "document_type": "bill",
     "document_stage": "legislative_document_published",
@@ -216,10 +84,10 @@
     ]
   },
   {
-    "n": 12562,
-    "title": "H.R. 11162 (IH) - Collaborative Combat Aircraft Sustainment and Readiness Assessment Act of 2026",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11162ih",
-    "published_at": "2026-11-25T10:11:00+00:00",
+    "n": 12680,
+    "title": "H.R. 11117 (IH) - Mental Health Justice Act of 2026",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11117ih",
+    "published_at": "2026-11-26T04:37:03+00:00",
     "official_issuer": "Congressional Bills",
     "document_type": "bill",
     "document_stage": "legislative_document_published",
@@ -228,10 +96,10 @@
     ]
   },
   {
-    "n": 12563,
-    "title": "H.R. 11159 (IH) - Reviewing Every Check and Each Invoice Purchasing Troops’ Supplies Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11159ih",
-    "published_at": "2026-11-25T10:11:00+00:00",
+    "n": 12681,
+    "title": "H.R. 11132 (IH) - Just Punishment for Murder Act of 2026",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11132ih",
+    "published_at": "2026-11-26T04:37:03+00:00",
     "official_issuer": "Congressional Bills",
     "document_type": "bill",
     "document_stage": "legislative_document_published",
@@ -240,10 +108,10 @@
     ]
   },
   {
-    "n": 12564,
-    "title": "H.R. 11158 (IH) - Unaccompanied Children Protection and Accountability Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11158ih",
-    "published_at": "2026-11-25T10:11:00+00:00",
+    "n": 12682,
+    "title": "H.R. 11112 (IH) - Provide Rigorous Oversight To Optimize Connectivity and Offset Latency Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11112ih",
+    "published_at": "2026-11-26T04:37:03+00:00",
     "official_issuer": "Congressional Bills",
     "document_type": "bill",
     "document_stage": "legislative_document_published",
@@ -252,10 +120,10 @@
     ]
   },
   {
-    "n": 12565,
-    "title": "H.R. 11160 (IH) - Discouraging Exploitative Assassination, Tragedy, and Harm Betting in Event Trading Systems Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11160ih",
-    "published_at": "2026-11-25T10:11:00+00:00",
+    "n": 12683,
+    "title": "H.R. 11104 (IH) - Prohibiting Detention of Youth Status Offenders Act of 2026",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11104ih",
+    "published_at": "2026-11-26T04:37:03+00:00",
     "official_issuer": "Congressional Bills",
     "document_type": "bill",
     "document_stage": "legislative_document_published",
@@ -264,638 +132,372 @@
     ]
   },
   {
-    "n": 12566,
-    "title": "DCPD-202600711 - Remarks at a Rose Garden Lunch for Law Enforcement Officials",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600711",
-    "published_at": "2026-11-25T22:16:03+00:00",
-    "official_issuer": "Compilation of Presidential Documents",
-    "document_type": "presidential_document",
-    "document_stage": "presidential_document_published",
+    "n": 12684,
+    "title": "H.R. 11107 (IH) - Investing in American Innovation Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11107ih",
+    "published_at": "2026-11-26T04:37:03+00:00",
+    "official_issuer": "Congressional Bills",
+    "document_type": "bill",
+    "document_stage": "legislative_document_published",
     "source_ids": [
-      "us-govinfo-dcpd"
+      "us-govinfo-bills"
     ]
   },
   {
-    "n": 12567,
-    "title": "S. Rept. 119-157",
-    "url": "https://www.govinfo.gov/app/details/CRPT-119srpt157",
-    "published_at": "2026-11-25T11:14:00+00:00",
-    "official_issuer": "Congressional Reports",
-    "document_type": "committee_report",
-    "document_stage": "requires_semantic_review",
+    "n": 12685,
+    "title": "H.R. 11111 (IH) - Military Units for Separation, Transition, Employment, and Readiness Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11111ih",
+    "published_at": "2026-11-26T04:37:03+00:00",
+    "official_issuer": "Congressional Bills",
+    "document_type": "bill",
+    "document_stage": "legislative_document_published",
     "source_ids": [
-      "us-govinfo-crpt"
+      "us-govinfo-bills"
     ]
   },
   {
-    "n": 12568,
-    "title": "S. Rept. 119-165",
-    "url": "https://www.govinfo.gov/app/details/CRPT-119srpt165",
-    "published_at": "2026-11-25T12:44:01+00:00",
-    "official_issuer": "Congressional Reports",
-    "document_type": "committee_report",
-    "document_stage": "requires_semantic_review",
+    "n": 12686,
+    "title": "H.R. 11105 (IH) - No Online Delivery Allowed for SNAP Households Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11105ih",
+    "published_at": "2026-11-26T04:37:03+00:00",
+    "official_issuer": "Congressional Bills",
+    "document_type": "bill",
+    "document_stage": "legislative_document_published",
     "source_ids": [
-      "us-govinfo-crpt"
+      "us-govinfo-bills"
     ]
   },
   {
-    "n": 12569,
-    "title": "Thanksgiving Day, 2026",
-    "url": "https://www.whitehouse.gov/presidential-actions/2026/11/thanksgiving-day-2026/",
-    "published_at": "2026-11-25T14:30:00+00:00",
-    "official_issuer": "White House presidential actions",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
+    "n": 12687,
+    "title": "H.R. 11084 (IH) - Ethiopia Stability, Partnership, Agriculture, Resources, and Key Investments Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11084ih",
+    "published_at": "2026-11-26T04:37:03+00:00",
+    "official_issuer": "Congressional Bills",
+    "document_type": "bill",
+    "document_stage": "legislative_document_published",
     "source_ids": [
-      "us-white-house-0691096d16"
+      "us-govinfo-bills"
     ]
   },
   {
-    "n": 12570,
-    "title": "SEC Investor Advisory Committee to Host Dec. 3 Virtual Meeting",
-    "url": "https://www.sec.gov/newsroom/press-releases/2026-118-sec-investor-advisory-committee-host-dec-3-virtual-meeting",
-    "published_at": "2026-11-25T14:10:24+00:00",
+    "n": 12688,
+    "title": "H.R. 11085 (IH) - Eritrea Partnership for Investment, Lasting Liberty, Agriculture, and Resources Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11085ih",
+    "published_at": "2026-11-26T04:37:03+00:00",
+    "official_issuer": "Congressional Bills",
+    "document_type": "bill",
+    "document_stage": "legislative_document_published",
+    "source_ids": [
+      "us-govinfo-bills"
+    ]
+  },
+  {
+    "n": 12689,
+    "title": "H.R. 11115 (IH) - Fuel Freedom Act of 2026",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11115ih",
+    "published_at": "2026-11-26T04:37:03+00:00",
+    "official_issuer": "Congressional Bills",
+    "document_type": "bill",
+    "document_stage": "legislative_document_published",
+    "source_ids": [
+      "us-govinfo-bills"
+    ]
+  },
+  {
+    "n": 12690,
+    "title": "H.R. 11108 (IH) - Gun Theft Prevention Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11108ih",
+    "published_at": "2026-11-26T04:38:00+00:00",
+    "official_issuer": "Congressional Bills",
+    "document_type": "bill",
+    "document_stage": "legislative_document_published",
+    "source_ids": [
+      "us-govinfo-bills"
+    ]
+  },
+  {
+    "n": 12691,
+    "title": "H.R. 11102 (IH) - Increasing Transparency and Accountability in Federal Spending Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11102ih",
+    "published_at": "2026-11-26T04:38:00+00:00",
+    "official_issuer": "Congressional Bills",
+    "document_type": "bill",
+    "document_stage": "legislative_document_published",
+    "source_ids": [
+      "us-govinfo-bills"
+    ]
+  },
+  {
+    "n": 12692,
+    "title": "H.R. 11109 (IH) - Capturing Outcomes and Understanding Nontraditional Trajectories Act of 2026",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11109ih",
+    "published_at": "2026-11-26T04:38:00+00:00",
+    "official_issuer": "Congressional Bills",
+    "document_type": "bill",
+    "document_stage": "legislative_document_published",
+    "source_ids": [
+      "us-govinfo-bills"
+    ]
+  },
+  {
+    "n": 12693,
+    "title": "H.R. 11057 (IH) - Student Food Security Act of 2026",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11057ih",
+    "published_at": "2026-11-26T04:38:00+00:00",
+    "official_issuer": "Congressional Bills",
+    "document_type": "bill",
+    "document_stage": "legislative_document_published",
+    "source_ids": [
+      "us-govinfo-bills"
+    ]
+  },
+  {
+    "n": 12694,
+    "title": "Michael A. Smith; Douglas and Joshua Dalton",
+    "url": "https://www.sec.gov/enforcement-litigation/litigation-releases/lr-26696",
+    "published_at": "2026-11-25T15:35:41+00:00",
     "official_issuer": "Securities and Exchange Commission",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "us-sec-8940dd7737"
+      "us-sec-2476f14c28"
     ]
   },
   {
-    "n": 12571,
-    "title": "Department of Justice Announces Awarding of Nearly $150 Million to Hire Over 1,000 Law Enforcement Officers and Deputies",
-    "url": "https://www.justice.gov/usao-edla/pr/department-justice-announces-awarding-nearly-150-million-hire-over-1000-law",
+    "n": 12695,
+    "title": "Michael P. Hanlon and J. Streicher Financial, LLC",
+    "url": "https://www.sec.gov/enforcement-litigation/litigation-releases/lr-26695",
+    "published_at": "2026-11-25T15:34:01+00:00",
+    "official_issuer": "Securities and Exchange Commission",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-sec-2476f14c28"
+    ]
+  },
+  {
+    "n": 12696,
+    "title": "FTC Grants In Part and Denies In Part Northrop Grumman Petition to Set Aside Order",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-grants-part-denies-part-northrop-grumman-petition-set-aside-order",
     "published_at": "2026-11-25T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
+    "official_issuer": "Federal Trade Commission — Press Releases",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "us-doj-b3d27e1dc3"
+      "us-ftc-58b0383166",
+      "us-ftc-ebb4359fb7"
     ]
   },
   {
-    "n": 12572,
-    "title": "Federal jury convicts Buffalo man of Hobbs Act Robbery, co-defendant pleads guilty to sex trafficking",
-    "url": "https://www.justice.gov/usao-wdny/pr/federal-jury-convicts-buffalo-man-hobbs-act-robbery-co-defendant-pleads-guilty-sex",
+    "n": 12697,
+    "title": "FTC Finalizes Order Resolving Antitrust Concerns Stemming from Beretta, Ruger Stock Purchase Deal",
+    "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-finalizes-order-resolving-antitrust-concerns-stemming-beretta-ruger-stock-purchase-deal",
     "published_at": "2026-11-25T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
+    "official_issuer": "Federal Trade Commission — Press Releases",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "us-doj-b3d27e1dc3"
+      "us-ftc-58b0383166",
+      "us-ftc-ebb4359fb7"
     ]
   },
   {
-    "n": 12573,
-    "title": "U.S. Attorney for Northern Ohio Announces Contribution to Protecting Americans from Fraud in Largest-Ever Crackdown on Scammers",
-    "url": "https://www.justice.gov/usao-ndoh/pr/us-attorney-northern-ohio-announces-contribution-protecting-americans-fraud-largest",
-    "published_at": "2026-11-25T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
+    "n": 12698,
+    "title": "20270235: Kaiser Foundation Hospitals; INTEGRIS Health, Inc.",
+    "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20270235",
+    "published_at": "2026-11-25T17:54:00+00:00",
+    "official_issuer": "Federal Trade Commission — HSR Early Termination Notices",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "us-doj-b3d27e1dc3"
+      "us-ftc-df73e297e1"
     ]
   },
   {
-    "n": 12574,
-    "title": "U.S. Attorney for the District of Montana announces contribution to protecting Americans from fraud in largest-ever crackdown on scammers",
-    "url": "https://www.justice.gov/usao-mt/pr/us-attorney-district-montana-announces-contribution-protecting-americans-fraud-largest",
-    "published_at": "2026-11-25T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
+    "n": 12699,
+    "title": "20270261: Greenbriar Equity Fund VII, L.P.; Aerospace, Transportation, & Logistics Fund II LP",
+    "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20270261",
+    "published_at": "2026-11-25T17:54:02+00:00",
+    "official_issuer": "Federal Trade Commission — HSR Early Termination Notices",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "us-doj-b3d27e1dc3"
+      "us-ftc-df73e297e1"
     ]
   },
   {
-    "n": 12575,
-    "title": "Two Members of Mail Theft Ring Plead Guilty to Bank Fraud Charges",
-    "url": "https://www.justice.gov/usao-nj/pr/two-members-mail-theft-ring-plead-guilty-bank-fraud-charges",
-    "published_at": "2026-11-25T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
+    "n": 12700,
+    "title": "20270186: Applied Materials, Inc.; BE Semiconductor Industries N.V.",
+    "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20270186",
+    "published_at": "2026-11-25T17:53:58+00:00",
+    "official_issuer": "Federal Trade Commission — HSR Early Termination Notices",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "us-doj-b3d27e1dc3"
+      "us-ftc-df73e297e1"
     ]
   },
   {
-    "n": 12576,
-    "title": "Maryland Man Charged in Cruise-Ship Assault",
-    "url": "https://www.justice.gov/usao-md/pr/maryland-man-charged-cruise-ship-assault",
-    "published_at": "2026-11-25T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
+    "n": 12701,
+    "title": "20270208: Quikrete Holdings, Inc; Delta Industries, Inc.",
+    "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20270208",
+    "published_at": "2026-11-25T17:53:58+00:00",
+    "official_issuer": "Federal Trade Commission — HSR Early Termination Notices",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "us-doj-b3d27e1dc3"
+      "us-ftc-df73e297e1"
     ]
   },
   {
-    "n": 12577,
-    "title": "Western District of Louisiana Announces “FY 2026 Year in Review” Highlighting Public Safety Gains Across the District",
-    "url": "https://www.justice.gov/usao-wdla/pr/western-district-louisiana-announces-fy-2026-year-review-highlighting-public-safety",
-    "published_at": "2026-11-25T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
+    "n": 12702,
+    "title": "20270220: Kingswood Capital Opportunities Fund III, L.P.; Douglas Keith Tyler",
+    "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20270220",
+    "published_at": "2026-11-25T17:54:00+00:00",
+    "official_issuer": "Federal Trade Commission — HSR Early Termination Notices",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "us-doj-b3d27e1dc3"
+      "us-ftc-df73e297e1"
     ]
   },
   {
-    "n": 12578,
-    "title": "New York Man Sentenced to 24 Months in Aggravated Identity Theft Case",
-    "url": "https://www.justice.gov/usao-vt/pr/new-york-man-sentenced-24-months-aggravated-identity-theft-case",
-    "published_at": "2026-11-25T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
+    "n": 12703,
+    "title": "20270240: VINCI SA; Christopher V. Prangley",
+    "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20270240",
+    "published_at": "2026-11-25T17:54:02+00:00",
+    "official_issuer": "Federal Trade Commission — HSR Early Termination Notices",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "us-doj-b3d27e1dc3"
+      "us-ftc-df73e297e1"
     ]
   },
   {
-    "n": 12579,
-    "title": "New Jersey Doctor Charged With Coercion And Enticement Of A Minor",
-    "url": "https://www.justice.gov/usao-sdny/pr/new-jersey-doctor-charged-coercion-and-enticement-minor",
-    "published_at": "2026-11-25T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
+    "n": 12704,
+    "title": "20270263: Amanat Acquisition Corp.; RTW Holding Limited",
+    "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20270263",
+    "published_at": "2026-11-25T17:54:02+00:00",
+    "official_issuer": "Federal Trade Commission — HSR Early Termination Notices",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "us-doj-b3d27e1dc3"
+      "us-ftc-df73e297e1"
     ]
   },
   {
-    "n": 12580,
-    "title": "Woodbury County Man Pleads Guilty to Meth Conspiracy",
-    "url": "https://www.justice.gov/usao-ndia/pr/woodbury-county-man-pleads-guilty-meth-conspiracy-1",
-    "published_at": "2026-11-25T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
+    "n": 12705,
+    "title": "20270159: Ithaca Topco, L.P.; Bumble, Inc.",
+    "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20270159",
+    "published_at": "2026-11-25T17:53:57+00:00",
+    "official_issuer": "Federal Trade Commission — HSR Early Termination Notices",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "us-doj-b3d27e1dc3"
+      "us-ftc-df73e297e1"
     ]
   },
   {
-    "n": 12581,
-    "title": "Billings man sentenced to 10 years in prison for trafficking meth, fentanyl out of his storage unit",
-    "url": "https://www.justice.gov/usao-mt/pr/billings-man-sentenced-10-years-prison-trafficking-meth-fentanyl-out-his-storage-unit",
-    "published_at": "2026-11-25T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
+    "n": 12706,
+    "title": "20270198: Schneider Electric SE; PTC Inc.",
+    "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20270198",
+    "published_at": "2026-11-25T17:53:58+00:00",
+    "official_issuer": "Federal Trade Commission — HSR Early Termination Notices",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "us-doj-b3d27e1dc3"
+      "us-ftc-df73e297e1"
     ]
   },
   {
-    "n": 12582,
-    "title": "District Court Orders Queens-Based Logistics Company, Affiliate, and Their Owner to Pay $300,000 and Cease Sending Packages Through United States Mail",
-    "url": "https://www.justice.gov/usao-edny/pr/district-court-orders-queens-based-logistics-company-affiliate-and-their-owner-pay",
-    "published_at": "2026-11-25T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
+    "n": 12707,
+    "title": "20270210: Valero Energy Corporation; LyondellBasell Industries N.V.",
+    "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20270210",
+    "published_at": "2026-11-25T17:54:00+00:00",
+    "official_issuer": "Federal Trade Commission — HSR Early Termination Notices",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "us-doj-b3d27e1dc3"
+      "us-ftc-df73e297e1"
     ]
   },
   {
-    "n": 12583,
-    "title": "Former Social Security Administration Worker Pleads Guilty to Charges Connected to Disability Funds Theft Scheme",
-    "url": "https://www.justice.gov/usao-md/pr/former-social-security-administration-worker-pleads-guilty-charges-connected-disability",
-    "published_at": "2026-11-25T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
+    "n": 12708,
+    "title": "20270233: BayPine Allies Aggregator, LP; TRF V (Blocked), L.P.",
+    "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20270233",
+    "published_at": "2026-11-25T17:54:00+00:00",
+    "official_issuer": "Federal Trade Commission — HSR Early Termination Notices",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "us-doj-b3d27e1dc3"
+      "us-ftc-df73e297e1"
     ]
   },
   {
-    "n": 12584,
-    "title": "Metairie Man Guilty of Staged-Collision Carjacking",
-    "url": "https://www.justice.gov/usao-edla/pr/metairie-man-guilty-staged-collision-carjacking",
-    "published_at": "2026-11-25T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
+    "n": 12709,
+    "title": "20270241: Michael S. Dell; Revera Inc.",
+    "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20270241",
+    "published_at": "2026-11-25T17:54:02+00:00",
+    "official_issuer": "Federal Trade Commission — HSR Early Termination Notices",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "us-doj-b3d27e1dc3"
+      "us-ftc-df73e297e1"
     ]
   },
   {
-    "n": 12585,
-    "title": "Towns of Litchfield and Mont Vernon Receive $250,000 in U.S. Department of Justice Grants to Hire Law Enforcement Officers",
-    "url": "https://www.justice.gov/usao-nh/pr/towns-litchfield-and-mont-vernon-receive-250000-us-department-justice-grants-hire-law",
-    "published_at": "2026-11-25T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
+    "n": 12710,
+    "title": "20270275: Anthelion Fund I Offshore LP; AP VIII Aspen Holdings, L.P.",
+    "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20270275",
+    "published_at": "2026-11-25T17:54:02+00:00",
+    "official_issuer": "Federal Trade Commission — HSR Early Termination Notices",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "us-doj-b3d27e1dc3"
+      "us-ftc-df73e297e1"
     ]
   },
   {
-    "n": 12586,
-    "title": "Mexican National Indicted for Reentry of a Removed Alien",
-    "url": "https://www.justice.gov/usao-edla/pr/mexican-national-indicted-reentry-removed-alien",
-    "published_at": "2026-11-25T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
+    "n": 12711,
+    "title": "20270180: JANA Strategic Investments Benchmark Fund, L.P.; Casella Waste Systems, Inc.",
+    "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20270180",
+    "published_at": "2026-11-25T17:53:58+00:00",
+    "official_issuer": "Federal Trade Commission — HSR Early Termination Notices",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "us-doj-b3d27e1dc3"
+      "us-ftc-df73e297e1"
     ]
   },
   {
-    "n": 12587,
-    "title": "Former Tallahassee Postal Employee Sentenced for Theft of Mail",
-    "url": "https://www.justice.gov/usao-ndfl/pr/former-tallahassee-postal-employee-sentenced-theft-mail",
-    "published_at": "2026-11-25T12:00:00+00:00",
-    "official_issuer": "Department of Justice",
+    "n": 12712,
+    "title": "20270199: BharCap Partners II, LP; Rishi Gautam",
+    "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20270199",
+    "published_at": "2026-11-25T17:53:58+00:00",
+    "official_issuer": "Federal Trade Commission — HSR Early Termination Notices",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "us-doj-b3d27e1dc3"
+      "us-ftc-df73e297e1"
     ]
   },
   {
-    "n": 12588,
-    "title": "Justice Department Clarifies Lawful Use of Drone Detection Technologies to Protect Americans from Emerging UAS Threats",
-    "url": "https://www.justice.gov/opa/pr/justice-department-clarifies-lawful-use-drone-detection-technologies-protect-americans",
-    "published_at": "2026-11-25T12:00:00+00:00",
-    "official_issuer": "Department of Justice — RSS Feed",
+    "n": 12713,
+    "title": "20270219: Kingswood Capital Opportunities Fund III, L.P.; Nick Tyler",
+    "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20270219",
+    "published_at": "2026-11-25T17:54:00+00:00",
+    "official_issuer": "Federal Trade Commission — HSR Early Termination Notices",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "us-doj-e05071794d"
+      "us-ftc-df73e297e1"
     ]
   },
   {
-    "n": 12589,
-    "title": "Los Angeles Man Sentenced to Over 24 Years in Prison for Sex Trafficking",
-    "url": "https://www.justice.gov/opa/pr/los-angeles-man-sentenced-over-24-years-prison-sex-trafficking-0",
-    "published_at": "2026-11-25T12:00:00+00:00",
-    "official_issuer": "Department of Justice — RSS Feed",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-doj-e05071794d"
-    ]
-  },
-  {
-    "n": 12590,
-    "title": "Colombian National Indicted in Scheme to Defraud Victims of Ransomware Attacks",
-    "url": "https://www.justice.gov/opa/pr/colombian-national-indicted-scheme-defraud-victims-ransomware-attacks",
-    "published_at": "2026-11-25T12:00:00+00:00",
-    "official_issuer": "Department of Justice — RSS Feed",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-doj-e05071794d"
-    ]
-  },
-  {
-    "n": 12591,
-    "title": "Justice Department Announces Largest-Ever Crackdown on Scammers, Targeting Over 800 Defendants to Protect Americans from Fraud",
-    "url": "https://www.justice.gov/opa/video/justice-department-announces-largest-ever-crackdown-scammers-targeting-over-800",
-    "published_at": "2026-11-24T12:00:00+00:00",
-    "official_issuer": "Department of Justice — RSS Feed",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-doj-e05071794d"
-    ]
-  },
-  {
-    "n": 12592,
-    "title": "Readout of First Meeting of the Agricultural Working Group Under the Framework of the U.S.-China Board of Trade",
-    "url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/november/readout-first-meeting-agricultural-working-group-under-framework-us-china-board-trade",
-    "published_at": "2026-11-25T00:00:00+00:00",
-    "official_issuer": "United States Trade Representative",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-ustr-index"
-    ]
-  },
-  {
-    "n": 12593,
-    "title": "USTR Invites Public Comment on Proposed Modifications of the Section 301 Action Regarding Brazil’s Unreasonable Acts, Policies, and Practices",
-    "url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/november/ustr-invites-public-comment-proposed-modifications-section-301-action-regarding-brazils-unreasonable",
-    "published_at": "2026-11-25T00:00:00+00:00",
-    "official_issuer": "United States Trade Representative",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-ustr-index"
-    ]
-  },
-  {
-    "n": 12594,
-    "title": "USTR Makes Determinations and Proposes Actions in 14 Section 301 Investigations Relating to Structural Excess Capacity and Production in Manufacturing Sectors",
-    "url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/november/ustr-makes-determinations-and-proposes-actions-14-section-301-investigations-relating-structural",
-    "published_at": "2026-11-25T00:00:00+00:00",
-    "official_issuer": "United States Trade Representative",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-ustr-index"
-    ]
-  },
-  {
-    "n": 12595,
-    "title": "Agencies announce dollar thresholds for applicability of truth in lending and consumer leasing rules for consumer credit and lease transactions",
-    "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20261125b.htm",
-    "published_at": "2026-11-25T20:00:00+00:00",
-    "official_issuer": "Federal Reserve Board",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-fed-97656cefc7",
-      "us-fed-a383ca0d09"
-    ]
-  },
-  {
-    "n": 12596,
-    "title": "Agencies announce dollar thresholds for smaller loan exemption from appraisal requirements for higher-priced mortgage loans",
-    "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20261125a.htm",
-    "published_at": "2026-11-25T20:00:00+00:00",
-    "official_issuer": "Federal Reserve Board",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-fed-97656cefc7",
-      "us-fed-a383ca0d09"
-    ]
-  },
-  {
-    "n": 12597,
-    "title": "Agencies Announce Dollar Thresholds for Smaller Loan Exemption from Appraisal Requirements for Higher-priced Mortgage Loans",
-    "url": "https://www.occ.gov/news-issuances/news-releases/2026/nr-ia-2026-105.html",
-    "published_at": "2026-11-25T20:00:00+00:00",
-    "official_issuer": "Office of the Comptroller of the Currency",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-occ-6f63126133"
-    ]
-  },
-  {
-    "n": 12598,
-    "title": "Agencies Announce Dollar Thresholds for Smaller Loan Exemption from Appraisal Requirements for Higher-priced Mortgage Loans",
-    "url": "https://www.consumerfinance.gov/about-us/newsroom/agencies-announce-dollar-thresholds-for-smaller-loan-exemption-from-appraisal-requirements-for-higher-priced-mortgage-loans/",
-    "published_at": "2026-11-25T05:00:00+00:00",
-    "official_issuer": "Consumer Financial Protection Bureau",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-cfpb-8e157aee85"
-    ]
-  },
-  {
-    "n": 12599,
-    "title": "Agencies Announce Dollar Thresholds for Applicability of Truth in Lending and Consumer Leasing Rules for Consumer Credit and Lease Transactions",
-    "url": "https://www.consumerfinance.gov/about-us/newsroom/agencies-announce-dollar-thresholds-for-applicability-of-truth-in-lending-and-consumer-leasing-rules-for-consumer-credit-and-lease-transactions/",
-    "published_at": "2026-11-25T05:00:00+00:00",
-    "official_issuer": "Consumer Financial Protection Bureau",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-cfpb-8e157aee85"
-    ]
-  },
-  {
-    "n": 12600,
-    "title": "Condition-Specific Meeting Reports and Other Information Related to Patients' Experience",
-    "url": "http://www.fda.gov/industry/prescription-drug-user-fee-amendments/condition-specific-meeting-reports-and-other-information-related-patients-experience",
-    "published_at": "2026-11-25T18:25:46+00:00",
-    "official_issuer": "Food and Drug Administration — What's New: Drugs",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-fda-5696b24295"
-    ]
-  },
-  {
-    "n": 12601,
-    "title": "Upcoming EL-PFDD Meetings",
-    "url": "http://www.fda.gov/industry/prescription-drug-user-fee-amendments/upcoming-el-pfdd-meetings",
-    "published_at": "2026-11-25T18:25:25+00:00",
-    "official_issuer": "Food and Drug Administration — What's New: Drugs",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-fda-5696b24295"
-    ]
-  },
-  {
-    "n": 12602,
-    "title": "2018 First Generic Drug Approvals",
-    "url": "http://www.fda.gov/drugs/first-generic-drug-approvals/2018-first-generic-drug-approvals",
-    "published_at": "2026-11-25T18:06:48+00:00",
-    "official_issuer": "Food and Drug Administration — What's New: Drugs",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-fda-5696b24295"
-    ]
-  },
-  {
-    "n": 12603,
-    "title": "Phase 1 IND Guidance Documents",
-    "url": "http://www.fda.gov/industry/phase-1-investigational-new-drug-ind-navigator/phase-1-ind-guidance-documents",
-    "published_at": "2026-11-25T16:13:37+00:00",
-    "official_issuer": "Food and Drug Administration — What's New: Drugs",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-fda-03f7703006",
-      "us-fda-5696b24295"
-    ]
-  },
-  {
-    "n": 12604,
-    "title": "How to Request Domperidone for Expanded Access Use",
-    "url": "http://www.fda.gov/drugs/investigational-new-drug-application-ind/how-request-domperidone-expanded-access-use",
-    "published_at": "2026-11-25T15:08:31+00:00",
-    "official_issuer": "Food and Drug Administration — What's New: Drugs",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-fda-5696b24295"
-    ]
-  },
-  {
-    "n": 12605,
-    "title": "How to Apply to FDA Pharmacy Student Experiential Program (PSEP)",
-    "url": "http://www.fda.gov/about-fda/fda-pharmacy-student-experiential-program/how-apply-fda-pharmacy-student-experiential-program-psep",
-    "published_at": "2026-11-25T14:53:40+00:00",
-    "official_issuer": "Food and Drug Administration — What's New: Drugs",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-fda-5696b24295"
-    ]
-  },
-  {
-    "n": 12606,
-    "title": "FDA Pharmacy Student Experiential Program",
-    "url": "http://www.fda.gov/about-fda/scientific-internships-fellowships-trainees-and-non-us-citizens/fda-pharmacy-student-experiential-program",
-    "published_at": "2026-11-25T14:52:54+00:00",
-    "official_issuer": "Food and Drug Administration — What's New: Drugs",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-fda-03f7703006",
-      "us-fda-5696b24295"
-    ]
-  },
-  {
-    "n": 12607,
-    "title": "2020 First Generic Drug Approvals",
-    "url": "http://www.fda.gov/drugs/first-generic-drug-approvals/2020-first-generic-drug-approvals",
-    "published_at": "2026-11-25T13:24:26+00:00",
-    "official_issuer": "Food and Drug Administration — What's New: Drugs",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-fda-5696b24295"
-    ]
-  },
-  {
-    "n": 12608,
-    "title": "FDA CBER Webinar: Human Gene Therapy Products Incorporating Human Genome Editing - 02/29/2024",
-    "url": "http://www.fda.gov/news-events/fda-meetings-conferences-and-workshops/fda-cber-webinar-human-gene-therapy-products-incorporating-human-genome-editing-02292024",
-    "published_at": "2026-11-25T17:22:13+00:00",
-    "official_issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-fda-03f7703006"
-    ]
-  },
-  {
-    "n": 12609,
-    "title": "FDA CBER Webinar: Considerations for the Development of CAR T Cell Products - 03/07/2024",
-    "url": "http://www.fda.gov/news-events/fda-meetings-conferences-and-workshops/fda-cber-webinar-considerations-development-car-t-cell-products-03072024",
-    "published_at": "2026-11-25T15:02:40+00:00",
-    "official_issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-fda-03f7703006"
-    ]
-  },
-  {
-    "n": 12639,
-    "title": "Unemployment Insurance Weekly Claims Report",
-    "url": "http://www.dol.gov/newsroom/releases/eta/eta20261125",
-    "published_at": "2026-11-25T12:00:00+00:00",
-    "official_issuer": "Department of Labor",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-dol-99f477805a"
-    ]
-  },
-  {
-    "n": 12640,
-    "title": "Statement by President von der Leyen with President Costa following the EU-Western Balkans Summit",
-    "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2591",
-    "published_at": "2026-11-25T18:05:05+00:00",
-    "official_issuer": "European Commission press and decisions",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "eu-commission-07d4f58ccf"
-    ]
-  },
-  {
-    "n": 12641,
-    "title": "Speech by Commissioner Lahbib at the European Parliament on Combating Gender-Based Violence in the Age of Digital Technology",
-    "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2590",
-    "published_at": "2026-11-25T16:18:22+00:00",
-    "official_issuer": "European Commission press and decisions",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "eu-commission-07d4f58ccf"
-    ]
-  },
-  {
-    "n": 12642,
-    "title": "Opening remarks by Executive Vice-President Ribera on an antitrust decision in the consumer fragrances sector and on the prolongation of the State aid framework to support sectors affected by Middle East crisis",
-    "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2589",
-    "published_at": "2026-11-25T15:42:36+00:00",
-    "official_issuer": "European Commission press and decisions",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "eu-commission-07d4f58ccf"
-    ]
-  },
-  {
-    "n": 12643,
-    "title": "Remarks by Executive Vice-President Virkkunen on the Quantum Act",
-    "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2588",
-    "published_at": "2026-11-25T13:42:34+00:00",
-    "official_issuer": "European Commission press and decisions",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "eu-commission-07d4f58ccf"
-    ]
-  },
-  {
-    "n": 12644,
-    "title": "Keynote speech by Commissioner Kubilius on Defence Readiness in the EU Military Committee meeting at the level of Chiefs of Defence",
-    "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2586",
-    "published_at": "2026-11-25T10:53:53+00:00",
-    "official_issuer": "European Commission press and decisions",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "eu-commission-07d4f58ccf"
-    ]
-  },
-  {
-    "n": 12645,
-    "title": "Remarks by Commissioner Serafin during the European Parliament debate Unlocking the 2028–2034 MFF negotiations including new own resources following the revised negotiating box in Strasbourg",
-    "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2585",
-    "published_at": "2026-11-25T10:31:44+00:00",
-    "official_issuer": "European Commission press and decisions",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "eu-commission-07d4f58ccf"
-    ]
-  },
-  {
-    "n": 12646,
-    "title": "Daily News 25 / 11 / 2026",
-    "url": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2584",
-    "published_at": "2026-11-25T10:10:02+00:00",
-    "official_issuer": "European Commission press and decisions",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "eu-commission-07d4f58ccf"
-    ]
-  },
-  {
-    "n": 12647,
-    "title": "Brussels declaration, 25 November 2026",
-    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/25/brussels-declaration-25-november-2026/",
-    "published_at": "2026-11-25T21:28:00+00:00",
+    "n": 12715,
+    "title": "Remarks by President António Costa at the doorstep ahead of the Special European Council meeting of 26-27 November 2026",
+    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/26/remarks-by-president-antonio-costa-at-the-doorstep-ahead-of-the-special-european-council-meeting-of-26-27-november-2026/",
+    "published_at": "2026-11-26T08:32:00+00:00",
     "official_issuer": "Council of the European Union",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
@@ -904,204 +506,46 @@
     ]
   },
   {
-    "n": 12648,
-    "title": "Remarks by President António Costa at the press conference following the EU-Western Balkans summit of 25 November 2026",
-    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/25/remarks-by-president-antonio-costa-at-the-press-conference-following-the-eu-western-balkans-summit-of-25-november-2026/",
-    "published_at": "2026-11-25T19:17:00+00:00",
-    "official_issuer": "Council of the European Union",
+    "n": 12716,
+    "title": "172/2026 : 26 November 2026 - Judgment of the Court of Justice in Joined Cases",
+    "url": "https://curia.europa.eu/site/jcms/p1_1000089709",
+    "published_at": "2026-11-26T08:51:10+00:00",
+    "official_issuer": "Court of Justice of the European Union",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "eu-council-9d9e9444da"
+      "eu-court-1433471e58"
     ]
   },
   {
-    "n": 12649,
-    "title": "Media advisory - Special European Council meeting of 26-27 November 2026",
-    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/25/media-advisory-special-european-council-meeting-of-26-27-november-2026/",
-    "published_at": "2026-11-25T16:45:00+00:00",
-    "official_issuer": "Council of the European Union",
+    "n": 12717,
+    "title": "Monetary developments in the euro area: October 2026",
+    "url": "https://www.ecb.europa.eu//press/stats/md/html/ecb.md2610~4bad1d63b5.en.html",
+    "published_at": "2026-11-26T09:00:00+00:00",
+    "official_issuer": "European Central Bank — Statistical press releases",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "eu-council-9d9e9444da"
+      "eu-ecb-fb5fd59aed"
     ]
   },
   {
-    "n": 12650,
-    "title": "Press briefing - Transport, Telecommunications and Energy Council (Transport and Telecommunications) of 30 November and 1 December 2026",
-    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/25/press-briefing-transport-telecommunications-and-energy-council-transport-and-telecommunications-of-30-november-and-1-december-2026/",
-    "published_at": "2026-11-25T16:00:00+00:00",
-    "official_issuer": "Council of the European Union",
+    "n": 12718,
+    "title": "Climate change indicators: November 2026",
+    "url": "https://www.ecb.europa.eu//press/stats/cci/html/ecb.cci261126~bd9267f05a.en.html",
+    "published_at": "2026-11-26T09:00:00+00:00",
+    "official_issuer": "European Central Bank — Statistical press releases",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "eu-council-9d9e9444da"
+      "eu-ecb-fb5fd59aed"
     ]
   },
   {
-    "n": 12651,
-    "title": "Russia’s war of aggression against Ukraine: EU restricts trade with 15 entities linked to Russia’s military and industrial complex",
-    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/25/russia-s-war-of-aggression-against-ukraine-eu-restricts-trade-with-15-entities-linked-to-russia-s-military-and-industrial-complex/",
-    "published_at": "2026-11-25T10:09:00+00:00",
-    "official_issuer": "Council of the European Union",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "eu-council-9d9e9444da"
-    ]
-  },
-  {
-    "n": 12652,
-    "title": "ECB and Sveriges Riksbank conclude agreement for Sweden to join T2",
-    "url": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr261125_1~6333a90f3a.en.html",
-    "published_at": "2026-11-25T17:30:00+00:00",
-    "official_issuer": "European Central Bank",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "eu-ecb-991c113079"
-    ]
-  },
-  {
-    "n": 12653,
-    "title": "Card payments edge past cash in shops; euro area consumers want both",
-    "url": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr261125~26d1ade228.en.html",
-    "published_at": "2026-11-25T10:00:00+00:00",
-    "official_issuer": "European Central Bank",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "eu-ecb-991c113079"
-    ]
-  },
-  {
-    "n": 12654,
-    "title": "​EBA publishes hotfix for the reporting framework v4.4 - Phase 1",
-    "url": "https://www.eba.europa.eu/publications-and-media/press-releases/eba-publishes-hotfix-reporting-framework-v44-phase-1",
-    "published_at": "2026-11-25T13:25:13+00:00",
-    "official_issuer": "European Banking Authority",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "eu-eba-60bdc59843"
-    ]
-  },
-  {
-    "n": 12655,
-    "title": "The EBA examines the use of stablecoins, including EMTs, in decentralised finance",
-    "url": "https://www.eba.europa.eu/publications-and-media/press-releases/eba-examines-use-stablecoins-including-emts-decentralised-finance",
-    "published_at": "2026-11-25T11:08:05+00:00",
-    "official_issuer": "European Banking Authority",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "eu-eba-60bdc59843"
-    ]
-  },
-  {
-    "n": 12656,
-    "title": "Regulators implement growth-friendly securitisation reforms",
-    "url": "https://www.bankofengland.co.uk/news/2026/november/regulators-implement-growth-friendly-securitisation-reforms",
-    "published_at": "2026-11-25T10:00:00+00:00",
-    "official_issuer": "Bank of England",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "uk-boe-4feb372611"
-    ]
-  },
-  {
-    "n": 12658,
-    "title": "Three New Asset Classes Added as General Collateral Baskets Further Developing Canada’s Repo Market",
-    "url": "https://www.bankofcanada.ca/2026/11/three-new-asset-classes-added-as-general-collateral-baskets-further-developing-canadas-repo-market/",
-    "published_at": "2026-11-25T14:00:26+00:00",
-    "official_issuer": "Bank of Canada — Press",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "ca-boc-30d6d14378",
-      "ca-boc-5cc0603f1f"
-    ]
-  },
-  {
-    "n": 12659,
-    "title": "CIMPA publishes two best practices documents to promote the well-functioning of the Canadian securities and financing markets",
-    "url": "https://www.bankofcanada.ca/2026/11/cimpa-publishes-two-best-practices-documents-to-promote-the-well-functioning-of-the-canadian-securities-and-financing-markets/",
-    "published_at": "2026-11-25T14:00:06+00:00",
-    "official_issuer": "Bank of Canada — Press",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "ca-boc-30d6d14378",
-      "ca-boc-5cc0603f1f"
-    ]
-  },
-  {
-    "n": 12660,
-    "title": "Stress in the Press or Stress in the Market: A New Measure of Perceived Financial Stress",
-    "url": "https://www.bankofcanada.ca/2026/11/staff-working-paper-2026-44/",
-    "published_at": "2026-11-25T15:03:16+00:00",
-    "official_issuer": "Bank of Canada — Research",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "ca-boc-a5cb9e38c1"
-    ]
-  },
-  {
-    "n": 12661,
-    "title": "Demand-Supply Decomposition of House-Price Inflation and the Impact of Monetary Policy",
-    "url": "https://www.bankofcanada.ca/2026/11/staff-working-paper-2026-43/",
-    "published_at": "2026-11-25T15:02:15+00:00",
-    "official_issuer": "Bank of Canada — Research",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "ca-boc-a5cb9e38c1"
-    ]
-  },
-  {
-    "n": 12662,
-    "title": "When Lower Equity Meets Higher Debt Burdens",
-    "url": "https://www.bankofcanada.ca/2026/11/staff-analytical-paper-2026-58/",
-    "published_at": "2026-11-25T15:01:14+00:00",
-    "official_issuer": "Bank of Canada — Research",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "ca-boc-a5cb9e38c1"
-    ]
-  },
-  {
-    "n": 12663,
-    "title": "Optimal Policy with Supply Shocks of Unknown Persistence",
-    "url": "https://www.bankofcanada.ca/2026/11/staff-analytical-paper-2026-57/",
-    "published_at": "2026-11-25T15:00:02+00:00",
-    "official_issuer": "Bank of Canada — Research",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "ca-boc-a5cb9e38c1"
-    ]
-  },
-  {
-    "n": 12664,
-    "title": "Business Expectation Survey - November 2026 - Reserve Bank of New Zealand",
-    "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQZ29wQUpGMFpyTEVMdEhNT3p6T1NKcmo1c0xKNHJiSkNZV3lpWmNlWkdGYzNEOWk3MlNGZlJyTExwNkVFUlBVdkR5bTkwejNmNHd5MmpjaHlpYXE5Q3dzZ3Z4VzdLX055Uk8xZnZRWGlZdU13aTl5UjRYQXJ5OUZGc2pzZE1rQ1JIc0JlLVcyZjExaTdZVmhTTU5kVkUxTzFXcWlxVUhXNmZCZVhNZ191U1BjYlhvTFZOa004WUxzdGc4d0VvN09vWjBLek1Ydw",
-    "published_at": "2026-11-25T10:14:38+00:00",
-    "official_issuer": "Reserve Bank of New Zealand (official-site news mirror)",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "nz-rbnz-gnews"
-    ]
-  },
-  {
-    "n": 12665,
-    "title": "RBI to conduct Overnight Variable Rate Repo (VRR) auction under LAF on November 26, 2026",
-    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64043",
-    "published_at": "2026-11-25T19:20:00+00:00",
+    "n": 12721,
+    "title": "Underwriting Auction for sale of Government Securities for ₹33,000 crore on November 27, 2026",
+    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64048",
+    "published_at": "2026-11-26T12:15:00+00:00",
     "official_issuer": "Reserve Bank of India",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
@@ -1110,10 +554,10 @@
     ]
   },
   {
-    "n": 12666,
-    "title": "47th Half-Yearly Report on Management of Foreign Exchange Reserves: April – September 2026",
-    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64042",
-    "published_at": "2026-11-25T18:05:00+00:00",
+    "n": 12722,
+    "title": "Result of the Second Overnight Variable Rate Repo (VRR) auction held on November 26, 2026",
+    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64047",
+    "published_at": "2026-11-26T12:00:00+00:00",
     "official_issuer": "Reserve Bank of India",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
@@ -1122,10 +566,10 @@
     ]
   },
   {
-    "n": 12667,
-    "title": "RBI Bulletin – November 2026",
-    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64041",
-    "published_at": "2026-11-25T17:55:00+00:00",
+    "n": 12723,
+    "title": "RBI to conduct Second Overnight Variable Rate Repo (VRR) auction under LAF on November 26, 2026",
+    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64046",
+    "published_at": "2026-11-26T10:35:00+00:00",
     "official_issuer": "Reserve Bank of India",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
@@ -1134,10 +578,10 @@
     ]
   },
   {
-    "n": 12668,
-    "title": "Treasury Bills: Full Auction Result",
-    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64040",
-    "published_at": "2026-11-25T15:50:00+00:00",
+    "n": 12724,
+    "title": "Result of the Overnight Variable Rate Repo (VRR) auction held on November 26, 2026",
+    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64045",
+    "published_at": "2026-11-26T10:25:00+00:00",
     "official_issuer": "Reserve Bank of India",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
@@ -1146,52 +590,63 @@
     ]
   },
   {
-    "n": 12669,
-    "title": "Funded Pensions: A Game Changer for Society | Guest Lecture at the Centre for Central Banking, Frankfurt School",
-    "url": "https://www.bundesbank.de/en/press/speeches/funded-pensions-a-game-changer-for-society-1017088",
-    "published_at": "2026-11-25T13:00:00+00:00",
-    "official_issuer": "Deutsche Bundesbank",
+    "n": 12725,
+    "title": "Money Market Operations as on November 25, 2026",
+    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64044",
+    "published_at": "2026-11-26T09:00:00+00:00",
+    "official_issuer": "Reserve Bank of India",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "de-bundesbank-027ac4024f",
-      "de-bundesbank-617511c682"
+      "in-rbi-cc71120b98"
     ]
   },
   {
-    "n": 12670,
-    "title": "Reopening Federal bond issue – Auction result",
-    "url": "https://www.bundesbank.de/en/press/press-releases/federal-securities/reopening-federal-bond-issue-auction-result--1017086",
-    "published_at": "2026-11-25T10:40:00+00:00",
-    "official_issuer": "Deutsche Bundesbank",
+    "n": 12726,
+    "title": "Implementation of Section 51A of UAPA, 1967: Updates to UNSC’s 1267/ 1989 ISIL (Da'esh) & Al-Qaida Sanctions List: Amendment of 01 Entry",
+    "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13758&Mode=0",
+    "published_at": "2026-11-26T11:15:00+00:00",
+    "official_issuer": "Reserve Bank of India",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "de-bundesbank-027ac4024f"
+      "in-rbi-738b09bded"
     ]
   },
   {
-    "n": 12671,
-    "title": "FX Liquidity providing operation – Allotment | Tender-ID: 20260105 | Reverse transaction | USD",
-    "url": "https://www.bundesbank.de/en/tasks/monetary-policy/open-market-operations/outstanding-open-market-operations/fx-liquidity-providing-operation-allotment-1017054",
-    "published_at": "2026-11-25T09:54:28+00:00",
-    "official_issuer": "Deutsche Bundesbank — Outstanding open market operations",
+    "n": 12727,
+    "title": "Implementation of Section 51A of UAPA, 1967: Updates to UNSC’s 1267/ 1989 ISIL (Da'esh) & Al-Qaida Sanctions List: Amendment of 81 entries",
+    "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13757&Mode=0",
+    "published_at": "2026-11-26T11:10:00+00:00",
+    "official_issuer": "Reserve Bank of India",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "de-bundesbank-e5b1c4a067"
+      "in-rbi-738b09bded"
     ]
   },
   {
-    "n": 12672,
-    "title": "Basel Committee publishes more details on the 2026 assessment of global systemically important banks",
-    "url": "https://www.bis.org/media-releases/20261125-basel-committee-publishes-more-details-2026-assessment-global-systemically-important-banks",
-    "published_at": "2026-11-25T00:00:00+00:00",
-    "official_issuer": "Bank for International Settlements — View feed",
+    "n": 12728,
+    "title": "Speech by Board Member TAMURA in Yamanashi (Economic Activity, Prices, and Monetary Policy in Japan)",
+    "url": "http://www.boj.or.jp/en/about/press/koen_2026/ko261126a.htm",
+    "published_at": "2026-11-26T01:00:00+00:00",
+    "official_issuer": "Bank of Japan",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "io-bis-8d1fbea6ca"
+      "jp-boj-d488538690"
+    ]
+  },
+  {
+    "n": 12730,
+    "title": "ES - 2026-11-26 - Jan Camenisch, Julien Donnet, Simon Lavater and Thomas Moser: Wholesale CBDC on public permissionless blockchains: Challenges, trade-offs, and design choices",
+    "url": "https://www.snb.ch/en/publications/research/economic-studies/2026/economic_studies_2026_15",
+    "published_at": "2026-11-25T23:00:00+00:00",
+    "official_issuer": "Swiss National Bank",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "ch-snb-b0f42db828"
     ]
   }
 ]

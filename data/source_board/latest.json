@@ -1,6 +1,6 @@
 {
- "date": "2026-11-25",
- "generated_at": "2026-11-25T22:35:44.806695+00:00",
+ "date": "2026-11-26",
+ "generated_at": "2026-11-26T09:33:49.713041+00:00",
  "catalog": {
   "generated_at": "2026-11-21T20:07:43.335432+00:00",
   "channels": 365,
@@ -34,79 +34,57 @@
   }
  },
  "collect": {
-  "generated_at": "2026-11-25T22:35:05.627821+00:00",
+  "generated_at": "2026-11-26T09:33:28.726633+00:00",
   "enabled_sources": 115,
-  "sources_ok": 105,
-  "sources_failed": 10,
+  "sources_ok": 115,
+  "sources_failed": 0,
   "coverage_status": "degraded",
   "counts": {
-   "observed": 1977,
-   "old": 1104,
+   "observed": 1905,
+   "old": 990,
    "future": 8,
-   "undated": 205,
-   "new": 129,
-   "duplicates": 736
+   "undated": 360,
+   "new": 58,
+   "duplicates": 849
   },
-  "current_dated_documents": 770
+  "current_dated_documents": 716
  },
  "new_today": {
-  "count": 129,
+  "count": 58,
   "by_source": {
-   "us-fcc-e95ecda3bb": 21,
-   "us-doj-b3d27e1dc3": 17,
-   "us-govinfo-bills": 11,
-   "uk-govuk-decision": 8,
-   "us-fda-5696b24295": 8,
-   "us-cpsc-99343b5112": 7,
-   "eu-commission-07d4f58ccf": 7,
-   "eu-council-9d9e9444da": 5,
-   "us-doj-e05071794d": 4,
-   "ca-boc-a5cb9e38c1": 4,
-   "in-rbi-cc71120b98": 4,
-   "us-ustr-index": 3,
-   "uk-govuk-medical_safety_alert": 2,
-   "us-govinfo-crpt": 2,
-   "us-fed-a383ca0d09": 2,
-   "us-cfpb-8e157aee85": 2,
-   "us-fda-03f7703006": 2,
-   "eu-ecb-991c113079": 2,
-   "eu-eba-60bdc59843": 2,
-   "ca-boc-30d6d14378": 2,
-   "de-bundesbank-027ac4024f": 2,
-   "uk-govuk-international_treaty": 1,
-   "us-govinfo-dcpd": 1,
-   "us-white-house-0691096d16": 1,
-   "us-sec-8940dd7737": 1,
-   "us-occ-6f63126133": 1,
-   "us-fcc-685c5e7dd2": 1,
-   "us-dol-99f477805a": 1,
-   "uk-boe-4feb372611": 1,
-   "uk-fca-7b9977ec8e": 1,
-   "nz-rbnz-gnews": 1,
-   "de-bundesbank-e5b1c4a067": 1,
-   "io-bis-8d1fbea6ca": 1
+   "us-govinfo-bills": 21,
+   "us-ftc-df73e297e1": 16,
+   "in-rbi-cc71120b98": 5,
+   "us-sec-2476f14c28": 2,
+   "us-ftc-58b0383166": 2,
+   "eu-ecb-fb5fd59aed": 2,
+   "uk-fca-7b9977ec8e": 2,
+   "in-rbi-738b09bded": 2,
+   "us-cpsc-08fe06e2e6": 1,
+   "eu-council-9d9e9444da": 1,
+   "eu-court-1433471e58": 1,
+   "jp-boj-d488538690": 1,
+   "jp-meti-index": 1,
+   "ch-snb-b0f42db828": 1
   },
   "by_class": {
-   "routine": 52,
-   "high": 19,
-   "watch": 52,
-   "docket": 5,
-   "noise": 1
+   "routine": 22,
+   "high": 6,
+   "watch": 30
   }
  },
  "parsed_today": {
-  "count": 159,
+  "count": 33,
   "by_class": {
-   "high": 23,
-   "watch": 55,
-   "routine": 88,
-   "noise": 2
+   "high": 4,
+   "routine": 21,
+   "watch": 8
   }
  },
- "n_failures": 10,
+ "n_failures": 0,
  "dates": [
-  "2026-11-25"
+  "2026-11-26"
  ],
- "href": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/source_board/2026-11-25.json",
+ "href": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/source_board/2026-11-26.json",
  "pages": "https://sroyaltyy.github.io/fullscan/dashboard/source-board/"
 }
