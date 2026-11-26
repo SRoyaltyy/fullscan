@@ -1,6 +1,6 @@
 {
   "stage": "predict",
-  "fetched_at": "2026-11-26T15:15:57.430154-05:00",
+  "fetched_at": "2026-11-26T18:09:21.720992-05:00",
   "fred": {
     "DGS30": {
       "available": true,
@@ -107,8 +107,8 @@
       "available": true,
       "date": "2026-11-26",
       "source": "DX-Y.NYB",
-      "pct_1d": 0.1,
-      "pct_1m": 1.55
+      "pct_1d": 0.08,
+      "pct_1m": 1.53
     }
   },
   "futures": {
@@ -514,12 +514,12 @@
         },
         "ASX200": {
           "available": true,
-          "date": "2026-11-26",
-          "last": 8763.8,
-          "pct_1d": 0.82
+          "date": "2026-11-25",
+          "last": 8692.4,
+          "pct_1d": -0.39
         }
       },
-      "composite_avg": -2.26
+      "composite_avg": -2.5
     },
     "europe": {
       "per_index": {
@@ -531,24 +531,24 @@
         },
         "DAX": {
           "available": true,
-          "date": "2026-11-26",
-          "last": 25215.52,
-          "pct_1d": 2.08
+          "date": "2026-11-25",
+          "last": 24702.13,
+          "pct_1d": -1.26
         },
         "CAC": {
           "available": true,
-          "date": "2026-11-26",
-          "last": 8108.74,
-          "pct_1d": 1.61
+          "date": "2026-11-25",
+          "last": 7980.57,
+          "pct_1d": -0.75
         },
         "EuroStoxx50": {
           "available": true,
-          "date": "2026-11-26",
-          "last": 6014.74,
-          "pct_1d": 2.04
+          "date": "2026-11-25",
+          "last": 5894.46,
+          "pct_1d": -1.82
         }
       },
-      "composite_avg": 1.87
+      "composite_avg": -0.52
     }
   },
   "etf_premarket": {
