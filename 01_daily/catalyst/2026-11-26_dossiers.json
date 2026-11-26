@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-26",
+  "generated_at": "2026-11-26T04:47:40.670825-05:00",
+  "max_n": 8,
+  "routing": "Grok \u2192 DeepSeek",
+  "grok": true,
+  "deepseek_fallback": true,
+  "gemini": false,
+  "n_targets": 0,
+  "n_ok": 0,
+  "status": "OK",
+  "targets": [],
+  "dossiers": []
+}
