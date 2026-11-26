@@ -1,6 +1,6 @@
 {
   "stage": "predict",
-  "fetched_at": "2026-11-26T14:55:35.494862-05:00",
+  "fetched_at": "2026-11-26T15:15:57.430154-05:00",
   "fred": {
     "DGS30": {
       "available": true,
