@@ -1,6 +1,6 @@
 {
  "date": "2026-11-26",
- "generated_at": "2026-11-26T09:33:49.713041+00:00",
+ "generated_at": "2026-11-26T22:23:10.893005+00:00",
  "catalog": {
   "generated_at": "2026-11-21T20:07:43.335432+00:00",
   "channels": 365,
@@ -34,51 +34,57 @@
   }
  },
  "collect": {
-  "generated_at": "2026-11-26T09:33:28.726633+00:00",
+  "generated_at": "2026-11-26T22:22:50.591377+00:00",
   "enabled_sources": 115,
   "sources_ok": 115,
   "sources_failed": 0,
   "coverage_status": "degraded",
   "counts": {
-   "observed": 1905,
-   "old": 990,
+   "observed": 1824,
+   "old": 1048,
    "future": 8,
-   "undated": 360,
-   "new": 58,
-   "duplicates": 849
+   "undated": 310,
+   "new": 57,
+   "duplicates": 711
   },
-  "current_dated_documents": 716
+  "current_dated_documents": 668
  },
  "new_today": {
-  "count": 58,
+  "count": 57,
   "by_source": {
-   "us-govinfo-bills": 21,
-   "us-ftc-df73e297e1": 16,
-   "in-rbi-cc71120b98": 5,
-   "us-sec-2476f14c28": 2,
-   "us-ftc-58b0383166": 2,
-   "eu-ecb-fb5fd59aed": 2,
-   "uk-fca-7b9977ec8e": 2,
-   "in-rbi-738b09bded": 2,
-   "us-cpsc-08fe06e2e6": 1,
+   "us-doj-b3d27e1dc3": 17,
+   "io-bis-140216a5b6": 11,
+   "eu-commission-07d4f58ccf": 4,
+   "hk-hkma-public-press": 3,
+   "uk-govuk-decision": 3,
+   "uk-govuk-consultation_outcome": 3,
+   "uk-boe-4feb372611": 3,
+   "in-rbi-cc71120b98": 3,
+   "eu-court-1433471e58": 2,
+   "uk-govuk-government_response": 1,
+   "uk-govuk-medical_safety_alert": 1,
    "eu-council-9d9e9444da": 1,
-   "eu-court-1433471e58": 1,
-   "jp-boj-d488538690": 1,
-   "jp-meti-index": 1,
-   "ch-snb-b0f42db828": 1
+   "eu-ecb-991c113079": 1,
+   "eu-eba-60bdc59843": 1,
+   "uk-fca-7b9977ec8e": 1,
+   "ca-boc-30d6d14378": 1,
+   "ca-boc-a5cb9e38c1": 1
   },
   "by_class": {
+   "noise": 3,
    "routine": 22,
-   "high": 6,
-   "watch": 30
+   "docket": 10,
+   "high": 7,
+   "watch": 15
   }
  },
  "parsed_today": {
-  "count": 33,
+  "count": 77,
   "by_class": {
-   "high": 4,
-   "routine": 21,
-   "watch": 8
+   "noise": 3,
+   "routine": 46,
+   "high": 10,
+   "watch": 20
   }
  },
  "n_failures": 0,

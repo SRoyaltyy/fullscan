@@ -1,35 +1,11 @@
 [
   {
-    "title": "Federal Court Rules in Favor of CPSC in Landmark E-Commerce Product Safety Case",
-    "url": "https://www.cpsc.gov/Newsroom/News-Releases/2027/Federal-Court-Rules-in-Favor-of-CPSC-in-Landmark-E-Commerce-Product-Safety-Case",
-    "native_id": "https://www.cpsc.gov/_b7d66a49-752d-4b83-adce-728c07023062",
+    "title": "Authorities complete 2026 review of payments Memorandum of Understanding",
+    "url": "https://www.fca.org.uk/news/statements/payments-authorities-mou-review-2026",
+    "native_id": "178171",
     "published_at": null,
-    "published_raw": "Wed, 11/25/2026 - 12:00",
-    "summary": "Washington, D.C. – The U.S. Consumer Product Safety Commission (CPSC) today welcomed an order by the United States District Court for the District of Maryland granting summary judgment in favor of the Commission and dismissing Amazon.com, Inc.'s challenge",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Consumer Product Safety Commission",
-      "jurisdiction": "US",
-      "family": "product_safety"
-    },
-    "primary_source_id": "us-cpsc-08fe06e2e6",
-    "n": 12714,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
-    "source_ids": [
-      "us-cpsc-08fe06e2e6"
-    ]
-  },
-  {
-    "title": "Check the firm before you invest, FCA warns, as AI scams rise",
-    "url": "https://www.fca.org.uk/news/press-releases/check-firm-you-invest-fca-warns-ai-scams-rise",
-    "native_id": "178061",
-    "published_at": null,
-    "published_raw": "Thursday, November 26, 2026 - 09:16",
-    "summary": "A third (33%) of UK adults say they have seen an investment promotion in the past year that they believe used artificial intelligence (AI), new research from the FCA shows. Reports of investment fraud to Report Fraud that mention suspected use of AI have risen by nearly 400% in a year, up from 193 in 2024/25 to 956 in 2025/26. Investment fraud victims lost an average of £28,188 in 2025/26.Most people feel confident they could spot an AI investment scam, but that confidence is lower when a well-known person is involved. Almost two-thirds (62%) of adults say they could identify an investment scam that used AI. But less than half (49%) think they could tell whether a video or voice recording of a well-known person had been generated or altered by AI.Martin Lewis was the person most often named by those who thought they had seen a fake promotion featuring a well-known person.Under-35s are the most confident and the most exposed. Around three-quarters (74%) say they could identify an AI investment scam, and more than half (56%) believe they have seen an AI-generated investment promotion in the past year. Despite this, fewer than 4 in 10 (38%) would check whether a firm is FCA-authorised",
+    "published_raw": "Thursday, November 26, 2026 - 15:00",
+    "summary": "The Bank of England (the Bank), Financial Conduct Authority (FCA), Prudential Regulation Authority (PRA) and Payment Systems Regulator (PSR) have completed their annual review of the Memorandum of Understanding (MoU) on payments. Read the MoU (PDF)Outcome of the review: The review found that cooperation and coordination between the Authorities – the Bank, FCA, PRA and PSR – has strengthened and remains effective.We concluded that no changes to the MoU are needed at this time.To complement the MoU, we have updated our information explaining how our objectives, regulatory remits and key workstreams fit together.The Authorities have considered the effectiveness and efficiency of their coordination under the MoU. This includes feedback from industry and regulated firms to determine whether the MoU’s principles of coordination and cooperation continue to be met in practice. The review found that cooperation and coordination remain effective, with respondents welcoming tangible progress in how the Authorities work together. Examples of this include collaborating on a range of developments, including the future regime for dual-regulated stablecoin issuers and other innovations in payments",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -40,59 +16,11 @@
       "family": "financial_enforcement"
     },
     "primary_source_id": "uk-fca-7b9977ec8e",
-    "n": 12719,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
+    "n": 12771,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
     "source_ids": [
       "uk-fca-7b9977ec8e"
-    ]
-  },
-  {
-    "title": "Motor finance compensation scheme calculation",
-    "url": "https://www.fca.org.uk/news/statements/motor-finance-compensation-scheme-calculation",
-    "native_id": "178146",
-    "published_at": null,
-    "published_raw": "Thursday, November 26, 2026 - 07:03",
-    "summary": "While preparing our response to the legal challenges to our motor finance redress scheme, we identified some errors in how we categorised a small group of loan agreements. This data informed the annual percentage rate (APR) adjustment we use in our calculation of compensation. We set this at 17% for agreements from 1 April 2014. Our initial work to understand the impact of the errors suggests that, if there is any impact, this would be less than 1 percentage point either side of 17%.While the potential impact on average compensation is small – less than £10 per agreement, on average – we recognise this affects the ongoing litigation.We properly informed those challenging the scheme. Two of those challengers are due to serve their expert evidence on Friday 27 November 2026. We will discuss with the challengers and the court the impact on this deadline, and for the timeline of the litigation.We are sorry for the further uncertainty this creates for consumers and firms. We will provide an update on any further material developments.Our objective remains to secure compensation owed to consumers as quickly as possible, in a fair and orderly way, while maintaining a healthy motor finance",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Financial Conduct Authority",
-      "jurisdiction": "UK",
-      "family": "financial_enforcement"
-    },
-    "primary_source_id": "uk-fca-7b9977ec8e",
-    "n": 12720,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
-    "source_ids": [
-      "uk-fca-7b9977ec8e"
-    ]
-  },
-  {
-    "title": "JP-US-EU Industrial Control Systems Cybersecurity Week for the Indo-Pacific Region Held",
-    "url": "https://www.meti.go.jp/english/press/2026/11/20261124003.html",
-    "native_id": "https://www.meti.go.jp/english/press/2026/11/20261124003.html",
-    "published_at": null,
-    "published_raw": null,
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Japan Ministry of Economy Trade and Industry",
-      "jurisdiction": "JP",
-      "family": "trade_and_industry_policy"
-    },
-    "primary_source_id": "jp-meti-index",
-    "n": 12729,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
-    "source_ids": [
-      "jp-meti-index"
     ]
   }
 ]

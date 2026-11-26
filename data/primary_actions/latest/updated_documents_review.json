@@ -1,50 +1,171 @@
 [
   {
-    "title": "Don’t Be Left Out in the Cold This Holiday Season with Unsafe Presents: Buy from Trusted Sources",
-    "url": "https://www.cpsc.gov/Newsroom/News-Releases/2026/Dont-Be-Left-Out-in-the-Cold-This-Holiday-Season-with-Unsafe-Presents-Buy-from-Trusted-Sources",
-    "native_id": "https://www.cpsc.gov/_6d039050-7fba-4cdf-8361-f7db2f5e3963",
-    "published_at": null,
-    "published_raw": "Tue, 12/09/2025 - 12:00",
-    "summary": "CPSC Reminds Consumers to Shop Safely This Holiday Season",
+    "title": "Deep Drilling Screening Directions – 2026",
+    "url": "https://www.gov.uk/government/publications/deep-drilling-screening-directions-2026",
+    "native_id": "/government/publications/deep-drilling-screening-directions-2026",
+    "published_at": "2026-11-26T14:59:38+00:00",
+    "published_raw": "2026-11-26T14:59:38Z",
+    "document_type": "decision",
+    "issuer": "Offshore Petroleum Regulator for Environment and Decommissioning",
+    "issuer_ids": [
+      "uk-gov:offshore-petroleum-regulator-for-environment-and-decommissioning"
+    ],
+    "summary": "Screening Directions",
     "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
+      "document_type": "decision",
+      "document_stage": "decision_published",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Consumer Product Safety Commission",
-      "jurisdiction": "US",
-      "family": "product_safety"
+      "issuer": "Offshore Petroleum Regulator for Environment and Decommissioning",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
     },
-    "primary_source_id": "us-cpsc-08fe06e2e6",
-    "n": 3537,
+    "primary_source_id": "uk-govuk-decision",
+    "n": 3303,
     "first_seen": "2026-10-16T10:36:18.842579+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
     "source_ids": [
-      "us-cpsc-08fe06e2e6"
+      "uk-govuk-decision"
     ]
   },
   {
-    "title": "Put Safety on the Menu: Consumer Product Safety Commission Offers Safe Cooking Tips for a Joyful Holiday Season",
-    "url": "https://www.cpsc.gov/Newsroom/News-Releases/2026/Put-Safety-on-the-Menu-Consumer-Product-Safety-Commission-Offers-Safe-Cooking-Tips-for-a-Joyful-Holiday-Season",
-    "native_id": "https://www.cpsc.gov/_59de4207-4ace-44ca-ace0-3cde0cfb8ddb",
-    "published_at": null,
-    "published_raw": "Wed, 11/19/2025 - 12:00",
-    "summary": "WASHINGTON, D.C. – As families across America prepare to gather for Thanksgiving, the U.S. Consumer Product Safety Commission (CPSC) is issuing an urgent reminder that the holiday season marks the most dangerous time of year for cooking-related fires and",
+    "title": "Product Recall: Blue Starfish Shaped Baby Sleeping Bag sold via Joom (2610-0186)",
+    "url": "https://www.gov.uk/product-safety-alerts-reports-recalls/product-safety-report-blue-starfish-shaped-baby-sleeping-bag-sold-via-joom-2610-0186",
+    "native_id": "/product-safety-alerts-reports-recalls/product-safety-report-blue-starfish-shaped-baby-sleeping-bag-sold-via-joom-2610-0186",
+    "published_at": "2026-11-26T13:24:21+00:00",
+    "published_raw": "2026-11-26T13:24:21Z",
+    "document_type": "product_safety_alert_report_recall",
+    "issuer": "Office for Product Safety and Standards",
+    "issuer_ids": [
+      "uk-gov:office-for-product-safety-and-standards"
+    ],
+    "summary": "Product Recall for Blue Starfish Shaped Baby Sleeping Bag sold via Joom presenting a risk of asphyxiation.",
+    "source_metadata": {
+      "document_type": "product_safety_alert_report_recall",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Office for Product Safety and Standards",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-product_safety_alert_report_recall",
+    "n": 6612,
+    "first_seen": "2026-10-26T19:21:36.282284+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
+    "source_ids": [
+      "uk-govuk-product_safety_alert_report_recall"
+    ]
+  },
+  {
+    "title": "CAC Outcome: RMT & Hitachi Rail Limited",
+    "url": "https://www.gov.uk/government/publications/cac-outcome-rmt-hitachi-rail-limited",
+    "native_id": "/government/publications/cac-outcome-rmt-hitachi-rail-limited",
+    "published_at": "2026-11-26T16:26:51+00:00",
+    "published_raw": "2026-11-26T16:26:51Z",
+    "document_type": "decision",
+    "issuer": "Central Arbitration Committee",
+    "issuer_ids": [
+      "uk-gov:central-arbitration-committee"
+    ],
+    "summary": "Outcome(s) by the Central Arbitration Committee on an application from RMT",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Central Arbitration Committee",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 7698,
+    "first_seen": "2026-10-30T18:57:21.617502+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Legal framework for using facial recognition in law enforcement",
+    "url": "https://www.gov.uk/government/consultations/legal-framework-for-using-facial-recognition-in-law-enforcement",
+    "native_id": "/government/consultations/legal-framework-for-using-facial-recognition-in-law-enforcement",
+    "published_at": "2026-11-26T16:42:15+00:00",
+    "published_raw": "2026-11-26T16:42:15Z",
+    "document_type": "consultation_outcome",
+    "issuer": "Home Office",
+    "issuer_ids": [
+      "uk-gov:home-office"
+    ],
+    "summary": "The government is launching a consultation to help develop a new legal framework for the use of facial recognition and similar technologies by law enforcement.",
+    "source_metadata": {
+      "document_type": "consultation_outcome",
+      "document_stage": "consultation_response_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Home Office",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-consultation_outcome",
+    "n": 8513,
+    "first_seen": "2026-11-04T20:26:55.940049+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
+    "source_ids": [
+      "uk-govuk-consultation_outcome"
+    ]
+  },
+  {
+    "title": "Pipeline Screening Directions – 2026",
+    "url": "https://www.gov.uk/government/publications/pipeline-screening-directions-2026",
+    "native_id": "/government/publications/pipeline-screening-directions-2026",
+    "published_at": "2026-11-26T10:38:32+00:00",
+    "published_raw": "2026-11-26T10:38:32Z",
+    "document_type": "decision",
+    "issuer": "Offshore Petroleum Regulator for Environment and Decommissioning",
+    "issuer_ids": [
+      "uk-gov:offshore-petroleum-regulator-for-environment-and-decommissioning"
+    ],
+    "summary": "Screening Directions",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Offshore Petroleum Regulator for Environment and Decommissioning",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 10821,
+    "first_seen": "2026-11-17T21:46:57.732960+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "2026-11-26 - SNB Economic Studies - Wholesale CBDC on public permissionless blockchains: Challenges, trade-offs, and design choices",
+    "url": "https://www.snb.ch/en/publications/research/economic-studies/2026/economic_studies_2026_15",
+    "native_id": "https://www.snb.ch/en/publications/research/economic-studies/2026/economic_studies_2026_15",
+    "published_at": "2026-11-25T23:00:00+00:00",
+    "published_raw": "2026-11-25T23:00:00Z",
+    "summary": "",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Consumer Product Safety Commission",
-      "jurisdiction": "US",
-      "family": "product_safety"
+      "issuer": "Swiss National Bank",
+      "jurisdiction": "CH",
+      "family": "monetary_operations"
     },
-    "primary_source_id": "us-cpsc-08fe06e2e6",
-    "n": 3538,
-    "first_seen": "2026-10-16T10:36:18.842579+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
+    "primary_source_id": "ch-snb-b0f42db828",
+    "n": 12730,
+    "first_seen": "2026-11-26T09:33:28.726633+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
     "source_ids": [
-      "us-cpsc-08fe06e2e6"
+      "ch-snb-b0f42db828"
     ]
   }
 ]

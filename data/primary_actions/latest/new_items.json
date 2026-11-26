@@ -1,1021 +1,822 @@
 [
   {
-    "title": "H.R. 11119 (IH) - Freight Rail Cybersecurity Enhancement Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11119ih",
-    "native_id": "BILLS-119hr11119ih",
-    "published_at": "2026-11-26T04:36:00+00:00",
-    "published_raw": "Thu, 26 Nov 2026 04:36:00 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 12673,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 11147 (IH) - Combating Workplace Discrimination in Correctional Facilities Act of 2026",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11147ih",
-    "native_id": "BILLS-119hr11147ih",
-    "published_at": "2026-11-26T04:36:00+00:00",
-    "published_raw": "Thu, 26 Nov 2026 04:36:00 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 12674,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 11120 (IH) - Protect Our Neighbors Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11120ih",
-    "native_id": "BILLS-119hr11120ih",
-    "published_at": "2026-11-26T04:37:02+00:00",
-    "published_raw": "Thu, 26 Nov 2026 04:37:02 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 12675,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 11116 (IH) - Improving Mental Health Access from the Emergency Department Act of 2026",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11116ih",
-    "native_id": "BILLS-119hr11116ih",
-    "published_at": "2026-11-26T04:37:02+00:00",
-    "published_raw": "Thu, 26 Nov 2026 04:37:02 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 12676,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 11110 (IH) - Servicemember Experience Recognition and Validation for Industry Credentials and Employment Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11110ih",
-    "native_id": "BILLS-119hr11110ih",
-    "published_at": "2026-11-26T04:37:03+00:00",
-    "published_raw": "Thu, 26 Nov 2026 04:37:03 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 12677,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 11148 (IH) - Ensuring Work Opportunities in Correctional Facilities Act of 2026",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11148ih",
-    "native_id": "BILLS-119hr11148ih",
-    "published_at": "2026-11-26T04:37:03+00:00",
-    "published_raw": "Thu, 26 Nov 2026 04:37:03 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 12678,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 11118 (IH) - Right-of-Way Infrastructure Development Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11118ih",
-    "native_id": "BILLS-119hr11118ih",
-    "published_at": "2026-11-26T04:37:03+00:00",
-    "published_raw": "Thu, 26 Nov 2026 04:37:03 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 12679,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 11117 (IH) - Mental Health Justice Act of 2026",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11117ih",
-    "native_id": "BILLS-119hr11117ih",
-    "published_at": "2026-11-26T04:37:03+00:00",
-    "published_raw": "Thu, 26 Nov 2026 04:37:03 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 12680,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 11132 (IH) - Just Punishment for Murder Act of 2026",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11132ih",
-    "native_id": "BILLS-119hr11132ih",
-    "published_at": "2026-11-26T04:37:03+00:00",
-    "published_raw": "Thu, 26 Nov 2026 04:37:03 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 12681,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 11112 (IH) - Provide Rigorous Oversight To Optimize Connectivity and Offset Latency Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11112ih",
-    "native_id": "BILLS-119hr11112ih",
-    "published_at": "2026-11-26T04:37:03+00:00",
-    "published_raw": "Thu, 26 Nov 2026 04:37:03 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 12682,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 11104 (IH) - Prohibiting Detention of Youth Status Offenders Act of 2026",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11104ih",
-    "native_id": "BILLS-119hr11104ih",
-    "published_at": "2026-11-26T04:37:03+00:00",
-    "published_raw": "Thu, 26 Nov 2026 04:37:03 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 12683,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 11107 (IH) - Investing in American Innovation Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11107ih",
-    "native_id": "BILLS-119hr11107ih",
-    "published_at": "2026-11-26T04:37:03+00:00",
-    "published_raw": "Thu, 26 Nov 2026 04:37:03 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 12684,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 11111 (IH) - Military Units for Separation, Transition, Employment, and Readiness Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11111ih",
-    "native_id": "BILLS-119hr11111ih",
-    "published_at": "2026-11-26T04:37:03+00:00",
-    "published_raw": "Thu, 26 Nov 2026 04:37:03 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 12685,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 11105 (IH) - No Online Delivery Allowed for SNAP Households Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11105ih",
-    "native_id": "BILLS-119hr11105ih",
-    "published_at": "2026-11-26T04:37:03+00:00",
-    "published_raw": "Thu, 26 Nov 2026 04:37:03 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 12686,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 11084 (IH) - Ethiopia Stability, Partnership, Agriculture, Resources, and Key Investments Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11084ih",
-    "native_id": "BILLS-119hr11084ih",
-    "published_at": "2026-11-26T04:37:03+00:00",
-    "published_raw": "Thu, 26 Nov 2026 04:37:03 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 12687,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 11085 (IH) - Eritrea Partnership for Investment, Lasting Liberty, Agriculture, and Resources Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11085ih",
-    "native_id": "BILLS-119hr11085ih",
-    "published_at": "2026-11-26T04:37:03+00:00",
-    "published_raw": "Thu, 26 Nov 2026 04:37:03 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 12688,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 11115 (IH) - Fuel Freedom Act of 2026",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11115ih",
-    "native_id": "BILLS-119hr11115ih",
-    "published_at": "2026-11-26T04:37:03+00:00",
-    "published_raw": "Thu, 26 Nov 2026 04:37:03 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 12689,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 11108 (IH) - Gun Theft Prevention Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11108ih",
-    "native_id": "BILLS-119hr11108ih",
-    "published_at": "2026-11-26T04:38:00+00:00",
-    "published_raw": "Thu, 26 Nov 2026 04:38:00 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 12690,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 11102 (IH) - Increasing Transparency and Accountability in Federal Spending Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11102ih",
-    "native_id": "BILLS-119hr11102ih",
-    "published_at": "2026-11-26T04:38:00+00:00",
-    "published_raw": "Thu, 26 Nov 2026 04:38:00 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 12691,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 11109 (IH) - Capturing Outcomes and Understanding Nontraditional Trajectories Act of 2026",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11109ih",
-    "native_id": "BILLS-119hr11109ih",
-    "published_at": "2026-11-26T04:38:00+00:00",
-    "published_raw": "Thu, 26 Nov 2026 04:38:00 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 12692,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "H.R. 11057 (IH) - Student Food Security Act of 2026",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11057ih",
-    "native_id": "BILLS-119hr11057ih",
-    "published_at": "2026-11-26T04:38:00+00:00",
-    "published_raw": "Thu, 26 Nov 2026 04:38:00 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 12693,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
-    "source_ids": [
-      "us-govinfo-bills"
-    ]
-  },
-  {
-    "title": "Michael A. Smith; Douglas and Joshua Dalton",
-    "url": "https://www.sec.gov/enforcement-litigation/litigation-releases/lr-26696",
-    "native_id": "54c4e562-6ec1-47ad-bb09-10455f0f5623",
-    "published_at": "2026-11-25T15:35:41+00:00",
-    "published_raw": "Wed, 25 Nov 2026 10:35:41 -0500",
-    "summary": "Michael A. Smith; Douglas and Joshua Dalton",
+    "title": "Tender of 5-year HKD HKSAR Institutional Government Bonds through re-opening to be held on Wednesday, 2 December 2026",
+    "url": "https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/11/20261126-5/",
+    "native_id": "https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/11/20261126-5/",
+    "published_at": "2026-11-26T00:00:00+00:00",
+    "published_raw": "2026-11-26",
+    "issuer": "Hong Kong Monetary Authority",
+    "summary": "",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Securities and Exchange Commission",
-      "jurisdiction": "US",
-      "family": "enforcement_and_market_rules"
+      "issuer": "Hong Kong Monetary Authority",
+      "jurisdiction": "HK",
+      "family": "monetary_and_supervisory"
     },
-    "primary_source_id": "us-sec-2476f14c28",
-    "n": 12694,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
+    "primary_source_id": "hk-hkma-public-press",
+    "n": 12731,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
     "source_ids": [
-      "us-sec-2476f14c28"
+      "hk-hkma-public-press"
     ]
   },
   {
-    "title": "Michael P. Hanlon and J. Streicher Financial, LLC",
-    "url": "https://www.sec.gov/enforcement-litigation/litigation-releases/lr-26695",
-    "native_id": "2c910b05-f977-4a6c-9b6f-a588d08229b5",
-    "published_at": "2026-11-25T15:34:01+00:00",
-    "published_raw": "Wed, 25 Nov 2026 10:34:01 -0500",
-    "summary": "Michael P. Hanlon and J. Streicher Financial, LLC",
+    "title": "Results of 7-year RMB HKSAR Institutional Government Bonds tender through re-opening",
+    "url": "https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/11/20261126-4/",
+    "native_id": "https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/11/20261126-4/",
+    "published_at": "2026-11-26T00:00:00+00:00",
+    "published_raw": "2026-11-26",
+    "issuer": "Hong Kong Monetary Authority",
+    "summary": "",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Securities and Exchange Commission",
-      "jurisdiction": "US",
-      "family": "enforcement_and_market_rules"
+      "issuer": "Hong Kong Monetary Authority",
+      "jurisdiction": "HK",
+      "family": "monetary_and_supervisory"
     },
-    "primary_source_id": "us-sec-2476f14c28",
-    "n": 12695,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
+    "primary_source_id": "hk-hkma-public-press",
+    "n": 12732,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
     "source_ids": [
-      "us-sec-2476f14c28"
+      "hk-hkma-public-press"
     ]
   },
   {
-    "title": "FTC Grants In Part and Denies In Part Northrop Grumman Petition to Set Aside Order",
-    "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-grants-part-denies-part-northrop-grumman-petition-set-aside-order",
-    "native_id": "339467",
+    "title": "Results of 1-year RMB HKSAR Institutional Government Bonds tender through re-opening",
+    "url": "https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/11/20261126-3/",
+    "native_id": "https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/11/20261126-3/",
+    "published_at": "2026-11-26T00:00:00+00:00",
+    "published_raw": "2026-11-26",
+    "issuer": "Hong Kong Monetary Authority",
+    "summary": "",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Hong Kong Monetary Authority",
+      "jurisdiction": "HK",
+      "family": "monetary_and_supervisory"
+    },
+    "primary_source_id": "hk-hkma-public-press",
+    "n": 12733,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
+    "source_ids": [
+      "hk-hkma-public-press"
+    ]
+  },
+  {
+    "title": "CAC Outcome: GMB & Bertschi UK Limited",
+    "url": "https://www.gov.uk/government/publications/cac-outcome-gmb-bertschi-uk-limited",
+    "native_id": "/government/publications/cac-outcome-gmb-bertschi-uk-limited",
+    "published_at": "2026-11-26T16:08:03+00:00",
+    "published_raw": "2026-11-26T16:08:03Z",
+    "document_type": "decision",
+    "issuer": "Central Arbitration Committee",
+    "issuer_ids": [
+      "uk-gov:central-arbitration-committee"
+    ],
+    "summary": "Outcome(s) by the Central Arbitration Committee on an application from GMB.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Central Arbitration Committee",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 12734,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Redacted decision in the case of William Dunlop",
+    "url": "https://www.gov.uk/government/publications/redacted-decision-in-the-case-of-william-dunlop",
+    "native_id": "/government/publications/redacted-decision-in-the-case-of-william-dunlop",
+    "published_at": "2026-11-26T12:04:47+00:00",
+    "published_raw": "2026-11-26T12:04:47Z",
+    "document_type": "decision",
+    "issuer": "Parole Board",
+    "issuer_ids": [
+      "uk-gov:parole-board"
+    ],
+    "summary": "You will find attached the redacted decision following the public hearing for William Dunlop held on 21 October 2026.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Parole Board",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 12735,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Teacher misconduct panel outcome: Mr Scott Towers",
+    "url": "https://www.gov.uk/government/publications/teacher-misconduct-panel-outcome-mr-scott-towers",
+    "native_id": "/government/publications/teacher-misconduct-panel-outcome-mr-scott-towers",
+    "published_at": "2026-11-26T11:15:20+00:00",
+    "published_raw": "2026-11-26T11:15:20Z",
+    "document_type": "decision",
+    "issuer": "Teaching Regulation Agency",
+    "issuer_ids": [
+      "uk-gov:teaching-regulation-agency"
+    ],
+    "summary": "Professional conduct panel outcome, including decision and reasons.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Teaching Regulation Agency",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 12736,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Transfer Pricing: International Controlled Transactions Schedule",
+    "url": "https://www.gov.uk/government/consultations/transfer-pricing-international-controlled-transactions-schedule",
+    "native_id": "/government/consultations/transfer-pricing-international-controlled-transactions-schedule",
+    "published_at": "2026-11-26T16:32:39+00:00",
+    "published_raw": "2026-11-26T16:32:39Z",
+    "document_type": "consultation_outcome",
+    "issuer": "HM Revenue & Customs",
+    "issuer_ids": [
+      "uk-gov:hm-revenue-customs"
+    ],
+    "summary": "Technical consultation on the requirement for in-scope multinationals to report certain information about cross-border related party transactions to HMRC.",
+    "source_metadata": {
+      "document_type": "consultation_outcome",
+      "document_stage": "consultation_response_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "HM Revenue & Customs",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-consultation_outcome",
+    "n": 12737,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
+    "source_ids": [
+      "uk-govuk-consultation_outcome"
+    ]
+  },
+  {
+    "title": "ORR: modifying non-GBR licences in the context of rail reform",
+    "url": "https://www.gov.uk/government/consultations/orr-modifying-non-gbr-licences-in-the-context-of-rail-reform",
+    "native_id": "/government/consultations/orr-modifying-non-gbr-licences-in-the-context-of-rail-reform",
+    "published_at": "2026-11-26T15:59:48+00:00",
+    "published_raw": "2026-11-26T15:59:48Z",
+    "document_type": "consultation_outcome",
+    "issuer": "Office of Rail and Road",
+    "issuer_ids": [
+      "uk-gov:office-of-rail-and-road"
+    ],
+    "summary": "Provides ORR’s emerging thinking and seeks stakeholder views on licence modifications which may be necessary or desirable in the context of rail reform.",
+    "source_metadata": {
+      "document_type": "consultation_outcome",
+      "document_stage": "consultation_response_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Office of Rail and Road",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-consultation_outcome",
+    "n": 12738,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
+    "source_ids": [
+      "uk-govuk-consultation_outcome"
+    ]
+  },
+  {
+    "title": "Future regulatory regime for benchmarks and benchmark administrators",
+    "url": "https://www.gov.uk/government/consultations/future-regulatory-regime-for-benchmarks-and-benchmark-administrators",
+    "native_id": "/government/consultations/future-regulatory-regime-for-benchmarks-and-benchmark-administrators",
+    "published_at": "2026-11-26T11:00:00+00:00",
+    "published_raw": "2026-11-26T11:00:00Z",
+    "document_type": "consultation_outcome",
+    "issuer": "HM Treasury",
+    "issuer_ids": [
+      "uk-gov:hm-treasury"
+    ],
+    "summary": "This consultation seeks views on the proposal to reform the UK’s existing benchmarks regime and replace it with the Specified Authorised Benchmarks Regime (SABR).",
+    "source_metadata": {
+      "document_type": "consultation_outcome",
+      "document_stage": "consultation_response_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "HM Treasury",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-consultation_outcome",
+    "n": 12739,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
+    "source_ids": [
+      "uk-govuk-consultation_outcome"
+    ]
+  },
+  {
+    "title": "‘Cutting Costs’ (European Partnership) Bill: Frequently Asked Questions",
+    "url": "https://www.gov.uk/government/news/cutting-costs-european-partnership-bill-frequently-asked-questions",
+    "native_id": "/government/news/cutting-costs-european-partnership-bill-frequently-asked-questions",
+    "published_at": "2026-11-26T15:26:09+00:00",
+    "published_raw": "2026-11-26T15:26:09Z",
+    "document_type": "government_response",
+    "issuer": "Cabinet Office",
+    "issuer_ids": [
+      "uk-gov:cabinet-office"
+    ],
+    "summary": "This factsheet sets out how the UK Government is putting into law the agreements reached at the recent UK-EU Summit, which will cut red tape and lower costs for British businesses.",
+    "source_metadata": {
+      "document_type": "government_response",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Cabinet Office",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-government_response",
+    "n": 12740,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
+    "source_ids": [
+      "uk-govuk-government_response"
+    ]
+  },
+  {
+    "title": "MHRA Safety Roundup: November 2026",
+    "url": "https://www.gov.uk/drug-device-alerts/mhra-safety-roundup-november-2026",
+    "native_id": "/drug-device-alerts/mhra-safety-roundup-november-2026",
+    "published_at": "2026-11-26T13:59:39+00:00",
+    "published_raw": "2026-11-26T13:59:39Z",
+    "document_type": "medical_safety_alert",
+    "issuer": "Medicines and Healthcare products Regulatory Agency",
+    "issuer_ids": [
+      "uk-gov:medicines-and-healthcare-products-regulatory-agency"
+    ],
+    "summary": "Summary of the latest safety advice for medicines and medical device users",
+    "source_metadata": {
+      "document_type": "medical_safety_alert",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Medicines and Healthcare products Regulatory Agency",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-medical_safety_alert",
+    "n": 12741,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
+    "source_ids": [
+      "uk-govuk-medical_safety_alert"
+    ]
+  },
+  {
+    "title": "Sheridan Man Sentenced to Six-and-a-Half Years in Federal Prison for Receiving Child Sexual Abuse Material",
+    "url": "https://www.justice.gov/usao-or/pr/sheridan-man-sentenced-six-and-half-years-federal-prison-receiving-child-sexual-abuse",
+    "native_id": "https://www.justice.gov/usao-or/pr/sheridan-man-sentenced-six-and-half-years-federal-prison-receiving-child-sexual-abuse",
     "published_at": "2026-11-25T12:00:00+00:00",
-    "published_raw": "Wed, 25 Nov 2026 07:00:00 -0500",
-    "summary": "The modifications to the 2018 order would limit its scope to cover only the sale of large solid rocket motors The Federal Trade Commission today modified a 2018 order related to Northrop Grumman Corporation’s acquisition of aerospace and defense contractor Orbital ATK, narrowing the order’s scope to apply only to missile competitions involving large solid rocket motors (SRMs). View Press Release",
+    "published_raw": "Wed, 25 Nov 2026 12:00:00 +0000",
+    "summary": "A Sheridan man has been sentenced to six-and-a-half years in federal prison for receiving child sexual abuse material (CSAM), U.S. Attorney Scott E. Bradford announced today.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Trade Commission — Press Releases",
+      "issuer": "Department of Justice",
       "jurisdiction": "US",
-      "family": "competition_and_enforcement"
+      "family": "judicial_and_enforcement"
     },
-    "primary_source_id": "us-ftc-58b0383166",
-    "n": 12696,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 12742,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
     "source_ids": [
-      "us-ftc-58b0383166",
-      "us-ftc-ebb4359fb7"
+      "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "FTC Finalizes Order Resolving Antitrust Concerns Stemming from Beretta, Ruger Stock Purchase Deal",
-    "url": "https://www.ftc.gov/news-events/news/press-releases/2026/11/ftc-finalizes-order-resolving-antitrust-concerns-stemming-beretta-ruger-stock-purchase-deal",
-    "native_id": "339433",
+    "title": "Three Members of Paterson-Based “100k” Gang Plead Guilty to Racketeering Conspiracy for Roles in Murder of Woman; Eight Other Gang Members Pled Guilty to Racketeering Conspiracy Connected to Additional Shootings, Robberies, Drug Trafficking and Bank Fraud",
+    "url": "https://www.justice.gov/usao-nj/pr/three-members-paterson-based-100k-gang-plead-guilty-racketeering-conspiracy-roles-murder",
+    "native_id": "https://www.justice.gov/usao-nj/pr/three-members-paterson-based-100k-gang-plead-guilty-racketeering-conspiracy-roles-murder",
     "published_at": "2026-11-25T12:00:00+00:00",
-    "published_raw": "Wed, 25 Nov 2026 07:00:00 -0500",
-    "summary": "The Federal Trade Commission has finalized an order resolving antitrust concerns related to a stock purchase agreement between two of the largest firearm manufacturers, Beretta Holding S.A. and Sturm, Ruger & Co. Inc., by prohibiting anticompetitive entanglements between the two companies. View Press Release",
+    "published_raw": "Wed, 25 Nov 2026 12:00:00 +0000",
+    "summary": "Eleven members of the Paterson-based neighborhood street gang known as “100k” have pled guilty for their roles in a violent racketeering conspiracy.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Trade Commission — Press Releases",
+      "issuer": "Department of Justice",
       "jurisdiction": "US",
-      "family": "competition_and_enforcement"
+      "family": "judicial_and_enforcement"
     },
-    "primary_source_id": "us-ftc-58b0383166",
-    "n": 12697,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 12743,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
     "source_ids": [
-      "us-ftc-58b0383166",
-      "us-ftc-ebb4359fb7"
+      "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "20270235: Kaiser Foundation Hospitals; INTEGRIS Health, Inc.",
-    "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20270235",
-    "native_id": "339478 at https://www.ftc.gov",
-    "published_at": "2026-11-25T17:54:00+00:00",
-    "published_raw": "Wed, 25 Nov 2026 17:54:00 +0000",
-    "summary": "20270235: Kaiser Foundation Hospitals; INTEGRIS Health, Inc. Date November 24, 2026 bacree November 25, 2026 | 12:54PM Transaction Number 20270235 Acquiring Party Kaiser Foundation Hospitals Acquired Party INTEGRIS Health, Inc. Granting Status Granted Acquired Entities INTEGRIS Health, Inc.",
+    "title": "Defendant sentenced to 27 years in federal prison for armed robbery and firearms-related charges",
+    "url": "https://www.justice.gov/usao-sdga/pr/defendant-sentenced-27-years-federal-prison-armed-robbery-and-firearms-related-charges",
+    "native_id": "https://www.justice.gov/usao-sdga/pr/defendant-sentenced-27-years-federal-prison-armed-robbery-and-firearms-related-charges",
+    "published_at": "2026-11-25T12:00:00+00:00",
+    "published_raw": "Wed, 25 Nov 2026 12:00:00 +0000",
+    "summary": "A Savannah man has been sentenced to prison on federal charges for armed robbery and carjacking.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Trade Commission — HSR Early Termination Notices",
+      "issuer": "Department of Justice",
       "jurisdiction": "US",
-      "family": "competition_and_enforcement"
+      "family": "judicial_and_enforcement"
     },
-    "primary_source_id": "us-ftc-df73e297e1",
-    "n": 12698,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 12744,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
     "source_ids": [
-      "us-ftc-df73e297e1"
+      "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "20270261: Greenbriar Equity Fund VII, L.P.; Aerospace, Transportation, & Logistics Fund II LP",
-    "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20270261",
-    "native_id": "339481 at https://www.ftc.gov",
-    "published_at": "2026-11-25T17:54:02+00:00",
-    "published_raw": "Wed, 25 Nov 2026 17:54:02 +0000",
-    "summary": "20270261: Greenbriar Equity Fund VII, L.P.; Aerospace, Transportation, & Logistics Fund II LP Date November 24, 2026 bacree November 25, 2026 | 12:54PM Transaction Number 20270261 Acquiring Party Greenbriar Equity Fund VII, L.P. Acquired Party Aerospace, Transportation, & Logistics Fund II LP Granting Status Granted Acquired Entities ATL II MRO Intermediate Holdings, LLC",
+    "title": "The Government Successfully Forfeited Over $670,000 in Cryptocurrency Linked to an Online Investment Scam",
+    "url": "https://www.justice.gov/usao-ndny/pr/government-successfully-forfeited-over-670000-cryptocurrency-linked-online-investment",
+    "native_id": "https://www.justice.gov/usao-ndny/pr/government-successfully-forfeited-over-670000-cryptocurrency-linked-online-investment",
+    "published_at": "2026-11-25T12:00:00+00:00",
+    "published_raw": "Wed, 25 Nov 2026 12:00:00 +0000",
+    "summary": "Chief U.S. District Judge Brenda K. Sannes issued an order November 16, 2026, forfeiting $674,469.58 worth of cryptocurrency seized by the Federal Bureau of Investigation (FBI) to the government in connection with an investigation of an online cryptocurrency scam affecting multiple victims.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Trade Commission — HSR Early Termination Notices",
+      "issuer": "Department of Justice",
       "jurisdiction": "US",
-      "family": "competition_and_enforcement"
+      "family": "judicial_and_enforcement"
     },
-    "primary_source_id": "us-ftc-df73e297e1",
-    "n": 12699,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 12745,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
     "source_ids": [
-      "us-ftc-df73e297e1"
+      "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "20270186: Applied Materials, Inc.; BE Semiconductor Industries N.V.",
-    "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20270186",
-    "native_id": "339470 at https://www.ftc.gov",
-    "published_at": "2026-11-25T17:53:58+00:00",
-    "published_raw": "Wed, 25 Nov 2026 17:53:58 +0000",
-    "summary": "20270186: Applied Materials, Inc.; BE Semiconductor Industries N.V. Date November 24, 2026 bacree November 25, 2026 | 12:53PM Transaction Number 20270186 Acquiring Party Applied Materials, Inc. Acquired Party BE Semiconductor Industries N.V. Granting Status Granted Acquired Entities BE Semiconductor Industries N.V.",
+    "title": "Sex offender sentenced to 15 years in federal prison for sexual abuse of minors",
+    "url": "https://www.justice.gov/usao-wy/pr/sex-offender-sentenced-15-years-federal-prison-sexual-abuse-minors",
+    "native_id": "https://www.justice.gov/usao-wy/pr/sex-offender-sentenced-15-years-federal-prison-sexual-abuse-minors",
+    "published_at": "2026-11-25T12:00:00+00:00",
+    "published_raw": "Wed, 25 Nov 2026 12:00:00 +0000",
+    "summary": "CHEYENNE, Wyo. — Reland Paul Littleshield Sr. , 52, of Arapahoe, Wyoming, has been sentenced to 15 years in federal prison, followed by fifteen years of supervised release, for sexual abuse and attempted aggravated sexual abuse. Chief U.S. District Court Judge Kelly H. Rankin imposed the sentence.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Trade Commission — HSR Early Termination Notices",
+      "issuer": "Department of Justice",
       "jurisdiction": "US",
-      "family": "competition_and_enforcement"
+      "family": "judicial_and_enforcement"
     },
-    "primary_source_id": "us-ftc-df73e297e1",
-    "n": 12700,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 12746,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
     "source_ids": [
-      "us-ftc-df73e297e1"
+      "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "20270208: Quikrete Holdings, Inc; Delta Industries, Inc.",
-    "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20270208",
-    "native_id": "339473 at https://www.ftc.gov",
-    "published_at": "2026-11-25T17:53:58+00:00",
-    "published_raw": "Wed, 25 Nov 2026 17:53:58 +0000",
-    "summary": "20270208: Quikrete Holdings, Inc; Delta Industries, Inc. Date November 24, 2026 bacree November 25, 2026 | 12:53PM Transaction Number 20270208 Acquiring Party Quikrete Holdings, Inc Acquired Party Delta Industries, Inc. Granting Status Granted Acquired Entities Delta Industries, Inc.",
+    "title": "Walton Man Sentenced to 15 Years for Receipt of Child Pornography",
+    "url": "https://www.justice.gov/usao-ndny/pr/walton-man-sentenced-15-years-receipt-child-pornography",
+    "native_id": "https://www.justice.gov/usao-ndny/pr/walton-man-sentenced-15-years-receipt-child-pornography",
+    "published_at": "2026-11-25T12:00:00+00:00",
+    "published_raw": "Wed, 25 Nov 2026 12:00:00 +0000",
+    "summary": "Jerry N. Butler III, 21, of Walton, New York was sentenced on November 24, 2026, by United States District Judge Anthony J. Brindisi to 15 years’ imprisonment, followed by 15 years’ supervised release for receiving child pornography. First Assistant United States Attorney John A. Sarcone III and Craig L. Tremaroli, Special Agent in Charge of the Albany Field Office of the Federal Bureau of Investigation (FBI), made the announcement.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Trade Commission — HSR Early Termination Notices",
+      "issuer": "Department of Justice",
       "jurisdiction": "US",
-      "family": "competition_and_enforcement"
+      "family": "judicial_and_enforcement"
     },
-    "primary_source_id": "us-ftc-df73e297e1",
-    "n": 12701,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 12747,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
     "source_ids": [
-      "us-ftc-df73e297e1"
+      "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "20270220: Kingswood Capital Opportunities Fund III, L.P.; Douglas Keith Tyler",
-    "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20270220",
-    "native_id": "339476 at https://www.ftc.gov",
-    "published_at": "2026-11-25T17:54:00+00:00",
-    "published_raw": "Wed, 25 Nov 2026 17:54:00 +0000",
-    "summary": "20270220: Kingswood Capital Opportunities Fund III, L.P.; Douglas Keith Tyler Date November 24, 2026 bacree November 25, 2026 | 12:54PM Transaction Number 20270220 Acquiring Party Kingswood Capital Opportunities Fund III, L.P. Acquired Party Douglas Keith Tyler Granting Status Granted Acquired Entities Twin Rivers Group LLC Anderson and Fryar Exports LLC",
+    "title": "Federal Jury Finds Two Men Guilty on All Counts in Drug Trafficking and Firearms Case",
+    "url": "https://www.justice.gov/usao-mn/pr/federal-jury-finds-two-men-guilty-all-counts-drug-trafficking-and-firearms-case",
+    "native_id": "https://www.justice.gov/usao-mn/pr/federal-jury-finds-two-men-guilty-all-counts-drug-trafficking-and-firearms-case",
+    "published_at": "2026-11-25T12:00:00+00:00",
+    "published_raw": "Wed, 25 Nov 2026 12:00:00 +0000",
+    "summary": "",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Trade Commission — HSR Early Termination Notices",
+      "issuer": "Department of Justice",
       "jurisdiction": "US",
-      "family": "competition_and_enforcement"
+      "family": "judicial_and_enforcement"
     },
-    "primary_source_id": "us-ftc-df73e297e1",
-    "n": 12702,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 12748,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
     "source_ids": [
-      "us-ftc-df73e297e1"
+      "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "20270240: VINCI SA; Christopher V. Prangley",
-    "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20270240",
-    "native_id": "339479 at https://www.ftc.gov",
-    "published_at": "2026-11-25T17:54:02+00:00",
-    "published_raw": "Wed, 25 Nov 2026 17:54:02 +0000",
-    "summary": "20270240: VINCI SA; Christopher V. Prangley Date November 24, 2026 bacree November 25, 2026 | 12:54PM Transaction Number 20270240 Acquiring Party VINCI SA Acquired Party Christopher V. Prangley Granting Status Granted Acquired Entities Infratech Corporation",
+    "title": "Washington Man Charged with Coercing Oregon Child to Produce Sexually Explicit Images and Videos",
+    "url": "https://www.justice.gov/usao-or/pr/washington-man-charged-coercing-oregon-child-produce-sexually-explicit-images-and-videos",
+    "native_id": "https://www.justice.gov/usao-or/pr/washington-man-charged-coercing-oregon-child-produce-sexually-explicit-images-and-videos",
+    "published_at": "2026-11-25T12:00:00+00:00",
+    "published_raw": "Wed, 25 Nov 2026 12:00:00 +0000",
+    "summary": "A Washington man has been charged by criminal complaint with coercing an Oregon child to produce sexually explicit images and videos and attempting to receive child sexual abuse material.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Trade Commission — HSR Early Termination Notices",
+      "issuer": "Department of Justice",
       "jurisdiction": "US",
-      "family": "competition_and_enforcement"
+      "family": "judicial_and_enforcement"
     },
-    "primary_source_id": "us-ftc-df73e297e1",
-    "n": 12703,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 12749,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
     "source_ids": [
-      "us-ftc-df73e297e1"
+      "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "20270263: Amanat Acquisition Corp.; RTW Holding Limited",
-    "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20270263",
-    "native_id": "339482 at https://www.ftc.gov",
-    "published_at": "2026-11-25T17:54:02+00:00",
-    "published_raw": "Wed, 25 Nov 2026 17:54:02 +0000",
-    "summary": "20270263: Amanat Acquisition Corp.; RTW Holding Limited Date November 24, 2026 bacree November 25, 2026 | 12:54PM Transaction Number 20270263 Acquiring Party Amanat Acquisition Corp. Acquired Party RTW Holding Limited Granting Status Granted Acquired Entities Corxel Pharmaceuticals, Inc.",
+    "title": "Grand Jury Indictments Returned Against Three Men with Ties to Halloween Shooting",
+    "url": "https://www.justice.gov/usao-wdmo/pr/grand-jury-indictments-returned-against-three-men-ties-halloween-shooting",
+    "native_id": "https://www.justice.gov/usao-wdmo/pr/grand-jury-indictments-returned-against-three-men-ties-halloween-shooting",
+    "published_at": "2026-11-25T12:00:00+00:00",
+    "published_raw": "Wed, 25 Nov 2026 12:00:00 +0000",
+    "summary": "A federal grand jury in Jefferson City, Mo., has returned indictments against three individuals with ties to an Oct. 31, 2026 shooting in Columbia, Mo.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Trade Commission — HSR Early Termination Notices",
+      "issuer": "Department of Justice",
       "jurisdiction": "US",
-      "family": "competition_and_enforcement"
+      "family": "judicial_and_enforcement"
     },
-    "primary_source_id": "us-ftc-df73e297e1",
-    "n": 12704,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 12750,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
     "source_ids": [
-      "us-ftc-df73e297e1"
+      "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "20270159: Ithaca Topco, L.P.; Bumble, Inc.",
-    "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20270159",
-    "native_id": "339468 at https://www.ftc.gov",
-    "published_at": "2026-11-25T17:53:57+00:00",
-    "published_raw": "Wed, 25 Nov 2026 17:53:57 +0000",
-    "summary": "20270159: Ithaca Topco, L.P.; Bumble, Inc. Date November 24, 2026 bacree November 25, 2026 | 12:53PM Transaction Number 20270159 Acquiring Party Ithaca Topco, L.P. Acquired Party Bumble, Inc. Granting Status Granted Acquired Entities Bumble, Inc. Buzz Holdings L.P.",
+    "title": "Columbia Man Charged with Illegal Possession of a Machine Gun",
+    "url": "https://www.justice.gov/usao-wdmo/pr/columbia-man-charged-illegal-possession-machine-gun-0",
+    "native_id": "https://www.justice.gov/usao-wdmo/pr/columbia-man-charged-illegal-possession-machine-gun-0",
+    "published_at": "2026-11-25T12:00:00+00:00",
+    "published_raw": "Wed, 25 Nov 2026 12:00:00 +0000",
+    "summary": "Amillion Mortez Hannah, 18, of Jefferson City, Mo., was charged by a federal grand jury with possessing a Glock-type machine gun conversion device.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Trade Commission — HSR Early Termination Notices",
+      "issuer": "Department of Justice",
       "jurisdiction": "US",
-      "family": "competition_and_enforcement"
+      "family": "judicial_and_enforcement"
     },
-    "primary_source_id": "us-ftc-df73e297e1",
-    "n": 12705,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 12751,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
     "source_ids": [
-      "us-ftc-df73e297e1"
+      "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "20270198: Schneider Electric SE; PTC Inc.",
-    "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20270198",
-    "native_id": "339471 at https://www.ftc.gov",
-    "published_at": "2026-11-25T17:53:58+00:00",
-    "published_raw": "Wed, 25 Nov 2026 17:53:58 +0000",
-    "summary": "20270198: Schneider Electric SE; PTC Inc. Date November 24, 2026 bacree November 25, 2026 | 12:53PM Transaction Number 20270198 Acquiring Party Schneider Electric SE Acquired Party PTC Inc. Granting Status Granted Acquired Entities PTC Inc.",
+    "title": "Richmond, Vermont Man Charged with Being a Felon in Possession of a Firearm",
+    "url": "https://www.justice.gov/usao-vt/pr/richmond-vermont-man-charged-being-felon-possession-firearm",
+    "native_id": "https://www.justice.gov/usao-vt/pr/richmond-vermont-man-charged-being-felon-possession-firearm",
+    "published_at": "2026-11-25T12:00:00+00:00",
+    "published_raw": "Wed, 25 Nov 2026 12:00:00 +0000",
+    "summary": "",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Trade Commission — HSR Early Termination Notices",
+      "issuer": "Department of Justice",
       "jurisdiction": "US",
-      "family": "competition_and_enforcement"
+      "family": "judicial_and_enforcement"
     },
-    "primary_source_id": "us-ftc-df73e297e1",
-    "n": 12706,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 12752,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
     "source_ids": [
-      "us-ftc-df73e297e1"
+      "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "20270210: Valero Energy Corporation; LyondellBasell Industries N.V.",
-    "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20270210",
-    "native_id": "339474 at https://www.ftc.gov",
-    "published_at": "2026-11-25T17:54:00+00:00",
-    "published_raw": "Wed, 25 Nov 2026 17:54:00 +0000",
-    "summary": "20270210: Valero Energy Corporation; LyondellBasell Industries N.V. Date November 24, 2026 bacree November 25, 2026 | 12:54PM Transaction Number 20270210 Acquiring Party Valero Energy Corporation Acquired Party LyondellBasell Industries N.V. Granting Status Granted Acquired Entities LYB Houston Hub Holdings LLC",
+    "title": "Merced detective receives Honor the Honorable: The Attorney General’s Award for Distinguished Service in Policing",
+    "url": "https://www.justice.gov/usao-edca/pr/merced-detective-receives-honor-honorable-attorney-generals-award-distinguished",
+    "native_id": "https://www.justice.gov/usao-edca/pr/merced-detective-receives-honor-honorable-attorney-generals-award-distinguished",
+    "published_at": "2026-11-25T12:00:00+00:00",
+    "published_raw": "Wed, 25 Nov 2026 12:00:00 +0000",
+    "summary": "Detective Jennifer Dabney of the Merced Police Department has received the Honor the Honorable: The Attorney General’s Award for Distinguished Service in Policing, one of the Department of Justice's highest honors for state and local law enforcement officers. U.S. Attorney Eric Grant attended the ceremony where Attorney General Todd Blanche announced the award recipients. This award represents the Department of Justice’s reaffirmed commitment to uplifting the valor and exceptional contributions to policing of our great nation’s law enforcement personnel.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Trade Commission — HSR Early Termination Notices",
+      "issuer": "Department of Justice",
       "jurisdiction": "US",
-      "family": "competition_and_enforcement"
+      "family": "judicial_and_enforcement"
     },
-    "primary_source_id": "us-ftc-df73e297e1",
-    "n": 12707,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 12753,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
     "source_ids": [
-      "us-ftc-df73e297e1"
+      "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "20270233: BayPine Allies Aggregator, LP; TRF V (Blocked), L.P.",
-    "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20270233",
-    "native_id": "339477 at https://www.ftc.gov",
-    "published_at": "2026-11-25T17:54:00+00:00",
-    "published_raw": "Wed, 25 Nov 2026 17:54:00 +0000",
-    "summary": "20270233: BayPine Allies Aggregator, LP; TRF V (Blocked), L.P. Date November 24, 2026 bacree November 25, 2026 | 12:54PM Transaction Number 20270233 Acquiring Party BayPine Allies Aggregator, LP Acquired Party TRF V (Blocked), L.P. Granting Status Granted Acquired Entities ISG Parent, LLC",
+    "title": "Coralville Man Sentenced to Over 17 Years in Federal Prison for Receipt and Possession of Child Pornography",
+    "url": "https://www.justice.gov/usao-sdia/pr/coralville-man-sentenced-over-17-years-federal-prison-receipt-and-possession-child",
+    "native_id": "https://www.justice.gov/usao-sdia/pr/coralville-man-sentenced-over-17-years-federal-prison-receipt-and-possession-child",
+    "published_at": "2026-11-25T12:00:00+00:00",
+    "published_raw": "Wed, 25 Nov 2026 12:00:00 +0000",
+    "summary": "DAVENPORT, Iowa – A Coralville man was sentenced on November 24, 2026, to 210 months in federal prison for receiving and possessing child pornography.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Trade Commission — HSR Early Termination Notices",
+      "issuer": "Department of Justice",
       "jurisdiction": "US",
-      "family": "competition_and_enforcement"
+      "family": "judicial_and_enforcement"
     },
-    "primary_source_id": "us-ftc-df73e297e1",
-    "n": 12708,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 12754,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
     "source_ids": [
-      "us-ftc-df73e297e1"
+      "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "20270241: Michael S. Dell; Revera Inc.",
-    "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20270241",
-    "native_id": "339480 at https://www.ftc.gov",
-    "published_at": "2026-11-25T17:54:02+00:00",
-    "published_raw": "Wed, 25 Nov 2026 17:54:02 +0000",
-    "summary": "20270241: Michael S. Dell; Revera Inc. Date November 24, 2026 bacree November 25, 2026 | 12:54PM Transaction Number 20270241 Acquiring Party Michael S. Dell Acquired Party Revera Inc. Granting Status Granted Acquired Entities Red Fox Acquisition Company Inc.",
+    "title": "Woman From Democratic Republic of Congo Appears in Federal Court for Illegal Voting",
+    "url": "https://www.justice.gov/usao-nv/pr/woman-democratic-republic-congo-appears-federal-court-illegal-voting",
+    "native_id": "https://www.justice.gov/usao-nv/pr/woman-democratic-republic-congo-appears-federal-court-illegal-voting",
+    "published_at": "2026-11-25T12:00:00+00:00",
+    "published_raw": "Wed, 25 Nov 2026 12:00:00 +0000",
+    "summary": "RENO – Mlebinge Riziki Ramadhani, from the Democratic Republic of Congo and a lawful permanent resident, made her initial appearance in federal court Tuesday for allegedly illegally voting in the 2022 General Election.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Trade Commission — HSR Early Termination Notices",
+      "issuer": "Department of Justice",
       "jurisdiction": "US",
-      "family": "competition_and_enforcement"
+      "family": "judicial_and_enforcement"
     },
-    "primary_source_id": "us-ftc-df73e297e1",
-    "n": 12709,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 12755,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
     "source_ids": [
-      "us-ftc-df73e297e1"
+      "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "20270275: Anthelion Fund I Offshore LP; AP VIII Aspen Holdings, L.P.",
-    "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20270275",
-    "native_id": "339483 at https://www.ftc.gov",
-    "published_at": "2026-11-25T17:54:02+00:00",
-    "published_raw": "Wed, 25 Nov 2026 17:54:02 +0000",
-    "summary": "20270275: Anthelion Fund I Offshore LP; AP VIII Aspen Holdings, L.P. Date November 24, 2026 bacree November 25, 2026 | 12:54PM Transaction Number 20270275 Acquiring Party Anthelion Fund I Offshore LP Acquired Party AP VIII Aspen Holdings, L.P. Granting Status Granted Acquired Entities ecoATM Parent, LLC",
+    "title": "Justice Department Awards Federal Grant to Hire Deputies in Bay County",
+    "url": "https://www.justice.gov/usao-ndfl/pr/justice-department-awards-federal-grant-hire-deputies-bay-county",
+    "native_id": "https://www.justice.gov/usao-ndfl/pr/justice-department-awards-federal-grant-hire-deputies-bay-county",
+    "published_at": "2026-11-25T12:00:00+00:00",
+    "published_raw": "Wed, 25 Nov 2026 12:00:00 +0000",
+    "summary": "Tallahassee, Florida — Through the Office of Community Oriented Policing Services (COPS Office), the Department of Justice today announced it has awarded nearly $150 million under the 2026 COPS Hiring Program (CHP), including $3.125 million to Bay County.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Trade Commission — HSR Early Termination Notices",
+      "issuer": "Department of Justice",
       "jurisdiction": "US",
-      "family": "competition_and_enforcement"
+      "family": "judicial_and_enforcement"
     },
-    "primary_source_id": "us-ftc-df73e297e1",
-    "n": 12710,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 12756,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
     "source_ids": [
-      "us-ftc-df73e297e1"
+      "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "20270180: JANA Strategic Investments Benchmark Fund, L.P.; Casella Waste Systems, Inc.",
-    "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20270180",
-    "native_id": "339469 at https://www.ftc.gov",
-    "published_at": "2026-11-25T17:53:58+00:00",
-    "published_raw": "Wed, 25 Nov 2026 17:53:58 +0000",
-    "summary": "20270180: JANA Strategic Investments Benchmark Fund, L.P.; Casella Waste Systems, Inc. Date November 24, 2026 bacree November 25, 2026 | 12:53PM Transaction Number 20270180 Acquiring Party JANA Strategic Investments Benchmark Fund, L.P. Acquired Party Casella Waste Systems, Inc. Granting Status Granted Acquired Entities Casella Waste Systems, Inc.",
+    "title": "Stamford Man Charged with Fentanyl Distribution Offenses",
+    "url": "https://www.justice.gov/usao-ct/pr/stamford-man-charged-fentanyl-distribution-offenses",
+    "native_id": "https://www.justice.gov/usao-ct/pr/stamford-man-charged-fentanyl-distribution-offenses",
+    "published_at": "2026-11-25T12:00:00+00:00",
+    "published_raw": "Wed, 25 Nov 2026 12:00:00 +0000",
+    "summary": "A federal grand jury in New Haven has returned an indictment charging MARCUS MOORE, 48, of Stamford, with fentanyl distribution offenses.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Trade Commission — HSR Early Termination Notices",
+      "issuer": "Department of Justice",
       "jurisdiction": "US",
-      "family": "competition_and_enforcement"
+      "family": "judicial_and_enforcement"
     },
-    "primary_source_id": "us-ftc-df73e297e1",
-    "n": 12711,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 12757,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
     "source_ids": [
-      "us-ftc-df73e297e1"
+      "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "20270199: BharCap Partners II, LP; Rishi Gautam",
-    "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20270199",
-    "native_id": "339472 at https://www.ftc.gov",
-    "published_at": "2026-11-25T17:53:58+00:00",
-    "published_raw": "Wed, 25 Nov 2026 17:53:58 +0000",
-    "summary": "20270199: BharCap Partners II, LP; Rishi Gautam Date November 24, 2026 bacree November 25, 2026 | 12:53PM Transaction Number 20270199 Acquiring Party BharCap Partners II, LP Acquired Party Rishi Gautam Granting Status Granted Acquired Entities Venning Advisors Group, LLC",
+    "title": "Las Vegas Man Appears in Court for Carjacking Resulting in the Death of Another Man",
+    "url": "https://www.justice.gov/usao-nv/pr/las-vegas-man-appears-court-carjacking-resulting-death-another-man",
+    "native_id": "https://www.justice.gov/usao-nv/pr/las-vegas-man-appears-court-carjacking-resulting-death-another-man",
+    "published_at": "2026-11-25T12:00:00+00:00",
+    "published_raw": "Wed, 25 Nov 2026 12:00:00 +0000",
+    "summary": "LAS VEGAS – A Las Vegas man made his initial appearance in federal court Tuesday for allegedly fatally striking a person during a carjacking.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Trade Commission — HSR Early Termination Notices",
+      "issuer": "Department of Justice",
       "jurisdiction": "US",
-      "family": "competition_and_enforcement"
+      "family": "judicial_and_enforcement"
     },
-    "primary_source_id": "us-ftc-df73e297e1",
-    "n": 12712,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 12758,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
     "source_ids": [
-      "us-ftc-df73e297e1"
+      "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "20270219: Kingswood Capital Opportunities Fund III, L.P.; Nick Tyler",
-    "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20270219",
-    "native_id": "339475 at https://www.ftc.gov",
-    "published_at": "2026-11-25T17:54:00+00:00",
-    "published_raw": "Wed, 25 Nov 2026 17:54:00 +0000",
-    "summary": "20270219: Kingswood Capital Opportunities Fund III, L.P.; Nick Tyler Date November 24, 2026 bacree November 25, 2026 | 12:54PM Transaction Number 20270219 Acquiring Party Kingswood Capital Opportunities Fund III, L.P. Acquired Party Nick Tyler Granting Status Granted Acquired Entities Anderson and Fryar Exports LLC Twin Rivers Group LLC",
+    "title": "Speech by Commissioner Marta Kos at the Albanian National Council for European Integration",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2602",
+    "native_id": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2602",
+    "published_at": "2026-11-26T14:26:12+00:00",
+    "published_raw": "Thu, 26 Nov 2026 14:26:12 GMT",
+    "summary": "European Commission Speech Tirana, 26 Nov 2026 Dear Members of Parliament, Dear representatives of civil society, Ladies and Gentlemen, It is a pleasure and honour to be with you today. This Council ...",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Trade Commission — HSR Early Termination Notices",
-      "jurisdiction": "US",
-      "family": "competition_and_enforcement"
+      "issuer": "European Commission press and decisions",
+      "jurisdiction": "EU",
+      "family": "executive_and_regulatory"
     },
-    "primary_source_id": "us-ftc-df73e297e1",
-    "n": 12713,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
+    "primary_source_id": "eu-commission-07d4f58ccf",
+    "n": 12759,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
     "source_ids": [
-      "us-ftc-df73e297e1"
+      "eu-commission-07d4f58ccf"
     ]
   },
   {
-    "title": "Federal Court Rules in Favor of CPSC in Landmark E-Commerce Product Safety Case",
-    "url": "https://www.cpsc.gov/Newsroom/News-Releases/2027/Federal-Court-Rules-in-Favor-of-CPSC-in-Landmark-E-Commerce-Product-Safety-Case",
-    "native_id": "https://www.cpsc.gov/_b7d66a49-752d-4b83-adce-728c07023062",
-    "published_at": null,
-    "published_raw": "Wed, 11/25/2026 - 12:00",
-    "summary": "Washington, D.C. – The U.S. Consumer Product Safety Commission (CPSC) today welcomed an order by the United States District Court for the District of Maryland granting summary judgment in favor of the Commission and dismissing Amazon.com, Inc.'s challenge",
+    "title": "Daily News 26/ 11/ 2026",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2595",
+    "native_id": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2595",
+    "published_at": "2026-11-26T10:51:28+00:00",
+    "published_raw": "Thu, 26 Nov 2026 10:51:28 GMT",
+    "summary": "European Commission Daily news Brussels, 26 Nov 2026 EU launches Supply Chain Early Warning Network with Trans-Pacific bloc The EU and the members of the Comprehensive and Progressive Agreement for Trans-Pacific P...",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Consumer Product Safety Commission",
-      "jurisdiction": "US",
-      "family": "product_safety"
+      "issuer": "European Commission press and decisions",
+      "jurisdiction": "EU",
+      "family": "executive_and_regulatory"
     },
-    "primary_source_id": "us-cpsc-08fe06e2e6",
-    "n": 12714,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
+    "primary_source_id": "eu-commission-07d4f58ccf",
+    "n": 12760,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
     "source_ids": [
-      "us-cpsc-08fe06e2e6"
+      "eu-commission-07d4f58ccf"
     ]
   },
   {
-    "title": "Remarks by President António Costa at the doorstep ahead of the Special European Council meeting of 26-27 November 2026",
-    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/26/remarks-by-president-antonio-costa-at-the-doorstep-ahead-of-the-special-european-council-meeting-of-26-27-november-2026/",
-    "native_id": "152773",
-    "published_at": "2026-11-26T08:32:00+00:00",
-    "published_raw": "2026-11-26T09:32:00+01:00",
-    "summary": "Before the start of the Special European Council meeting of 26 November 2026, European Council President António Costa addressed the press in Brussels.",
+    "title": "Temu commits to complying with EU consumer protection rules following action by national authorities",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2594",
+    "native_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2594",
+    "published_at": "2026-11-26T10:30:49+00:00",
+    "published_raw": "Thu, 26 Nov 2026 10:30:49 GMT",
+    "summary": "European Commission Press release Brussels, 26 Nov 2026 Following a coordinated action by the European Commission and the Consumer Protection Cooperation (CPC) Network, the online marketplace Temu has committed to bring several of its commercial practices in line with EU consumer protection laws. The CPC Network accepted Temu's commitments today.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "European Commission press and decisions",
+      "jurisdiction": "EU",
+      "family": "executive_and_regulatory"
+    },
+    "primary_source_id": "eu-commission-07d4f58ccf",
+    "n": 12761,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
+    "source_ids": [
+      "eu-commission-07d4f58ccf"
+    ]
+  },
+  {
+    "title": "Speech by Commissioner Hoekstra in the European Parliament's Plenary debate on the Outcome of the Antalya UN climate summit (COP 31)",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2593",
+    "native_id": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2593",
+    "published_at": "2026-11-26T10:23:20+00:00",
+    "published_raw": "Thu, 26 Nov 2026 10:23:20 GMT",
+    "summary": "European Commission Speech Strasbourg, 26 Nov 2026 Ladies and gentlemen, Good morning to all of you. In conversations and in negotiations you sometimes arrive at a moment where you simply have to say no. No, bec...",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "European Commission press and decisions",
+      "jurisdiction": "EU",
+      "family": "executive_and_regulatory"
+    },
+    "primary_source_id": "eu-commission-07d4f58ccf",
+    "n": 12762,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
+    "source_ids": [
+      "eu-commission-07d4f58ccf"
+    ]
+  },
+  {
+    "title": "Statement of the Euro Summit, 26 November 2026",
+    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/26/statement-of-the-euro-summit-26-november-2026/",
+    "native_id": "152703",
+    "published_at": "2026-11-26T16:05:00+00:00",
+    "published_raw": "2026-11-26T17:05:00+01:00",
+    "summary": "The Euro Summit, meeting in inclusive format, adopted a statement on 26 November 2026.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -1026,20 +827,20 @@
       "family": "sanctions_and_legislation"
     },
     "primary_source_id": "eu-council-9d9e9444da",
-    "n": 12715,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
+    "n": 12763,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
     "source_ids": [
       "eu-council-9d9e9444da"
     ]
   },
   {
-    "title": "172/2026 : 26 November 2026 - Judgment of the Court of Justice in Joined Cases",
-    "url": "https://curia.europa.eu/site/jcms/p1_1000089709",
-    "native_id": "https://curia.europa.eu/site/jcms/p1_1000089711",
-    "published_at": "2026-11-26T08:51:10+00:00",
-    "published_raw": "Thu, 26 Nov 2026 09:51:10 +0100",
-    "summary": "C-535/25 Amazon Italia Logistica, C-536/25 Amazon Italia Services, and C-537/25 Amazon Italia Transport Freedom to provide services Certain activities of the Amazon Italia group companies could be classified as ‘postal services’ and be subject to obtaining authorisation",
+    "title": "174/2026 : 26 November 2026 - Solemn undertaking ceremony at the Court of Justice of the European Union",
+    "url": "https://curia.europa.eu/site/jcms/p1_1000089777",
+    "native_id": "https://curia.europa.eu/site/jcms/p1_1000089784",
+    "published_at": "2026-11-26T10:53:32+00:00",
+    "published_raw": "Thu, 26 Nov 2026 11:53:32 +0100",
+    "summary": "Solemn undertaking before the Court of Justice of the European Union by the new European Chief Prosecutor and six European Prosecutors",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -1050,68 +851,165 @@
       "family": "judicial_decisions"
     },
     "primary_source_id": "eu-court-1433471e58",
-    "n": 12716,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
+    "n": 12764,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
     "source_ids": [
       "eu-court-1433471e58"
     ]
   },
   {
-    "title": "Monetary developments in the euro area: October 2026",
-    "url": "https://www.ecb.europa.eu//press/stats/md/html/ecb.md2610~4bad1d63b5.en.html",
-    "native_id": "https://www.ecb.europa.eu//press/stats/md/html/ecb.md2610~4bad1d63b5.en.html",
-    "published_at": "2026-11-26T09:00:00+00:00",
-    "published_raw": "Thu, 26 Nov 2026 10:00:00 +0100",
+    "title": "173/2026 : 26 November 2026 - Opinions of the Advocate General at the Court Laila Medina in Cases",
+    "url": "https://curia.europa.eu/site/jcms/p1_1000089716",
+    "native_id": "https://curia.europa.eu/site/jcms/p1_1000089717",
+    "published_at": "2026-11-26T09:01:28+00:00",
+    "published_raw": "Thu, 26 Nov 2026 10:01:28 +0100",
+    "summary": "C-865/24 P Ordre néerlandais des avocats du barreau de Bruxelles and Others v Council and C-866/24 P Ordre des avocats à la cour de Paris and Others v Council Common foreign and security policy Advocate General Medina proposes that the appeals against the General Court’s judgments upholding the ban on providing legal advisory services to the Russian Government and to entities established in Russia be dismissed",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Court of Justice of the European Union",
+      "jurisdiction": "EU",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "eu-court-1433471e58",
+    "n": 12765,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
+    "source_ids": [
+      "eu-court-1433471e58"
+    ]
+  },
+  {
+    "title": "Meeting of 28-29 October 2026",
+    "url": "https://www.ecb.europa.eu//press/accounts/2026/html/ecb.mg261126~ccf28c8071.en.html",
+    "native_id": "https://www.ecb.europa.eu//press/accounts/2026/html/ecb.mg261126~ccf28c8071.en.html",
+    "published_at": "2026-11-26T12:30:00+00:00",
+    "published_raw": "Thu, 26 Nov 2026 13:30:00 +0100",
     "summary": "",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "European Central Bank — Statistical press releases",
+      "issuer": "European Central Bank",
       "jurisdiction": "EU",
       "family": "monetary_operations"
     },
-    "primary_source_id": "eu-ecb-fb5fd59aed",
-    "n": 12717,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
+    "primary_source_id": "eu-ecb-991c113079",
+    "n": 12766,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
     "source_ids": [
+      "eu-ecb-991c113079",
       "eu-ecb-fb5fd59aed"
     ]
   },
   {
-    "title": "Climate change indicators: November 2026",
-    "url": "https://www.ecb.europa.eu//press/stats/cci/html/ecb.cci261126~bd9267f05a.en.html",
-    "native_id": "https://www.ecb.europa.eu//press/stats/cci/html/ecb.cci261126~bd9267f05a.en.html",
-    "published_at": "2026-11-26T09:00:00+00:00",
-    "published_raw": "Thu, 26 Nov 2026 10:00:00 +0100",
-    "summary": "",
+    "title": "The EBA follow-up review confirms high level of supervisory convergence in applying default rules across the EU/EEA",
+    "url": "https://www.eba.europa.eu/publications-and-media/press-releases/eba-follow-review-confirms-high-level-supervisory-convergence-applying-default-rules-across-eueea",
+    "native_id": "https://www.eba.europa.eu/publications-and-media/press-releases/eba-follow-review-confirms-high-level-supervisory-convergence-applying-default-rules-across-eueea",
+    "published_at": "2026-11-26T08:09:01+00:00",
+    "published_raw": "Thu, 26 Nov 2026 09:09:01 +0100",
+    "summary": "The European Banking Authority (EBA) today published a follow-up report on the application of its Guidelines on the definition of default (DoD), confirming strong implementation across all reviewed EU/EEA jurisdictions and a high degree of supervisory convergence in the application of the framework.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "European Central Bank — Statistical press releases",
+      "issuer": "European Banking Authority",
       "jurisdiction": "EU",
-      "family": "monetary_operations"
+      "family": "financial_supervision"
     },
-    "primary_source_id": "eu-ecb-fb5fd59aed",
-    "n": 12718,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
+    "primary_source_id": "eu-eba-60bdc59843",
+    "n": 12767,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
     "source_ids": [
-      "eu-ecb-fb5fd59aed"
+      "eu-eba-60bdc59843"
     ]
   },
   {
-    "title": "Check the firm before you invest, FCA warns, as AI scams rise",
-    "url": "https://www.fca.org.uk/news/press-releases/check-firm-you-invest-fca-warns-ai-scams-rise",
-    "native_id": "178061",
+    "title": "Payments systems Memorandum of Understanding",
+    "url": "https://www.bankofengland.co.uk/news/2024/march/payment-systems-memorandum-of-understanding",
+    "native_id": "{D3CE94F0-6440-447C-83C9-BF53A27FB9CD}",
+    "published_at": "2026-11-26T15:00:00+00:00",
+    "published_raw": "Thu, 26 Nov 2026 15:00:00 Z",
+    "summary": "Bank of England, PRA, FCA and PSR review Memorandum of Understanding in relation to payment systems in the UK",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Bank of England",
+      "jurisdiction": "UK",
+      "family": "monetary_and_supervisory"
+    },
+    "primary_source_id": "uk-boe-4feb372611",
+    "n": 12768,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
+    "source_ids": [
+      "uk-boe-4feb372611"
+    ]
+  },
+  {
+    "title": "Statistical Notice 2026/09 - Update to the classification of accounts guide",
+    "url": "https://www.bankofengland.co.uk/statistics/notice/2026/statistical-notice-2026-09",
+    "native_id": "{2C78CAAA-A35E-4CF4-A5DF-F73DC29CA4C9}",
+    "published_at": "2026-11-26T12:33:57+00:00",
+    "published_raw": "Thu, 26 Nov 2026 12:33:57 Z",
+    "summary": "Statistical Notices update the definitions and guidance contained in the Banking Statistics Yellow Folder",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Bank of England",
+      "jurisdiction": "UK",
+      "family": "monetary_and_supervisory"
+    },
+    "primary_source_id": "uk-boe-4feb372611",
+    "n": 12769,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
+    "source_ids": [
+      "uk-boe-4feb372611"
+    ]
+  },
+  {
+    "title": "Financial Policy Committee Record – November 2026",
+    "url": "https://www.bankofengland.co.uk/financial-policy-committee-record/2026/november-2026",
+    "native_id": "{6E0C02CB-2FFD-41C3-9F02-C46921FB594A}",
+    "published_at": "2026-11-26T10:30:00+00:00",
+    "published_raw": "Thu, 26 Nov 2026 10:30:00 Z",
+    "summary": "Our Financial Policy Committee (FPC) meets to identify risks to financial stability and agree policy actions aimed at safeguarding the resilience of the UK financial system.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Bank of England",
+      "jurisdiction": "UK",
+      "family": "monetary_and_supervisory"
+    },
+    "primary_source_id": "uk-boe-4feb372611",
+    "n": 12770,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
+    "source_ids": [
+      "uk-boe-4feb372611"
+    ]
+  },
+  {
+    "title": "Authorities complete 2026 review of payments Memorandum of Understanding",
+    "url": "https://www.fca.org.uk/news/statements/payments-authorities-mou-review-2026",
+    "native_id": "178171",
     "published_at": null,
-    "published_raw": "Thursday, November 26, 2026 - 09:16",
-    "summary": "A third (33%) of UK adults say they have seen an investment promotion in the past year that they believe used artificial intelligence (AI), new research from the FCA shows. Reports of investment fraud to Report Fraud that mention suspected use of AI have risen by nearly 400% in a year, up from 193 in 2024/25 to 956 in 2025/26. Investment fraud victims lost an average of £28,188 in 2025/26.Most people feel confident they could spot an AI investment scam, but that confidence is lower when a well-known person is involved. Almost two-thirds (62%) of adults say they could identify an investment scam that used AI. But less than half (49%) think they could tell whether a video or voice recording of a well-known person had been generated or altered by AI.Martin Lewis was the person most often named by those who thought they had seen a fake promotion featuring a well-known person.Under-35s are the most confident and the most exposed. Around three-quarters (74%) say they could identify an AI investment scam, and more than half (56%) believe they have seen an AI-generated investment promotion in the past year. Despite this, fewer than 4 in 10 (38%) would check whether a firm is FCA-authorised",
+    "published_raw": "Thursday, November 26, 2026 - 15:00",
+    "summary": "The Bank of England (the Bank), Financial Conduct Authority (FCA), Prudential Regulation Authority (PRA) and Payment Systems Regulator (PSR) have completed their annual review of the Memorandum of Understanding (MoU) on payments. Read the MoU (PDF)Outcome of the review: The review found that cooperation and coordination between the Authorities – the Bank, FCA, PRA and PSR – has strengthened and remains effective.We concluded that no changes to the MoU are needed at this time.To complement the MoU, we have updated our information explaining how our objectives, regulatory remits and key workstreams fit together.The Authorities have considered the effectiveness and efficiency of their coordination under the MoU. This includes feedback from industry and regulated firms to determine whether the MoU’s principles of coordination and cooperation continue to be met in practice. The review found that cooperation and coordination remain effective, with respondents welcoming tangible progress in how the Authorities work together. Examples of this include collaborating on a range of developments, including the future regime for dual-regulated stablecoin issuers and other innovations in payments",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -1122,275 +1020,396 @@
       "family": "financial_enforcement"
     },
     "primary_source_id": "uk-fca-7b9977ec8e",
-    "n": 12719,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
+    "n": 12771,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
     "source_ids": [
       "uk-fca-7b9977ec8e"
     ]
   },
   {
-    "title": "Motor finance compensation scheme calculation",
-    "url": "https://www.fca.org.uk/news/statements/motor-finance-compensation-scheme-calculation",
-    "native_id": "178146",
-    "published_at": null,
-    "published_raw": "Thursday, November 26, 2026 - 07:03",
-    "summary": "While preparing our response to the legal challenges to our motor finance redress scheme, we identified some errors in how we categorised a small group of loan agreements. This data informed the annual percentage rate (APR) adjustment we use in our calculation of compensation. We set this at 17% for agreements from 1 April 2014. Our initial work to understand the impact of the errors suggests that, if there is any impact, this would be less than 1 percentage point either side of 17%.While the potential impact on average compensation is small – less than £10 per agreement, on average – we recognise this affects the ongoing litigation.We properly informed those challenging the scheme. Two of those challengers are due to serve their expert evidence on Friday 27 November 2026. We will discuss with the challengers and the court the impact on this deadline, and for the timeline of the litigation.We are sorry for the further uncertainty this creates for consumers and firms. We will provide an update on any further material developments.Our objective remains to secure compensation owed to consumers as quickly as possible, in a fair and orderly way, while maintaining a healthy motor finance",
+    "title": "Bank of Canada announces 2026-27 scholarship recipients",
+    "url": "https://www.bankofcanada.ca/2026/11/bank-of-canada-announces-2026-27-scholarship-recipients/",
+    "native_id": "https://www.bankofcanada.ca/2026/11/bank-of-canada-announces-2026-27-scholarship-recipients/",
+    "published_at": "2026-11-26T10:00:15+00:00",
+    "published_raw": "2026-11-26T10:00:15+00:00",
+    "summary": "The Bank of Canada is proud to announce the 2026-27 recipients of its scholarship awards.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Financial Conduct Authority",
-      "jurisdiction": "UK",
-      "family": "financial_enforcement"
-    },
-    "primary_source_id": "uk-fca-7b9977ec8e",
-    "n": 12720,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
-    "source_ids": [
-      "uk-fca-7b9977ec8e"
-    ]
-  },
-  {
-    "title": "Underwriting Auction for sale of Government Securities for ₹33,000 crore on November 27, 2026",
-    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64048",
-    "native_id": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64048",
-    "published_at": "2026-11-26T12:15:00+00:00",
-    "published_raw": "Thu, 26 Nov 2026 12:15:00",
-    "summary": "Government of India has announced the sale (re-issue) of Government Securities, as detailed below, through auction to be held on November 27, 2026 (Friday). As per the extant scheme of underwriting commitment notified on November 14, 2007, the amounts of Minimum Underwriting Commitment (MUC) and the minimum bidding commitment under Additional Competitive Underwriting (ACU) auction, applicable to each Primary Dealer (PD), are as under: (₹ crore) Security Notified Amount MUC amount per PD Minimum bidding commitment per PD under ACU auction 6.20% GS 2029 9,000 215 215 6.57% GS 2033 12,000 286 286 7.63% GS 2056 9,000 215 215 7.50% GOI SGrB 2056 3,000 72 72 The underwriting auction will be conducted through multiple price-based method on November 27, 2026 (Friday). PDs may submit their bids for ACU auction electronically through Reserve Bank of India’s Core Banking Solution (e-Kuber system) between 09:00 A.M. and 09:30 A.M. on the day of underwriting auction. The underwriting commission will be credited to the current account of the respective PDs with RBI on the day of issue of securities. Ajit Prasad Deputy General Manager (Communications) Press Release: 2026-2027/1570",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Reserve Bank of India",
-      "jurisdiction": "IN",
-      "family": "monetary_and_supervisory"
-    },
-    "primary_source_id": "in-rbi-cc71120b98",
-    "n": 12721,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
-    "source_ids": [
-      "in-rbi-cc71120b98"
-    ]
-  },
-  {
-    "title": "Result of the Second Overnight Variable Rate Repo (VRR) auction held on November 26, 2026",
-    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64047",
-    "native_id": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64047",
-    "published_at": "2026-11-26T12:00:00+00:00",
-    "published_raw": "Thu, 26 Nov 2026 12:00:00",
-    "summary": "Tenor 1-day Notified Amount (in ₹ crore) 50,000 Total amount of bids received (in ₹ crore) 45,731 Amount allotted (in ₹ crore) 45,731 Cut off Rate (%) 5.51 Weighted Average Rate (%) 5.65 Partial Allotment Percentage of bids received at cut off rate (%) NA Ajit Prasad Deputy General Manager (Communications) Press Release: 2026-2027/1569",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Reserve Bank of India",
-      "jurisdiction": "IN",
-      "family": "monetary_and_supervisory"
-    },
-    "primary_source_id": "in-rbi-cc71120b98",
-    "n": 12722,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
-    "source_ids": [
-      "in-rbi-cc71120b98"
-    ]
-  },
-  {
-    "title": "RBI to conduct Second Overnight Variable Rate Repo (VRR) auction under LAF on November 26, 2026",
-    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64046",
-    "native_id": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64046",
-    "published_at": "2026-11-26T10:35:00+00:00",
-    "published_raw": "Thu, 26 Nov 2026 10:35:00",
-    "summary": "On a review of current and evolving liquidity conditions in the near term, it has been decided to conduct a second Variable Rate Repo (VRR) auction on Thursday, November 26, 2026, as under: Sl. No. Notified Amount (₹ crore) Tenor (day) Window Timing Date of Reversal 1 50,000 1 11:00 AM to 11:30 AM November 27, 2026 (Friday) 2. The operational guidelines for the auction will be same as given in Reserve Bank’s Press Release 2021-2022/1572 dated January 20, 2022 . Ajit Prasad Deputy General Manager (Communications) Press Release: 2026-2027/1568",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Reserve Bank of India",
-      "jurisdiction": "IN",
-      "family": "monetary_and_supervisory"
-    },
-    "primary_source_id": "in-rbi-cc71120b98",
-    "n": 12723,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
-    "source_ids": [
-      "in-rbi-cc71120b98"
-    ]
-  },
-  {
-    "title": "Result of the Overnight Variable Rate Repo (VRR) auction held on November 26, 2026",
-    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64045",
-    "native_id": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64045",
-    "published_at": "2026-11-26T10:25:00+00:00",
-    "published_raw": "Thu, 26 Nov 2026 10:25:00",
-    "summary": "Tenor 1-day Notified Amount (in ₹ crore) 75,000 Total amount of bids received (in ₹ crore) 1,40,535 Amount allotted (in ₹ crore) 75,007 Cut off Rate (%) 5.68 Weighted Average Rate (%) 5.69 Partial Allotment Percentage of bids received at cut off rate (%) 56.95 Ajit Prasad Deputy General Manager (Communications) Press Release: 2026-2027/1567",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Reserve Bank of India",
-      "jurisdiction": "IN",
-      "family": "monetary_and_supervisory"
-    },
-    "primary_source_id": "in-rbi-cc71120b98",
-    "n": 12724,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
-    "source_ids": [
-      "in-rbi-cc71120b98"
-    ]
-  },
-  {
-    "title": "Money Market Operations as on November 25, 2026",
-    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64044",
-    "native_id": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64044",
-    "published_at": "2026-11-26T09:00:00+00:00",
-    "published_raw": "Thu, 26 Nov 2026 09:00:00",
-    "summary": "(Amount in ₹ crore, Rate in Per cent) MONEY MARKETS @ --> Money Markets @ Volume (One Leg) Weighted Average Rate Range A. Overnight Segment (I+II+III+IV) 7,79,137.97 5.72 4.30-5.94 I. Call Money 14,280.85 5.73 4.30-5.88 II. Triparty Repo 5,76,862.25 5.71 5.21-5.78 III. Market Repo 1,80,856.87 5.72 4.70-5.90 IV. Repo in Corporate Bond 7,138.00 5.83 5.80-5.94 B. Term Segment I. Notice Money ** 231.50 5.49 5.10-5.75 II. Term Money @@ 521.00 - 5.70-8.00 III. Triparty Repo 3,700.00 5.73 5.70-5.75 IV. Market Repo 48.24 6.20 6.20-6.20 V. Repo in Corporate Bond 339.00 7.50 7.50-7.50 RBI OPERATIONS @ --> RBI OPERATIONS @ --> RBI Operations @ Auction Date Tenor (Days) Maturity Date Amount Current Rate / Cut off Rate C. Liquidity Adjustment Facility (LAF), Marginal Standing Facility (MSF) & Standing Deposit Facility (SDF) I. Today's Operations 1. Fixed Rate 2. Variable Rate & (a) Repo Operation Wed, 25/11/2026 1 Thu, 26/11/2026 50,007.00 5.66 Wed, 25/11/2026 1 Thu, 26/11/2026 50,007.00 5.68 (b) Reverse Repo Operation 3. MSF # Wed, 25/11/2026 1 Thu, 26/11/2026 3,255.00 5.75 4. SDF Δ# Wed, 25/11/2026 1 Thu, 26/11/2026 1,32,295.00 5.25 5. Net liquidity injected from today's operations [injection",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Reserve Bank of India",
-      "jurisdiction": "IN",
-      "family": "monetary_and_supervisory"
-    },
-    "primary_source_id": "in-rbi-cc71120b98",
-    "n": 12725,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
-    "source_ids": [
-      "in-rbi-cc71120b98"
-    ]
-  },
-  {
-    "title": "Implementation of Section 51A of UAPA, 1967: Updates to UNSC’s 1267/ 1989 ISIL (Da'esh) & Al-Qaida Sanctions List: Amendment of 01 Entry",
-    "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13758&Mode=0",
-    "native_id": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13758&Mode=0",
-    "published_at": "2026-11-26T11:15:00+00:00",
-    "published_raw": "Thu, 26 Nov 2026 11:15:00",
-    "summary": "RBI/2026-27/309 DoR.AML.REC.261/14.06.001/2026-27 November 26, 2026 The Chairpersons/ CEOs of the Commercial Banks, Small Finance Banks, Payment Banks, Urban Co-operative Banks, Rural Co-operative Banks, Regional Rural Banks, Local Area Banks, Non-Banking Financial Companies, Asset Reconstruction Companies, All India Financial Institutions Madam/Dear Sir Implementation of Section 51A of UAPA, 1967: Updates to UNSC’s 1267/ 1989 ISIL (Da'esh) & Al-Qaida Sanctions List: Amendment of 01 Entry Please refer to Chapter IX on “Requirements/obligations under International Agreements - Communications from International Agencies” of the Reserve Bank of India - Know Your Customer, Directions, 2025 dated November 28, 2025 (amended time to time) (“Directions”), as applicable, as per which, regulated entity shall ensure that in terms of section 51A of the Unlawful Activities (Prevention) (UAPA) Act, 1967 and amendments thereto, it does not have any account in the name of individuals / entities appearing in the lists of individuals and entities, suspected of having terrorist links, which are approved by and periodically circulated by the United Nations Security Council (UNSC). 2. In this connectio",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Reserve Bank of India",
-      "jurisdiction": "IN",
-      "family": "monetary_and_supervisory"
-    },
-    "primary_source_id": "in-rbi-738b09bded",
-    "n": 12726,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
-    "source_ids": [
-      "in-rbi-738b09bded"
-    ]
-  },
-  {
-    "title": "Implementation of Section 51A of UAPA, 1967: Updates to UNSC’s 1267/ 1989 ISIL (Da'esh) & Al-Qaida Sanctions List: Amendment of 81 entries",
-    "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13757&Mode=0",
-    "native_id": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13757&Mode=0",
-    "published_at": "2026-11-26T11:10:00+00:00",
-    "published_raw": "Thu, 26 Nov 2026 11:10:00",
-    "summary": "RBI/2026-27/308 DoR.AML.REC.260/14.06.001/2026-27 November 26, 2026 The Chairpersons/ CEOs of the Commercial Banks, Small Finance Banks, Payment Banks, Urban Co-operative Banks, Rural Co-operative Banks, Regional Rural Banks, Local Area Banks, Non-Banking Financial Companies, Asset Reconstruction Companies, All India Financial Institutions Madam/Dear Sir Implementation of Section 51A of UAPA, 1967: Updates to UNSC’s 1267/ 1989 ISIL (Da'esh) & Al-Qaida Sanctions List: Amendment of 81 entries Please refer to Chapter IX on “Requirements/obligations under International Agreements - Communications from International Agencies” of the Reserve Bank of India - Know Your Customer, Directions, 2025 dated November 28, 2025 (amended time to time) (“Directions”), as applicable, as per which, regulated entity shall ensure that in terms of section 51A of the Unlawful Activities (Prevention) (UAPA) Act, 1967 and amendments thereto, it does not have any account in the name of individuals / entities appearing in the lists of individuals and entities, suspected of having terrorist links, which are approved by and periodically circulated by the United Nations Security Council (UNSC). 2. In this connect",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Reserve Bank of India",
-      "jurisdiction": "IN",
-      "family": "monetary_and_supervisory"
-    },
-    "primary_source_id": "in-rbi-738b09bded",
-    "n": 12727,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
-    "source_ids": [
-      "in-rbi-738b09bded"
-    ]
-  },
-  {
-    "title": "Speech by Board Member TAMURA in Yamanashi (Economic Activity, Prices, and Monetary Policy in Japan)",
-    "url": "http://www.boj.or.jp/en/about/press/koen_2026/ko261126a.htm",
-    "native_id": "http://www.boj.or.jp/en/about/press/koen_2026/ko261126a.htm",
-    "published_at": "2026-11-26T01:00:00+00:00",
-    "published_raw": "Thu, 26 Nov 2026 10:00:00 +0900",
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Bank of Japan",
-      "jurisdiction": "JP",
+      "issuer": "Bank of Canada — Press",
+      "jurisdiction": "CA",
       "family": "monetary_operations"
     },
-    "primary_source_id": "jp-boj-d488538690",
-    "n": 12728,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
+    "primary_source_id": "ca-boc-30d6d14378",
+    "n": 12772,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
     "source_ids": [
-      "jp-boj-d488538690"
+      "ca-boc-30d6d14378",
+      "ca-boc-4192a605ae"
     ]
   },
   {
-    "title": "JP-US-EU Industrial Control Systems Cybersecurity Week for the Indo-Pacific Region Held",
-    "url": "https://www.meti.go.jp/english/press/2026/11/20261124003.html",
-    "native_id": "https://www.meti.go.jp/english/press/2026/11/20261124003.html",
-    "published_at": null,
-    "published_raw": null,
-    "summary": "",
+    "title": "How monetary policy affects Canada’s housing market",
+    "url": "https://www.bankofcanada.ca/2026/11/sparks-at-bank-article-2026-26/",
+    "native_id": "https://www.bankofcanada.ca/2026/11/sparks-at-bank-article-2026-26/",
+    "published_at": "2026-11-26T10:30:11+00:00",
+    "published_raw": "2026-11-26T10:30:11+00:00",
+    "summary": "We explore how housing demand and supply respond to changes in monetary policy. Higher interest rates can quickly slow home purchases and lower house prices but have limited effects on supply. Monetary policy cannot sustainably address the structural barriers that limit housing construction and contribute to affordability pressures.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Japan Ministry of Economy Trade and Industry",
-      "jurisdiction": "JP",
-      "family": "trade_and_industry_policy"
-    },
-    "primary_source_id": "jp-meti-index",
-    "n": 12729,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
-    "source_ids": [
-      "jp-meti-index"
-    ]
-  },
-  {
-    "title": "ES - 2026-11-26 - Jan Camenisch, Julien Donnet, Simon Lavater and Thomas Moser: Wholesale CBDC on public permissionless blockchains: Challenges, trade-offs, and design choices",
-    "url": "https://www.snb.ch/en/publications/research/economic-studies/2026/economic_studies_2026_15",
-    "native_id": "https://www.snb.ch/en/publications/research/economic-studies/2026/economic_studies_2026_15",
-    "published_at": "2026-11-25T23:00:00+00:00",
-    "published_raw": "2026-11-25T23:00:00Z",
-    "summary": "Stablecoins are the dominant settlement asset on public permissionless blockchains, but as private money they expose users to credit and liquidity risk and can trade away from par. Wholesale central bank digital currency (wCBDC) offers settlement in central bank money, free of credit risk, but has so far been implemented only on permissioned platforms. This paper examines the feasibility of issuing wCBDC on public permissionless blockchains, where tokenized financial activity is growing. It does not advocate such a step. Rather, it analyzes the safeguards such a design would require, focusing on direct Layer-1 issuance as the case in which the central bank has the least control over the underlying infrastructure. The analysis shows that central bank control differs across three levels. At the asset level, smart-contract rules allow the central bank to retain control over the monetary instrument. At the application level, interaction with third-party smart contracts enables composability but complicates eligibility controls and orderly exit. At the network level, transaction inclusion, protocol evolution and service continuity lie outside central bank control and can be fully recove",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Swiss National Bank",
-      "jurisdiction": "CH",
+      "issuer": "Bank of Canada — Research",
+      "jurisdiction": "CA",
       "family": "monetary_operations"
     },
-    "primary_source_id": "ch-snb-b0f42db828",
-    "n": 12730,
-    "first_seen": "2026-11-26T09:33:28.726633+00:00",
-    "last_seen": "2026-11-26T09:33:28.726633+00:00",
+    "primary_source_id": "ca-boc-a5cb9e38c1",
+    "n": 12773,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
     "source_ids": [
-      "ch-snb-b0f42db828"
+      "ca-boc-a5cb9e38c1"
+    ]
+  },
+  {
+    "title": "RBI to conduct 3-day Variable Rate Repo (VRR) auction under LAF on November 27, 2026",
+    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64051",
+    "native_id": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64051",
+    "published_at": "2026-11-26T19:25:00+00:00",
+    "published_raw": "Thu, 26 Nov 2026 19:25:00",
+    "summary": "On a review of current and evolving liquidity conditions in the near term, it has been decided to conduct a Variable Rate Repo (VRR) auction on Friday, November 27, 2026, as under: Sl. No. Notified Amount (₹ crore) Tenor (day) Window Timing Date of Reversal 1 75,000 3 09:30 AM to 10:00 AM November 30, 2026 (Monday) 2. The operational guidelines for the auction will be same as given in Reserve Bank’s Press Release 2021-2022/1572 dated January 20, 2022 . Ajit Prasad Deputy General Manager (Communications) Press Release: 2026-2027/1573",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Reserve Bank of India",
+      "jurisdiction": "IN",
+      "family": "monetary_and_supervisory"
+    },
+    "primary_source_id": "in-rbi-cc71120b98",
+    "n": 12774,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
+    "source_ids": [
+      "in-rbi-cc71120b98"
+    ]
+  },
+  {
+    "title": "Reserve Money and Money Supply for the fortnight ended on November 15, 2026",
+    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64050",
+    "native_id": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64050",
+    "published_at": "2026-11-26T18:00:00+00:00",
+    "published_raw": "Thu, 26 Nov 2026 18:00:00",
+    "summary": "The Reserve Bank has today released data on Reserve Money and Money Supply for the fortnight ended on November 15, 2026. Ajit Prasad Deputy General Manager (Communications) Press Release: 2026-2027/1572",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Reserve Bank of India",
+      "jurisdiction": "IN",
+      "family": "monetary_and_supervisory"
+    },
+    "primary_source_id": "in-rbi-cc71120b98",
+    "n": 12775,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
+    "source_ids": [
+      "in-rbi-cc71120b98"
+    ]
+  },
+  {
+    "title": "Result: First Conversion/Switch Auction of State Government Securities",
+    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64049",
+    "native_id": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64049",
+    "published_at": "2026-11-26T16:25:00+00:00",
+    "published_raw": "Thu, 26 Nov 2026 16:25:00",
+    "summary": "In terms of the Press Release: 2026-2027/1539 dated November 20, 2026 , the first switch auction of the State Government Securities was conducted today. The results of the same are given below. A. Source Security 7.55% Madhya Pradesh SDL 2027 (Maturing on Oct 11, 2027) 8.05% Madhya Pradesh SDL 2028 (Maturing on Feb 14, 2028) 7.63% Punjab SDL 2027 (Maturing on Apr 12, 2027) 7.02% Punjab SDL 2028 (Maturing on Mar 10, 2028) 7.45% Rajasthan SDL 2027 (Maturing on Sep 27, 2027) B. Notified Amount (in ₹ crore) 1,000 1,000 800 1,000 1,000 Destination Security 7.91% Madhya Pradesh SGS 2036 (Maturing on Oct 07, 2036) 7.61% Madhya Pradesh SGS 2044 (Maturing on Jul 08, 2044) 7.65% Punjab SGS 2043 (Maturing on Aug 12, 2043) 7.75% Punjab SGS 2035 (Maturing on Sep 09, 2035) 7.64% Rajasthan SGS 2036 (Maturing on Apr 22, 2036) C. i. No. of offers received 14 1 2 13 14 ii. Total amount of Source Security offered (Face value, in ₹ crore) 1,171.300 1,000 605 775 1286.355 iii. No. of offers accepted 9 1 2 0 12 iv. Total amount of source security accepted (Face value, in ₹ crore) 844.800 1,000 605 0 1,000 v. Total amount of destination security issued (Face value, in ₹ crore) 847.610 1,050.558 632.254 0",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Reserve Bank of India",
+      "jurisdiction": "IN",
+      "family": "monetary_and_supervisory"
+    },
+    "primary_source_id": "in-rbi-cc71120b98",
+    "n": 12776,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
+    "source_ids": [
+      "in-rbi-cc71120b98"
+    ]
+  },
+  {
+    "title": "Setting the scenario - monetary policy communications in uncertain times",
+    "url": "https://www.bis.org/speeches/20261126-setting-scenario-monetary-policy-communications-uncertain-times",
+    "native_id": "https://www.bis.org/speeches/20261126-setting-scenario-monetary-policy-communications-uncertain-times",
+    "published_at": "2026-11-26T00:00:00+00:00",
+    "published_raw": "2026-11-26T00:00:00Z",
+    "summary": "Remarks by Mr Toni Gravelle, Deputy Governor of the Bank of Canada, to the Edmonton Chamber of Commerce, Edmonton, Alberta, 18 November 2026.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Bank for International Settlements — View feed",
+      "jurisdiction": "INT",
+      "family": "supervisory_standards"
+    },
+    "primary_source_id": "io-bis-140216a5b6",
+    "n": 12777,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
+    "source_ids": [
+      "io-bis-140216a5b6"
+    ]
+  },
+  {
+    "title": "Acting in time",
+    "url": "https://www.bis.org/speeches/20261126-acting-time",
+    "native_id": "https://www.bis.org/speeches/20261126-acting-time",
+    "published_at": "2026-11-26T00:00:00+00:00",
+    "published_raw": "2026-11-26T00:00:00Z",
+    "summary": "Keynote speech by Ms Christine Lagarde, President of the European Central Bank, at the 36th Frankfurt European Banking Congress, Frankfurt am Main, 20 November 2026.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Bank for International Settlements — View feed",
+      "jurisdiction": "INT",
+      "family": "supervisory_standards"
+    },
+    "primary_source_id": "io-bis-140216a5b6",
+    "n": 12778,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
+    "source_ids": [
+      "io-bis-140216a5b6"
+    ]
+  },
+  {
+    "title": "Investing in America’s underserved communities",
+    "url": "https://www.bis.org/speeches/20261126-investing-americas-underserved-communities",
+    "native_id": "https://www.bis.org/speeches/20261126-investing-americas-underserved-communities",
+    "published_at": "2026-11-26T00:00:00+00:00",
+    "published_raw": "2026-11-26T00:00:00Z",
+    "summary": "Speech by Mr Michael S Barr, Member of the Board of Governors of the Federal Reserve System, at the conference “Making missing markets: catalyzing capital and igniting innovation”, organised by the Federal Reserve Bank of New York, New York City, 18 November 2026.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Bank for International Settlements — View feed",
+      "jurisdiction": "INT",
+      "family": "supervisory_standards"
+    },
+    "primary_source_id": "io-bis-140216a5b6",
+    "n": 12779,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
+    "source_ids": [
+      "io-bis-140216a5b6"
+    ]
+  },
+  {
+    "title": "The United Kingdom’s regional growth - unlocking the economy’s full potential",
+    "url": "https://www.bis.org/speeches/20261126-united-kingdoms-regional-growth-unlocking-economys-full-potential",
+    "native_id": "https://www.bis.org/speeches/20261126-united-kingdoms-regional-growth-unlocking-economys-full-potential",
+    "published_at": "2026-11-26T00:00:00+00:00",
+    "published_raw": "2026-11-26T00:00:00Z",
+    "summary": "Speech by Mr Andrew Bailey, Governor of the Bank of England, at the Institute of Economic Development Conference, London, 18 September 2026.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Bank for International Settlements — View feed",
+      "jurisdiction": "INT",
+      "family": "supervisory_standards"
+    },
+    "primary_source_id": "io-bis-140216a5b6",
+    "n": 12780,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
+    "source_ids": [
+      "io-bis-140216a5b6"
+    ]
+  },
+  {
+    "title": "Advancing the future of finance - from foundation to scale",
+    "url": "https://www.bis.org/speeches/20261126-advancing-future-finance-foundation-scale",
+    "native_id": "https://www.bis.org/speeches/20261126-advancing-future-finance-foundation-scale",
+    "published_at": "2026-11-26T00:00:00+00:00",
+    "published_raw": "2026-11-26T00:00:00Z",
+    "summary": "Keynote address by Mr Chia Der Jiun, Managing Director of the Monetary Authority of Singapore, at the Singapore FinTech Festival 2026, Singapore, 19 November 2026.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Bank for International Settlements — View feed",
+      "jurisdiction": "INT",
+      "family": "supervisory_standards"
+    },
+    "primary_source_id": "io-bis-140216a5b6",
+    "n": 12781,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
+    "source_ids": [
+      "io-bis-140216a5b6"
+    ]
+  },
+  {
+    "title": "Opening remarks - Productivity and Jobs Task Force Conference",
+    "url": "https://www.bis.org/speeches/20261126-opening-remarks-productivity-and-jobs-task-force-conference",
+    "native_id": "https://www.bis.org/speeches/20261126-opening-remarks-productivity-and-jobs-task-force-conference",
+    "published_at": "2026-11-26T00:00:00+00:00",
+    "published_raw": "2026-11-26T00:00:00Z",
+    "summary": "Speech by Mr Kevin Warsh, Chair of the Board of Governors of the Federal Reserve System, at the Productivity and Jobs Task Force Conference, hosted by the Federal Reserve Board and the Federal Reserve Bank of San Francisco, San Francisco, California, 16 November 2026.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Bank for International Settlements — View feed",
+      "jurisdiction": "INT",
+      "family": "supervisory_standards"
+    },
+    "primary_source_id": "io-bis-140216a5b6",
+    "n": 12782,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
+    "source_ids": [
+      "io-bis-140216a5b6"
+    ]
+  },
+  {
+    "title": "Monetary policy amid frequent and complex shocks",
+    "url": "https://www.bis.org/speeches/20261126-monetary-policy-amid-frequent-and-complex-shocks",
+    "native_id": "https://www.bis.org/speeches/20261126-monetary-policy-amid-frequent-and-complex-shocks",
+    "published_at": "2026-11-26T00:00:00+00:00",
+    "published_raw": "2026-11-26T00:00:00Z",
+    "summary": "Speech by Mr Philip N Jefferson, Vice Chair of the Board of Governors of the Federal Reserve System, at the International Monetary Fund and Central Bank of Brazil Conference “A quarter century of inflation targeting in Latin America: progress, challenges, and the road ahead”, Brasilia, 19 November 2026.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Bank for International Settlements — View feed",
+      "jurisdiction": "INT",
+      "family": "supervisory_standards"
+    },
+    "primary_source_id": "io-bis-140216a5b6",
+    "n": 12783,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
+    "source_ids": [
+      "io-bis-140216a5b6"
+    ]
+  },
+  {
+    "title": "Europe and China - a changing relationship in a changing world",
+    "url": "https://www.bis.org/speeches/20261126-europe-and-china-changing-relationship-changing-world",
+    "native_id": "https://www.bis.org/speeches/20261126-europe-and-china-changing-relationship-changing-world",
+    "published_at": "2026-11-26T00:00:00+00:00",
+    "published_raw": "2026-11-26T00:00:00Z",
+    "summary": "Keynote speech by Dr Sabine Mauderer, First Deputy Governor of the Deutsche Bundesbank, at the 12th China Day, organised by dfv Euro Finance Group GmbH, Frankfurt am Main, 16 November 2026.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Bank for International Settlements — View feed",
+      "jurisdiction": "INT",
+      "family": "supervisory_standards"
+    },
+    "primary_source_id": "io-bis-140216a5b6",
+    "n": 12784,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
+    "source_ids": [
+      "io-bis-140216a5b6"
+    ]
+  },
+  {
+    "title": "The Bank of Japan's Semiannual Report on Currency and Monetary Control",
+    "url": "https://www.bis.org/speeches/20261126-bank-japans-semiannual-report-currency-and-monetary-control",
+    "native_id": "https://www.bis.org/speeches/20261126-bank-japans-semiannual-report-currency-and-monetary-control",
+    "published_at": "2026-11-26T00:00:00+00:00",
+    "published_raw": "2026-11-26T00:00:00Z",
+    "summary": "Statement by Mr Kazuo Ueda, Governor of the Bank of Japan, before the Committee on Financial Affairs, Senate, Tokyo, 19 November 2026.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Bank for International Settlements — View feed",
+      "jurisdiction": "INT",
+      "family": "supervisory_standards"
+    },
+    "primary_source_id": "io-bis-140216a5b6",
+    "n": 12785,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
+    "source_ids": [
+      "io-bis-140216a5b6"
+    ]
+  },
+  {
+    "title": "Considerations at the intersection of payments and tokenized markets",
+    "url": "https://www.bis.org/speeches/20261126-considerations-intersection-payments-and-tokenized-markets",
+    "native_id": "https://www.bis.org/speeches/20261126-considerations-intersection-payments-and-tokenized-markets",
+    "published_at": "2026-11-26T00:00:00+00:00",
+    "published_raw": "2026-11-26T00:00:00Z",
+    "summary": "Speech by Mr Christopher J Waller, Member of the Board of Governors of the Federal Reserve System, at The Clearing House Annual Conference 2026 “Navigating the future of banking and payments”, New York City, 17 November 2026.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Bank for International Settlements — View feed",
+      "jurisdiction": "INT",
+      "family": "supervisory_standards"
+    },
+    "primary_source_id": "io-bis-140216a5b6",
+    "n": 12786,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
+    "source_ids": [
+      "io-bis-140216a5b6"
+    ]
+  },
+  {
+    "title": "What does monetary policy need to know now?",
+    "url": "https://www.bis.org/speeches/20261126-what-does-monetary-policy-need-know-now",
+    "native_id": "https://www.bis.org/speeches/20261126-what-does-monetary-policy-need-know-now",
+    "published_at": "2026-11-26T00:00:00+00:00",
+    "published_raw": "2026-11-26T00:00:00Z",
+    "summary": "Welcome address by Mr Sergio Nicoletti Altimari, Deputy Governor of the Bank of Italy, at the Bank of Italy-SUERF (The European Money and Finance Forum) conference “Inflation, inflation expectations, and monetary policy”, Rome, 19 November 2026.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Bank for International Settlements — View feed",
+      "jurisdiction": "INT",
+      "family": "supervisory_standards"
+    },
+    "primary_source_id": "io-bis-140216a5b6",
+    "n": 12787,
+    "first_seen": "2026-11-26T22:22:50.591377+00:00",
+    "last_seen": "2026-11-26T22:22:50.591377+00:00",
+    "source_ids": [
+      "io-bis-140216a5b6"
     ]
   }
 ]
