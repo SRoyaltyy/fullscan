@@ -1,6 +1,6 @@
 {
   "date": "2026-11-26",
-  "generated_at": "2026-11-26T04:51:00.384973-05:00",
+  "generated_at": "2026-11-26T05:03:48.697270-05:00",
   "items": [
     {
       "ok": false,
@@ -102,14 +102,14 @@
       "missing_markers": []
     },
     {
-      "ok": false,
+      "ok": true,
       "kind": "map_heat_baseline",
       "path": "01_daily/map_heat/2026-11-26_research_baseline.json",
-      "reason": "postclose_baseline_missing",
-      "size": 0,
+      "reason": "",
+      "size": 187990,
       "carried": false,
       "timeout": false,
-      "empty": true,
+      "empty": false,
       "missing_markers": []
     },
     {

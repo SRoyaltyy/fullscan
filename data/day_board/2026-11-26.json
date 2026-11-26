@@ -1,6 +1,6 @@
 {
   "date": "2026-11-26",
-  "generated_at": "2026-11-26T04:51:00.783867-05:00",
+  "generated_at": "2026-11-26T05:03:49.023928-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -11,8 +11,8 @@
     "MISSING AB checklist enriched `data/ab_checklist/2026-11-26_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
-    "ok": 1,
-    "partial": 3,
+    "ok": 2,
+    "partial": 2,
     "fail": 4,
     "n": 8
   },
@@ -21,11 +21,11 @@
       "key": "postclose",
       "name": "Post-close research",
       "yaml": "map_heat_postclose.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 2,
-      "n_opt_ok": 1,
+      "n_opt_ok": 2,
       "n_opt": 2,
       "files": [
         {
@@ -33,10 +33,10 @@
           "name": "Captain baseline JSON",
           "path": "01_daily/map_heat/2026-11-26_research_baseline.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "postclose_baseline_missing",
-          "size": 0,
-          "said": "postclose_baseline_missing",
+          "status": "OK",
+          "reason": "",
+          "size": 187990,
+          "said": "postclose_baseline \u00b7 141 cards \u00b7 HEAT=128 SPLIT=9 OVERRIDE=4 \u00b7 err Basic Materials:coverage:0/8<required:1",
           "bullets": []
         },
         {
@@ -44,11 +44,14 @@
           "name": "Captain baseline MD",
           "path": "01_daily/map_heat/2026-11-26_research_baseline.md",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 25397,
+          "said": "MAP HEAT RESEARCH \u2014 2026-11-25",
+          "bullets": [
+            "141 captain cards \u00b7 size_gate=False set by pre-open refresh",
+            "CAPTAIN CARDS"
+          ]
         },
         {
           "key": "heat_json",
@@ -179,8 +182,8 @@
       "name": "Pre-Open ALL",
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
-      "inputs_ready": false,
-      "n_req_ok": 2,
+      "inputs_ready": true,
+      "n_req_ok": 1,
       "n_req": 9,
       "n_opt_ok": 1,
       "n_opt": 14,
@@ -216,10 +219,10 @@
           "name": "Captain baseline JSON",
           "path": "01_daily/map_heat/2026-11-26_research_baseline.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "postclose_baseline_missing",
-          "size": 0,
-          "said": "postclose_baseline_missing",
+          "status": "OK",
+          "reason": "",
+          "size": 187990,
+          "said": "postclose_baseline \u00b7 141 cards \u00b7 HEAT=128 SPLIT=9 OVERRIDE=4 \u00b7 err Basic Materials:coverage:0/8<required:1",
           "bullets": []
         },
         {
@@ -328,8 +331,8 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7596,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 19 fail",
+          "size": 7575,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 18 fail",
           "bullets": [
             "general_predict:missing",
             "events:missing",
@@ -353,13 +356,11 @@
           "name": "Grok review JSON",
           "path": "01_daily/2026-11-26_grok_review.json",
           "role": "required",
-          "status": "OK",
-          "reason": "ok=False Grok returned an empty review",
-          "size": 308,
-          "said": "ok=False \u00b7 empty_review_reply (review)",
-          "bullets": [
-            "Grok returned an empty review"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "sector_basic_materials",
@@ -955,6 +956,31 @@
         }
       ],
       "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-11-26\nExport `finviz_2026-11-25.csv` \u00b7 11786 names \u00b7 generated 2026-11-26T04:51:00.346151-05:00"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-11-26",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-26T05:03:48.700863-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-26_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 95710,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-11-26_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 10317,
+          "preview": "# Finviz Daily Digest \u2014 2026-11-26\n_Generated 2026-11-26T04:48:45.236129-05:00 \u00b7 export=data/exports/finviz_2026-11-25.csv \u00b7 ticker digests=855 \u00b7 high-signal=188_"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-11-26\n_Generated 2026-11-26T04:48:45.236129-05:00 \u00b7 export=data/exports/finviz_2026-11-25.csv \u00b7 ticker digests=855 \u00b7 high-signal=188_"
     }
   ],
   "href": {
