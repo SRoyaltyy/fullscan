@@ -1,6 +1,6 @@
 # Finviz homepage market digest — 2026-11-26
 
-**Generated:** 2026-11-26T04:48:54.900233-05:00 (America/New_York)
+**Generated:** 2026-11-26T05:07:24.935816-05:00 (America/New_York)
 **Source:** `live`
 **Banner:** US stocks ended mixed after a volatile session as new Trump tariff proposals and hotter core PCE data pressured tech while cyclicals outperformed
 **Prior close:** SPX -0.25%  Nasdaq -0.62%  Dow +0.33%

@@ -1,8 +1,8 @@
 {
   "date": "2026-11-26",
-  "generated_at": "2026-11-26T04:51:00.346151-05:00",
+  "generated_at": "2026-11-26T05:10:22.998401-05:00",
   "phase": "morning_overlay",
-  "export": "finviz_2026-11-25.csv",
+  "export": "finviz_2026-11-26.csv",
   "n_tickers": 11786,
   "sectors": [
     {
@@ -8876,7 +8876,44 @@
   ],
   "ticker_news": [
     {
-      "time": "5 min",
+      "time": "7 min",
+      "title": "Omdia: OLED Display Shipments Featuring Active Privacy View to Reach 91.7 Million Units by 2033",
+      "url": "https://www.businesswire.com/news/home/20261126762642/en/OLED",
+      "source": "Business Wire",
+      "tickers": [
+        "TTGT"
+      ]
+    },
+    {
+      "time": "10 min",
+      "title": "Huang's Return Makes a Congressional Hearing Must-See TV for Investors",
+      "url": "https://www.barrons.com/articles/huangs-return-makes-a-congressional-hearing-must-see-tv-for-investors-4f5f37e6?mod=bar_FV",
+      "source": "Barrons.com",
+      "tickers": [
+        "NVDA"
+      ]
+    },
+    {
+      "time": "12 min",
+      "title": "SK Hynix seeks TSMC 3nm expertise as Micron steps up hiring",
+      "url": "https://www.digitimes.com/news/a20261126VL224/sk-hynix-tsmc-micron-3nm-hbm.html",
+      "source": "DigiTimes",
+      "tickers": [
+        "MU",
+        "SKHY"
+      ]
+    },
+    {
+      "time": "19 min",
+      "title": "Transaction in Own Shares",
+      "url": "/news/427495/transaction-in-own-shares",
+      "source": "GlobeNewswire",
+      "tickers": [
+        "SHEL"
+      ]
+    },
+    {
+      "time": "25 min",
       "title": "Kaplan Fox Encourages MNTN, Inc. (MNTN) Investors with Significant Losses to Contact the Firm Before January 19, 2027",
       "url": "https://www.newsfilecorp.com/release/325891/Kaplan-Fox-Encourages-MNTN-Inc.-MNTN-Investors-with-Significant-Losses-to-Contact-the-Firm-Before-January-19-2027",
       "source": "Newsfile",
@@ -8885,7 +8922,7 @@
       ]
     },
     {
-      "time": "15 min",
+      "time": "35 min",
       "title": "Alvotech to Appeal US Preliminary Injunction Decision Relating to AVT05",
       "url": "/news/427494/alvotech-to-appeal-us-preliminary-injunction-decision-relating-to-avt05",
       "source": "GlobeNewswire",
@@ -8894,7 +8931,7 @@
       ]
     },
     {
-      "time": "15 min",
+      "time": "35 min",
       "title": "Kaplan Fox & Kilsheimer LLP Encourages Gildan Activewear Inc. (GIL) Investors With Losses to Seek Appointment as Lead Plaintiff Before December 14, 2026",
       "url": "https://www.newsfilecorp.com/release/325886/Kaplan-Fox-Kilsheimer-LLP-Encourages-Gildan-Activewear-Inc.-GIL-Investors-With-Losses-to-Seek-Appointment-as-Lead-Plaintiff-Before-December-14-2026",
       "source": "Newsfile",
@@ -8903,7 +8940,7 @@
       ]
     },
     {
-      "time": "15 min",
+      "time": "35 min",
       "title": "Kaplan Fox Encourages Fervo Energy Company (FRVO) Investors with Significant Losses to Contact the Firm Before January 19, 2027",
       "url": "https://www.newsfilecorp.com/release/325888/Kaplan-Fox-Encourages-Fervo-Energy-Company-FRVO-Investors-with-Significant-Losses-to-Contact-the-Firm-Before-January-19-2027",
       "source": "Newsfile",
@@ -8912,7 +8949,7 @@
       ]
     },
     {
-      "time": "19 min",
+      "time": "39 min",
       "title": "Tokenized Security Linked to Freedom Holding Corp. Shares Listed on Binance, Expanding Investor Access",
       "url": "/news/427492/tokenized-security-linked-to-freedom-holding-corp-shares-listed-on-binance-expanding-investor-access",
       "source": "GlobeNewswire",
@@ -8921,7 +8958,7 @@
       ]
     },
     {
-      "time": "27 min",
+      "time": "46 min",
       "title": "ANT Stock Gains Overnight: US Exchange-Traded Funds Anthropic Holdings Swell To Over $2B",
       "url": "https://finance.yahoo.com/markets/stocks/articles/ant-stock-gains-overnight-us-092324818.html",
       "source": "Stocktwits",
@@ -8931,7 +8968,7 @@
       ]
     },
     {
-      "time": "35 min",
+      "time": "55 min",
       "title": "Kaplan Fox Encourages The Ensign Group, Inc. (ENSG) Investors Seeking Recovery to Contact the Firm Before December 7, 2026",
       "url": "https://www.newsfilecorp.com/release/325883/Kaplan-Fox-Encourages-The-Ensign-Group-Inc.-ENSG-Investors-Seeking-Recovery-to-Contact-the-Firm-Before-December-7-2026",
       "source": "Newsfile",
@@ -8940,7 +8977,7 @@
       ]
     },
     {
-      "time": "40 min",
+      "time": "1 hour",
       "title": "DELL Stock Heads For Worst Month Since 2021: Morningstar Sees Risk Ahead For Dell Despite AI-Led Earnings Beat",
       "url": "https://finance.yahoo.com/markets/stocks/articles/dell-stock-heads-worst-month-091004379.html",
       "source": "Stocktwits",
@@ -8950,7 +8987,7 @@
       ]
     },
     {
-      "time": "48 min",
+      "time": "1 hour",
       "title": "Equinor cuts 2026 production guidance after shut-ins at three fields",
       "url": "https://finance.yahoo.com/news/equinor-cuts-2026-production-guidance-090217745.html",
       "source": "Offshore Technology",
@@ -8959,7 +8996,7 @@
       ]
     },
     {
-      "time": "52 min",
+      "time": "1 hour",
       "title": "Musk says will give two SpaceX shares to 'every child in America'",
       "url": "https://finance.yahoo.com/markets/stocks/articles/musk-says-two-spacex-shares-085820244.html",
       "source": "AFP",
@@ -9034,7 +9071,7 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "2 hours",
       "title": "Einride Brings Essity into Its Fast-Growing Electric Freight Network",
       "url": "/news/427490/einride-brings-essity-into-its-fast-growing-electric-freight-network",
       "source": "GlobeNewswire",
@@ -9043,7 +9080,7 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "2 hours",
       "title": "CoStar Data Shows Noho Office Leasing Nearing 900,000 Sq. Ft.",
       "url": "/news/427491/costar-data-shows-noho-office-leasing-nearing-900000-sq-ft",
       "source": "Business Wire",
@@ -9052,7 +9089,17 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "2 hours",
+      "title": "Bull of the Day: Kyndryl Holdings (KD)",
+      "url": "/news/427496/bull-of-the-day-kyndryl-holdings-kd",
+      "source": "Zacks",
+      "tickers": [
+        "IBM",
+        "KD"
+      ]
+    },
+    {
+      "time": "2 hours",
       "title": "S&P Weighs Nvidia Downgrade Despite Huang's Return. What Would a Cut Mean?",
       "url": "https://finance.yahoo.com/markets/stocks/articles/p-weighs-nvidia-downgrade-despite-080000741.html",
       "source": "BeInCrypto",
@@ -9062,7 +9109,7 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "2 hours",
       "title": "Constellation concludes 4.4GW natural gas-fired power plants sale",
       "url": "https://finance.yahoo.com/news/constellation-concludes-4-4gw-natural-075711084.html",
       "source": "Power Technology",
@@ -9071,7 +9118,7 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "2 hours",
       "title": "Singapore-based Debia partners with Mastercard to pilot agentic commerce",
       "url": "https://finance.yahoo.com/news/singapore-based-debia-partners-mastercard-075420386.html",
       "source": "Electronic Payments",
@@ -9080,7 +9127,7 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "2 hours",
       "title": "UBS names its top European luxury stock picks for 2027",
       "url": "https://finance.yahoo.com/markets/stocks/articles/ubs-names-top-european-luxury-075240383.html",
       "source": "Investing.com",
@@ -9152,7 +9199,7 @@
       ]
     },
     {
-      "time": "2 hours",
+      "time": "3 hours",
       "title": "InterContinental Hotels Group PLC Announces Transaction in Own Shares - November 26",
       "url": "/news/427489/intercontinental-hotels-group-plc-announces-transaction-in-own-shares-november-26",
       "source": "ACCESSWIRE",
@@ -9220,7 +9267,7 @@
       ]
     },
     {
-      "time": "3 hours",
+      "time": "4 hours",
       "title": "Innate Pharma Releases Its 2027 Financial Calendar",
       "url": "https://www.businesswire.com/news/home/20261125853847/en/",
       "source": "Business Wire",
@@ -9229,7 +9276,7 @@
       ]
     },
     {
-      "time": "3 hours",
+      "time": "4 hours",
       "title": "Micron faces Taiwan uncertainty as labor dispute threatens expansion, report warns",
       "url": "https://finance.yahoo.com/technology/articles/micron-faces-taiwan-uncertainty-labor-055543451.html",
       "source": "Investing.com",
@@ -9308,7 +9355,7 @@
       ]
     },
     {
-      "time": "4 hours",
+      "time": "5 hours",
       "title": "Is the Stock Market Open Today? Here Are the Trading Hours for Thanksgiving.",
       "url": "https://www.barrons.com/articles/stock-market-open-closed-today-hours-thanksgiving-banks-post-office-cc9dfd4e?mod=bar_FV",
       "source": "Barrons.com",
@@ -9706,55 +9753,6 @@
         "LUNR",
         "RKLB",
         "SPCX"
-      ]
-    },
-    {
-      "time": "Nov-25",
-      "title": "S&P 500, Nasdaq End Lower But Dow Rebounds As Traders Rotate Out Of AI  NVDA, SPCX, PANW  In Focus",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/p-500-nasdaq-end-lower-000950299.html",
-      "source": "Stocktwits",
-      "tickers": [
-        "NVDA",
-        "PANW",
-        "SPCX",
-        "QQQ"
-      ]
-    },
-    {
-      "time": "Nov-25",
-      "title": "Tesla-SpaceX merger talks advance, but China exposure tests Musk's vertical integration ambitions",
-      "url": "https://www.digitimes.com/news/a20261125VL224/tesla-spacex-merger-vertical-integration-elon-musk.html",
-      "source": "DigiTimes",
-      "tickers": [
-        "SPCX",
-        "TSLA"
-      ]
-    },
-    {
-      "time": "Nov-25",
-      "title": "Banco Macro Announces Results for the Third Quarter of 2026",
-      "url": "/news/427484/banco-macro-announces-results-for-the-third-quarter-of-2026",
-      "source": "PR Newswire",
-      "tickers": [
-        "BMA"
-      ]
-    },
-    {
-      "time": "Nov-25",
-      "title": "Microsoft's Green Card Filings Reveal A Striking Pattern After Mass Layoffs. Trump's New Rule Could Freeze Sponsorships For Two Years.",
-      "url": "https://finance.yahoo.com/technology/articles/microsofts-green-card-filings-reveal-234807020.html",
-      "source": "International Business Times",
-      "tickers": [
-        "MSFT"
-      ]
-    },
-    {
-      "time": "Nov-25",
-      "title": "PANW Stock Slips After-Hours On Former Executives Accounting Fraud Allegations: Firm Denies Claims",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/panw-stock-slips-hours-former-232552463.html",
-      "source": "Stocktwits",
-      "tickers": [
-        "PANW"
       ]
     }
   ],
@@ -10607,5 +10605,5 @@
   "calendar_window_days": 16,
   "econ_window_count": 153,
   "earnings_window_count": 160,
-  "overlay_at": "2026-11-26T04:51:00.346151-05:00"
+  "overlay_at": "2026-11-26T05:10:22.998401-05:00"
 }
