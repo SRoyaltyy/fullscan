@@ -5,15 +5,15 @@
   "run_id": "45596660760",
   "model": "",
   "started_at": "2026-11-25T06:21:30-05:00",
-  "updated_at": "2026-11-26T00:23:56-05:00",
-  "heartbeat_at": "2026-11-26T00:23:56-05:00",
+  "updated_at": "2026-11-26T00:25:01-05:00",
+  "heartbeat_at": "2026-11-26T00:25:01-05:00",
   "stages": [
     {
       "name": "land_closed",
       "state": "running",
       "started_at": "2026-11-25T06:21:30-05:00",
       "ended_at": "",
-      "heartbeat_at": "2026-11-26T00:23:56-05:00",
+      "heartbeat_at": "2026-11-26T00:25:01-05:00",
       "done": 0,
       "total": 1,
       "model": "",
