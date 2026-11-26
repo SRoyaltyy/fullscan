@@ -1,6 +1,6 @@
 {
   "date": "2026-11-26",
-  "generated_at": "2026-11-26T05:05:06.795851-05:00",
+  "generated_at": "2026-11-26T05:05:37.035455-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -181,7 +181,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 9,
       "n_opt_ok": 1,
       "n_opt": 14,
@@ -239,10 +239,10 @@
           "name": "News parse JSON",
           "path": "01_daily/news/2026-11-26_parsed.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 5642596,
+          "said": "5642596B on disk",
           "bullets": []
         },
         {
@@ -329,13 +329,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7575,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 18 fail",
+          "size": 7574,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 17 fail",
           "bullets": [
             "general_predict:missing",
             "events:missing",
             "news_judge:missing",
-            "news_parse:missing"
+            "news_actions:missing"
           ]
         },
         {
@@ -1140,6 +1140,31 @@
         }
       ],
       "preview": "2607 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CL, CBRL, SLDE, POWW, AES \u00b7 2607 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CL, SLDE, AES, REYN, PBH"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-11-26",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-26T05:05:36.093291-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-26_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 5642596,
+          "preview": "raw=7985 usable=608 single=442 \u00b7 OPEC blames EU for COP31 collapse - Reuters | Kazakhstan also seeks higher oil output capacity estimate ahead of 2027 OPEC+ qu | TSX futures fall as softer commodity prices, rate hike bets weigh - Reuters | US weekly jobless claims fall more than expected - Reuters | Sterling dips as traders await US inflation data - Reuters"
+        },
+        {
+          "path": "01_daily/news/2026-11-26_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 11817,
+          "preview": "# News Parse v2 \u2014 2026-11-26T05:05:35.559478-05:00\nWindow\u224848h | news_mode=on | raw=7985 | usable=608 | single_name=442 | noise_dropped=6695\nusable polarity={'+': 9, '-': 112, 'mixed': 0, 'neutral': 487}"
+        }
+      ],
+      "preview": "raw=7985 usable=608 single=442 \u00b7 OPEC blames EU for COP31 collapse - Reuters | Kazakhstan also seeks higher oil output capacity estimate ahead of 2027 OPEC+ qu | TSX futures fall as softer commodity prices, rate hike bets weigh - Reuters | US weekly jobless claims fall more than expected - Reuters | Sterling dips as traders await US inflation data - Reuters \u00b7 # News Parse v2 \u2014 2026-11-26T05:05:35.559478-05:00\nWindow\u224848h | news_mode=on | raw=7985 | usable=608 | single_name=442 | noise_dropped=6695\nusable polarity={'+': 9, '-': 112, 'mixed': 0, 'neutral': 487}"
     }
   ],
   "href": {
