@@ -18,28 +18,28 @@
 
 | Ticker | enr | base | ctx | rs_w | beat% | ind_med_w | sector | board | label |
 |--------|----:|-----:|----:|-----:|------:|----------:|--------|-------|-------|
-| ALGT | +16 | +13 | +3 | +4.1 | 88% | +0.7 | Industrials | — | LEAD,peers↑,ind↑ |
-| SO | +16 | +14 | +2 | +0.0 | 50% | +0.3 | Utilities | — | peers↑,ind↑ |
-| POWW | +16 | +15 | +1 | +14.3 | 100% | -7.9 | Industrials | — | LEAD,peers↑,ind↓ |
-| SLDE | +16 | +15 | +1 | — | — | +0.4 | Financial | — | ind↑ |
-| AES | +16 | +15 | +1 | -0.1 | 50% | +1.4 | Utilities | — | LAG,peers↑,ind↑ |
-| SKT | +15 | +14 | +1 | -1.5 | 12% | +0.8 | Real Estate | — | LAG,peers↑,ind↑ |
-| BCE | +15 | +14 | +1 | +0.3 | 56% | -3.9 | Communication Serv | — | LEAD,peers↑,ind↓ |
-| CL | +15 | +16 | -1 | -0.5 | 11% | -0.3 | Consumer Defensive | — | LAG,peers↑,ind↓ |
-| CBRL | +15 | +16 | -1 | +9.2 | 100% | -0.7 | Consumer Cyclical | — | LEAD,peers↓,ind↓ |
-| FE | +15 | +12 | +3 | +0.2 | 60% | +0.3 | Utilities | — | LEAD,peers↑,ind↑ |
-| CRI | +15 | +12 | +3 | +1.9 | 71% | +1.0 | Consumer Cyclical | — | LEAD,peers↑,ind↑ |
-| TFX | +15 | +12 | +3 | +3.7 | 78% | +0.9 | Healthcare | — | LEAD,peers↑,ind↑ |
-| ALEC | +14 | +11 | +3 | +0.7 | 62% | +3.8 | Healthcare | — | LEAD,peers↑,ind↑ |
-| TAK | +14 | +12 | +2 | +4.2 | 90% | +0.0 | Healthcare | — | LEAD,peers↑ |
-| PBH | +14 | +14 | +0 | +6.8 | 100% | +0.0 | Healthcare | — | LEAD,peers↓ |
-| WEC | +14 | +11 | +3 | +0.6 | 78% | +0.3 | Utilities | — | LEAD,peers↑,ind↑ |
-| DUK | +14 | +11 | +3 | +0.5 | 70% | +0.3 | Utilities | — | LEAD,peers↑,ind↑ |
-| HD | +14 | +11 | +3 | +1.9 | 80% | +4.0 | Consumer Cyclical | — | LEAD,peers↑,ind↑ |
-| COLM | +14 | +11 | +3 | +0.9 | 75% | +1.3 | Consumer Cyclical | — | LEAD,peers↑,ind↑ |
-| LUV | +14 | +13 | +1 | -0.9 | 29% | +0.7 | Industrials | — | LAG,peers↑,ind↑ |
-| REYN | +14 | +13 | +1 | +0.6 | 80% | -0.1 | Consumer Cyclical | — | LEAD,peers↑,ind↓ |
-| LIVN | +14 | +13 | +1 | +1.5 | 70% | -1.0 | Healthcare | — | LEAD,peers↑,ind↓ |
-| IVT | +14 | +11 | +3 | +1.2 | 75% | +0.8 | Real Estate | — | LEAD,peers↑,ind↑ |
-| PRCH | +14 | +11 | +3 | +7.0 | 100% | +0.4 | Financial | — | LEAD,peers↑,ind↑ |
-| TGT | +14 | +11 | +3 | +6.6 | 78% | +3.8 | Consumer Defensive | — | LEAD,peers↑,ind↑ |
+| HGTY | +19 | +16 | +3 | +0.2 | 60% | +0.4 | Financial | — | LEAD,peers↑,ind↑ |
+| AEE | +18 | +15 | +3 | +0.9 | 100% | +0.3 | Utilities | — | LEAD,peers↑,ind↑ |
+| PRCH | +18 | +15 | +3 | +7.0 | 100% | +0.4 | Financial | — | LEAD,peers↑,ind↑ |
+| WTRG | +17 | +14 | +3 | +0.2 | 60% | +0.7 | Utilities | — | LEAD,peers↑,ind↑ |
+| FE | +17 | +14 | +3 | +0.2 | 60% | +0.3 | Utilities | — | LEAD,peers↑,ind↑ |
+| AMH | +17 | +14 | +3 | +1.4 | 88% | +0.9 | Real Estate | — | LEAD,peers↑,ind↑ |
+| OGE | +17 | +14 | +3 | +0.1 | 60% | +0.3 | Utilities | — | LEAD,peers↑,ind↑ |
+| KSS | +17 | +14 | +3 | +5.0 | 71% | +5.3 | Consumer Cyclical | — | LEAD,peers↑,ind↑ |
+| IRT | +17 | +14 | +3 | +0.7 | 62% | +0.9 | Real Estate | — | LEAD,peers↑,ind↑ |
+| GLOB | +17 | +16 | +1 | +15.8 | 100% | -2.0 | Technology | — | LEAD,peers↑,ind↓ |
+| VFC | +17 | +16 | +1 | -0.7 | 38% | +1.3 | Consumer Cyclical | — | LAG,peers↑,ind↑ |
+| SMA | +17 | +16 | +1 | — | — | +1.4 | Real Estate | — | ind↑ |
+| EMBC | +17 | +16 | +1 | +31.7 | 100% | +0.9 | Healthcare | — | LEAD,peers↓,ind↑ |
+| PLX | +17 | +14 | +3 | +4.5 | 62% | +3.8 | Healthcare | — | LEAD,peers↑,ind↑ |
+| RKT | +16 | +15 | +1 | +3.1 | 100% | -2.4 | Financial | — | LEAD,peers↑,ind↓ |
+| TRIN | +16 | +17 | -1 | -0.9 | 20% | -2.0 | Financial | — | LAG,peers↑,ind↓ |
+| CNM | +16 | +17 | -1 | -0.4 | 40% | -1.2 | Industrials | — | LAG,peers↑,ind↓ |
+| SOLV | +16 | +13 | +3 | +1.7 | 90% | +0.9 | Healthcare | — | LEAD,peers↑,ind↑ |
+| GTY | +16 | +13 | +3 | +1.6 | 60% | +0.8 | Real Estate | — | LEAD,peers↑,ind↑ |
+| REZI | +16 | +15 | +1 | +0.9 | 60% | -1.2 | Industrials | — | LEAD,peers↑,ind↓ |
+| KNSA | +16 | +14 | +2 | +4.2 | 89% | +0.0 | Healthcare | — | LEAD,peers↑ |
+| JHX | +16 | +13 | +3 | +3.2 | 100% | +0.1 | Basic Materials | — | LEAD,peers↑,ind↑ |
+| IFF | +16 | +15 | +1 | +6.9 | 89% | -1.9 | Basic Materials | — | LEAD,peers↑,ind↓ |
+| MRP | +16 | +15 | +1 | — | — | +0.9 | Real Estate | — | ind↑ |
+| LUV | +16 | +15 | +1 | -0.9 | 29% | +0.7 | Industrials | — | LAG,peers↑,ind↑ |
