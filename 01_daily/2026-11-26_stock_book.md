@@ -1,6 +1,6 @@
 # Stock book — 2026-11-26
 
-_Generated 2026-11-26T14:56:06.181023-05:00_
+_Generated 2026-11-26T15:16:24.350266-05:00_
 
 This file is the **human read** of one run. CSV/JSON next to it are the machine files.
 
@@ -64,7 +64,7 @@ Decision domains: **MKT · parent · child · company · setup · flow**. Measur
 | 12 | **TMO** | 🟡🟡🟢🟡🟢🟡 | group_leader | digest is non-directional: Thermo Fisher Scientific announced FDA clearance for a first-of-its-kind test to help clinicians monitor multiple myeloma.; Diagnostics & Research +1.1% d1 / +1.6% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=YELLOW; lookback=🔵,⚪ |
 | 13 | **MHK** | 🟡🔴🟢🟡🟢🟢 | group_leader | no direct company event; Furnishings, Fixtures & Appliances +0.7% d1 / +3.6% 1w / +4.5% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
 | 14 | **UNCY** | 🟡🟡🟢🟡🟢🟢 | group_leader | no direct company event; Biotechnology +0.8% d1 / +1.6% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=⚪,Cond green |
-| 15 | **RYZ** | 🟡🔴🟢🟡🟢🟢 | group_leader | no direct company event; Metal Fabrication +2.7% d1 / +3.8% 1w / +6.5% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵 |
+| 15 | **ALH** | 🟡🔴🟢🟡🟢🟢 | group_leader | no direct company event; Furnishings, Fixtures & Appliances +0.7% d1 / +3.6% 1w / +4.5% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵 |
 
 ### Bear decisions
 

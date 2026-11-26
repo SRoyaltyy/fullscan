@@ -1,6 +1,6 @@
 {
   "date": "2026-11-26",
-  "generated_at": "2026-11-26T15:16:15.073123-05:00",
+  "generated_at": "2026-11-26T15:16:32.891520-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -88,24 +88,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "join",
-      "title": "Join / match rank",
-      "date": "2026-11-26",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-26T14:55:45.715718-05:00",
-      "files": [
-        {
-          "path": "data/join/2026-11-26_ranked.csv",
-          "ok": true,
-          "reason": "",
-          "size": 2256995,
-          "preview": "5883 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ONC, RGA, LLY, KNSA, RDN"
-        }
-      ],
-      "preview": "5883 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ONC, RGA, LLY, KNSA, RDN"
-    },
     {
       "key": "peer_rs",
       "title": "Peer RS",
@@ -497,6 +479,59 @@
         }
       ],
       "preview": "5007 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-11-26",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-26T15:16:31.890410-05:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-11-26_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1493055,
+          "preview": "1d BUY RKT, ALNY, AURA, EWTX, ADMA, RZLT, ALEC, XNCR \u00b7 SELL CSIQ, MSTR, RYDE, WRD, HYMC, BTDR, GORO, MUX"
+        },
+        {
+          "path": "data/stock_book/2026-11-26_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-11-26_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2616,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-11-26_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12437,
+          "preview": "2026-11-26 BUY RKT, ALNY, AURA, EWTX, ADMA, RZLT, ALEC, XNCR \u00b7 SELL CSIQ, MSTR, RYDE, WRD, HYMC, BTDR, GORO, MUX"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12437,
+          "preview": "2026-11-26 BUY RKT, ALNY, AURA, EWTX, ADMA, RZLT, ALEC, XNCR \u00b7 SELL CSIQ, MSTR, RYDE, WRD, HYMC, BTDR, GORO, MUX"
+        },
+        {
+          "path": "01_daily/2026-11-26_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 83519,
+          "preview": "# Stock book \u2014 2026-11-26\n_Generated 2026-11-26T15:16:24.350266-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY RKT, ALNY, AURA, EWTX, ADMA, RZLT, ALEC, XNCR \u00b7 SELL CSIQ, MSTR, RYDE, WRD, HYMC, BTDR, GORO, MUX \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-11-26 BUY RKT, ALNY, AURA, EWTX, ADMA, RZLT, ALEC, XNCR \u00b7 SELL CSIQ, MSTR, RYDE, WRD, HYMC, BTDR, GORO, MUX \u00b7 2026-11-26 BUY RKT, ALNY, AURA, EWTX, ADMA, RZLT, ALEC, XNCR \u00b7 SELL CSIQ, MSTR, RYDE, WRD, HYMC, BTDR, GORO, MUX \u00b7 # Stock book \u2014 2026-11-26\n_Generated 2026-11-26T15:16:24.350266-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
