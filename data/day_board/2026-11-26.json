@@ -1,19 +1,16 @@
 {
   "date": "2026-11-26",
-  "generated_at": "2026-11-26T05:10:23.432460-05:00",
+  "generated_at": "2026-11-26T09:22:26.960605-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-11-26_predict.md` \u2014 missing",
-    "MISSING News actions JSON `01_daily/news/2026-11-26_actions.json` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-11-26_judge.md` \u2014 missing",
-    "MISSING Weather JSON `01_daily/weather/2026-11-26_weather.json` \u2014 missing",
-    "MISSING AB checklist enriched `data/ab_checklist/2026-11-26_ab_checklist_enriched.csv` \u2014 missing"
+    "MISSING News judge MD `01_daily/news/2026-11-26_judge.md` \u2014 missing"
   ],
   "counts": {
-    "ok": 1,
+    "ok": 4,
     "partial": 3,
-    "fail": 4,
+    "fail": 1,
     "n": 8
   },
   "processes": [
@@ -21,11 +18,11 @@
       "key": "postclose",
       "name": "Post-close research",
       "yaml": "map_heat_postclose.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 2,
-      "n_opt_ok": 1,
+      "n_opt_ok": 2,
       "n_opt": 2,
       "files": [
         {
@@ -33,10 +30,10 @@
           "name": "Captain baseline JSON",
           "path": "01_daily/map_heat/2026-11-26_research_baseline.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "postclose_baseline_missing",
-          "size": 0,
-          "said": "postclose_baseline_missing",
+          "status": "OK",
+          "reason": "",
+          "size": 187990,
+          "said": "postclose_baseline \u00b7 141 cards \u00b7 HEAT=128 SPLIT=9 OVERRIDE=4 \u00b7 err Basic Materials:coverage:0/8<required:1",
           "bullets": []
         },
         {
@@ -44,11 +41,14 @@
           "name": "Captain baseline MD",
           "path": "01_daily/map_heat/2026-11-26_research_baseline.md",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 25397,
+          "said": "MAP HEAT RESEARCH \u2014 2026-11-25",
+          "bullets": [
+            "141 captain cards \u00b7 size_gate=False set by pre-open refresh",
+            "CAPTAIN CARDS"
+          ]
         },
         {
           "key": "heat_json",
@@ -179,10 +179,10 @@
       "name": "Pre-Open ALL",
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
-      "inputs_ready": false,
-      "n_req_ok": 2,
+      "inputs_ready": true,
+      "n_req_ok": 4,
       "n_req": 9,
-      "n_opt_ok": 1,
+      "n_opt_ok": 2,
       "n_opt": 14,
       "files": [
         {
@@ -216,10 +216,10 @@
           "name": "Captain baseline JSON",
           "path": "01_daily/map_heat/2026-11-26_research_baseline.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "postclose_baseline_missing",
-          "size": 0,
-          "said": "postclose_baseline_missing",
+          "status": "OK",
+          "reason": "",
+          "size": 187990,
+          "said": "postclose_baseline \u00b7 141 cards \u00b7 HEAT=128 SPLIT=9 OVERRIDE=4 \u00b7 err Basic Materials:coverage:0/8<required:1",
           "bullets": []
         },
         {
@@ -238,10 +238,10 @@
           "name": "News parse JSON",
           "path": "01_daily/news/2026-11-26_parsed.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 5642596,
+          "said": "5642596B on disk",
           "bullets": []
         },
         {
@@ -293,11 +293,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-11-26_actions.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 85806,
+          "said": "113 ticker actions \u00b7 8 events \u00b7 7985 headlines \u00b7 COP BUY, EOG BUY, CHRD BUY, SM BUY, KOS BUY, HPK BUY, OXY BUY, FANG BUY",
+          "bullets": [
+            "BUY COP",
+            "BUY EOG",
+            "BUY CHRD",
+            "BUY SM"
+          ]
         },
         {
           "key": "general",
@@ -342,10 +347,10 @@
           "name": "Pre-open status JSON",
           "path": "01_daily/2026-11-26_preopen_status.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "all_ok=False missing=['events', 'news_judge', 'map_heat_research', 'general_predict']",
+          "size": 6637,
+          "said": "all_ok=False \u00b7 qc=False \u00b7 grok=False \u00b7 book=False \u00b7 missing events, news_judge, map_heat_research, general_predict",
           "bullets": []
         },
         {
@@ -490,9 +495,9 @@
       "key": "weather",
       "name": "Label + weather",
       "yaml": "label_weather.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 1,
       "n_opt_ok": 0,
       "n_opt": 0,
@@ -517,25 +522,29 @@
           "name": "Weather JSON",
           "path": "01_daily/weather/2026-11-26_weather.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "sectors=11 bytes=9501 vix=spiking yields=flat",
+          "size": 9501,
+          "said": "hostile 6 \u00b7 neutral 5",
+          "bullets": [
+            "hostile: Basic Materials, Communication Services, Consumer Cyclical, Consumer Defensive, Industrials, Technology"
+          ]
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "hostile 6 \u00b7 neutral 5",
+      "bullets": [
+        "hostile: Basic Materials, Communication Services, Consumer Cyclical, Consumer Defensive, Industrials, Technology"
+      ]
     },
     {
       "key": "ab",
       "name": "AB checklist",
       "yaml": "ab_checklist.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 1,
       "files": [
         {
@@ -543,33 +552,39 @@
           "name": "AB checklist raw",
           "path": "data/ab_checklist/2026-11-26_ab_checklist.csv",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2607",
+          "size": 7476496,
+          "said": "27 rows",
+          "bullets": [
+            "CL, CBRL, SLDE, POWW, AES, REYN, PRVA, PBH"
+          ]
         },
         {
           "key": "ab_enriched",
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-11-26_ab_checklist_enriched.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2607",
+          "size": 8247168,
+          "said": "25 rows",
+          "bullets": [
+            "CL, SLDE, AES, REYN, PBH, PRCH, ARDT, CBRL"
+          ]
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "25 rows",
+      "bullets": [
+        "CL, SLDE, AES, REYN, PBH"
+      ]
     },
     {
       "key": "catalyst",
       "name": "Catalyst dossiers",
       "yaml": "catalyst_daily.yml",
       "status": "FAIL",
-      "inputs_ready": false,
+      "inputs_ready": true,
       "n_req_ok": 0,
       "n_req": 0,
       "n_opt_ok": 0,
@@ -580,11 +595,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-11-26_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 85806,
+          "said": "113 ticker actions \u00b7 8 events \u00b7 7985 headlines \u00b7 COP BUY, EOG BUY, CHRD BUY, SM BUY, KOS BUY, HPK BUY, OXY BUY, FANG BUY",
+          "bullets": [
+            "BUY COP",
+            "BUY EOG",
+            "BUY CHRD",
+            "BUY SM"
+          ]
         },
         {
           "key": "in_digest",
@@ -606,23 +626,32 @@
           "name": "Catalyst dossiers JSON",
           "path": "01_daily/catalyst/2026-11-26_dossiers.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "FAIL",
+          "reason": "zero usable dossiers (n=0)",
+          "size": 279,
+          "said": "zero usable dossiers (n=0) \u00b7 0/0 usable \u00b7 Grok \u2192 DeepSeek",
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "113 ticker actions \u00b7 8 events \u00b7 7985 headlines \u00b7 COP BUY, EOG BUY, CHRD BUY, SM BUY, KOS BUY, HPK BUY, OXY BUY, FANG BUY",
+      "bullets": [
+        "BUY COP",
+        "BUY EOG",
+        "BUY CHRD",
+        "BUY SM",
+        "BUY KOS",
+        "BUY HPK",
+        "BUY OXY",
+        "BUY FANG"
+      ]
     },
     {
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "FAIL",
+      "status": "PARTIAL",
       "inputs_ready": false,
-      "n_req_ok": 0,
+      "n_req_ok": 2,
       "n_req": 4,
       "n_opt_ok": 1,
       "n_opt": 4,
@@ -654,11 +683,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-11-26_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 85806,
+          "said": "113 ticker actions \u00b7 8 events \u00b7 7985 headlines \u00b7 COP BUY, EOG BUY, CHRD BUY, SM BUY, KOS BUY, HPK BUY, OXY BUY, FANG BUY",
+          "bullets": [
+            "BUY COP",
+            "BUY EOG",
+            "BUY CHRD",
+            "BUY SM"
+          ]
         },
         {
           "key": "in_digest",
@@ -691,44 +725,52 @@
           "name": "Weather JSON",
           "path": "01_daily/weather/2026-11-26_weather.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "sectors=11 bytes=9501 vix=spiking yields=flat",
+          "size": 9501,
+          "said": "hostile 6 \u00b7 neutral 5",
+          "bullets": [
+            "hostile: Basic Materials, Communication Services, Consumer Cyclical, Consumer Defensive, Industrials, Technology"
+          ]
         },
         {
           "key": "in_ab",
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-11-26_ab_checklist_enriched.csv",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2607",
+          "size": 8247168,
+          "said": "25 rows",
+          "bullets": [
+            "CL, SLDE, AES, REYN, PBH, PRCH, ARDT, CBRL"
+          ]
         },
         {
           "key": "join",
           "name": "Join ranked CSV",
           "path": "data/join/2026-11-26_ranked.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=5883",
+          "size": 2256995,
+          "said": "216 rows",
+          "bullets": [
+            "ONC, RGA, LLY, KNSA, REGN, ASND, LNG, RDN"
+          ]
         },
         {
           "key": "peers",
           "name": "Peer RS CSV",
           "path": "data/peers/2026-11-26_peer_rs.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=5007",
+          "size": 807446,
+          "said": "493 rows",
+          "bullets": [
+            "A, AA, AACG, AAL, AAME, AAMI, AAOI, AAON"
+          ]
         },
         {
           "key": "book_json",
@@ -789,8 +831,10 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "216 rows",
+      "bullets": [
+        "ONC, RGA, LLY, KNSA, REGN"
+      ]
     },
     {
       "key": "publish",
@@ -864,7 +908,12 @@
     "general": {},
     "sectors": {},
     "news": {},
-    "weather": {}
+    "weather": {
+      "said": "hostile 6 \u00b7 neutral 5",
+      "bullets": [
+        "hostile: Basic Materials, Communication Services, Consumer Cyclical, Consumer Defensive, Industrials, Technology"
+      ]
+    }
   },
   "lands": [
     {
@@ -1319,6 +1368,31 @@
         }
       ],
       "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-11-26\nExport `finviz_2026-11-26.csv` \u00b7 11786 names \u00b7 generated 2026-11-26T05:10:22.998401-05:00"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-11-26",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-26T09:22:25.813049-05:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-11-26_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9501,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -2.44, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -3.0, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.74, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.8, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -1.41, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.77, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': 1.25, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -2.27, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-11-26_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5096,
+          "preview": "# Weather report \u2014 2026-11-26\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -2.44, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -3.0, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.74, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.8, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -1.41, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.77, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': 1.25, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -2.27, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-26\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
