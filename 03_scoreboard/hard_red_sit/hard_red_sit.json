@@ -2901,7 +2901,7 @@
   },
   "per_sleeve": {
     "tag": "RESEARCH",
-    "date": "2026-11-25",
+    "date": "2026-11-26",
     "live_sit": true,
     "keep_bar_unchanged": true,
     "n_sit": 1,
@@ -2928,8 +2928,8 @@
             "ticker": "BSX",
             "side": "long",
             "open": null,
-            "px": 44.14,
-            "px_src": "session_export+elite_live_skipped",
+            "px": 45.12,
+            "px_src": "session_export",
             "low": null,
             "scoops": {
               "0.5": {
@@ -2964,8 +2964,8 @@
             "ticker": "VCEL",
             "side": "long",
             "open": null,
-            "px": 61.18,
-            "px_src": "session_export+elite_live_skipped",
+            "px": 61.01,
+            "px_src": "session_export",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3000,8 +3000,8 @@
             "ticker": "PBH",
             "side": "long",
             "open": null,
-            "px": 51.5,
-            "px_src": "session_export+elite_live_skipped",
+            "px": 52.09,
+            "px_src": "session_export",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3036,8 +3036,8 @@
             "ticker": "SRRK",
             "side": "long",
             "open": null,
-            "px": 53.34,
-            "px_src": "session_export+elite_live_skipped",
+            "px": 53.21,
+            "px_src": "session_export",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3072,8 +3072,8 @@
             "ticker": "ETON",
             "side": "long",
             "open": null,
-            "px": 67.47,
-            "px_src": "session_export+elite_live_skipped",
+            "px": 65.23,
+            "px_src": "session_export",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3108,8 +3108,8 @@
             "ticker": "CRON",
             "side": "long",
             "open": null,
-            "px": 3.15,
-            "px_src": "session_export+elite_live_skipped",
+            "px": 3.19,
+            "px_src": "session_export",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3144,8 +3144,8 @@
             "ticker": "EMBC",
             "side": "long",
             "open": null,
-            "px": 8.08,
-            "px_src": "session_export+elite_live_skipped",
+            "px": 7.92,
+            "px_src": "session_export",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3180,8 +3180,8 @@
             "ticker": "EOG",
             "side": "long",
             "open": null,
-            "px": 146.59,
-            "px_src": "session_export+elite_live_skipped",
+            "px": 148.31,
+            "px_src": "session_export",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3216,8 +3216,8 @@
             "ticker": "GMAB",
             "side": "long",
             "open": null,
-            "px": 56.57,
-            "px_src": "session_export+elite_live_skipped",
+            "px": 56.8,
+            "px_src": "session_export",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3252,8 +3252,8 @@
             "ticker": "PSN",
             "side": "long",
             "open": null,
-            "px": 51.67,
-            "px_src": "session_export+elite_live_skipped",
+            "px": 53.26,
+            "px_src": "session_export",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3288,8 +3288,8 @@
             "ticker": "BOX",
             "side": "long",
             "open": null,
-            "px": 45.92,
-            "px_src": "session_export+elite_live_skipped",
+            "px": 46.37,
+            "px_src": "session_export",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3324,8 +3324,8 @@
             "ticker": "AVPT",
             "side": "long",
             "open": null,
-            "px": 17.07,
-            "px_src": "session_export+elite_live_skipped",
+            "px": 17.3,
+            "px_src": "session_export",
             "low": null,
             "scoops": {
               "0.5": {
