@@ -1,66 +1,86 @@
 {
   "date": "2026-11-26",
-  "generated_at": "2026-11-26T09:22:41.280663-05:00",
+  "generated_at": "2026-11-26T09:24:23.555068-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 4,
-    "partial": 3,
+    "ok": 6,
+    "partial": 1,
     "fail": 1,
     "n": 8
   },
-  "buy_1d": [],
-  "sell_1d": [],
+  "buy_1d": [
+    {
+      "ticker": "RKT",
+      "score": 0.7003031103805958
+    },
+    {
+      "ticker": "ALNY",
+      "score": 0.6069010706552787
+    },
+    {
+      "ticker": "AURA",
+      "score": 0.5878433426830929
+    },
+    {
+      "ticker": "EWTX",
+      "score": 0.7483947837444795
+    },
+    {
+      "ticker": "ADMA",
+      "score": 0.7221327106183808
+    },
+    {
+      "ticker": "RZLT",
+      "score": 0.6602850689223247
+    },
+    {
+      "ticker": "ALEC",
+      "score": 0.6756057542001885
+    },
+    {
+      "ticker": "XNCR",
+      "score": 0.6883158878165101
+    }
+  ],
+  "sell_1d": [
+    {
+      "ticker": "CSIQ",
+      "score": -0.4529720203300471
+    },
+    {
+      "ticker": "MSTR",
+      "score": -0.46057187998887317
+    },
+    {
+      "ticker": "RYDE",
+      "score": -0.480862896134288
+    },
+    {
+      "ticker": "WRD",
+      "score": -0.37967387983875994
+    },
+    {
+      "ticker": "HYMC",
+      "score": -0.30901011331171324
+    },
+    {
+      "ticker": "BTDR",
+      "score": -0.3456312733261007
+    },
+    {
+      "ticker": "GORO",
+      "score": -0.3156841316310531
+    },
+    {
+      "ticker": "MUX",
+      "score": -0.3451173821333069
+    }
+  ],
   "flatten": {},
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-11-26",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-26T05:07:06.909230-05:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-11-26_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 94205,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-11-26_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 10280,
-          "preview": "# Finviz Daily Digest \u2014 2026-11-26\n_Generated 2026-11-26T05:07:06.730332-05:00 \u00b7 export=data/exports/finviz_2026-11-26.csv \u00b7 ticker digests=775 \u00b7 high-signal=189_"
-        },
-        {
-          "path": "data/exports/finviz_2026-11-26.csv",
-          "ok": true,
-          "reason": "",
-          "size": 12260147,
-          "preview": "11787 rows \u00b7 Ticker,Company,Industry,Market Cap,Forward P/E,P/S,P/B,P/Cash,P/Free Cash Flow,EPS (ttm),Sales Year Over Year TTM,EPS Su \u00b7 A, AA, AAA, AAAA, AAAB"
-        },
-        {
-          "path": "data/finviz/latest.csv",
-          "ok": true,
-          "reason": "",
-          "size": 11033205,
-          "preview": "11787 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
-        },
-        {
-          "path": "01_daily/news/2026-11-26_finviz_digest_preopen.json",
-          "ok": true,
-          "reason": "",
-          "size": 94205,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-11-26\n_Generated 2026-11-26T05:07:06.730332-05:00 \u00b7 export=data/exports/finviz_2026-11-26.csv \u00b7 ticker digests=775 \u00b7 high-signal=189_ \u00b7 11787 rows \u00b7 Ticker,Company,Industry,Market Cap,Forward P/E,P/S,P/B,P/Cash,P/Free Cash Flow,EPS (ttm),Sales Year Over Year TTM,EPS Su \u00b7 A, AA, AAA, AAAA, AAAB \u00b7 11787 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-    },
     {
       "key": "paper",
       "title": "Paper dashboard",
@@ -228,6 +248,59 @@
         }
       ],
       "preview": "5007 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-11-26",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-26T09:24:22.807972-05:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-11-26_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1493055,
+          "preview": "1d BUY RKT, ALNY, AURA, EWTX, ADMA, RZLT, ALEC, XNCR \u00b7 SELL CSIQ, MSTR, RYDE, WRD, HYMC, BTDR, GORO, MUX"
+        },
+        {
+          "path": "data/stock_book/2026-11-26_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-11-26_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2616,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-11-26_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12437,
+          "preview": "2026-11-26 BUY RKT, ALNY, AURA, EWTX, ADMA, RZLT, ALEC, XNCR \u00b7 SELL CSIQ, MSTR, RYDE, WRD, HYMC, BTDR, GORO, MUX"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12437,
+          "preview": "2026-11-26 BUY RKT, ALNY, AURA, EWTX, ADMA, RZLT, ALEC, XNCR \u00b7 SELL CSIQ, MSTR, RYDE, WRD, HYMC, BTDR, GORO, MUX"
+        },
+        {
+          "path": "01_daily/2026-11-26_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 83519,
+          "preview": "# Stock book \u2014 2026-11-26\n_Generated 2026-11-26T09:22:48.406201-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY RKT, ALNY, AURA, EWTX, ADMA, RZLT, ALEC, XNCR \u00b7 SELL CSIQ, MSTR, RYDE, WRD, HYMC, BTDR, GORO, MUX \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-11-26 BUY RKT, ALNY, AURA, EWTX, ADMA, RZLT, ALEC, XNCR \u00b7 SELL CSIQ, MSTR, RYDE, WRD, HYMC, BTDR, GORO, MUX \u00b7 2026-11-26 BUY RKT, ALNY, AURA, EWTX, ADMA, RZLT, ALEC, XNCR \u00b7 SELL CSIQ, MSTR, RYDE, WRD, HYMC, BTDR, GORO, MUX \u00b7 # Stock book \u2014 2026-11-26\n_Generated 2026-11-26T09:22:48.406201-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

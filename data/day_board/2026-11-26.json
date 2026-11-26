@@ -1,6 +1,6 @@
 {
   "date": "2026-11-26",
-  "generated_at": "2026-11-26T09:22:41.280663-05:00",
+  "generated_at": "2026-11-26T09:24:23.555068-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -8,8 +8,8 @@
     "MISSING News judge MD `01_daily/news/2026-11-26_judge.md` \u2014 missing"
   ],
   "counts": {
-    "ok": 4,
-    "partial": 3,
+    "ok": 6,
+    "partial": 1,
     "fail": 1,
     "n": 8
   },
@@ -649,11 +649,11 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": false,
-      "n_req_ok": 2,
+      "n_req_ok": 4,
       "n_req": 4,
-      "n_opt_ok": 1,
+      "n_opt_ok": 3,
       "n_opt": 4,
       "files": [
         {
@@ -777,10 +777,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-11-26_stock_book.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=216",
+          "size": 1493055,
+          "said": "1d BUY RKT, ALNY, AURA, EWTX, ADMA, RZLT, ALEC, XNCR \u00b7 SELL CSIQ, MSTR, RYDE, WRD, HYMC, BTDR",
           "bullets": []
         },
         {
@@ -788,21 +788,24 @@
           "name": "Stock book MD",
           "path": "01_daily/2026-11-26_stock_book.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 82406,
+          "said": "Stock book \u2014 2026-11-26",
+          "bullets": [
+            "_Generated 2026-11-26T09:22:48.406201-05:00_",
+            "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
+          ]
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-11-26_green.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 585,
+          "said": "0 green \u00b7",
           "bullets": []
         },
         {
@@ -824,10 +827,10 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "session 2026-11-26 not in dashboard dates (last=2026-11-25)",
-          "size": 17739167,
-          "said": "session 2026-11-26 not in dashboard dates (last=2026-11-25)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-11-26)",
+          "size": 17739183,
+          "said": "live-book poller + today.json (2026-11-26)",
           "bullets": []
         }
       ],
@@ -840,9 +843,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "PARTIAL",
-      "inputs_ready": false,
-      "n_req_ok": 1,
+      "status": "OK",
+      "inputs_ready": true,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -852,10 +855,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-11-26_stock_book.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=216",
+          "size": 1493055,
+          "said": "1d BUY RKT, ALNY, AURA, EWTX, ADMA, RZLT, ALEC, XNCR \u00b7 SELL CSIQ, MSTR, RYDE, WRD, HYMC, BTDR",
           "bullets": []
         },
         {
@@ -863,10 +866,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "FAIL",
-          "reason": "session 2026-11-26 not in dashboard dates (last=2026-11-25)",
-          "size": 17739167,
-          "said": "session 2026-11-26 not in dashboard dates (last=2026-11-25)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-11-26)",
+          "size": 17739183,
+          "said": "live-book poller + today.json (2026-11-26)",
           "bullets": []
         },
         {
@@ -902,8 +905,74 @@
   "news_mode": "on",
   "news_mode_reason": "",
   "selections": {
-    "buy_1d": [],
-    "sell_1d": [],
+    "buy_1d": [
+      {
+        "ticker": "RKT",
+        "score": 0.7003031103805958
+      },
+      {
+        "ticker": "ALNY",
+        "score": 0.6069010706552787
+      },
+      {
+        "ticker": "AURA",
+        "score": 0.5878433426830929
+      },
+      {
+        "ticker": "EWTX",
+        "score": 0.7483947837444795
+      },
+      {
+        "ticker": "ADMA",
+        "score": 0.7221327106183808
+      },
+      {
+        "ticker": "RZLT",
+        "score": 0.6602850689223247
+      },
+      {
+        "ticker": "ALEC",
+        "score": 0.6756057542001885
+      },
+      {
+        "ticker": "XNCR",
+        "score": 0.6883158878165101
+      }
+    ],
+    "sell_1d": [
+      {
+        "ticker": "CSIQ",
+        "score": -0.4529720203300471
+      },
+      {
+        "ticker": "MSTR",
+        "score": -0.46057187998887317
+      },
+      {
+        "ticker": "RYDE",
+        "score": -0.480862896134288
+      },
+      {
+        "ticker": "WRD",
+        "score": -0.37967387983875994
+      },
+      {
+        "ticker": "HYMC",
+        "score": -0.30901011331171324
+      },
+      {
+        "ticker": "BTDR",
+        "score": -0.3456312733261007
+      },
+      {
+        "ticker": "GORO",
+        "score": -0.3156841316310531
+      },
+      {
+        "ticker": "MUX",
+        "score": -0.3451173821333069
+      }
+    ],
     "flatten": {},
     "general": {},
     "sectors": {},
@@ -1429,6 +1498,59 @@
         }
       ],
       "preview": "5007 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-11-26",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-26T09:24:22.807972-05:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-11-26_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1493055,
+          "preview": "1d BUY RKT, ALNY, AURA, EWTX, ADMA, RZLT, ALEC, XNCR \u00b7 SELL CSIQ, MSTR, RYDE, WRD, HYMC, BTDR, GORO, MUX"
+        },
+        {
+          "path": "data/stock_book/2026-11-26_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-11-26_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2616,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-11-26_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12437,
+          "preview": "2026-11-26 BUY RKT, ALNY, AURA, EWTX, ADMA, RZLT, ALEC, XNCR \u00b7 SELL CSIQ, MSTR, RYDE, WRD, HYMC, BTDR, GORO, MUX"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12437,
+          "preview": "2026-11-26 BUY RKT, ALNY, AURA, EWTX, ADMA, RZLT, ALEC, XNCR \u00b7 SELL CSIQ, MSTR, RYDE, WRD, HYMC, BTDR, GORO, MUX"
+        },
+        {
+          "path": "01_daily/2026-11-26_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 83519,
+          "preview": "# Stock book \u2014 2026-11-26\n_Generated 2026-11-26T09:22:48.406201-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY RKT, ALNY, AURA, EWTX, ADMA, RZLT, ALEC, XNCR \u00b7 SELL CSIQ, MSTR, RYDE, WRD, HYMC, BTDR, GORO, MUX \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-11-26 BUY RKT, ALNY, AURA, EWTX, ADMA, RZLT, ALEC, XNCR \u00b7 SELL CSIQ, MSTR, RYDE, WRD, HYMC, BTDR, GORO, MUX \u00b7 2026-11-26 BUY RKT, ALNY, AURA, EWTX, ADMA, RZLT, ALEC, XNCR \u00b7 SELL CSIQ, MSTR, RYDE, WRD, HYMC, BTDR, GORO, MUX \u00b7 # Stock book \u2014 2026-11-26\n_Generated 2026-11-26T09:22:48.406201-05:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
