@@ -1,0 +1,114 @@
+{
+  "date": "2026-11-26",
+  "generated_at": "2026-11-26T04:48:54.900233-05:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": true,
+  "clock_use": "same_morning",
+  "clock_legal_for": "2026-11-26",
+  "clock_rule": "Live: Generated must be before 09:30 ET on this date or leave missing. Wayback: capture before 09:30 ET that day is legal for that morning's Pre-Open. Afternoon Wayback is legal for the NEXT session open only (prior-day close recap), marked by clock_legal_for. Gaps stay gaps. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks ended mixed after a volatile session as new Trump tariff proposals and hotter core PCE data pressured tech while cyclicals outperformed",
+  "raw_text": "- The Dow Jones Industrial Average ($DJI) rose 0.33% to 50,182.95 after erasing an intraday loss of about 1,105 points, while the S&P 500 ($SPX) slipped 0.25% to 7,182.78 and the Nasdaq Composite ($COMP) fell 0.62% to 23,585.80 after rebounding from an early decline of roughly 4.6%.\n- The Trump administration unveiled proposals for new 20% tariffs targeting China, the EU, India and other trading partners, slated to take effect no earlier than January, helping drive the early equity selloff.\n- October core PCE inflation printed at 3.3% year-over-year versus 3.2% consensus and third-quarter GDP growth was sharply revised higher, reinforcing inflation worries and rate concerns.\n- Seven of 11 S&P 500 sectors advanced, led by Materials with a 1.83% gain and strength in Industrials, while Technology lagged with about a 1% decline; the Russell 2000 (IWM) rose 0.71% to 2,704.06.\n- HP Inc. (HPQ) jumped 11.5% after reporting Q4 adjusted EPS of $0.83 versus $0.75 expected on $16.0 billion in revenue, up 9.3% year-over-year, and issuing fiscal 2027 EPS guidance of $3.15–$3.45.\n- Nvidia (NVDA) fell 3.9% to $149.30 after S&P placed it on negative CreditWatch with a possible cut from AA to AA-, and Lam Research (LRCX) dropped about 5.7% as semiconductor weakness persisted amid AI selling and export-control fears, though later-session dip buying supported some AI-related names, including a 3.4% gain in Meta Platforms (META).\n- Nutanix (NTNX) slid 15.2% after announcing CEO succession alongside softer bookings despite an earnings beat, extending weakness in select software and infrastructure names.\n- In after-hours trading, Palo Alto Networks (PANW) declined about 3.7% after a former executive was sued over allegations of premature revenue booking, which the company called meritless, while Banco Macro (BMA) also moved on results amid otherwise limited major earnings reactions.\n- Deere & Co. (DE) rose about 4.4% after saying the large-ag cycle troughed in 2026 and guiding FY27 net income to $4.5 billion–$5.25 billion, with a holiday-shortened Friday session ahead and US markets closed Thursday for Thanksgiving.",
+  "raw_summary_md": "- The **Dow Jones Industrial Average** ([$DJI](https://finviz.com/index/DJI?p=d)) rose 0.33% to 50,182.95 after **erasing an intraday loss** of about 1,105 points, while the **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) slipped 0.25% to 7,182.78 and the **Nasdaq Composite** ([$COMP](https://finviz.com/index/COMP?p=d)) fell 0.62% to 23,585.80 after rebounding from an early decline of roughly 4.6%.\n- The Trump administration unveiled proposals for **new 20% tariffs** targeting China, the EU, India and other trading partners, slated to take effect no earlier than January, helping drive the early equity selloff.\n- October core PCE inflation printed at **3.3%** year-over-year versus 3.2% consensus and third-quarter GDP growth was sharply revised higher, reinforcing inflation worries and rate concerns.\n- Seven of 11 S&P 500 sectors advanced, led by Materials with a **1.83% gain** and strength in Industrials, while Technology lagged with about a 1% decline; the **Russell 2000** ([IWM](https://finviz.com/quote?t=IWM)) rose 0.71% to 2,704.06.\n- **HP Inc.** ([HPQ](https://finviz.com/quote?t=HPQ)) jumped **11.5%** after reporting Q4 adjusted EPS of $0.83 versus $0.75 expected on $16.0 billion in revenue, up 9.3% year-over-year, and issuing fiscal 2027 EPS guidance of $3.15–$3.45.\n- **Nvidia** ([NVDA](https://finviz.com/quote?t=NVDA)) fell 3.9% to $149.30 after S&P placed it on **negative CreditWatch** with a possible cut from AA to AA-, and **Lam Research** ([LRCX](https://finviz.com/quote?t=LRCX)) dropped about 5.7% as semiconductor weakness persisted amid AI selling and export-control fears, though later-session dip buying supported some AI-related names, including a 3.4% gain in **Meta Platforms** ([META](https://finviz.com/quote?t=META)).\n- **Nutanix** ([NTNX](https://finviz.com/quote?t=NTNX)) slid **15.2%** after announcing **CEO succession** alongside softer bookings despite an earnings beat, extending weakness in select software and infrastructure names.\n- In after-hours trading, **Palo Alto Networks** ([PANW](https://finviz.com/quote?t=PANW)) declined about **3.7%** after a former executive was sued over allegations of **premature revenue booking**, which the company called meritless, while **Banco Macro** ([BMA](https://finviz.com/quote?t=BMA)) also moved on results amid otherwise limited major earnings reactions.\n- **Deere & Co.** ([DE](https://finviz.com/quote?t=DE)) rose about **4.4%** after saying the large-ag cycle troughed in 2026 and guiding FY27 net income to $4.5 billion–$5.25 billion, with a holiday-shortened Friday session ahead and US markets closed Thursday for Thanksgiving.",
+  "index_moves": [
+    {
+      "name": "Dow Jones Industrial Average",
+      "code": "DJI",
+      "change_pct": 0.33,
+      "verb": "rose"
+    },
+    {
+      "name": "S&P 500",
+      "code": "SPX",
+      "change_pct": -0.25,
+      "verb": "slipped"
+    },
+    {
+      "name": "Nasdaq Composite",
+      "code": "COMP",
+      "change_pct": -0.62,
+      "verb": "fell"
+    },
+    {
+      "name": "Russell 2000",
+      "code": "RUT",
+      "change_pct": 0.71,
+      "verb": "rose"
+    }
+  ],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": {
+    "pct": 5.7,
+    "action": "cut",
+    "text": "cut from AA to AA-, and Lam Research (LRCX) dropped about 5.7%"
+  },
+  "named_tickers": [
+    "HPQ",
+    "NVDA",
+    "LRCX",
+    "META",
+    "NTNX",
+    "PANW",
+    "BMA",
+    "DE"
+  ],
+  "named_leaders": [
+    "HPQ",
+    "NVDA",
+    "LRCX",
+    "META",
+    "NTNX",
+    "PANW",
+    "BMA",
+    "DE"
+  ],
+  "calendar": [
+    "Deere & Co. (DE) rose about 4.4% after saying the large-ag cycle troughed in 2026 and guiding FY27 net income to $4.5 billion–$5.25 billion, with a holiday-shortened Friday session ahead and US markets closed Thursday for Thanksgiving."
+  ],
+  "prior_close": {
+    "spx": -0.25,
+    "nasdaq": -0.62,
+    "dow": 0.33
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": {
+      "pct": 5.7,
+      "action": "cut",
+      "text": "cut from AA to AA-, and Lam Research (LRCX) dropped about 5.7%"
+    }
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": false,
+    "bullets": [
+      "Deere & Co. (DE) rose about 4.4% after saying the large-ag cycle troughed in 2026 and guiding FY27 net income to $4.5 billion–$5.25 billion, with a holiday-shortened Friday session ahead and US markets closed Thursday for Thanksgiving."
+    ],
+    "text": "Deere & Co. (DE) rose about 4.4% after saying the large-ag cycle troughed in 2026 and guiding FY27 net income to $4.5 billion–$5.25 billion, with a holiday-shortened Friday session ahead and US markets closed Thursday for Thanksgiving."
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 354069,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-11-25T20:37:53.65",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "good"
+}
