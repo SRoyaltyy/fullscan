@@ -1,8 +1,8 @@
 {
   "date": "2026-11-25",
-  "generated_at": "2026-11-25T18:19:05.048803-05:00",
+  "generated_at": "2026-11-26T04:31:13.200412-05:00",
   "overall": "PARTIAL",
-  "ranker_ready": false,
+  "ranker_ready": true,
   "counts": {
     "ok": 6,
     "partial": 1,
@@ -86,33 +86,23 @@
     ]
   },
   "general": {},
-  "sectors": {},
+  "sectors": {
+    "said": "0 up / 0 down / 0 flat",
+    "bullets": [
+      "XLB missing",
+      "XLC missing",
+      "XLY missing",
+      "XLP missing",
+      "XLE missing",
+      "XLF missing",
+      "XLV missing",
+      "XLI missing",
+      "XLRE missing",
+      "XLK missing",
+      "XLU missing"
+    ]
+  },
   "lands": [
-    {
-      "key": "weather",
-      "title": "Weather / regime",
-      "date": "2026-11-25",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-25T09:13:54.280313-05:00",
-      "files": [
-        {
-          "path": "01_daily/weather/2026-11-25_weather.json",
-          "ok": true,
-          "reason": "",
-          "size": 9534,
-          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -8.295, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -3.86, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.85, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -2.74, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -4.95, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.36, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': 0.9, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -3.33, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
-        },
-        {
-          "path": "01_daily/weather/2026-11-25_weather.md",
-          "ok": true,
-          "reason": "",
-          "size": 5097,
-          "preview": "# Weather report \u2014 2026-11-25\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-        }
-      ],
-      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -8.295, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -3.86, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.85, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -2.74, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -4.95, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.36, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': 0.9, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -3.33, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-25\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-    },
     {
       "key": "join",
       "title": "Join / match rank",
@@ -721,6 +711,52 @@
         }
       ],
       "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-11-25** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-11-25** ranker: **weighted** (green pile liquid=0, need 8).\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $8,444.84 | -15.55% | $711.46 | 8 | 686 | $1,470.28 | $-1,536.76 | $-18.40 | 35.7% | 0.0% |\n| 1d_size | $8,921.19 | -10.79% | $752.68 | 7 | 613 | $1 \u00b7 <!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"data-asof\" content=\"2026-11-25\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-11-25",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-26T04:31:12.272315-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-25_finviz_digest.after-freeze-1.json",
+          "ok": true,
+          "reason": "",
+          "size": 94864,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-11-25_finviz_digest.after-freeze-1.md",
+          "ok": true,
+          "reason": "",
+          "size": 10280,
+          "preview": "# Finviz Daily Digest \u2014 2026-11-25\n_Generated 2026-11-26T04:31:11.830679-05:00 \u00b7 export=data/exports/finviz_2026-11-25.csv \u00b7 ticker digests=775 \u00b7 high-signal=191_"
+        },
+        {
+          "path": "data/exports/finviz_2026-11-25.after-freeze-1.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11033205,
+          "preview": "11787 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11033205,
+          "preview": "11787 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
+        },
+        {
+          "path": "01_daily/news/2026-11-25_finviz_digest_preopen.json",
+          "ok": true,
+          "reason": "",
+          "size": 95615,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-11-25\n_Generated 2026-11-26T04:31:11.830679-05:00 \u00b7 export=data/exports/finviz_2026-11-25.csv \u00b7 ticker digests=775 \u00b7 high-signal=191_ \u00b7 11787 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\" \u00b7 11787 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
