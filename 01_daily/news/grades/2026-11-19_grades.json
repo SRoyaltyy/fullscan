@@ -271,7 +271,7 @@
         "1d": -1.74,
         "3d": -1.11
       },
-      "mfe_pct": 1.37,
+      "mfe_pct": 1.38,
       "mfe_day": "2026-11-25",
       "ever_profitable": true,
       "first_profitable_day": "2026-11-19"
@@ -496,7 +496,7 @@
         "1d": 4.12,
         "3d": -0.08
       },
-      "mfe_pct": 8.27,
+      "mfe_pct": 8.26,
       "mfe_day": "2026-11-25",
       "ever_profitable": true,
       "first_profitable_day": "2026-11-19"
@@ -721,7 +721,7 @@
         "1d": -0.8,
         "3d": 0.55
       },
-      "mfe_pct": 2.07,
+      "mfe_pct": 2.08,
       "mfe_day": "2026-11-25",
       "ever_profitable": true,
       "first_profitable_day": "2026-11-19"
@@ -1190,8 +1190,8 @@
       "window_through": "2026-11-25",
       "trading_days_elapsed": 4,
       "complete": false,
-      "latest_close": 11.675,
-      "current_return_pct": -2.63,
+      "latest_close": 11.68,
+      "current_return_pct": -2.59,
       "horizon_returns_pct": {
         "1d": -2.0,
         "3d": -4.59
@@ -1996,7 +1996,7 @@
         "1d": -11.63,
         "3d": 3.2
       },
-      "mfe_pct": 25.58,
+      "mfe_pct": 26.45,
       "mfe_day": "2026-11-25",
       "ever_profitable": true,
       "first_profitable_day": "2026-11-19"
@@ -2098,7 +2098,7 @@
         "1d": 3.87,
         "3d": -0.81
       },
-      "mfe_pct": 4.77,
+      "mfe_pct": 4.78,
       "mfe_day": "2026-11-25",
       "ever_profitable": true,
       "first_profitable_day": "2026-11-19"
@@ -2617,7 +2617,7 @@
         "1d": 6.67,
         "3d": 5.66
       },
-      "mfe_pct": 12.85,
+      "mfe_pct": 12.79,
       "mfe_day": "2026-11-25",
       "ever_profitable": true,
       "first_profitable_day": "2026-11-19"
@@ -2643,7 +2643,7 @@
         "1d": 13.35,
         "3d": 19.15
       },
-      "mfe_pct": 27.03,
+      "mfe_pct": 27.47,
       "mfe_day": "2026-11-25",
       "ever_profitable": true,
       "first_profitable_day": "2026-11-19"
@@ -2703,7 +2703,7 @@
         "n": 60,
         "wins": 60,
         "win_rate": 100.0,
-        "avg": 1.94
+        "avg": 1.96
       },
       "close_5d": null
     },
@@ -2713,7 +2713,7 @@
         "n": 39,
         "wins": 39,
         "win_rate": 100.0,
-        "avg": 8.03
+        "avg": 8.04
       },
       "close_5d": null
     }

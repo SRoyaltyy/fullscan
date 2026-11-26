@@ -516,7 +516,7 @@
         "3d": 2.0,
         "5d": -2.13
       },
-      "mfe_pct": 6.06,
+      "mfe_pct": 6.05,
       "mfe_day": "2026-11-25",
       "ever_profitable": true,
       "first_profitable_day": "2026-11-17"
@@ -594,7 +594,7 @@
         "3d": 35.95,
         "5d": 38.78
       },
-      "mfe_pct": 44.47,
+      "mfe_pct": 44.49,
       "mfe_day": "2026-11-25",
       "ever_profitable": true,
       "first_profitable_day": "2026-11-17"
@@ -906,7 +906,7 @@
         "3d": -1.45,
         "5d": -0.12
       },
-      "mfe_pct": 1.4,
+      "mfe_pct": 1.41,
       "mfe_day": "2026-11-25",
       "ever_profitable": true,
       "first_profitable_day": "2026-11-17"
@@ -1393,8 +1393,8 @@
       "window_through": "2026-11-25",
       "trading_days_elapsed": 6,
       "complete": false,
-      "latest_close": 11.675,
-      "current_return_pct": -2.63,
+      "latest_close": 11.68,
+      "current_return_pct": -2.59,
       "horizon_returns_pct": {
         "1d": 0.33,
         "3d": -2.0,
@@ -1922,7 +1922,7 @@
         "3d": 11.86,
         "5d": 6.82
       },
-      "mfe_pct": 12.83,
+      "mfe_pct": 12.84,
       "mfe_day": "2026-11-25",
       "ever_profitable": true,
       "first_profitable_day": "2026-11-17"
@@ -2327,7 +2327,7 @@
         "3d": 2.34,
         "5d": 6.68
       },
-      "mfe_pct": 15.52,
+      "mfe_pct": 15.7,
       "mfe_day": "2026-11-25",
       "ever_profitable": true,
       "first_profitable_day": "2026-11-17"
@@ -2651,7 +2651,7 @@
         "3d": 17.86,
         "5d": 15.6
       },
-      "mfe_pct": 29.24,
+      "mfe_pct": 29.35,
       "mfe_day": "2026-11-25",
       "ever_profitable": true,
       "first_profitable_day": "2026-11-17"
@@ -2732,7 +2732,7 @@
         "3d": 15.2,
         "5d": 9.35
       },
-      "mfe_pct": 19.42,
+      "mfe_pct": 19.41,
       "mfe_day": "2026-11-25",
       "ever_profitable": true,
       "first_profitable_day": "2026-11-17"
@@ -3014,7 +3014,7 @@
         "n": 58,
         "wins": 58,
         "win_rate": 100.0,
-        "avg": 2.45
+        "avg": 2.46
       },
       "close_5d": {
         "n": 60,

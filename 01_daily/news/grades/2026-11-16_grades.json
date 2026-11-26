@@ -516,7 +516,7 @@
         "3d": -6.44,
         "5d": -6.71
       },
-      "mfe_pct": 3.54,
+      "mfe_pct": 3.53,
       "mfe_day": "2026-11-25",
       "ever_profitable": true,
       "first_profitable_day": "2026-11-17"
@@ -594,7 +594,7 @@
         "3d": 20.09,
         "5d": 29.24
       },
-      "mfe_pct": 44.38,
+      "mfe_pct": 44.41,
       "mfe_day": "2026-11-25",
       "ever_profitable": true,
       "first_profitable_day": "2026-11-16"
@@ -1393,8 +1393,8 @@
       "window_through": "2026-11-25",
       "trading_days_elapsed": 7,
       "complete": false,
-      "latest_close": 11.675,
-      "current_return_pct": -2.95,
+      "latest_close": 11.68,
+      "current_return_pct": -2.91,
       "horizon_returns_pct": {
         "1d": -1.58,
         "3d": -0.08,
@@ -1922,7 +1922,7 @@
         "3d": 13.99,
         "5d": 10.44
       },
-      "mfe_pct": 16.62,
+      "mfe_pct": 16.64,
       "mfe_day": "2026-11-25",
       "ever_profitable": true,
       "first_profitable_day": "2026-11-16"
@@ -2623,7 +2623,7 @@
         "3d": -3.03,
         "5d": -0.52
       },
-      "mfe_pct": 22.44,
+      "mfe_pct": 22.55,
       "mfe_day": "2026-11-25",
       "ever_profitable": true,
       "first_profitable_day": "2026-11-16"
@@ -2704,7 +2704,7 @@
         "3d": 2.07,
         "5d": -0.99
       },
-      "mfe_pct": 18.0,
+      "mfe_pct": 17.99,
       "mfe_day": "2026-11-25",
       "ever_profitable": true,
       "first_profitable_day": "2026-11-16"
@@ -3001,7 +3001,7 @@
         "n": 53,
         "wins": 53,
         "win_rate": 100.0,
-        "avg": 17.06
+        "avg": 17.07
       },
       "close_5d": {
         "n": 53,
