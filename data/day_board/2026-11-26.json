@@ -1,6 +1,6 @@
 {
   "date": "2026-11-26",
-  "generated_at": "2026-11-26T04:48:55.301047-05:00",
+  "generated_at": "2026-11-26T04:51:00.783867-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -12,8 +12,8 @@
   ],
   "counts": {
     "ok": 1,
-    "partial": 2,
-    "fail": 5,
+    "partial": 3,
+    "fail": 4,
     "n": 8
   },
   "processes": [
@@ -21,11 +21,11 @@
       "key": "postclose",
       "name": "Post-close research",
       "yaml": "map_heat_postclose.yml",
-      "status": "FAIL",
+      "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 2,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 2,
       "files": [
         {
@@ -55,10 +55,10 @@
           "name": "Map heat tables JSON",
           "path": "01_daily/map_heat/2026-11-26_map_heat.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 271969,
+          "said": "morning_overlay \u00b7 11786 names \u00b7 hot Mortgage Finance, Metal Fabrication, Apparel Retail, Furnishings, Fixtures & Appliances \u00b7 cold Shell Companies, Silver, Other Precious Metals & Mining",
           "bullets": []
         },
         {
@@ -66,14 +66,17 @@
           "name": "Map heat tables MD",
           "path": "01_daily/map_heat/2026-11-26_map_heat.md",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 18182,
+          "said": "MAP HEAT \u2014 2026-11-26",
+          "bullets": [
+            "Export `finviz_2026-11-25.csv` \u00b7 11786 names \u00b7 generated 2026-11-26T04:51:00.346151-05:00",
+            "TAPE (live futures)"
+          ]
         }
       ],
-      "said": "",
+      "said": "tables on disk",
       "bullets": []
     },
     {
@@ -224,10 +227,10 @@
           "name": "Map heat tables JSON",
           "path": "01_daily/map_heat/2026-11-26_map_heat.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 271969,
+          "said": "morning_overlay \u00b7 11786 names \u00b7 hot Mortgage Finance, Metal Fabrication, Apparel Retail, Furnishings, Fixtures & Appliances \u00b7 cold Shell Companies, Silver, Other Precious Metals & Mining",
           "bullets": []
         },
         {
@@ -325,8 +328,8 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7602,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 21 fail",
+          "size": 7596,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 19 fail",
           "bullets": [
             "general_predict:missing",
             "events:missing",
@@ -927,6 +930,31 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-11-26\n**Generated:** 2026-11-26T04:48:54.900233-05:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks ended mixed after a volatile session as new Trump tariff proposals and hotter core PCE data pressured tech while cyclicals outperformed\n**Prior close:** SPX -0.25%  Nasdaq -0.62%  Dow +0.33%\n**SPX:** -0.25%  **Nasdaq:** -0.62%  **Dow:** +0.33%\n**Oil:** \u2014\n**CPI/Fed:** 5.7% cut (cut from AA to AA-, and Lam Research (LRCX) dropped about 5.7%)\n**Leaders:** HPQ, NVDA, LRCX, META, NTNX, PANW, BMA, DE\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-11-26\n**Clock use:** `same_morning`"
+    },
+    {
+      "key": "map_heat",
+      "title": "Map heat morning overlay",
+      "date": "2026-11-26",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-26T04:51:00.393440-05:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-11-26_map_heat.json",
+          "ok": true,
+          "reason": "",
+          "size": 271969,
+          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
+        },
+        {
+          "path": "01_daily/map_heat/2026-11-26_map_heat.md",
+          "ok": true,
+          "reason": "",
+          "size": 18579,
+          "preview": "# MAP HEAT \u2014 2026-11-26\nExport `finviz_2026-11-25.csv` \u00b7 11786 names \u00b7 generated 2026-11-26T04:51:00.346151-05:00"
+        }
+      ],
+      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-11-26\nExport `finviz_2026-11-25.csv` \u00b7 11786 names \u00b7 generated 2026-11-26T04:51:00.346151-05:00"
     }
   ],
   "href": {
