@@ -5,8 +5,8 @@
   "run_id": "45793723804",
   "model": "",
   "started_at": "2026-11-26T05:06:47-05:00",
-  "updated_at": "2026-11-26T05:08:17-05:00",
-  "heartbeat_at": "2026-11-26T05:08:17-05:00",
+  "updated_at": "2026-11-26T05:10:39-05:00",
+  "heartbeat_at": "2026-11-26T05:10:39-05:00",
   "stages": [
     {
       "name": "elite",
@@ -43,11 +43,11 @@
     },
     {
       "name": "overlay",
-      "state": "pending",
+      "state": "ok",
       "started_at": "",
-      "ended_at": "",
+      "ended_at": "2026-11-26T05:10:39-05:00",
       "heartbeat_at": "",
-      "done": 0,
+      "done": 1,
       "total": 1,
       "model": "",
       "error": ""
