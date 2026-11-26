@@ -1,5 +1,643 @@
 [
   {
+    "document_id": "f5963c7350a53464f13f1671",
+    "state": "review",
+    "candidate_classes": [
+      "cat_weather"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "bf1d813cc9186b97a63197c0",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "8850e4b6cbc1fc8d7fcd108c",
+    "state": "review",
+    "candidate_classes": [
+      "key_person"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "db3ef0c9062b36618cf79f45",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "cf787f23c8db7032a2792036",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "08aeb5a0518c42cbfd761bba",
+    "state": "review",
+    "candidate_classes": [
+      "cat_weather"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "2400dcd30b2e1c6a12902743",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "0591fcf5c044398cadbd54fd",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "6e430bca42ad623154c1374e",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "d447174c06a118dcf804ff7a",
+    "state": "review",
+    "candidate_classes": [
+      "cat_weather"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "628ac535cf57e447ec0774af",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "9caa4686ba6d70719a4b8c14",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "0658dbac9e8a8be233129616",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "59d5017c6b3704b7ffae60ba",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "7d63f592db9040b220ea8fce",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "13aaa7f390c1d0c17a8b9fd4",
+    "state": "review",
+    "candidate_classes": [
+      "key_person"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "e2421ace5fbcdd4f94b07765",
+    "state": "review",
+    "candidate_classes": [
+      "regulatory_probe"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "664062c2f07033f4e4ba64c8",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "824d0363ab80f3b6f03ce292",
+    "state": "review",
+    "candidate_classes": [
+      "key_person"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "e9a2c72fe567849ded0567ae",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "5878820b62294f63deb00f51",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "fcca7af1db8329a055e68ba5",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "f63f708f9e3c5455ee23f20f",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "eaa145b4ee228a14f302e4d0",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "e2208ffdc55ece650a55b572",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "de27f05b276e14617d78248c",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "d307b9da1062304288f69880",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "a2fae91f8d1dff4ae565712c",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "a2aa6c2739b2446c4cace732",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "9997d11fe0335c94094edc9f",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "8e058f0a2e51f6b2ef2aaffd",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "832573a6ca61bba2c99957c8",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "7f8c383ce6efe203c4d945c1",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "7a6ca622a9c3a88f7b954e48",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "75dfaef36c0eabce58450d4e",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "6fb675c0463f954a21e80cbe",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "68ffbea0944d7803c5eba60f",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "411607696f0233775bc9c416",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "3dcb77621c2a2dca8c3786d9",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "3aafc8a63aca1b93a02a94ef",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "3239b6b14f5ce46549bab926",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "1b4aad2e1ff0b196dc6ddcd3",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "0dbd09c28ca08a0850699dec",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "2d5a38f39327cafd33612d1a",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "14d25e085383a6bb9907d28d",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "00d15e591010169787399b34",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "ac41be81378e0e1975f17c7c",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "eac416ff2696cd39907743ab",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "6264b17620087c0d495fe679",
+    "state": "review",
+    "candidate_classes": [
+      "insider_flow"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "a417702e7516604e5f91d09c",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "57a56000403abe1789aec35b",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "358b16a3d41a38a965c49dec",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "9035963a629573df090663ae",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "fb4106961d20d315df51f984",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "b5cf1873b222cec9fdf5f61f",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "d9f96d5384fd2cc368386f29",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "b6100b41d82114b18fc35f22",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "706786110af38f87f1367b12",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "3cf5f1d46aeeee83875a62ce",
+    "state": "review",
+    "candidate_classes": [
+      "gate"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "d36a473781bb2ab977c897b9",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "31b10fa750482929fd44f748",
+    "state": "review",
+    "candidate_classes": [
+      "standard_mandate"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "791ea9aca8c2feb9c8fa7a84",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "4d722f09d782c1fe3e00813a",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "977b51b725f9cac04987609e",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "56ed14d156d8e425ba03893f",
+    "state": "review",
+    "candidate_classes": [
+      "print_vs_priced"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "8d91750cc9843b638126c642",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "d928e25bbe41b229aea40602",
+    "state": "review",
+    "candidate_classes": [
+      "insider_flow"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "4f2ce9dcbccb2b745998a7e0",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "49bd04de7bbee023d246b5d3",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "fcb61aed4afa809e28756127",
+    "state": "review",
+    "candidate_classes": [
+      "access_control"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "838eb06473a58530d3b267ec",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "a2d7953f95d332e087154093",
+    "state": "review",
+    "candidate_classes": [
+      "insider_flow"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "8d02a5424bf835131daf7b4f",
+    "state": "review",
+    "candidate_classes": [
+      "cat_weather"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "6f0239afbb7f383cf8882c80",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "dceddab99f57da49393a9604",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "4a2d497ec8a4fd85f400c6bd",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "64e9b69ee938e0cfc5d2c30b",
     "state": "review",
     "candidate_classes": [
@@ -66,6 +704,14 @@
     ]
   },
   {
+    "document_id": "2da6a0af0cc35ce8c0bf1051",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "e35c9440c25e22b389b07be9",
     "state": "review",
     "candidate_classes": [
@@ -84,7 +730,53 @@
     ]
   },
   {
+    "document_id": "8a626afe328658d8b1461948",
+    "state": "review",
+    "candidate_classes": [
+      "insider_flow"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
     "document_id": "5c0fb073a176a4b22163a019",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "b979f854bac78b5e9f263e25",
+    "state": "review",
+    "candidate_classes": [
+      "tax_fiscal"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "8b75893605322bf81b1b9e7b",
+    "state": "review",
+    "candidate_classes": [
+      "regime_state"
+    ],
+    "review_reasons": []
+  },
+  {
+    "document_id": "00d38bd8ccbfb492a24943c2",
+    "state": "review",
+    "candidate_classes": [
+      "cat_weather"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "473341bda020be84dcedb769",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -108,6 +800,16 @@
     ]
   },
   {
+    "document_id": "bd4155a9d5accf1a1c10af77",
+    "state": "review",
+    "candidate_classes": [
+      "corporate_action_spinoff"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
     "document_id": "29f2b2d83a49bfb7f98c537e",
     "state": "review",
     "candidate_classes": [],
@@ -126,17 +828,7 @@
     ]
   },
   {
-    "document_id": "086ab05ec08990355f2efffe",
-    "state": "review",
-    "candidate_classes": [
-      "corporate_action_spinoff"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
-    "document_id": "db3ef0c9062b36618cf79f45",
+    "document_id": "048c9fc5d0f5a2dffb1f9b58",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -144,10 +836,38 @@
     ]
   },
   {
+    "document_id": "2628fd719b883e821f17a107",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "09e4531be75e3631cf9dbf64",
+    "state": "review",
+    "candidate_classes": [
+      "capital_return"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
     "document_id": "bf0562654aceec34cd815efd",
     "state": "review",
     "candidate_classes": [
       "market_structure"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "626e5080770909baa711240c",
+    "state": "review",
+    "candidate_classes": [
+      "key_person"
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
@@ -170,7 +890,7 @@
     ]
   },
   {
-    "document_id": "d4cc794a3041732ae6be1d2d",
+    "document_id": "a0917ac71243f5df5ee20e27",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -178,7 +898,7 @@
     ]
   },
   {
-    "document_id": "595531752fe6e136c5d84e13",
+    "document_id": "d4cc794a3041732ae6be1d2d",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -194,7 +914,7 @@
     ]
   },
   {
-    "document_id": "a0917ac71243f5df5ee20e27",
+    "document_id": "f03bd79a295c0dc171d28347",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -210,6 +930,14 @@
     "review_reasons": []
   },
   {
+    "document_id": "595531752fe6e136c5d84e13",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "11c154c643a3686cb0a56999",
     "state": "review",
     "candidate_classes": [],
@@ -219,6 +947,14 @@
   },
   {
     "document_id": "065a8a3fcc19effaebd27a1a",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "b744df41f46669c03fecf6a0",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -260,17 +996,23 @@
     ]
   },
   {
-    "document_id": "91a8dbc5081b5590a7a46203",
+    "document_id": "a90f41d583041e11cc983932",
     "state": "review",
-    "candidate_classes": [
-      "corporate_action_mna"
-    ],
+    "candidate_classes": [],
     "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
+      "no lexical match; open-set review"
     ]
   },
   {
-    "document_id": "39b7247a6bff39f09c66050b",
+    "document_id": "fee99f7092cda5689bd84013",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "e05f0f28b2fe25cf893bf40c",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -296,15 +1038,17 @@
     ]
   },
   {
-    "document_id": "8699985de0c30e68c58654ea",
-    "state": "review",
-    "candidate_classes": [],
+    "document_id": "8d31f690f48290213a11ded6",
+    "state": "candidate",
+    "candidate_classes": [
+      "access_control"
+    ],
     "review_reasons": [
       "no lexical match; open-set review"
     ]
   },
   {
-    "document_id": "0591fcf5c044398cadbd54fd",
+    "document_id": "b474203fbec59c713bb74b43",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -319,6 +1063,14 @@
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "8b6ab381e35f3bbe8ee8dd57",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
     ]
   },
   {
@@ -384,6 +1136,14 @@
     ]
   },
   {
+    "document_id": "40c8a6126624665e92350652",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "ad627e576041121c02b9774f",
     "state": "review",
     "candidate_classes": [],
@@ -434,6 +1194,22 @@
     ]
   },
   {
+    "document_id": "9fc8320b0a93e351ca015ccd",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "f8893e43f11e6b388c0ffb00",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "44e8b51fc6f0903decc4ef64",
     "state": "review",
     "candidate_classes": [],
@@ -451,14 +1227,6 @@
   },
   {
     "document_id": "7671d6e4c1826e651bf49676",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "30ee359082a3c5d6cea7bcb0",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -491,6 +1259,14 @@
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "bf19646f6a8ebfe65ce68940",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
     ]
   },
   {
@@ -552,6 +1328,14 @@
     "review_reasons": []
   },
   {
+    "document_id": "85a10060ec61a4b224818e2e",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "715d8fd7c352c08c3484e8ff",
     "state": "review",
     "candidate_classes": [],
@@ -592,6 +1376,22 @@
     ]
   },
   {
+    "document_id": "e310e0951f663802eb248b22",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "370757437ee29bd00c8cbfca",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "7ebc75bdd366da1a8a1057d2",
     "state": "review",
     "candidate_classes": [
@@ -618,6 +1418,16 @@
     ]
   },
   {
+    "document_id": "7049335474a0e70e927d8b43",
+    "state": "review",
+    "candidate_classes": [
+      "factor_impulse"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
     "document_id": "9c2a78ba80c0d72d9e656446",
     "state": "review",
     "candidate_classes": [
@@ -628,7 +1438,7 @@
     ]
   },
   {
-    "document_id": "370757437ee29bd00c8cbfca",
+    "document_id": "b5d5fd1346fb5fb541881ede",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -636,7 +1446,7 @@
     ]
   },
   {
-    "document_id": "b5d5fd1346fb5fb541881ede",
+    "document_id": "0dcb8ffb40ee71f549acda32",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -742,6 +1552,14 @@
     ]
   },
   {
+    "document_id": "b32bc50d37ef55dfbac0b385",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "6279ac8f55f4be43d73a755c",
     "state": "review",
     "candidate_classes": [],
@@ -768,13 +1586,11 @@
     ]
   },
   {
-    "document_id": "1cff81ae44dfb90fa55a56c4",
+    "document_id": "ca644113b716bdc811a72e45",
     "state": "review",
-    "candidate_classes": [
-      "integrity"
-    ],
+    "candidate_classes": [],
     "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
+      "no lexical match; open-set review"
     ]
   },
   {
@@ -804,15 +1620,17 @@
     ]
   },
   {
-    "document_id": "fb46db64ddfc9aa7733ac193",
+    "document_id": "6cf160707dcbfd9154c40fe7",
     "state": "review",
-    "candidate_classes": [],
+    "candidate_classes": [
+      "integrity"
+    ],
     "review_reasons": [
-      "no lexical match; open-set review"
+      "Lexical hints lack a supported event classification; contextual review required"
     ]
   },
   {
-    "document_id": "bf19646f6a8ebfe65ce68940",
+    "document_id": "fb46db64ddfc9aa7733ac193",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -867,8 +1685,10 @@
   },
   {
     "document_id": "1a42bbd43b77553b7f8bc0f5",
-    "state": "review",
-    "candidate_classes": [],
+    "state": "candidate",
+    "candidate_classes": [
+      "blast_legal"
+    ],
     "review_reasons": [
       "no lexical match; open-set review"
     ]
@@ -877,16 +1697,6 @@
     "document_id": "d0ca45538cd8f96a8fcde3f2",
     "state": "review",
     "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "ada954e5861475a5981bc6c0",
-    "state": "candidate",
-    "candidate_classes": [
-      "insider_flow"
-    ],
     "review_reasons": [
       "no lexical match; open-set review"
     ]
@@ -950,7 +1760,23 @@
     ]
   },
   {
+    "document_id": "8842d637b0f0fbcccbea6dc4",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "4e694ee78c03fd10101a116e",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "0082916312c441a5f655f95d",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -1130,13 +1956,11 @@
     ]
   },
   {
-    "document_id": "c8a564b30a34cf5b53472543",
+    "document_id": "49d7abcd17dfe5b16b798141",
     "state": "review",
-    "candidate_classes": [
-      "regime_break"
-    ],
+    "candidate_classes": [],
     "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
+      "no lexical match; open-set review"
     ]
   },
   {
@@ -1174,18 +1998,20 @@
     ]
   },
   {
-    "document_id": "f050f9ae968487bc20e5a570",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "158473b51feeb581abbaad25",
     "state": "review",
     "candidate_classes": [
       "corporate_action_spinoff"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "6990702d33e0d0b2478ad4b5",
+    "state": "review",
+    "candidate_classes": [
+      "cat_weather"
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
@@ -1200,15 +2026,7 @@
     ]
   },
   {
-    "document_id": "b40eb418a543892f36966a8d",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "75369f0f2f614cb427477d86",
+    "document_id": "862506c37f682b9c23c950bc",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -1217,14 +2035,6 @@
   },
   {
     "document_id": "bc6f9cc10bf8239ddf2862ef",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "2400dcd30b2e1c6a12902743",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -1264,7 +2074,7 @@
     ]
   },
   {
-    "document_id": "0d26af7f3ea75970c7f467de",
+    "document_id": "ba81de9b8bc219fbe7c82c48",
     "state": "review",
     "candidate_classes": [
       "insider_flow"
@@ -1324,13 +2134,13 @@
     ]
   },
   {
-    "document_id": "da8fe07757a4f10bc5bbb157",
-    "state": "candidate",
+    "document_id": "21965db6e33b65f71bb9909d",
+    "state": "review",
     "candidate_classes": [
-      "factor_impulse"
+      "cat_weather"
     ],
     "review_reasons": [
-      "no lexical match; open-set review"
+      "Lexical hints lack a supported event classification; contextual review required"
     ]
   },
   {
@@ -1344,13 +2154,11 @@
     ]
   },
   {
-    "document_id": "74fba5d9f1f4c4a8695c98a9",
+    "document_id": "b678f21c38a490b33fa64023",
     "state": "review",
-    "candidate_classes": [
-      "print_vs_priced"
-    ],
+    "candidate_classes": [],
     "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
+      "no lexical match; open-set review"
     ]
   },
   {
@@ -1452,16 +2260,6 @@
     ]
   },
   {
-    "document_id": "bb00813bcc52f0de48a866ce",
-    "state": "review",
-    "candidate_classes": [
-      "factor_impulse"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
     "document_id": "a7cf34d3ab57399b52f06cf5",
     "state": "review",
     "candidate_classes": [
@@ -1514,6 +2312,14 @@
     ]
   },
   {
+    "document_id": "74768de62f064470258b8571",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "6c369d1ecdd6dcd9ec6fb88d",
     "state": "review",
     "candidate_classes": [
@@ -1548,7 +2354,7 @@
     ]
   },
   {
-    "document_id": "dd54dc31420d59e8c8394c7a",
+    "document_id": "c9731c352a684042c6ff2fd5",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -1557,14 +2363,6 @@
   },
   {
     "document_id": "b2c02a1035675a31231ac102",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "18e57e27717ab6401194b371",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -1582,11 +2380,21 @@
     ]
   },
   {
-    "document_id": "98f59fed314d0b372ef4da60",
+    "document_id": "4aea8aebf9206676f8c9f46c",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
       "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "8f36d08c036695a92c9325d0",
+    "state": "review",
+    "candidate_classes": [
+      "cat_weather"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
     ]
   },
   {
@@ -1605,16 +2413,6 @@
     "candidate_classes": [],
     "review_reasons": [
       "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "870b9932cda82c8dfa8a560d",
-    "state": "review",
-    "candidate_classes": [
-      "print_vs_priced"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
     ]
   },
   {
@@ -1658,7 +2456,7 @@
     ]
   },
   {
-    "document_id": "400c6e070f8b92ece8731acd",
+    "document_id": "a3b3c99ead2def3f40f8c29a",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -1666,11 +2464,13 @@
     ]
   },
   {
-    "document_id": "a3b3c99ead2def3f40f8c29a",
+    "document_id": "84cb0bac41317149e47458c7",
     "state": "review",
-    "candidate_classes": [],
+    "candidate_classes": [
+      "cat_weather"
+    ],
     "review_reasons": [
-      "no lexical match; open-set review"
+      "Lexical hints lack a supported event classification; contextual review required"
     ]
   },
   {
@@ -1699,6 +2499,14 @@
   },
   {
     "document_id": "3f977db4a39f5a152c5143b4",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "cec64d067fd0dfe88650bbaa",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -1764,6 +2572,16 @@
     ]
   },
   {
+    "document_id": "55cb561047d4366a301e9e3c",
+    "state": "review",
+    "candidate_classes": [
+      "cat_weather"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
     "document_id": "006fb00ba18e4897121423b7",
     "state": "review",
     "candidate_classes": [],
@@ -1797,6 +2615,16 @@
     ],
     "review_reasons": [
       "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "b42eec0ccd592580f1b4df77",
+    "state": "review",
+    "candidate_classes": [
+      "capital_return"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
     ]
   },
   {
@@ -1848,7 +2676,7 @@
     ]
   },
   {
-    "document_id": "8557f837abbaf0f465a5735d",
+    "document_id": "28ad023fa36de3d843066a04",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -1882,6 +2710,14 @@
     ]
   },
   {
+    "document_id": "a4d7ac048c09060e2584c74c",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "54283528d4d10e94535ea4e9",
     "state": "review",
     "candidate_classes": [],
@@ -1891,6 +2727,14 @@
   },
   {
     "document_id": "113786c4269d8a99e71b938b",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "f0a26cb4d8c820e816de302b",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -1938,6 +2782,16 @@
     ]
   },
   {
+    "document_id": "65093add217dd4aacdc2dc88",
+    "state": "review",
+    "candidate_classes": [
+      "cat_weather"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
     "document_id": "50c711370e42e64146c3077f",
     "state": "review",
     "candidate_classes": [],
@@ -1982,7 +2836,25 @@
     ]
   },
   {
-    "document_id": "a2050acdf31b160c4d03361c",
+    "document_id": "85fe2483fd747c1516931967",
+    "state": "review",
+    "candidate_classes": [
+      "print_vs_priced"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "6293cca97159d5a651814d50",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "9b3e5029adb57a0db63946c3",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -2005,6 +2877,16 @@
     "candidate_classes": [],
     "review_reasons": [
       "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "0ada03cc5ca3b520682902a3",
+    "state": "review",
+    "candidate_classes": [
+      "factor_impulse"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
     ]
   },
   {
@@ -2033,14 +2915,6 @@
   },
   {
     "document_id": "00ae8d95e86c6cf9576f622a",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "ca644113b716bdc811a72e45",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -2103,16 +2977,6 @@
     "candidate_classes": [],
     "review_reasons": [
       "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "7c69ec9abe5badce32586ea7",
-    "state": "review",
-    "candidate_classes": [
-      "corporate_action_mna"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
     ]
   },
   {
@@ -2234,6 +3098,16 @@
     ]
   },
   {
+    "document_id": "27aace98b94520133fad3fc5",
+    "state": "review",
+    "candidate_classes": [
+      "regulatory_probe"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
     "document_id": "3a745263191057f072501ab3",
     "state": "review",
     "candidate_classes": [],
@@ -2352,6 +3226,14 @@
     ]
   },
   {
+    "document_id": "c712af10d2acdf6d501e81fd",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "8d482b4e79ffa130ebc66bed",
     "state": "review",
     "candidate_classes": [
@@ -2359,6 +3241,14 @@
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "433cd7ef36b595e75c5e9f00",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
     ]
   },
   {
@@ -2396,6 +3286,16 @@
     ]
   },
   {
+    "document_id": "d603139c53dd852647cb74b7",
+    "state": "review",
+    "candidate_classes": [
+      "cat_weather"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
     "document_id": "783eb6d260d0c143a49330df",
     "state": "review",
     "candidate_classes": [],
@@ -2404,7 +3304,25 @@
     ]
   },
   {
+    "document_id": "29fbd3bc5eab5780f6a44d89",
+    "state": "review",
+    "candidate_classes": [
+      "cat_weather"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
     "document_id": "89cdc3410a3e2c8d72608213",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "2a9c4b8bd4900f586e4e15bf",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -2580,6 +3498,14 @@
     ]
   },
   {
+    "document_id": "1e65e84c9120c1f01d421714",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "a4214dc64732bf7d7d7487e0",
     "state": "review",
     "candidate_classes": [],
@@ -2654,17 +3580,15 @@
     ]
   },
   {
-    "document_id": "d05e0707eafec93f1120cd0a",
-    "state": "candidate",
-    "candidate_classes": [
-      "corporate_action_mna"
-    ],
+    "document_id": "65f7a930fe88bbd29d6989c7",
+    "state": "review",
+    "candidate_classes": [],
     "review_reasons": [
       "no lexical match; open-set review"
     ]
   },
   {
-    "document_id": "65f7a930fe88bbd29d6989c7",
+    "document_id": "c4ffc120b8aac445ee133cc3",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -2698,7 +3622,7 @@
     ]
   },
   {
-    "document_id": "81edc1e6a8e3d63d3ef184bb",
+    "document_id": "abd03116d4900dc76c20120c",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -2740,14 +3664,6 @@
     ]
   },
   {
-    "document_id": "fad80c9e0045de126db35031",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "00374dd459aa8cbb9b5beb04",
     "state": "review",
     "candidate_classes": [
@@ -2755,6 +3671,16 @@
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "0bf3817466436f64333002a3",
+    "state": "candidate",
+    "candidate_classes": [
+      "labor_stop"
+    ],
+    "review_reasons": [
+      "no lexical match; open-set review"
     ]
   },
   {
@@ -2784,7 +3710,25 @@
     ]
   },
   {
+    "document_id": "21d87a23bd8b0fa34380c3f6",
+    "state": "candidate",
+    "candidate_classes": [
+      "print_vs_priced"
+    ],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "309d8a8433566c0575e892ab",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "d41f7fb656289a54299d0b34",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -2812,6 +3756,16 @@
     "state": "review",
     "candidate_classes": [
       "credit_funding"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "357837e03e7638cb3cdd4b7f",
+    "state": "review",
+    "candidate_classes": [
+      "cat_weather"
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
@@ -2877,6 +3831,14 @@
     ]
   },
   {
+    "document_id": "db71c63c9b155c709d0082b4",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "d121920a9111116924351ba2",
     "state": "review",
     "candidate_classes": [
@@ -2891,16 +3853,6 @@
     "state": "review",
     "candidate_classes": [
       "listing_flow"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
-    "document_id": "90510f4139a220936267d889",
-    "state": "review",
-    "candidate_classes": [
-      "corporate_action_mna"
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
@@ -2958,6 +3910,14 @@
     "candidate_classes": [
       "print_vs_priced"
     ],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "122cff92de98b13fbd9442b4",
+    "state": "review",
+    "candidate_classes": [],
     "review_reasons": [
       "no lexical match; open-set review"
     ]
@@ -3059,6 +4019,16 @@
     ]
   },
   {
+    "document_id": "0571e10cccf4952817c04e12",
+    "state": "candidate",
+    "candidate_classes": [
+      "corporate_action_mna"
+    ],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "45c40a1a66adce0684ce6652",
     "state": "candidate",
     "candidate_classes": [
@@ -3087,6 +4057,16 @@
     ]
   },
   {
+    "document_id": "0734078a6a53221242c86a58",
+    "state": "review",
+    "candidate_classes": [
+      "cat_weather"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
     "document_id": "8ea8c89ce338eb6e669044d8",
     "state": "review",
     "candidate_classes": [],
@@ -3096,14 +4076,6 @@
   },
   {
     "document_id": "ba990d127f916d3eecae6907",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "fe5e950e99724825ed4e0e18",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -3229,6 +4201,14 @@
     ]
   },
   {
+    "document_id": "cc58d0b1cad2b522ea5f1e26",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "473a074f53a728bd2f21e988",
     "state": "review",
     "candidate_classes": [],
@@ -3247,11 +4227,9 @@
   {
     "document_id": "9efa486998cc869a9ee82b7e",
     "state": "review",
-    "candidate_classes": [
-      "regulatory_probe"
-    ],
+    "candidate_classes": [],
     "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
+      "no lexical match; open-set review"
     ]
   },
   {
@@ -3308,11 +4286,29 @@
     ]
   },
   {
+    "document_id": "469b953c3585b1eacb156316",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "113ecc6a16148ee237361771",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
       "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "92816071609a8f6f18451599",
+    "state": "review",
+    "candidate_classes": [
+      "cat_weather"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
     ]
   },
   {
@@ -3378,6 +4374,16 @@
     ]
   },
   {
+    "document_id": "76cfbab50534584a20c5796d",
+    "state": "review",
+    "candidate_classes": [
+      "cat_weather"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
     "document_id": "d9c0ee4722c84f4a764b421c",
     "state": "review",
     "candidate_classes": [
@@ -3420,16 +4426,6 @@
     "candidate_classes": [],
     "review_reasons": [
       "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "c9a151b58d93709792b46fcf",
-    "state": "review",
-    "candidate_classes": [
-      "corporate_action_mna"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
     ]
   },
   {
@@ -3641,14 +4637,6 @@
     ]
   },
   {
-    "document_id": "ab23c1be2fb27f31dc89ab91",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "9dee3998063db429d5c2165f",
     "state": "candidate",
     "candidate_classes": [
@@ -3675,6 +4663,14 @@
     ]
   },
   {
+    "document_id": "c4b623a166f903f19660fd95",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "088d3bbde17cb83c370cd03e",
     "state": "review",
     "candidate_classes": [],
@@ -3694,14 +4690,6 @@
   },
   {
     "document_id": "da65a24d5d01db82ffa736b2",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "e7e86ff4bbb2ab36628f134d",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -3741,7 +4729,7 @@
     ]
   },
   {
-    "document_id": "ec361a52d63fcef44e2881f5",
+    "document_id": "d703cce4461980f83057ef15",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -3756,14 +4744,6 @@
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
-    "document_id": "27aace98b94520133fad3fc5",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
     ]
   },
   {
@@ -3801,12 +4781,14 @@
     ]
   },
   {
-    "document_id": "110abf8a5fa488b4a1345f73",
+    "document_id": "ac69ce34b2748a6cde6c3ef4",
     "state": "review",
     "candidate_classes": [
-      "regime_state"
+      "corporate_action_mna"
     ],
-    "review_reasons": []
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
   },
   {
     "document_id": "529e98635d223f8f46f1cdd4",
@@ -3861,6 +4843,14 @@
     ]
   },
   {
+    "document_id": "f77340026095ca7e7f1790f2",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "b62f240bf0ca2f676ea12e74",
     "state": "review",
     "candidate_classes": [
@@ -3872,14 +4862,6 @@
   },
   {
     "document_id": "6f09d00dd6fdcfb7323e3ef6",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "63e3a5d037c7e7a4e8a74a42",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -3913,7 +4895,25 @@
     ]
   },
   {
+    "document_id": "d36a42848c9a245f79c633be",
+    "state": "review",
+    "candidate_classes": [
+      "corporate_action_mna"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
     "document_id": "217c36563b55ff457302999a",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "c139680e729f50a705832499",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -3937,7 +4937,7 @@
     ]
   },
   {
-    "document_id": "ef1c9b52790d5d6549e8d559",
+    "document_id": "265ab41cf26d1467b97f5832",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -3950,6 +4950,16 @@
     "candidate_classes": [],
     "review_reasons": [
       "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "c21455b86a9bad83c294967c",
+    "state": "review",
+    "candidate_classes": [
+      "cat_weather"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
     ]
   },
   {
@@ -3969,16 +4979,6 @@
     ]
   },
   {
-    "document_id": "b6067b4215f309e1097e5992",
-    "state": "review",
-    "candidate_classes": [
-      "corporate_action_mna"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
     "document_id": "a7c277d194b5ef9dd9be8f0f",
     "state": "review",
     "candidate_classes": [
@@ -3986,14 +4986,6 @@
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
-    "document_id": "8b6ab381e35f3bbe8ee8dd57",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
     ]
   },
   {
@@ -4008,16 +5000,6 @@
   },
   {
     "document_id": "5643f5b2125cf89ca1558761",
-    "state": "candidate",
-    "candidate_classes": [
-      "insider_flow"
-    ],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "0a44cd8efe0a4e4924e3c53f",
     "state": "candidate",
     "candidate_classes": [
       "insider_flow"
@@ -4145,7 +5127,7 @@
     ]
   },
   {
-    "document_id": "1d701ddfa9ce5bccbecdd3ae",
+    "document_id": "efbc8035eacf2c1ad3501f5a",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -4179,6 +5161,22 @@
     ]
   },
   {
+    "document_id": "a2050acdf31b160c4d03361c",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "105bd9d59deca5257c9fc619",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "af823a2ed3a570ad962152b2",
     "state": "review",
     "candidate_classes": [],
@@ -4204,10 +5202,8 @@
   },
   {
     "document_id": "51eddd030303d5bc0742c41e",
-    "state": "candidate",
-    "candidate_classes": [
-      "corporate_action_mna"
-    ],
+    "state": "review",
+    "candidate_classes": [],
     "review_reasons": [
       "no lexical match; open-set review"
     ]
@@ -4221,6 +5217,16 @@
     ],
     "review_reasons": [
       "rumor wording; verification required"
+    ]
+  },
+  {
+    "document_id": "58f6934dc5179297acea36d1",
+    "state": "review",
+    "candidate_classes": [
+      "cat_weather"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
     ]
   },
   {
@@ -4242,7 +5248,7 @@
     ]
   },
   {
-    "document_id": "27fa41bc89706740b6ac75b5",
+    "document_id": "76c09f7b44969b8410396eca",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -4298,6 +5304,16 @@
     ]
   },
   {
+    "document_id": "233ac082b24654508cf9a4bf",
+    "state": "candidate",
+    "candidate_classes": [
+      "gate"
+    ],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "9ded934a814d99b45e0b273b",
     "state": "review",
     "candidate_classes": [],
@@ -4326,11 +5342,9 @@
   {
     "document_id": "62f29c683b9bc9475fb8403e",
     "state": "review",
-    "candidate_classes": [
-      "listing_flow"
-    ],
+    "candidate_classes": [],
     "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
+      "no lexical match; open-set review"
     ]
   },
   {
@@ -4368,7 +5382,7 @@
     ]
   },
   {
-    "document_id": "4ee452a5a902551b51dfd8b0",
+    "document_id": "b020a070b79bad38b8fa52b6",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -4410,14 +5424,6 @@
     ]
   },
   {
-    "document_id": "ed0d0a9350dd07eefc31e32a",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "5017e73685d7ddeebd37efc1",
     "state": "review",
     "candidate_classes": [],
@@ -4445,6 +5451,14 @@
   },
   {
     "document_id": "104106c21652f3ec276b02a4",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "689dbf4df1f4c2bb665a94a8",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -4567,32 +5581,6 @@
     ]
   },
   {
-    "document_id": "dd21eb4359c101582f900adf",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "404fe185b298c21c25cba55e",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "a54f4d9aa2d9780325a21bc7",
-    "state": "candidate",
-    "candidate_classes": [
-      "access_control"
-    ],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "681bead42a1ee6cf4aea709b",
     "state": "review",
     "candidate_classes": [],
@@ -4627,11 +5615,13 @@
     ]
   },
   {
-    "document_id": "aa44aa008872a4a7abc122ff",
+    "document_id": "7cc1212f484b97ee89df1afc",
     "state": "review",
-    "candidate_classes": [],
+    "candidate_classes": [
+      "dilution"
+    ],
     "review_reasons": [
-      "no lexical match; open-set review"
+      "Lexical hints lack a supported event classification; contextual review required"
     ]
   },
   {
@@ -4645,7 +5635,7 @@
     ]
   },
   {
-    "document_id": "2729b97e88ff53a12d4e804d",
+    "document_id": "2efd2f97ad86b55674bec857",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -4653,7 +5643,7 @@
     ]
   },
   {
-    "document_id": "2da6a0af0cc35ce8c0bf1051",
+    "document_id": "2729b97e88ff53a12d4e804d",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -4711,7 +5701,7 @@
     ]
   },
   {
-    "document_id": "8d243494a0bdce33bef97144",
+    "document_id": "88565b271dec75a012481cbe",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -4719,7 +5709,7 @@
     ]
   },
   {
-    "document_id": "88565b271dec75a012481cbe",
+    "document_id": "208ba33b98f32b58148af320",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -4734,26 +5724,6 @@
     ],
     "review_reasons": [
       "Event stage requires review: prospective_or_proposed"
-    ]
-  },
-  {
-    "document_id": "d067b2120ae3a44b563fc2fb",
-    "state": "candidate",
-    "candidate_classes": [
-      "insider_flow"
-    ],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "0bb21f74a2929697b0f61b36",
-    "state": "candidate",
-    "candidate_classes": [
-      "insider_flow"
-    ],
-    "review_reasons": [
-      "no lexical match; open-set review"
     ]
   },
   {
@@ -4823,16 +5793,6 @@
     ]
   },
   {
-    "document_id": "cca5e1d01894a37e5527b990",
-    "state": "candidate",
-    "candidate_classes": [
-      "insider_flow"
-    ],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "c82a8f953995ea1f12fae8e3",
     "state": "review",
     "candidate_classes": [],
@@ -4856,16 +5816,6 @@
     ],
     "review_reasons": [
       "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "187d96d8280aad87397ad2b0",
-    "state": "review",
-    "candidate_classes": [
-      "corporate_action_mna"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
     ]
   },
   {
@@ -4921,32 +5871,6 @@
     ]
   },
   {
-    "document_id": "d361806a87f32ce25bbd1c91",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "84a43d7bf84a9a834b1af79b",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "a371d479576c5a29caeb39d0",
-    "state": "candidate",
-    "candidate_classes": [
-      "insider_flow"
-    ],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "57f2e88d2db45d61c46a1997",
     "state": "review",
     "candidate_classes": [
@@ -4993,25 +5917,7 @@
     ]
   },
   {
-    "document_id": "d1cb9f49a6e559e642c14d81",
-    "state": "review",
-    "candidate_classes": [
-      "capital_return"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
     "document_id": "0eb1a3ae3a344cfe3c134986",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "bccc760dc138a39d249a39f1",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -5047,23 +5953,17 @@
     ]
   },
   {
+    "document_id": "69c728004f376739fe00c57a",
+    "state": "review",
+    "candidate_classes": [
+      "cat_weather"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
     "document_id": "44a792f3bdd99922a75384fc",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "27da6943189a9cab0bf82d56",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "f447209471c77be389ed3e7f",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -5143,6 +6043,16 @@
     ]
   },
   {
+    "document_id": "9759376f52b6cc71441e1732",
+    "state": "review",
+    "candidate_classes": [
+      "labor_stop"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
     "document_id": "c733808b0f6faca90043af9b",
     "state": "review",
     "candidate_classes": [],
@@ -5212,14 +6122,6 @@
     "candidate_classes": [
       "print_vs_priced"
     ],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "2c31613c5a018ac66f13f2bc",
-    "state": "review",
-    "candidate_classes": [],
     "review_reasons": [
       "no lexical match; open-set review"
     ]
@@ -5345,14 +6247,6 @@
     ]
   },
   {
-    "document_id": "17535eb7b625b82767bbd2e0",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "03904eb512927af2e39dc061",
     "state": "candidate",
     "candidate_classes": [
@@ -5381,11 +6275,13 @@
     ]
   },
   {
-    "document_id": "5c344195d802b6c7e7e2e822",
+    "document_id": "3816899ec37a7dd9c58a78f4",
     "state": "review",
-    "candidate_classes": [],
+    "candidate_classes": [
+      "factor_impulse"
+    ],
     "review_reasons": [
-      "no lexical match; open-set review"
+      "Lexical hints lack a supported event classification; contextual review required"
     ]
   },
   {
@@ -5415,6 +6311,14 @@
     "review_reasons": [
       "no lexical match; open-set review"
     ]
+  },
+  {
+    "document_id": "c652c3528b175b204afc41e5",
+    "state": "review",
+    "candidate_classes": [
+      "regime_state"
+    ],
+    "review_reasons": []
   },
   {
     "document_id": "2d38d9ab815391e9a251f38d",
@@ -5535,6 +6439,14 @@
     ]
   },
   {
+    "document_id": "8168e59486dbd8232dc96e4f",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "b401e1f1d505b7db3757d012",
     "state": "review",
     "candidate_classes": [],
@@ -5546,16 +6458,6 @@
     "document_id": "e5945b56c1a80ae2bb13a844",
     "state": "review",
     "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "1bf9b1459064175c75f5690c",
-    "state": "candidate",
-    "candidate_classes": [
-      "insider_flow"
-    ],
     "review_reasons": [
       "no lexical match; open-set review"
     ]
@@ -5587,7 +6489,7 @@
     ]
   },
   {
-    "document_id": "2f4660ca1238f8344b2fe7f7",
+    "document_id": "185264ac601d8dab25696a75",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -5641,16 +6543,6 @@
     ]
   },
   {
-    "document_id": "06eec51bac7b2dcf21aea12f",
-    "state": "review",
-    "candidate_classes": [
-      "insider_flow"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
     "document_id": "1f8b3d975840da8b981ef7aa",
     "state": "review",
     "candidate_classes": [
@@ -5695,6 +6587,16 @@
     ]
   },
   {
+    "document_id": "ec048e6833f0941d840bc966",
+    "state": "review",
+    "candidate_classes": [
+      "gate"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
     "document_id": "88790f1f8d713a35f445f73c",
     "state": "review",
     "candidate_classes": [
@@ -5702,6 +6604,14 @@
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "719ebd533c583927873a413f",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
     ]
   },
   {
@@ -5899,6 +6809,14 @@
     ]
   },
   {
+    "document_id": "c6ea9a5e0b2d9809866dcae5",
+    "state": "review",
+    "candidate_classes": [
+      "regime_state"
+    ],
+    "review_reasons": []
+  },
+  {
     "document_id": "340db2a1527ff0636378eec6",
     "state": "review",
     "candidate_classes": [],
@@ -5971,14 +6889,6 @@
     ]
   },
   {
-    "document_id": "d987080b642203f32938d097",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "bb1126868820c4d4aa102b12",
     "state": "candidate",
     "candidate_classes": [
@@ -5989,7 +6899,7 @@
     ]
   },
   {
-    "document_id": "7d7c37655fa546ed0c948667",
+    "document_id": "eff20f3f5c10e3bfed7b5180",
     "state": "review",
     "candidate_classes": [
       "regime_state"
@@ -6005,13 +6915,11 @@
     "review_reasons": []
   },
   {
-    "document_id": "b979f854bac78b5e9f263e25",
+    "document_id": "a60791c866814e25b9ec76f1",
     "state": "review",
-    "candidate_classes": [
-      "tax_fiscal"
-    ],
+    "candidate_classes": [],
     "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
+      "no lexical match; open-set review"
     ]
   },
   {
@@ -6171,6 +7079,14 @@
     ]
   },
   {
+    "document_id": "331247201318cf2e2179d12a",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "b21b4664fb632024a02f5be5",
     "state": "review",
     "candidate_classes": [],
@@ -6310,14 +7226,6 @@
     ]
   },
   {
-    "document_id": "afbdde9a27d33f046b3a3170",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "657383e9620afc1b422f1d21",
     "state": "candidate",
     "candidate_classes": [],
@@ -6327,22 +7235,6 @@
   },
   {
     "document_id": "3bde79bf1d3fa57372077161",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "10a397f39a99813d85a2351f",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "0edee32f2f0c74b0f9d24b63",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -6450,7 +7342,7 @@
     ]
   },
   {
-    "document_id": "b6100b41d82114b18fc35f22",
+    "document_id": "ccf896835c72d5a275d57b4b",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -6459,14 +7351,6 @@
   },
   {
     "document_id": "8a6a7ac01b30530a91429a55",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "d905fa992d7deaf15252d678",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -6523,6 +7407,16 @@
     "candidate_classes": [],
     "review_reasons": [
       "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "e7ec8a04843f3e487a3e9be9",
+    "state": "review",
+    "candidate_classes": [
+      "cat_weather"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
     ]
   },
   {
@@ -6602,12 +7496,28 @@
     ]
   },
   {
+    "document_id": "be3ae505e2babcfa036ac3c7",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "0cd70374f7ac546cbccefa89",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
       "no lexical match; open-set review"
     ]
+  },
+  {
+    "document_id": "228dab5500e8a26ea203f928",
+    "state": "review",
+    "candidate_classes": [
+      "regime_state"
+    ],
+    "review_reasons": []
   },
   {
     "document_id": "3596f0200c741c9e5cd1d864",
@@ -6668,6 +7578,16 @@
     ]
   },
   {
+    "document_id": "619a43612fe1d67fa3ba52ae",
+    "state": "review",
+    "candidate_classes": [
+      "cat_weather"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
     "document_id": "344b8c1b1aa1ad1519176248",
     "state": "review",
     "candidate_classes": [
@@ -6710,14 +7630,6 @@
     "review_reasons": []
   },
   {
-    "document_id": "eaecffc9932467170f1e4d82",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "99045282217a77219f9658a3",
     "state": "review",
     "candidate_classes": [],
@@ -6742,7 +7654,25 @@
     ]
   },
   {
+    "document_id": "92e4f00d8f44f3bc0cbdb7d8",
+    "state": "candidate",
+    "candidate_classes": [
+      "print_vs_priced"
+    ],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "786822f1131d156af4431526",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "d87e241047bed8aabd5f3970",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -6759,14 +7689,6 @@
   },
   {
     "document_id": "a82ef93ab9064b16b75fb854",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "37bab5d57a52a7226d8ef64f",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -6798,6 +7720,16 @@
     ]
   },
   {
+    "document_id": "430ee9e7af912903c1c84e98",
+    "state": "review",
+    "candidate_classes": [
+      "cat_weather"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
     "document_id": "5a9aaaa845213750fad283b2",
     "state": "review",
     "candidate_classes": [
@@ -6805,14 +7737,6 @@
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
-    "document_id": "41eb776a63ebc72cf1ebf55e",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
     ]
   },
   {
@@ -6906,6 +7830,22 @@
     ]
   },
   {
+    "document_id": "59d6a86c0b6b16d9ac9aeb33",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "4eb4728ceafcab99fb319729",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "e6925337d568484a911eecdd",
     "state": "review",
     "candidate_classes": [],
@@ -6994,14 +7934,6 @@
     ]
   },
   {
-    "document_id": "6a39f9d1ee76861920e0c4ae",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "d9837bc983c40b9a03143822",
     "state": "review",
     "candidate_classes": [
@@ -7009,14 +7941,6 @@
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
-    "document_id": "319b279361e080d189beab9b",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
     ]
   },
   {
@@ -7066,14 +7990,6 @@
     ]
   },
   {
-    "document_id": "49fdd70d44f283769763986b",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "e548d36a054ffd5bb8524df4",
     "state": "review",
     "candidate_classes": [],
@@ -7083,6 +7999,14 @@
   },
   {
     "document_id": "3560430881bb3e5e3fe5bc26",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "20625f35107cbf2501d14b9a",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -7127,6 +8051,16 @@
     "candidate_classes": [],
     "review_reasons": [
       "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "8f0ea9bc6ca76c51519a0068",
+    "state": "review",
+    "candidate_classes": [
+      "blast_legal"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
     ]
   },
   {
@@ -7242,6 +8176,14 @@
     ]
   },
   {
+    "document_id": "357e16b8d7ceaae951bbd6fb",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "2a54da494768193be45b6383",
     "state": "review",
     "candidate_classes": [],
@@ -7266,14 +8208,6 @@
     ]
   },
   {
-    "document_id": "81792af2a67682e643825ed4",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "7890babdf593ea6e73c3d070",
     "state": "review",
     "candidate_classes": [],
@@ -7288,6 +8222,16 @@
       "regime_state"
     ],
     "review_reasons": []
+  },
+  {
+    "document_id": "927ee2d8715dba8c56454349",
+    "state": "candidate",
+    "candidate_classes": [
+      "product_harm"
+    ],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
   },
   {
     "document_id": "e9dc314ac1b3be280925471c",
@@ -7329,6 +8273,14 @@
   },
   {
     "document_id": "fc2ae3767c4ec52cc4949d43",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "1ca991b7dc1878ac2bbeb006",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -7472,14 +8424,6 @@
     ]
   },
   {
-    "document_id": "18eafe5aeebcf38baedc8b54",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "30acc598277ab4884804c414",
     "state": "review",
     "candidate_classes": [],
@@ -7556,31 +8500,7 @@
     ]
   },
   {
-    "document_id": "b3bb44a20e1cc9b4ed3e0854",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "5dbc230ddfb9e8f4c7039b4f",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "aa5adf13bbc096221f081b64",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "0d82dcc87fac94dc74dbd73e",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -7628,15 +8548,6 @@
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "a479040b66128980813d724a",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "packaging; retain embedded event for review",
       "no lexical match; open-set review"
     ]
   },
@@ -7729,22 +8640,6 @@
     ]
   },
   {
-    "document_id": "bc402e271b236e13a58ce689",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "a4063bd48efb9e82ece8f937",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "c464d7e8c600d9bfe144277e",
     "state": "review",
     "candidate_classes": [],
@@ -7786,14 +8681,6 @@
   },
   {
     "document_id": "441a19e7093ca941c22d3560",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "803f1804641273d6dec03f29",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -7851,7 +8738,25 @@
     ]
   },
   {
+    "document_id": "83e9d1ffbfbb0ac25fb0432b",
+    "state": "review",
+    "candidate_classes": [
+      "cat_weather"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
     "document_id": "ca6a48f76e721a7dcf1bdc36",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "20c91c0b53fe56e0541cb653",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -7876,14 +8781,6 @@
   },
   {
     "document_id": "a55a74124140f5e9f3feef32",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "b57973e9ae16337454c9a585",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -7917,20 +8814,22 @@
     ]
   },
   {
-    "document_id": "20c91c0b53fe56e0541cb653",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "2f266a3967ddf1787649fccd",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
       "no lexical match; open-set review",
       "Recognized event has no supported Lane enum; taxonomy review required"
+    ]
+  },
+  {
+    "document_id": "42db9edaae9c8b9ef18c1c23",
+    "state": "review",
+    "candidate_classes": [
+      "corporate_action_mna"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
     ]
   },
   {
@@ -7943,6 +8842,14 @@
   },
   {
     "document_id": "4d6c9455ab4788d8ba0aa636",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "6a6e56c60e7e073951dc8b8d",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -7996,7 +8903,15 @@
     ]
   },
   {
-    "document_id": "c6e59e76bd89560c21dbc9d2",
+    "document_id": "2ce949266dc055affccee007",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "23be33e1068b7cbad0837cf1",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -8019,6 +8934,16 @@
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "46d895be85b36bcd81e90914",
+    "state": "candidate",
+    "candidate_classes": [
+      "product_harm"
+    ],
+    "review_reasons": [
+      "no lexical match; open-set review"
     ]
   },
   {
@@ -8046,6 +8971,14 @@
     ]
   },
   {
+    "document_id": "a823ca9952110bb29b170723",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "5f7fcf3b19e798fc8edd89bf",
     "state": "review",
     "candidate_classes": [
@@ -8053,6 +8986,14 @@
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "f1133c9a762de05910f299e7",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
     ]
   },
   {
@@ -8084,16 +9025,6 @@
     ]
   },
   {
-    "document_id": "7e6d40f925136d62c9ff9aaa",
-    "state": "review",
-    "candidate_classes": [
-      "print_vs_priced"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
     "document_id": "a5187e034dfc234d908c653b",
     "state": "review",
     "candidate_classes": [
@@ -8101,14 +9032,6 @@
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
-    "document_id": "1ca991b7dc1878ac2bbeb006",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
     ]
   },
   {
@@ -8131,14 +9054,6 @@
   },
   {
     "document_id": "77544f7df3336d34d9f41d85",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "d6d25b3d98e0d3df743b0339",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -8218,14 +9133,6 @@
     ]
   },
   {
-    "document_id": "78d03d992e663600d3671ba3",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "298371cd92bc00ce6adc3f31",
     "state": "review",
     "candidate_classes": [],
@@ -8239,6 +9146,16 @@
     "candidate_classes": [],
     "review_reasons": [
       "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "4c801bbcd5bf52372e2710fd",
+    "state": "review",
+    "candidate_classes": [
+      "cat_weather"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
     ]
   },
   {
@@ -8312,18 +9229,20 @@
     "review_reasons": []
   },
   {
-    "document_id": "4f32a64da0d62ead90546785",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "efea9617a53efcf386a5d525",
     "state": "review",
     "candidate_classes": [
       "distress_restruct"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "1ef9f28814c50f1d93217f43",
+    "state": "review",
+    "candidate_classes": [
+      "cat_weather"
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
@@ -8392,14 +9311,6 @@
     ]
   },
   {
-    "document_id": "38960fcad4a19699986521c9",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "8981c0eadadbb7dad1280302",
     "state": "review",
     "candidate_classes": [
@@ -8450,6 +9361,16 @@
     "state": "review",
     "candidate_classes": [
       "key_person"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "ceeea63fa528d0d0495906f2",
+    "state": "review",
+    "candidate_classes": [
+      "labor_stop"
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
@@ -8550,6 +9471,16 @@
     ]
   },
   {
+    "document_id": "0cfdf46fd8fcfac6039fddf2",
+    "state": "review",
+    "candidate_classes": [
+      "corporate_action_mna"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
     "document_id": "ec3deebb30d370ab3175101d",
     "state": "review",
     "candidate_classes": [],
@@ -8589,14 +9520,6 @@
   },
   {
     "document_id": "0739969da017482b345eb0bd",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "89ebc812a4d5333431d6d164",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -8678,14 +9601,6 @@
     ]
   },
   {
-    "document_id": "399d854de7000bd8946260d1",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "eabdb1f8483bddb59637d519",
     "state": "review",
     "candidate_classes": [
@@ -8722,6 +9637,14 @@
     ]
   },
   {
+    "document_id": "c906b4b02877a4f3d64a0b6f",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "8d026fdad72a789494724e9b",
     "state": "review",
     "candidate_classes": [
@@ -8741,14 +9664,6 @@
   },
   {
     "document_id": "d95dca56aedeff5298552981",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "d87e241047bed8aabd5f3970",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -8784,17 +9699,15 @@
     ]
   },
   {
-    "document_id": "490c06a366fc2483d87e4505",
+    "document_id": "9c18f156999fc819dcb773a9",
     "state": "review",
-    "candidate_classes": [
-      "regime_break"
-    ],
+    "candidate_classes": [],
     "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
+      "no lexical match; open-set review"
     ]
   },
   {
-    "document_id": "9c18f156999fc819dcb773a9",
+    "document_id": "9a224b1b1c09ea309892fe8b",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -8810,13 +9723,13 @@
     ]
   },
   {
-    "document_id": "a2b669a374a871777a78a034",
-    "state": "candidate",
+    "document_id": "413595331775c69f2b6a2952",
+    "state": "review",
     "candidate_classes": [
-      "access_control"
+      "blast_legal"
     ],
     "review_reasons": [
-      "no lexical match; open-set review"
+      "Lexical hints lack a supported event classification; contextual review required"
     ]
   },
   {
@@ -8872,14 +9785,6 @@
     ]
   },
   {
-    "document_id": "9caa4686ba6d70719a4b8c14",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "922060700d63b98e85e82ee3",
     "state": "review",
     "candidate_classes": [
@@ -8891,16 +9796,6 @@
   },
   {
     "document_id": "9d33f319715933188f5bea6d",
-    "state": "review",
-    "candidate_classes": [
-      "factor_impulse"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
-    "document_id": "74f76865328a2620c2c1ec89",
     "state": "review",
     "candidate_classes": [
       "factor_impulse"
@@ -8922,16 +9817,6 @@
     "state": "review",
     "candidate_classes": [
       "corporate_action_mna"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
-    "document_id": "a330240fe774e68c2846def7",
-    "state": "review",
-    "candidate_classes": [
-      "print_vs_priced"
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
@@ -8972,14 +9857,6 @@
     ]
   },
   {
-    "document_id": "92b126ba46d11e5c17481e97",
-    "state": "review",
-    "candidate_classes": [
-      "regime_state"
-    ],
-    "review_reasons": []
-  },
-  {
     "document_id": "832a9e3d2231fcb30126a446",
     "state": "review",
     "candidate_classes": [
@@ -8987,6 +9864,16 @@
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "7254efb93a94b458b9a75b55",
+    "state": "review",
+    "candidate_classes": [
+      "dilution"
+    ],
+    "review_reasons": [
+      "Event stage requires review: prospective_or_proposed"
     ]
   },
   {
@@ -9016,7 +9903,7 @@
     ]
   },
   {
-    "document_id": "b6fb43ab2708b0b2387348c1",
+    "document_id": "33c809fc110266905a9f4f9d",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -9072,32 +9959,6 @@
     ]
   },
   {
-    "document_id": "28da1ba70fa55d5ee48262f4",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "18a5816f3ea988e64f14a690",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "fa7c2bc5623859c1fdff787b",
-    "state": "review",
-    "candidate_classes": [
-      "blast_legal"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
     "document_id": "55840642e731baaf8874e7b2",
     "state": "review",
     "candidate_classes": [
@@ -9126,14 +9987,6 @@
     ]
   },
   {
-    "document_id": "9d5076b763ed8b92e4a2c797",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "3849f204d1481c308452cd21",
     "state": "review",
     "candidate_classes": [],
@@ -9149,22 +10002,6 @@
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
-    "document_id": "facd993a6f83e67b02382ec6",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "db99e2f789532702d998d50c",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
     ]
   },
   {
@@ -9194,6 +10031,14 @@
     ]
   },
   {
+    "document_id": "50478e8583ae08cfd4c2b7a3",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "0d02e17424edc9380dbe3d21",
     "state": "review",
     "candidate_classes": [],
@@ -9209,14 +10054,6 @@
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
-    "document_id": "469b953c3585b1eacb156316",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
     ]
   },
   {
@@ -9258,6 +10095,14 @@
     ]
   },
   {
+    "document_id": "1a310369fbe9efbafde80176",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "59baf924b3f6dee6704fea20",
     "state": "review",
     "candidate_classes": [],
@@ -9292,14 +10137,6 @@
     ]
   },
   {
-    "document_id": "37412f66cbed4ebe829452fd",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "c05196db018edb80572cc789",
     "state": "review",
     "candidate_classes": [
@@ -9307,6 +10144,14 @@
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "4579a4fd9c3904ebcce675c6",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
     ]
   },
   {
@@ -9322,6 +10167,17 @@
     "state": "review",
     "candidate_classes": [
       "preannounce"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "fd53fff4166114e2ed66349c",
+    "state": "review",
+    "candidate_classes": [
+      "print_vs_priced",
+      "corporate_action_mna"
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
@@ -9374,6 +10230,14 @@
     ]
   },
   {
+    "document_id": "573be1401e0ece669081a686",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "7497303f8b7046915423579b",
     "state": "review",
     "candidate_classes": [],
@@ -9416,7 +10280,7 @@
     ]
   },
   {
-    "document_id": "66d0a4908a3ca4d9a41d84ea",
+    "document_id": "fdbe70c41eae0e130f2b1c8e",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -9424,7 +10288,7 @@
     ]
   },
   {
-    "document_id": "fdbe70c41eae0e130f2b1c8e",
+    "document_id": "cfafc4462e311d08ba6c5554",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -9480,22 +10344,6 @@
     ]
   },
   {
-    "document_id": "c853f7b6240e77cae4c291d2",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "f283b2d28729d3554a70266f",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "d17eea535af1f057e4ceaffb",
     "state": "review",
     "candidate_classes": [],
@@ -9511,6 +10359,14 @@
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "9071327a005c478c27d25636",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
     ]
   },
   {
@@ -9530,6 +10386,16 @@
     ]
   },
   {
+    "document_id": "fa3e7cb01b2fcd166aab6277",
+    "state": "review",
+    "candidate_classes": [
+      "cat_weather"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
     "document_id": "594340f0fb0a3d410591f6a7",
     "state": "review",
     "candidate_classes": [
@@ -9545,16 +10411,6 @@
     "candidate_classes": [],
     "review_reasons": [
       "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "cf08aa27a2a5217c9d610b33",
-    "state": "review",
-    "candidate_classes": [
-      "print_vs_priced"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
     ]
   },
   {
@@ -9592,14 +10448,6 @@
     "review_reasons": []
   },
   {
-    "document_id": "a285c6594e1daab4a39128c3",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "00648783870c42519ecc716b",
     "state": "review",
     "candidate_classes": [],
@@ -9616,23 +10464,17 @@
     ]
   },
   {
+    "document_id": "b3f5cbde0e4c164a357779be",
+    "state": "review",
+    "candidate_classes": [
+      "factor_impulse"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
     "document_id": "d54a0a7b7ea150e59516e7d0",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "dfbc11e0df79775f4812ade8",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "ded1a2349e31b8586a71ffac",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -9648,7 +10490,7 @@
     ]
   },
   {
-    "document_id": "b91a3e58d9f59ad442b29900",
+    "document_id": "26811b87e5f2cd52360289b2",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -9666,6 +10508,14 @@
     ]
   },
   {
+    "document_id": "3291485c4d95c2a1e3e6e632",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "b5e28c3f3dc959ec77acc173",
     "state": "review",
     "candidate_classes": [],
@@ -9675,14 +10525,6 @@
   },
   {
     "document_id": "de1ec8422a6ef8a50605c1c1",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "8f9d1757d5b41fe3ad445233",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -9718,6 +10560,16 @@
     ]
   },
   {
+    "document_id": "7eec718300be73d7518c2e63",
+    "state": "review",
+    "candidate_classes": [
+      "cat_weather"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
     "document_id": "8b1572b79a8c7c3b756cc743",
     "state": "review",
     "candidate_classes": [],
@@ -9747,22 +10599,6 @@
   },
   {
     "document_id": "5179b1e822141724afb52e2b",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "04dd0c352190b98fee0ef034",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "6227d0867388364a17984cfa",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -9836,6 +10672,16 @@
     ]
   },
   {
+    "document_id": "a332c4a7eb570e5f7ff8c9be",
+    "state": "candidate",
+    "candidate_classes": [
+      "product_harm"
+    ],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "0a5240cdb23a3b62b53ef708",
     "state": "review",
     "candidate_classes": [
@@ -9882,6 +10728,24 @@
     ]
   },
   {
+    "document_id": "4edb3371b60f8d791afd60f4",
+    "state": "review",
+    "candidate_classes": [
+      "corporate_action_mna"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "9a47da86c4f26e3942c11359",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "26d8a164bd7749e9ccf66333",
     "state": "review",
     "candidate_classes": [],
@@ -9890,7 +10754,23 @@
     ]
   },
   {
+    "document_id": "fad1deb308551f7a6219827f",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "fbb04e45d801a05e0ba939c7",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "b014777bb34e88e07a3b2a31",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -9934,7 +10814,25 @@
     ]
   },
   {
+    "document_id": "d03abdc598396b4b32594d02",
+    "state": "review",
+    "candidate_classes": [
+      "cat_weather"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
     "document_id": "fba00e29ab4d9a3bc44c4979",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "9cd81e8856503525f220b595",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -9988,14 +10886,6 @@
       "regime_state"
     ],
     "review_reasons": []
-  },
-  {
-    "document_id": "d41133f7092f926823cb00d1",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
   },
   {
     "document_id": "d34c47b6d5588c74fa6979fe",
@@ -10094,11 +10984,13 @@
     ]
   },
   {
-    "document_id": "2a4a4b1d87664f6825ed0bce",
+    "document_id": "9e03e16a53b2dffef05e020b",
     "state": "review",
-    "candidate_classes": [],
+    "candidate_classes": [
+      "cat_weather"
+    ],
     "review_reasons": [
-      "no lexical match; open-set review"
+      "Lexical hints lack a supported event classification; contextual review required"
     ]
   },
   {
@@ -10127,6 +11019,14 @@
   },
   {
     "document_id": "a31c3a4c63765b8ce8e8aa18",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "47c077c50e46bc1b1bbf7332",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -10216,7 +11116,7 @@
     ]
   },
   {
-    "document_id": "c8025a68bb712a752fb50348",
+    "document_id": "b1eb8d57df8b9903401302d3",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -10225,14 +11125,6 @@
   },
   {
     "document_id": "21ae2577fb7307d24228d09f",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "4ada404bb06dc71a9696bec2",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -10283,6 +11175,16 @@
     ]
   },
   {
+    "document_id": "3b329c493ab8549fb85789fa",
+    "state": "candidate",
+    "candidate_classes": [
+      "corporate_action_mna"
+    ],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "57a4b801622291207cd1b248",
     "state": "candidate",
     "candidate_classes": [
@@ -10317,7 +11219,17 @@
     ]
   },
   {
-    "document_id": "1d07230400ecbfb02260765a",
+    "document_id": "9347fb69f2445162f699f61a",
+    "state": "review",
+    "candidate_classes": [
+      "factor_impulse"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "b2b4dafed0cff2e79bb84252",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -10367,16 +11279,6 @@
     ]
   },
   {
-    "document_id": "19d554972c68b2fb49891559",
-    "state": "review",
-    "candidate_classes": [
-      "factor_impulse"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
     "document_id": "3f365d1f73e14fb49db3194e",
     "state": "review",
     "candidate_classes": [],
@@ -10405,6 +11307,14 @@
     ]
   },
   {
+    "document_id": "c107a504b005577675c234d4",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "6059b4db96265156d2f283c3",
     "state": "review",
     "candidate_classes": [],
@@ -10423,14 +11333,6 @@
     ]
   },
   {
-    "document_id": "85110b59d9cc368016088281",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "ece43844beee00652307de07",
     "state": "review",
     "candidate_classes": [],
@@ -10446,14 +11348,6 @@
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
-    "document_id": "17fe3bb742c095919c265187",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
     ]
   },
   {
@@ -10485,6 +11379,16 @@
     ]
   },
   {
+    "document_id": "8f50765717d45d305adeb8b4",
+    "state": "review",
+    "candidate_classes": [
+      "print_vs_priced"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
     "document_id": "574d2bf0f821a9a68bea3195",
     "state": "review",
     "candidate_classes": [],
@@ -10502,16 +11406,6 @@
   },
   {
     "document_id": "1f3280c0be82a943cd73bfbe",
-    "state": "review",
-    "candidate_classes": [
-      "insider_flow"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
-    "document_id": "33de96a24baa9f03851862e2",
     "state": "review",
     "candidate_classes": [
       "insider_flow"
@@ -10539,14 +11433,6 @@
     ]
   },
   {
-    "document_id": "02974c4ea1863fce7935b3e4",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "5a0b97d0261062adab8cf623",
     "state": "review",
     "candidate_classes": [],
@@ -10562,6 +11448,14 @@
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "d22d70a27744978638c19cb8",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
     ]
   },
   {
@@ -10658,16 +11552,6 @@
     ]
   },
   {
-    "document_id": "cf54efa64d8a1084846eedf4",
-    "state": "review",
-    "candidate_classes": [
-      "corporate_action_mna"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
     "document_id": "f197a239dfd5aadb207eb7d3",
     "state": "review",
     "candidate_classes": [],
@@ -10709,14 +11593,6 @@
   },
   {
     "document_id": "db9ed4de5c2770e555a6e775",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "684d58914bbc13d9b6416983",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -10809,6 +11685,16 @@
     "candidate_classes": [],
     "review_reasons": [
       "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "55a6f37b7b9e72159580b138",
+    "state": "review",
+    "candidate_classes": [
+      "gate"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
     ]
   },
   {
@@ -10999,14 +11885,6 @@
     ]
   },
   {
-    "document_id": "8c948b407bac9f42fb3545eb",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "8606a6d7f94e8bdad4e0a8e2",
     "state": "review",
     "candidate_classes": [],
@@ -11121,14 +11999,6 @@
     ]
   },
   {
-    "document_id": "218468b52a00ffa3b70e3942",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "2d9d4c2eb2ce3ae1ebde4db9",
     "state": "review",
     "candidate_classes": [],
@@ -11176,14 +12046,6 @@
   },
   {
     "document_id": "f64d03079d211d734a0a952f",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "1158a63e2995102029bc8e10",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -11356,13 +12218,11 @@
     ]
   },
   {
-    "document_id": "832d5c17e8cd29716e3dcc7d",
+    "document_id": "5f5e347f1ee88499d1afaf5b",
     "state": "review",
-    "candidate_classes": [
-      "corporate_action_spinoff"
-    ],
+    "candidate_classes": [],
     "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
+      "no lexical match; open-set review"
     ]
   },
   {
@@ -11446,6 +12306,16 @@
     ]
   },
   {
+    "document_id": "fe60d52467c8eecc5ed55167",
+    "state": "review",
+    "candidate_classes": [
+      "corporate_action_mna"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
     "document_id": "761738f51af70e17f55aaf54",
     "state": "review",
     "candidate_classes": [
@@ -11512,14 +12382,6 @@
     ]
   },
   {
-    "document_id": "695305e71dfc48f616d0ef74",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "7c297f9d4cffedffcf95b51f",
     "state": "review",
     "candidate_classes": [],
@@ -11547,14 +12409,6 @@
   },
   {
     "document_id": "0d01475f96887f13d273522d",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "ae7462cf2845fc9cd54e747c",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -11623,6 +12477,14 @@
   },
   {
     "document_id": "76bb3ebb84af72ffe5c5bb5d",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "077f54adb57210e809026625",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -11744,14 +12606,6 @@
     ]
   },
   {
-    "document_id": "a848c782fc24e5bdaead8e4c",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "0136fbff04241feafd1e56d5",
     "state": "review",
     "candidate_classes": [
@@ -11782,6 +12636,16 @@
     "state": "review",
     "candidate_classes": [
       "key_person"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "9036ac3151d8707aeffe4fa5",
+    "state": "review",
+    "candidate_classes": [
+      "blast_legal"
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
@@ -11838,6 +12702,14 @@
     "review_reasons": [
       "no lexical match; open-set review"
     ]
+  },
+  {
+    "document_id": "8724a5cc6f022e3ac22f68d2",
+    "state": "review",
+    "candidate_classes": [
+      "regime_state"
+    ],
+    "review_reasons": []
   },
   {
     "document_id": "650da249f8f36a7c87854d41",
@@ -12060,6 +12932,16 @@
     ]
   },
   {
+    "document_id": "6582eb6d15196431ed876e58",
+    "state": "review",
+    "candidate_classes": [
+      "cat_weather"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
     "document_id": "97346552db7414b40cd8f0c4",
     "state": "review",
     "candidate_classes": [],
@@ -12099,6 +12981,16 @@
     "candidate_classes": [],
     "review_reasons": [
       "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "21b98181881109b504653171",
+    "state": "review",
+    "candidate_classes": [
+      "dilution"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
     ]
   },
   {
@@ -12149,6 +13041,14 @@
   },
   {
     "document_id": "a568bf5d7170b4605cd3f324",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "3d4a140e5ad3942375da1330",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -12444,16 +13344,6 @@
     ]
   },
   {
-    "document_id": "47b1d0865ac7acb6e9b54cb2",
-    "state": "candidate",
-    "candidate_classes": [
-      "gate"
-    ],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "8d06d88bb02c035537b1663f",
     "state": "review",
     "candidate_classes": [
@@ -12498,7 +13388,7 @@
     ]
   },
   {
-    "document_id": "86864a4201fd42939b8a35d6",
+    "document_id": "e46b4bb0a562349e7adfc7c0",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -12506,7 +13396,7 @@
     ]
   },
   {
-    "document_id": "ff5668de7acf14d5c02eefce",
+    "document_id": "86864a4201fd42939b8a35d6",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -12557,14 +13447,6 @@
   },
   {
     "document_id": "f5ff45693c45a4bbb421b9af",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "1039127f1f84131c592efe15",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -12886,14 +13768,6 @@
     ]
   },
   {
-    "document_id": "965e8f248965e3d21f2b5544",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "2d171ca64b884272fa28207f",
     "state": "review",
     "candidate_classes": [],
@@ -13014,6 +13888,14 @@
     "review_reasons": [
       "no lexical match; open-set review"
     ]
+  },
+  {
+    "document_id": "91a0cd3d400d5a7ccf81e006",
+    "state": "review",
+    "candidate_classes": [
+      "regime_state"
+    ],
+    "review_reasons": []
   },
   {
     "document_id": "24e835d54ce5e28d3e28ecb1",
@@ -13277,6 +14159,14 @@
   },
   {
     "document_id": "edb62987d10f9b82cc2afb00",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "d56590aaa05a98ec17d89d2b",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -13589,6 +14479,16 @@
     ]
   },
   {
+    "document_id": "fa4e5e0539816df10997f015",
+    "state": "review",
+    "candidate_classes": [
+      "dilution"
+    ],
+    "review_reasons": [
+      "Event stage requires review: prospective_or_proposed"
+    ]
+  },
+  {
     "document_id": "5bc7b6576a7484def46c3f48",
     "state": "review",
     "candidate_classes": [],
@@ -13733,6 +14633,16 @@
     ]
   },
   {
+    "document_id": "a7b8d13a2e85544ab9087164",
+    "state": "review",
+    "candidate_classes": [
+      "cat_weather"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
     "document_id": "999577658a707b615d895702",
     "state": "review",
     "candidate_classes": [],
@@ -13771,6 +14681,14 @@
     ]
   },
   {
+    "document_id": "f0f7aa501ba0c1b1a952320d",
+    "state": "review",
+    "candidate_classes": [
+      "regime_state"
+    ],
+    "review_reasons": []
+  },
+  {
     "document_id": "8fa4f8ce6c39b04edc5c09ed",
     "state": "review",
     "candidate_classes": [],
@@ -13788,6 +14706,14 @@
   },
   {
     "document_id": "3d13376db5a926f07eb3fdab",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "e3ce6e2be4a543aab52524e9",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -13854,14 +14780,6 @@
   },
   {
     "document_id": "a291af8c6199246cdd79cc3e",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "6eded98354e387685238fef8",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -13951,6 +14869,16 @@
     "state": "review",
     "candidate_classes": [
       "blast_legal"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "7d3781e7303be4002a8049aa",
+    "state": "review",
+    "candidate_classes": [
+      "corporate_action_mna"
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
@@ -14180,6 +15108,16 @@
   },
   {
     "document_id": "dcaabd7764b04abc787ff113",
+    "state": "review",
+    "candidate_classes": [
+      "gate"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "b2bb3f5ea808a030057101e6",
     "state": "review",
     "candidate_classes": [
       "gate"
@@ -14493,6 +15431,16 @@
     ]
   },
   {
+    "document_id": "eb39d558bbb4453183af46bb",
+    "state": "review",
+    "candidate_classes": [
+      "blast_legal"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
     "document_id": "336a975d59668c032819889d",
     "state": "review",
     "candidate_classes": [],
@@ -14580,6 +15528,14 @@
   },
   {
     "document_id": "474fc867cfa585c3f0fbdb71",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "6f5d6805f34b7af51b1a6b23",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -14797,14 +15753,6 @@
     ]
   },
   {
-    "document_id": "07ebb5e8a8003f13b5f3c79a",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "a312137d702ec689e8ad6d34",
     "state": "review",
     "candidate_classes": [],
@@ -14963,6 +15911,14 @@
   },
   {
     "document_id": "686a7296fbd9beb54c358332",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "679ebb64b43ec694af70f431",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -15183,6 +16139,14 @@
     "candidate_classes": [
       "blast_ops"
     ],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "3fd467a580fef157ae51f20f",
+    "state": "review",
+    "candidate_classes": [],
     "review_reasons": [
       "no lexical match; open-set review"
     ]
@@ -15622,14 +16586,6 @@
     ]
   },
   {
-    "document_id": "fef92a625c6fadbebff299dd",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "32caa4887e541a8981e71620",
     "state": "review",
     "candidate_classes": [],
@@ -15747,6 +16703,16 @@
     "document_id": "475965114a49f9fc618c6adf",
     "state": "review",
     "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "4237a6c913eebe2d4dc6b340",
+    "state": "candidate",
+    "candidate_classes": [
+      "factor_impulse"
+    ],
     "review_reasons": [
       "no lexical match; open-set review"
     ]
@@ -16394,6 +17360,14 @@
     ]
   },
   {
+    "document_id": "efebe69c8655777146799d58",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "42887a31417738a7d599f45f",
     "state": "review",
     "candidate_classes": [],
@@ -16487,14 +17461,6 @@
   },
   {
     "document_id": "ff985badc7d709b9d609a749",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "91c5bf480f85cfcd0e43c08a",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -16648,6 +17614,16 @@
     ]
   },
   {
+    "document_id": "b699816e52ca5d8cde2fa1d0",
+    "state": "review",
+    "candidate_classes": [
+      "dilution"
+    ],
+    "review_reasons": [
+      "Event stage requires review: prospective_or_proposed"
+    ]
+  },
+  {
     "document_id": "479b743f44750d3958264bc9",
     "state": "review",
     "candidate_classes": [],
@@ -16727,14 +17703,6 @@
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
-    "document_id": "fbcaf27407139b46f5a98d77",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
     ]
   },
   {
@@ -16972,6 +17940,14 @@
     ]
   },
   {
+    "document_id": "1a94732ae6198e3ada992e76",
+    "state": "review",
+    "candidate_classes": [
+      "regime_state"
+    ],
+    "review_reasons": []
+  },
+  {
     "document_id": "e4e45a052165a9bb5365c694",
     "state": "review",
     "candidate_classes": [],
@@ -17011,6 +17987,14 @@
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "14928346196965537befae6f",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
     ]
   },
   {
@@ -17394,6 +18378,16 @@
     ],
     "review_reasons": [
       "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "ef9273ed4b3e464ce0debca2",
+    "state": "review",
+    "candidate_classes": [
+      "dilution"
+    ],
+    "review_reasons": [
+      "Event stage requires review: prospective_or_proposed"
     ]
   },
   {
@@ -17922,6 +18916,14 @@
     ]
   },
   {
+    "document_id": "59928eb0eda09b3b3aca22e5",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "c9e1e29e56ef6ee9de9d2e03",
     "state": "review",
     "candidate_classes": [],
@@ -18224,16 +19226,6 @@
     ]
   },
   {
-    "document_id": "0690c6ce08b312294e0310ff",
-    "state": "review",
-    "candidate_classes": [
-      "factor_impulse"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
     "document_id": "7fa2885d00ba02e2ed712977",
     "state": "review",
     "candidate_classes": [],
@@ -18295,14 +19287,6 @@
   },
   {
     "document_id": "8c898c8a0e7f5f03bd752170",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "b9252930ea477082e0ec6e7a",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -18436,6 +19420,14 @@
     ]
   },
   {
+    "document_id": "e0f7cdb530eef18a186920a5",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "73cffa12956617ce603a3067",
     "state": "review",
     "candidate_classes": [],
@@ -18531,14 +19523,6 @@
   },
   {
     "document_id": "4aa11a46323c69572891813d",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "677b1c748c994712db6dea9d",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -18900,6 +19884,14 @@
     ]
   },
   {
+    "document_id": "9754b3f35b63a6daad6b4afa",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "9567df55f04a011a90560666",
     "state": "review",
     "candidate_classes": [],
@@ -19065,6 +20057,16 @@
     "candidate_classes": [],
     "review_reasons": [
       "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "960bca69251b344947263147",
+    "state": "review",
+    "candidate_classes": [
+      "dilution"
+    ],
+    "review_reasons": [
+      "Event stage requires review: prospective_or_proposed"
     ]
   },
   {
@@ -19769,6 +20771,14 @@
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "1576ef83bb1ef04fb479c402",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
     ]
   },
   {
@@ -20764,14 +21774,6 @@
     ]
   },
   {
-    "document_id": "65098791f3b6779fd37bbd14",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "9f4b832fe30a62bc2cf27caa",
     "state": "review",
     "candidate_classes": [],
@@ -20950,6 +21952,14 @@
     ]
   },
   {
+    "document_id": "bf4ce3090567ea0e12d65635",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "9969a733eea9c76678a6da6e",
     "state": "review",
     "candidate_classes": [],
@@ -21050,16 +22060,6 @@
     ]
   },
   {
-    "document_id": "fb43fd6f7fdd1c2c68ce1248",
-    "state": "review",
-    "candidate_classes": [
-      "regime_break"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
     "document_id": "b4443d16ef016fcf8e02a4b2",
     "state": "review",
     "candidate_classes": [
@@ -21085,6 +22085,14 @@
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "1653802fedc823941c266e3c",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
     ]
   },
   {
@@ -21147,6 +22155,14 @@
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "a59ad94e13b7710e5d4182c3",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
     ]
   },
   {
@@ -21304,14 +22320,6 @@
     ]
   },
   {
-    "document_id": "018b48f0dda281bc36bc6da1",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "380fddbf4f10d22fd333b223",
     "state": "review",
     "candidate_classes": [],
@@ -21426,14 +22434,6 @@
     ]
   },
   {
-    "document_id": "948cee237b6082fd68d518ac",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "690d5a283255deb46ca808ef",
     "state": "review",
     "candidate_classes": [],
@@ -21525,6 +22525,14 @@
   },
   {
     "document_id": "b240b08be2697b86e6d0e30a",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "0d6e784c216374894c10cff2",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -22133,6 +23141,14 @@
     ]
   },
   {
+    "document_id": "7d832954c4902b65a00e5d7b",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "89b415bdd3ed479f6781e766",
     "state": "review",
     "candidate_classes": [
@@ -22140,14 +23156,6 @@
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
-    "document_id": "2beccf4cc45aa3958f68dbdb",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
     ]
   },
   {
@@ -22569,14 +23577,6 @@
     ]
   },
   {
-    "document_id": "78482ab9c02ee9233b9377a7",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "df686aa1b095035481c9898a",
     "state": "review",
     "candidate_classes": [],
@@ -22684,7 +23684,27 @@
     ]
   },
   {
+    "document_id": "e4628ff878a2b110fd2b5b15",
+    "state": "review",
+    "candidate_classes": [
+      "factor_impulse"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
     "document_id": "610ba4631376793af6be40ca",
+    "state": "review",
+    "candidate_classes": [
+      "factor_impulse"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "47d8a54b1f664716bbf0e44e",
     "state": "review",
     "candidate_classes": [
       "factor_impulse"
@@ -22882,6 +23902,26 @@
     ]
   },
   {
+    "document_id": "9269be9ec67f7a534dbd1abe",
+    "state": "review",
+    "candidate_classes": [
+      "labor_stop"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "246d60e584bcaf2d477d26e2",
+    "state": "review",
+    "candidate_classes": [
+      "labor_stop"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
     "document_id": "68fca9af92baf6a2a718d881",
     "state": "review",
     "candidate_classes": [],
@@ -22990,6 +24030,14 @@
     ]
   },
   {
+    "document_id": "a9973327de75e7e90d948d5a",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "9ca2e23fe468e22b732ee301",
     "state": "review",
     "candidate_classes": [],
@@ -23088,14 +24136,6 @@
     ]
   },
   {
-    "document_id": "d73878a0ff3687310c6b46f9",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "653fdf04bccff62bce48f6d1",
     "state": "review",
     "candidate_classes": [],
@@ -23132,6 +24172,14 @@
     ]
   },
   {
+    "document_id": "cedc63e5cc3547342886b628",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "9399ce779b201f265fb5a9b4",
     "state": "review",
     "candidate_classes": [],
@@ -23149,14 +24197,6 @@
   },
   {
     "document_id": "8450723e549d5bad565889d0",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "7d1f7cadf7b9f8a997043d54",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -23387,6 +24427,14 @@
     ]
   },
   {
+    "document_id": "b573cd70f0006a3d9ad2f39e",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "785554472b10afb2d69768c8",
     "state": "review",
     "candidate_classes": [
@@ -23398,6 +24446,14 @@
   },
   {
     "document_id": "5095e4e562bf4585c79a093d",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "556bed7dc52075e76b6644e6",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -23623,16 +24679,6 @@
     ]
   },
   {
-    "document_id": "d0adeffc6a52fe8490fb7ab3",
-    "state": "review",
-    "candidate_classes": [
-      "cat_weather"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
     "document_id": "9a6beda054ef9016c0808704",
     "state": "review",
     "candidate_classes": [
@@ -23701,16 +24747,6 @@
     ]
   },
   {
-    "document_id": "ab562ba74baf1ecc2261edea",
-    "state": "review",
-    "candidate_classes": [
-      "cat_weather"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
     "document_id": "7d29bf1f41c16354426fa515",
     "state": "review",
     "candidate_classes": [
@@ -23730,14 +24766,6 @@
   },
   {
     "document_id": "276f17abd9cbfb72881e0c57",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "eb0087c1868f304c4d0ef12b",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -23801,6 +24829,14 @@
     ]
   },
   {
+    "document_id": "b06a49835c6329d7266c1857",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "2ce13e398104557185b55c8b",
     "state": "review",
     "candidate_classes": [],
@@ -23853,7 +24889,25 @@
     ]
   },
   {
+    "document_id": "c73c5ef453fe2f171ba51901",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "7f89d23f46306c0d5adca785",
+    "state": "review",
+    "candidate_classes": [
+      "blast_legal"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "e0aae9bfd639862f8e6e9c28",
     "state": "review",
     "candidate_classes": [
       "blast_legal"
@@ -23946,14 +25000,6 @@
   },
   {
     "document_id": "f6ad69e213b28f844e5cd0f7",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "1e6a07fccb85c6ff0dac9157",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -24123,6 +25169,14 @@
   },
   {
     "document_id": "736ab27650f5fe9989a81472",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "bb966fba70bea0545eaa62fb",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -24498,6 +25552,14 @@
     ]
   },
   {
+    "document_id": "44c4720b16711a17ff48e801",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "36b086de04ae30dd486611fb",
     "state": "review",
     "candidate_classes": [],
@@ -24506,23 +25568,7 @@
     ]
   },
   {
-    "document_id": "dd25cc34953580ddb5c79081",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "628d41d2e90907e185053812",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "55cb707a2f432ee1c9ad0766",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -24650,14 +25696,6 @@
     ]
   },
   {
-    "document_id": "becd6425b5f5531fb83d1459",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "9e9ef00c928370955227783c",
     "state": "review",
     "candidate_classes": [],
@@ -24683,14 +25721,6 @@
   },
   {
     "document_id": "2f8c8ffe3288bbf0d81453cc",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "cbab4b30514178f0724e906a",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -24764,6 +25794,14 @@
   },
   {
     "document_id": "0bcfc6abddb5c00558cde2b6",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "a5dd35779a504ed41e740c74",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -24916,14 +25954,6 @@
     ]
   },
   {
-    "document_id": "4b327faacb6dd43dd1a09c18",
-    "state": "review",
-    "candidate_classes": [
-      "regime_state"
-    ],
-    "review_reasons": []
-  },
-  {
     "document_id": "542d87d55883befbf22c3019",
     "state": "review",
     "candidate_classes": [],
@@ -25029,13 +26059,11 @@
     ]
   },
   {
-    "document_id": "99f798ccced451da938035c1",
+    "document_id": "20c24e8151b54907b788b555",
     "state": "review",
-    "candidate_classes": [
-      "cat_weather"
-    ],
+    "candidate_classes": [],
     "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
+      "no lexical match; open-set review"
     ]
   },
   {
@@ -25272,6 +26300,14 @@
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "3783728f9ebaff8c5da4a435",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
     ]
   },
   {
@@ -25593,16 +26629,6 @@
     ]
   },
   {
-    "document_id": "1d21d305a87dfd71d0ccdd5b",
-    "state": "review",
-    "candidate_classes": [
-      "cat_weather"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
     "document_id": "f84387dc9d8d37b0119282cd",
     "state": "review",
     "candidate_classes": [
@@ -25652,6 +26678,16 @@
     "candidate_classes": [],
     "review_reasons": [
       "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "488cdc59ee776bb96999b286",
+    "state": "review",
+    "candidate_classes": [
+      "blast_legal"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
     ]
   },
   {
@@ -25706,6 +26742,16 @@
   },
   {
     "document_id": "e83374a7ac5f846c12283bae",
+    "state": "review",
+    "candidate_classes": [
+      "corporate_action_spinoff"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "ac4464ed65e6b9108bd19bb6",
     "state": "review",
     "candidate_classes": [
       "corporate_action_spinoff"
@@ -26133,17 +27179,6 @@
     ]
   },
   {
-    "document_id": "a69e5527cdefcf141fbbb465",
-    "state": "review",
-    "candidate_classes": [
-      "factor_impulse",
-      "regime_state"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
     "document_id": "c1b58c0b77c2c2e0157e6484",
     "state": "review",
     "candidate_classes": [],
@@ -26177,14 +27212,6 @@
       "regime_state"
     ],
     "review_reasons": []
-  },
-  {
-    "document_id": "dca96b38442db9c33f12011d",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
   },
   {
     "document_id": "e2a869283675bd7e87a5b78a",
@@ -26285,6 +27312,14 @@
     ]
   },
   {
+    "document_id": "9d8655e6014ea2caa592061c",
+    "state": "review",
+    "candidate_classes": [
+      "regime_state"
+    ],
+    "review_reasons": []
+  },
+  {
     "document_id": "2cb87bbbafcdf0250a6679a1",
     "state": "review",
     "candidate_classes": [],
@@ -26335,14 +27370,6 @@
     ]
   },
   {
-    "document_id": "df702f0a74ed6d1819939d1d",
-    "state": "review",
-    "candidate_classes": [
-      "regime_state"
-    ],
-    "review_reasons": []
-  },
-  {
     "document_id": "b493f880172040b31c1179af",
     "state": "review",
     "candidate_classes": [],
@@ -26352,6 +27379,14 @@
   },
   {
     "document_id": "07119c3a2437ea5d145f7abe",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "9c38a0b6f985767a37df5fdf",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -26530,6 +27565,14 @@
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "df0be40668c6bd0bf81a880a",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
     ]
   },
   {
@@ -26746,6 +27789,14 @@
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "f554dce93b4a647ab862e516",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
     ]
   },
   {
@@ -26971,6 +28022,14 @@
     ]
   },
   {
+    "document_id": "8f0e46e85cdf88de7601bee0",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "6eac7f2739b51f73041870a4",
     "state": "review",
     "candidate_classes": [],
@@ -27016,6 +28075,14 @@
   },
   {
     "document_id": "1ab0581969dd202066652f2b",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "464dfe193afa7d0e57d01cdc",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -27518,14 +28585,6 @@
     ]
   },
   {
-    "document_id": "b00d97b8909c4cbd35e6f2f2",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "2d64f697295eeeae7c85e5d7",
     "state": "candidate",
     "candidate_classes": [
@@ -27647,16 +28706,6 @@
     "candidate_classes": [],
     "review_reasons": [
       "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "64ec42ca472d5dea3ed23736",
-    "state": "review",
-    "candidate_classes": [
-      "access_control"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
     ]
   },
   {
@@ -27922,6 +28971,14 @@
     "review_reasons": []
   },
   {
+    "document_id": "06f1e717229591d8ff534fe6",
+    "state": "review",
+    "candidate_classes": [
+      "regime_state"
+    ],
+    "review_reasons": []
+  },
+  {
     "document_id": "ff4e86900379ce1f97bedc3b",
     "state": "review",
     "candidate_classes": [
@@ -27970,14 +29027,6 @@
     ]
   },
   {
-    "document_id": "6147ae8ab0ff1ac3f0e8653e",
-    "state": "review",
-    "candidate_classes": [
-      "regime_state"
-    ],
-    "review_reasons": []
-  },
-  {
     "document_id": "e80f54e84a04e85bd06690d1",
     "state": "review",
     "candidate_classes": [
@@ -28024,6 +29073,14 @@
     ]
   },
   {
+    "document_id": "268b8bd347691dc767577d43",
+    "state": "review",
+    "candidate_classes": [
+      "regime_state"
+    ],
+    "review_reasons": []
+  },
+  {
     "document_id": "1527975374fd8ac26c7c5f87",
     "state": "review",
     "candidate_classes": [],
@@ -28056,6 +29113,14 @@
     "review_reasons": [
       "no lexical match; open-set review"
     ]
+  },
+  {
+    "document_id": "d87e483d6103b5ede9cbdc60",
+    "state": "review",
+    "candidate_classes": [
+      "regime_state"
+    ],
+    "review_reasons": []
   },
   {
     "document_id": "73b81c9a19451f7ff8245c75",
@@ -28234,14 +29299,6 @@
     ]
   },
   {
-    "document_id": "c2fa4013ac751e0422f07a49",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "a6d383825584779645c9eb11",
     "state": "review",
     "candidate_classes": [],
@@ -28334,14 +29391,6 @@
     ]
   },
   {
-    "document_id": "c7f63b52ad3d01cb74a489ee",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "31a871ca84e544f2eec4a02a",
     "state": "review",
     "candidate_classes": [
@@ -28375,6 +29424,14 @@
     "candidate_classes": [
       "corporate_action_mna"
     ],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "7215a1a234f95f492724b315",
+    "state": "review",
+    "candidate_classes": [],
     "review_reasons": [
       "no lexical match; open-set review"
     ]
@@ -28570,14 +29627,6 @@
     ]
   },
   {
-    "document_id": "a40b4b1f3d8cf87f3444d53b",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "69148fed17bb84df0d090a0d",
     "state": "review",
     "candidate_classes": [],
@@ -28665,16 +29714,6 @@
     "candidate_classes": [],
     "review_reasons": [
       "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "198808681237d375867d829b",
-    "state": "review",
-    "candidate_classes": [
-      "cat_weather"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
     ]
   },
   {
@@ -28816,14 +29855,6 @@
     ]
   },
   {
-    "document_id": "5f85f5021f605e98515cef21",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "32e9f1462d2cc10f391d6282",
     "state": "review",
     "candidate_classes": [
@@ -28852,16 +29883,6 @@
     ]
   },
   {
-    "document_id": "9e27825cb99d57b6e1e9ef56",
-    "state": "review",
-    "candidate_classes": [
-      "cat_weather"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
     "document_id": "6fcfe3f377fcb295c65d14d7",
     "state": "review",
     "candidate_classes": [
@@ -28869,14 +29890,6 @@
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
-    "document_id": "ff1c4f47fa33401758ab8159",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
     ]
   },
   {
@@ -28998,16 +30011,6 @@
     ]
   },
   {
-    "document_id": "575a895bfb68ef6ffd86ae94",
-    "state": "review",
-    "candidate_classes": [
-      "cat_weather"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
     "document_id": "8b9f5159edef835775e4fe85",
     "state": "review",
     "candidate_classes": [],
@@ -29108,16 +30111,6 @@
     ]
   },
   {
-    "document_id": "3a4dc8f85d1de649f2b2905f",
-    "state": "review",
-    "candidate_classes": [
-      "insider_flow"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
     "document_id": "8ab8f9c8396b2b9427624941",
     "state": "review",
     "candidate_classes": [],
@@ -29154,6 +30147,16 @@
     "state": "review",
     "candidate_classes": [
       "capital_return"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "60ef0fe4e6d0b344bede352e",
+    "state": "review",
+    "candidate_classes": [
+      "labor_stop"
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
@@ -29216,10 +30219,10 @@
     ]
   },
   {
-    "document_id": "6a2ec7422361948b76b48211",
+    "document_id": "7cb19d9ab559c8eee221862c",
     "state": "review",
     "candidate_classes": [
-      "cat_weather"
+      "corporate_action_spinoff"
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
@@ -29269,14 +30272,6 @@
   },
   {
     "document_id": "474730ecc5f3aaad6802109c",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "363f912851f6ca4d73eb87f8",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -29384,14 +30379,6 @@
   },
   {
     "document_id": "05ad9d0cd6bc91095151e698",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "a103a68eb565f15138a7a0aa",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -29589,6 +30576,16 @@
     ]
   },
   {
+    "document_id": "9c4a8174cf0954ba5b3d04b6",
+    "state": "candidate",
+    "candidate_classes": [
+      "product_harm"
+    ],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "ec274e3c20370262c09f35c7",
     "state": "review",
     "candidate_classes": [],
@@ -29641,6 +30638,14 @@
     ]
   },
   {
+    "document_id": "148ee032f0bc2d00325be8d9",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "8c3e074e57f31ac79bfd9892",
     "state": "review",
     "candidate_classes": [],
@@ -29690,6 +30695,14 @@
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "db936b9947621fd6130413f6",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
     ]
   },
   {
@@ -29813,6 +30826,16 @@
     ]
   },
   {
+    "document_id": "4e02635adc63ad3319310dd5",
+    "state": "review",
+    "candidate_classes": [
+      "integrity"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
     "document_id": "0fd0ce16f26cfb090c1fada4",
     "state": "review",
     "candidate_classes": [],
@@ -29876,14 +30899,6 @@
   },
   {
     "document_id": "0f52b9c68cf49bb8f21ebd05",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "a78cbf7b66dea2bdf09de2b3",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -30009,16 +31024,6 @@
     ]
   },
   {
-    "document_id": "5b6153c05c8e3272e5846973",
-    "state": "review",
-    "candidate_classes": [
-      "cat_weather"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
     "document_id": "ab0e4aaca7ef92d5dd921213",
     "state": "review",
     "candidate_classes": [
@@ -30026,16 +31031,6 @@
     ],
     "review_reasons": [
       "Event stage requires review: prospective_or_proposed"
-    ]
-  },
-  {
-    "document_id": "9e4cc43fb7733488cb983179",
-    "state": "review",
-    "candidate_classes": [
-      "cat_weather"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
     ]
   },
   {
@@ -30078,6 +31073,14 @@
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "535bae2517c8bcc264c4e5ff",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
     ]
   },
   {
@@ -30192,6 +31195,14 @@
   },
   {
     "document_id": "1bfc50534c52c2b4ed309b30",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "0d4fc68fb67dd332658a6a1c",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -30467,6 +31478,14 @@
     ]
   },
   {
+    "document_id": "818a77147927eefb9b7172c5",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "8613e6125ea383b66ca19bb0",
     "state": "review",
     "candidate_classes": [],
@@ -30519,14 +31538,6 @@
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
-    "document_id": "e2525bd1d25b2dd90d3dfbe1",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
     ]
   },
   {
@@ -30715,16 +31726,6 @@
     "candidate_classes": [],
     "review_reasons": [
       "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "fec710a19ad4f6dee96594f7",
-    "state": "review",
-    "candidate_classes": [
-      "insider_flow"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
     ]
   },
   {
@@ -30994,16 +31995,6 @@
     ]
   },
   {
-    "document_id": "eff7d808c7234ae73eff118a",
-    "state": "review",
-    "candidate_classes": [
-      "cat_weather"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
     "document_id": "93726adedc1fadd717dbccef",
     "state": "review",
     "candidate_classes": [],
@@ -31252,6 +32243,14 @@
     ]
   },
   {
+    "document_id": "cdc2a8d185940d0854209d4c",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "84a85e31af2d05cdef0cdefd",
     "state": "review",
     "candidate_classes": [],
@@ -31329,14 +32328,6 @@
     ]
   },
   {
-    "document_id": "57406447734bd40bc749a58f",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "25eaa926a61be45e2b87497b",
     "state": "review",
     "candidate_classes": [],
@@ -31366,16 +32357,6 @@
     "candidate_classes": [],
     "review_reasons": [
       "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "d81e12a6eaf4e24579375ef4",
-    "state": "review",
-    "candidate_classes": [
-      "cat_weather"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
     ]
   },
   {
@@ -31610,6 +32591,16 @@
     "document_id": "6d094b47892c454595cd38b0",
     "state": "review",
     "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "2d780530d3851552fb02b727",
+    "state": "candidate",
+    "candidate_classes": [
+      "product_harm"
+    ],
     "review_reasons": [
       "no lexical match; open-set review"
     ]
@@ -32193,6 +33184,16 @@
     ]
   },
   {
+    "document_id": "d62c31ffdc47f21cf296b86b",
+    "state": "review",
+    "candidate_classes": [
+      "labor_stop"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
     "document_id": "0aa69855c297f05c91be73c8",
     "state": "review",
     "candidate_classes": [
@@ -32497,6 +33498,14 @@
     ]
   },
   {
+    "document_id": "f53bbb43efe8257b269cdac0",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "f070682176bafc941b1cc56a",
     "state": "review",
     "candidate_classes": [
@@ -32552,6 +33561,14 @@
   },
   {
     "document_id": "9773651fb152e34364059422",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "0f6d45ef13ca228d2cd2b4e9",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -32807,14 +33824,6 @@
     ]
   },
   {
-    "document_id": "11867e9a08173934d338a7c4",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "faeb2a1d2a2aba13ef479bbc",
     "state": "review",
     "candidate_classes": [],
@@ -32954,16 +33963,6 @@
     "candidate_classes": [],
     "review_reasons": [
       "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "dddc7a9a25d9670efcfd2eb6",
-    "state": "review",
-    "candidate_classes": [
-      "cat_weather"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
     ]
   },
   {
@@ -33356,6 +34355,14 @@
     ]
   },
   {
+    "document_id": "27644503e249d4bdc2e622d9",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "3e9b53278011e5c3714736ef",
     "state": "review",
     "candidate_classes": [],
@@ -33385,6 +34392,16 @@
     "candidate_classes": [],
     "review_reasons": [
       "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "e97d2001c34fd04bb19a5371",
+    "state": "review",
+    "candidate_classes": [
+      "corporate_action_spinoff"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
     ]
   },
   {
@@ -33421,6 +34438,14 @@
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "c0ec2c32deb76f225c12578d",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
     ]
   },
   {
@@ -33561,14 +34586,6 @@
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
-    "document_id": "4ce13f1c6f4e83449fc2e850",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
     ]
   },
   {
@@ -33766,6 +34783,14 @@
     ]
   },
   {
+    "document_id": "1f0d80ebd545cc23dd0601b0",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "8653ae8ba087f0e5584040f9",
     "state": "review",
     "candidate_classes": [],
@@ -33857,14 +34882,6 @@
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
-    "document_id": "da162c5bee6b5bc6a45fa8ad",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
     ]
   },
   {
@@ -33994,21 +35011,21 @@
     ]
   },
   {
-    "document_id": "43127bf668454483ddcb492d",
-    "state": "review",
-    "candidate_classes": [
-      "capacity"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
     "document_id": "8814407e06fc979f805bdc53",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
       "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "fa7249c295fa92ac7d6ee2eb",
+    "state": "review",
+    "candidate_classes": [
+      "labor_stop"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
     ]
   },
   {
@@ -34214,16 +35231,6 @@
     ]
   },
   {
-    "document_id": "467238cda3422d6e8be2946e",
-    "state": "review",
-    "candidate_classes": [
-      "cat_weather"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
     "document_id": "a8299ebd22e3d82f3ff5e3fd",
     "state": "review",
     "candidate_classes": [
@@ -34272,6 +35279,14 @@
     ]
   },
   {
+    "document_id": "9b80f1879164b19d53755076",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "0d00717f500265e03f2cc04d",
     "state": "candidate",
     "candidate_classes": [
@@ -34315,24 +35330,6 @@
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
-    "document_id": "942ff47256659b6a3f08baf5",
-    "state": "review",
-    "candidate_classes": [
-      "corporate_action_spinoff"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
-    "document_id": "9b312b86693ac2cd22e72a00",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
     ]
   },
   {
@@ -34463,6 +35460,14 @@
     ]
   },
   {
+    "document_id": "8470d26effb96cb295a21857",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "58696d846baae086ee7f787a",
     "state": "review",
     "candidate_classes": [],
@@ -34528,14 +35533,6 @@
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
-    "document_id": "d76db09e0be41500177eb261",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
     ]
   },
   {
@@ -34683,6 +35680,16 @@
     ]
   },
   {
+    "document_id": "eed050ba7458b5989d0f8229",
+    "state": "review",
+    "candidate_classes": [
+      "corporate_action_spinoff"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
     "document_id": "77d38aaf731c98b6fc69001c",
     "state": "review",
     "candidate_classes": [
@@ -34730,14 +35737,6 @@
   },
   {
     "document_id": "b6d86258ff76ed3d786fc6d8",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "322e9e3822ad275b26fafbd8",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -35112,6 +36111,14 @@
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "30c925dc09b842384b84ddfb",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
     ]
   },
   {
@@ -35985,13 +36992,11 @@
     ]
   },
   {
-    "document_id": "4b8b993b235951645a322532",
+    "document_id": "f6837578dc81b8281dac7501",
     "state": "review",
-    "candidate_classes": [
-      "insider_flow"
-    ],
+    "candidate_classes": [],
     "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
+      "no lexical match; open-set review"
     ]
   },
   {
@@ -36022,6 +37027,14 @@
   },
   {
     "document_id": "80d581dd241ca8eaeaa218bf",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "97c6093655317bfe44a81bac",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -36178,14 +37191,6 @@
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
-    "document_id": "a1df00a12be87c7072b2c788",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
     ]
   },
   {
@@ -36357,6 +37362,14 @@
     ]
   },
   {
+    "document_id": "2779fa3dc14b2141cadec36d",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "a6dc9ea375ef4464a0224836",
     "state": "review",
     "candidate_classes": [],
@@ -36396,24 +37409,6 @@
     "document_id": "3c224a0b715a24dde2f99b1d",
     "state": "review",
     "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "f32ccf4abe779c2790f5489b",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "9d1fa998d2e0db4ff50b106c",
-    "state": "candidate",
-    "candidate_classes": [
-      "regulatory_probe"
-    ],
     "review_reasons": [
       "no lexical match; open-set review"
     ]
@@ -36699,16 +37694,6 @@
     ]
   },
   {
-    "document_id": "fba04997f9a913550d0f5bca",
-    "state": "candidate",
-    "candidate_classes": [
-      "market_structure"
-    ],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "6742277fb5f9e4dd69f83d6e",
     "state": "review",
     "candidate_classes": [],
@@ -36743,6 +37728,14 @@
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "a8112e48260752dc9cf3466a",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
     ]
   },
   {
@@ -36892,6 +37885,16 @@
     ]
   },
   {
+    "document_id": "2a1edc25c7ae96fd4fc12082",
+    "state": "candidate",
+    "candidate_classes": [
+      "product_harm"
+    ],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "1011712643a877fe6b72debf",
     "state": "candidate",
     "candidate_classes": [
@@ -36938,16 +37941,6 @@
     ]
   },
   {
-    "document_id": "da9c8cafb34bbf224fcd69a2",
-    "state": "review",
-    "candidate_classes": [
-      "regime_break"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
     "document_id": "2cb893fb06bf1b5ae35d2564",
     "state": "review",
     "candidate_classes": [],
@@ -36957,6 +37950,14 @@
   },
   {
     "document_id": "87dc5681c7805b13a5e4c2c0",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "076921d5755a52d83dd3beb5",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -36974,6 +37975,14 @@
     ]
   },
   {
+    "document_id": "7829d67e7ba878e949b30e7d",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "a0f86377d6e4f196f05fb0ef",
     "state": "review",
     "candidate_classes": [
@@ -36981,14 +37990,6 @@
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
-    "document_id": "b7bfbe91653ba4666afcbb68",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
     ]
   },
   {
@@ -37055,6 +38056,16 @@
     "document_id": "76e7673a52b2cb338a5a18ef",
     "state": "review",
     "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "5dc94f9999de374d053434cb",
+    "state": "candidate",
+    "candidate_classes": [
+      "corporate_action_mna"
+    ],
     "review_reasons": [
       "no lexical match; open-set review"
     ]
@@ -37192,6 +38203,14 @@
     ]
   },
   {
+    "document_id": "670e3dc602fbf164123b353a",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "d27e45846a19748a8a22f72c",
     "state": "review",
     "candidate_classes": [],
@@ -37267,16 +38286,6 @@
     ],
     "review_reasons": [
       "rumor wording; verification required"
-    ]
-  },
-  {
-    "document_id": "756f2a3f7a39ba9973fd56ea",
-    "state": "review",
-    "candidate_classes": [
-      "cat_weather"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
     ]
   },
   {
@@ -37381,14 +38390,6 @@
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
-    "document_id": "7ea5145fbf17ee8b4e78cb9a",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
     ]
   },
   {
@@ -37580,14 +38581,6 @@
     ]
   },
   {
-    "document_id": "b9525a408b4d81b241bf801b",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "796415acf1526e46ebf3928f",
     "state": "candidate",
     "candidate_classes": [],
@@ -37771,14 +38764,6 @@
   },
   {
     "document_id": "b1846af1f03c12fb1bc2cef4",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "b397c688e307852a399b25b0",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -38006,6 +38991,14 @@
     ]
   },
   {
+    "document_id": "8f989f100bc2fc6dfd0bbe0a",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "4475e2160b7cdbc10662490e",
     "state": "review",
     "candidate_classes": [
@@ -38047,6 +39040,16 @@
     "candidate_classes": [],
     "review_reasons": [
       "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "0d714dd67b42f8699a5bc4a8",
+    "state": "review",
+    "candidate_classes": [
+      "labor_stop"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
     ]
   },
   {
@@ -38192,6 +39195,14 @@
     ]
   },
   {
+    "document_id": "8b7bf61ed19a1d20d046214a",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "622237a3e60e59030ea3cdb0",
     "state": "candidate",
     "candidate_classes": [
@@ -38275,16 +39286,6 @@
     "candidate_classes": [],
     "review_reasons": [
       "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "21d999bf50ace4b97bbfacb5",
-    "state": "review",
-    "candidate_classes": [
-      "cat_weather"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
     ]
   },
   {
@@ -38450,16 +39451,6 @@
     ]
   },
   {
-    "document_id": "8c52b7e4d908612b86f67215",
-    "state": "review",
-    "candidate_classes": [
-      "cat_weather"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
     "document_id": "452baf3c31130e3699d68608",
     "state": "review",
     "candidate_classes": [],
@@ -38487,14 +39478,6 @@
   },
   {
     "document_id": "f6ec511cf5640d5612f14f9b",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "043331a324c401aa78afecb8",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -38592,14 +39575,6 @@
     ]
   },
   {
-    "document_id": "9c2a6828e8d1bcf66225870e",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "c9882fc3ec2cd30f3267d6da",
     "state": "review",
     "candidate_classes": [],
@@ -38609,14 +39584,6 @@
   },
   {
     "document_id": "b3df36cdfcf386ecc0ec519b",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "5e70340dc6549cd524ff90a2",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -38682,14 +39649,6 @@
   },
   {
     "document_id": "7b1b438c9fb8da2258b1dc9e",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "22632a946e218b0feeceadaa",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -39051,14 +40010,6 @@
     ]
   },
   {
-    "document_id": "a4cf3404800eba4f60816ff4",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "6242a37d4c5789b65e9f38f4",
     "state": "review",
     "candidate_classes": [],
@@ -39101,6 +40052,16 @@
     ]
   },
   {
+    "document_id": "571a259be833d738318f4457",
+    "state": "review",
+    "candidate_classes": [
+      "blast_legal"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
     "document_id": "4997e0186156ea8dbc2fd10f",
     "state": "review",
     "candidate_classes": [],
@@ -39116,6 +40077,14 @@
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "4a42ee07dd7a3904b617c4aa",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
     ]
   },
   {
@@ -39287,15 +40256,17 @@
     ]
   },
   {
-    "document_id": "d91a53036874656e4fc5e333",
+    "document_id": "c74edbd28e0440fac2ed9b31",
     "state": "review",
-    "candidate_classes": [],
+    "candidate_classes": [
+      "channel_stock"
+    ],
     "review_reasons": [
-      "no lexical match; open-set review"
+      "Lexical hints lack a supported event classification; contextual review required"
     ]
   },
   {
-    "document_id": "c74edbd28e0440fac2ed9b31",
+    "document_id": "81e15a4e73f584d661cfa2ea",
     "state": "review",
     "candidate_classes": [
       "channel_stock"
@@ -39611,16 +40582,6 @@
     ]
   },
   {
-    "document_id": "e10d7821bde39649e23c22ce",
-    "state": "review",
-    "candidate_classes": [
-      "cat_weather"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
     "document_id": "00a60ff27197d514390156cb",
     "state": "review",
     "candidate_classes": [],
@@ -39656,16 +40617,6 @@
   },
   {
     "document_id": "996bec2c5829802c63a5e9a1",
-    "state": "review",
-    "candidate_classes": [
-      "regime_break"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
-    "document_id": "720f1217c9b22603f3e8acb4",
     "state": "review",
     "candidate_classes": [
       "regime_break"
@@ -39777,6 +40728,14 @@
     ]
   },
   {
+    "document_id": "64300e3eaa57fc7ba13b0dcc",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "15a65bf7f327e68e8e8ae3ee",
     "state": "review",
     "candidate_classes": [],
@@ -39827,6 +40786,16 @@
     ]
   },
   {
+    "document_id": "0b66b83d48839752bdf9985f",
+    "state": "review",
+    "candidate_classes": [
+      "input_cost"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
     "document_id": "bc778d9944bdc03d51d17bb1",
     "state": "review",
     "candidate_classes": [
@@ -39858,16 +40827,6 @@
     "candidate_classes": [],
     "review_reasons": [
       "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "d3386d2747d5e26b13b12688",
-    "state": "review",
-    "candidate_classes": [
-      "insider_flow"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
     ]
   },
   {
@@ -39903,6 +40862,14 @@
     ]
   },
   {
+    "document_id": "59cab20a1cef01d6a550a3d1",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "528dc82a43503deb75c04326",
     "state": "review",
     "candidate_classes": [],
@@ -39921,11 +40888,9 @@
   {
     "document_id": "84843b0a7f03109096d4602b",
     "state": "review",
-    "candidate_classes": [
-      "factor_impulse"
-    ],
+    "candidate_classes": [],
     "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
+      "no lexical match; open-set review"
     ]
   },
   {
@@ -39969,14 +40934,6 @@
     ]
   },
   {
-    "document_id": "c03620c45fd3634429559216",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "1305dc66849463eb0d65238f",
     "state": "review",
     "candidate_classes": [],
@@ -40010,6 +40967,14 @@
   },
   {
     "document_id": "6a086020a13c97239a2693c6",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "13ece2ee737befc5955d2cd3",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
@@ -40087,16 +41052,6 @@
     "state": "review",
     "candidate_classes": [
       "corporate_action_mna"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
-    "document_id": "6ee3c5b60deb0398db0ef70b",
-    "state": "review",
-    "candidate_classes": [
-      "cat_weather"
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
@@ -40187,16 +41142,6 @@
     ]
   },
   {
-    "document_id": "c74078cf45038858e5d25195",
-    "state": "review",
-    "candidate_classes": [
-      "cat_weather"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
     "document_id": "221c3424831033376b0c2667",
     "state": "review",
     "candidate_classes": [],
@@ -40238,26 +41183,6 @@
     ],
     "review_reasons": [
       "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "ca06deea36e9d2121d2f9f83",
-    "state": "review",
-    "candidate_classes": [
-      "cat_weather"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
-    "document_id": "85fb8ea724b72b05f507c466",
-    "state": "review",
-    "candidate_classes": [
-      "cat_weather"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
     ]
   },
   {
@@ -40347,16 +41272,6 @@
     ]
   },
   {
-    "document_id": "ea90de8998c4fd9ae4c649b0",
-    "state": "review",
-    "candidate_classes": [
-      "cat_weather"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
     "document_id": "07ac00d4756bfbaa8707a253",
     "state": "review",
     "candidate_classes": [],
@@ -40373,11 +41288,29 @@
     ]
   },
   {
-    "document_id": "9e374405720b7d02ab02e561",
+    "document_id": "188e47057645cce03c615437",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
       "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "420b83b38ddb8133f58a5fef",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "1b1c4c81896d023a4e3407db",
+    "state": "review",
+    "candidate_classes": [
+      "labor_stop"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
     ]
   },
   {
@@ -40561,6 +41494,14 @@
     ]
   },
   {
+    "document_id": "6174cafcf356845022790d78",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "40c645ee1e6de5e16b3078b5",
     "state": "review",
     "candidate_classes": [],
@@ -40666,22 +41607,6 @@
     ]
   },
   {
-    "document_id": "2c545a374babbb5d7d5843c3",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "279f09f9a828a9ae921a6831",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "171f18cd10a8dab825dc765b",
     "state": "review",
     "candidate_classes": [],
@@ -40697,14 +41622,6 @@
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
-    "document_id": "97932d3045b0d348142d6bb5",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
     ]
   },
   {
@@ -40879,14 +41796,6 @@
     ]
   },
   {
-    "document_id": "49b9c0b9295c15ebd75e2dfd",
-    "state": "review",
-    "candidate_classes": [
-      "regime_state"
-    ],
-    "review_reasons": []
-  },
-  {
     "document_id": "c55e96a7d775a129d4a60c1c",
     "state": "candidate",
     "candidate_classes": [
@@ -41016,6 +41925,24 @@
     ]
   },
   {
+    "document_id": "dd60f33b64c5f1d0540a1fa2",
+    "state": "review",
+    "candidate_classes": [
+      "labor_stop"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "eee95b3fd6f8734c6889c5ad",
+    "state": "review",
+    "candidate_classes": [],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "33f68c46ee45bf9f94649492",
     "state": "review",
     "candidate_classes": [
@@ -41124,14 +42051,6 @@
     ]
   },
   {
-    "document_id": "6999862c81f192d20c48a6ce",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "39652a1403e77b9d52f21fe4",
     "state": "review",
     "candidate_classes": [],
@@ -41212,6 +42131,16 @@
     ]
   },
   {
+    "document_id": "e889386f87d37cbc60ad007b",
+    "state": "candidate",
+    "candidate_classes": [
+      "product_harm"
+    ],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
     "document_id": "966685b2f5fd22004789b36d",
     "state": "review",
     "candidate_classes": [
@@ -41219,14 +42148,6 @@
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
-    "document_id": "bbd909bde605ae0cced7cd03",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
     ]
   },
   {
@@ -41243,16 +42164,6 @@
     "candidate_classes": [],
     "review_reasons": [
       "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "fec665690e84ff4f8cb83391",
-    "state": "review",
-    "candidate_classes": [
-      "access_control"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
     ]
   },
   {
@@ -41281,6 +42192,14 @@
     "candidate_classes": [
       "corporate_action_mna"
     ],
+    "review_reasons": [
+      "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "21c55f234972c13ed04b9572",
+    "state": "review",
+    "candidate_classes": [],
     "review_reasons": [
       "no lexical match; open-set review"
     ]
@@ -41554,24 +42473,6 @@
     ]
   },
   {
-    "document_id": "0db2cdb488777a6ede2f49e6",
-    "state": "review",
-    "candidate_classes": [
-      "cat_weather"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
-    "document_id": "cbe58a61ba3e95ce165c4d24",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "8855fcab1aa4de5ddc91ffe4",
     "state": "review",
     "candidate_classes": [],
@@ -41665,14 +42566,6 @@
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
-    "document_id": "1d3625bcd821a4e5fb4493f9",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
     ]
   },
   {
@@ -41774,16 +42667,6 @@
     ]
   },
   {
-    "document_id": "81b37809588936d85946c435",
-    "state": "review",
-    "candidate_classes": [
-      "cat_weather"
-    ],
-    "review_reasons": [
-      "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
     "document_id": "e5570fd0390b744360425b48",
     "state": "review",
     "candidate_classes": [],
@@ -41799,14 +42682,6 @@
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
-    "document_id": "771487c5fcdada6b0c4c161e",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
     ]
   },
   {
@@ -41849,6 +42724,16 @@
     "candidate_classes": [],
     "review_reasons": [
       "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "0d62b9cd03036d493d7f7f77",
+    "state": "review",
+    "candidate_classes": [
+      "cat_weather"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
     ]
   },
   {
@@ -42104,6 +42989,16 @@
     ]
   },
   {
+    "document_id": "5b33ff5d52fb15f43aa65351",
+    "state": "review",
+    "candidate_classes": [
+      "labor_stop"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
     "document_id": "a804585f5b195c03cee65252",
     "state": "review",
     "candidate_classes": [],
@@ -42186,11 +43081,13 @@
     ]
   },
   {
-    "document_id": "343af5d704f82f65928c211b",
+    "document_id": "43e059579679df973d1529f2",
     "state": "review",
-    "candidate_classes": [],
+    "candidate_classes": [
+      "corporate_action_spinoff"
+    ],
     "review_reasons": [
-      "no lexical match; open-set review"
+      "Lexical hints lack a supported event classification; contextual review required"
     ]
   },
   {
@@ -42262,6 +43159,16 @@
     "state": "review",
     "candidate_classes": [
       "corporate_action_spinoff"
+    ],
+    "review_reasons": [
+      "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "60873584c2089bc8b96559bc",
+    "state": "review",
+    "candidate_classes": [
+      "labor_stop"
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
@@ -42341,14 +43248,6 @@
     ],
     "review_reasons": [
       "Lexical hints lack a supported event classification; contextual review required"
-    ]
-  },
-  {
-    "document_id": "62ce01d9b580c36979ce18e8",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
     ]
   },
   {
@@ -42434,26 +43333,11 @@
     ]
   },
   {
-    "document_id": "f5cc8f4f11841ee01d91058e",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
-    "document_id": "b5ce164d76b68deae62dde2a",
-    "state": "review",
-    "candidate_classes": [],
-    "review_reasons": [
-      "no lexical match; open-set review"
-    ]
-  },
-  {
     "document_id": "f2b56775932ca5bf56cd54e8",
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
+      "outside_window",
       "no lexical match; open-set review"
     ]
   },
@@ -42462,7 +43346,18 @@
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
+      "outside_window",
       "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "51febf9d2b7fb15c59d27be8",
+    "state": "review",
+    "candidate_classes": [
+      "access_control"
+    ],
+    "review_reasons": [
+      "outside_window"
     ]
   },
   {
@@ -42470,7 +43365,38 @@
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
+      "outside_window",
       "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "b5430a0f59638ae9a4c629de",
+    "state": "review",
+    "candidate_classes": [
+      "subsidy"
+    ],
+    "review_reasons": [
+      "outside_window"
+    ]
+  },
+  {
+    "document_id": "1d9f857d43b4614bd1cd3ff6",
+    "state": "review",
+    "candidate_classes": [
+      "blast_cyber"
+    ],
+    "review_reasons": [
+      "outside_window"
+    ]
+  },
+  {
+    "document_id": "c47d7aef990df104a2926903",
+    "state": "review",
+    "candidate_classes": [
+      "input_cost"
+    ],
+    "review_reasons": [
+      "outside_window"
     ]
   },
   {
@@ -42478,6 +43404,7 @@
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
+      "outside_window",
       "no lexical match; open-set review"
     ]
   },
@@ -42486,6 +43413,7 @@
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
+      "outside_window",
       "no lexical match; open-set review"
     ]
   },
@@ -42496,6 +43424,7 @@
       "regulatory_probe"
     ],
     "review_reasons": [
+      "outside_window",
       "Lexical hints lack a supported event classification; contextual review required"
     ]
   },
@@ -42506,7 +43435,19 @@
       "standard_mandate"
     ],
     "review_reasons": [
+      "outside_window",
       "Lexical hints lack a supported event classification; contextual review required"
+    ]
+  },
+  {
+    "document_id": "88aefcbc3cdcafb4f881b809",
+    "state": "review",
+    "candidate_classes": [
+      "standard_mandate",
+      "access_control"
+    ],
+    "review_reasons": [
+      "outside_window"
     ]
   },
   {
@@ -42514,6 +43455,7 @@
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
+      "outside_window",
       "no lexical match; open-set review"
     ]
   },
@@ -42522,6 +43464,7 @@
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
+      "outside_window",
       "no lexical match; open-set review"
     ]
   },
@@ -42530,6 +43473,7 @@
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
+      "outside_window",
       "no lexical match; open-set review"
     ]
   },
@@ -42538,7 +43482,18 @@
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
+      "outside_window",
       "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "bcd54d1cc67487990399f8c3",
+    "state": "review",
+    "candidate_classes": [
+      "market_structure"
+    ],
+    "review_reasons": [
+      "outside_window"
     ]
   },
   {
@@ -42546,7 +43501,18 @@
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
+      "outside_window",
       "no lexical match; open-set review"
+    ]
+  },
+  {
+    "document_id": "5e5c4c961a7b0c1cb0a09f54",
+    "state": "review",
+    "candidate_classes": [
+      "blast_cyber"
+    ],
+    "review_reasons": [
+      "outside_window"
     ]
   },
   {
@@ -42554,6 +43520,7 @@
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
+      "outside_window",
       "no lexical match; open-set review"
     ]
   },
@@ -42562,6 +43529,7 @@
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
+      "outside_window",
       "no lexical match; open-set review"
     ]
   },
@@ -42570,6 +43538,7 @@
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
+      "outside_window",
       "no lexical match; open-set review"
     ]
   },
@@ -42580,6 +43549,7 @@
       "distress_restruct"
     ],
     "review_reasons": [
+      "outside_window",
       "Lexical hints lack a supported event classification; contextual review required"
     ]
   },
@@ -42588,6 +43558,7 @@
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
+      "outside_window",
       "no lexical match; open-set review"
     ]
   },
@@ -42598,6 +43569,7 @@
       "blast_legal"
     ],
     "review_reasons": [
+      "outside_window",
       "Lexical hints lack a supported event classification; contextual review required"
     ]
   },
@@ -42606,6 +43578,7 @@
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
+      "outside_window",
       "no lexical match; open-set review"
     ]
   },
@@ -42614,6 +43587,7 @@
     "state": "review",
     "candidate_classes": [],
     "review_reasons": [
+      "outside_window",
       "no lexical match; open-set review"
     ]
   },
