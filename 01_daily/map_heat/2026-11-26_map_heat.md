@@ -1,6 +1,6 @@
 # MAP HEAT — 2026-11-26
 
-Export `finviz_2026-11-25.csv` · 11786 names · generated 2026-11-26T04:51:00.346151-05:00
+Export `finviz_2026-11-26.csv` · 11786 names · generated 2026-11-26T05:10:22.998401-05:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
@@ -280,31 +280,31 @@ COLD (1w):
 - **Sector Rotation / Combinations** 0.0% 1d -2.9% 1w · FV, GRNY, SECT
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 5 min **MNTN** Kaplan Fox Encourages MNTN, Inc. (MNTN) Investors with Significant Losses to Contact the Firm Before January 19, 2027 (Newsfile)
-- 15 min **ALVO** Alvotech to Appeal US Preliminary Injunction Decision Relating to AVT05 (GlobeNewswire)
-- 15 min **GIL** Kaplan Fox & Kilsheimer LLP Encourages Gildan Activewear Inc. (GIL) Investors With Losses to Seek Appointment as Lead Plaintiff Before December 14, 2026 (Newsfile)
-- 15 min **FRVO** Kaplan Fox Encourages Fervo Energy Company (FRVO) Investors with Significant Losses to Contact the Firm Before January 19, 2027 (Newsfile)
-- 19 min **FRHC** Tokenized Security Linked to Freedom Holding Corp. Shares Listed on Binance, Expanding Investor Access (GlobeNewswire)
-- 27 min **ANT,BLK** ANT Stock Gains Overnight: US Exchange-Traded Funds Anthropic Holdings Swell To Over $2B (Stocktwits)
-- 35 min **ENSG** Kaplan Fox Encourages The Ensign Group, Inc. (ENSG) Investors Seeking Recovery to Contact the Firm Before December 7, 2026 (Newsfile)
-- 40 min **DELL,MORN** DELL Stock Heads For Worst Month Since 2021: Morningstar Sees Risk Ahead For Dell Despite AI-Led Earnings Beat (Stocktwits)
-- 48 min **EQNR** Equinor cuts 2026 production guidance after shut-ins at three fields (Offshore Technology)
-- 52 min **SPCX** Musk says will give two SpaceX shares to 'every child in America' (AFP)
+- 7 min **TTGT** Omdia: OLED Display Shipments Featuring Active Privacy View to Reach 91.7 Million Units by 2033 (Business Wire)
+- 10 min **NVDA** Huang's Return Makes a Congressional Hearing Must-See TV for Investors (Barrons.com)
+- 12 min **MU,SKHY** SK Hynix seeks TSMC 3nm expertise as Micron steps up hiring (DigiTimes)
+- 19 min **SHEL** Transaction in Own Shares (GlobeNewswire)
+- 25 min **MNTN** Kaplan Fox Encourages MNTN, Inc. (MNTN) Investors with Significant Losses to Contact the Firm Before January 19, 2027 (Newsfile)
+- 35 min **ALVO** Alvotech to Appeal US Preliminary Injunction Decision Relating to AVT05 (GlobeNewswire)
+- 35 min **GIL** Kaplan Fox & Kilsheimer LLP Encourages Gildan Activewear Inc. (GIL) Investors With Losses to Seek Appointment as Lead Plaintiff Before December 14, 2026 (Newsfile)
+- 35 min **FRVO** Kaplan Fox Encourages Fervo Energy Company (FRVO) Investors with Significant Losses to Contact the Firm Before January 19, 2027 (Newsfile)
+- 39 min **FRHC** Tokenized Security Linked to Freedom Holding Corp. Shares Listed on Binance, Expanding Investor Access (GlobeNewswire)
+- 46 min **ANT,BLK** ANT Stock Gains Overnight: US Exchange-Traded Funds Anthropic Holdings Swell To Over $2B (Stocktwits)
+- 55 min **ENSG** Kaplan Fox Encourages The Ensign Group, Inc. (ENSG) Investors Seeking Recovery to Contact the Firm Before December 7, 2026 (Newsfile)
+- 1 hour **DELL,MORN** DELL Stock Heads For Worst Month Since 2021: Morningstar Sees Risk Ahead For Dell Despite AI-Led Earnings Beat (Stocktwits)
+- 1 hour **EQNR** Equinor cuts 2026 production guidance after shut-ins at three fields (Offshore Technology)
+- 1 hour **SPCX** Musk says will give two SpaceX shares to 'every child in America' (AFP)
 - 1 hour **RIO,RR** FTSE 100 today: Stocks rise as tech rebound offsets tariff worries (Investing.com)
 - 1 hour **CIGI** Three Iberian cities in Europe's 2027 top 10 for property investors (Euronews)
 - 1 hour **AMBA,CRWD,DKNG,INSM,LI** Nvidia Wins Back Wall Street Backing As Jensen Huang Returns; CRWD, LI Stocks Score Upgrades While DKNG, AMBA Face Pressure (Stocktwits)
 - 1 hour **NVDA,SKHY** Asian stocks stabilise after tech rout (AFP)
 - 1 hour **ASTS,BKSY,LUNR,RKLB,SPCX** SPCX Wins Million-Satellite Nod And Retail Attention  But ASTS Leads Space Stocks Into Thanksgiving (Stocktwits)
 - 1 hour **DELL,NVDA,SMCI** Nvidia Reportedly Halts AI Server Shipments To Southeast Asia Ahead Of Jensen Huang's Congress Testimony (Stocktwits)
-- 1 hour **ENRD** Einride Brings Essity into Its Fast-Growing Electric Freight Network (GlobeNewswire)
-- 1 hour **CSGP** CoStar Data Shows Noho Office Leasing Nearing 900,000 Sq. Ft. (Business Wire)
-- 1 hour **NVDA,SPGI** S&P Weighs Nvidia Downgrade Despite Huang's Return. What Would a Cut Mean? (BeInCrypto)
-- 1 hour **CEG** Constellation concludes 4.4GW natural gas-fired power plants sale (Power Technology)
-- 1 hour **MA** Singapore-based Debia partners with Mastercard to pilot agentic commerce (Electronic Payments)
-- 1 hour **RACE,UBS** UBS names its top European luxury stock picks for 2027 (Investing.com)
-- 2 hours **NVDA** Nvidia Could Shift Chips To Better-Funded Buyers As Neoclouds Face Shakeout: Analyst Sees Smaller Top Tier (Stocktwits)
-- 2 hours **AAPL,ANT,MSFT,NVDA** Apple On Track To Become Novembers Mag7 Winner  Nvidia Takes The Biggest Hit (Stocktwits)
-- 2 hours **IBRX** IBRX Eyes Red Week As ImmunityBio Moves To Lift Share Cap To 2B  Retail Traders Split Over Repaying Debt With Stock (Stocktwits)
+- 2 hours **ENRD** Einride Brings Essity into Its Fast-Growing Electric Freight Network (GlobeNewswire)
+- 2 hours **CSGP** CoStar Data Shows Noho Office Leasing Nearing 900,000 Sq. Ft. (Business Wire)
+- 2 hours **IBM,KD** Bull of the Day: Kyndryl Holdings (KD) (Zacks)
+- 2 hours **NVDA,SPGI** S&P Weighs Nvidia Downgrade Despite Huang's Return. What Would a Cut Mean? (BeInCrypto)
+- 2 hours **CEG** Constellation concludes 4.4GW natural gas-fired power plants sale (Power Technology)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.

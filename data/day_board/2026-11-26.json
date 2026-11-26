@@ -1,16 +1,19 @@
 {
   "date": "2026-11-26",
-  "generated_at": "2026-11-26T05:07:51.755672-05:00",
+  "generated_at": "2026-11-26T05:10:23.432460-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-11-26_predict.md` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-11-26_judge.md` \u2014 missing"
+    "MISSING News actions JSON `01_daily/news/2026-11-26_actions.json` \u2014 missing",
+    "MISSING News judge MD `01_daily/news/2026-11-26_judge.md` \u2014 missing",
+    "MISSING Weather JSON `01_daily/weather/2026-11-26_weather.json` \u2014 missing",
+    "MISSING AB checklist enriched `data/ab_checklist/2026-11-26_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
-    "ok": 4,
-    "partial": 4,
-    "fail": 0,
+    "ok": 1,
+    "partial": 3,
+    "fail": 4,
     "n": 8
   },
   "processes": [
@@ -18,11 +21,11 @@
       "key": "postclose",
       "name": "Post-close research",
       "yaml": "map_heat_postclose.yml",
-      "status": "OK",
+      "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 2,
+      "n_req_ok": 1,
       "n_req": 2,
-      "n_opt_ok": 2,
+      "n_opt_ok": 1,
       "n_opt": 2,
       "files": [
         {
@@ -30,10 +33,10 @@
           "name": "Captain baseline JSON",
           "path": "01_daily/map_heat/2026-11-26_research_baseline.json",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 187990,
-          "said": "postclose_baseline \u00b7 141 cards \u00b7 HEAT=128 SPLIT=9 OVERRIDE=4 \u00b7 err Basic Materials:coverage:0/8<required:1",
+          "status": "MISSING",
+          "reason": "postclose_baseline_missing",
+          "size": 0,
+          "said": "postclose_baseline_missing",
           "bullets": []
         },
         {
@@ -41,14 +44,11 @@
           "name": "Captain baseline MD",
           "path": "01_daily/map_heat/2026-11-26_research_baseline.md",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 25397,
-          "said": "MAP HEAT RESEARCH \u2014 2026-11-25",
-          "bullets": [
-            "141 captain cards \u00b7 size_gate=False set by pre-open refresh",
-            "CAPTAIN CARDS"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "heat_json",
@@ -57,7 +57,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 271969,
+          "size": 271622,
           "said": "morning_overlay \u00b7 11786 names \u00b7 hot Mortgage Finance, Metal Fabrication, Apparel Retail, Furnishings, Fixtures & Appliances \u00b7 cold Shell Companies, Silver, Other Precious Metals & Mining",
           "bullets": []
         },
@@ -68,10 +68,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 18182,
+          "size": 18026,
           "said": "MAP HEAT \u2014 2026-11-26",
           "bullets": [
-            "Export `finviz_2026-11-25.csv` \u00b7 11786 names \u00b7 generated 2026-11-26T04:51:00.346151-05:00",
+            "Export `finviz_2026-11-26.csv` \u00b7 11786 names \u00b7 generated 2026-11-26T05:10:22.998401-05:00",
             "TAPE (live futures)"
           ]
         }
@@ -97,12 +97,12 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 95710,
-          "said": "855 tickers \u00b7 188 signals \u00b7 top A, ADI, ADSK, AMGN, BABA, BHP, BN, CCEP",
+          "size": 94205,
+          "said": "775 tickers \u00b7 189 signals \u00b7 top A, ADI, ADP, ADSK, AMD, AMGN, AMZN, AVGO",
           "bullets": [
             "Agilent earnings analysis: questions answered and next catalysts",
-            "Analog Devices broadens growth beyond AI as industrial demand recovers",
-            "Autodesk Delivers Another Beat-And-Raise, But A Softer Q4 Setup And Flat Cash Guide Temper The Upside"
+            "Analog Devices Inc. stock outperforms competitors on strong trading day",
+            "Wedbush starts Robinhood, Coinbase at Outperform in fintech coverage launch"
           ]
         },
         {
@@ -112,10 +112,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 10275,
+          "size": 10248,
           "said": "Finviz Daily Digest \u2014 2026-11-26",
           "bullets": [
-            "_Generated 2026-11-26T04:48:45.236129-05:00 \u00b7 export=data/exports/finviz_2026-11-25.csv \u00b7 ticker digests=855 \u00b7 high-signal=188_",
+            "_Generated 2026-11-26T05:07:06.730332-05:00 \u00b7 export=data/exports/finviz_2026-11-26.csv \u00b7 ticker digests=775 \u00b7 high-signal=189_",
             "Major indices (live quote page)"
           ]
         },
@@ -140,7 +140,7 @@
           "size": 3921,
           "said": "Finviz homepage market digest \u2014 2026-11-26",
           "bullets": [
-            "Generated:** 2026-11-26T04:48:54.900233-05:00 (America/New_York)",
+            "Generated:** 2026-11-26T05:07:24.935816-05:00 (America/New_York)",
             "Source:** `live`"
           ]
         },
@@ -167,11 +167,11 @@
           "bullets": []
         }
       ],
-      "said": "855 tickers \u00b7 188 signals \u00b7 top A, ADI, ADSK, AMGN, BABA, BHP, BN, CCEP",
+      "said": "775 tickers \u00b7 189 signals \u00b7 top A, ADI, ADP, ADSK, AMD, AMGN, AMZN, AVGO",
       "bullets": [
         "Agilent earnings analysis: questions answered and next catalysts",
-        "Analog Devices broadens growth beyond AI as industrial demand recovers",
-        "Autodesk Delivers Another Beat-And-Raise, But A Softer Q4 Setup And Flat Cash Guide Temper The Upside"
+        "Analog Devices Inc. stock outperforms competitors on strong trading day",
+        "Wedbush starts Robinhood, Coinbase at Outperform in fintech coverage launch"
       ]
     },
     {
@@ -179,10 +179,10 @@
       "name": "Pre-Open ALL",
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
-      "inputs_ready": true,
-      "n_req_ok": 4,
+      "inputs_ready": false,
+      "n_req_ok": 2,
       "n_req": 9,
-      "n_opt_ok": 2,
+      "n_opt_ok": 1,
       "n_opt": 14,
       "files": [
         {
@@ -192,12 +192,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 95710,
-          "said": "855 tickers \u00b7 188 signals \u00b7 top A, ADI, ADSK, AMGN, BABA, BHP, BN, CCEP",
+          "size": 94205,
+          "said": "775 tickers \u00b7 189 signals \u00b7 top A, ADI, ADP, ADSK, AMD, AMGN, AMZN, AVGO",
           "bullets": [
             "Agilent earnings analysis: questions answered and next catalysts",
-            "Analog Devices broadens growth beyond AI as industrial demand recovers",
-            "Autodesk Delivers Another Beat-And-Raise, But A Softer Q4 Setup And Flat Cash Guide Temper The Upside"
+            "Analog Devices Inc. stock outperforms competitors on strong trading day",
+            "Wedbush starts Robinhood, Coinbase at Outperform in fintech coverage launch"
           ]
         },
         {
@@ -216,10 +216,10 @@
           "name": "Captain baseline JSON",
           "path": "01_daily/map_heat/2026-11-26_research_baseline.json",
           "role": "input",
-          "status": "OK",
-          "reason": "",
-          "size": 187990,
-          "said": "postclose_baseline \u00b7 141 cards \u00b7 HEAT=128 SPLIT=9 OVERRIDE=4 \u00b7 err Basic Materials:coverage:0/8<required:1",
+          "status": "MISSING",
+          "reason": "postclose_baseline_missing",
+          "size": 0,
+          "said": "postclose_baseline_missing",
           "bullets": []
         },
         {
@@ -229,7 +229,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 271969,
+          "size": 271622,
           "said": "morning_overlay \u00b7 11786 names \u00b7 hot Mortgage Finance, Metal Fabrication, Apparel Retail, Furnishings, Fixtures & Appliances \u00b7 cold Shell Companies, Silver, Other Precious Metals & Mining",
           "bullets": []
         },
@@ -238,10 +238,10 @@
           "name": "News parse JSON",
           "path": "01_daily/news/2026-11-26_parsed.json",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 5642596,
-          "said": "5642596B on disk",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
           "bullets": []
         },
         {
@@ -293,16 +293,11 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-11-26_actions.json",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 85806,
-          "said": "113 ticker actions \u00b7 8 events \u00b7 7985 headlines \u00b7 COP BUY, EOG BUY, CHRD BUY, SM BUY, KOS BUY, HPK BUY, OXY BUY, FANG BUY",
-          "bullets": [
-            "BUY COP",
-            "BUY EOG",
-            "BUY CHRD",
-            "BUY SM"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "general",
@@ -333,13 +328,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7571,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 16 fail",
+          "size": 7596,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 19 fail",
           "bullets": [
             "general_predict:missing",
             "events:missing",
             "news_judge:missing",
-            "finviz_market_digest:missing"
+            "news_parse:missing"
           ]
         },
         {
@@ -347,10 +342,10 @@
           "name": "Pre-open status JSON",
           "path": "01_daily/2026-11-26_preopen_status.json",
           "role": "required",
-          "status": "OK",
-          "reason": "all_ok=False missing=['events', 'news_judge', 'map_heat_research', 'general_predict']",
-          "size": 6637,
-          "said": "all_ok=False \u00b7 qc=False \u00b7 grok=False \u00b7 book=False \u00b7 missing events, news_judge, map_heat_research, general_predict",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
           "bullets": []
         },
         {
@@ -495,9 +490,9 @@
       "key": "weather",
       "name": "Label + weather",
       "yaml": "label_weather.yml",
-      "status": "OK",
+      "status": "FAIL",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 0,
       "n_req": 1,
       "n_opt_ok": 0,
       "n_opt": 0,
@@ -509,12 +504,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 95710,
-          "said": "855 tickers \u00b7 188 signals \u00b7 top A, ADI, ADSK, AMGN, BABA, BHP, BN, CCEP",
+          "size": 94205,
+          "said": "775 tickers \u00b7 189 signals \u00b7 top A, ADI, ADP, ADSK, AMD, AMGN, AMZN, AVGO",
           "bullets": [
             "Agilent earnings analysis: questions answered and next catalysts",
-            "Analog Devices broadens growth beyond AI as industrial demand recovers",
-            "Autodesk Delivers Another Beat-And-Raise, But A Softer Q4 Setup And Flat Cash Guide Temper The Upside"
+            "Analog Devices Inc. stock outperforms competitors on strong trading day",
+            "Wedbush starts Robinhood, Coinbase at Outperform in fintech coverage launch"
           ]
         },
         {
@@ -522,29 +517,25 @@
           "name": "Weather JSON",
           "path": "01_daily/weather/2026-11-26_weather.json",
           "role": "required",
-          "status": "OK",
-          "reason": "sectors=11 bytes=9501 vix=spiking yields=flat",
-          "size": 9501,
-          "said": "hostile 6 \u00b7 neutral 5",
-          "bullets": [
-            "hostile: Basic Materials, Communication Services, Consumer Cyclical, Consumer Defensive, Industrials, Technology"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         }
       ],
-      "said": "hostile 6 \u00b7 neutral 5",
-      "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Cyclical, Consumer Defensive, Industrials, Technology"
-      ]
+      "said": "",
+      "bullets": []
     },
     {
       "key": "ab",
       "name": "AB checklist",
       "yaml": "ab_checklist.yml",
-      "status": "OK",
+      "status": "FAIL",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 0,
       "n_req": 1,
-      "n_opt_ok": 1,
+      "n_opt_ok": 0,
       "n_opt": 1,
       "files": [
         {
@@ -552,39 +543,33 @@
           "name": "AB checklist raw",
           "path": "data/ab_checklist/2026-11-26_ab_checklist.csv",
           "role": "optional",
-          "status": "OK",
-          "reason": "rows=2607",
-          "size": 7476496,
-          "said": "27 rows",
-          "bullets": [
-            "CL, CBRL, SLDE, POWW, AES, REYN, PRVA, PBH"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "ab_enriched",
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-11-26_ab_checklist_enriched.csv",
           "role": "required",
-          "status": "OK",
-          "reason": "rows=2607",
-          "size": 8247168,
-          "said": "25 rows",
-          "bullets": [
-            "CL, SLDE, AES, REYN, PBH, PRCH, ARDT, CBRL"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         }
       ],
-      "said": "25 rows",
-      "bullets": [
-        "CL, SLDE, AES, REYN, PBH"
-      ]
+      "said": "",
+      "bullets": []
     },
     {
       "key": "catalyst",
       "name": "Catalyst dossiers",
       "yaml": "catalyst_daily.yml",
-      "status": "PARTIAL",
-      "inputs_ready": true,
+      "status": "FAIL",
+      "inputs_ready": false,
       "n_req_ok": 0,
       "n_req": 0,
       "n_opt_ok": 0,
@@ -595,16 +580,11 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-11-26_actions.json",
           "role": "input",
-          "status": "OK",
-          "reason": "",
-          "size": 85806,
-          "said": "113 ticker actions \u00b7 8 events \u00b7 7985 headlines \u00b7 COP BUY, EOG BUY, CHRD BUY, SM BUY, KOS BUY, HPK BUY, OXY BUY, FANG BUY",
-          "bullets": [
-            "BUY COP",
-            "BUY EOG",
-            "BUY CHRD",
-            "BUY SM"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "in_digest",
@@ -613,12 +593,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 95710,
-          "said": "855 tickers \u00b7 188 signals \u00b7 top A, ADI, ADSK, AMGN, BABA, BHP, BN, CCEP",
+          "size": 94205,
+          "said": "775 tickers \u00b7 189 signals \u00b7 top A, ADI, ADP, ADSK, AMD, AMGN, AMZN, AVGO",
           "bullets": [
             "Agilent earnings analysis: questions answered and next catalysts",
-            "Analog Devices broadens growth beyond AI as industrial demand recovers",
-            "Autodesk Delivers Another Beat-And-Raise, But A Softer Q4 Setup And Flat Cash Guide Temper The Upside"
+            "Analog Devices Inc. stock outperforms competitors on strong trading day",
+            "Wedbush starts Robinhood, Coinbase at Outperform in fintech coverage launch"
           ]
         },
         {
@@ -633,25 +613,16 @@
           "bullets": []
         }
       ],
-      "said": "113 ticker actions \u00b7 8 events \u00b7 7985 headlines \u00b7 COP BUY, EOG BUY, CHRD BUY, SM BUY, KOS BUY, HPK BUY, OXY BUY, FANG BUY",
-      "bullets": [
-        "BUY COP",
-        "BUY EOG",
-        "BUY CHRD",
-        "BUY SM",
-        "BUY KOS",
-        "BUY HPK",
-        "BUY OXY",
-        "BUY FANG"
-      ]
+      "said": "",
+      "bullets": []
     },
     {
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "PARTIAL",
+      "status": "FAIL",
       "inputs_ready": false,
-      "n_req_ok": 2,
+      "n_req_ok": 0,
       "n_req": 4,
       "n_opt_ok": 1,
       "n_opt": 4,
@@ -683,16 +654,11 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-11-26_actions.json",
           "role": "input",
-          "status": "OK",
-          "reason": "",
-          "size": 85806,
-          "said": "113 ticker actions \u00b7 8 events \u00b7 7985 headlines \u00b7 COP BUY, EOG BUY, CHRD BUY, SM BUY, KOS BUY, HPK BUY, OXY BUY, FANG BUY",
-          "bullets": [
-            "BUY COP",
-            "BUY EOG",
-            "BUY CHRD",
-            "BUY SM"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "in_digest",
@@ -701,12 +667,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 95710,
-          "said": "855 tickers \u00b7 188 signals \u00b7 top A, ADI, ADSK, AMGN, BABA, BHP, BN, CCEP",
+          "size": 94205,
+          "said": "775 tickers \u00b7 189 signals \u00b7 top A, ADI, ADP, ADSK, AMD, AMGN, AMZN, AVGO",
           "bullets": [
             "Agilent earnings analysis: questions answered and next catalysts",
-            "Analog Devices broadens growth beyond AI as industrial demand recovers",
-            "Autodesk Delivers Another Beat-And-Raise, But A Softer Q4 Setup And Flat Cash Guide Temper The Upside"
+            "Analog Devices Inc. stock outperforms competitors on strong trading day",
+            "Wedbush starts Robinhood, Coinbase at Outperform in fintech coverage launch"
           ]
         },
         {
@@ -725,52 +691,44 @@
           "name": "Weather JSON",
           "path": "01_daily/weather/2026-11-26_weather.json",
           "role": "input",
-          "status": "OK",
-          "reason": "sectors=11 bytes=9501 vix=spiking yields=flat",
-          "size": 9501,
-          "said": "hostile 6 \u00b7 neutral 5",
-          "bullets": [
-            "hostile: Basic Materials, Communication Services, Consumer Cyclical, Consumer Defensive, Industrials, Technology"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "in_ab",
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-11-26_ab_checklist_enriched.csv",
           "role": "input",
-          "status": "OK",
-          "reason": "rows=2607",
-          "size": 8247168,
-          "said": "25 rows",
-          "bullets": [
-            "CL, SLDE, AES, REYN, PBH, PRCH, ARDT, CBRL"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "join",
           "name": "Join ranked CSV",
           "path": "data/join/2026-11-26_ranked.csv",
           "role": "required",
-          "status": "OK",
-          "reason": "rows=5883",
-          "size": 2256995,
-          "said": "216 rows",
-          "bullets": [
-            "ONC, RGA, LLY, KNSA, REGN, ASND, LNG, RDN"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "peers",
           "name": "Peer RS CSV",
           "path": "data/peers/2026-11-26_peer_rs.csv",
           "role": "required",
-          "status": "OK",
-          "reason": "rows=5007",
-          "size": 807446,
-          "said": "493 rows",
-          "bullets": [
-            "A, AA, AACG, AAL, AAME, AAMI, AAOI, AAON"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "book_json",
@@ -831,10 +789,8 @@
           "bullets": []
         }
       ],
-      "said": "216 rows",
-      "bullets": [
-        "ONC, RGA, LLY, KNSA, REGN"
-      ]
+      "said": "",
+      "bullets": []
     },
     {
       "key": "publish",
@@ -908,12 +864,7 @@
     "general": {},
     "sectors": {},
     "news": {},
-    "weather": {
-      "said": "hostile 6 \u00b7 neutral 5",
-      "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Cyclical, Consumer Defensive, Industrials, Technology"
-      ]
-    }
+    "weather": {}
   },
   "lands": [
     {
@@ -1343,6 +1294,31 @@
         }
       ],
       "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, sectors_required, all_ok \u00b7 keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs \u00b7 # Pre-open ALL status \u2014 2026-11-26\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  news_mode=on  missing=['events', 'news_judge', 'map_heat_research', 'general_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- News actions (no LLM): exit 0"
+    },
+    {
+      "key": "map_heat",
+      "title": "Map heat morning overlay",
+      "date": "2026-11-26",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-26T05:10:23.046236-05:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-11-26_map_heat.json",
+          "ok": true,
+          "reason": "",
+          "size": 271622,
+          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
+        },
+        {
+          "path": "01_daily/map_heat/2026-11-26_map_heat.md",
+          "ok": true,
+          "reason": "",
+          "size": 18423,
+          "preview": "# MAP HEAT \u2014 2026-11-26\nExport `finviz_2026-11-26.csv` \u00b7 11786 names \u00b7 generated 2026-11-26T05:10:22.998401-05:00"
+        }
+      ],
+      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-11-26\nExport `finviz_2026-11-26.csv` \u00b7 11786 names \u00b7 generated 2026-11-26T05:10:22.998401-05:00"
     }
   ],
   "href": {
