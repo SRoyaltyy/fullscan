@@ -1,6 +1,6 @@
 {
   "date": "2026-11-26",
-  "generated_at": "2026-11-26T09:22:26.960605-05:00",
+  "generated_at": "2026-11-26T09:22:36.087465-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "news_parse",
-      "title": "News parse",
-      "date": "2026-11-26",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-26T05:05:44.518600-05:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-11-26_parsed.json",
-          "ok": true,
-          "reason": "",
-          "size": 5642596,
-          "preview": "raw=7985 usable=608 single=442 \u00b7 OPEC blames EU for COP31 collapse - Reuters | Kazakhstan also seeks higher oil output capacity estimate ahead of 2027 OPEC+ qu | TSX futures fall as softer commodity prices, rate hike bets weigh - Reuters | US weekly jobless claims fall more than expected - Reuters | Sterling dips as traders await US inflation data - Reuters"
-        },
-        {
-          "path": "01_daily/news/2026-11-26_parsed.md",
-          "ok": true,
-          "reason": "",
-          "size": 11817,
-          "preview": "# News Parse v2 \u2014 2026-11-26T05:05:35.559478-05:00\nWindow\u224848h | news_mode=on | raw=7985 | usable=608 | single_name=442 | noise_dropped=6695\nusable polarity={'+': 9, '-': 112, 'mixed': 0, 'neutral': 487}"
-        }
-      ],
-      "preview": "raw=7985 usable=608 single=442 \u00b7 OPEC blames EU for COP31 collapse - Reuters | Kazakhstan also seeks higher oil output capacity estimate ahead of 2027 OPEC+ qu | TSX futures fall as softer commodity prices, rate hike bets weigh - Reuters | US weekly jobless claims fall more than expected - Reuters | Sterling dips as traders await US inflation data - Reuters \u00b7 # News Parse v2 \u2014 2026-11-26T05:05:35.559478-05:00\nWindow\u224848h | news_mode=on | raw=7985 | usable=608 | single_name=442 | noise_dropped=6695\nusable polarity={'+': 9, '-': 112, 'mixed': 0, 'neutral': 487}"
-    },
     {
       "key": "news_actions",
       "title": "News actions (no LLM)",
@@ -242,6 +217,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -2.44, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -3.0, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.74, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.8, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -1.41, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.77, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': 1.25, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -2.27, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-26\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-11-26",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-26T09:22:35.399738-05:00",
+      "files": [
+        {
+          "path": "data/join/2026-11-26_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2256995,
+          "preview": "5883 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ONC, RGA, LLY, KNSA, REGN"
+        }
+      ],
+      "preview": "5883 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ONC, RGA, LLY, KNSA, REGN"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
