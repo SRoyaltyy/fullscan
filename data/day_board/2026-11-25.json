@@ -1,6 +1,6 @@
 {
   "date": "2026-11-25",
-  "generated_at": "2026-11-26T04:31:13.200412-05:00",
+  "generated_at": "2026-11-27T04:46:36.101262-05:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [
@@ -68,10 +68,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 17962,
+          "size": 18715,
           "said": "MAP HEAT \u2014 2026-11-25",
           "bullets": [
-            "Export `finviz_2026-11-25.csv` \u00b7 11786 names \u00b7 generated 2026-11-25T05:09:58.312210-05:00",
+            "Export `finviz_2026-11-25.csv` \u00b7 11786 names \u00b7 generated 2026-11-26T04:33:36.785707-05:00",
             "TAPE (live futures)"
           ]
         }
@@ -840,11 +840,11 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 1818,
+          "size": 1816,
           "said": "Paper trading \u2014 Futubull-fee simulation",
           "bullets": [
-            "As of **2026-11-25** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`",
-            "Latest book **2026-11-25** ranker: **weighted** (green pile liquid=0, need 8)."
+            "As of **2026-11-26** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`",
+            "Latest book **2026-11-26** ranker: **weighted** (green pile liquid=0, need 8)."
           ]
         },
         {
@@ -853,9 +853,9 @@
           "path": "dashboard/index.html",
           "role": "optional",
           "status": "OK",
-          "reason": "live-book poller + today.json (2026-11-25)",
-          "size": 17739167,
-          "said": "live-book poller + today.json (2026-11-25)",
+          "reason": "live-book poller + 2026-11-25_suggestions.json (2026-11-25)",
+          "size": 17909644,
+          "said": "live-book poller + 2026-11-25_suggestions.json (2026-11-25)",
           "bullets": []
         }
       ],
@@ -892,9 +892,9 @@
           "path": "dashboard/index.html",
           "role": "required",
           "status": "OK",
-          "reason": "live-book poller + today.json (2026-11-25)",
-          "size": 17739167,
-          "said": "live-book poller + today.json (2026-11-25)",
+          "reason": "live-book poller + 2026-11-25_suggestions.json (2026-11-25)",
+          "size": 17909644,
+          "said": "live-book poller + 2026-11-25_suggestions.json (2026-11-25)",
           "bullets": []
         },
         {
@@ -904,11 +904,11 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 1818,
+          "size": 1816,
           "said": "Paper trading \u2014 Futubull-fee simulation",
           "bullets": [
-            "As of **2026-11-25** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`",
-            "Latest book **2026-11-25** ranker: **weighted** (green pile liquid=0, need 8)."
+            "As of **2026-11-26** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`",
+            "Latest book **2026-11-26** ranker: **weighted** (green pile liquid=0, need 8)."
           ]
         },
         {
@@ -2168,35 +2168,35 @@
       "date": "2026-11-25",
       "ok": true,
       "pushed": true,
-      "at": "2026-11-26T04:31:12.272315-05:00",
+      "at": "2026-11-27T04:46:34.696979-05:00",
       "files": [
         {
-          "path": "01_daily/news/2026-11-25_finviz_digest.after-freeze-1.json",
+          "path": "01_daily/news/2026-11-25_finviz_digest.after-freeze-2.json",
           "ok": true,
           "reason": "",
-          "size": 94864,
+          "size": 94743,
           "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
         },
         {
-          "path": "01_daily/news/2026-11-25_finviz_digest.after-freeze-1.md",
+          "path": "01_daily/news/2026-11-25_finviz_digest.after-freeze-2.md",
           "ok": true,
           "reason": "",
-          "size": 10280,
-          "preview": "# Finviz Daily Digest \u2014 2026-11-25\n_Generated 2026-11-26T04:31:11.830679-05:00 \u00b7 export=data/exports/finviz_2026-11-25.csv \u00b7 ticker digests=775 \u00b7 high-signal=191_"
+          "size": 10461,
+          "preview": "# Finviz Daily Digest \u2014 2026-11-25\n_Generated 2026-11-27T04:46:34.106568-05:00 \u00b7 export=data/exports/finviz_2026-11-25.csv \u00b7 ticker digests=794 \u00b7 high-signal=189_"
         },
         {
-          "path": "data/exports/finviz_2026-11-25.after-freeze-1.csv",
+          "path": "data/exports/finviz_2026-11-25.after-freeze-2.csv",
           "ok": true,
           "reason": "",
-          "size": 11033205,
-          "preview": "11787 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
+          "size": 10792040,
+          "preview": "11789 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
         },
         {
           "path": "data/finviz/latest.csv",
           "ok": true,
           "reason": "",
-          "size": 11033205,
-          "preview": "11787 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
+          "size": 10792040,
+          "preview": "11789 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
         },
         {
           "path": "01_daily/news/2026-11-25_finviz_digest_preopen.json",
@@ -2206,7 +2206,7 @@
           "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
         }
       ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-11-25\n_Generated 2026-11-26T04:31:11.830679-05:00 \u00b7 export=data/exports/finviz_2026-11-25.csv \u00b7 ticker digests=775 \u00b7 high-signal=191_ \u00b7 11787 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\" \u00b7 11787 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-11-25\n_Generated 2026-11-27T04:46:34.106568-05:00 \u00b7 export=data/exports/finviz_2026-11-25.csv \u00b7 ticker digests=794 \u00b7 high-signal=189_ \u00b7 11789 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\" \u00b7 11789 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
     }
   ],
   "href": {
@@ -2324,6 +2324,46 @@
       "path": "data/exports/finviz_2026-11-25.csv",
       "at": "2026-11-27T04:46:09-05:00",
       "commit_msg": "auto: land finviz export [2026-11-25]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "45975165832",
+      "manifest": "research/input_freeze/2026-11-25/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-11-25_grok_review.json",
+      "at": "2026-11-27T04:46:36-05:00",
+      "commit_msg": "auto: land finviz_digest [2026-11-25]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "45975165832",
+      "manifest": "research/input_freeze/2026-11-25/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-11-25_preopen_qc.json",
+      "at": "2026-11-27T04:46:36-05:00",
+      "commit_msg": "auto: land finviz_digest [2026-11-25]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "45975165832",
+      "manifest": "research/input_freeze/2026-11-25/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-11-25_preopen_status.json",
+      "at": "2026-11-27T04:46:36-05:00",
+      "commit_msg": "auto: land finviz_digest [2026-11-25]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "45975165832",
+      "manifest": "research/input_freeze/2026-11-25/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-11-25_preopen_status.md",
+      "at": "2026-11-27T04:46:36-05:00",
+      "commit_msg": "auto: land finviz_digest [2026-11-25]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "45975165832",
+      "manifest": "research/input_freeze/2026-11-25/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-11-25.json",
+      "at": "2026-11-27T04:46:36-05:00",
+      "commit_msg": "auto: land finviz_digest [2026-11-25]",
       "workflow": "Finviz ALL (GH-hosted Elite)",
       "run_id": "45975165832",
       "manifest": "research/input_freeze/2026-11-25/manifest.json"
