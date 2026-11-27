@@ -1,6 +1,6 @@
 {
   "stage": "outcome",
-  "fetched_at": "2026-11-26T22:50:41.127818-05:00",
+  "fetched_at": "2026-11-26T23:02:30.677960-05:00",
   "fred": {
     "DGS30": {
       "available": true,
@@ -88,41 +88,41 @@
     "CL=F": {
       "available": true,
       "date": "2026-11-26",
-      "last": 85.68,
-      "pct_1d": 2.39
+      "last": 85.7,
+      "pct_1d": 2.41
     },
     "BZ=F": {
       "available": true,
       "date": "2026-11-26",
-      "last": 92.24,
-      "pct_1d": -2.51
+      "last": 92.26,
+      "pct_1d": -2.48
     },
     "GC=F": {
       "available": true,
       "date": "2026-11-26",
-      "last": 3656.4,
-      "pct_1d": 3.41
+      "last": 3657.0,
+      "pct_1d": 3.43
     },
     "DXY": {
       "available": true,
       "date": "2026-11-26",
       "source": "DX-Y.NYB",
-      "pct_1d": 0.01,
-      "pct_1m": 1.46
+      "pct_1d": 0.03,
+      "pct_1m": 1.48
     }
   },
   "futures": {
     "ES=F": {
       "available": true,
       "date": "2026-11-26",
-      "last": 7299.75,
-      "pct_1d": 1.45
+      "last": 7309.0,
+      "pct_1d": 1.57
     },
     "NQ=F": {
       "available": true,
       "date": "2026-11-26",
-      "last": 26701.25,
-      "pct_1d": 2.3
+      "last": 26710.75,
+      "pct_1d": 2.34
     }
   },
   "finviz_futures_tape": {
@@ -491,14 +491,14 @@
         "Nikkei": {
           "available": true,
           "date": "2026-11-27",
-          "last": 58492.6,
+          "last": 58494.98,
           "pct_1d": 1.73
         },
         "Hang Seng": {
           "available": true,
           "date": "2026-11-27",
-          "last": 22369.19,
-          "pct_1d": 0.64
+          "last": 22413.46,
+          "pct_1d": 0.84
         },
         "Shanghai": {
           "available": true,
@@ -509,17 +509,17 @@
         "Kospi": {
           "available": true,
           "date": "2026-11-27",
-          "last": 4871.85,
-          "pct_1d": 3.41
+          "last": 4874.39,
+          "pct_1d": 3.46
         },
         "ASX200": {
           "available": true,
           "date": "2026-11-27",
-          "last": 8831.9,
-          "pct_1d": 0.78
+          "last": 8835.1,
+          "pct_1d": 0.81
         }
       },
-      "composite_avg": 1.37
+      "composite_avg": 1.42
     },
     "europe": {
       "per_index": {
