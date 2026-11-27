@@ -1,0 +1,93 @@
+{
+  "date": "2026-11-27",
+  "generated_at": "2026-11-27T04:45:07.683941-05:00",
+  "max_n": 8,
+  "routing": "Grok \u2192 DeepSeek",
+  "grok": true,
+  "deepseek_fallback": true,
+  "gemini": false,
+  "n_targets": 7,
+  "n_ok": 0,
+  "status": "FAIL",
+  "targets": [
+    {
+      "ticker": "AVGO",
+      "role": "earnings",
+      "why": "earnings AMC"
+    },
+    {
+      "ticker": "CRM",
+      "role": "earnings",
+      "why": "earnings AMC"
+    },
+    {
+      "ticker": "UNH",
+      "role": "override_captain",
+      "why": "OVERRIDE Healthcare Plans"
+    },
+    {
+      "ticker": "CVS",
+      "role": "override_captain",
+      "why": "OVERRIDE Healthcare Plans"
+    },
+    {
+      "ticker": "OSCR",
+      "role": "override_captain",
+      "why": "OVERRIDE Healthcare Plans"
+    },
+    {
+      "ticker": "PGNY",
+      "role": "override_captain",
+      "why": "OVERRIDE Healthcare Plans"
+    },
+    {
+      "ticker": "SGHC",
+      "role": "override_captain",
+      "why": "OVERRIDE Gambling"
+    }
+  ],
+  "dossiers": [
+    {
+      "ticker": "AVGO",
+      "role": "earnings",
+      "why": "earnings AMC",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 AVGO"
+    },
+    {
+      "ticker": "CRM",
+      "role": "earnings",
+      "why": "earnings AMC",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 CRM"
+    },
+    {
+      "ticker": "UNH",
+      "role": "override_captain",
+      "why": "OVERRIDE Healthcare Plans",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 UNH"
+    },
+    {
+      "ticker": "CVS",
+      "role": "override_captain",
+      "why": "OVERRIDE Healthcare Plans",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 CVS"
+    },
+    {
+      "ticker": "OSCR",
+      "role": "override_captain",
+      "why": "OVERRIDE Healthcare Plans",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 OSCR"
+    },
+    {
+      "ticker": "PGNY",
+      "role": "override_captain",
+      "why": "OVERRIDE Healthcare Plans",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 PGNY"
+    },
+    {
+      "ticker": "SGHC",
+      "role": "override_captain",
+      "why": "OVERRIDE Gambling",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 SGHC"
+    }
+  ]
+}

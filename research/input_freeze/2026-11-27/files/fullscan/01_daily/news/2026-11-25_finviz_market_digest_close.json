@@ -1,0 +1,76 @@
+{
+  "date": "2026-11-25",
+  "generated_at": "2026-11-25T16:06:51.223040-05:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": false,
+  "clock_use": "next_open",
+  "clock_legal_for": "2026-11-27",
+  "capture_slot": "close",
+  "clock_rule": "Live post-close answer-key (~16:05 ET). Always next_open for the NEXT session (2026-11-27) — never same_morning. Writes *_finviz_market_digest_close.* only. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest_close",
+  "represents": "Finviz homepage post-close answer-key. clock_use is always next_open; clock_legal_for is the next NYSE session. Lives at *_finviz_market_digest_close.*. Does not replace the same_morning warm-up file. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks trade mixed as small caps lead and tech weakens amid new Trump tariffs and hotter core PCE reinforcing December Fed hike expectations",
+  "raw_text": "- HP Inc. (HPQ) rises about 12% after fiscal Q4 adjusted EPS of $0.83 beats estimates, driven by 14% growth in its Personal Systems segment and tariff refunds\n- Ambarella (AMBA) drops roughly 18% after issuing Q4 revenue guidance of $70–75 million, well below the $112 million consensus due to memory cost pressures\n- Nutanix (NTNX) falls about 15% after CEO Rajiv Ramaswami announces he will step down once a successor is appointed, overshadowing Q1 revenue of $772 million that tops estimates\n- Nvidia (NVDA) trades about 4% lower after S&P placed it on CreditWatch with negative implications citing governance and management concerns, with broader semiconductor weakness also pressuring Lam Research (LRCX) and Micron (MU)\n- Major US indexes trade mixed, with the Dow Jones ($DJI) up about 0.6%, the Russell 2000 (IWM) climbing around 0.8%, the S&P 500 ($SPX) dipping slightly, and the Nasdaq 100 ($NDX) falling about 0.6% as investors rotate into small caps and value while technology lags\n- Materials leads sector performance with gains near 2.5%, contrasting with an ongoing AI-driven selloff in technology names\n- The Trump administration unveils tariffs of up to 20% on China, the EU, and around a dozen other trading partners, citing excess industrial capacity and unfair practices\n- October core PCE inflation prints at 3.3% versus the 3.2% consensus and 3.1% prior as the Fed notes inflation has not improved and third-quarter GDP is revised sharply higher, reinforcing expectations for a Federal Reserve rate hike in December and helping stocks pare earlier losses during the session",
+  "raw_summary_md": "- **HP Inc.** ([HPQ](https://finviz.com/quote?t=HPQ)) rises about **12%** after fiscal Q4 adjusted EPS of $0.83 beats estimates, driven by 14% growth in its Personal Systems segment and tariff refunds\n- **Ambarella** ([AMBA](https://finviz.com/quote?t=AMBA)) drops roughly **18%** after issuing Q4 revenue guidance of **$70–75 million**, well below the $112 million consensus due to memory cost pressures\n- **Nutanix** ([NTNX](https://finviz.com/quote?t=NTNX)) falls about **15%** after CEO Rajiv Ramaswami announces he will **step down** once a successor is appointed, overshadowing Q1 revenue of $772 million that tops estimates\n- **Nvidia** ([NVDA](https://finviz.com/quote?t=NVDA)) trades about **4%** lower after S&P placed it on **CreditWatch with negative implications** citing governance and management concerns, with broader semiconductor weakness also pressuring **Lam Research** ([LRCX](https://finviz.com/quote?t=LRCX)) and **Micron** ([MU](https://finviz.com/quote?t=MU))\n- Major US indexes trade mixed, with the **Dow Jones** ([$DJI](https://finviz.com/index/DJI?p=d)) up about 0.6%, the **Russell 2000** ([IWM](https://finviz.com/quote?t=IWM)) climbing around 0.8%, the **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) dipping slightly, and the **Nasdaq 100** ([$NDX](https://finviz.com/index/NDX?p=d)) falling about 0.6% as investors rotate into small caps and value while technology lags\n- **Materials** leads sector performance with gains near **2.5%**, contrasting with an ongoing **AI-driven selloff** in technology names\n- The Trump administration unveils tariffs of **up to 20%** on China, the EU, and around a dozen other trading partners, citing excess industrial capacity and unfair practices\n- October core PCE inflation prints at **3.3%** versus the 3.2% consensus and 3.1% prior as the Fed notes inflation has not improved and third-quarter GDP is revised sharply higher, reinforcing expectations for a Federal Reserve **rate hike in December** and helping stocks pare earlier losses during the session",
+  "index_moves": [],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "HPQ",
+    "AMBA",
+    "NTNX",
+    "NVDA",
+    "LRCX",
+    "MU"
+  ],
+  "named_leaders": [
+    "HPQ",
+    "AMBA",
+    "NTNX",
+    "NVDA",
+    "LRCX",
+    "MU"
+  ],
+  "calendar": [],
+  "prior_close": {
+    "spx": null,
+    "nasdaq": null,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": true,
+    "bullets": [
+      "October core PCE inflation prints at 3.3% versus the 3.2% consensus and 3.1% prior as the Fed notes inflation has not improved and third-quarter GDP is revised sharply higher, reinforcing expectations for a Federal Reserve rate hike in December and helping stocks pare earlier losses during the session"
+    ],
+    "text": "October core PCE inflation prints at 3.3% versus the 3.2% consensus and 3.1% prior as the Fed notes inflation has not improved and third-quarter GDP is revised sharply higher, reinforcing expectations for a Federal Reserve rate hike in December and helping stocks pare earlier losses during the session"
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 353817,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-11-25T15:57:12.007",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "neutral"
+}

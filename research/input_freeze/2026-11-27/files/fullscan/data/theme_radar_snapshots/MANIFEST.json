@@ -1,0 +1,12 @@
+{
+  "source_repo": "SRoyaltyy/theme-radar",
+  "source_path": "data/snapshots/YYYY-MM-DD.csv",
+  "readonly": true,
+  "do_not_merge_repos": true,
+  "extracted_columns": ["Ticker", "Company", "Sector", "News Title", "Daily Digest", "News Time"],
+  "omitted": "screener columns and *.raw.csv",
+  "format": "one gzip CSV per snapshot date",
+  "earliest": "2026-08-06",
+  "latest": "2026-09-21",
+  "note": "Thin headline pack so fullscan can grade Elite titles without cloning theme-radar. Actions may sparse-checkout data/snapshots/*.csv into vendor/theme-radar instead; that checkout wins per date."
+}
