@@ -1,6 +1,6 @@
 {
   "date": "2026-11-27",
-  "generated_at": "2026-11-27T09:13:39.073240-05:00",
+  "generated_at": "2026-11-27T09:13:47.901523-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "news_parse",
-      "title": "News parse",
-      "date": "2026-11-27",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-27T05:01:45.468248-05:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-11-27_parsed.json",
-          "ok": true,
-          "reason": "",
-          "size": 3811553,
-          "preview": "raw=5333 usable=393 single=265 \u00b7 ECB already had large support for rate hike in Oct, accounts show - Reuters | Core inflation in Japan's capital accelerates in November - Reuters | Brent trades near month's high as Mideast conflict threatens supply - Reuters | US core PCE inflation set to heat up in October, prompting Federal Reserve rate  | Man dead after crash involving pedestrian on Clinton Highway in Powell - WATE 6 "
-        },
-        {
-          "path": "01_daily/news/2026-11-27_parsed.md",
-          "ok": true,
-          "reason": "",
-          "size": 10123,
-          "preview": "# News Parse v2 \u2014 2026-11-27T05:01:40.210057-05:00\nWindow\u224848h | news_mode=on | raw=5333 | usable=393 | single_name=265 | noise_dropped=4559\nusable polarity={'+': 9, '-': 97, 'mixed': 2, 'neutral': 285}"
-        }
-      ],
-      "preview": "raw=5333 usable=393 single=265 \u00b7 ECB already had large support for rate hike in Oct, accounts show - Reuters | Core inflation in Japan's capital accelerates in November - Reuters | Brent trades near month's high as Mideast conflict threatens supply - Reuters | US core PCE inflation set to heat up in October, prompting Federal Reserve rate  | Man dead after crash involving pedestrian on Clinton Highway in Powell - WATE 6  \u00b7 # News Parse v2 \u2014 2026-11-27T05:01:40.210057-05:00\nWindow\u224848h | news_mode=on | raw=5333 | usable=393 | single_name=265 | noise_dropped=4559\nusable polarity={'+': 9, '-': 97, 'mixed': 2, 'neutral': 285}"
-    },
     {
       "key": "news_actions",
       "title": "News actions (no LLM)",
@@ -242,6 +217,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -2.44, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -3.0, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.74, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.8, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -1.41, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.77, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': 1.25, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -2.27, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-27\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-11-27",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-27T09:13:46.937638-05:00",
+      "files": [
+        {
+          "path": "data/join/2026-11-27_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2256731,
+          "preview": "5883 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ONC, RGA, LLY, KNSA, REGN"
+        }
+      ],
+      "preview": "5883 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ONC, RGA, LLY, KNSA, REGN"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
