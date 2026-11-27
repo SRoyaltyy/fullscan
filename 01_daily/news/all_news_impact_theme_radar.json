@@ -22,11 +22,11 @@
     "impulse_updown_listed": 17998,
     "graded_articles": {
       "0-1d": 2065,
-      "2d": 2029,
-      "3d": 2002,
-      "4d": 1965,
-      "5d": 1939,
-      "1-4w": 9601
+      "2d": 2028,
+      "3d": 2001,
+      "4d": 1964,
+      "5d": 1938,
+      "1-4w": 9600
     }
   },
   "hit_rates": {
@@ -38,33 +38,33 @@
     },
     "2d": {
       "hits": 1776,
-      "n_calls": 3723,
-      "hit_rate": 0.477,
-      "graded_articles": 2029
+      "n_calls": 3722,
+      "hit_rate": 0.4772,
+      "graded_articles": 2028
     },
     "3d": {
       "hits": 1702,
-      "n_calls": 3672,
-      "hit_rate": 0.4635,
-      "graded_articles": 2002
+      "n_calls": 3671,
+      "hit_rate": 0.4636,
+      "graded_articles": 2001
     },
     "4d": {
       "hits": 1674,
-      "n_calls": 3582,
-      "hit_rate": 0.4673,
-      "graded_articles": 1965
+      "n_calls": 3581,
+      "hit_rate": 0.4675,
+      "graded_articles": 1964
     },
     "5d": {
       "hits": 1675,
-      "n_calls": 3525,
-      "hit_rate": 0.4752,
-      "graded_articles": 1939
+      "n_calls": 3524,
+      "hit_rate": 0.4753,
+      "graded_articles": 1938
     },
     "1-4w": {
-      "hits": 6840,
-      "n_calls": 14686,
+      "hits": 6839,
+      "n_calls": 14685,
       "hit_rate": 0.4657,
-      "graded_articles": 9601
+      "graded_articles": 9600
     }
   },
   "hit_rates_broad_short": {
@@ -76,27 +76,27 @@
     },
     "2d": {
       "hits": 9692,
-      "n_calls": 19476,
-      "hit_rate": 0.4976,
-      "graded_articles": 13417
+      "n_calls": 19475,
+      "hit_rate": 0.4977,
+      "graded_articles": 13416
     },
     "3d": {
       "hits": 9630,
-      "n_calls": 19399,
+      "n_calls": 19398,
       "hit_rate": 0.4964,
-      "graded_articles": 13369
+      "graded_articles": 13368
     },
     "4d": {
       "hits": 9562,
-      "n_calls": 19257,
-      "hit_rate": 0.4965,
-      "graded_articles": 13295
+      "n_calls": 19256,
+      "hit_rate": 0.4966,
+      "graded_articles": 13294
     },
     "5d": {
       "hits": 9449,
-      "n_calls": 19131,
+      "n_calls": 19130,
       "hit_rate": 0.4939,
-      "graded_articles": 13226
+      "graded_articles": 13225
     }
   },
   "rippers": {
@@ -375,15 +375,6 @@
           "event_class": "dilution"
         },
         {
-          "ticker": "SCNI",
-          "direction": "down",
-          "ret": -9.72,
-          "entry_date": "2026-10-16",
-          "published_at": "2026-10-16 08:00:00",
-          "title": "Scinai Immunotherapeutics Announces Closing of $4.0 Million Financing Through a Private Placement and Warrant Inducement",
-          "event_class": "dilution"
-        },
-        {
           "ticker": "ICFI",
           "direction": "up",
           "ret": 9.71,
@@ -409,6 +400,15 @@
           "published_at": "2026-08-07 01:12:13",
           "title": "Innovate Corp (VATE) (Q2 2026) Earnings Call Highlights: Record Infrastructure Performance and ...",
           "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "SCNI",
+          "direction": "down",
+          "ret": -9.68,
+          "entry_date": "2026-10-16",
+          "published_at": "2026-10-16 08:00:00",
+          "title": "Scinai Immunotherapeutics Announces Closing of $4.0 Million Financing Through a Private Placement and Warrant Inducement",
+          "event_class": "dilution"
         },
         {
           "ticker": "APPN",
@@ -35134,15 +35134,6 @@
           "event_class": "flow_index"
         },
         {
-          "ticker": "SCNI",
-          "direction": "down",
-          "ret": -18.25,
-          "entry_date": "2026-10-16",
-          "published_at": "2026-10-16 08:00:00",
-          "title": "Scinai Immunotherapeutics Announces Closing of $4.0 Million Financing Through a Private Placement and Warrant Inducement",
-          "event_class": "dilution"
-        },
-        {
           "ticker": "SERV",
           "direction": "up",
           "ret": 18.25,
@@ -35159,6 +35150,15 @@
           "published_at": "2026-11-05 21:39:58",
           "title": "Serve Robotics Beats And Lifts Its Outlook, But A Sequential Revenue Dip And Heavy Cash Burn Keep The Turnaround Unproven",
           "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "SCNI",
+          "direction": "down",
+          "ret": -18.21,
+          "entry_date": "2026-10-16",
+          "published_at": "2026-10-16 08:00:00",
+          "title": "Scinai Immunotherapeutics Announces Closing of $4.0 Million Financing Through a Private Placement and Warrant Inducement",
+          "event_class": "dilution"
         },
         {
           "ticker": "CCOI",
@@ -35892,7 +35892,7 @@
         {
           "ticker": "ANTY",
           "direction": "up",
-          "ret": 16.46,
+          "ret": 16.48,
           "entry_date": "2026-11-23",
           "published_at": "2026-11-23 06:00:00",
           "title": "ProShares Launches ANTU and ANTY ETFs Targeting 2x and -2x Daily Returns of Anthropic Following Its Historic IPO",
@@ -35901,7 +35901,7 @@
         {
           "ticker": "ANTY",
           "direction": "up",
-          "ret": 16.46,
+          "ret": 16.48,
           "entry_date": "2026-11-23",
           "published_at": "2026-11-23 06:00:00",
           "title": "ProShares Launches ANTU and ANTY ETFs Targeting 2x and -2x Daily Returns of Anthropic Following Its Historic IPO",
@@ -62882,7 +62882,7 @@
         {
           "ticker": "SCNI",
           "direction": "down",
-          "ret": -26.77,
+          "ret": -26.75,
           "entry_date": "2026-10-16",
           "published_at": "2026-10-16 08:00:00",
           "title": "Scinai Immunotherapeutics Announces Closing of $4.0 Million Financing Through a Private Placement and Warrant Inducement",
@@ -96010,7 +96010,7 @@
         {
           "ticker": "SCNI",
           "direction": "down",
-          "ret": -26.65,
+          "ret": -26.66,
           "entry_date": "2026-10-16",
           "published_at": "2026-10-16 08:00:00",
           "title": "Scinai Immunotherapeutics Announces Closing of $4.0 Million Financing Through a Private Placement and Warrant Inducement",
@@ -103523,15 +103523,6 @@
           "event_class": "product_harm"
         },
         {
-          "ticker": "SCNI",
-          "direction": "down",
-          "ret": -12.92,
-          "entry_date": "2026-10-14",
-          "published_at": "2026-10-14 08:00:00",
-          "title": "Scinai Immunotherapeutics Announces $4.0 Million Financing Through a Private Placement and Warrant Inducement",
-          "event_class": "dilution"
-        },
-        {
           "ticker": "VNDA",
           "direction": "down",
           "ret": -12.91,
@@ -103557,6 +103548,15 @@
           "published_at": "2026-10-01 21:00:38",
           "title": "Bassett Furniture Industries Inc (BSET) (Q3 2026) Earnings Call Highlights: Revenue Growth and ...",
           "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "SCNI",
+          "direction": "down",
+          "ret": -12.88,
+          "entry_date": "2026-10-14",
+          "published_at": "2026-10-14 08:00:00",
+          "title": "Scinai Immunotherapeutics Announces $4.0 Million Financing Through a Private Placement and Warrant Inducement",
+          "event_class": "dilution"
         },
         {
           "ticker": "JBSS",
@@ -131163,7 +131163,7 @@
         {
           "ticker": "SCNI",
           "direction": "down",
-          "ret": -32.17,
+          "ret": -32.23,
           "entry_date": "2026-10-16",
           "published_at": "2026-10-16 08:00:00",
           "title": "Scinai Immunotherapeutics Announces Closing of $4.0 Million Financing Through a Private Placement and Warrant Inducement",
@@ -133359,7 +133359,7 @@
         {
           "ticker": "SCNI",
           "direction": "down",
-          "ret": -21.99,
+          "ret": -21.97,
           "entry_date": "2026-10-14",
           "published_at": "2026-10-14 08:00:00",
           "title": "Scinai Immunotherapeutics Announces $4.0 Million Financing Through a Private Placement and Warrant Inducement",
@@ -146407,28 +146407,28 @@
       "singleton": {
         "0-1d": {
           "hits": 933,
-          "n": 1965,
-          "hit_rate": 0.4748
+          "n": 1964,
+          "hit_rate": 0.4751
         },
         "2d": {
           "hits": 941,
-          "n": 1926,
-          "hit_rate": 0.4886
+          "n": 1925,
+          "hit_rate": 0.4888
         },
         "3d": {
           "hits": 913,
-          "n": 1895,
-          "hit_rate": 0.4818
+          "n": 1894,
+          "hit_rate": 0.482
         },
         "4d": {
           "hits": 909,
-          "n": 1861,
-          "hit_rate": 0.4884
+          "n": 1860,
+          "hit_rate": 0.4887
         },
         "5d": {
           "hits": 910,
-          "n": 1834,
-          "hit_rate": 0.4962
+          "n": 1833,
+          "hit_rate": 0.4965
         }
       },
       "converge": {
