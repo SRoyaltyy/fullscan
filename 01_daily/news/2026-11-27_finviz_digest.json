@@ -1,7 +1,7 @@
 {
   "date": "2026-11-27",
-  "generated_at": "2026-11-27T04:48:27.904548-05:00",
-  "export_used": "data/exports/finviz_2026-11-26.csv",
+  "generated_at": "2026-11-27T05:06:43.310081-05:00",
+  "export_used": "data/exports/finviz_2026-11-27.csv",
   "ticker_digest_count": 775,
   "signal_count": 189,
   "index_digests": [
@@ -45,7 +45,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "ADI",
@@ -57,7 +57,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "ADP",
@@ -69,7 +69,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "ADSK",
@@ -81,7 +81,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "AMD",
@@ -93,7 +93,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "AMGN",
@@ -105,7 +105,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "AMZN",
@@ -117,7 +117,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "AVGO",
@@ -129,7 +129,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "BABA",
@@ -141,7 +141,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "BHP",
@@ -153,7 +153,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "BN",
@@ -165,7 +165,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "BUD",
@@ -177,7 +177,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "CEG",
@@ -189,7 +189,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "DELL",
@@ -201,7 +201,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "EQNR",
@@ -213,7 +213,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "FCX",
@@ -225,7 +225,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "HOOD",
@@ -237,7 +237,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "HPE",
@@ -249,7 +249,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "MA",
@@ -261,7 +261,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "MRVL",
@@ -273,7 +273,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "NKE",
@@ -285,7 +285,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "NOC",
@@ -297,7 +297,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "NVDA",
@@ -309,7 +309,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "PFE",
@@ -321,7 +321,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "PH",
@@ -333,7 +333,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "RIO",
@@ -345,7 +345,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "SNDK",
@@ -357,7 +357,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "TFC",
@@ -369,7 +369,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "TMO",
@@ -381,7 +381,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "TXN",
@@ -393,7 +393,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "V",
@@ -405,7 +405,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "VRT",
@@ -417,7 +417,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "VRTX",
@@ -429,7 +429,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "WDC",
@@ -441,7 +441,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "AMRZ",
@@ -453,7 +453,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "BBIO",
@@ -465,7 +465,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "BBY",
@@ -477,7 +477,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "BG",
@@ -489,7 +489,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "BR",
@@ -501,7 +501,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "BURL",
@@ -513,7 +513,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "CLS",
@@ -525,7 +525,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "COIN",
@@ -537,7 +537,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "CRCL",
@@ -549,7 +549,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "CSGP",
@@ -561,7 +561,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "DKS",
@@ -573,7 +573,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "DLTR",
@@ -585,7 +585,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "DPZ",
@@ -597,7 +597,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "EMBJ",
@@ -609,7 +609,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "ES",
@@ -621,7 +621,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "FLEX",
@@ -633,7 +633,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "GIB",
@@ -645,7 +645,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "GME",
@@ -657,7 +657,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "HII",
@@ -669,7 +669,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "HPQ",
@@ -681,7 +681,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "INSM",
@@ -693,7 +693,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "IOT",
@@ -705,7 +705,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "KR",
@@ -717,7 +717,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "LSCC",
@@ -729,7 +729,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "MCHP",
@@ -741,7 +741,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "NTNX",
@@ -753,7 +753,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     }
   ],
   "by_sector": {
@@ -768,7 +768,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+        "scraped_at": "2026-11-27T05:06:24.410561-05:00"
       },
       {
         "ticker": "ADP",
@@ -780,7 +780,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+        "scraped_at": "2026-11-27T05:06:24.410561-05:00"
       },
       {
         "ticker": "ADSK",
@@ -792,7 +792,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+        "scraped_at": "2026-11-27T05:06:24.410561-05:00"
       },
       {
         "ticker": "AMD",
@@ -804,7 +804,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+        "scraped_at": "2026-11-27T05:06:24.410561-05:00"
       },
       {
         "ticker": "AVGO",
@@ -816,7 +816,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+        "scraped_at": "2026-11-27T05:06:24.410561-05:00"
       },
       {
         "ticker": "DELL",
@@ -828,7 +828,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+        "scraped_at": "2026-11-27T05:06:24.410561-05:00"
       },
       {
         "ticker": "HPE",
@@ -840,7 +840,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+        "scraped_at": "2026-11-27T05:06:24.410561-05:00"
       },
       {
         "ticker": "MRVL",
@@ -852,7 +852,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+        "scraped_at": "2026-11-27T05:06:24.410561-05:00"
       }
     ],
     "Consumer Cyclical": [
@@ -866,7 +866,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+        "scraped_at": "2026-11-27T05:06:24.410561-05:00"
       },
       {
         "ticker": "BABA",
@@ -878,7 +878,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+        "scraped_at": "2026-11-27T05:06:24.410561-05:00"
       },
       {
         "ticker": "NKE",
@@ -890,7 +890,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+        "scraped_at": "2026-11-27T05:06:24.410561-05:00"
       },
       {
         "ticker": "BBY",
@@ -902,7 +902,7 @@
         "has_signal": true,
         "rank": 2.4,
         "source": "finviz_export",
-        "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+        "scraped_at": "2026-11-27T05:06:24.410561-05:00"
       },
       {
         "ticker": "BURL",
@@ -914,7 +914,7 @@
         "has_signal": true,
         "rank": 2.4,
         "source": "finviz_export",
-        "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+        "scraped_at": "2026-11-27T05:06:24.410561-05:00"
       },
       {
         "ticker": "DKS",
@@ -926,7 +926,7 @@
         "has_signal": true,
         "rank": 2.4,
         "source": "finviz_export",
-        "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+        "scraped_at": "2026-11-27T05:06:24.410561-05:00"
       },
       {
         "ticker": "DPZ",
@@ -938,7 +938,7 @@
         "has_signal": true,
         "rank": 2.4,
         "source": "finviz_export",
-        "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+        "scraped_at": "2026-11-27T05:06:24.410561-05:00"
       },
       {
         "ticker": "GME",
@@ -950,7 +950,7 @@
         "has_signal": true,
         "rank": 2.4,
         "source": "finviz_export",
-        "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+        "scraped_at": "2026-11-27T05:06:24.410561-05:00"
       }
     ],
     "Healthcare": [
@@ -964,7 +964,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+        "scraped_at": "2026-11-27T05:06:24.410561-05:00"
       },
       {
         "ticker": "AMGN",
@@ -976,7 +976,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+        "scraped_at": "2026-11-27T05:06:24.410561-05:00"
       },
       {
         "ticker": "PFE",
@@ -988,7 +988,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+        "scraped_at": "2026-11-27T05:06:24.410561-05:00"
       },
       {
         "ticker": "TMO",
@@ -1000,7 +1000,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+        "scraped_at": "2026-11-27T05:06:24.410561-05:00"
       },
       {
         "ticker": "VRTX",
@@ -1012,7 +1012,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+        "scraped_at": "2026-11-27T05:06:24.410561-05:00"
       },
       {
         "ticker": "BBIO",
@@ -1024,7 +1024,7 @@
         "has_signal": true,
         "rank": 2.4,
         "source": "finviz_export",
-        "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+        "scraped_at": "2026-11-27T05:06:24.410561-05:00"
       },
       {
         "ticker": "INSM",
@@ -1036,7 +1036,7 @@
         "has_signal": true,
         "rank": 2.4,
         "source": "finviz_export",
-        "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+        "scraped_at": "2026-11-27T05:06:24.410561-05:00"
       }
     ],
     "Financial": [
@@ -1050,7 +1050,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+        "scraped_at": "2026-11-27T05:06:24.410561-05:00"
       },
       {
         "ticker": "HOOD",
@@ -1062,7 +1062,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+        "scraped_at": "2026-11-27T05:06:24.410561-05:00"
       },
       {
         "ticker": "MA",
@@ -1074,7 +1074,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+        "scraped_at": "2026-11-27T05:06:24.410561-05:00"
       },
       {
         "ticker": "TFC",
@@ -1086,7 +1086,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+        "scraped_at": "2026-11-27T05:06:24.410561-05:00"
       },
       {
         "ticker": "V",
@@ -1098,7 +1098,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+        "scraped_at": "2026-11-27T05:06:24.410561-05:00"
       },
       {
         "ticker": "COIN",
@@ -1110,7 +1110,7 @@
         "has_signal": true,
         "rank": 2.4,
         "source": "finviz_export",
-        "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+        "scraped_at": "2026-11-27T05:06:24.410561-05:00"
       },
       {
         "ticker": "CRCL",
@@ -1122,7 +1122,7 @@
         "has_signal": true,
         "rank": 2.4,
         "source": "finviz_export",
-        "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+        "scraped_at": "2026-11-27T05:06:24.410561-05:00"
       }
     ],
     "Industrials": [
@@ -1136,7 +1136,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+        "scraped_at": "2026-11-27T05:06:24.410561-05:00"
       },
       {
         "ticker": "PH",
@@ -1148,7 +1148,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+        "scraped_at": "2026-11-27T05:06:24.410561-05:00"
       },
       {
         "ticker": "VRT",
@@ -1160,7 +1160,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+        "scraped_at": "2026-11-27T05:06:24.410561-05:00"
       },
       {
         "ticker": "EMBJ",
@@ -1172,7 +1172,7 @@
         "has_signal": true,
         "rank": 2.4,
         "source": "finviz_export",
-        "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+        "scraped_at": "2026-11-27T05:06:24.410561-05:00"
       },
       {
         "ticker": "HII",
@@ -1184,7 +1184,7 @@
         "has_signal": true,
         "rank": 2.4,
         "source": "finviz_export",
-        "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+        "scraped_at": "2026-11-27T05:06:24.410561-05:00"
       }
     ],
     "Basic Materials": [
@@ -1198,7 +1198,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+        "scraped_at": "2026-11-27T05:06:24.410561-05:00"
       },
       {
         "ticker": "FCX",
@@ -1210,7 +1210,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+        "scraped_at": "2026-11-27T05:06:24.410561-05:00"
       },
       {
         "ticker": "RIO",
@@ -1222,7 +1222,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+        "scraped_at": "2026-11-27T05:06:24.410561-05:00"
       },
       {
         "ticker": "AMRZ",
@@ -1234,7 +1234,7 @@
         "has_signal": true,
         "rank": 2.4,
         "source": "finviz_export",
-        "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+        "scraped_at": "2026-11-27T05:06:24.410561-05:00"
       }
     ],
     "Consumer Defensive": [
@@ -1248,7 +1248,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+        "scraped_at": "2026-11-27T05:06:24.410561-05:00"
       },
       {
         "ticker": "BG",
@@ -1260,7 +1260,7 @@
         "has_signal": true,
         "rank": 2.4,
         "source": "finviz_export",
-        "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+        "scraped_at": "2026-11-27T05:06:24.410561-05:00"
       },
       {
         "ticker": "DLTR",
@@ -1272,7 +1272,7 @@
         "has_signal": true,
         "rank": 2.4,
         "source": "finviz_export",
-        "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+        "scraped_at": "2026-11-27T05:06:24.410561-05:00"
       },
       {
         "ticker": "KR",
@@ -1284,7 +1284,7 @@
         "has_signal": true,
         "rank": 2.4,
         "source": "finviz_export",
-        "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+        "scraped_at": "2026-11-27T05:06:24.410561-05:00"
       }
     ],
     "Utilities": [
@@ -1298,7 +1298,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+        "scraped_at": "2026-11-27T05:06:24.410561-05:00"
       },
       {
         "ticker": "ES",
@@ -1310,7 +1310,7 @@
         "has_signal": true,
         "rank": 2.4,
         "source": "finviz_export",
-        "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+        "scraped_at": "2026-11-27T05:06:24.410561-05:00"
       }
     ],
     "Energy": [
@@ -1324,7 +1324,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+        "scraped_at": "2026-11-27T05:06:24.410561-05:00"
       }
     ],
     "Real Estate": [
@@ -1338,11 +1338,11 @@
         "has_signal": true,
         "rank": 2.4,
         "source": "finviz_export",
-        "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+        "scraped_at": "2026-11-27T05:06:24.410561-05:00"
       }
     ]
   },
-  "scraped_at": "2026-11-26T05:06:47.806787-05:00",
+  "scraped_at": "2026-11-27T05:06:24.410561-05:00",
   "all_ticker_digests_sample": [
     {
       "ticker": "A",
@@ -1354,7 +1354,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "ADI",
@@ -1366,7 +1366,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "ADP",
@@ -1378,7 +1378,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "ADSK",
@@ -1390,7 +1390,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "AMD",
@@ -1402,7 +1402,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "AMGN",
@@ -1414,7 +1414,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "AMZN",
@@ -1426,7 +1426,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "AVGO",
@@ -1438,7 +1438,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "BABA",
@@ -1450,7 +1450,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "BHP",
@@ -1462,7 +1462,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "BN",
@@ -1474,7 +1474,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "BUD",
@@ -1486,7 +1486,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "CEG",
@@ -1498,7 +1498,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "DELL",
@@ -1510,7 +1510,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "EQNR",
@@ -1522,7 +1522,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "FCX",
@@ -1534,7 +1534,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "HOOD",
@@ -1546,7 +1546,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "HPE",
@@ -1558,7 +1558,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "MA",
@@ -1570,7 +1570,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "MRVL",
@@ -1582,7 +1582,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "NKE",
@@ -1594,7 +1594,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "NOC",
@@ -1606,7 +1606,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "NVDA",
@@ -1618,7 +1618,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "PFE",
@@ -1630,7 +1630,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "PH",
@@ -1642,7 +1642,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "RIO",
@@ -1654,7 +1654,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "SNDK",
@@ -1666,7 +1666,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "TFC",
@@ -1678,7 +1678,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "TMO",
@@ -1690,7 +1690,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "TXN",
@@ -1702,7 +1702,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "V",
@@ -1714,7 +1714,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "VRT",
@@ -1726,7 +1726,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "VRTX",
@@ -1738,7 +1738,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "WDC",
@@ -1750,7 +1750,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "AMRZ",
@@ -1762,7 +1762,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "BBIO",
@@ -1774,7 +1774,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "BBY",
@@ -1786,7 +1786,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "BG",
@@ -1798,7 +1798,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "BR",
@@ -1810,7 +1810,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "BURL",
@@ -1822,7 +1822,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "CLS",
@@ -1834,7 +1834,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "COIN",
@@ -1846,7 +1846,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "CRCL",
@@ -1858,7 +1858,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "CSGP",
@@ -1870,7 +1870,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "DKS",
@@ -1882,7 +1882,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "DLTR",
@@ -1894,7 +1894,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "DPZ",
@@ -1906,7 +1906,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "EMBJ",
@@ -1918,7 +1918,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "ES",
@@ -1930,7 +1930,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "FLEX",
@@ -1942,7 +1942,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "GIB",
@@ -1954,7 +1954,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "GME",
@@ -1966,7 +1966,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "HII",
@@ -1978,7 +1978,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "HPQ",
@@ -1990,7 +1990,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "INSM",
@@ -2002,7 +2002,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "IOT",
@@ -2014,7 +2014,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "KR",
@@ -2026,7 +2026,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "LSCC",
@@ -2038,7 +2038,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "MCHP",
@@ -2050,7 +2050,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "NTNX",
@@ -2062,7 +2062,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "ON",
@@ -2074,7 +2074,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "P",
@@ -2086,7 +2086,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "PAYX",
@@ -2098,7 +2098,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "PCVX",
@@ -2110,7 +2110,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "PYPL",
@@ -2122,7 +2122,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "Q",
@@ -2134,7 +2134,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "QXO",
@@ -2146,7 +2146,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "SJM",
@@ -2158,7 +2158,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "SYM",
@@ -2170,7 +2170,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "TGTX",
@@ -2182,7 +2182,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "TOST",
@@ -2194,7 +2194,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "UMC",
@@ -2206,7 +2206,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "VALE",
@@ -2218,7 +2218,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "WDAY",
@@ -2230,7 +2230,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "XYZ",
@@ -2242,7 +2242,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "ZM",
@@ -2254,7 +2254,7 @@
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "ABVX",
@@ -2266,7 +2266,7 @@
       "has_signal": true,
       "rank": 2.15,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "ACI",
@@ -2278,7 +2278,7 @@
       "has_signal": true,
       "rank": 2.15,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "AMTM",
@@ -2290,7 +2290,7 @@
       "has_signal": true,
       "rank": 2.15,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     },
     {
       "ticker": "ANF",
@@ -2302,7 +2302,7 @@
       "has_signal": true,
       "rank": 2.15,
       "source": "finviz_export",
-      "scraped_at": "2026-11-26T05:06:47.806787-05:00"
+      "scraped_at": "2026-11-27T05:06:24.410561-05:00"
     }
   ]
 }

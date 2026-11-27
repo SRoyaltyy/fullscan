@@ -1,16 +1,19 @@
 {
   "date": "2026-11-27",
-  "generated_at": "2026-11-27T05:03:11.903830-05:00",
+  "generated_at": "2026-11-27T05:06:43.909359-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-11-27_predict.md` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-11-27_judge.md` \u2014 missing"
+    "MISSING News actions JSON `01_daily/news/2026-11-27_actions.json` \u2014 missing",
+    "MISSING News judge MD `01_daily/news/2026-11-27_judge.md` \u2014 missing",
+    "MISSING Weather JSON `01_daily/weather/2026-11-27_weather.json` \u2014 missing",
+    "MISSING AB checklist enriched `data/ab_checklist/2026-11-27_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
-    "ok": 4,
-    "partial": 4,
-    "fail": 0,
+    "ok": 1,
+    "partial": 3,
+    "fail": 4,
     "n": 8
   },
   "processes": [
@@ -18,9 +21,9 @@
       "key": "postclose",
       "name": "Post-close research",
       "yaml": "map_heat_postclose.yml",
-      "status": "OK",
+      "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 2,
+      "n_req_ok": 1,
       "n_req": 2,
       "n_opt_ok": 2,
       "n_opt": 2,
@@ -55,10 +58,10 @@
           "name": "Map heat tables JSON",
           "path": "01_daily/map_heat/2026-11-27_map_heat.json",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 272475,
-          "said": "morning_overlay \u00b7 11786 names \u00b7 hot Mortgage Finance, Metal Fabrication, Apparel Retail, Furnishings, Fixtures & Appliances \u00b7 cold Shell Companies, Silver, Other Precious Metals & Mining \u00b7 macro_gate",
+          "status": "FAIL",
+          "reason": "stale_map_heat_md",
+          "size": 0,
+          "said": "stale_map_heat_md \u00b7 morning_overlay \u00b7 11786 names \u00b7 hot Mortgage Finance, Metal Fabrication, Apparel Retail, Furnishings, Fixtures & Appliances \u00b7 cold Shell Companies, Silver, Other Precious Metals & Mining \u00b7 macro_gate",
           "bullets": []
         },
         {
@@ -68,10 +71,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 18372,
-          "said": "MAP HEAT \u2014 2026-11-27",
+          "size": 17962,
+          "said": "MAP HEAT \u2014 2026-11-25",
           "bullets": [
-            "Export `finviz_2026-11-26.csv` \u00b7 11786 names \u00b7 generated 2026-11-27T04:50:40.969843-05:00",
+            "Export `finviz_2026-11-25.csv` \u00b7 11786 names \u00b7 generated 2026-11-25T05:09:58.312210-05:00",
             "TAPE (live futures)"
           ]
         }
@@ -87,7 +90,7 @@
       "inputs_ready": true,
       "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 3,
+      "n_opt_ok": 1,
       "n_opt": 5,
       "files": [
         {
@@ -115,7 +118,7 @@
           "size": 10248,
           "said": "Finviz Daily Digest \u2014 2026-11-27",
           "bullets": [
-            "_Generated 2026-11-27T04:48:27.904548-05:00 \u00b7 export=data/exports/finviz_2026-11-26.csv \u00b7 ticker digests=775 \u00b7 high-signal=189_",
+            "_Generated 2026-11-27T05:06:43.310081-05:00 \u00b7 export=data/exports/finviz_2026-11-27.csv \u00b7 ticker digests=775 \u00b7 high-signal=189_",
             "Major indices (live quote page)"
           ]
         },
@@ -124,10 +127,10 @@
           "name": "Homepage warm-up JSON (*_finviz_market_digest)",
           "path": "01_daily/news/2026-11-27_finviz_market_digest.json",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 4606,
-          "said": "US stocks set to open higher in holiday-shortened session as tech and AI sentiment steadies ahead of jobless claims and trade data \u00b7 leaders XYF \u00b7 good",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
           "bullets": []
         },
         {
@@ -135,14 +138,11 @@
           "name": "Homepage warm-up MD (*_finviz_market_digest)",
           "path": "01_daily/news/2026-11-27_finviz_market_digest.md",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 2323,
-          "said": "Finviz homepage market digest \u2014 2026-11-27",
-          "bullets": [
-            "Generated:** 2026-11-27T04:48:39.976317-05:00 (America/New_York)",
-            "Source:** `live`"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "market_digest_close_json",
@@ -179,10 +179,10 @@
       "name": "Pre-Open ALL",
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
-      "inputs_ready": true,
-      "n_req_ok": 4,
+      "inputs_ready": false,
+      "n_req_ok": 2,
       "n_req": 9,
-      "n_opt_ok": 2,
+      "n_opt_ok": 0,
       "n_opt": 14,
       "files": [
         {
@@ -205,10 +205,10 @@
           "name": "Homepage warm-up JSON (*_finviz_market_digest)",
           "path": "01_daily/news/2026-11-27_finviz_market_digest.json",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 4606,
-          "said": "US stocks set to open higher in holiday-shortened session as tech and AI sentiment steadies ahead of jobless claims and trade data \u00b7 leaders XYF \u00b7 good",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
           "bullets": []
         },
         {
@@ -227,10 +227,10 @@
           "name": "Map heat tables JSON",
           "path": "01_daily/map_heat/2026-11-27_map_heat.json",
           "role": "input",
-          "status": "OK",
-          "reason": "",
-          "size": 272475,
-          "said": "morning_overlay \u00b7 11786 names \u00b7 hot Mortgage Finance, Metal Fabrication, Apparel Retail, Furnishings, Fixtures & Appliances \u00b7 cold Shell Companies, Silver, Other Precious Metals & Mining \u00b7 macro_gate",
+          "status": "FAIL",
+          "reason": "stale_map_heat_md",
+          "size": 0,
+          "said": "stale_map_heat_md \u00b7 morning_overlay \u00b7 11786 names \u00b7 hot Mortgage Finance, Metal Fabrication, Apparel Retail, Furnishings, Fixtures & Appliances \u00b7 cold Shell Companies, Silver, Other Precious Metals & Mining \u00b7 macro_gate",
           "bullets": []
         },
         {
@@ -238,10 +238,10 @@
           "name": "News parse JSON",
           "path": "01_daily/news/2026-11-27_parsed.json",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 3811553,
-          "said": "3811553B on disk",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
           "bullets": []
         },
         {
@@ -293,16 +293,11 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-11-27_actions.json",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 85891,
-          "said": "113 ticker actions \u00b7 8 events \u00b7 5331 headlines \u00b7 COP BUY, EOG BUY, CHRD BUY, SM BUY, KOS BUY, HPK BUY, OXY BUY, FANG BUY",
-          "bullets": [
-            "BUY COP",
-            "BUY EOG",
-            "BUY CHRD",
-            "BUY SM"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "general",
@@ -333,13 +328,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7571,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 16 fail",
+          "size": 7592,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 20 fail",
           "bullets": [
             "general_predict:missing",
             "events:missing",
             "news_judge:missing",
-            "finviz_market_digest:missing"
+            "news_parse:missing"
           ]
         },
         {
@@ -347,10 +342,10 @@
           "name": "Pre-open status JSON",
           "path": "01_daily/2026-11-27_preopen_status.json",
           "role": "required",
-          "status": "OK",
-          "reason": "all_ok=False missing=['events', 'news_judge', 'map_heat_research', 'general_predict']",
-          "size": 6637,
-          "said": "all_ok=False \u00b7 qc=False \u00b7 grok=False \u00b7 book=False \u00b7 missing events, news_judge, map_heat_research, general_predict",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
           "bullets": []
         },
         {
@@ -495,9 +490,9 @@
       "key": "weather",
       "name": "Label + weather",
       "yaml": "label_weather.yml",
-      "status": "OK",
+      "status": "FAIL",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 0,
       "n_req": 1,
       "n_opt_ok": 0,
       "n_opt": 0,
@@ -522,29 +517,25 @@
           "name": "Weather JSON",
           "path": "01_daily/weather/2026-11-27_weather.json",
           "role": "required",
-          "status": "OK",
-          "reason": "sectors=11 bytes=9398 vix=falling yields=flat",
-          "size": 9398,
-          "said": "hostile 6 \u00b7 neutral 5",
-          "bullets": [
-            "hostile: Basic Materials, Communication Services, Consumer Cyclical, Consumer Defensive, Industrials, Technology"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         }
       ],
-      "said": "hostile 6 \u00b7 neutral 5",
-      "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Cyclical, Consumer Defensive, Industrials, Technology"
-      ]
+      "said": "",
+      "bullets": []
     },
     {
       "key": "ab",
       "name": "AB checklist",
       "yaml": "ab_checklist.yml",
-      "status": "OK",
+      "status": "FAIL",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 0,
       "n_req": 1,
-      "n_opt_ok": 1,
+      "n_opt_ok": 0,
       "n_opt": 1,
       "files": [
         {
@@ -552,39 +543,33 @@
           "name": "AB checklist raw",
           "path": "data/ab_checklist/2026-11-27_ab_checklist.csv",
           "role": "optional",
-          "status": "OK",
-          "reason": "rows=2607",
-          "size": 7472795,
-          "said": "27 rows",
-          "bullets": [
-            "CL, CBRL, SLDE, POWW, AES, PBH, PRVA, SWBI"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "ab_enriched",
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-11-27_ab_checklist_enriched.csv",
           "role": "required",
-          "status": "OK",
-          "reason": "rows=2607",
-          "size": 8243448,
-          "said": "25 rows",
-          "bullets": [
-            "SLDE, CL, AES, REYN, PBH, ARDT, CBRL, ALEC"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         }
       ],
-      "said": "25 rows",
-      "bullets": [
-        "SLDE, CL, AES, REYN, PBH"
-      ]
+      "said": "",
+      "bullets": []
     },
     {
       "key": "catalyst",
       "name": "Catalyst dossiers",
       "yaml": "catalyst_daily.yml",
-      "status": "PARTIAL",
-      "inputs_ready": true,
+      "status": "FAIL",
+      "inputs_ready": false,
       "n_req_ok": 0,
       "n_req": 0,
       "n_opt_ok": 0,
@@ -595,16 +580,11 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-11-27_actions.json",
           "role": "input",
-          "status": "OK",
-          "reason": "",
-          "size": 85891,
-          "said": "113 ticker actions \u00b7 8 events \u00b7 5331 headlines \u00b7 COP BUY, EOG BUY, CHRD BUY, SM BUY, KOS BUY, HPK BUY, OXY BUY, FANG BUY",
-          "bullets": [
-            "BUY COP",
-            "BUY EOG",
-            "BUY CHRD",
-            "BUY SM"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "in_digest",
@@ -633,25 +613,16 @@
           "bullets": []
         }
       ],
-      "said": "113 ticker actions \u00b7 8 events \u00b7 5331 headlines \u00b7 COP BUY, EOG BUY, CHRD BUY, SM BUY, KOS BUY, HPK BUY, OXY BUY, FANG BUY",
-      "bullets": [
-        "BUY COP",
-        "BUY EOG",
-        "BUY CHRD",
-        "BUY SM",
-        "BUY KOS",
-        "BUY HPK",
-        "BUY OXY",
-        "BUY FANG"
-      ]
+      "said": "",
+      "bullets": []
     },
     {
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "PARTIAL",
+      "status": "FAIL",
       "inputs_ready": false,
-      "n_req_ok": 2,
+      "n_req_ok": 0,
       "n_req": 4,
       "n_opt_ok": 1,
       "n_opt": 4,
@@ -683,16 +654,11 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-11-27_actions.json",
           "role": "input",
-          "status": "OK",
-          "reason": "",
-          "size": 85891,
-          "said": "113 ticker actions \u00b7 8 events \u00b7 5331 headlines \u00b7 COP BUY, EOG BUY, CHRD BUY, SM BUY, KOS BUY, HPK BUY, OXY BUY, FANG BUY",
-          "bullets": [
-            "BUY COP",
-            "BUY EOG",
-            "BUY CHRD",
-            "BUY SM"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "in_digest",
@@ -725,52 +691,44 @@
           "name": "Weather JSON",
           "path": "01_daily/weather/2026-11-27_weather.json",
           "role": "input",
-          "status": "OK",
-          "reason": "sectors=11 bytes=9398 vix=falling yields=flat",
-          "size": 9398,
-          "said": "hostile 6 \u00b7 neutral 5",
-          "bullets": [
-            "hostile: Basic Materials, Communication Services, Consumer Cyclical, Consumer Defensive, Industrials, Technology"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "in_ab",
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-11-27_ab_checklist_enriched.csv",
           "role": "input",
-          "status": "OK",
-          "reason": "rows=2607",
-          "size": 8243448,
-          "said": "25 rows",
-          "bullets": [
-            "SLDE, CL, AES, REYN, PBH, ARDT, CBRL, ALEC"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "join",
           "name": "Join ranked CSV",
           "path": "data/join/2026-11-27_ranked.csv",
           "role": "required",
-          "status": "OK",
-          "reason": "rows=5883",
-          "size": 2209360,
-          "said": "216 rows",
-          "bullets": [
-            "ONC, RGA, ETON, LLY, KNSA, REGN, ASND, RDN"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "peers",
           "name": "Peer RS CSV",
           "path": "data/peers/2026-11-27_peer_rs.csv",
           "role": "required",
-          "status": "OK",
-          "reason": "rows=5007",
-          "size": 807446,
-          "said": "493 rows",
-          "bullets": [
-            "A, AA, AACG, AAL, AAME, AAMI, AAOI, AAON"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "book_json",
@@ -831,10 +789,8 @@
           "bullets": []
         }
       ],
-      "said": "216 rows",
-      "bullets": [
-        "ONC, RGA, ETON, LLY, KNSA"
-      ]
+      "said": "",
+      "bullets": []
     },
     {
       "key": "publish",
@@ -908,12 +864,7 @@
     "general": {},
     "sectors": {},
     "news": {},
-    "weather": {
-      "said": "hostile 6 \u00b7 neutral 5",
-      "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Cyclical, Consumer Defensive, Industrials, Technology"
-      ]
-    }
+    "weather": {}
   },
   "lands": [
     {
@@ -1272,6 +1223,52 @@
         }
       ],
       "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, sectors_required, all_ok \u00b7 keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs \u00b7 # Pre-open ALL status \u2014 2026-11-27\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  news_mode=on  missing=['events', 'news_judge', 'map_heat_research', 'general_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- News actions (no LLM): exit 0"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-11-27",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-27T05:06:43.496578-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-27_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 94205,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-11-27_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 10280,
+          "preview": "# Finviz Daily Digest \u2014 2026-11-27\n_Generated 2026-11-27T05:06:43.310081-05:00 \u00b7 export=data/exports/finviz_2026-11-27.csv \u00b7 ticker digests=775 \u00b7 high-signal=189_"
+        },
+        {
+          "path": "data/exports/finviz_2026-11-27.csv",
+          "ok": true,
+          "reason": "",
+          "size": 12260147,
+          "preview": "11787 rows \u00b7 Ticker,Company,Industry,Market Cap,Forward P/E,P/S,P/B,P/Cash,P/Free Cash Flow,EPS (ttm),Sales Year Over Year TTM,EPS Su \u00b7 A, AA, AAA, AAAA, AAAB"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11033205,
+          "preview": "11787 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
+        },
+        {
+          "path": "01_daily/news/2026-11-27_finviz_digest_preopen.json",
+          "ok": true,
+          "reason": "",
+          "size": 94205,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-11-27\n_Generated 2026-11-27T05:06:43.310081-05:00 \u00b7 export=data/exports/finviz_2026-11-27.csv \u00b7 ticker digests=775 \u00b7 high-signal=189_ \u00b7 11787 rows \u00b7 Ticker,Company,Industry,Market Cap,Forward P/E,P/S,P/B,P/Cash,P/Free Cash Flow,EPS (ttm),Sales Year Over Year TTM,EPS Su \u00b7 A, AA, AAA, AAAA, AAAB \u00b7 11787 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
     }
   ],
   "href": {

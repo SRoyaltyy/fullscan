@@ -1,6 +1,6 @@
 {
   "date": "2026-11-27",
-  "generated_at": "2026-11-27T05:03:19.109517-05:00",
+  "generated_at": "2026-11-27T05:06:43.455248-05:00",
   "items": [
     {
       "ok": false,
@@ -36,25 +36,25 @@
       "missing_markers": []
     },
     {
-      "ok": true,
+      "ok": false,
       "kind": "news_parse",
       "path": "01_daily/news/2026-11-27_parsed.json",
-      "reason": "",
-      "size": 3811553,
+      "reason": "missing",
+      "size": 0,
       "carried": false,
       "timeout": false,
-      "empty": false,
+      "empty": true,
       "missing_markers": []
     },
     {
-      "ok": true,
+      "ok": false,
       "kind": "news_actions",
       "path": "01_daily/news/2026-11-27_actions.json",
-      "reason": "",
-      "size": 85891,
+      "reason": "missing",
+      "size": 0,
       "carried": false,
       "timeout": false,
-      "empty": false,
+      "empty": true,
       "missing_markers": []
     },
     {
@@ -69,14 +69,14 @@
       "missing_markers": []
     },
     {
-      "ok": true,
+      "ok": false,
       "kind": "finviz_market_digest",
       "path": "01_daily/news/2026-11-27_finviz_market_digest.json",
-      "reason": "",
-      "size": 4606,
+      "reason": "missing",
+      "size": 0,
       "carried": false,
       "timeout": false,
-      "empty": false,
+      "empty": true,
       "missing_markers": []
     },
     {
@@ -91,11 +91,11 @@
       "missing_markers": []
     },
     {
-      "ok": true,
+      "ok": false,
       "kind": "map_heat",
       "path": "01_daily/map_heat/2026-11-27_map_heat.json",
-      "reason": "",
-      "size": 272475,
+      "reason": "stale_map_heat_md",
+      "size": 0,
       "carried": false,
       "timeout": false,
       "empty": false,
