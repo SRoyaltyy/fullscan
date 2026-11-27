@@ -1,12 +1,12 @@
 {
   "date": "2026-11-27",
-  "generated_at": "2026-11-27T05:01:46.126337-05:00",
+  "generated_at": "2026-11-27T05:01:59.515775-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
     "ok": 4,
-    "partial": 3,
-    "fail": 1,
+    "partial": 4,
+    "fail": 0,
     "n": 8
   },
   "buy_1d": [],
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-11-27",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-27T05:00:15.024241-05:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-11-27_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 94205,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-11-27_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 10280,
-          "preview": "# Finviz Daily Digest \u2014 2026-11-27\n_Generated 2026-11-27T04:48:27.904548-05:00 \u00b7 export=data/exports/finviz_2026-11-26.csv \u00b7 ticker digests=775 \u00b7 high-signal=189_"
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-11-27\n_Generated 2026-11-27T04:48:27.904548-05:00 \u00b7 export=data/exports/finviz_2026-11-26.csv \u00b7 ticker digests=775 \u00b7 high-signal=189_"
-    },
     {
       "key": "map_heat",
       "title": "Map heat tables",
@@ -200,6 +175,31 @@
         }
       ],
       "preview": "raw=5333 usable=393 single=265 \u00b7 ECB already had large support for rate hike in Oct, accounts show - Reuters | Core inflation in Japan's capital accelerates in November - Reuters | Brent trades near month's high as Mideast conflict threatens supply - Reuters | US core PCE inflation set to heat up in October, prompting Federal Reserve rate  | Man dead after crash involving pedestrian on Clinton Highway in Powell - WATE 6  \u00b7 # News Parse v2 \u2014 2026-11-27T05:01:40.210057-05:00\nWindow\u224848h | news_mode=on | raw=5333 | usable=393 | single_name=265 | noise_dropped=4559\nusable polarity={'+': 9, '-': 97, 'mixed': 2, 'neutral': 285}"
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-11-27",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-27T05:01:58.879901-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-27_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 85891,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-11-27_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 17725,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-11-27T05:01:58.870397-05:00\nraw=5331 unique_events=8 tickers=113"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-11-27T05:01:58.870397-05:00\nraw=5331 unique_events=8 tickers=113"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
