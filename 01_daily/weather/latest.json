@@ -1,6 +1,6 @@
 {
  "date": "2026-11-27",
- "generated_at": "2026-11-27T14:53:20.141878-05:00",
+ "generated_at": "2026-11-27T15:05:49.063356-05:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -20,7 +20,7 @@
   "dgs10_current": 4.91,
   "dollar": "strong",
   "dollar_source": "dxy",
-  "dxy_pct_1d": 0.35,
+  "dxy_pct_1d": 0.36,
   "vix_ratio": 1.0,
   "vix_spot": 23.81,
   "vix_delta_1d": -2.99,
