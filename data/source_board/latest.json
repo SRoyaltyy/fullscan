@@ -1,6 +1,6 @@
 {
  "date": "2026-11-27",
- "generated_at": "2026-11-27T09:42:39.078330+00:00",
+ "generated_at": "2026-11-27T21:59:17.826660+00:00",
  "catalog": {
   "generated_at": "2026-11-21T20:07:43.335432+00:00",
   "channels": 365,
@@ -34,53 +34,54 @@
   }
  },
  "collect": {
-  "generated_at": "2026-11-27T09:42:17.831081+00:00",
+  "generated_at": "2026-11-27T21:58:58.067934+00:00",
   "enabled_sources": 115,
   "sources_ok": 115,
   "sources_failed": 0,
   "coverage_status": "degraded",
   "counts": {
-   "observed": 1867,
-   "old": 1063,
+   "observed": 1926,
+   "old": 1139,
    "future": 0,
-   "undated": 315,
-   "new": 171,
-   "duplicates": 633
+   "undated": 339,
+   "new": 50,
+   "duplicates": 737
   },
-  "current_dated_documents": 642
+  "current_dated_documents": 584
  },
  "new_today": {
-  "count": 171,
+  "count": 50,
   "by_source": {
-   "us-federal-register": 137,
-   "us-doj-b3d27e1dc3": 8,
-   "jp-meti-index": 5,
-   "in-rbi-cc71120b98": 4,
-   "uk-govuk-decision": 3,
-   "uk-govuk-consultation_outcome": 3,
-   "hk-hkma-public-press": 2,
-   "eu-council-9d9e9444da": 2,
-   "jp-boj-d488538690": 2,
-   "de-bundesbank-027ac4024f": 2,
-   "eu-commission-07d4f58ccf": 1,
+   "uk-govuk-product_safety_alert_report_recall": 11,
+   "in-rbi-738b09bded": 10,
+   "in-rbi-cc71120b98": 7,
+   "us-fcc-e95ecda3bb": 5,
+   "eu-council-9d9e9444da": 4,
+   "eu-commission-07d4f58ccf": 3,
+   "us-fdic-index": 2,
+   "uk-govuk-decision": 1,
+   "uk-govuk-consultation_outcome": 1,
+   "uk-govuk-international_treaty": 1,
+   "us-fda-5696b24295": 1,
+   "us-fcc-685c5e7dd2": 1,
    "eu-ecb-991c113079": 1,
-   "uk-fca-7b9977ec8e": 1
+   "jp-jftc-gnews": 1,
+   "io-wto-497f28e20d": 1
   },
   "by_class": {
-   "high": 21,
-   "routine": 126,
-   "noise": 3,
-   "docket": 5,
-   "watch": 16
+   "routine": 18,
+   "high": 7,
+   "watch": 24,
+   "noise": 1
   }
  },
  "parsed_today": {
-  "count": 42,
+  "count": 91,
   "by_class": {
-   "high": 19,
-   "routine": 12,
-   "noise": 2,
-   "watch": 9
+   "high": 26,
+   "routine": 32,
+   "noise": 3,
+   "watch": 31
   }
  },
  "n_failures": 0,

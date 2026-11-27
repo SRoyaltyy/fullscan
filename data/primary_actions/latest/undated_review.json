@@ -1,146 +1,146 @@
 [
   {
-    "title": "Cyber resilience: building confidence as threats evolve",
-    "url": "https://www.fca.org.uk/news/speeches/cyber-resilience-building-confidence-threats-evolve",
-    "native_id": "178056",
+    "title": "Gomez on Ruling Halting FCC Campaign Against ABC",
+    "url": "https://www.fcc.gov/edoc/427573",
+    "native_id": "427573",
     "published_at": null,
-    "published_raw": "Friday, November 27, 2026 - 09:34",
-    "summary": "Speech by Mark Francis, director of specialists at the Cyber Security in Financial Services Summit. There is no shortage of material for a speech about cyber security at the moment.Recent months have provided some stark reminders of just how interconnected our digital economy has become.Major outages affecting Microsoft and Google have shown how problems in one part of the system can reverberate widely.We are seeing that changing environment reflected in our own data too.Last month was the highest month for cyber incidents reported to the FCA in the past 18 months, and the second highest in the past 5 years.And those numbers sit against a broader shift in the operating environment.Financial services firms are increasingly reliant on complex networks of technology and third-party providers.Geopolitical tensions remain heightened.And technologies such as artificial intelligence (AI) and the potential emergence of quantum computing are changing what is possible for attackers and defenders alike.Put all of that together and you could be forgiven for thinking this might be quite a gloomy speech.But I am, by nature, an optimist. A glass half full person.And when someone asks me what come",
+    "published_raw": "",
+    "summary": ".",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Financial Conduct Authority",
-      "jurisdiction": "UK",
-      "family": "financial_enforcement"
+      "issuer": "Federal Communications Commission — News Releases",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
     },
-    "primary_source_id": "uk-fca-7b9977ec8e",
-    "n": 12945,
-    "first_seen": "2026-11-27T09:42:17.831081+00:00",
-    "last_seen": "2026-11-27T09:42:17.831081+00:00",
+    "primary_source_id": "us-fcc-685c5e7dd2",
+    "n": 12976,
+    "first_seen": "2026-11-27T21:58:58.067934+00:00",
+    "last_seen": "2026-11-27T21:58:58.067934+00:00",
     "source_ids": [
-      "uk-fca-7b9977ec8e"
+      "us-fcc-685c5e7dd2"
     ]
   },
   {
-    "title": "Decision to Extend the Taxable Period of Anti-Dumping Duties on Potassium Hydroxide Originating in the Republic of Korea and the People’s Republic of China",
-    "url": "https://www.meti.go.jp/english/press/2026/11/20261127003.html",
-    "native_id": "https://www.meti.go.jp/english/press/2026/11/20261127003.html",
+    "title": "Applications",
+    "url": "https://www.fcc.gov/edoc/427579",
+    "native_id": "427579",
     "published_at": null,
-    "published_raw": null,
-    "summary": "",
+    "published_raw": "",
+    "summary": ".",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Japan Ministry of Economy Trade and Industry",
-      "jurisdiction": "JP",
-      "family": "trade_and_industry_policy"
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
     },
-    "primary_source_id": "jp-meti-index",
-    "n": 12952,
-    "first_seen": "2026-11-27T09:42:17.831081+00:00",
-    "last_seen": "2026-11-27T09:42:17.831081+00:00",
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 12977,
+    "first_seen": "2026-11-27T21:58:58.067934+00:00",
+    "last_seen": "2026-11-27T21:58:58.067934+00:00",
     "source_ids": [
-      "jp-meti-index"
+      "us-fcc-e95ecda3bb"
     ]
   },
   {
-    "title": "Decision to Impose a Definitive Anti-Dumping Duty on Bisphenol A Originating in the Republic of Korea and the Separate Customs Territory of Taiwan, Penghu, Kinmen and Matsu",
-    "url": "https://www.meti.go.jp/english/press/2026/11/20261127002.html",
-    "native_id": "https://www.meti.go.jp/english/press/2026/11/20261127002.html",
+    "title": "Satellite Licensing Division and Satellite Programs and Policy Division Information - SAT - Accepted for Filing",
+    "url": "https://www.fcc.gov/edoc/427574",
+    "native_id": "427574",
     "published_at": null,
-    "published_raw": null,
-    "summary": "",
+    "published_raw": "",
+    "summary": ".",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Japan Ministry of Economy Trade and Industry",
-      "jurisdiction": "JP",
-      "family": "trade_and_industry_policy"
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
     },
-    "primary_source_id": "jp-meti-index",
-    "n": 12953,
-    "first_seen": "2026-11-27T09:42:17.831081+00:00",
-    "last_seen": "2026-11-27T09:42:17.831081+00:00",
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 12978,
+    "first_seen": "2026-11-27T21:58:58.067934+00:00",
+    "last_seen": "2026-11-27T21:58:58.067934+00:00",
     "source_ids": [
-      "jp-meti-index"
+      "us-fcc-e95ecda3bb"
     ]
   },
   {
-    "title": "Decision to Impose a Definitive Anti-Dumping Duty on Hot-Dipped Galvanized Steel Coil, Sheet and Strip Originating in the Republic of Korea and the People’s Republic of China",
-    "url": "https://www.meti.go.jp/english/press/2026/11/20261127001.html",
-    "native_id": "https://www.meti.go.jp/english/press/2026/11/20261127001.html",
+    "title": "Satellite Licensing Division and Satellite Programs and Policy Division Information - SAT - Actions Taken",
+    "url": "https://www.fcc.gov/edoc/427575",
+    "native_id": "427575",
     "published_at": null,
-    "published_raw": null,
-    "summary": "",
+    "published_raw": "",
+    "summary": ".",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Japan Ministry of Economy Trade and Industry",
-      "jurisdiction": "JP",
-      "family": "trade_and_industry_policy"
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
     },
-    "primary_source_id": "jp-meti-index",
-    "n": 12954,
-    "first_seen": "2026-11-27T09:42:17.831081+00:00",
-    "last_seen": "2026-11-27T09:42:17.831081+00:00",
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 12979,
+    "first_seen": "2026-11-27T21:58:58.067934+00:00",
+    "last_seen": "2026-11-27T21:58:58.067934+00:00",
     "source_ids": [
-      "jp-meti-index"
+      "us-fcc-e95ecda3bb"
     ]
   },
   {
-    "title": "Parliamentary Vice-Minister WAKAYAMA Holds Online Meeting with H.E. Mr. Ryad MEZZOUR, Minister of Industry, Trade, Investment and Economic Inclusion of the Kingdom of Morrocco",
-    "url": "https://www.meti.go.jp/english/press/2026/11/20261126001.html",
-    "native_id": "https://www.meti.go.jp/english/press/2026/11/20261126001.html",
+    "title": "Pleadings",
+    "url": "https://www.fcc.gov/edoc/427581",
+    "native_id": "427581",
     "published_at": null,
-    "published_raw": null,
-    "summary": "",
+    "published_raw": "",
+    "summary": ".",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Japan Ministry of Economy Trade and Industry",
-      "jurisdiction": "JP",
-      "family": "trade_and_industry_policy"
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
     },
-    "primary_source_id": "jp-meti-index",
-    "n": 12955,
-    "first_seen": "2026-11-27T09:42:17.831081+00:00",
-    "last_seen": "2026-11-27T09:42:17.831081+00:00",
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 12980,
+    "first_seen": "2026-11-27T21:58:58.067934+00:00",
+    "last_seen": "2026-11-27T21:58:58.067934+00:00",
     "source_ids": [
-      "jp-meti-index"
+      "us-fcc-e95ecda3bb"
     ]
   },
   {
-    "title": "State Minister TAKAGI Visits the United Arab Emirates",
-    "url": "https://www.meti.go.jp/english/press/2026/11/20261104001.html",
-    "native_id": "https://www.meti.go.jp/english/press/2026/11/20261104001.html",
+    "title": "Actions",
+    "url": "https://www.fcc.gov/edoc/427580",
+    "native_id": "427580",
     "published_at": null,
-    "published_raw": null,
-    "summary": "",
+    "published_raw": "",
+    "summary": ".",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Japan Ministry of Economy Trade and Industry",
-      "jurisdiction": "JP",
-      "family": "trade_and_industry_policy"
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
     },
-    "primary_source_id": "jp-meti-index",
-    "n": 12956,
-    "first_seen": "2026-11-27T09:42:17.831081+00:00",
-    "last_seen": "2026-11-27T09:42:17.831081+00:00",
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 12981,
+    "first_seen": "2026-11-27T21:58:58.067934+00:00",
+    "last_seen": "2026-11-27T21:58:58.067934+00:00",
     "source_ids": [
-      "jp-meti-index"
+      "us-fcc-e95ecda3bb"
     ]
   }
 ]
