@@ -1,12 +1,6 @@
 {
-  "updated_at": "2026-11-27T05:13:13-05:00",
+  "updated_at": "2026-11-27T05:31:30-05:00",
   "runs": [
-    {
-      "date": "2026-11-18",
-      "workflow": "homepage_digest",
-      "file": "2026-11-18_homepage_digest.json",
-      "updated_at": "2026-11-18T21:39:14-05:00"
-    },
     {
       "date": "2026-11-18",
       "workflow": "factor_mine",
@@ -231,15 +225,21 @@
     },
     {
       "date": "2026-11-27",
-      "workflow": "preopen",
-      "file": "2026-11-27_preopen.json",
-      "updated_at": "2026-11-27T05:04:06-05:00"
+      "workflow": "fm_preopen",
+      "file": "2026-11-27_fm_preopen.json",
+      "updated_at": "2026-11-27T00:29:56-05:00"
     },
     {
       "date": "2026-11-27",
-      "workflow": "fm_preopen",
-      "file": "2026-11-27_fm_preopen.json",
-      "updated_at": "2026-11-27T05:13:13-05:00"
+      "workflow": "preopen",
+      "file": "2026-11-27_preopen.json",
+      "updated_at": "2026-11-27T05:05:27-05:00"
+    },
+    {
+      "date": "2026-11-27",
+      "workflow": "factor_mine",
+      "file": "2026-11-27_factor_mine.json",
+      "updated_at": "2026-11-27T05:31:30-05:00"
     }
   ]
 }
