@@ -1,7 +1,7 @@
 {
   "meta": {
     "date": "2026-11-27",
-    "generated_at": "2026-11-27T15:06:09.591313-05:00",
+    "generated_at": "2026-11-27T17:54:15.896128-05:00",
     "general_bias": 0.0,
     "sector_bias": {},
     "accuracy_gates": {
@@ -197,7 +197,7 @@
       },
       {
         "name": "Sector LLM essays",
-        "found": false,
+        "found": true,
         "used_as": "s_sector (0 if essays missing)"
       },
       {
@@ -247,7 +247,7 @@
       },
       {
         "name": "Learnings / mutable policy",
-        "found": false,
+        "found": true,
         "used_as": "next predict prompt, not a ticker score"
       }
     ],
