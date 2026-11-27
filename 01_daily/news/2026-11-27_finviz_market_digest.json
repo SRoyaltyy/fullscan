@@ -1,0 +1,72 @@
+{
+  "date": "2026-11-27",
+  "generated_at": "2026-11-27T04:48:39.976317-05:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": true,
+  "clock_use": "same_morning",
+  "clock_legal_for": "2026-11-27",
+  "clock_rule": "Live: Generated must be before 09:30 ET on this date or leave missing. Wayback: capture before 09:30 ET that day is legal for that morning's Pre-Open. Afternoon Wayback is legal for the NEXT session open only (prior-day close recap), marked by clock_legal_for. Gaps stay gaps. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks set to open higher in holiday-shortened session as tech and AI sentiment steadies ahead of jobless claims and trade data",
+  "raw_text": "- S&P 500 futures (@ES) rise 1.97% in a gap-up move after the S&P 500 slipped 0.25% in the prior session\n- Nasdaq 100 futures (@NQ) gain 2.84% as investors return to recently pressured technology and AI names amid stabilizing AI jitters\n- Dow Jones futures (@YM) advance 1.33% and Russell 2000 futures (@ER2) climb 1.55% in early post-Thanksgiving trade\n- X Financial (XYF) reports earnings before the bell on a light pre-market slate, with reactions still developing\n- Asian and European equity markets trade higher overnight as oil and gold futures (@GC) also move up\n- US economic data at 8:30 AM ET include initial jobless claims, continuing jobless claims, and the advance goods trade balance\n- Wholesale inventories are scheduled for release at 8:30 AM ET\n- US equity markets follow an early schedule with a 1:00 PM ET close for the post-Thanksgiving session\n- Overnight narrative leans on post-4 AM ET reporting, including a 04:18 ET Yahoo Finance note highlighting stabilization in AI sentiment rather than a single high-impact catalyst",
+  "raw_summary_md": "- **S&P 500 futures** ([@ES](https://finviz.com/futures_charts?t=ES)) rise **1.97%** in a **gap-up move** after the S&P 500 slipped 0.25% in the prior session\n- **Nasdaq 100 futures** ([@NQ](https://finviz.com/futures_charts?t=NQ)) gain **2.84%** as investors return to recently pressured technology and AI names amid **stabilizing AI jitters**\n- **Dow Jones futures** ([@YM](https://finviz.com/futures_charts?t=YM)) advance **1.33%** and **Russell 2000 futures** ([@ER2](https://finviz.com/futures_charts?t=ER2)) climb 1.55% in early post-Thanksgiving trade\n- **X Financial** ([XYF](https://finviz.com/quote?t=XYF)) reports **earnings before the bell** on a light pre-market slate, with reactions still developing\n- Asian and European equity markets **trade higher overnight** as oil and **gold futures** ([@GC](https://finviz.com/futures_charts?t=GC)) also move up\n- US economic data at 8:30 AM ET include **initial jobless claims**, continuing jobless claims, and the advance goods trade balance\n- **Wholesale inventories** are scheduled for release at 8:30 AM ET\n- US equity markets follow an early schedule with a **1:00 PM ET close** for the post-Thanksgiving session\n- Overnight narrative leans on post-4 AM ET reporting, including a 04:18 ET Yahoo Finance note highlighting **stabilization in AI sentiment** rather than a single high-impact catalyst",
+  "index_moves": [
+    {
+      "name": "S&P 500",
+      "code": "SPX",
+      "change_pct": -0.25,
+      "verb": "slipped"
+    }
+  ],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "XYF"
+  ],
+  "named_leaders": [
+    "XYF"
+  ],
+  "calendar": [],
+  "prior_close": {
+    "spx": -0.25,
+    "nasdaq": null,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": false,
+    "bullets": [],
+    "text": ""
+  },
+  "earnings_slate": {
+    "tickers": [
+      "XYF"
+    ],
+    "text": "X Financial (XYF) reports earnings before the bell on a light pre-market slate, with reactions still developing"
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 354231,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-11-27T04:38:53.343",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "good"
+}
