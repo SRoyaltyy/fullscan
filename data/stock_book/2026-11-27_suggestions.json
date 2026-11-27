@@ -1,0 +1,599 @@
+{
+  "date": "2026-11-27",
+  "horizons": {
+    "1d": {
+      "buy": [
+        {
+          "ticker": "A",
+          "score": 0.3313637764166592
+        },
+        {
+          "ticker": "ANF",
+          "score": 0.7474199467322085
+        },
+        {
+          "ticker": "RKT",
+          "score": 0.6503031103805957
+        },
+        {
+          "ticker": "EWTX",
+          "score": 0.7483947837444795
+        },
+        {
+          "ticker": "ADMA",
+          "score": 0.7270200482086537
+        },
+        {
+          "ticker": "RZLT",
+          "score": 0.6602850689223247
+        },
+        {
+          "ticker": "ALEC",
+          "score": 0.6756057542001885
+        },
+        {
+          "ticker": "XNCR",
+          "score": 0.6883158878165101
+        }
+      ],
+      "sell": [
+        {
+          "ticker": "CSIQ",
+          "score": -0.4529720203300471
+        },
+        {
+          "ticker": "MSTR",
+          "score": -0.46057187998887317
+        },
+        {
+          "ticker": "RYDE",
+          "score": -0.480862896134288
+        },
+        {
+          "ticker": "WRD",
+          "score": -0.37967387983875994
+        },
+        {
+          "ticker": "HYMC",
+          "score": -0.35901011331171323
+        },
+        {
+          "ticker": "BTDR",
+          "score": -0.3456312733261007
+        },
+        {
+          "ticker": "GORO",
+          "score": -0.3156841316310531
+        },
+        {
+          "ticker": "MUX",
+          "score": -0.3775281426226699
+        }
+      ]
+    },
+    "3d": {
+      "buy": [
+        {
+          "ticker": "ARDT",
+          "score": 0.90768830472933
+        },
+        {
+          "ticker": "EMBC",
+          "score": 0.8959729336870614
+        },
+        {
+          "ticker": "LFST",
+          "score": 0.8587587047009526
+        },
+        {
+          "ticker": "CSGP",
+          "score": 0.8447905904585139
+        },
+        {
+          "ticker": "EWTX",
+          "score": 0.8357937566143565
+        },
+        {
+          "ticker": "SPNT",
+          "score": 0.7661349622935272
+        },
+        {
+          "ticker": "ANF",
+          "score": 0.7486922655322348
+        },
+        {
+          "ticker": "CMBT",
+          "score": 0.744745745805319
+        },
+        {
+          "ticker": "RKT",
+          "score": 0.7360486220806293
+        },
+        {
+          "ticker": "SLDE",
+          "score": 0.7256649228910634
+        },
+        {
+          "ticker": "CWK",
+          "score": 0.7088799974229585
+        },
+        {
+          "ticker": "OCFC",
+          "score": 0.7083293252807201
+        },
+        {
+          "ticker": "NAT",
+          "score": 0.7030869711358942
+        },
+        {
+          "ticker": "DHT",
+          "score": 0.6982548118579592
+        },
+        {
+          "ticker": "HLF",
+          "score": 0.6522538091500465
+        }
+      ],
+      "sell": [
+        {
+          "ticker": "AMZN",
+          "score": -0.7062287464654536
+        },
+        {
+          "ticker": "VOD",
+          "score": -0.6364816538290867
+        },
+        {
+          "ticker": "RCAT",
+          "score": -0.5984768224156416
+        },
+        {
+          "ticker": "RKLB",
+          "score": -0.5862774675510212
+        },
+        {
+          "ticker": "ENPH",
+          "score": -0.5858326086875119
+        },
+        {
+          "ticker": "ANT",
+          "score": -0.5734306192731675
+        },
+        {
+          "ticker": "AMBA",
+          "score": -0.5659186356086316
+        },
+        {
+          "ticker": "PLAY",
+          "score": -0.5602063706511627
+        },
+        {
+          "ticker": "AMD",
+          "score": -0.5590974785693607
+        },
+        {
+          "ticker": "RYDE",
+          "score": -0.5580263023949819
+        },
+        {
+          "ticker": "HTZ",
+          "score": -0.5568067215350765
+        },
+        {
+          "ticker": "ECX",
+          "score": -0.5536774087336725
+        },
+        {
+          "ticker": "GOOGL",
+          "score": -0.5536754432255098
+        },
+        {
+          "ticker": "GOOG",
+          "score": -0.5480112310860292
+        },
+        {
+          "ticker": "ANET",
+          "score": -0.5476928747524044
+        }
+      ]
+    },
+    "1w": {
+      "buy": [
+        {
+          "ticker": "ARDT",
+          "score": 0.9766764386976732
+        },
+        {
+          "ticker": "EMBC",
+          "score": 0.9563357167991522
+        },
+        {
+          "ticker": "LFST",
+          "score": 0.926662473065688
+        },
+        {
+          "ticker": "EWTX",
+          "score": 0.8968892232170702
+        },
+        {
+          "ticker": "CSGP",
+          "score": 0.8856605773849465
+        },
+        {
+          "ticker": "SPNT",
+          "score": 0.8313585595641131
+        },
+        {
+          "ticker": "CMBT",
+          "score": 0.8035869301899348
+        },
+        {
+          "ticker": "RKT",
+          "score": 0.7991040439651126
+        },
+        {
+          "ticker": "SLDE",
+          "score": 0.7909582981677787
+        },
+        {
+          "ticker": "OCFC",
+          "score": 0.7652796909593542
+        },
+        {
+          "ticker": "CWK",
+          "score": 0.7602479375642268
+        },
+        {
+          "ticker": "NAT",
+          "score": 0.7581558338283536
+        },
+        {
+          "ticker": "ANF",
+          "score": 0.7559110662679045
+        },
+        {
+          "ticker": "DHT",
+          "score": 0.7558630073547352
+        },
+        {
+          "ticker": "SMA",
+          "score": 0.6918127389869604
+        }
+      ],
+      "sell": [
+        {
+          "ticker": "AMZN",
+          "score": -0.726632097719835
+        },
+        {
+          "ticker": "VOD",
+          "score": -0.7010760643329798
+        },
+        {
+          "ticker": "RCAT",
+          "score": -0.6686823706538526
+        },
+        {
+          "ticker": "RKLB",
+          "score": -0.6519051747957278
+        },
+        {
+          "ticker": "AMBA",
+          "score": -0.6363215486273119
+        },
+        {
+          "ticker": "HTZ",
+          "score": -0.6265567266840364
+        },
+        {
+          "ticker": "PLAY",
+          "score": -0.626468697790881
+        },
+        {
+          "ticker": "ECX",
+          "score": -0.615994508611706
+        },
+        {
+          "ticker": "RYDE",
+          "score": -0.614758611142338
+        },
+        {
+          "ticker": "CSIQ",
+          "score": -0.612889862559926
+        },
+        {
+          "ticker": "GOOGL",
+          "score": -0.6076580146913286
+        },
+        {
+          "ticker": "CNDT",
+          "score": -0.6031105690054553
+        },
+        {
+          "ticker": "GOOG",
+          "score": -0.6018435816370726
+        },
+        {
+          "ticker": "MSTR",
+          "score": -0.6009229301647929
+        },
+        {
+          "ticker": "WOLF",
+          "score": -0.5998632778868391
+        }
+      ]
+    },
+    "2w": {
+      "buy": [
+        {
+          "ticker": "ARDT",
+          "score": 1.0236689973109125
+        },
+        {
+          "ticker": "EMBC",
+          "score": 0.9962028922404063
+        },
+        {
+          "ticker": "LFST",
+          "score": 0.9728688033042305
+        },
+        {
+          "ticker": "EWTX",
+          "score": 0.9423156731760984
+        },
+        {
+          "ticker": "CSGP",
+          "score": 0.9165552280285162
+        },
+        {
+          "ticker": "SPNT",
+          "score": 0.8751966490003442
+        },
+        {
+          "ticker": "CMBT",
+          "score": 0.8466620966127831
+        },
+        {
+          "ticker": "RKT",
+          "score": 0.8426982101120408
+        },
+        {
+          "ticker": "SLDE",
+          "score": 0.8336281771564897
+        },
+        {
+          "ticker": "OCFC",
+          "score": 0.8024610526898479
+        },
+        {
+          "ticker": "NAT",
+          "score": 0.7991113395290501
+        },
+        {
+          "ticker": "DHT",
+          "score": 0.797650788321163
+        },
+        {
+          "ticker": "CWK",
+          "score": 0.7972803162681474
+        },
+        {
+          "ticker": "ANF",
+          "score": 0.7546574408987625
+        },
+        {
+          "ticker": "SMA",
+          "score": 0.7317426148558863
+        }
+      ],
+      "sell": [
+        {
+          "ticker": "AMZN",
+          "score": -0.7468201775637338
+        },
+        {
+          "ticker": "VOD",
+          "score": -0.745421988866633
+        },
+        {
+          "ticker": "RCAT",
+          "score": -0.7177203813080218
+        },
+        {
+          "ticker": "RKLB",
+          "score": -0.6992576353163317
+        },
+        {
+          "ticker": "AMBA",
+          "score": -0.6855656313316771
+        },
+        {
+          "ticker": "HTZ",
+          "score": -0.6756591647058869
+        },
+        {
+          "ticker": "PLAY",
+          "score": -0.674483776143041
+        },
+        {
+          "ticker": "CSIQ",
+          "score": -0.6611118758279682
+        },
+        {
+          "ticker": "ECX",
+          "score": -0.6562600238076735
+        },
+        {
+          "ticker": "RYDE",
+          "score": -0.653992305229202
+        },
+        {
+          "ticker": "LCID",
+          "score": -0.6473185446466596
+        },
+        {
+          "ticker": "CNDT",
+          "score": -0.6456971691592435
+        },
+        {
+          "ticker": "WOLF",
+          "score": -0.6452184673292427
+        },
+        {
+          "ticker": "MSTR",
+          "score": -0.6442570258955549
+        },
+        {
+          "ticker": "GOOGL",
+          "score": -0.6427556984994931
+        }
+      ]
+    },
+    "1m": {
+      "buy": [
+        {
+          "ticker": "ARDT",
+          "score": 1.0996873310961468
+        },
+        {
+          "ticker": "EMBC",
+          "score": 1.0626570084012206
+        },
+        {
+          "ticker": "LFST",
+          "score": 1.0477033832535971
+        },
+        {
+          "ticker": "EWTX",
+          "score": 1.0097397001573616
+        },
+        {
+          "ticker": "CSGP",
+          "score": 0.9616382846048894
+        },
+        {
+          "ticker": "SPNT",
+          "score": 0.9470843112619671
+        },
+        {
+          "ticker": "RKT",
+          "score": 0.912198080891301
+        },
+        {
+          "ticker": "CMBT",
+          "score": 0.9116018399775363
+        },
+        {
+          "ticker": "SLDE",
+          "score": 0.9055725644889783
+        },
+        {
+          "ticker": "OCFC",
+          "score": 0.865195188318463
+        },
+        {
+          "ticker": "DHT",
+          "score": 0.8612306174713873
+        },
+        {
+          "ticker": "NAT",
+          "score": 0.8599077936407942
+        },
+        {
+          "ticker": "CWK",
+          "score": 0.8539454396823254
+        },
+        {
+          "ticker": "SMA",
+          "score": 0.7933602872473593
+        },
+        {
+          "ticker": "EXE",
+          "score": 0.7822987193402632
+        }
+      ],
+      "sell": [
+        {
+          "ticker": "VOD",
+          "score": -0.8165940333807483
+        },
+        {
+          "ticker": "RCAT",
+          "score": -0.7951013143348481
+        },
+        {
+          "ticker": "RKLB",
+          "score": -0.7716389610620374
+        },
+        {
+          "ticker": "AMZN",
+          "score": -0.7694270314594538
+        },
+        {
+          "ticker": "AMBA",
+          "score": -0.7631642461016681
+        },
+        {
+          "ticker": "HTZ",
+          "score": -0.7525475351128317
+        },
+        {
+          "ticker": "PLAY",
+          "score": -0.7475650503023625
+        },
+        {
+          "ticker": "CSIQ",
+          "score": -0.7344117432082922
+        },
+        {
+          "ticker": "ECX",
+          "score": -0.7248425155118927
+        },
+        {
+          "ticker": "LCID",
+          "score": -0.7227165960942696
+        },
+        {
+          "ticker": "RYDE",
+          "score": -0.7164964796034005
+        },
+        {
+          "ticker": "WOLF",
+          "score": -0.7150185910401881
+        },
+        {
+          "ticker": "CNDT",
+          "score": -0.7141408426870935
+        },
+        {
+          "ticker": "RUM",
+          "score": -0.7124011912752672
+        },
+        {
+          "ticker": "TE",
+          "score": -0.711276019120205
+        }
+      ]
+    }
+  },
+  "buy_1d": [
+    "A",
+    "ANF",
+    "RKT",
+    "EWTX",
+    "ADMA",
+    "RZLT",
+    "ALEC",
+    "XNCR"
+  ],
+  "sell_1d": [
+    "CSIQ",
+    "MSTR",
+    "RYDE",
+    "WRD",
+    "HYMC",
+    "BTDR",
+    "GORO",
+    "MUX"
+  ]
+}
