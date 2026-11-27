@@ -1,6 +1,6 @@
 {
   "date": "2026-11-27",
-  "generated_at": "2026-11-27T05:01:19.007396-05:00",
+  "generated_at": "2026-11-27T05:01:41.102906-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "map_heat",
-      "title": "Map heat morning overlay",
-      "date": "2026-11-27",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-27T04:50:41.007404-05:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-11-27_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 272475,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-11-27_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 18777,
-          "preview": "# MAP HEAT \u2014 2026-11-27\nExport `finviz_2026-11-26.csv` \u00b7 11786 names \u00b7 generated 2026-11-27T04:50:40.969843-05:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-11-27\nExport `finviz_2026-11-26.csv` \u00b7 11786 names \u00b7 generated 2026-11-27T04:50:40.969843-05:00"
-    },
     {
       "key": "finviz_digest",
       "title": "Finviz digest",
@@ -200,6 +175,31 @@
         }
       ],
       "preview": "2607 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CL, CBRL, SLDE, POWW, AES \u00b7 2607 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 SLDE, CL, AES, REYN, PBH"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-11-27",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-27T05:01:40.422099-05:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-11-27_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 3811553,
+          "preview": "raw=5333 usable=393 single=265 \u00b7 ECB already had large support for rate hike in Oct, accounts show - Reuters | Core inflation in Japan's capital accelerates in November - Reuters | Brent trades near month's high as Mideast conflict threatens supply - Reuters | US core PCE inflation set to heat up in October, prompting Federal Reserve rate  | Man dead after crash involving pedestrian on Clinton Highway in Powell - WATE 6 "
+        },
+        {
+          "path": "01_daily/news/2026-11-27_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 10123,
+          "preview": "# News Parse v2 \u2014 2026-11-27T05:01:40.210057-05:00\nWindow\u224848h | news_mode=on | raw=5333 | usable=393 | single_name=265 | noise_dropped=4559\nusable polarity={'+': 9, '-': 97, 'mixed': 2, 'neutral': 285}"
+        }
+      ],
+      "preview": "raw=5333 usable=393 single=265 \u00b7 ECB already had large support for rate hike in Oct, accounts show - Reuters | Core inflation in Japan's capital accelerates in November - Reuters | Brent trades near month's high as Mideast conflict threatens supply - Reuters | US core PCE inflation set to heat up in October, prompting Federal Reserve rate  | Man dead after crash involving pedestrian on Clinton Highway in Powell - WATE 6  \u00b7 # News Parse v2 \u2014 2026-11-27T05:01:40.210057-05:00\nWindow\u224848h | news_mode=on | raw=5333 | usable=393 | single_name=265 | noise_dropped=4559\nusable polarity={'+': 9, '-': 97, 'mixed': 2, 'neutral': 285}"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
