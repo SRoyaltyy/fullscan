@@ -2319,6 +2319,14 @@
       "workflow": "A+B1 Checklist (liquid universe)",
       "run_id": "45793727089",
       "manifest": "research/input_freeze/2026-11-25/manifest.json"
+    },
+    {
+      "path": "data/exports/finviz_2026-11-25.csv",
+      "at": "2026-11-27T04:46:09-05:00",
+      "commit_msg": "auto: land finviz export [2026-11-25]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "45975165832",
+      "manifest": "research/input_freeze/2026-11-25/manifest.json"
     }
   ]
 }
