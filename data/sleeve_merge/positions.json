@@ -1,8 +1,69 @@
 {
-  "date": "2026-11-26",
+  "date": "2026-11-27",
   "policy": "flatten_robust",
-  "generated": "2026-11-27T00:07:31",
-  "cash": 111855.28,
-  "io": [],
+  "generated": "2026-11-27T14:23:26",
+  "cash": 25528.14,
+  "io": [
+    {
+      "ticker": "TSCO",
+      "sleeve": "io_core",
+      "shares": 515,
+      "entry_px": 37.57,
+      "entry_date": "2026-11-23",
+      "last_px": 40.37,
+      "yday_px": 40.37,
+      "open_px": 40.37,
+      "overnight": 0.0,
+      "pct": 0.0,
+      "mv": 20790.55,
+      "exit_date": "2026-11-27",
+      "reason": ""
+    },
+    {
+      "ticker": "RCI",
+      "sleeve": "io_core",
+      "shares": 545,
+      "entry_px": 35.47,
+      "entry_date": "2026-11-23",
+      "last_px": 35.74,
+      "yday_px": 35.74,
+      "open_px": 35.74,
+      "overnight": 0.0,
+      "pct": 0.0,
+      "mv": 19478.3,
+      "exit_date": "2026-11-27",
+      "reason": ""
+    },
+    {
+      "ticker": "TDC",
+      "sleeve": "io_core",
+      "shares": 528,
+      "entry_px": 36.63,
+      "entry_date": "2026-11-23",
+      "last_px": 37.42,
+      "yday_px": 37.42,
+      "open_px": 37.42,
+      "overnight": 0.0,
+      "pct": 0.0,
+      "mv": 19757.76,
+      "exit_date": "2026-11-27",
+      "reason": ""
+    },
+    {
+      "ticker": "KVYO",
+      "sleeve": "io_core",
+      "shares": 830,
+      "entry_px": 23.3,
+      "entry_date": "2026-11-23",
+      "last_px": 23.74,
+      "yday_px": 23.74,
+      "open_px": 23.74,
+      "overnight": 0.0,
+      "pct": 0.0,
+      "mv": 19704.2,
+      "exit_date": "2026-11-27",
+      "reason": ""
+    }
+  ],
   "mover": []
 }
