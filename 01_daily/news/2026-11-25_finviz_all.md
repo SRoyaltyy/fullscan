@@ -5,6 +5,6 @@
 - econ=40 earnings=40 ticker_news=90
 - digest=yes 01_daily/news/2026-11-25_finviz_digest.md
 - colors=yes data/quote_colors/2026-11-25_quote_colors.csv
-- exports=84 newest=finviz_2026-11-25.csv
+- exports=85 newest=finviz_2026-11-26.csv
 
 FINVIZ_ALL_OK
