@@ -1,6 +1,6 @@
 # Sector Board — 2026-11-25
 
-Generated: **2026-11-26T23:03:33.144788-05:00** (America/New_York)
+Generated: **2026-11-27T16:51:26.013112-05:00** (America/New_York)
 
 Birds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.).
 
