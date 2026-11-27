@@ -1,6 +1,6 @@
 {
  "date": "2026-11-27",
- "generated_at": "2026-11-27T15:05:49.063356-05:00",
+ "generated_at": "2026-11-27T17:53:46.990601-05:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -14,13 +14,13 @@
   "fed_score": null,
   "dollar_oil_score": null,
   "futures_score": null,
-  "yields": "flat",
+  "yields": "falling",
   "yields_source": "fred_dgs10",
-  "dgs10_delta_1d": -0.01,
-  "dgs10_current": 4.91,
+  "dgs10_delta_1d": -0.06,
+  "dgs10_current": 4.85,
   "dollar": "strong",
   "dollar_source": "dxy",
-  "dxy_pct_1d": 0.36,
+  "dxy_pct_1d": 0.33,
   "vix_ratio": 1.0,
   "vix_spot": 23.81,
   "vix_delta_1d": -2.99,
@@ -337,14 +337,14 @@
   },
   "style": {
    "growth": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "yields flat/unknown"
+    "stance": "favorable",
+    "confidence": "medium",
+    "why": "yields falling — duration/growth re-rates [factor: Bond yields]"
    },
    "value": {
     "stance": "neutral",
     "confidence": "low",
-    "why": "yields flat/unknown"
+    "why": "value lags duration rallies"
    },
    "blend": {
     "stance": "neutral",
