@@ -1,6 +1,6 @@
-# MAP HEAT — 2026-11-26
+# MAP HEAT — 2026-11-27
 
-Export `finviz_2026-11-26.csv` · 11786 names · generated 2026-11-26T05:10:22.998401-05:00
+Export `finviz_2026-11-26.csv` · 11786 names · generated 2026-11-27T04:50:40.969843-05:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
@@ -66,24 +66,24 @@ Export `finviz_2026-11-26.csv` · 11786 names · generated 2026-11-26T05:10:22.9
 | Uranium (UX) | 89.9 | +0.00% |
 
 ## CALENDAR
-No high-impact print / mega-cap earnings flagged.
+**SIZE GATE on** — high-impact print and/or mega-cap earnings today.
 
 Econ (importance ≥ 2):
-- 08:30 ET  Goods Trade Balance Adv  actual —  cons -$131B  surprise —  prev -$135.1B
+- 08:30 ET  Goods Trade Balance Adv  actual —  cons -$133B  surprise —  prev -$135.1B
 - 08:30 ET  Retail Inventories Ex Autos MoM Adv  actual —  cons —  surprise —  prev 0.5%
-- 08:30 ET  Wholesale Inventories MoM Adv  actual —  cons 0.7%  surprise —  prev 0.7%
+- 08:30 ET  Wholesale Inventories MoM Adv  actual —  cons 0.5%  surprise —  prev 0.7%
 - 09:45 ET  Chicago PMI  actual —  cons —  surprise —  prev 55.3
 - 10:30 ET  Dallas Fed Manufacturing Index  actual —  cons —  surprise —  prev 13.4
 - 10:00 ET  ISM Manufacturing PMI  actual —  cons —  surprise —  prev 55.5
 - 10:00 ET  JOLTs Job Openings  actual —  cons —  surprise —  prev 7.523M
 - 10:00 ET  ISM Manufacturing Employment  actual —  cons —  surprise —  prev 52.4
-- 11:00 ET  Atlanta Fed GDPNow  actual —  cons —  surprise —  prev —
+- 11:00 ET  Atlanta Fed GDPNow  actual —  cons —  surprise —  prev 2.9%
 - 16:30 ET  API Crude Oil Stock Change  actual —  cons —  surprise —  prev 0.126M
 - 07:00 ET  MBA 30-Year Mortgage Rate  actual —  cons —  surprise —  prev 7.38%
 - 08:15 ET  ADP Employment Change  actual —  cons —  surprise —  prev 86K
-- 10:30 ET  EIA Crude Oil Stocks Change  actual —  cons —  surprise —  prev —
-- 10:30 ET  EIA Gasoline Stocks Change  actual —  cons —  surprise —  prev —
-- 08:30 ET  Initial Jobless Claims  actual —  cons —  surprise —  prev —
+- 10:30 ET  EIA Crude Oil Stocks Change  actual —  cons —  surprise —  prev 1.11M
+- 10:30 ET  EIA Gasoline Stocks Change  actual —  cons —  surprise —  prev 1.733M
+- 08:30 ET  Initial Jobless Claims  actual —  cons —  surprise —  prev 189K
 - 10:00 ET  ISM Services PMI  actual —  cons —  surprise —  prev 54.5
 - 10:00 ET  Factory Orders MoM  actual —  cons —  surprise —  prev 1.8%
 - 08:30 ET  Non Farm Payrolls  actual —  cons —  surprise —  prev 165K
@@ -119,30 +119,30 @@ Mega-cap earnings:
 - AMC **MRVL**  EPS est 1.1005  (Marvell Technology Inc)
 - BMO **BMO**  EPS est 2.6476  (Bank of Montreal)
 - BMO **BNS**  EPS est 1.5294  (Bank Of Nova Scotia)
-- BMO **CM**  EPS est 1.776  (Canadian Imperial Bank Of Commerce)
 - AMC **SNOW**  EPS est 0.5981  (Snowflake Inc)
+- BMO **CM**  EPS est 1.776  (Canadian Imperial Bank Of Commerce)
 - AMC **ADBE**  EPS est 6.3298  (Adobe Inc)
 - AMC **SNPS**  EPS est 4.1206  (Synopsys Inc)
 - BMO **AZO**  EPS est 35.4251  (Autozone Inc)
 - AMC **VEEV**  EPS est 2.3443  (Veeva Systems Inc)
 - BMO **KR**  EPS est 1.164  (Kroger Co)
-- AMC **OKTA**  EPS est 0.9342  (Okta Inc)
 - BMO **CIEN**  EPS est 2.0771  (CIENA Corp)
+- AMC **OKTA**  EPS est 0.9342  (Okta Inc)
 - AMC **NTAP**  EPS est 2.6125  (Netapp Inc)
+- BMO **SUNB**  EPS est 1.2649  (Sunbelt Rentals Holdings Inc)
 - BMO **DG**  EPS est 1.4117  (Dollar General Corp)
 - BMO **CPRT**  EPS est 0.3923  (Copart Inc)
-- BMO **SUNB**  EPS est 1.2649  (Sunbelt Rentals Holdings Inc)
 - AMC **ULTA**  EPS est 5.673  (Ulta Beauty Inc)
 - AMC **TCOM**  EPS est 1.2355  (Trip.com Group Ltd ADR)
-- AMC **CASY**  EPS est 5.8349  (Casey\u0027s General Stores Inc)
 - AMC **MDB**  EPS est 1.6109  (MongoDB Inc)
-- AMC **IOT**  EPS est 0.1881  (Samsara Inc)
+- AMC **CASY**  EPS est 5.8349  (Casey\u0027s General Stores Inc)
 - AMC **RBRK**  EPS est 0.0822  (Rubrik Inc)
+- AMC **IOT**  EPS est 0.1881  (Samsara Inc)
 - AMC **CRDO**  EPS est 1.2856  (Credo Technology Group Holding Ltd)
 - AMC **DOCU**  EPS est 1.1798  (DocuSign Inc)
 - AMC **TOL**  EPS est 4.872  (Toll Brothers Inc)
-- BMO **BF-A**  EPS est 0.462  (Brown-Forman Corp)
-- BMO **BF-B**  EPS est 0.4631  (Brown-Forman Corp)
+- BMO **BF-A**  EPS est 0.4612  (Brown-Forman Corp)
+- BMO **BF-B**  EPS est 0.4624  (Brown-Forman Corp)
 - BMO **GME**  EPS est 0.27  (Gamestop Corp)
 - BMO **SAIL**  EPS est 0.0796  (Sailpoint Inc)
 - BMO **HRL**  EPS est 0.3722  (Hormel Foods Corp)
@@ -153,14 +153,14 @@ Mega-cap earnings:
 - AMC **NTSK**  EPS est -0.033  (Netskope Inc)
 
 Options event-vol flags (NOT direction):
-- **AVGO** exp 2026-11-27 ATM IV 0.6089 implied move +3.2% put/call OI 2.11
-- **COST** exp 2026-11-27 ATM IV 0.001 implied move +0.0% put/call OI 0.767
-- **RY** exp 2026-12-18 ATM IV 0.2788 implied move +6.8% put/call OI 6.571
-- **TD** exp 2026-12-18 ATM IV 0.2873 implied move +7.0% put/call OI 1.659
-- **CRM** exp 2026-11-27 ATM IV 0.4155 implied move +2.2% put/call OI 0.289
-- **MRVL** exp 2026-11-27 ATM IV 0.8826 implied move +4.6% put/call OI 1.519
-- **BMO** exp 2026-12-18 ATM IV 0.3713 implied move +9.1% put/call OI 2.684
-- **BNS** exp 2026-12-18 ATM IV 0.3494 implied move +8.6% put/call OI 0.645
+- **AVGO** exp 2026-11-27 ATM IV 0.0078 implied move +0.0% put/call OI —
+- **COST** exp 2026-11-27 ATM IV 0.002 implied move +0.0% put/call OI 0.767
+- **RY** exp 2026-12-18 ATM IV 0.002 implied move +0.1% put/call OI —
+- **TD** exp 2026-12-18 ATM IV 0.0039 implied move +0.1% put/call OI —
+- **CRM** exp 2026-11-27 ATM IV 0.0039 implied move +0.0% put/call OI —
+- **MRVL** exp 2026-11-27 ATM IV 0.002 implied move +0.0% put/call OI —
+- **BMO** exp 2026-12-18 ATM IV 0.0005 implied move +0.0% put/call OI —
+- **BNS** exp 2026-12-18 ATM IV 0.0039 implied move +0.1% put/call OI —
 
 ## SECTOR RS (live groups, else export median)
 | Sector | 1d | 1w | rvol |
@@ -280,31 +280,31 @@ COLD (1w):
 - **Sector Rotation / Combinations** 0.0% 1d -2.9% 1w · FV, GRNY, SECT
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 7 min **TTGT** Omdia: OLED Display Shipments Featuring Active Privacy View to Reach 91.7 Million Units by 2033 (Business Wire)
-- 10 min **NVDA** Huang's Return Makes a Congressional Hearing Must-See TV for Investors (Barrons.com)
-- 12 min **MU,SKHY** SK Hynix seeks TSMC 3nm expertise as Micron steps up hiring (DigiTimes)
-- 19 min **SHEL** Transaction in Own Shares (GlobeNewswire)
-- 25 min **MNTN** Kaplan Fox Encourages MNTN, Inc. (MNTN) Investors with Significant Losses to Contact the Firm Before January 19, 2027 (Newsfile)
-- 35 min **ALVO** Alvotech to Appeal US Preliminary Injunction Decision Relating to AVT05 (GlobeNewswire)
-- 35 min **GIL** Kaplan Fox & Kilsheimer LLP Encourages Gildan Activewear Inc. (GIL) Investors With Losses to Seek Appointment as Lead Plaintiff Before December 14, 2026 (Newsfile)
-- 35 min **FRVO** Kaplan Fox Encourages Fervo Energy Company (FRVO) Investors with Significant Losses to Contact the Firm Before January 19, 2027 (Newsfile)
-- 39 min **FRHC** Tokenized Security Linked to Freedom Holding Corp. Shares Listed on Binance, Expanding Investor Access (GlobeNewswire)
-- 46 min **ANT,BLK** ANT Stock Gains Overnight: US Exchange-Traded Funds Anthropic Holdings Swell To Over $2B (Stocktwits)
-- 55 min **ENSG** Kaplan Fox Encourages The Ensign Group, Inc. (ENSG) Investors Seeking Recovery to Contact the Firm Before December 7, 2026 (Newsfile)
-- 1 hour **DELL,MORN** DELL Stock Heads For Worst Month Since 2021: Morningstar Sees Risk Ahead For Dell Despite AI-Led Earnings Beat (Stocktwits)
-- 1 hour **EQNR** Equinor cuts 2026 production guidance after shut-ins at three fields (Offshore Technology)
-- 1 hour **SPCX** Musk says will give two SpaceX shares to 'every child in America' (AFP)
-- 1 hour **RIO,RR** FTSE 100 today: Stocks rise as tech rebound offsets tariff worries (Investing.com)
-- 1 hour **CIGI** Three Iberian cities in Europe's 2027 top 10 for property investors (Euronews)
-- 1 hour **AMBA,CRWD,DKNG,INSM,LI** Nvidia Wins Back Wall Street Backing As Jensen Huang Returns; CRWD, LI Stocks Score Upgrades While DKNG, AMBA Face Pressure (Stocktwits)
-- 1 hour **NVDA,SKHY** Asian stocks stabilise after tech rout (AFP)
-- 1 hour **ASTS,BKSY,LUNR,RKLB,SPCX** SPCX Wins Million-Satellite Nod And Retail Attention  But ASTS Leads Space Stocks Into Thanksgiving (Stocktwits)
-- 1 hour **DELL,NVDA,SMCI** Nvidia Reportedly Halts AI Server Shipments To Southeast Asia Ahead Of Jensen Huang's Congress Testimony (Stocktwits)
-- 2 hours **ENRD** Einride Brings Essity into Its Fast-Growing Electric Freight Network (GlobeNewswire)
-- 2 hours **CSGP** CoStar Data Shows Noho Office Leasing Nearing 900,000 Sq. Ft. (Business Wire)
-- 2 hours **IBM,KD** Bull of the Day: Kyndryl Holdings (KD) (Zacks)
-- 2 hours **NVDA,SPGI** S&P Weighs Nvidia Downgrade Despite Huang's Return. What Would a Cut Mean? (BeInCrypto)
-- 2 hours **CEG** Constellation concludes 4.4GW natural gas-fired power plants sale (Power Technology)
+- 6 min **QBTS** D-Wave Quantum Inc. Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - QBTS (PR Newswire)
+- 12 min **LEN** Lennar Corporation Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - LEN (PR Newswire)
+- 15 min **KGC** Kinross Gold Corporation Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - KGC (PR Newswire)
+- 16 min **MDLN** Medline Inc. Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - MDLN (PR Newswire)
+- 16 min **NVDA** Stock Futures Jump as AI Trade Set for Rebound (The Wall Street Journal)
+- 19 min **LULU** lululemon athletica inc. Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - LULU (PR Newswire)
+- 20 min **CMCM** Cheetah Mobile To Report Third Quarter 2026 Financial Results on December 4, 2026 (PR Newswire)
+- 20 min **FMC** FMC Corporation Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - FMC (PR Newswire)
+- 20 min **ENSG** Kaplan Fox Urges Investors of The Ensign Group, Inc. (ENSG) to Seek a Leadership Role Before December 7, 2026 (Newsfile)
+- 21 min **ENSG** The Ensign Group, Inc. Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - ENSG (PR Newswire)
+- 22 min **BBW** Build-A-Bear Workshop, Inc. Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - BBW (PR Newswire)
+- 25 min **INTC** Intel Corporation Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - INTC (PR Newswire)
+- 29 min **SPCX** AI chip curbs, Musks giveaway and oil risks - whats moving markets (Investing.com)
+- 35 min **BAC** Bank of America Corporation Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - BAC (PR Newswire)
+- 37 min **CCB** Coastal Financial Corporation Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - CCB (PR Newswire)
+- 38 min **MU,NVDA** Stock market today: Dow, S&P 500, Nasdaq futures gain as AI jitters steady (Yahoo Finance)
+- 40 min **CC** The Chemours Company Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - CC (PR Newswire)
+- 40 min **CCB** Kaplan Fox Encourages Coastal Financial Corporation (CCB) Investors to Contact the Firm About Their Legal Rights Before December 1, 2026 (Newsfile)
+- 58 min **RIO** FTSE 100 today: Stocks rise as miners lead on metals rebound (Investing.com)
+- 1 hour **UBER** Uber Secures Approximately 87% of Delivery Hero Shares Following End of Additional Acceptance Period (Business Wire)
+- 1 hour **AMCR** Amcor, FluidSolids to test fibre bio-composites for rigid packaging (Packaging Gateway)
+- 1 hour **GS** Goldman Sachs initiates Andritz at buy, sees 25% upside on hydro growth (Investing.com)
+- 1 hour **PTLO** Portillo's Inc. Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - PTLO (PR Newswire)
+- 1 hour **NVDA** European shares extend rally, but bruising November leaves AI scars (Investing.com)
+- 1 hour **GOLD** Stock Market Today: Dow, S&P 500 and Nasdaq set to rally ahead of shortened Black Friday trading: live updates (MarketWatch)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
