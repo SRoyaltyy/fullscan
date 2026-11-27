@@ -1,8 +1,8 @@
 {
   "date": "2026-11-27",
-  "generated_at": "2026-11-27T04:50:40.969843-05:00",
+  "generated_at": "2026-11-27T05:09:05.004559-05:00",
   "phase": "morning_overlay",
-  "export": "finviz_2026-11-26.csv",
+  "export": "finviz_2026-11-27.csv",
   "n_tickers": 11786,
   "sectors": [
     {
@@ -8876,142 +8876,7 @@
   ],
   "ticker_news": [
     {
-      "time": "6 min",
-      "title": "D-Wave Quantum Inc. Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - QBTS",
-      "url": "/news/427554/d-wave-quantum-inc-sued-for-securities-law-violations-contact-the-djs-law-group-to-discuss-your-rights-qbts",
-      "source": "PR Newswire",
-      "tickers": [
-        "QBTS"
-      ]
-    },
-    {
-      "time": "12 min",
-      "title": "Lennar Corporation Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - LEN",
-      "url": "/news/427553/lennar-corporation-sued-for-securities-law-violations-contact-the-djs-law-group-to-discuss-your-rights-len",
-      "source": "PR Newswire",
-      "tickers": [
-        "LEN"
-      ]
-    },
-    {
-      "time": "15 min",
-      "title": "Kinross Gold Corporation Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - KGC",
-      "url": "/news/427552/kinross-gold-corporation-sued-for-securities-law-violations-contact-the-djs-law-group-to-discuss-your-rights-kgc",
-      "source": "PR Newswire",
-      "tickers": [
-        "KGC"
-      ]
-    },
-    {
-      "time": "16 min",
-      "title": "Medline Inc. Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - MDLN",
-      "url": "/news/427551/medline-inc-sued-for-securities-law-violations-contact-the-djs-law-group-to-discuss-your-rights-mdln",
-      "source": "PR Newswire",
-      "tickers": [
-        "MDLN"
-      ]
-    },
-    {
-      "time": "16 min",
-      "title": "Stock Futures Jump as AI Trade Set for Rebound",
-      "url": "https://www.wsj.com/finance/stocks/stock-futures-jump-as-ai-trade-set-for-rebound-98318fc0?mod=wsj_FV",
-      "source": "The Wall Street Journal",
-      "tickers": [
-        "NVDA"
-      ]
-    },
-    {
-      "time": "19 min",
-      "title": "lululemon athletica inc. Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - LULU",
-      "url": "/news/427550/lululemon-athletica-inc-sued-for-securities-law-violations-contact-the-djs-law-group-to-discuss-your-rights-lulu",
-      "source": "PR Newswire",
-      "tickers": [
-        "LULU"
-      ]
-    },
-    {
-      "time": "20 min",
-      "title": "Cheetah Mobile To Report Third Quarter 2026 Financial Results on December 4, 2026",
-      "url": "/news/427547/cheetah-mobile-to-report-third-quarter-2026-financial-results-on-december-4-2026",
-      "source": "PR Newswire",
-      "tickers": [
-        "CMCM"
-      ]
-    },
-    {
-      "time": "20 min",
-      "title": "FMC Corporation Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - FMC",
-      "url": "/news/427549/fmc-corporation-sued-for-securities-law-violations-contact-the-djs-law-group-to-discuss-your-rights-fmc",
-      "source": "PR Newswire",
-      "tickers": [
-        "FMC"
-      ]
-    },
-    {
-      "time": "20 min",
-      "title": "Kaplan Fox Urges Investors of The Ensign Group, Inc. (ENSG) to Seek a Leadership Role Before December 7, 2026",
-      "url": "https://www.newsfilecorp.com/release/325920/Kaplan-Fox-Urges-Investors-of-The-Ensign-Group-Inc.-ENSG-to-Seek-a-Leadership-Role-Before-December-7-2026",
-      "source": "Newsfile",
-      "tickers": [
-        "ENSG"
-      ]
-    },
-    {
-      "time": "21 min",
-      "title": "The Ensign Group, Inc. Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - ENSG",
-      "url": "/news/427548/the-ensign-group-inc-sued-for-securities-law-violations-contact-the-djs-law-group-to-discuss-your-rights-ensg",
-      "source": "PR Newswire",
-      "tickers": [
-        "ENSG"
-      ]
-    },
-    {
-      "time": "22 min",
-      "title": "Build-A-Bear Workshop, Inc. Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - BBW",
-      "url": "/news/427546/build-a-bear-workshop-inc-sued-for-securities-law-violations-contact-the-djs-law-group-to-discuss-your-rights-bbw",
-      "source": "PR Newswire",
-      "tickers": [
-        "BBW"
-      ]
-    },
-    {
-      "time": "25 min",
-      "title": "Intel Corporation Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - INTC",
-      "url": "/news/427545/intel-corporation-sued-for-securities-law-violations-contact-the-djs-law-group-to-discuss-your-rights-intc",
-      "source": "PR Newswire",
-      "tickers": [
-        "INTC"
-      ]
-    },
-    {
-      "time": "29 min",
-      "title": "AI chip curbs, Musks giveaway and oil risks - whats moving markets",
-      "url": "https://finance.yahoo.com/markets/articles/ai-chip-curbs-musk-giveaway-092034519.html",
-      "source": "Investing.com",
-      "tickers": [
-        "SPCX"
-      ]
-    },
-    {
-      "time": "35 min",
-      "title": "Bank of America Corporation Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - BAC",
-      "url": "/news/427544/bank-of-america-corporation-sued-for-securities-law-violations-contact-the-djs-law-group-to-discuss-your-rights-bac",
-      "source": "PR Newswire",
-      "tickers": [
-        "BAC"
-      ]
-    },
-    {
-      "time": "37 min",
-      "title": "Coastal Financial Corporation Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - CCB",
-      "url": "/news/427543/coastal-financial-corporation-sued-for-securities-law-violations-contact-the-djs-law-group-to-discuss-your-rights-ccb",
-      "source": "PR Newswire",
-      "tickers": [
-        "CCB"
-      ]
-    },
-    {
-      "time": "38 min",
+      "time": "8 min",
       "title": "Stock market today: Dow, S&P 500, Nasdaq futures gain as AI jitters steady",
       "url": "https://finance.yahoo.com/markets/live/stock-market-today-firday-november-27-dow-sp-500-nasdaq-black-friday-holiday-091152065.html",
       "source": "Yahoo Finance",
@@ -9021,7 +8886,179 @@
       ]
     },
     {
+      "time": "8 min",
+      "title": "Viomi Technology Completes Acquisition of Brondell Inc.",
+      "url": "/news/427555/viomi-technology-completes-acquisition-of-brondell-inc",
+      "source": "GlobeNewswire",
+      "tickers": [
+        "VIOT"
+      ]
+    },
+    {
+      "time": "8 min",
+      "title": "Jiayin Group Inc. to Release Third Quarter 2026 Unaudited Financial Results on Friday, December 4, 2026",
+      "url": "/news/427556/jiayin-group-inc-to-release-third-quarter-2026-unaudited-financial-results-on-friday-december-4-2026",
+      "source": "GlobeNewswire",
+      "tickers": [
+        "JFIN"
+      ]
+    },
+    {
+      "time": "8 min",
+      "title": "Save the Date: HUTCHMED to Host Corporate Day on December 8, 2026",
+      "url": "/news/427557/save-the-date-hutchmed-to-host-corporate-day-on-december-8-2026",
+      "source": "GlobeNewswire",
+      "tickers": [
+        "HCM"
+      ]
+    },
+    {
+      "time": "21 min",
+      "title": "Nasdaq futures surge as investors pile back into battered AI stocks",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/wall-st-futures-surge-investors-073405748.html",
+      "source": "Reuters",
+      "tickers": [
+        "NVDA",
+        "ANT"
+      ]
+    },
+    {
+      "time": "24 min",
+      "title": "D-Wave Quantum Inc. Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - QBTS",
+      "url": "/news/427554/d-wave-quantum-inc-sued-for-securities-law-violations-contact-the-djs-law-group-to-discuss-your-rights-qbts",
+      "source": "PR Newswire",
+      "tickers": [
+        "QBTS"
+      ]
+    },
+    {
+      "time": "30 min",
+      "title": "Lennar Corporation Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - LEN",
+      "url": "/news/427553/lennar-corporation-sued-for-securities-law-violations-contact-the-djs-law-group-to-discuss-your-rights-len",
+      "source": "PR Newswire",
+      "tickers": [
+        "LEN"
+      ]
+    },
+    {
+      "time": "33 min",
+      "title": "Kinross Gold Corporation Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - KGC",
+      "url": "/news/427552/kinross-gold-corporation-sued-for-securities-law-violations-contact-the-djs-law-group-to-discuss-your-rights-kgc",
+      "source": "PR Newswire",
+      "tickers": [
+        "KGC"
+      ]
+    },
+    {
+      "time": "34 min",
+      "title": "Medline Inc. Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - MDLN",
+      "url": "/news/427551/medline-inc-sued-for-securities-law-violations-contact-the-djs-law-group-to-discuss-your-rights-mdln",
+      "source": "PR Newswire",
+      "tickers": [
+        "MDLN"
+      ]
+    },
+    {
+      "time": "34 min",
+      "title": "Stock Futures Jump as AI Trade Set for Rebound",
+      "url": "https://www.wsj.com/finance/stocks/stock-futures-jump-as-ai-trade-set-for-rebound-98318fc0?mod=wsj_FV",
+      "source": "The Wall Street Journal",
+      "tickers": [
+        "NVDA"
+      ]
+    },
+    {
+      "time": "37 min",
+      "title": "lululemon athletica inc. Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - LULU",
+      "url": "/news/427550/lululemon-athletica-inc-sued-for-securities-law-violations-contact-the-djs-law-group-to-discuss-your-rights-lulu",
+      "source": "PR Newswire",
+      "tickers": [
+        "LULU"
+      ]
+    },
+    {
+      "time": "38 min",
+      "title": "Cheetah Mobile To Report Third Quarter 2026 Financial Results on December 4, 2026",
+      "url": "/news/427547/cheetah-mobile-to-report-third-quarter-2026-financial-results-on-december-4-2026",
+      "source": "PR Newswire",
+      "tickers": [
+        "CMCM"
+      ]
+    },
+    {
+      "time": "38 min",
+      "title": "FMC Corporation Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - FMC",
+      "url": "/news/427549/fmc-corporation-sued-for-securities-law-violations-contact-the-djs-law-group-to-discuss-your-rights-fmc",
+      "source": "PR Newswire",
+      "tickers": [
+        "FMC"
+      ]
+    },
+    {
+      "time": "38 min",
+      "title": "Kaplan Fox Urges Investors of The Ensign Group, Inc. (ENSG) to Seek a Leadership Role Before December 7, 2026",
+      "url": "https://www.newsfilecorp.com/release/325920/Kaplan-Fox-Urges-Investors-of-The-Ensign-Group-Inc.-ENSG-to-Seek-a-Leadership-Role-Before-December-7-2026",
+      "source": "Newsfile",
+      "tickers": [
+        "ENSG"
+      ]
+    },
+    {
+      "time": "39 min",
+      "title": "The Ensign Group, Inc. Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - ENSG",
+      "url": "/news/427548/the-ensign-group-inc-sued-for-securities-law-violations-contact-the-djs-law-group-to-discuss-your-rights-ensg",
+      "source": "PR Newswire",
+      "tickers": [
+        "ENSG"
+      ]
+    },
+    {
       "time": "40 min",
+      "title": "Build-A-Bear Workshop, Inc. Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - BBW",
+      "url": "/news/427546/build-a-bear-workshop-inc-sued-for-securities-law-violations-contact-the-djs-law-group-to-discuss-your-rights-bbw",
+      "source": "PR Newswire",
+      "tickers": [
+        "BBW"
+      ]
+    },
+    {
+      "time": "43 min",
+      "title": "Intel Corporation Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - INTC",
+      "url": "/news/427545/intel-corporation-sued-for-securities-law-violations-contact-the-djs-law-group-to-discuss-your-rights-intc",
+      "source": "PR Newswire",
+      "tickers": [
+        "INTC"
+      ]
+    },
+    {
+      "time": "48 min",
+      "title": "AI chip curbs, Musks giveaway and oil risks - whats moving markets",
+      "url": "https://finance.yahoo.com/markets/articles/ai-chip-curbs-musk-giveaway-092034519.html",
+      "source": "Investing.com",
+      "tickers": [
+        "SPCX"
+      ]
+    },
+    {
+      "time": "53 min",
+      "title": "Bank of America Corporation Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - BAC",
+      "url": "/news/427544/bank-of-america-corporation-sued-for-securities-law-violations-contact-the-djs-law-group-to-discuss-your-rights-bac",
+      "source": "PR Newswire",
+      "tickers": [
+        "BAC"
+      ]
+    },
+    {
+      "time": "55 min",
+      "title": "Coastal Financial Corporation Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - CCB",
+      "url": "/news/427543/coastal-financial-corporation-sued-for-securities-law-violations-contact-the-djs-law-group-to-discuss-your-rights-ccb",
+      "source": "PR Newswire",
+      "tickers": [
+        "CCB"
+      ]
+    },
+    {
+      "time": "58 min",
       "title": "The Chemours Company Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - CC",
       "url": "/news/427542/the-chemours-company-sued-for-securities-law-violations-contact-the-djs-law-group-to-discuss-your-rights-cc",
       "source": "PR Newswire",
@@ -9030,7 +9067,7 @@
       ]
     },
     {
-      "time": "40 min",
+      "time": "58 min",
       "title": "Kaplan Fox Encourages Coastal Financial Corporation (CCB) Investors to Contact the Firm About Their Legal Rights Before December 1, 2026",
       "url": "https://www.newsfilecorp.com/release/325914/Kaplan-Fox-Encourages-Coastal-Financial-Corporation-CCB-Investors-to-Contact-the-Firm-About-Their-Legal-Rights-Before-December-1-2026",
       "source": "Newsfile",
@@ -9039,7 +9076,7 @@
       ]
     },
     {
-      "time": "58 min",
+      "time": "1 hour",
       "title": "FTSE 100 today: Stocks rise as miners lead on metals rebound",
       "url": "https://finance.yahoo.com/markets/world-indices/articles/ftse-100-today-stocks-rise-085208572.html",
       "source": "Investing.com",
@@ -9129,7 +9166,7 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "2 hours",
       "title": "Jefferies initiates Allwyn at hold, flags regulatory risks to growth outlook",
       "url": "https://finance.yahoo.com/markets/stocks/articles/jefferies-initiates-allwyn-hold-flags-075407783.html",
       "source": "Investing.com",
@@ -9138,7 +9175,7 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "2 hours",
       "title": "Blackbird hires Simon Sacerdoti as new CFO",
       "url": "https://finance.yahoo.com/markets/stocks/articles/blackbird-hires-simon-sacerdoti-cfo-075400123.html",
       "source": "Proactive",
@@ -9154,16 +9191,6 @@
       "tickers": [
         "MSFT",
         "WMT"
-      ]
-    },
-    {
-      "time": "2 hours",
-      "title": "Wall St futures surge as investors return from holiday",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/wall-st-futures-surge-investors-073405748.html",
-      "source": "Reuters",
-      "tickers": [
-        "NVDA",
-        "ANT"
       ]
     },
     {
@@ -9195,7 +9222,7 @@
       ]
     },
     {
-      "time": "2 hours",
+      "time": "3 hours",
       "title": "InterContinental Hotels Group PLC Announces Transaction in Own Shares - November 27",
       "url": "/news/427535/intercontinental-hotels-group-plc-announces-transaction-in-own-shares-november-27",
       "source": "ACCESSWIRE",
@@ -9204,7 +9231,7 @@
       ]
     },
     {
-      "time": "2 hours",
+      "time": "3 hours",
       "title": "The Coca-Cola Company and Gutsche Family Investments Close on Sale of Controlling Interest in Coca-Cola Beverages Africa to Coca-Cola HBC AG",
       "url": "/news/427538/the-coca-cola-company-and-gutsche-family-investments-close-on-sale-of-controlling-interest-in-coca-cola-beverages-africa-to-coca-cola-hbc-ag",
       "source": "Business Wire",
@@ -9244,7 +9271,7 @@
       ]
     },
     {
-      "time": "3 hours",
+      "time": "4 hours",
       "title": "The tiny Dutch town being overwhelmed by an AI boom",
       "url": "https://finance.yahoo.com/technology/ai/articles/tiny-dutch-town-being-overwhelmed-060000436.html",
       "source": "The Telegraph",
@@ -9263,7 +9290,7 @@
       ]
     },
     {
-      "time": "4 hours",
+      "time": "5 hours",
       "title": "Trump media group splashes out to woo shareholders before merger vote",
       "url": "https://finance.yahoo.com/markets/stocks/articles/trump-media-group-splashes-woo-050201591.html",
       "source": "Financial Times",
@@ -9272,7 +9299,7 @@
       ]
     },
     {
-      "time": "4 hours",
+      "time": "5 hours",
       "title": "Is the Stock Market Open Today? Here Are the Trading Hours for Black Friday.",
       "url": "https://www.barrons.com/articles/stock-market-open-closed-today-black-friday-hours-banks-post-office-383c6bb5?mod=bar_FV",
       "source": "Barrons.com",
@@ -9679,36 +9706,6 @@
       "source": "Investing.com",
       "tickers": [
         "WMT"
-      ]
-    },
-    {
-      "time": "Nov-26",
-      "title": "Agnico Eagle Bets on Massive Gold Expansion Despite Rising Mining Costs",
-      "url": "https://finance.yahoo.com/markets/commodities/articles/agnico-eagle-bets-massive-gold-190217024.html",
-      "source": "Oilprice.com",
-      "tickers": [
-        "AEM",
-        "NEM"
-      ]
-    },
-    {
-      "time": "Nov-26",
-      "title": "Analog Devices keeps UBS target despite softer earnings guidance",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/analog-devices-keeps-ubs-target-190000090.html",
-      "source": "Proactive",
-      "tickers": [
-        "ADI",
-        "UBS"
-      ]
-    },
-    {
-      "time": "Nov-26",
-      "title": "Phinia agrees to acquire assets of brake components maker FMP Group",
-      "url": "https://finance.yahoo.com/news/phinia-agrees-acquire-assets-brake-182308616.html",
-      "source": "Just Auto",
-      "tickers": [
-        "FCN",
-        "PHIN"
       ]
     }
   ],
@@ -10235,7 +10232,7 @@
       "company": "Broadcom Inc",
       "datetime": "2026-12-09T16:30:00",
       "session": "AMC",
-      "mcap": 1496246.5656478356,
+      "mcap": 1489366.8454407165,
       "eps_est": 3.8302
     },
     {
@@ -10251,7 +10248,7 @@
       "company": "Royal Bank Of Canada",
       "datetime": "2026-12-03T08:30:00",
       "session": "BMO",
-      "mcap": 262649.76946105954,
+      "mcap": 263665.4514221191,
       "eps_est": 2.9232
     },
     {
@@ -10267,7 +10264,7 @@
       "company": "Salesforce Inc",
       "datetime": "2026-12-02T16:30:00",
       "session": "AMC",
-      "mcap": 163181.73096963676,
+      "mcap": 164155.59005105012,
       "eps_est": 3.4471
     },
     {
@@ -10275,7 +10272,7 @@
       "company": "Marvell Technology Inc",
       "datetime": "2026-12-01T16:30:00",
       "session": "AMC",
-      "mcap": 123511.36973103366,
+      "mcap": 123239.5194928378,
       "eps_est": 1.1005
     },
     {
@@ -10299,7 +10296,7 @@
       "company": "Snowflake Inc",
       "datetime": "2026-12-02T16:30:00",
       "session": "AMC",
-      "mcap": 98078.39332240923,
+      "mcap": 97506.85908397795,
       "eps_est": 0.5981
     },
     {
@@ -10315,7 +10312,7 @@
       "company": "Adobe Inc",
       "datetime": "2026-12-09T16:30:00",
       "session": "AMC",
-      "mcap": 91426.97674201427,
+      "mcap": 91617.68094815125,
       "eps_est": 6.3298
     },
     {
@@ -10323,7 +10320,7 @@
       "company": "Synopsys Inc",
       "datetime": "2026-12-08T16:30:00",
       "session": "AMC",
-      "mcap": 80008.30153299056,
+      "mcap": 79707.05044968848,
       "eps_est": 4.1206
     },
     {
@@ -10351,20 +10348,20 @@
       "eps_est": 1.164
     },
     {
-      "ticker": "CIEN",
-      "company": "CIENA Corp",
-      "datetime": "2026-12-10T08:30:00",
-      "session": "BMO",
-      "mcap": 36586.598565169756,
-      "eps_est": 2.0771
-    },
-    {
       "ticker": "OKTA",
       "company": "Okta Inc",
       "datetime": "2026-12-01T16:30:00",
       "session": "AMC",
-      "mcap": 36407.01246575054,
+      "mcap": 36525.294419367056,
       "eps_est": 0.9342
+    },
+    {
+      "ticker": "CIEN",
+      "company": "CIENA Corp",
+      "datetime": "2026-12-10T08:30:00",
+      "session": "BMO",
+      "mcap": 36302.9815220289,
+      "eps_est": 2.0771
     },
     {
       "ticker": "NTAP",
@@ -10379,8 +10376,16 @@
       "company": "Sunbelt Rentals Holdings Inc",
       "datetime": "2026-12-08T08:30:00",
       "session": "BMO",
-      "mcap": 31076.569811715766,
+      "mcap": 31027.400022469887,
       "eps_est": 1.2649
+    },
+    {
+      "ticker": "CPRT",
+      "company": "Copart Inc",
+      "datetime": "2026-12-01T08:30:00",
+      "session": "BMO",
+      "mcap": 30755.75309158172,
+      "eps_est": 0.3923
     },
     {
       "ticker": "DG",
@@ -10389,14 +10394,6 @@
       "session": "BMO",
       "mcap": 30725.3,
       "eps_est": 1.4117
-    },
-    {
-      "ticker": "CPRT",
-      "company": "Copart Inc",
-      "datetime": "2026-12-01T08:30:00",
-      "session": "BMO",
-      "mcap": 30653.850936938623,
-      "eps_est": 0.3923
     },
     {
       "ticker": "ULTA",
@@ -10411,7 +10408,7 @@
       "company": "Trip.com Group Ltd ADR",
       "datetime": "2026-12-01T16:30:00",
       "session": "AMC",
-      "mcap": 26572.694642944338,
+      "mcap": 26580.812410583498,
       "eps_est": 1.2355
     },
     {
@@ -10435,7 +10432,7 @@
       "company": "Rubrik Inc",
       "datetime": "2026-11-30T16:30:00",
       "session": "AMC",
-      "mcap": 23218.096616260045,
+      "mcap": 23402.597436057098,
       "eps_est": 0.0822
     },
     {
@@ -10451,7 +10448,7 @@
       "company": "Credo Technology Group Holding Ltd",
       "datetime": "2026-12-01T16:30:00",
       "session": "AMC",
-      "mcap": 21580.634072660097,
+      "mcap": 21388.92379250104,
       "eps_est": 1.2856
     },
     {
@@ -10459,7 +10456,7 @@
       "company": "DocuSign Inc",
       "datetime": "2026-12-03T16:30:00",
       "session": "AMC",
-      "mcap": 15092.37,
+      "mcap": 15325.998018575852,
       "eps_est": 1.1798
     },
     {
@@ -10499,7 +10496,7 @@
       "company": "Sailpoint Inc",
       "datetime": "2026-12-08T08:30:00",
       "session": "BMO",
-      "mcap": 13530.60662904122,
+      "mcap": 13553.556866342235,
       "eps_est": 0.0796
     },
     {
@@ -10515,7 +10512,7 @@
       "company": "Lululemon Athletica Inc",
       "datetime": "2026-12-08T16:30:00",
       "session": "AMC",
-      "mcap": 12567.090855800896,
+      "mcap": 12567.12531942053,
       "eps_est": 1.0096
     },
     {
@@ -10547,7 +10544,7 @@
       "company": "Netskope Inc",
       "datetime": "2026-12-02T16:30:00",
       "session": "AMC",
-      "mcap": 11336.062161275557,
+      "mcap": 11281.107684149132,
       "eps_est": -0.033
     }
   ],
@@ -10595,5 +10592,5 @@
   "calendar_window_days": 16,
   "econ_window_count": 152,
   "earnings_window_count": 167,
-  "overlay_at": "2026-11-27T04:50:40.969843-05:00"
+  "overlay_at": "2026-11-27T05:09:05.004559-05:00"
 }

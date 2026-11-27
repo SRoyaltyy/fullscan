@@ -1,11 +1,11 @@
 {
   "date": "2026-11-27",
-  "generated_at": "2026-11-27T05:06:52.280077-05:00",
+  "generated_at": "2026-11-27T05:09:05.463962-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 1,
-    "partial": 3,
+    "ok": 2,
+    "partial": 2,
     "fail": 4,
     "n": 8
   },
@@ -15,24 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "join",
-      "title": "Join / match rank",
-      "date": "2026-11-27",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-11-27T05:00:58.104326-05:00",
-      "files": [
-        {
-          "path": "data/join/2026-11-27_ranked.csv",
-          "ok": true,
-          "reason": "",
-          "size": 2209360,
-          "preview": "5883 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ONC, RGA, ETON, LLY, KNSA"
-        }
-      ],
-      "preview": "5883 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ONC, RGA, ETON, LLY, KNSA"
-    },
     {
       "key": "ab",
       "title": "AB checklist",
@@ -235,6 +217,31 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-11-27\n**Generated:** 2026-11-27T05:06:51.858851-05:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks set to open higher in holiday-shortened session as tech and AI sentiment steadies ahead of jobless claims and trade data\n**Prior close:** SPX -0.25%  Nasdaq \u2014  Dow \u2014\n**SPX:** -0.25%  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** XYF\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** XYF\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-11-27\n**Clock use:** `same_morning`"
+    },
+    {
+      "key": "map_heat",
+      "title": "Map heat morning overlay",
+      "date": "2026-11-27",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-27T05:09:05.058519-05:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-11-27_map_heat.json",
+          "ok": true,
+          "reason": "",
+          "size": 272457,
+          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
+        },
+        {
+          "path": "01_daily/map_heat/2026-11-27_map_heat.md",
+          "ok": true,
+          "reason": "",
+          "size": 18711,
+          "preview": "# MAP HEAT \u2014 2026-11-27\nExport `finviz_2026-11-27.csv` \u00b7 11786 names \u00b7 generated 2026-11-27T05:09:05.004559-05:00"
+        }
+      ],
+      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-11-27\nExport `finviz_2026-11-27.csv` \u00b7 11786 names \u00b7 generated 2026-11-27T05:09:05.004559-05:00"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
