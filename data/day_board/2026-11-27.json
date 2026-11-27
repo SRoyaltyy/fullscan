@@ -1,6 +1,6 @@
 {
   "date": "2026-11-27",
-  "generated_at": "2026-11-27T15:05:49.940402-05:00",
+  "generated_at": "2026-11-27T15:05:57.348896-05:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -2211,6 +2211,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -2.44, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -3.0, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.74, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.8, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -1.41, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.77, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': 1.25, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -2.27, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-11-27\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade. \u00b7 weather sectors 11 \u00b7 Basic Materials={'score': -2.44, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -3.0, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.74, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.8, 'di"
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-11-27",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-11-27T15:05:56.705735-05:00",
+      "files": [
+        {
+          "path": "data/join/2026-11-27_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2256731,
+          "preview": "5883 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ONC, RGA, LLY, KNSA, REGN"
+        }
+      ],
+      "preview": "5883 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ONC, RGA, LLY, KNSA, REGN"
     }
   ],
   "href": {
@@ -2320,6 +2338,14 @@
       "path": "data/day_board/2026-11-27.json",
       "at": "2026-11-27T15:05:50-05:00",
       "commit_msg": "auto: land weather [2026-11-27]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "46059839275",
+      "manifest": "research/input_freeze/2026-11-27/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-11-27.json",
+      "at": "2026-11-27T15:05:57-05:00",
+      "commit_msg": "auto: land join [2026-11-27]",
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "46059839275",
       "manifest": "research/input_freeze/2026-11-27/manifest.json"
