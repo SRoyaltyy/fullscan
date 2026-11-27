@@ -1,6 +1,6 @@
-# Finviz Daily Digest — 2026-11-25
+# Finviz Daily Digest — 2026-11-27
 
-_Generated 2026-11-27T04:46:34.106568-05:00 · export=data/exports/finviz_2026-11-25.csv · ticker digests=794 · high-signal=189_
+_Generated 2026-11-27T05:06:43.310081-05:00 · export=data/exports/finviz_2026-11-27.csv · ticker digests=775 · high-signal=189_
 
 ## Major indices (live quote page)
 
@@ -15,6 +15,7 @@ _Generated 2026-11-27T04:46:34.106568-05:00 · export=data/exports/finviz_2026-1
 - **ADI** [Technology]: Analog Devices posts record Q4 as AI and industrial growth accelerates, and plans to more than double FY27 CapEx to $1.6B-$1.9B
 - **ADP** [Technology]: Wedbush initiated coverage of Automatic Data Processing with an Outperform rating.
 - **ADSK** [Technology]: Autodesk beats fiscal Q3 2027 estimates and raises FY27 outlook as AEC, MaintainX and Fusion outpace headwinds
+- **AMD** [Technology]: AMD falls with chipmakers as AI-return fears and tariff plans deepen selloff
 - **AMGN** [Healthcare]: Amgen settled U.S. patent litigation with BMS, clearing a path to launch its Opdivo biosimilar ABP 206 on October 1, 2028, subject to FDA approval.
 - **AMZN** [Consumer Cyclical]: Amazon falls with megacap tech after U.S. tariff proposals deepen AI selloff
 - **AVGO** [Technology]: Broadcom falls with chip peers as AI-spending doubts and tariff risks deepen
@@ -23,25 +24,26 @@ _Generated 2026-11-27T04:46:34.106568-05:00 · export=data/exports/finviz_2026-1
 - **BN** [Financial]: Brookfield’s property subsidiary cut the value of its Catalyst Brands investment by 50%, from $551 million to $276 million.
 - **BUD** [Consumer Defensive]: J.P. Morgan downgraded Anheuser-Busch InBev to Neutral from Overweight and cut its price target to €75 from €80, citing fair valuation and weaker Brazilian real forecasts.
 - **CEG** [Utilities]: Constellation completed the sale of approximately 4.4 GW of PJM generation assets to LS Power, satisfying divestiture requirements tied to its Calpine acquisition.
-- **DELL** [Technology]: Dell extends its post-earnings rebound after record results and raised guidance
+- **DELL** [Technology]: Dell posts record AI-driven quarter, raises FY27 outlook to $202B revenue and $29.68 EPS
 - **EQNR** [Energy]: Equinor cuts 2026 production growth forecast to about 3% from 4%, citing the Bacalhau shutdown and disruptions at other offshore assets
 - **FCX** [Basic Materials]: Deutsche Bank cut its Freeport-McMoRan price target to $70 from $80 while maintaining a Buy rating.
 - **HOOD** [Financial]: Wedbush initiated coverage of Robinhood with an Outperform rating and an $80 price target.
 - **HPE** [Technology]: HPE guides FY27 Cloud & AI margins to about 14%, down from 18.4%, as Susquehanna cuts target to $55 from $62
 - **MA** [Financial]: Wedbush initiated coverage of Mastercard at Outperform with a $751 price target.
-- **MO** [Consumer Defensive]: Altria confirmed it is considering an all-cash offer for Imperial Brands and is discussing a separate potential acquisition of part of the business with another party.
+- **MRVL** [Technology]: Marvell falls with chip peers as AI-return doubts and tariff proposals deepen selloff
 - **NKE** [Consumer Cyclical]: Nike rises after Dick's reports Foot Locker progress and raises its profit outlook
 - **NOC** [Industrials]: Mizuho initiated coverage of Northrop Grumman, naming it one of its favored defense contractors.
 - **NVDA** [Technology]: S&P may cut NVIDIA’s rating from AA to AA- within 90 days after placing it on negative CreditWatch
 - **PFE** [Healthcare]: Pfizer rises with drugmakers after Sanofi's $41 billion Insmed acquisition
 - **PH** [Industrials]: Parker Hannifin completed its acquisition of CIRCOR Aerospace, a business expected to add about $270 million in annual sales at an adjusted EBITDA margin above 40%.
 - **RIO** [Basic Materials]: Deutsche Bank cut its Rio Tinto price target to 6,900p from 7,600p in its 2027 mining-sector outlook.
+- **SNDK** [Technology]: Sandisk falls after TrendForce lowers NAND outlook on Chinese cloud-order cuts
 - **TFC** [Financial]: Baird upgrade to Outperform lifts Truist 3% pre-market on new CEO turnaround outlook
 - **TMO** [Healthcare]: Thermo Fisher Scientific announced FDA clearance for a first-of-its-kind test to help clinicians monitor multiple myeloma.
 - **TXN** [Technology]: Texas Instruments falls with analog-chip peers after Analog Devices issues below-consensus profit guidance
 - **V** [Financial]: Wedbush initiated coverage of Visa with an Outperform rating and a $487 price target.
 - **VRT** [Industrials]: Vertiv falls with AI peers as Evercore cuts its price target
-- **VRTX** [Healthcare]: FDA delays Vertex’s povetacicept decision until February 2027
+- **VRTX** [Healthcare]: Vertex says FDA extended povetacicept’s IgAN review deadline by up to three months, to February 28, 2027.
 - **WDC** [Technology]: Western Digital falls with storage peers after TrendForce cuts 2027 memory forecasts
 - **AMRZ** [Basic Materials]: Amrize rises with building-materials peers after U.S. new-home sales beat forecasts
 - **BBIO** [Healthcare]: BridgeBio receives traditional FDA approval for Welgemda for limb-girdle muscular dystrophy type 2I/R9
@@ -49,8 +51,6 @@ _Generated 2026-11-27T04:46:34.106568-05:00 · export=data/exports/finviz_2026-1
 - **BG** [Consumer Defensive]: Bunge falls with agribusiness peers as tariff reports revive trade-war risks
 - **BR** [Technology]: Wedbush initiated coverage of Broadridge Financial Solutions with a Neutral rating.
 - **BURL** [Consumer Cyclical]: Burlington beats Q3 EPS but cuts Q4 margin guidance on freight and weather risk
-- **CLS** [Technology]: Celestica falls with AI hardware peers as tariff threats deepen the tech rout
-- **COIN** [Financial]: Coinbase CEO Brian Armstrong says the company repurchased shares this quarter, with about $2 billion remaining under its $4 billion buyback plan as of Sept. 30.
 
 ## By sector (top signal)
 
@@ -58,8 +58,8 @@ _Generated 2026-11-27T04:46:34.106568-05:00 · export=data/exports/finviz_2026-1
 - ADI: Analog Devices posts record Q4 as AI and industrial growth accelerates, and plans to more than double FY27 CapEx to $1.6B-$1.9B
 - ADP: Wedbush initiated coverage of Automatic Data Processing with an Outperform rating.
 - ADSK: Autodesk beats fiscal Q3 2027 estimates and raises FY27 outlook as AEC, MaintainX and Fusion outpace headwinds
+- AMD: AMD falls with chipmakers as AI-return fears and tariff plans deepen selloff
 - AVGO: Broadcom falls with chip peers as AI-spending doubts and tariff risks deepen
-- DELL: Dell extends its post-earnings rebound after record results and raised guidance
 
 ### Consumer Cyclical (n=8)
 - AMZN: Amazon falls with megacap tech after U.S. tariff proposals deepen AI selloff
@@ -73,7 +73,7 @@ _Generated 2026-11-27T04:46:34.106568-05:00 · export=data/exports/finviz_2026-1
 - AMGN: Amgen settled U.S. patent litigation with BMS, clearing a path to launch its Opdivo biosimilar ABP 206 on October 1, 2028, subject to FDA approval.
 - PFE: Pfizer rises with drugmakers after Sanofi's $41 billion Insmed acquisition
 - TMO: Thermo Fisher Scientific announced FDA clearance for a first-of-its-kind test to help clinicians monitor multiple myeloma.
-- VRTX: FDA delays Vertex’s povetacicept decision until February 2027
+- VRTX: Vertex says FDA extended povetacicept’s IgAN review deadline by up to three months, to February 28, 2027.
 
 ### Financial (n=7)
 - BN: Brookfield’s property subsidiary cut the value of its Catalyst Brands investment by 50%, from $551 million to $276 million.
@@ -81,13 +81,6 @@ _Generated 2026-11-27T04:46:34.106568-05:00 · export=data/exports/finviz_2026-1
 - MA: Wedbush initiated coverage of Mastercard at Outperform with a $751 price target.
 - TFC: Baird upgrade to Outperform lifts Truist 3% pre-market on new CEO turnaround outlook
 - V: Wedbush initiated coverage of Visa with an Outperform rating and a $487 price target.
-
-### Consumer Defensive (n=5)
-- BUD: J.P. Morgan downgraded Anheuser-Busch InBev to Neutral from Overweight and cut its price target to €75 from €80, citing fair valuation and weaker Brazilian real forecasts.
-- MO: Altria confirmed it is considering an all-cash offer for Imperial Brands and is discussing a separate potential acquisition of part of the business with another party.
-- BG: Bunge falls with agribusiness peers as tariff reports revive trade-war risks
-- DLTR: Dollar Tree beats fiscal Q3 2027 estimates with adjusted EPS of $1.16 and revenue of $5.1B, raises FY2026 comp-sales forecast to 3.5%–4%
-- KR: Kroger has begun notifying an unspecified number of corporate employees of layoffs under its previously announced plan to cut about 3,000 jobs over three years.
 
 ### Industrials (n=5)
 - NOC: Mizuho initiated coverage of Northrop Grumman, naming it one of its favored defense contractors.
@@ -102,8 +95,15 @@ _Generated 2026-11-27T04:46:34.106568-05:00 · export=data/exports/finviz_2026-1
 - RIO: Deutsche Bank cut its Rio Tinto price target to 6,900p from 7,600p in its 2027 mining-sector outlook.
 - AMRZ: Amrize rises with building-materials peers after U.S. new-home sales beat forecasts
 
-### Utilities (n=1)
+### Consumer Defensive (n=4)
+- BUD: J.P. Morgan downgraded Anheuser-Busch InBev to Neutral from Overweight and cut its price target to €75 from €80, citing fair valuation and weaker Brazilian real forecasts.
+- BG: Bunge falls with agribusiness peers as tariff reports revive trade-war risks
+- DLTR: Dollar Tree beats fiscal Q3 2027 estimates with adjusted EPS of $1.16 and revenue of $5.1B, raises FY2026 comp-sales forecast to 3.5%–4%
+- KR: Kroger has begun notifying an unspecified number of corporate employees of layoffs under its previously announced plan to cut about 3,000 jobs over three years.
+
+### Utilities (n=2)
 - CEG: Constellation completed the sale of approximately 4.4 GW of PJM generation assets to LS Power, satisfying divestiture requirements tied to its Calpine acquisition.
+- ES: S&P 500 futures fall on new tariff plans and renewed AI selling
 
 ### Energy (n=1)
 - EQNR: Equinor cuts 2026 production growth forecast to about 3% from 4%, citing the Bacalhau shutdown and disruptions at other offshore assets

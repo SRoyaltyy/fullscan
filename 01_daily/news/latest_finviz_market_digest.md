@@ -1,6 +1,6 @@
 # Finviz homepage market digest — 2026-11-27
 
-**Generated:** 2026-11-27T04:48:39.976317-05:00 (America/New_York)
+**Generated:** 2026-11-27T05:06:51.858851-05:00 (America/New_York)
 **Source:** `live`
 **Banner:** US stocks set to open higher in holiday-shortened session as tech and AI sentiment steadies ahead of jobless claims and trade data
 **Prior close:** SPX -0.25%  Nasdaq —  Dow —
