@@ -1,11 +1,11 @@
 [
   {
-    "title": "Authorities complete 2026 review of payments Memorandum of Understanding",
-    "url": "https://www.fca.org.uk/news/statements/payments-authorities-mou-review-2026",
-    "native_id": "178171",
+    "title": "Cyber resilience: building confidence as threats evolve",
+    "url": "https://www.fca.org.uk/news/speeches/cyber-resilience-building-confidence-threats-evolve",
+    "native_id": "178056",
     "published_at": null,
-    "published_raw": "Thursday, November 26, 2026 - 15:00",
-    "summary": "The Bank of England (the Bank), Financial Conduct Authority (FCA), Prudential Regulation Authority (PRA) and Payment Systems Regulator (PSR) have completed their annual review of the Memorandum of Understanding (MoU) on payments. Read the MoU (PDF)Outcome of the review: The review found that cooperation and coordination between the Authorities – the Bank, FCA, PRA and PSR – has strengthened and remains effective.We concluded that no changes to the MoU are needed at this time.To complement the MoU, we have updated our information explaining how our objectives, regulatory remits and key workstreams fit together.The Authorities have considered the effectiveness and efficiency of their coordination under the MoU. This includes feedback from industry and regulated firms to determine whether the MoU’s principles of coordination and cooperation continue to be met in practice. The review found that cooperation and coordination remain effective, with respondents welcoming tangible progress in how the Authorities work together. Examples of this include collaborating on a range of developments, including the future regime for dual-regulated stablecoin issuers and other innovations in payments",
+    "published_raw": "Friday, November 27, 2026 - 09:34",
+    "summary": "Speech by Mark Francis, director of specialists at the Cyber Security in Financial Services Summit. There is no shortage of material for a speech about cyber security at the moment.Recent months have provided some stark reminders of just how interconnected our digital economy has become.Major outages affecting Microsoft and Google have shown how problems in one part of the system can reverberate widely.We are seeing that changing environment reflected in our own data too.Last month was the highest month for cyber incidents reported to the FCA in the past 18 months, and the second highest in the past 5 years.And those numbers sit against a broader shift in the operating environment.Financial services firms are increasingly reliant on complex networks of technology and third-party providers.Geopolitical tensions remain heightened.And technologies such as artificial intelligence (AI) and the potential emergence of quantum computing are changing what is possible for attackers and defenders alike.Put all of that together and you could be forgiven for thinking this might be quite a gloomy speech.But I am, by nature, an optimist. A glass half full person.And when someone asks me what come",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -16,11 +16,131 @@
       "family": "financial_enforcement"
     },
     "primary_source_id": "uk-fca-7b9977ec8e",
-    "n": 12771,
-    "first_seen": "2026-11-26T22:22:50.591377+00:00",
-    "last_seen": "2026-11-26T22:22:50.591377+00:00",
+    "n": 12945,
+    "first_seen": "2026-11-27T09:42:17.831081+00:00",
+    "last_seen": "2026-11-27T09:42:17.831081+00:00",
     "source_ids": [
       "uk-fca-7b9977ec8e"
+    ]
+  },
+  {
+    "title": "Decision to Extend the Taxable Period of Anti-Dumping Duties on Potassium Hydroxide Originating in the Republic of Korea and the People’s Republic of China",
+    "url": "https://www.meti.go.jp/english/press/2026/11/20261127003.html",
+    "native_id": "https://www.meti.go.jp/english/press/2026/11/20261127003.html",
+    "published_at": null,
+    "published_raw": null,
+    "summary": "",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Japan Ministry of Economy Trade and Industry",
+      "jurisdiction": "JP",
+      "family": "trade_and_industry_policy"
+    },
+    "primary_source_id": "jp-meti-index",
+    "n": 12952,
+    "first_seen": "2026-11-27T09:42:17.831081+00:00",
+    "last_seen": "2026-11-27T09:42:17.831081+00:00",
+    "source_ids": [
+      "jp-meti-index"
+    ]
+  },
+  {
+    "title": "Decision to Impose a Definitive Anti-Dumping Duty on Bisphenol A Originating in the Republic of Korea and the Separate Customs Territory of Taiwan, Penghu, Kinmen and Matsu",
+    "url": "https://www.meti.go.jp/english/press/2026/11/20261127002.html",
+    "native_id": "https://www.meti.go.jp/english/press/2026/11/20261127002.html",
+    "published_at": null,
+    "published_raw": null,
+    "summary": "",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Japan Ministry of Economy Trade and Industry",
+      "jurisdiction": "JP",
+      "family": "trade_and_industry_policy"
+    },
+    "primary_source_id": "jp-meti-index",
+    "n": 12953,
+    "first_seen": "2026-11-27T09:42:17.831081+00:00",
+    "last_seen": "2026-11-27T09:42:17.831081+00:00",
+    "source_ids": [
+      "jp-meti-index"
+    ]
+  },
+  {
+    "title": "Decision to Impose a Definitive Anti-Dumping Duty on Hot-Dipped Galvanized Steel Coil, Sheet and Strip Originating in the Republic of Korea and the People’s Republic of China",
+    "url": "https://www.meti.go.jp/english/press/2026/11/20261127001.html",
+    "native_id": "https://www.meti.go.jp/english/press/2026/11/20261127001.html",
+    "published_at": null,
+    "published_raw": null,
+    "summary": "",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Japan Ministry of Economy Trade and Industry",
+      "jurisdiction": "JP",
+      "family": "trade_and_industry_policy"
+    },
+    "primary_source_id": "jp-meti-index",
+    "n": 12954,
+    "first_seen": "2026-11-27T09:42:17.831081+00:00",
+    "last_seen": "2026-11-27T09:42:17.831081+00:00",
+    "source_ids": [
+      "jp-meti-index"
+    ]
+  },
+  {
+    "title": "Parliamentary Vice-Minister WAKAYAMA Holds Online Meeting with H.E. Mr. Ryad MEZZOUR, Minister of Industry, Trade, Investment and Economic Inclusion of the Kingdom of Morrocco",
+    "url": "https://www.meti.go.jp/english/press/2026/11/20261126001.html",
+    "native_id": "https://www.meti.go.jp/english/press/2026/11/20261126001.html",
+    "published_at": null,
+    "published_raw": null,
+    "summary": "",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Japan Ministry of Economy Trade and Industry",
+      "jurisdiction": "JP",
+      "family": "trade_and_industry_policy"
+    },
+    "primary_source_id": "jp-meti-index",
+    "n": 12955,
+    "first_seen": "2026-11-27T09:42:17.831081+00:00",
+    "last_seen": "2026-11-27T09:42:17.831081+00:00",
+    "source_ids": [
+      "jp-meti-index"
+    ]
+  },
+  {
+    "title": "State Minister TAKAGI Visits the United Arab Emirates",
+    "url": "https://www.meti.go.jp/english/press/2026/11/20261104001.html",
+    "native_id": "https://www.meti.go.jp/english/press/2026/11/20261104001.html",
+    "published_at": null,
+    "published_raw": null,
+    "summary": "",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Japan Ministry of Economy Trade and Industry",
+      "jurisdiction": "JP",
+      "family": "trade_and_industry_policy"
+    },
+    "primary_source_id": "jp-meti-index",
+    "n": 12956,
+    "first_seen": "2026-11-27T09:42:17.831081+00:00",
+    "last_seen": "2026-11-27T09:42:17.831081+00:00",
+    "source_ids": [
+      "jp-meti-index"
     ]
   }
 ]
