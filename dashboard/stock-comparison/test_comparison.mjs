@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import {key,oldTerms,newTerms,compareTerms} from './comparison.mjs';
+assert.equal(key(' Alpha   Beta '),'alpha beta');assert.notEqual(key('Alpha Inc.'),key('Alpha'));
+const old=oldTerms({keywords:[{keyword:'Alpha',scanner:{eligible:true},predicate:'buys_from',assertion:'asserted'},{keyword:'Hidden',scanner:{eligible:false},predicate:'uses_input',assertion:'asserted'}]});
+assert.equal(old.size,1);assert.equal(oldTerms({keywords:[{keyword:'Hidden',scanner:{eligible:false}}]},true).size,1);
+const next=newTerms({evidence:{entities:[{id:'a',name:'ALPHA'},{id:'b',name:'New Name'}],assertions:[{entity_id:'a',predicate:'buys_from',assertion:'asserted',capacity:'unknown'}],occurrences:[{entity_id:'a',text:'Source Alias',identity_status:'explicit_definition'}]}});
+assert.equal(next.get('alpha').aliases[0],'Source Alias');assert.equal(compareTerms(old,next).find(x=>x.key==='alpha').status,'same');assert.equal(compareTerms(old,next).find(x=>x.key==='new name').status,'added');
+const pending=compareTerms(old,null);assert.ok(pending.every(x=>x.status==='pending'));
+assert.equal(compareTerms(old,new Map())[0].status,'removed');
+next.get('alpha').claims[0].assertion='negated';assert.equal(compareTerms(old,next).find(x=>x.key==='alpha').status,'changed');
+next.get('alpha').claims[0].assertion='asserted';next.get('alpha').claims[0].capacity='employee_benefit';assert.equal(compareTerms(old,next).find(x=>x.key==='alpha').status,'changed');
+assert.equal(newTerms({evidence:{entities:[{id:'u',name:'Unclassified'}],occurrences:[],assertions:[]}}).get('unclassified').claims.length,0);
+console.log('Comparison controls passed: pending states, exclusions, exact names, aliases, negation, capacity and unclassified terms.');

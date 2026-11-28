@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Webull OpenAPI sandbox book</title>
+<style>
+ :root{
+  --bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;
+  --fg:#dfe6f2; --mut:#8b96ab; --dim:#66708a; --pos:#4ade80; --neg:#f87171;
+  --gold:#fbbf24; --day:#121826;
+ }
+ *{box-sizing:border-box}
+ html,body{margin:0;background:var(--bg);color:var(--fg);
+   font:14px/1.45 -apple-system,Segoe UI,Roboto,sans-serif}
+ .wrap{max-width:1100px;margin:0 auto;padding:16px 14px 48px}
+ h1{font-size:20px;margin:0 0 4px}
+ h2{font-size:15px;margin:18px 0 8px;color:var(--mut);font-weight:600}
+ .sub{color:var(--mut);font-size:12px;margin:0 0 12px}
+ .sub a{color:#93c5fd}
+ .banner{background:#1a2744;border:1px solid #3b4d78;border-radius:10px;
+   padding:10px 12px;margin:0 0 12px}
+ .banner b{color:var(--gold)}
+ .bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 12px}
+ input,button{background:var(--card);color:var(--fg);border:1px solid var(--line);
+   border-radius:8px;padding:8px 10px;font:13px/1.3 ui-monospace,Menlo,monospace}
+ button{cursor:pointer}
+ .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr));gap:8px;margin:0 0 14px}
+ .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+ .card b{display:block;font-size:18px;margin-top:2px;font-variant-numeric:tabular-nums}
+ .ok{color:var(--pos)} .fail{color:var(--neg)} .part{color:var(--gold)} .mut{color:var(--mut)}
+ .sheet{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--card)}
+ table{width:100%;border-collapse:collapse;font-size:12.5px}
+ th,td{padding:6px 10px;border-top:1px solid var(--line2);text-align:right;white-space:nowrap}
+ th{color:var(--mut);font-weight:600;background:var(--day);border-top:0}
+ td:first-child,th:first-child{text-align:left}
+ td.sym{font-weight:700;font-family:ui-monospace,Menlo,monospace}
+ td.oid{font-family:ui-monospace,Menlo,monospace;font-size:11.5px;text-align:left}
+ .empty{color:var(--mut);padding:10px 12px}
+ .note{color:var(--dim);font-size:11.5px;margin-top:14px}
+ .pill{display:inline-block;padding:1px 7px;border-radius:999px;border:1px solid var(--line);
+   font-size:11px;font-family:ui-monospace,Menlo,monospace}
+ .pill.fill{color:var(--pos);border-color:#245c38}
+ .pill.work{color:var(--gold);border-color:#6b5420}
+</style></head><body><div class="wrap">
+<h1>Webull OpenAPI sandbox book</h1>
+<div class="banner">
+  <b>Webull OpenAPI sandbox</b> · <span id="host">api.sandbox.webull.com</span>
+  <div class="sub" style="margin:4px 0 0">Read-only cash, positions, working orders, and session fills from
+  <code>data/paper_open/*_status.json</code> on main. This is the OpenAPI sandbox
+  (<code>api.sandbox.webull.com</code>), not the retail phone-app paper account,
+  and not the research <a href="../book-paper/">book-paper</a> sim.</div>
+</div>
+<div class="sub">
+ <a href="../">.io paper</a>
+ · <a href="../strategy-board/">strategy board</a>
+ · <a href="../day-board/">day board</a>
+ · <a href="../sleeve-merge/">sleeve merge</a>
+</div>
+<div class="bar">
+  <label>Session
+    <input id="dateIn" inputmode="numeric" placeholder="YYYY-MM-DD" aria-label="Session date">
+  </label>
+  <button type="button" id="latest">Latest</button>
+  <button type="button" id="reload">Reload now</button>
+  <span class="mut" id="stamp">loading…</span>
+</div>
+<div class="cards" id="cards"></div>
+<h2>Positions</h2>
+<div class="sheet" id="pos"></div>
+<h2>Open / working orders</h2>
+<div class="sheet" id="open"></div>
+<h2>Today’s fills</h2>
+<div class="sheet" id="fills"></div>
+<p class="note" id="note"></p>
+</div>
+<script>
+const LOCAL = location.hostname === "localhost" || location.hostname === "127.0.0.1"
+  || location.protocol === "file:";
+const RAW = "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/paper_open";
+const CDN = "https://cdn.jsdelivr.net/gh/SRoyaltyy/fullscan@main/data/paper_open";
+let pinned = "";
+
+function $(id){return document.getElementById(id)}
+function esc(s){
+  return String(s == null ? "" : s).replace(/[&<>"]/g, ch => ({
+    "&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"
+  }[ch]));
+}
+function etToday(){
+  return new Intl.DateTimeFormat("en-CA", {
+    timeZone: "America/New_York",
+    year: "numeric", month: "2-digit", day: "2-digit"
+  }).format(new Date());
+}
+function addDays(iso, n){
+  const p = iso.split("-").map(Number);
+  const dt = new Date(Date.UTC(p[0], p[1] - 1, p[2]));
+  dt.setUTCDate(dt.getUTCDate() + n);
+  return dt.toISOString().slice(0, 10);
+}
+async function fetchJson(url){
+  const u = url + (url.includes("?") ? "&" : "?") + "t=" + Date.now();
+  const r = await fetch(u, {cache: "no-store"});
+  if (!r.ok) throw new Error(r.status + " " + url);
+  return r.json();
+}
+function statusUrls(date){
+  const name = date + "_status.json";
+  const remote = [RAW + "/" + name, CDN + "/" + name];
+  return LOCAL ? ["../../data/paper_open/" + name].concat(remote) : remote;
+}
+async function fetchStatus(date){
+  let last;
+  for (const u of statusUrls(date)) {
+    try { return await fetchJson(u); }
+    catch (e) { last = e; }
+  }
+  throw last || new Error("no status");
+}
+function brokerStatus(row){
+  return String((row && (row.broker_status || row.status)) || "").toUpperCase();
+}
+function filledQty(row){
+  const q = Number(row && row.filled_qty);
+  return Number.isFinite(q) ? q : 0;
+}
+function isCancelled(st){
+  return /CANCEL|REJECT|EXPIRED|FAILED/.test(st);
+}
+function isFillRow(row){
+  const st = brokerStatus(row);
+  return filledQty(row) > 0 || st.indexOf("FILLED") === 0;
+}
+function isOpenRow(row){
+  const st = brokerStatus(row);
+  if (!st && !(row && row.order_id)) return false;
+  if (isCancelled(st)) return false;
+  if (st.indexOf("FILLED") === 0) return false;
+  return true;
+}
+function money(n){
+  if (n == null || n === "" || !Number.isFinite(Number(n))) return "—";
+  return Number(n).toLocaleString("en-US", {style:"currency", currency:"USD"});
+}
+function qty(n){
+  if (n == null || n === "" || !Number.isFinite(Number(n))) return "—";
+  return Number(n).toLocaleString("en-US", {maximumFractionDigits: 4});
+}
+function px(n){
+  if (n == null || n === "" || !Number.isFinite(Number(n))) return "—";
+  return Number(n).toLocaleString("en-US", {minimumFractionDigits: 2, maximumFractionDigits: 4});
+}
+function cashOf(doc){
+  const obs = doc.fill_observe || {};
+  if (obs.cash != null && obs.cash !== "" && Number.isFinite(Number(obs.cash))) {
+    return {value: Number(obs.cash), source: "fill_observe.cash"};
+  }
+  if (doc.cash != null && doc.cash !== "" && Number.isFinite(Number(doc.cash))) {
+    return {value: Number(doc.cash), source: "cash"};
+  }
+  return {value: null, source: ""};
+}
+function pill(st){
+  const s = String(st || "");
+  const cls = s.toUpperCase().indexOf("FILLED") === 0 ? "fill"
+    : (isCancelled(s.toUpperCase()) ? "" : "work");
+  return `<span class="pill ${cls}">${esc(s || "—")}</span>`;
+}
+function table(headers, rows){
+  if (!rows.length) return `<div class="empty">None in this session journal.</div>`;
+  const head = headers.map(h => `<th>${esc(h)}</th>`).join("");
+  return `<table><thead><tr>${head}</tr></thead><tbody>${rows.join("")}</tbody></table>`;
+}
+function render(doc, via){
+  const obs = doc.fill_observe || {};
+  const card = doc.card || {};
+  const host = doc.host || "api.sandbox.webull.com";
+  $("host").textContent = host;
+  const cash = cashOf(doc);
+  const sent = Array.isArray(doc.sent) ? doc.sent : [];
+  const fills = sent.filter(isFillRow);
+  const open = sent.filter(isOpenRow);
+  const seen = {};
+  open.forEach(r => { seen[String(r.ticker || "").toUpperCase()] = 1; });
+  (obs.positions_snip || []).forEach(p => {
+    const st = brokerStatus(p);
+    const sym = String(p.symbol || p.ticker || "").toUpperCase();
+    if (!sym || seen[sym] || !isOpenRow(p)) return;
+    open.push({
+      ticker: sym,
+      broker_status: st,
+      shares: p.qty,
+      order_id: p.order_id || ""
+    });
+  });
+  const positions = Array.isArray(obs.positions_snip) ? obs.positions_snip : [];
+  const fillCls = String(doc.fill_status || "").toLowerCase() === "filled" ? "ok"
+    : (String(doc.fill_status || "").toLowerCase() === "partial" ? "part" : "mut");
+  $("stamp").textContent = (doc.date || "—")
+    + "  ·  observed " + (obs.et || doc.fill_observed_at || "—")
+    + (via ? "  ·  " + via : "");
+  $("cards").innerHTML = [
+    ["Sandbox cash", money(cash.value), "ok"],
+    ["Cash source", cash.source || "—", "mut"],
+    ["Positions", obs.n_positions != null ? obs.n_positions : positions.length, ""],
+    ["Fills", fills.length, "ok"],
+    ["Working", open.length, open.length ? "part" : "ok"],
+    ["Fill status", doc.fill_status || "—", fillCls],
+  ].map(([k,v,cls]) => `<div class="card">${esc(k)}<b class="${cls}">${esc(v)}</b></div>`).join("");
+  $("pos").innerHTML = table(
+    ["Symbol", "Qty", "Avg cost", "Broker status"],
+    positions.map(p => `<tr>
+      <td class="sym">${esc(p.symbol || p.ticker || "")}</td>
+      <td>${qty(p.qty)}</td>
+      <td>${px(p.avg_cost)}</td>
+      <td>${p.broker_status ? pill(p.broker_status) : "—"}</td>
+    </tr>`)
+  );
+  $("open").innerHTML = table(
+    ["Ticker", "Broker status", "Shares", "Order id"],
+    open.map(r => `<tr>
+      <td class="sym">${esc(r.ticker || "")}</td>
+      <td>${pill(r.broker_status || r.status)}</td>
+      <td>${qty(r.shares)}</td>
+      <td class="oid">${esc(r.order_id || "")}</td>
+    </tr>`)
+  );
+  $("fills").innerHTML = table(
+    ["Ticker", "Filled qty", "Avg fill px", "Fill cost", "Order id"],
+    fills.map(r => `<tr>
+      <td class="sym">${esc(r.ticker || "")}</td>
+      <td>${qty(r.filled_qty)}</td>
+      <td>${px(r.avg_fill_px)}</td>
+      <td>${money(r.fill_cost)}</td>
+      <td class="oid">${esc(r.order_id || "")}</td>
+    </tr>`)
+  );
+  const why = card.why || card.policy || "";
+  $("note").textContent = "Host " + host
+    + (why ? " · " + why : "")
+    + ". Sandbox cash is fill_observe.cash when the journal has it; the top-level cash field is only a fallback. Read-only — this page does not place or cancel orders.";
+}
+async function discover(){
+  const q = new URLSearchParams(location.search).get("date");
+  const typed = ($("dateIn").value || "").trim();
+  const start = /^\d{4}-\d{2}-\d{2}$/.test(typed) ? typed
+    : (/^\d{4}-\d{2}-\d{2}$/.test(q || "") ? q : etToday());
+  let err;
+  for (let i = 0; i < 21; i++) {
+    const d = addDays(start, -i);
+    try {
+      const doc = await fetchStatus(d);
+      return {doc, via: d + "_status.json"};
+    } catch (e) { err = e; }
+  }
+  throw err || new Error("no *_status.json on main");
+}
+function showError(e){
+  $("stamp").textContent = "Could not read paper_open status: " + e;
+  $("cards").innerHTML = "";
+  $("pos").innerHTML = `<div class="empty">No session journal loaded.</div>`;
+  $("open").innerHTML = `<div class="empty">No session journal loaded.</div>`;
+  $("fills").innerHTML = `<div class="empty">No session journal loaded.</div>`;
+  $("note").textContent = "";
+}
+async function loadPinned(date){
+  const doc = await fetchStatus(date);
+  $("dateIn").value = doc.date || date;
+  render(doc, date + "_status.json");
+}
+async function boot(forceLatest){
+  try {
+    if (!forceLatest && pinned) {
+      await loadPinned(pinned);
+      return;
+    }
+    const found = await discover();
+    pinned = "";
+    $("dateIn").value = found.doc.date || "";
+    render(found.doc, found.via);
+  } catch (e) {
+    showError(e);
+  }
+}
+$("reload").onclick = () => {
+  const typed = ($("dateIn").value || "").trim();
+  if (/^\d{4}-\d{2}-\d{2}$/.test(typed)) {
+    pinned = typed;
+    loadPinned(typed).catch(showError);
+  } else boot(true);
+};
+$("latest").onclick = () => {
+  pinned = "";
+  $("dateIn").value = "";
+  const url = new URL(location.href);
+  url.searchParams.delete("date");
+  history.replaceState(null, "", url.pathname + url.search);
+  boot(true);
+};
+$("dateIn").addEventListener("change", () => $("reload").onclick());
+const q0 = new URLSearchParams(location.search).get("date");
+if (q0 && /^\d{4}-\d{2}-\d{2}$/.test(q0)) pinned = q0;
+boot(false);
+setInterval(() => boot(false), 30000);
+</script></body></html>

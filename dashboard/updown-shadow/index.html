@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>updown_rel1_hv_v1 — paper shadow</title>
+<style>
+body{font:14px/1.4 system-ui,sans-serif;margin:0;background:#f6f7f9;color:#1d232b}
+header{background:#1d232b;color:#fff;padding:10px 16px}header h1{font-size:18px;margin:0}
+.warn{background:#fde2e2;border-bottom:1px solid #d9a3a3;padding:8px 16px;font-weight:600;color:#7a1414}
+main{padding:12px 16px;max-width:1200px;margin:auto}
+.card{background:#fff;border:1px solid #dde1e6;border-radius:6px;padding:10px 12px;margin-bottom:12px}
+.row{display:flex;gap:14px;flex-wrap:wrap;align-items:center}.kpi{min-width:120px}.kpi b{display:block;font-size:18px}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+th,td{padding:3px 6px;border-bottom:1px solid #eef0f3;text-align:right}th{background:#f0f2f5;position:sticky;top:0}
+td:first-child,th:first-child{text-align:left}.up{color:#0a7d32}.dn{color:#b3261e}small{color:#5b6573}
+.cols{display:flex;gap:12px;flex-wrap:wrap}.cols>div{flex:1;min-width:280px}.wrap{max-height:520px;overflow:auto}
+code{font-size:12px;word-break:break-all}#status{color:#8a1c1c}canvas{width:100%;height:180px}
+</style></head><body>
+<header><h1>updown_rel1_hv_v1 — frozen pre-open picks and running realized record</h1><small id="built" style="color:#cfd6df"></small></header>
+<div class="warn">PAPER ONLY — failed multiple-testing haircut (t 2.02 vs 3.37). Shadow record, no orders, no broker wiring.</div>
+<main>
+<div id="status"></div>
+<div class="card"><b>What this is</b>
+<ul style="margin:4px 0 0 18px;padding:0">
+<li>Every trading day, before 09:25 ET (21:25 HKT), a frozen LightGBM model ranks the top 1,000 US names by 20-day dollar volume (actual prior close &ge; $5). It uses only data knowable before the 09:30 open, with no same-day open.</li>
+<li>It keeps the half with the largest predicted 1-day move. It goes long the top 10% and short the bottom 10% of a 1-day <i>sector-relative</i> ranker within that half (about 50 / 50, equal weight).</li>
+<li>Fill: the 09:30 official open, with exit at the next session's 09:30 open (Yahoo split-adjusted). Rebalanced daily. Fees = bp/side &times; turnover.</li>
+<li>Pick files are committed and fingerprinted before 09:25 ET and never edited. Results are computed after the close into a separate ledger.</li>
+<li>Round-3 research: confirm-window t 2.31, but cumulative t 2.02 is below the 3.37 bar, so it stays paper-only. Rules and kill/promote criteria: <a href="https://github.com/SRoyaltyy/fullscan/tree/main/research/updown_rel1_hv_v1">research/updown_rel1_hv_v1</a>.</li>
+<li>Related: <a href="../updown/">dashboard/updown</a>, which carries the expected-move rank column (updown_expmove_v1).</li></ul></div>
+<div class="card"><b>Status</b> <span id="st"></span><div class="row" id="kpis" style="margin-top:6px"></div><div id="rules" style="margin-top:6px"></div></div>
+<div class="card"><b>Cumulative realized (net 10bp/side, beta-hedged net 10bp/side, RANDOM4 median net 10bp/side, IWM open-to-open)</b><canvas id="ch" height="180"></canvas><div class="wrap" style="max-height:300px"><table id="rt"><thead></thead><tbody></tbody></table></div></div>
+<div class="card"><div class="row"><b>Frozen picks</b><select id="day"></select><span id="dmeta"></span></div>
+<div class="cols" style="margin-top:6px"><div><b class="up">LONG</b><div class="wrap"><table id="lt"><thead><tr><th>Ticker</th><th>w</th><th>ranker score</th><th>move score</th></tr></thead><tbody></tbody></table></div></div>
+<div><b class="dn">SHORT</b><div class="wrap"><table id="stb"><thead><tr><th>Ticker</th><th>w</th><th>ranker score</th><th>move score</th></tr></thead><tbody></tbody></table></div></div></div>
+<small id="fp"></small></div>
+<div class="card" id="mcard" style="display:none"><b>Missed days</b> (not frozen before 09:25 ET; never back-filled; earn nothing)<div id="missed"></div></div>
+</main>
+<script>
+const $=s=>document.querySelector(s),pct=(x,d=2)=>x==null?'':(x*100).toFixed(d)+'%';
+fetch('data/shadow.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw r.status;return r.json()}).then(init).catch(e=>$('#status').textContent='Could not load data/shadow.json ('+e+')');
+function init(J){$('#built').textContent='start '+J.start+' · '+J.label;
+ const S=J.summary||{};$('#st').innerHTML='<b>'+(S.status||'collecting')+'</b>';
+ const k=(n,v,s)=>`<div class="kpi">${n}<b>${v}</b>${s?'<small>'+s+'</small>':''}</div>`;
+ const f=o=>o?pct(o.cum)+' <small>t '+(o.t_nw==null?'–':o.t_nw.toFixed(2))+'</small>':'–';
+ $('#kpis').innerHTML=k('locked days',S.days_locked||0)+k('realized days',S.days_realized||0)+k('missed',S.days_missed||0)+k('net 5bp/side',f(S.net5))+k('net 10bp/side',f(S.net10))+k('net 15bp/side',f(S.net15))+k('beta-hedged net 10bp',f(S.hedged_net10))+k('RANDOM4 median 10bp',f(S.rand_med_net10))+k('IWM (open→open)',f(S.iwm_oo1))+k('net 10bp ex best stock',S.net10_ex_best_cum==null?'–':pct(S.net10_ex_best_cum),S.best_stock?'best: '+S.best_stock:'');
+ if(S.rule)$('#rules').innerHTML='<small><b>Kill:</b> '+S.rule.kill+'<br><b>Promote:</b> '+S.rule.promote+'<br>'+S.rule.missed+'</small>';
+ const C=J.realized_cols,R=J.realized.map(a=>Object.fromEntries(C.map((c,i)=>[c,a[i]])));
+ const show=['date','exit_date','gross','turnover','net5','net10','net15','hedged_net10','iwm_oo1','rand_med_net10','rand_pctile_net10','missing_fills','jump_flags'];
+ $('#rt thead').innerHTML='<tr>'+show.map(c=>'<th>'+c+'</th>').join('')+'</tr>';
+ $('#rt tbody').innerHTML=R.slice().reverse().map(r=>'<tr>'+show.map(c=>{const v=r[c];if(typeof v=='number'&&c!='turnover'&&c!='rand_pctile_net10')return `<td class="${v>0?'up':v<0?'dn':''}">${pct(v)}</td>`;if(typeof v=='number')return '<td>'+v.toFixed(2)+'</td>';return '<td>'+(v||'')+'</td>';}).join('')+'</tr>').join('')||'<tr><td colspan=13>No realized days yet. A day is realized after the close of its exit session (next day\'s open).</td></tr>';
+ draw(R);
+ const sel=$('#day');J.days.slice().reverse().forEach(d=>{const o=document.createElement('option');o.value=d.date;o.textContent=d.date;sel.appendChild(o);});
+ if(!J.days.length){$('#dmeta').textContent='No frozen day yet (first live day 2026-10-07).';}
+ sel.onchange=()=>pick(J,sel.value);if(J.days.length)pick(J,J.days[J.days.length-1].date);
+ if(J.missed.length){$('#mcard').style.display='block';$('#missed').textContent=J.missed.map(m=>m.date).join(', ');}}
+function pick(J,d){const D=J.days.find(x=>x.date==d);if(!D)return;
+ $('#dmeta').innerHTML=`frozen ${D.frozen_at_et} (${D.frozen_at_hkt}) · L1000 ${D.n_L1000} · high-move half ${D.n_eligible} · ex-ante beta ${D.ex_ante_beta==null?'–':D.ex_ante_beta.toFixed(2)}`;
+ const tr=(a,w)=>a.map(x=>`<tr><td>${x[0]}</td><td>${(w*100).toFixed(2)}%</td><td>${x[1].toFixed(5)}</td><td>${x[2].toFixed(4)}</td></tr>`).join('');
+ $('#lt tbody').innerHTML=tr(D.long,1/D.long.length);$('#stb tbody').innerHTML=tr(D.short,-1/D.short.length);
+ $('#fp').innerHTML='Fingerprints (sha256, locked in LOCKS.jsonl):<br>'+Object.entries(D.files).map(([p,h])=>'<code>'+p+' '+h.slice(0,16)+'…</code>').join('<br>');}
+function draw(R){const c=$('#ch'),W=c.width=c.clientWidth*2,H=c.height=360,g=c.getContext('2d');g.clearRect(0,0,W,H);if(!R.length){g.fillStyle='#777';g.font='24px sans-serif';g.fillText('no realized days yet',10,40);return;}
+ const ser=[['net10','#1c3f8a'],['hedged_net10','#0a7d32'],['rand_med_net10','#999'],['iwm_oo1','#c77d00']].map(([k,col])=>{let v=1;return [col,R.map(r=>v*=1+(r[k]||0))];});
+ let lo=Math.min(...ser.flatMap(s=>s[1]),1),hi=Math.max(...ser.flatMap(s=>s[1]),1);if(hi-lo<1e-3){hi+=.005;lo-=.005;}const y=v=>H-10-(v-lo)/(hi-lo)*(H-20),x=i=>R.length<2?W/2:i/(R.length-1)*W;
+ g.strokeStyle='#ccc';g.beginPath();g.moveTo(0,y(1));g.lineTo(W,y(1));g.stroke();
+ ser.forEach(([col,v])=>{g.strokeStyle=col;g.lineWidth=3;g.beginPath();v.forEach((p,i)=>i?g.lineTo(x(i),y(p)):g.moveTo(x(i),y(p)));g.stroke();if(v.length==1){g.fillStyle=col;g.fillRect(x(0)-3,y(v[0])-3,6,6);}});}
+</script></body></html>
