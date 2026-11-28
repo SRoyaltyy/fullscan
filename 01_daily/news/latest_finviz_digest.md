@@ -1,112 +1,109 @@
 # Finviz Daily Digest — 2026-11-27
 
-_Generated 2026-11-27T05:06:43.310081-05:00 · export=data/exports/finviz_2026-11-27.csv · ticker digests=775 · high-signal=189_
+_Generated 2026-11-28T04:00:11.676235-05:00 · export=data/exports/finviz_2026-11-27.csv · ticker digests=333 · high-signal=48_
 
 ## Major indices (live quote page)
 
-- **S&P 500 (SPY)**: S&P 500, Nasdaq End Lower But Dow Rebounds As Traders Rotate Out Of AI  NVDA, SPCX, PANW  In Focus
-- **Nasdaq-100 (QQQ)**: S&P 500, Nasdaq End Lower But Dow Rebounds As Traders Rotate Out Of AI  NVDA, SPCX, PANW  In Focus
-- **Dow Jones (DIA)**: S&P 500, Nasdaq End Lower But Dow Rebounds As Traders Rotate Out Of AI  NVDA, SPCX, PANW  In Focus
+- **S&P 500 (SPY)**: S&P 500, Nasdaq End Best Week In Over A Year As AI Optimism Makes Comeback  VZ, ANT, ADBE, TSLA In Focus
+- **Nasdaq-100 (QQQ)**: S&P 500, Nasdaq End Best Week In Over A Year As AI Optimism Makes Comeback  VZ, ANT, ADBE, TSLA In Focus
+- **Dow Jones (DIA)**: S&P 500, Nasdaq End Best Week In Over A Year As AI Optimism Makes Comeback  VZ, ANT, ADBE, TSLA In Focus
 - **Russell 2000 (IWM)**: Is AI's Circular Money Machine In Peril?
 
 ## High-signal ticker digests (ranked)
 
-- **A** [Healthcare]: Agilent beats fiscal Q4 guidance, expands margins and forecasts FY27 revenue of $8.00B-$8.15B with 5%-7% core growth
-- **ADI** [Technology]: Analog Devices posts record Q4 as AI and industrial growth accelerates, and plans to more than double FY27 CapEx to $1.6B-$1.9B
-- **ADP** [Technology]: Wedbush initiated coverage of Automatic Data Processing with an Outperform rating.
-- **ADSK** [Technology]: Autodesk beats fiscal Q3 2027 estimates and raises FY27 outlook as AEC, MaintainX and Fusion outpace headwinds
-- **AMD** [Technology]: AMD falls with chipmakers as AI-return fears and tariff plans deepen selloff
-- **AMGN** [Healthcare]: Amgen settled U.S. patent litigation with BMS, clearing a path to launch its Opdivo biosimilar ABP 206 on October 1, 2028, subject to FDA approval.
 - **AMZN** [Consumer Cyclical]: Amazon falls with megacap tech after U.S. tariff proposals deepen AI selloff
 - **AVGO** [Technology]: Broadcom falls with chip peers as AI-spending doubts and tariff risks deepen
-- **BABA** [Consumer Cyclical]: Susquehanna cut Alibaba’s price target to $145 from $190, citing concerns that U.S. chip restrictions could slow cloud growth.
-- **BHP** [Basic Materials]: Deutsche Bank cut its BHP price target to 2,650p from 2,900p, keeping its rating at hold.
-- **BN** [Financial]: Brookfield’s property subsidiary cut the value of its Catalyst Brands investment by 50%, from $551 million to $276 million.
-- **BUD** [Consumer Defensive]: J.P. Morgan downgraded Anheuser-Busch InBev to Neutral from Overweight and cut its price target to €75 from €80, citing fair valuation and weaker Brazilian real forecasts.
-- **CEG** [Utilities]: Constellation completed the sale of approximately 4.4 GW of PJM generation assets to LS Power, satisfying divestiture requirements tied to its Calpine acquisition.
-- **DELL** [Technology]: Dell posts record AI-driven quarter, raises FY27 outlook to $202B revenue and $29.68 EPS
-- **EQNR** [Energy]: Equinor cuts 2026 production growth forecast to about 3% from 4%, citing the Bacalhau shutdown and disruptions at other offshore assets
-- **FCX** [Basic Materials]: Deutsche Bank cut its Freeport-McMoRan price target to $70 from $80 while maintaining a Buy rating.
-- **HOOD** [Financial]: Wedbush initiated coverage of Robinhood with an Outperform rating and an $80 price target.
-- **HPE** [Technology]: HPE guides FY27 Cloud & AI margins to about 14%, down from 18.4%, as Susquehanna cuts target to $55 from $62
-- **MA** [Financial]: Wedbush initiated coverage of Mastercard at Outperform with a $751 price target.
-- **MRVL** [Technology]: Marvell falls with chip peers as AI-return doubts and tariff proposals deepen selloff
-- **NKE** [Consumer Cyclical]: Nike rises after Dick's reports Foot Locker progress and raises its profit outlook
-- **NOC** [Industrials]: Mizuho initiated coverage of Northrop Grumman, naming it one of its favored defense contractors.
-- **NVDA** [Technology]: S&P may cut NVIDIA’s rating from AA to AA- within 90 days after placing it on negative CreditWatch
-- **PFE** [Healthcare]: Pfizer rises with drugmakers after Sanofi's $41 billion Insmed acquisition
-- **PH** [Industrials]: Parker Hannifin completed its acquisition of CIRCOR Aerospace, a business expected to add about $270 million in annual sales at an adjusted EBITDA margin above 40%.
-- **RIO** [Basic Materials]: Deutsche Bank cut its Rio Tinto price target to 6,900p from 7,600p in its 2027 mining-sector outlook.
-- **SNDK** [Technology]: Sandisk falls after TrendForce lowers NAND outlook on Chinese cloud-order cuts
-- **TFC** [Financial]: Baird upgrade to Outperform lifts Truist 3% pre-market on new CEO turnaround outlook
-- **TMO** [Healthcare]: Thermo Fisher Scientific announced FDA clearance for a first-of-its-kind test to help clinicians monitor multiple myeloma.
-- **TXN** [Technology]: Texas Instruments falls with analog-chip peers after Analog Devices issues below-consensus profit guidance
-- **V** [Financial]: Wedbush initiated coverage of Visa with an Outperform rating and a $487 price target.
-- **VRT** [Industrials]: Vertiv falls with AI peers as Evercore cuts its price target
-- **VRTX** [Healthcare]: Vertex says FDA extended povetacicept’s IgAN review deadline by up to three months, to February 28, 2027.
+- **DELL** [Technology]: UBS cut Dell’s price target to $365 from $500, citing concerns about AI spending durability and lowering its valuation multiple.
+- **MO** [Consumer Defensive]: Altria confirmed it is considering an all-cash offer for Imperial Brands and is discussing a separate potential acquisition of part of the business with another party.
+- **MRVL** [Technology]: Marvell shares rise after third-quarter fiscal 2027 results beat Wall Street expectations.
+- **VRTX** [Healthcare]: FDA delays Vertex’s povetacicept decision until February 2027
 - **WDC** [Technology]: Western Digital falls with storage peers after TrendForce cuts 2027 memory forecasts
 - **AMRZ** [Basic Materials]: Amrize rises with building-materials peers after U.S. new-home sales beat forecasts
-- **BBIO** [Healthcare]: BridgeBio receives traditional FDA approval for Welgemda for limb-girdle muscular dystrophy type 2I/R9
-- **BBY** [Consumer Cyclical]: Best Buy raises FY2027 outlook after beating Q3 estimates, citing computing and alternative-revenue strength
-- **BG** [Consumer Defensive]: Bunge falls with agribusiness peers as tariff reports revive trade-war risks
-- **BR** [Technology]: Wedbush initiated coverage of Broadridge Financial Solutions with a Neutral rating.
-- **BURL** [Consumer Cyclical]: Burlington beats Q3 EPS but cuts Q4 margin guidance on freight and weather risk
+- **ASTS** [Technology]: Berenberg downgraded AST SpaceMobile to Hold from Buy and cut its price target to $30 from $92, citing launch delays that pushed back the revenue ramp.
+- **CLS** [Technology]: Celestica falls with AI hardware peers as tariff threats deepen the tech rout
+- **HPQ** [Technology]: HP beats fourth-quarter estimates as commercial PC revenue grows 23%
+- **IOT** [Technology]: Samsara falls with software peers as AI and tariff fears hit technology stocks
+- **LITE** [Technology]: Lumentum tracks Marvell’s rebound under fixed 4.5-share merger terms
+- **LSCC** [Technology]: Lattice falls with chip peers as tariff proposals compound AI-spending concerns
+- **NTNX** [Technology]: Nutanix announces CEO succession alongside softer bookings despite an earnings beat
+- **QXO** [Industrials]: QXO rises with housing suppliers after new-home sales beat forecasts
+- **RIVN** [Consumer Cyclical]: Seaport Research initiated coverage of Rivian with a Buy rating and an $18 price target.
+- **UMC** [Technology]: UMC falls with Taiwan chipmakers as U.S. tariff fears intensify semiconductor rout
+- **CENT** [Consumer Defensive]: Central Garden & Pet extends earnings slide after weak fiscal 2027 outlook
+- **KT** [Communication Serv]: KT extends rebound after brokerages highlight valuation and 2027 earnings recovery
+- **MDA** [Industrials]: MDA Space completed its previously announced acquisition of Blue Canyon Technologies, which will operate as MDA Space USA.
+- **OGC** [Basic Materials]: OceanaGold said Ausgold shareholders approved its acquisition scheme with 99.40% of votes cast, subject to court approval.
+- **USAR** [Basic Materials]: Canaccord cuts USA Rare Earth’s price target 69% to $10 while maintaining a Buy rating.
+- **VERA** [Healthcare]: Vera rises after FDA delays decision on Vertex’s rival IgAN drug
+- **AFYA** [Consumer Defensive]: Afya shareholders approve YDUQS merger pending Brazilian antitrust clearance
+- **BGLC** [Basic Materials]: BioNexus authorizes a $2 million share repurchase program
+- **BHR** [Real Estate]: Braemar extends rally after Tuesday's 2027 dividend and $20 million buyback
+- **DSX** [Industrials]: Diana Shipping reports small loss from Genco deal costs and raises dividend fivefold
+- **ECX** [Consumer Cyclical]: ECARX authorized a share repurchase program of up to $20 million through November 30, 2027, funded from existing cash.
+- **FFR** [Technology]: FFR files preliminary Schedule 14C detailing robotics acquisition
+- **FINV** [Financial]: FinVolution says overseas growth cushions China funding shock and reiterates FY revenue guidance
+- **FLNC** [Industrials]: Fluence Energy extends rebound after record backlog and Houston ramp
+- **FSI** [Basic Materials]: Flexible Solutions International returns to growth and targets Q4 2026 profitability amid key food contract dispute
+- **FULC** [Healthcare]: Fulcrum Therapeutics declared a special cash dividend of up to an estimated $3.6095 per share, payable after the proposed merger closing.
+- **GASS** [Industrials]: StealthGas reports Q3 EPS of $0.65, including $12.4m Eco Wizard insurance gain
+- **GLXG** [Industrials]: No clear catalyst identified for Galaxy Payroll after this week's volume surge
+- **HMR** [Industrials]: No clear catalyst identified for Heidmar ahead of Monday earnings
+- **OMSE** [Energy]: OMS cuts FY27 revenue outlook as Saudi call-offs slow, margins and cash remain strong
+- **SIND** [Basic Materials]: Sinda extends its rally after Tuesday's $50 million share repurchase authorization
+- **SLSN** [Consumer Defensive]: No clear catalyst identified for Solesence after its post-earnings rally
 
 ## By sector (top signal)
 
 ### Technology (n=8)
-- ADI: Analog Devices posts record Q4 as AI and industrial growth accelerates, and plans to more than double FY27 CapEx to $1.6B-$1.9B
-- ADP: Wedbush initiated coverage of Automatic Data Processing with an Outperform rating.
-- ADSK: Autodesk beats fiscal Q3 2027 estimates and raises FY27 outlook as AEC, MaintainX and Fusion outpace headwinds
-- AMD: AMD falls with chipmakers as AI-return fears and tariff plans deepen selloff
 - AVGO: Broadcom falls with chip peers as AI-spending doubts and tariff risks deepen
+- DELL: UBS cut Dell’s price target to $365 from $500, citing concerns about AI spending durability and lowering its valuation multiple.
+- MRVL: Marvell shares rise after third-quarter fiscal 2027 results beat Wall Street expectations.
+- WDC: Western Digital falls with storage peers after TrendForce cuts 2027 memory forecasts
+- ASTS: Berenberg downgraded AST SpaceMobile to Hold from Buy and cut its price target to $30 from $92, citing launch delays that pushed back the revenue ramp.
 
-### Consumer Cyclical (n=8)
-- AMZN: Amazon falls with megacap tech after U.S. tariff proposals deepen AI selloff
-- BABA: Susquehanna cut Alibaba’s price target to $145 from $190, citing concerns that U.S. chip restrictions could slow cloud growth.
-- NKE: Nike rises after Dick's reports Foot Locker progress and raises its profit outlook
-- BBY: Best Buy raises FY2027 outlook after beating Q3 estimates, citing computing and alternative-revenue strength
-- BURL: Burlington beats Q3 EPS but cuts Q4 margin guidance on freight and weather risk
+### Industrials (n=8)
+- QXO: QXO rises with housing suppliers after new-home sales beat forecasts
+- MDA: MDA Space completed its previously announced acquisition of Blue Canyon Technologies, which will operate as MDA Space USA.
+- DSX: Diana Shipping reports small loss from Genco deal costs and raises dividend fivefold
+- FLNC: Fluence Energy extends rebound after record backlog and Houston ramp
+- GASS: StealthGas reports Q3 EPS of $0.65, including $12.4m Eco Wizard insurance gain
 
-### Healthcare (n=7)
-- A: Agilent beats fiscal Q4 guidance, expands margins and forecasts FY27 revenue of $8.00B-$8.15B with 5%-7% core growth
-- AMGN: Amgen settled U.S. patent litigation with BMS, clearing a path to launch its Opdivo biosimilar ABP 206 on October 1, 2028, subject to FDA approval.
-- PFE: Pfizer rises with drugmakers after Sanofi's $41 billion Insmed acquisition
-- TMO: Thermo Fisher Scientific announced FDA clearance for a first-of-its-kind test to help clinicians monitor multiple myeloma.
-- VRTX: Vertex says FDA extended povetacicept’s IgAN review deadline by up to three months, to February 28, 2027.
-
-### Financial (n=7)
-- BN: Brookfield’s property subsidiary cut the value of its Catalyst Brands investment by 50%, from $551 million to $276 million.
-- HOOD: Wedbush initiated coverage of Robinhood with an Outperform rating and an $80 price target.
-- MA: Wedbush initiated coverage of Mastercard at Outperform with a $751 price target.
-- TFC: Baird upgrade to Outperform lifts Truist 3% pre-market on new CEO turnaround outlook
-- V: Wedbush initiated coverage of Visa with an Outperform rating and a $487 price target.
-
-### Industrials (n=5)
-- NOC: Mizuho initiated coverage of Northrop Grumman, naming it one of its favored defense contractors.
-- PH: Parker Hannifin completed its acquisition of CIRCOR Aerospace, a business expected to add about $270 million in annual sales at an adjusted EBITDA margin above 40%.
-- VRT: Vertiv falls with AI peers as Evercore cuts its price target
-- EMBJ: USTR proposed a 10% tariff on imports of Brazilian-made Embraer commercial aircraft, subject to a January 25 public hearing.
-- HII: HII won a £142 million UK Ministry of Defence contract to supply REMUS 620 unmanned underwater vehicles, its largest international unmanned systems order.
-
-### Basic Materials (n=4)
-- BHP: Deutsche Bank cut its BHP price target to 2,650p from 2,900p, keeping its rating at hold.
-- FCX: Deutsche Bank cut its Freeport-McMoRan price target to $70 from $80 while maintaining a Buy rating.
-- RIO: Deutsche Bank cut its Rio Tinto price target to 6,900p from 7,600p in its 2027 mining-sector outlook.
+### Basic Materials (n=7)
 - AMRZ: Amrize rises with building-materials peers after U.S. new-home sales beat forecasts
+- OGC: OceanaGold said Ausgold shareholders approved its acquisition scheme with 99.40% of votes cast, subject to court approval.
+- USAR: Canaccord cuts USA Rare Earth’s price target 69% to $10 while maintaining a Buy rating.
+- BGLC: BioNexus authorizes a $2 million share repurchase program
+- FSI: Flexible Solutions International returns to growth and targets Q4 2026 profitability amid key food contract dispute
 
-### Consumer Defensive (n=4)
-- BUD: J.P. Morgan downgraded Anheuser-Busch InBev to Neutral from Overweight and cut its price target to €75 from €80, citing fair valuation and weaker Brazilian real forecasts.
-- BG: Bunge falls with agribusiness peers as tariff reports revive trade-war risks
-- DLTR: Dollar Tree beats fiscal Q3 2027 estimates with adjusted EPS of $1.16 and revenue of $5.1B, raises FY2026 comp-sales forecast to 3.5%–4%
-- KR: Kroger has begun notifying an unspecified number of corporate employees of layoffs under its previously announced plan to cut about 3,000 jobs over three years.
+### Consumer Defensive (n=5)
+- MO: Altria confirmed it is considering an all-cash offer for Imperial Brands and is discussing a separate potential acquisition of part of the business with another party.
+- CENT: Central Garden & Pet extends earnings slide after weak fiscal 2027 outlook
+- AFYA: Afya shareholders approve YDUQS merger pending Brazilian antitrust clearance
+- SLSN: No clear catalyst identified for Solesence after its post-earnings rally
+- YSG: Yatsen Q3 revenue misses guidance as skincare grows 22%, losses widen and Q4 guidance signals modest growth
 
-### Utilities (n=2)
-- CEG: Constellation completed the sale of approximately 4.4 GW of PJM generation assets to LS Power, satisfying divestiture requirements tied to its Calpine acquisition.
-- ES: S&P 500 futures fall on new tariff plans and renewed AI selling
+### Consumer Cyclical (n=4)
+- AMZN: Amazon falls with megacap tech after U.S. tariff proposals deepen AI selloff
+- RIVN: Seaport Research initiated coverage of Rivian with a Buy rating and an $18 price target.
+- ECX: ECARX authorized a share repurchase program of up to $20 million through November 30, 2027, funded from existing cash.
+- VIOT: Viomi announced it completed its all-cash acquisition of Brondell, which is now an indirect subsidiary.
 
-### Energy (n=1)
-- EQNR: Equinor cuts 2026 production growth forecast to about 3% from 4%, citing the Bacalhau shutdown and disruptions at other offshore assets
+### Healthcare (n=4)
+- VRTX: FDA delays Vertex’s povetacicept decision until February 2027
+- VERA: Vera rises after FDA delays decision on Vertex’s rival IgAN drug
+- FULC: Fulcrum Therapeutics declared a special cash dividend of up to an estimated $3.6095 per share, payable after the proposed merger closing.
+- TLSA: Tiziana reported no drug-related serious adverse events across 48.1 patient-years of intranasal foralumab exposure in its FDA safety report.
+
+### Financial (n=2)
+- FINV: FinVolution says overseas growth cushions China funding shock and reiterates FY revenue guidance
+- VESI: No clear catalyst identified for Vesicor's rebound after post-merger selloff
+
+### Energy (n=2)
+- OMSE: OMS cuts FY27 revenue outlook as Saudi call-offs slow, margins and cash remain strong
+- VIVK: Vivakor says Direct Midstream completed due diligence for pending acquisition
+
+### Communication Services (n=1)
+- KT: KT extends rebound after brokerages highlight valuation and 2027 earnings recovery
 
 ### Real Estate (n=1)
-- CSGP: CoStar extends rally after Friday’s U.S. hotel forecast upgrade
+- BHR: Braemar extends rally after Tuesday's 2027 dividend and $20 million buyback
