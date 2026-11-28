@@ -1,0 +1,116 @@
+{
+  "date": "2026-11-27",
+  "generated_at": "2026-11-27T22:22:46.603630-05:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": false,
+  "clock_use": "next_open",
+  "clock_legal_for": "2026-11-30",
+  "capture_slot": "close",
+  "clock_rule": "Live post-close answer-key (~16:05 ET). Always next_open for the NEXT session (2026-11-30) — never same_morning. Writes *_finviz_market_digest_close.* only. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest_close",
+  "represents": "Finviz homepage post-close answer-key. clock_use is always next_open; clock_legal_for is the next NYSE session. Lives at *_finviz_market_digest_close.*. Does not replace the same_morning warm-up file. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks closed higher in shortened Black Friday session as AI and semiconductor rebound drove indexes to strongest weekly gains since 2025",
+  "raw_text": "- S&P 500 ($SPX) rose 1.60% to 7,297.49, the Nasdaq Composite ($COMP) gained 2.31% to 24,129.50, the Dow Jones ($DJI) added 591.99 points (1.18%) to 50,774.94, and the Russell 2000 (IWM) advanced 1.71% to 2,750.30\n- The S&P 500 ($SPX) booked a 5.6% weekly advance, its strongest since April 2025, while the Dow logged its best week since 2022\n- Semiconductors led with the SOX index up 4.69% as Micron Technology (MU) rose 7.60%, Sandisk (SNDK) jumped 15.96%, Marvell Technology (MRVL) gained 7.34%, Coherent (COHR) climbed 14.07% after a director disclosed a $34.7 million open-market stock purchase, AMD (AMD) added 4.56%, and Intel (INTC) advanced 5.38%\n- Amazon.com (AMZN) gained 3.96% on early Black Friday sales data and AI initiatives, while Tesla (TSLA) rose 5.22%\n- Vertex Pharmaceuticals (VRTX) fell 5.24% after the FDA extended its review of IgA nephropathy drug povetacicept by three months\n- All 11 S&P 500 ($SPX) sectors advanced, led by technology with a roughly 2.8% gain\n- New home sales surged 14.2% in the latest report, supporting the broader equity advance\n- In after-hours trading, Direct Digital Holdings (DRCT) saw limited earnings-related moves while small-cap LAES (LAES) jumped over 20% and Nvidia (NVDA) and Intel (INTC) traded slightly lower without major index impact\n- US wholesale inventories, retail inventories, and the trade balance were released today at 8:30 AM ET, offering further macro signals",
+  "raw_summary_md": "- **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) rose **1.60%** to 7,297.49, the **Nasdaq Composite** ([$COMP](https://finviz.com/index/COMP?p=d)) gained 2.31% to 24,129.50, the **Dow Jones** ([$DJI](https://finviz.com/index/DJI?p=d)) added 591.99 points (1.18%) to 50,774.94, and the **Russell 2000** ([IWM](https://finviz.com/quote?t=IWM)) advanced 1.71% to 2,750.30\n- The **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) booked a **5.6%** weekly advance, its strongest since April 2025, while the Dow logged its best week since 2022\n- Semiconductors led with the **SOX index up 4.69%** as **Micron Technology** ([MU](https://finviz.com/quote?t=MU)) rose 7.60%, **Sandisk** ([SNDK](https://finviz.com/quote?t=SNDK)) jumped 15.96%, **Marvell Technology** ([MRVL](https://finviz.com/quote?t=MRVL)) gained 7.34%, **Coherent** ([COHR](https://finviz.com/quote?t=COHR)) climbed 14.07% after a director disclosed a $34.7 million open-market stock purchase, **AMD** ([AMD](https://finviz.com/quote?t=AMD)) added 4.56%, and **Intel** ([INTC](https://finviz.com/quote?t=INTC)) advanced 5.38%\n- **Amazon.com** ([AMZN](https://finviz.com/quote?t=AMZN)) gained 3.96% on **early Black Friday sales data** and AI initiatives, while **Tesla** ([TSLA](https://finviz.com/quote?t=TSLA)) rose 5.22%\n- **Vertex Pharmaceuticals** ([VRTX](https://finviz.com/quote?t=VRTX)) fell 5.24% after the **FDA extended its review** of IgA nephropathy drug povetacicept by **three months**\n- All 11 **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) sectors advanced, led by technology with a roughly **2.8% gain**\n- New home sales surged **14.2%** in the latest report, supporting the broader equity advance\n- In after-hours trading, Direct Digital Holdings (DRCT) saw limited earnings-related moves while small-cap **LAES** ([LAES](https://finviz.com/quote?t=LAES)) **jumped over 20%** and **Nvidia** ([NVDA](https://finviz.com/quote?t=NVDA)) and **Intel** ([INTC](https://finviz.com/quote?t=INTC)) traded slightly lower without major index impact\n- US wholesale inventories, retail inventories, and the trade balance were released today at **8:30 AM ET**, offering further macro signals",
+  "index_moves": [
+    {
+      "name": "S&P 500",
+      "code": "SPX",
+      "change_pct": 1.6,
+      "verb": "rose"
+    },
+    {
+      "name": "Nasdaq Composite",
+      "code": "COMP",
+      "change_pct": 2.31,
+      "verb": "gained"
+    },
+    {
+      "name": "Dow Jones",
+      "code": "DJI",
+      "change_pct": 1.18,
+      "verb": "added"
+    },
+    {
+      "name": "Russell 2000",
+      "code": "RUT",
+      "change_pct": 1.71,
+      "verb": "advanced"
+    }
+  ],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "MU",
+    "SNDK",
+    "MRVL",
+    "COHR",
+    "AMD",
+    "INTC",
+    "AMZN",
+    "TSLA",
+    "VRTX",
+    "LAES",
+    "NVDA",
+    "DRCT"
+  ],
+  "named_leaders": [
+    "MU",
+    "SNDK",
+    "MRVL",
+    "COHR",
+    "AMD",
+    "INTC",
+    "AMZN",
+    "TSLA",
+    "VRTX",
+    "LAES",
+    "NVDA",
+    "DRCT"
+  ],
+  "calendar": [
+    "Amazon.com (AMZN) gained 3.96% on early Black Friday sales data and AI initiatives, while Tesla (TSLA) rose 5.22%",
+    "US wholesale inventories, retail inventories, and the trade balance were released today at 8:30 AM ET, offering further macro signals"
+  ],
+  "prior_close": {
+    "spx": 1.6,
+    "nasdaq": 2.31,
+    "dow": 1.18
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": true,
+    "retail": false,
+    "fed": false,
+    "bullets": [
+      "New home sales surged 14.2% in the latest report, supporting the broader equity advance"
+    ],
+    "text": "New home sales surged 14.2% in the latest report, supporting the broader equity advance"
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 354952,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-11-27T20:37:16.17",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "good"
+}
