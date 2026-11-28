@@ -17059,3 +17059,5 @@
 {"date":"2026-11-26","kind":"day","name":"","record":"paper_equity","sha256":"f35f1e074d4aabd31cb843dd7ec37efe9fa1811905593c1dcfbd168a0a9cf4ca"}
 {"date":"2026-11-26","kind":"day","name":"","record":"paper_trades","sha256":"7b3e772c1c397c9ea659fef96a53a7c1a86ebdb0517d34703c2bf5dc68ef8cee"}
 {"date":"2026-11-26","kind":"day","name":"","record":"paper_skipped","sha256":"178ddd38f159ee9ec44928b6ea141998d913edcc7c3821574d95bcbf330e245c"}
+{"date":"2026-11-27","kind":"day","name":"union_hot_n4_h1_preopen","record":"factor_mine","sha256":"8a950f99b64224554cebdee0a74271c6ea4371940ce2532a7eb1e0e36291aeca"}
+{"date":"2026-11-27","kind":"day","name":"union_hot_n4_holdup_preopen","record":"factor_mine","sha256":"03943608a586f0a7a268e97533a4f30443340737692b1cc257f41df1c95b4b7e"}
