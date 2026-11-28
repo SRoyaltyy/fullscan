@@ -16,17 +16,17 @@ Rubric hit rates count a call only when q5=impulse, direction in {up, down}, tra
 
 | step | n |
 | --- | ---: |
-| Elite raw titles | 741339 |
-| unique (ticker + title, earliest News Time) | 78818 |
-| non-weather | 34332 |
-| reaction-in-title (killed by the router) | 1393 |
-| impulse + up/down + listed | 17998 |
-| graded articles 0-1d | 2065 |
-| graded articles 2d | 2028 |
-| graded articles 3d | 2001 |
-| graded articles 4d | 1964 |
-| graded articles 5d | 1938 |
-| graded articles 1-4w | 9600 |
+| Elite raw titles | 750882 |
+| unique (ticker + title, earliest News Time) | 79184 |
+| non-weather | 34379 |
+| reaction-in-title (killed by the router) | 1400 |
+| impulse + up/down + listed | 18018 |
+| graded articles 0-1d | 2076 |
+| graded articles 2d | 2049 |
+| graded articles 3d | 2029 |
+| graded articles 4d | 2002 |
+| graded articles 5d | 1963 |
+| graded articles 1-4w | 10047 |
 
 ## Hit rates
 
@@ -34,12 +34,12 @@ Rubric column skips long-horizon classes on 0-1d and 2-5d. Broad column keeps th
 
 | horizon | rubric hits | rubric n | rubric rate | broad hits | broad n | broad rate |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| 0-1d | 1855 | 3791 | 1855/3791 = 48.9% | 9588 | 19624 | 9588/19624 = 48.9% |
-| 2d | 1776 | 3722 | 1776/3722 = 47.7% | 9692 | 19475 | 9692/19475 = 49.8% |
-| 3d | 1702 | 3671 | 1702/3671 = 46.4% | 9630 | 19398 | 9630/19398 = 49.6% |
-| 4d | 1674 | 3581 | 1674/3581 = 46.7% | 9562 | 19256 | 9562/19256 = 49.7% |
-| 5d | 1675 | 3524 | 1675/3524 = 47.5% | 9449 | 19130 | 9449/19130 = 49.4% |
-| 1-4w | 6839 | 14685 | 6839/14685 = 46.6% | — | — | — |
+| 0-1d | 1864 | 3804 | 1864/3804 = 49.0% | 9619 | 19677 | 9619/19677 = 48.9% |
+| 2d | 1788 | 3757 | 1788/3757 = 47.6% | 9721 | 19541 | 9721/19541 = 49.7% |
+| 3d | 1710 | 3723 | 1710/3723 = 45.9% | 9646 | 19474 | 9646/19474 = 49.5% |
+| 4d | 1726 | 3672 | 1726/3672 = 47.0% | 9648 | 19397 | 9648/19397 = 49.7% |
+| 5d | 1682 | 3578 | 1682/3578 = 47.0% | 9484 | 19247 | 9484/19247 = 49.3% |
+| 1-4w | 7064 | 15216 | 7064/15216 = 46.4% | — | — | — |
 
 ## Convergence / clash ledger
 
@@ -47,11 +47,11 @@ One entity per session. n_bull / n_bear count impulse up/down stories after titl
 
 Direct = the article names the ticker. Indirect = substitute / stays_out / arms_dealer / peer / sector basket from the family template. Theme groups are router factor/macro keys only. They are not a second trade. The Elite Sector column is not a key.
 
-Router theme keys (not traded): **17**. Name groups: **13296**.
+Router theme keys (not traded): **17**. Name groups: **13317**.
 
 | bucket | groups |
 | --- | ---: |
-| singleton | 12065 |
+| singleton | 12086 |
 | converge | 1043 (up 700, down 343) |
 | clash | 188 |
 
@@ -59,9 +59,9 @@ Hit rates grade the entity once per session. Converge uses that side. Clash uses
 
 | bucket | 0-1d | 2d | 3d | 4d | 5d |
 | --- | --- | --- | --- | --- | --- |
-| singleton | 933/1964 = 47.5% | 941/1925 = 48.9% | 913/1894 = 48.2% | 909/1860 = 48.9% | 910/1833 = 49.6% |
-| converge | 105/205 = 51.2% | 87/204 = 42.6% | 92/204 = 45.1% | 86/198 = 43.4% | 89/197 = 45.2% |
-| clash | 6/17 = 35.3% | 8/17 = 47.1% | 11/17 = 64.7% | 6/17 = 35.3% | 6/16 = 37.5% |
+| singleton | 936/1969 = 47.5% | 952/1949 = 48.8% | 920/1926 = 47.8% | 926/1895 = 48.9% | 917/1859 = 49.3% |
+| converge | 105/205 = 51.2% | 87/204 = 42.6% | 92/204 = 45.1% | 90/204 = 44.1% | 89/198 = 44.9% |
+| clash | 6/17 = 35.3% | 8/17 = 47.1% | 11/17 = 64.7% | 6/17 = 35.3% | 6/17 = 35.3% |
 
 ### Top converge names
 
@@ -99,8 +99,8 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 
 ### 0-1d
 
-- ≥5% and <10%: **1048**
-- ≥10%: **577**
+- ≥5% and <10%: **1049**
+- ≥10%: **579**
 
 | threshold | ticker | date | ret | class | title |
 | --- | --- | --- | ---: | --- | --- |
@@ -129,12 +129,12 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | MDXH | 2026-08-14 | +32.89% | print_vs_priced | MDxHealth S.A. Q2 2026 Earnings Call Summary |
 | ≥10% | ALGS | 2026-08-06 | +31.82% | print_vs_priced | Aligos Therapeutics Reports Recent Business Progress and Second Quarter 2026 Financial Results |
 | ≥10% | BDSX | 2026-11-06 | -31.32% | print_vs_priced | Biodesix Announces Third Quarter 2026 Results and Highlights |
-| … | | | | | 1600 more in the JSON |
+| … | | | | | 1603 more in the JSON |
 
 ### 2d
 
-- ≥5% and <10%: **1893**
-- ≥10%: **1231**
+- ≥5% and <10%: **1899**
+- ≥10%: **1237**
 
 | threshold | ticker | date | ret | class | title |
 | --- | --- | --- | ---: | --- | --- |
@@ -163,17 +163,18 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | ABCL | 2026-08-06 | +61.31% | guidance | AbCellera Biologics Inc (ABCL) (Q2 2026) Earnings Call Highlights: Strong Pipeline Progress and ... |
 | ≥10% | ABCL | 2026-08-06 | +61.31% | guidance | AbCellera Biologics Inc (ABCL) (Q2 2026) Earnings Call Highlights: Strong Pipeline Progress and ... |
 | ≥10% | PMI | 2026-08-20 | +60.31% | print_vs_priced | Picard Medical Reports Second Quarter 2026 Financial Results |
-| … | | | | | 3099 more in the JSON |
+| … | | | | | 3111 more in the JSON |
 
 ### 3d
 
-- ≥5% and <10%: **2043**
-- ≥10%: **1478**
+- ≥5% and <10%: **2049**
+- ≥10%: **1482**
 
 | threshold | ticker | date | ret | class | title |
 | --- | --- | --- | ---: | --- | --- |
 | ≥10% | CYCU | 2026-08-17 | +667.60% | capital_return | Cycurion Board Authorizes $500,000 Share Repurchase Program, Citing Meaningful Undervaluation |
 | ≥10% | PMI | 2026-08-20 | +198.44% | print_vs_priced | Picard Medical Reports Second Quarter 2026 Financial Results |
+| ≥10% | BNAI | 2026-11-23 | +168.77% | print_vs_priced | Brand Engagement Network Reports Third Quarter 2026 Results |
 | ≥10% | OLB | 2026-10-07 | +143.74% | capital_return | The OLB Group Launches Share Buyback; Suspends ATM Program |
 | ≥10% | MRNA | 2026-08-18 | +130.22% | gate | Behind the Ticker: How VFLO Beats Growth at Its Own Game |
 | ≥10% | MRNA | 2026-08-18 | +130.22% | gate | Behind the Ticker: How VFLO Beats Growth at Its Own Game |
@@ -196,13 +197,12 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | ABCL | 2026-08-06 | +68.57% | guidance | AbCellera Biologics Inc (ABCL) (Q2 2026) Earnings Call Highlights: Strong Pipeline Progress and ... |
 | ≥10% | ABCL | 2026-08-06 | +68.57% | guidance | AbCellera Biologics Inc (ABCL) (Q2 2026) Earnings Call Highlights: Strong Pipeline Progress and ... |
 | ≥10% | ABCL | 2026-08-06 | +68.57% | guidance | AbCellera Biologics Inc (ABCL) (Q2 2026) Earnings Call Highlights: Strong Pipeline Progress and ... |
-| ≥10% | CUE | 2026-11-17 | -68.13% | print_vs_priced | Cue Biopharma Reports Third Quarter 2026 Financial Results and Recent Business Highlights |
-| … | | | | | 3496 more in the JSON |
+| … | | | | | 3506 more in the JSON |
 
 ### 4d
 
-- ≥5% and <10%: **2142**
-- ≥10%: **1708**
+- ≥5% and <10%: **2168**
+- ≥10%: **1722**
 
 | threshold | ticker | date | ret | class | title |
 | --- | --- | --- | ---: | --- | --- |
@@ -231,12 +231,12 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | ABCL | 2026-08-06 | +78.84% | guidance | AbCellera Biologics Inc (ABCL) (Q2 2026) Earnings Call Highlights: Strong Pipeline Progress and ... |
 | ≥10% | SECZ | 2026-09-18 | +77.36% | market_structure | Robinhood Rises as the SEC Clears Tokenized Stocks |
 | ≥10% | SECZ | 2026-09-18 | +77.36% | market_structure | Securitize Surges After SEC Clears Path for Tokenized Stock Trading |
-| … | | | | | 3825 more in the JSON |
+| … | | | | | 3865 more in the JSON |
 
 ### 5d
 
-- ≥5% and <10%: **2251**
-- ≥10%: **1875**
+- ≥5% and <10%: **2261**
+- ≥10%: **1881**
 
 | threshold | ticker | date | ret | class | title |
 | --- | --- | --- | ---: | --- | --- |
@@ -257,6 +257,7 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | ABCL | 2026-08-06 | +89.46% | guidance | AbCellera Biologics Inc (ABCL) (Q2 2026) Earnings Call Highlights: Strong Pipeline Progress and ... |
 | ≥10% | ABCL | 2026-08-06 | +89.46% | guidance | AbCellera Biologics Inc (ABCL) (Q2 2026) Earnings Call Highlights: Strong Pipeline Progress and ... |
 | ≥10% | ABCL | 2026-08-06 | +89.46% | guidance | AbCellera Biologics Inc (ABCL) (Q2 2026) Earnings Call Highlights: Strong Pipeline Progress and ... |
+| ≥10% | FCHL | 2026-11-19 | -87.18% | dilution | Fitness Champs Holdings Limited Announces Pricing of $5 Million Public Offering |
 | ≥10% | PMI | 2026-08-24 | +86.75% | print_vs_priced | Picard Medical Shares Soar After Quarterly Revenue Beats Forecasts |
 | ≥10% | NUWE | 2026-10-27 | +85.27% | gate | Nuwellis Announces Acceptance of Multicenter Pediatric Aquadex Study in Pediatric Nephrology |
 | ≥10% | GCTK | 2026-09-02 | +85.10% | capacity | Lokahi Therapeutics Expands ai² Futures Lab Asset Origination Network Through Collaboration with San Diego Sta |
@@ -264,8 +265,7 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | ZJYL | 2026-11-03 | +80.69% | peer_spill | Jin Medical Supports the 12th Jiangsu Provincial Games for Persons with Disabilities with Professional Wheelch |
 | ≥10% | PARA | 2026-11-04 | -77.50% | dilution | Parabolic Technologies, Inc. Announces Pricing of $13.5 Million Underwritten Public Offering |
 | ≥10% | BETR | 2026-10-12 | +72.89% | capital_return | Grant Cardone Says He Never Tells Fannie Mae About The Bitcoin In His Real Estate Deals: Its Just Too Much |
-| ≥10% | SECZ | 2026-09-18 | +71.24% | market_structure | Robinhood Rises as the SEC Clears Tokenized Stocks |
-| … | | | | | 4101 more in the JSON |
+| … | | | | | 4117 more in the JSON |
 
 ## AMRX
 
@@ -285,7 +285,7 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | 4d | +4.27% agree=True |
 | 5d | +8.12% agree=True |
 | 1-4w | +2.11% agree=True |
-| note | window open (1-6m not elapsed; through 2026-11-25) |
+| note | window open (1-6m not elapsed; through 2026-11-27) |
 
 Friday 2026-09-18 16:01 is after the cash close. Entry is Monday 2026-09-21 open→close for 0-1d, never Friday cash. Published at/after 09:30 ET (09:30+30m included) waits for the next RTH.
 
@@ -306,13 +306,13 @@ Elite is in the book. `unused_readonly` applies only when no snapshot file is on
 
 | source | raw titles | unique |
 | --- | ---: | ---: |
-| theme_radar_elite | 741339 | 78818 |
+| theme_radar_elite | 750882 | 79184 |
 
-theme_radar_elite unique n = **78818**.
+theme_radar_elite unique n = **79184**.
 
 ## Hopper watermark (lane::model::source)
 
-- `deterministic::news_impact_v2::theme_radar_elite`: 78818
+- `deterministic::news_impact_v2::theme_radar_elite`: 79184
 
 ## FOMC / macro collapse
 
