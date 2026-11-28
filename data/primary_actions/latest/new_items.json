@@ -1,414 +1,176 @@
 [
   {
-    "title": "Company Names Tribunal decision: Amazon Curier Ltd",
-    "url": "https://www.gov.uk/government/publications/company-names-tribunal-decision-amazon-curier-ltd",
-    "native_id": "/government/publications/company-names-tribunal-decision-amazon-curier-ltd",
-    "published_at": "2026-11-27T09:58:45+00:00",
-    "published_raw": "2026-11-27T09:58:45Z",
-    "document_type": "decision",
-    "issuer": "Company Names Tribunal",
-    "issuer_ids": [
-      "uk-gov:company-names-tribunal"
-    ],
-    "summary": "Decision for applicant Amazon Technologies, Inc. registration number 16537305 applicant successful.",
+    "title": "H.R. 11126 (IH) - Families Fly Together Act of 2026",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11126ih",
+    "native_id": "BILLS-119hr11126ih",
+    "published_at": "2026-11-28T04:15:00+00:00",
+    "published_raw": "Sat, 28 Nov 2026 04:15:00 +0000",
+    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
     "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
+      "document_type": "bill",
+      "document_stage": "legislative_document_published",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Company Names Tribunal",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
+      "issuer": "Congressional Bills",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
     },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 12959,
-    "first_seen": "2026-11-27T21:58:58.067934+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
+    "primary_source_id": "us-govinfo-bills",
+    "n": 13009,
+    "first_seen": "2026-11-28T08:55:55.608112+00:00",
+    "last_seen": "2026-11-28T08:55:55.608112+00:00",
     "source_ids": [
-      "uk-govuk-decision"
+      "us-govinfo-bills"
     ]
   },
   {
-    "title": "IFRS 18 Exposure Draft",
-    "url": "https://www.gov.uk/government/consultations/ifrs-18-presentation-and-disclosure-in-financial-statements-exposure-draft",
-    "native_id": "/government/consultations/ifrs-18-presentation-and-disclosure-in-financial-statements-exposure-draft",
-    "published_at": "2026-11-27T16:15:05+00:00",
-    "published_raw": "2026-11-27T16:15:05Z",
-    "document_type": "consultation_outcome",
-    "issuer": "HM Treasury",
-    "issuer_ids": [
-      "uk-gov:hm-treasury"
-    ],
-    "summary": "Public consultation on HM Treasury proposals for the application of IFRS 18 Presentation and Disclosure in Financial Statements across Central Government",
+    "title": "H.R. 11124 (IH) - Providing Relief, Opportunity, and Temporary Extensions for Countries in Turmoil Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11124ih",
+    "native_id": "BILLS-119hr11124ih",
+    "published_at": "2026-11-28T04:15:00+00:00",
+    "published_raw": "Sat, 28 Nov 2026 04:15:00 +0000",
+    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
     "source_metadata": {
-      "document_type": "consultation_outcome",
-      "document_stage": "consultation_response_published",
+      "document_type": "bill",
+      "document_stage": "legislative_document_published",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "HM Treasury",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
+      "issuer": "Congressional Bills",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
     },
-    "primary_source_id": "uk-govuk-consultation_outcome",
-    "n": 12960,
-    "first_seen": "2026-11-27T21:58:58.067934+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
+    "primary_source_id": "us-govinfo-bills",
+    "n": 13010,
+    "first_seen": "2026-11-28T08:55:55.608112+00:00",
+    "last_seen": "2026-11-28T08:55:55.608112+00:00",
     "source_ids": [
-      "uk-govuk-consultation_outcome"
+      "us-govinfo-bills"
     ]
   },
   {
-    "title": "Product Recall: Next Baby Sleep Bags (2611-0216)",
-    "url": "https://www.gov.uk/product-safety-alerts-reports-recalls/product-recall-next-baby-sleep-bags-2611-0216",
-    "native_id": "/product-safety-alerts-reports-recalls/product-recall-next-baby-sleep-bags-2611-0216",
-    "published_at": "2026-11-27T16:56:51+00:00",
-    "published_raw": "2026-11-27T16:56:51Z",
-    "document_type": "product_safety_alert_report_recall",
-    "issuer": "Office for Product Safety and Standards",
-    "issuer_ids": [
-      "uk-gov:office-for-product-safety-and-standards"
-    ],
-    "summary": "Product Recall for Next Baby Sleep Bags presenting a risk of suffocation.",
+    "title": "H.R. 11165 (IH) - To amend the Egg Products Inspection Act to protect the sale by small farms and use of ungraded shell eggs that are clean, sound, and clearly labeled, and for other purposes.",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11165ih",
+    "native_id": "BILLS-119hr11165ih",
+    "published_at": "2026-11-28T04:15:00+00:00",
+    "published_raw": "Sat, 28 Nov 2026 04:15:00 +0000",
+    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
     "source_metadata": {
-      "document_type": "product_safety_alert_report_recall",
-      "document_stage": "requires_semantic_review",
+      "document_type": "bill",
+      "document_stage": "legislative_document_published",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Office for Product Safety and Standards",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
+      "issuer": "Congressional Bills",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
     },
-    "primary_source_id": "uk-govuk-product_safety_alert_report_recall",
-    "n": 12961,
-    "first_seen": "2026-11-27T21:58:58.067934+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
+    "primary_source_id": "us-govinfo-bills",
+    "n": 13011,
+    "first_seen": "2026-11-28T08:55:55.608112+00:00",
+    "last_seen": "2026-11-28T08:55:55.608112+00:00",
     "source_ids": [
-      "uk-govuk-product_safety_alert_report_recall"
+      "us-govinfo-bills"
     ]
   },
   {
-    "title": "Product Safety Report: Electric Blender (2611-0126)",
-    "url": "https://www.gov.uk/product-safety-alerts-reports-recalls/product-safety-report-electric-blender-2611-0126",
-    "native_id": "/product-safety-alerts-reports-recalls/product-safety-report-electric-blender-2611-0126",
-    "published_at": "2026-11-27T12:46:09+00:00",
-    "published_raw": "2026-11-27T12:46:09Z",
-    "document_type": "product_safety_alert_report_recall",
-    "issuer": "Office for Product Safety and Standards",
-    "issuer_ids": [
-      "uk-gov:office-for-product-safety-and-standards"
-    ],
-    "summary": "Product Safety Report for Electric Blender presenting a serious risk of fire.",
+    "title": "H.R. 11127 (IH) - Cyber Resilience for Critical Infrastructure Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11127ih",
+    "native_id": "BILLS-119hr11127ih",
+    "published_at": "2026-11-28T04:15:00+00:00",
+    "published_raw": "Sat, 28 Nov 2026 04:15:00 +0000",
+    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
     "source_metadata": {
-      "document_type": "product_safety_alert_report_recall",
-      "document_stage": "requires_semantic_review",
+      "document_type": "bill",
+      "document_stage": "legislative_document_published",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Office for Product Safety and Standards",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
+      "issuer": "Congressional Bills",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
     },
-    "primary_source_id": "uk-govuk-product_safety_alert_report_recall",
-    "n": 12962,
-    "first_seen": "2026-11-27T21:58:58.067934+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
+    "primary_source_id": "us-govinfo-bills",
+    "n": 13012,
+    "first_seen": "2026-11-28T08:55:55.608112+00:00",
+    "last_seen": "2026-11-28T08:55:55.608112+00:00",
     "source_ids": [
-      "uk-govuk-product_safety_alert_report_recall"
+      "us-govinfo-bills"
     ]
   },
   {
-    "title": "Product Safety Report: Qiao Jing Ling Mini-Flight Indoor Micro Air Vehicle sold via Amazon (2611-0161)",
-    "url": "https://www.gov.uk/product-safety-alerts-reports-recalls/product-safety-report-qiao-jing-ling-mini-flight-indoor-micro-air-vehicle-sold-via-amazon-2611-0161",
-    "native_id": "/product-safety-alerts-reports-recalls/product-safety-report-qiao-jing-ling-mini-flight-indoor-micro-air-vehicle-sold-via-amazon-2611-0161",
-    "published_at": "2026-11-27T12:43:21+00:00",
-    "published_raw": "2026-11-27T12:43:21Z",
-    "document_type": "product_safety_alert_report_recall",
-    "issuer": "Office for Product Safety and Standards",
-    "issuer_ids": [
-      "uk-gov:office-for-product-safety-and-standards"
-    ],
-    "summary": "Product Safety Report for Qiao Jing Ling Mini-Flight Indoor Micro Air Vehicle presenting a serious chemical risk.",
+    "title": "H.R. 11122 (IH) - To direct the Secretary of Energy to develop and maintain a website containing information regarding data centers and LEED certifications, and for other purposes.",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11122ih",
+    "native_id": "BILLS-119hr11122ih",
+    "published_at": "2026-11-28T04:15:00+00:00",
+    "published_raw": "Sat, 28 Nov 2026 04:15:00 +0000",
+    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
     "source_metadata": {
-      "document_type": "product_safety_alert_report_recall",
-      "document_stage": "requires_semantic_review",
+      "document_type": "bill",
+      "document_stage": "legislative_document_published",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Office for Product Safety and Standards",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
+      "issuer": "Congressional Bills",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
     },
-    "primary_source_id": "uk-govuk-product_safety_alert_report_recall",
-    "n": 12963,
-    "first_seen": "2026-11-27T21:58:58.067934+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
+    "primary_source_id": "us-govinfo-bills",
+    "n": 13013,
+    "first_seen": "2026-11-28T08:55:55.608112+00:00",
+    "last_seen": "2026-11-28T08:55:55.608112+00:00",
     "source_ids": [
-      "uk-govuk-product_safety_alert_report_recall"
+      "us-govinfo-bills"
     ]
   },
   {
-    "title": "Product Safety Report: Rattle Box Safe Teethers sold via Amazon (2611-0155)",
-    "url": "https://www.gov.uk/product-safety-alerts-reports-recalls/product-safety-report-rattle-box-safe-teethers-sold-via-amazon-2611-0155",
-    "native_id": "/product-safety-alerts-reports-recalls/product-safety-report-rattle-box-safe-teethers-sold-via-amazon-2611-0155",
-    "published_at": "2026-11-27T12:39:46+00:00",
-    "published_raw": "2026-11-27T12:39:46Z",
-    "document_type": "product_safety_alert_report_recall",
-    "issuer": "Office for Product Safety and Standards",
-    "issuer_ids": [
-      "uk-gov:office-for-product-safety-and-standards"
-    ],
-    "summary": "Product Safety Report for Rattle Box Safe Teethers presenting a risk of choking.",
+    "title": "H.R. 11125 (IH) - Transboundary Groundwater Research and Mapping Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11125ih",
+    "native_id": "BILLS-119hr11125ih",
+    "published_at": "2026-11-28T04:15:00+00:00",
+    "published_raw": "Sat, 28 Nov 2026 04:15:00 +0000",
+    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
     "source_metadata": {
-      "document_type": "product_safety_alert_report_recall",
-      "document_stage": "requires_semantic_review",
+      "document_type": "bill",
+      "document_stage": "legislative_document_published",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Office for Product Safety and Standards",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
+      "issuer": "Congressional Bills",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
     },
-    "primary_source_id": "uk-govuk-product_safety_alert_report_recall",
-    "n": 12964,
-    "first_seen": "2026-11-27T21:58:58.067934+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
+    "primary_source_id": "us-govinfo-bills",
+    "n": 13014,
+    "first_seen": "2026-11-28T08:55:55.608112+00:00",
+    "last_seen": "2026-11-28T08:55:55.608112+00:00",
     "source_ids": [
-      "uk-govuk-product_safety_alert_report_recall"
+      "us-govinfo-bills"
     ]
   },
   {
-    "title": "Product Safety Report: Feytory Angle Grinder (2611-0044)",
-    "url": "https://www.gov.uk/product-safety-alerts-reports-recalls/product-safety-report-feytory-angle-grinder-2611-0044",
-    "native_id": "/product-safety-alerts-reports-recalls/product-safety-report-feytory-angle-grinder-2611-0044",
-    "published_at": "2026-11-27T12:36:53+00:00",
-    "published_raw": "2026-11-27T12:36:53Z",
-    "document_type": "product_safety_alert_report_recall",
-    "issuer": "Office for Product Safety and Standards",
-    "issuer_ids": [
-      "uk-gov:office-for-product-safety-and-standards"
-    ],
-    "summary": "Product Safety Report for Feytory Angle Grinder presenting a high risk of fire.",
+    "title": "H.R. 11123 (IH) - Enhancing Oversight to End Discrimination in Policing Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11123ih",
+    "native_id": "BILLS-119hr11123ih",
+    "published_at": "2026-11-28T04:15:00+00:00",
+    "published_raw": "Sat, 28 Nov 2026 04:15:00 +0000",
+    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
     "source_metadata": {
-      "document_type": "product_safety_alert_report_recall",
-      "document_stage": "requires_semantic_review",
+      "document_type": "bill",
+      "document_stage": "legislative_document_published",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Office for Product Safety and Standards",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
+      "issuer": "Congressional Bills",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
     },
-    "primary_source_id": "uk-govuk-product_safety_alert_report_recall",
-    "n": 12965,
-    "first_seen": "2026-11-27T21:58:58.067934+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
+    "primary_source_id": "us-govinfo-bills",
+    "n": 13015,
+    "first_seen": "2026-11-28T08:55:55.608112+00:00",
+    "last_seen": "2026-11-28T08:55:55.608112+00:00",
     "source_ids": [
-      "uk-govuk-product_safety_alert_report_recall"
+      "us-govinfo-bills"
     ]
   },
   {
-    "title": "Product Safety Report: WHSCwp Light String Garland (2611-0048)",
-    "url": "https://www.gov.uk/product-safety-alerts-reports-recalls/product-safety-report-whscwp-light-string-garland-2611-0048",
-    "native_id": "/product-safety-alerts-reports-recalls/product-safety-report-whscwp-light-string-garland-2611-0048",
-    "published_at": "2026-11-27T12:35:32+00:00",
-    "published_raw": "2026-11-27T12:35:32Z",
-    "document_type": "product_safety_alert_report_recall",
-    "issuer": "Office for Product Safety and Standards",
-    "issuer_ids": [
-      "uk-gov:office-for-product-safety-and-standards"
-    ],
-    "summary": "Product Safety Report for WHSCwp Light String Garland presenting a serious chemical and burns risk.",
-    "source_metadata": {
-      "document_type": "product_safety_alert_report_recall",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Office for Product Safety and Standards",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-product_safety_alert_report_recall",
-    "n": 12966,
-    "first_seen": "2026-11-27T21:58:58.067934+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
-    "source_ids": [
-      "uk-govuk-product_safety_alert_report_recall"
-    ]
-  },
-  {
-    "title": "Product Safety Report: Evercross Children’s Electric Motorcycle (2610-0120)",
-    "url": "https://www.gov.uk/product-safety-alerts-reports-recalls/product-safety-report-evercross-childrens-electric-motorcycle-2610-0120",
-    "native_id": "/product-safety-alerts-reports-recalls/product-safety-report-evercross-childrens-electric-motorcycle-2610-0120",
-    "published_at": "2026-11-27T12:33:42+00:00",
-    "published_raw": "2026-11-27T12:33:42Z",
-    "document_type": "product_safety_alert_report_recall",
-    "issuer": "Office for Product Safety and Standards",
-    "issuer_ids": [
-      "uk-gov:office-for-product-safety-and-standards"
-    ],
-    "summary": "Product Safety Report for Evercross Children’s Electric Motorcycle presenting a high risk of electric shock and fire.",
-    "source_metadata": {
-      "document_type": "product_safety_alert_report_recall",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Office for Product Safety and Standards",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-product_safety_alert_report_recall",
-    "n": 12967,
-    "first_seen": "2026-11-27T21:58:58.067934+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
-    "source_ids": [
-      "uk-govuk-product_safety_alert_report_recall"
-    ]
-  },
-  {
-    "title": "Product Safety Report: Cordless Chainsaw and AC/DC Adaptor (2610-0250)",
-    "url": "https://www.gov.uk/product-safety-alerts-reports-recalls/product-safety-report-cordless-chainsaw-and-ac-slash-dc-adaptor-2610-0250",
-    "native_id": "/product-safety-alerts-reports-recalls/product-safety-report-cordless-chainsaw-and-ac-slash-dc-adaptor-2610-0250",
-    "published_at": "2026-11-27T10:49:36+00:00",
-    "published_raw": "2026-11-27T10:49:36Z",
-    "document_type": "product_safety_alert_report_recall",
-    "issuer": "Office for Product Safety and Standards",
-    "issuer_ids": [
-      "uk-gov:office-for-product-safety-and-standards"
-    ],
-    "summary": "Product Safety Report for Cordless Chainsaw and AC/DC Adaptor presenting a serious risk of electric shock.",
-    "source_metadata": {
-      "document_type": "product_safety_alert_report_recall",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Office for Product Safety and Standards",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-product_safety_alert_report_recall",
-    "n": 12968,
-    "first_seen": "2026-11-27T21:58:58.067934+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
-    "source_ids": [
-      "uk-govuk-product_safety_alert_report_recall"
-    ]
-  },
-  {
-    "title": "Product Safety Report: Electric Pruning Shears and AC/DC Adaptor sold via Amazon (2610-0253)",
-    "url": "https://www.gov.uk/product-safety-alerts-reports-recalls/product-safety-report-electric-pruning-shears-and-ac-slash-dc-adaptor-2610-0253",
-    "native_id": "/product-safety-alerts-reports-recalls/product-safety-report-electric-pruning-shears-and-ac-slash-dc-adaptor-2610-0253",
-    "published_at": "2026-11-27T10:43:58+00:00",
-    "published_raw": "2026-11-27T10:43:58Z",
-    "document_type": "product_safety_alert_report_recall",
-    "issuer": "Office for Product Safety and Standards",
-    "issuer_ids": [
-      "uk-gov:office-for-product-safety-and-standards"
-    ],
-    "summary": "Product Safety Report for Electric Pruning Shears and AC/DC Adaptor presenting a serious risk of electric shock.",
-    "source_metadata": {
-      "document_type": "product_safety_alert_report_recall",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Office for Product Safety and Standards",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-product_safety_alert_report_recall",
-    "n": 12969,
-    "first_seen": "2026-11-27T21:58:58.067934+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
-    "source_ids": [
-      "uk-govuk-product_safety_alert_report_recall"
-    ]
-  },
-  {
-    "title": "Product Recall: Tesco Witch Hat with Hair Assortment (2611-0192)",
-    "url": "https://www.gov.uk/product-safety-alerts-reports-recalls/product-recall-tesco-witch-hat-with-hair-assortment-2611-0192",
-    "native_id": "/product-safety-alerts-reports-recalls/product-recall-tesco-witch-hat-with-hair-assortment-2611-0192",
-    "published_at": "2026-11-27T10:38:58+00:00",
-    "published_raw": "2026-11-27T10:38:58Z",
-    "document_type": "product_safety_alert_report_recall",
-    "issuer": "Office for Product Safety and Standards",
-    "issuer_ids": [
-      "uk-gov:office-for-product-safety-and-standards"
-    ],
-    "summary": "Product Recall for Tesco Witch Hat with Hair Assortment presenting a risk of fire and burns.",
-    "source_metadata": {
-      "document_type": "product_safety_alert_report_recall",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Office for Product Safety and Standards",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-product_safety_alert_report_recall",
-    "n": 12970,
-    "first_seen": "2026-11-27T21:58:58.067934+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
-    "source_ids": [
-      "uk-govuk-product_safety_alert_report_recall"
-    ]
-  },
-  {
-    "title": "Product Recall: Hobbycraft Create & Celebrate Warm White LED Curtain Lights (2611-0148)",
-    "url": "https://www.gov.uk/product-safety-alerts-reports-recalls/product-recall-hobbycraft-create-and-celebrate-warm-white-led-curtain-lights-2611-0148",
-    "native_id": "/product-safety-alerts-reports-recalls/product-recall-hobbycraft-create-and-celebrate-warm-white-led-curtain-lights-2611-0148",
-    "published_at": "2026-11-27T10:36:57+00:00",
-    "published_raw": "2026-11-27T10:36:57Z",
-    "document_type": "product_safety_alert_report_recall",
-    "issuer": "Office for Product Safety and Standards",
-    "issuer_ids": [
-      "uk-gov:office-for-product-safety-and-standards"
-    ],
-    "summary": "Product Recall for Hobbycraft Create & Celebrate Warm White LED Curtain Lights presenting a risk of electric shock.",
-    "source_metadata": {
-      "document_type": "product_safety_alert_report_recall",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Office for Product Safety and Standards",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-product_safety_alert_report_recall",
-    "n": 12971,
-    "first_seen": "2026-11-27T21:58:58.067934+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
-    "source_ids": [
-      "uk-govuk-product_safety_alert_report_recall"
-    ]
-  },
-  {
-    "title": "Estonia: tax treaties",
-    "url": "https://www.gov.uk/government/publications/estonia-tax-treaties",
-    "native_id": "/government/publications/estonia-tax-treaties",
-    "published_at": "2026-11-27T11:51:28+00:00",
-    "published_raw": "2026-11-27T11:51:28Z",
-    "document_type": "international_treaty",
-    "issuer": "HM Revenue & Customs",
-    "issuer_ids": [
-      "uk-gov:hm-revenue-customs"
-    ],
-    "summary": "Tax treaties and related documents between the UK and Estonia.",
-    "source_metadata": {
-      "document_type": "international_treaty",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "HM Revenue & Customs",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-international_treaty",
-    "n": 12972,
-    "first_seen": "2026-11-27T21:58:58.067934+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
-    "source_ids": [
-      "uk-govuk-international_treaty"
-    ]
-  },
-  {
-    "title": "FDIC Publishes October Enforcement Actions",
-    "url": "https://www.fdic.gov/news/press-releases/2026/fdic-publishes-october-enforcement-actions",
-    "native_id": "https://www.fdic.gov/news/press-releases/2026/fdic-publishes-october-enforcement-actions",
+    "title": "First-Citizens Bank & Trust Company, Raleigh, North Carolina Assumes Subst…",
+    "url": "https://www.fdic.gov/news/press-releases/2026/first-citizens-bank-trust-company-raleigh-north-carolina-assumes",
+    "native_id": "https://www.fdic.gov/news/press-releases/2026/first-citizens-bank-trust-company-raleigh-north-carolina-assumes",
     "published_at": "2026-11-27T00:00:00+00:00",
     "published_raw": "2026-11-27",
     "summary": "",
@@ -422,379 +184,43 @@
       "family": "financial_enforcement"
     },
     "primary_source_id": "us-fdic-index",
-    "n": 12973,
-    "first_seen": "2026-11-27T21:58:58.067934+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
+    "n": 13016,
+    "first_seen": "2026-11-28T08:55:55.608112+00:00",
+    "last_seen": "2026-11-28T08:55:55.608112+00:00",
     "source_ids": [
       "us-fdic-index"
     ]
   },
   {
-    "title": "FDIC Seeks Input Regarding Information Technology Examinations",
-    "url": "https://www.fdic.gov/news/press-releases/2026/fdic-seeks-input-regarding-information-technology-examinations",
-    "native_id": "https://www.fdic.gov/news/press-releases/2026/fdic-seeks-input-regarding-information-technology-examinations",
-    "published_at": "2026-11-27T00:00:00+00:00",
-    "published_raw": "2026-11-27",
-    "summary": "",
+    "title": "Abdallah Candies Issues a Voluntary Recall of Plain Chocolate Fudge Due to undeclared allergen",
+    "url": "http://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/abdallah-candies-issues-voluntary-recall-plain-chocolate-fudge-due-undeclared-allergen",
+    "native_id": "http://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/abdallah-candies-issues-voluntary-recall-plain-chocolate-fudge-due-undeclared-allergen",
+    "published_at": "2026-11-27T18:45:00+00:00",
+    "published_raw": "Fri, 27 Nov 2026 13:45:00 EST",
+    "summary": "Abdallah Candies is voluntarily recalling a specific lot of Chocolate Fudge due to undeclared Walnut allergen. People who have an allergy or severe sensitivity to walnuts run the risk of serious or life-threatening allergic reaction if they consume this product.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Deposit Insurance Corporation",
-      "jurisdiction": "US",
-      "family": "financial_enforcement"
-    },
-    "primary_source_id": "us-fdic-index",
-    "n": 12974,
-    "first_seen": "2026-11-27T21:58:58.067934+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
-    "source_ids": [
-      "us-fdic-index"
-    ]
-  },
-  {
-    "title": "GDUFA II Enhanced Accountability & Reporting",
-    "url": "http://www.fda.gov/industry/generic-drug-user-fee-amendments/gdufa-ii-enhanced-accountability-reporting",
-    "native_id": "http://www.fda.gov/industry/generic-drug-user-fee-amendments/gdufa-ii-enhanced-accountability-reporting",
-    "published_at": "2026-11-27T14:41:17+00:00",
-    "published_raw": "Fri, 27 Nov 2026 09:41:17 EST",
-    "summary": "In order to promote accountability and transparency, GDUFA II includes provisions so that industry and public stakeholders are able to observe the Agency’s productivity and performance with generic drug reviews under GDUFA II.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "issuer": "Food and Drug Administration — Food Safety Recalls",
       "jurisdiction": "US",
       "family": "product_permissions_and_safety"
     },
-    "primary_source_id": "us-fda-5696b24295",
-    "n": 12975,
-    "first_seen": "2026-11-27T21:58:58.067934+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
+    "primary_source_id": "us-fda-2cdcdcca63",
+    "n": 13017,
+    "first_seen": "2026-11-28T08:55:55.608112+00:00",
+    "last_seen": "2026-11-28T08:55:55.608112+00:00",
     "source_ids": [
-      "us-fda-5696b24295"
+      "us-fda-2cdcdcca63"
     ]
   },
   {
-    "title": "Gomez on Ruling Halting FCC Campaign Against ABC",
-    "url": "https://www.fcc.gov/edoc/427573",
-    "native_id": "427573",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — News Releases",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-685c5e7dd2",
-    "n": 12976,
-    "first_seen": "2026-11-27T21:58:58.067934+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
-    "source_ids": [
-      "us-fcc-685c5e7dd2"
-    ]
-  },
-  {
-    "title": "Applications",
-    "url": "https://www.fcc.gov/edoc/427579",
-    "native_id": "427579",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 12977,
-    "first_seen": "2026-11-27T21:58:58.067934+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Satellite Licensing Division and Satellite Programs and Policy Division Information - SAT - Accepted for Filing",
-    "url": "https://www.fcc.gov/edoc/427574",
-    "native_id": "427574",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 12978,
-    "first_seen": "2026-11-27T21:58:58.067934+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Satellite Licensing Division and Satellite Programs and Policy Division Information - SAT - Actions Taken",
-    "url": "https://www.fcc.gov/edoc/427575",
-    "native_id": "427575",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 12979,
-    "first_seen": "2026-11-27T21:58:58.067934+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Pleadings",
-    "url": "https://www.fcc.gov/edoc/427581",
-    "native_id": "427581",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 12980,
-    "first_seen": "2026-11-27T21:58:58.067934+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Actions",
-    "url": "https://www.fcc.gov/edoc/427580",
-    "native_id": "427580",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 12981,
-    "first_seen": "2026-11-27T21:58:58.067934+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Keynote speech by Commissioner Albuquerque at the Training Day' of the 10th Anniversary of the ECB Simulation Conference for University Students",
-    "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2613",
-    "native_id": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2613",
-    "published_at": "2026-11-27T12:48:42+00:00",
-    "published_raw": "Fri, 27 Nov 2026 12:48:42 GMT",
-    "summary": "European Commission Speech Online, 27 Nov 2026 Good morning, everyone. I am delighted to join you for the opening of the 10th ECB Simulation Conference. Let me begin by congratulating the organisers on a dec...",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "European Commission press and decisions",
-      "jurisdiction": "EU",
-      "family": "executive_and_regulatory"
-    },
-    "primary_source_id": "eu-commission-07d4f58ccf",
-    "n": 12982,
-    "first_seen": "2026-11-27T21:58:58.067934+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
-    "source_ids": [
-      "eu-commission-07d4f58ccf"
-    ]
-  },
-  {
-    "title": "Daily News 27 / 11 / 2026",
-    "url": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2609",
-    "native_id": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2609",
-    "published_at": "2026-11-27T10:27:23+00:00",
-    "published_raw": "Fri, 27 Nov 2026 10:27:23 GMT",
-    "summary": "European Commission Daily news Brussels, 27 Nov 2026 Commission unconditionally approves Deutsche Börse's acquisition of Allfunds The European Commission has unconditionally approved, under the EU Merger Regulatio...",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "European Commission press and decisions",
-      "jurisdiction": "EU",
-      "family": "executive_and_regulatory"
-    },
-    "primary_source_id": "eu-commission-07d4f58ccf",
-    "n": 12983,
-    "first_seen": "2026-11-27T21:58:58.067934+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
-    "source_ids": [
-      "eu-commission-07d4f58ccf"
-    ]
-  },
-  {
-    "title": "Commission unconditionally approves Deutsche Börse's acquisition of Allfunds",
-    "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2592",
-    "native_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2592",
-    "published_at": "2026-11-26T23:00:00+00:00",
-    "published_raw": "Thu, 26 Nov 2026 23:00:00 GMT",
-    "summary": "European Commission Press release Brussels, 27 Nov 2026 The European Commission has unconditionally approved, under the EU Merger Regulation, the proposed acquisition by Deutsche Börse of Allfunds.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "European Commission press and decisions",
-      "jurisdiction": "EU",
-      "family": "executive_and_regulatory"
-    },
-    "primary_source_id": "eu-commission-07d4f58ccf",
-    "n": 12984,
-    "first_seen": "2026-11-27T21:58:58.067934+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
-    "source_ids": [
-      "eu-commission-07d4f58ccf"
-    ]
-  },
-  {
-    "title": "Media advisory - Transport, Telecommunications and Energy Council (Transport and Telecommunications) of 30 November and 1 December 2026",
-    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/27/media-advisory-transport-telecommunications-and-energy-council-transport-and-telecommunications-of-30-november-and-1-december-2026/",
-    "native_id": "152826",
-    "published_at": "2026-11-27T16:20:00+00:00",
-    "published_raw": "2026-11-27T17:20:00+01:00",
-    "summary": "Main agenda items, approximate timing, public sessions and press opportunities.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Council of the European Union",
-      "jurisdiction": "EU",
-      "family": "sanctions_and_legislation"
-    },
-    "primary_source_id": "eu-council-9d9e9444da",
-    "n": 12985,
-    "first_seen": "2026-11-27T21:58:58.067934+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
-    "source_ids": [
-      "eu-council-9d9e9444da"
-    ]
-  },
-  {
-    "title": "Media advisory - Foreign Affairs Council (Trade) 30 November 2026",
-    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/27/media-advisory-foreign-affairs-council-trade-of-30-november-2026/",
-    "native_id": "149592",
-    "published_at": "2026-11-27T16:10:00+00:00",
-    "published_raw": "2026-11-27T17:10:00+01:00",
-    "summary": "Main agenda items, approximate timing, public sessions and press opportunities.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Council of the European Union",
-      "jurisdiction": "EU",
-      "family": "sanctions_and_legislation"
-    },
-    "primary_source_id": "eu-council-9d9e9444da",
-    "n": 12986,
-    "first_seen": "2026-11-27T21:58:58.067934+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
-    "source_ids": [
-      "eu-council-9d9e9444da"
-    ]
-  },
-  {
-    "title": "Weekly schedule of President António Costa",
-    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/27/weekly-schedule-of-president-antonio-costa/",
-    "native_id": "152890",
-    "published_at": "2026-11-27T15:00:00+00:00",
-    "published_raw": "2026-11-27T16:00:00+01:00",
-    "summary": "Weekly schedule of President António Costa, 30 November - 6 December 2026.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Council of the European Union",
-      "jurisdiction": "EU",
-      "family": "sanctions_and_legislation"
-    },
-    "primary_source_id": "eu-council-9d9e9444da",
-    "n": 12987,
-    "first_seen": "2026-11-27T21:58:58.067934+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
-    "source_ids": [
-      "eu-council-9d9e9444da"
-    ]
-  },
-  {
-    "title": "Press briefing - Competitiveness Council of 3 and 4 December 2026",
-    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/27/press-briefing-competitiveness-council-of-3-and-4-december-2026/",
-    "native_id": "152871",
-    "published_at": "2026-11-27T10:15:00+00:00",
-    "published_raw": "2026-11-27T11:15:00+01:00",
-    "summary": "Press briefing ahead of the upcoming Competitiveness Council will take place on Monday, 30 November 2026 at 13:00.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Council of the European Union",
-      "jurisdiction": "EU",
-      "family": "sanctions_and_legislation"
-    },
-    "primary_source_id": "eu-council-9d9e9444da",
-    "n": 12988,
-    "first_seen": "2026-11-27T21:58:58.067934+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
-    "source_ids": [
-      "eu-council-9d9e9444da"
-    ]
-  },
-  {
-    "title": "Decisions taken by the Governing Council of the ECB (in addition to decisions setting interest rates)",
-    "url": "https://www.ecb.europa.eu//press/govcdec/otherdec/2026/html/ecb.gc261127~13ecadc0f2.en.html",
-    "native_id": "https://www.ecb.europa.eu//press/govcdec/otherdec/2026/html/ecb.gc261127~13ecadc0f2.en.html",
-    "published_at": "2026-11-27T14:00:00+00:00",
-    "published_raw": "Fri, 27 Nov 2026 15:00:00 +0100",
+    "title": "Boris Vujčić: Interview with Kurier",
+    "url": "https://www.ecb.europa.eu//press/inter/date/2026/html/ecb.in261128~10e11f78f1.en.html",
+    "native_id": "https://www.ecb.europa.eu//press/inter/date/2026/html/ecb.in261128~10e11f78f1.en.html",
+    "published_at": "2026-11-28T08:00:00+00:00",
+    "published_raw": "Sat, 28 Nov 2026 09:00:00 +0100",
     "summary": "",
     "source_metadata": {
       "document_type": "official_announcement",
@@ -806,467 +232,35 @@
       "family": "monetary_operations"
     },
     "primary_source_id": "eu-ecb-991c113079",
-    "n": 12989,
-    "first_seen": "2026-11-27T21:58:58.067934+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
+    "n": 13018,
+    "first_seen": "2026-11-28T08:55:55.608112+00:00",
+    "last_seen": "2026-11-28T08:55:55.608112+00:00",
     "source_ids": [
       "eu-ecb-991c113079"
     ]
   },
   {
-    "title": "RBI Issues Amendment Directions on ‘Suspected Money Mule Accounts to Prevent Cyber-enabled Financial Frauds’",
-    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64062",
-    "native_id": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64062",
-    "published_at": "2026-11-27T20:45:00+00:00",
-    "published_raw": "Fri, 27 Nov 2026 20:45:00",
-    "summary": "The Reserve Bank had issued the draft Reserve Bank of India (Know Your Customer) Amendment Directions, 2026 on September 11, 2026, for seeking feedback from stakeholders. The draft Amendment Directions proposed a Standard Operating Procedure (SOP) laying down a uniform, time-bound procedure for banks to suo moto place temporary debit holds on amounts or accounts suspected to be linked to money mule activity and cyber-enabled financial frauds, and to remove such holds in coordination with Law Enforcement Agencies (LEAs), while protecting genuine customers from inconvenience. 2. Feedback received on the above draft Directions has been examined and the consequent modifications have been suitably incorporated in the final Amendment Directions. A statement on the feedback received is provided in the Annex . Accordingly, the Reserve Bank has today issued the following Amendment Directions, which shall come into effect from July 1, 2027, or from such earlier date as a bank may decide to implement the SOP. Reserve Bank of India (Commercial Banks - Know Your Customer) Second Amendment Directions, 2026 Reserve Bank of India (Small Finance Banks - Know Your Customer) Second Amendment Directio",
+    "title": "Upcoming speaking engagements for December 2026 and January 2027 - Reserve Bank of New Zealand",
+    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPSnRBWFJkQ1QyV1RVWDV2MHNNX05hNWd2ektFdWR1cXp3Mm5NM1QtNE1JdklMejZGVkt0X0xaM2h4b1Z2bzY0ZGtHcGM1SXhtS3dSdE1LTHVBOXA3dEMzWEJUQnRpalFRM1NZSDF1UFg3T184Y0tfSXU1SDYyYUFGbVVpcU5NS0lDTmdnNHBzR1o5TGFOSXU3V3Y0UmQ4aXhESDdqaWJ2eEpmMGtRV1VFZFBPN1VGQnM",
+    "native_id": "CBMitwFBVV95cUxPSnRBWFJkQ1QyV1RVWDV2MHNNX05hNWd2ektFdWR1cXp3Mm5NM1QtNE1JdklMejZGVkt0X0xaM2h4b1Z2bzY0ZGtHcGM1SXhtS3dSdE1LTHVBOXA3dEMzWEJUQnRpalFRM1NZSDF1UFg3T184Y0tfSXU1SDYyYUFGbVVpcU5NS0lDTmdnNHBzR1o5TGFOSXU3V3Y0UmQ4aXhESDdqaWJ2eEpmMGtRV1VFZFBPN1VGQnM",
+    "published_at": "2026-11-26T04:13:21+00:00",
+    "published_raw": "Thu, 26 Nov 2026 04:13:21 GMT",
+    "summary": "Upcoming speaking engagements for December 2026 and January 2027 Reserve Bank of New Zealand",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Reserve Bank of India",
-      "jurisdiction": "IN",
-      "family": "monetary_and_supervisory"
+      "issuer": "Reserve Bank of New Zealand (official-site news mirror)",
+      "jurisdiction": "NZ",
+      "family": "monetary_operations"
     },
-    "primary_source_id": "in-rbi-cc71120b98",
-    "n": 12990,
-    "first_seen": "2026-11-27T21:58:58.067934+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
+    "primary_source_id": "nz-rbnz-gnews",
+    "n": 13019,
+    "first_seen": "2026-11-28T08:55:55.608112+00:00",
+    "last_seen": "2026-11-28T08:55:55.608112+00:00",
     "source_ids": [
-      "in-rbi-cc71120b98"
-    ]
-  },
-  {
-    "title": "RBI to conduct Overnight Variable Rate Repo (VRR) auction under LAF on November 30, 2026",
-    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64061",
-    "native_id": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64061",
-    "published_at": "2026-11-27T19:45:00+00:00",
-    "published_raw": "Fri, 27 Nov 2026 19:45:00",
-    "summary": "On a review of current and evolving liquidity conditions in the near term, it has been decided to conduct a Variable Rate Repo (VRR) auction on Monday, November 30, 2026, as under: Sl. No. Notified Amount (₹ crore) Tenor (day) Window Timing Date of Reversal 1 50,000 1 09:30 AM to 10:00 AM December 01, 2026 (Tuesday) 2. The operational guidelines for the auction will be same as given in Reserve Bank’s Press Release 2021-2022/1572 dated January 20, 2022 . Ajit Prasad Deputy General Manager (Communications) Press Release: 2026-2027/1583",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Reserve Bank of India",
-      "jurisdiction": "IN",
-      "family": "monetary_and_supervisory"
-    },
-    "primary_source_id": "in-rbi-cc71120b98",
-    "n": 12991,
-    "first_seen": "2026-11-27T21:58:58.067934+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
-    "source_ids": [
-      "in-rbi-cc71120b98"
-    ]
-  },
-  {
-    "title": "Auction of State Government Securities",
-    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64060",
-    "native_id": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64060",
-    "published_at": "2026-11-27T19:00:00+00:00",
-    "published_raw": "Fri, 27 Nov 2026 19:00:00",
-    "summary": "The following State Governments have offered to sell stock by way of auction, for an aggregate amount of ₹21,200 Crore (Face Value). Sr No State/UT Amount to be raised (₹ Crore) Additional Borrowing (Greenshoe) Option (₹ Crore) Tenor (Year) Type of Auction 1. Andhra Pradesh 1000 - Re-issue of 7.51% SGS 2036, issued on July 15, 2026 Price 1000 - Re-issue of 7.64% SGS 2056, issued on August 12, 2026 Price 2. Delhi 500 - 09 Yield 1000 - Re-issue of 8.12% Delhi SGS 2041, issued on November 04, 2026 Price 3. Goa 100 - Re-issue of 7.63% Goa SGS 2036, issued on September 09, 2026 Price 4. Himachal Pradesh 400 - Re-issue of 7.78% Himachal Pradesh SGS 2044, issued on June 24, 2026 Price 5. Karnataka 2000 - Re-issue of 7.68% Karnataka SGS 2037, issued on March 25, 2026 Price 6. Madhya Pradesh 500 - Re-issue of 7.91% Madhya Pradesh SGS 2036, issued on October 07, 2026 Price 500 - Re-issue of 7.61% Madhya Pradesh SGS 2044, issued on July 08, 2026 Price 500 - Re-issue of 7.75% Madhya Pradesh SGS 2056, issued on September 02, 2026 Price 7. Maharashtra 1000 - Re-issue of 7.09% Maharashtra SGS 2031, issued on August 27, 2026 Price 2000 - Re-issue of 7.63% Maharashtra SGS 2039, issued on August 27,",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Reserve Bank of India",
-      "jurisdiction": "IN",
-      "family": "monetary_and_supervisory"
-    },
-    "primary_source_id": "in-rbi-cc71120b98",
-    "n": 12992,
-    "first_seen": "2026-11-27T21:58:58.067934+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
-    "source_ids": [
-      "in-rbi-cc71120b98"
-    ]
-  },
-  {
-    "title": "Thirty First Meeting of the Standing Advisory Committee (SAC) to Review the Flow of Credit to the MSME Sector in Kolkata on November 27, 2026",
-    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64059",
-    "native_id": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64059",
-    "published_at": "2026-11-27T18:25:00+00:00",
-    "published_raw": "Fri, 27 Nov 2026 18:25:00",
-    "summary": "The 31st meeting of the Standing Advisory Committee (SAC) to review the flow of credit to micro, small and medium enterprises (MSMEs) was held in Kolkata on November 27, 2026. Shri Swaminathan J, Deputy Governor, Reserve Bank of India (RBI), chaired the meeting. Participants included the Additional Secretary and Development Commissioner, Ministry of MSME, and the Joint Secretary, Department of Financial Services, Ministry of Finance. Managing directors and executive directors of select banks, heads of SIDBI, NABARD, CGTMSE, NCGTC and KVIC, the Chief Executive Officer of the Indian Banks’ Association, and representatives of national, regional and state-level MSME associations also attended. Recognising MSMEs’ contribution to India’s economy and development goals, the Deputy Governor urged banks to expedite credit sanctions and reduce reliance on collateral through cash-flow-based lending using ULI and other digital channels. He called for greater use of TReDS for receivables financing and early identification and resolution of stress. He invited industry associations to actively participate in outreach events such as RBI’s town halls and district-level MSME SAMVAAD meetings to impro",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Reserve Bank of India",
-      "jurisdiction": "IN",
-      "family": "monetary_and_supervisory"
-    },
-    "primary_source_id": "in-rbi-cc71120b98",
-    "n": 12993,
-    "first_seen": "2026-11-27T21:58:58.067934+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
-    "source_ids": [
-      "in-rbi-cc71120b98"
-    ]
-  },
-  {
-    "title": "Auction of 91-Day, 182-Day and 364-Day Treasury Bills",
-    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64058",
-    "native_id": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64058",
-    "published_at": "2026-11-27T17:35:00+00:00",
-    "published_raw": "Fri, 27 Nov 2026 17:35:00",
-    "summary": "Reserve Bank of India announces the auction of Government of India Treasury Bills as per the following details: Sr. No. Treasury Bill Notified Amount (₹ crore) Auction Date Settlement Date 1 91-Day 8,000 December 02, 2026 (Wednesday) December 03, 2026 (Thursday) 2 182-Day 8,000 3 364-Day 7,000 Total 23,000 The sale will be subject to the terms and conditions specified in the General Notification F.No.4(2)-B(W&M)/2018 dated March 26, 2025 , issued by Government of India, as amended from time to time. State Governments, Union Territories with legislature, eligible Provident Funds in India, designated Foreign Central Banks and any person or institution specified by the Bank in this regard can participate on non-competitive basis, the allocation for which will be outside the notified amount. Individuals can also participate on non-competitive basis, as retail investors. For retail investors, the allocation will be restricted to a maximum of 5 percent of the notified amount. Individual investors can also place bids as per the non-competitive scheme through the Retail Direct portal ( https://rbiretaildirect.org.in ). The auction will be Price based using multiple price method . Bids for ",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Reserve Bank of India",
-      "jurisdiction": "IN",
-      "family": "monetary_and_supervisory"
-    },
-    "primary_source_id": "in-rbi-cc71120b98",
-    "n": 12994,
-    "first_seen": "2026-11-27T21:58:58.067934+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
-    "source_ids": [
-      "in-rbi-cc71120b98"
-    ]
-  },
-  {
-    "title": "Reserve Bank of India – Bulletin Weekly Statistical Supplement – Extract",
-    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64057",
-    "native_id": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64057",
-    "published_at": "2026-11-27T17:00:00+00:00",
-    "published_raw": "Fri, 27 Nov 2026 17:00:00",
-    "summary": "1. Reserve Bank of India - Liabilities and Assets* (₹ Crore) Item 2025 2026 Variation Nov. 21 Nov. 13 Nov. 20 Week Year 1 2 3 4 5 4 Loans and Advances 4.1 Central Government 0 0 0 0 0 4.2 State Governments 27060 21004 19965 -1039 -7095 * Data are provisional; difference, if any, is due to rounding off. 2. Foreign Exchange Reserves* Item As on November 20, 2026 Variation over Week End-March 2026 Year ₹ Cr. US$ Mn. ₹ Cr. US$ Mn. ₹ Cr. US$ Mn. ₹ Cr. US$ Mn. 1 2 3 4 5 6 7 8 1 Total Reserves 6497956 700898 -149856 -4443 -55905 9791 342593 12794 1.1 Foreign Currency Assets # 5406553 583186 -92478 -266 169186 30903 391448 22586 1.2 Gold 876256 94519 -53174 -4095 -218053 -20877 -55752 -9663 1.3 SDRs 171051 18451 -3476 -67 -5539 -171 4962 -115 1.4 Reserve Position in the IMF 44096 4743 -728 -15 -1499 -65 1934 -13 * Difference, if any, is due to rounding off. # Excludes (a) SDR holdings of the Reserve Bank, as they are included under the SDR holdings; (b) investment in bonds issued by IIFC (UK); (c) amounts lent under SAARC and ACU currency swap arrangements; and (d) RBI’s contribution to funding of Nexus Global Payments. 4. Scheduled Commercial Banks - Business in India (₹ Crore) Item Outst",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Reserve Bank of India",
-      "jurisdiction": "IN",
-      "family": "monetary_and_supervisory"
-    },
-    "primary_source_id": "in-rbi-cc71120b98",
-    "n": 12995,
-    "first_seen": "2026-11-27T21:58:58.067934+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
-    "source_ids": [
-      "in-rbi-cc71120b98"
-    ]
-  },
-  {
-    "title": "Government Stock - Full Auction Results",
-    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64056",
-    "native_id": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64056",
-    "published_at": "2026-11-27T15:35:00+00:00",
-    "published_raw": "Fri, 27 Nov 2026 15:35:00",
-    "summary": "(Amount in ₹ Crore) Auction Results 6.20% GS 2029 6.57% GS 2033 7.63% GS 2056 7.50% GOI SGrB 2056 I. Notified Amount 9,000 12,000 9,000 3,000 II. Competitive Bids Received (i) Number 85 160 192 65 (ii) Amount 13,785.200 22,948.200 23,095.000 8,723.000 III. Cut-off price (₹) / Yield 98.05 96.30 98.03 96.86 (YTM: 6.9960%) (YTM: 7.2736%) (YTM: 7.7996%) (YTM: 7.7721%) IV. Competitive Bids Accepted (i) Number 16 98 99 21 (ii) Amount 3,670.200 11,996.076 8,962.836 2,996.335 V. Partial Allotment Percentage of Competitive Bids - 9.8556% 31.0809% 47.8818% - (10 bids) (8 bids) (2 bids) VI. Weighted Average Price (₹) / Yield 98.08 96.35 98.12 96.99 (WAY: 6.9835%) (WAY: 7.2638%) (WAY: 7.7917%) (WAY: 7.7605%) VII. Non-Competitive Bids Received (i) Number 4 3 4 2 (ii) Amount 7.295 3.924 37.164 3.665 VIII. Non-Competitive Bids Accepted (i) Number 4 3 4 2 (ii) Amount 7.295 3.924 37.164 3.665 (iii) Partial Allotment Percentage IX. Underwriting Notified Amount 9,000 12,000 9,000 3,000 X. Amount of Underwriting accepted from primary dealers 9,000 12,000 9,000 3,000 XI. Devolvement on Primary Dealers NIL NIL NIL NIL Ajit Prasad Deputy General Manager (Communications) Press Release: 2026-2027/1578",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Reserve Bank of India",
-      "jurisdiction": "IN",
-      "family": "monetary_and_supervisory"
-    },
-    "primary_source_id": "in-rbi-cc71120b98",
-    "n": 12996,
-    "first_seen": "2026-11-27T21:58:58.067934+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
-    "source_ids": [
-      "in-rbi-cc71120b98"
-    ]
-  },
-  {
-    "title": "Reserve Bank of India (Payment Banks - Know Your Customer) Amendment Directions, 2026",
-    "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13768&Mode=0",
-    "native_id": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13768&Mode=0",
-    "published_at": "2026-11-27T20:45:00+00:00",
-    "published_raw": "Fri, 27 Nov 2026 20:45:00",
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Reserve Bank of India",
-      "jurisdiction": "IN",
-      "family": "monetary_and_supervisory"
-    },
-    "primary_source_id": "in-rbi-738b09bded",
-    "n": 12997,
-    "first_seen": "2026-11-27T21:58:58.067934+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
-    "source_ids": [
-      "in-rbi-738b09bded"
-    ]
-  },
-  {
-    "title": "Reserve Bank of India (Urban Co-operative Banks - Know Your Customer) Second Amendment Directions, 2026",
-    "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13767&Mode=0",
-    "native_id": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13767&Mode=0",
-    "published_at": "2026-11-27T20:45:00+00:00",
-    "published_raw": "Fri, 27 Nov 2026 20:45:00",
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Reserve Bank of India",
-      "jurisdiction": "IN",
-      "family": "monetary_and_supervisory"
-    },
-    "primary_source_id": "in-rbi-738b09bded",
-    "n": 12998,
-    "first_seen": "2026-11-27T21:58:58.067934+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
-    "source_ids": [
-      "in-rbi-738b09bded"
-    ]
-  },
-  {
-    "title": "Reserve Bank of India (Regional Rural Banks - Know Your Customer) Second Amendment Directions, 2026",
-    "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13766&Mode=0",
-    "native_id": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13766&Mode=0",
-    "published_at": "2026-11-27T20:45:00+00:00",
-    "published_raw": "Fri, 27 Nov 2026 20:45:00",
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Reserve Bank of India",
-      "jurisdiction": "IN",
-      "family": "monetary_and_supervisory"
-    },
-    "primary_source_id": "in-rbi-738b09bded",
-    "n": 12999,
-    "first_seen": "2026-11-27T21:58:58.067934+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
-    "source_ids": [
-      "in-rbi-738b09bded"
-    ]
-  },
-  {
-    "title": "Reserve Bank of India (Local Area Banks - Know Your Customer) Second Amendment Directions, 2026",
-    "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13765&Mode=0",
-    "native_id": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13765&Mode=0",
-    "published_at": "2026-11-27T20:45:00+00:00",
-    "published_raw": "Fri, 27 Nov 2026 20:45:00",
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Reserve Bank of India",
-      "jurisdiction": "IN",
-      "family": "monetary_and_supervisory"
-    },
-    "primary_source_id": "in-rbi-738b09bded",
-    "n": 13000,
-    "first_seen": "2026-11-27T21:58:58.067934+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
-    "source_ids": [
-      "in-rbi-738b09bded"
-    ]
-  },
-  {
-    "title": "Reserve Bank of India (Small Finance Banks - Know Your Customer) Second Amendment Directions, 2026",
-    "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13764&Mode=0",
-    "native_id": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13764&Mode=0",
-    "published_at": "2026-11-27T20:45:00+00:00",
-    "published_raw": "Fri, 27 Nov 2026 20:45:00",
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Reserve Bank of India",
-      "jurisdiction": "IN",
-      "family": "monetary_and_supervisory"
-    },
-    "primary_source_id": "in-rbi-738b09bded",
-    "n": 13001,
-    "first_seen": "2026-11-27T21:58:58.067934+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
-    "source_ids": [
-      "in-rbi-738b09bded"
-    ]
-  },
-  {
-    "title": "Reserve Bank of India (Commercial Banks - Know Your Customer) Second Amendment Directions, 2026",
-    "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13763&Mode=0",
-    "native_id": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13763&Mode=0",
-    "published_at": "2026-11-27T20:45:00+00:00",
-    "published_raw": "Fri, 27 Nov 2026 20:45:00",
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Reserve Bank of India",
-      "jurisdiction": "IN",
-      "family": "monetary_and_supervisory"
-    },
-    "primary_source_id": "in-rbi-738b09bded",
-    "n": 13002,
-    "first_seen": "2026-11-27T21:58:58.067934+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
-    "source_ids": [
-      "in-rbi-738b09bded"
-    ]
-  },
-  {
-    "title": "Reserve Bank of India (White Label ATM Operators) Directions, 2026",
-    "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13762&Mode=0",
-    "native_id": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13762&Mode=0",
-    "published_at": "2026-11-27T17:30:00+00:00",
-    "published_raw": "Fri, 27 Nov 2026 17:30:00",
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Reserve Bank of India",
-      "jurisdiction": "IN",
-      "family": "monetary_and_supervisory"
-    },
-    "primary_source_id": "in-rbi-738b09bded",
-    "n": 13003,
-    "first_seen": "2026-11-27T21:58:58.067934+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
-    "source_ids": [
-      "in-rbi-738b09bded"
-    ]
-  },
-  {
-    "title": "Reserve Bank of India (Cash Withdrawal Transactions through Automated Teller Machines and Point of Sale Terminals) Directions, 2026",
-    "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13761&Mode=0",
-    "native_id": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13761&Mode=0",
-    "published_at": "2026-11-27T17:30:00+00:00",
-    "published_raw": "Fri, 27 Nov 2026 17:30:00",
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Reserve Bank of India",
-      "jurisdiction": "IN",
-      "family": "monetary_and_supervisory"
-    },
-    "primary_source_id": "in-rbi-738b09bded",
-    "n": 13004,
-    "first_seen": "2026-11-27T21:58:58.067934+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
-    "source_ids": [
-      "in-rbi-738b09bded"
-    ]
-  },
-  {
-    "title": "Reserve Bank of India (Digital Payments – Card-based transaction) Directions, 2026",
-    "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13760&Mode=0",
-    "native_id": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13760&Mode=0",
-    "published_at": "2026-11-27T17:30:00+00:00",
-    "published_raw": "Fri, 27 Nov 2026 17:30:00",
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Reserve Bank of India",
-      "jurisdiction": "IN",
-      "family": "monetary_and_supervisory"
-    },
-    "primary_source_id": "in-rbi-738b09bded",
-    "n": 13005,
-    "first_seen": "2026-11-27T21:58:58.067934+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
-    "source_ids": [
-      "in-rbi-738b09bded"
-    ]
-  },
-  {
-    "title": "Section 42(1) of the Reserve Bank of India Act, 1934 - Change in Daily Minimum Cash Reserve Maintenance Requirement",
-    "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13759&Mode=0",
-    "native_id": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13759&Mode=0",
-    "published_at": "2026-11-27T16:55:00+00:00",
-    "published_raw": "Fri, 27 Nov 2026 16:55:00",
-    "summary": "RBI/2026-27/310 DoR.RET.REC.262/12.01.001/2026-27 November 27, 2026 All Scheduled Banks, Madam / Sir, Section 42(1) of the Reserve Bank of India Act, 1934 - Change in Daily Minimum Cash Reserve Maintenance Requirement Please refer to our circular DoR.RET.REC.247/12.01.001/2026-27 dated October 09, 2026 on the captioned subject. 2. On the basis of an assessment of the current and evolving macroeconomic situation and liquidity conditions, it has been decided to reduce the minimum daily maintenance of the cash reserve ratio (CRR) from 99 per cent of the requirement to 90 per cent effective from the fortnight beginning December 1, 2026. Yours faithfully, (J P Sharma) Chief General Manager-in-Charge",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Reserve Bank of India",
-      "jurisdiction": "IN",
-      "family": "monetary_and_supervisory"
-    },
-    "primary_source_id": "in-rbi-738b09bded",
-    "n": 13006,
-    "first_seen": "2026-11-27T21:58:58.067934+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
-    "source_ids": [
-      "in-rbi-738b09bded"
-    ]
-  },
-  {
-    "title": "JFTC Reviews the Proposed Acquisition of Shares of Fuji Pack Co., Ltd. by SEIREN CO., LTD. - 公正取引委員会",
-    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5UcmpQdjdoMzZtS2lVQUx6b2VaU0g0UkdISjFFQzI0UjZBUVZ0RzR5amlzM3pmTFhoRmxPa3QyNzNsTW9SZko3QUQ1dktBSlRhRUpTdTlxMWhYcXlmVkpMZE9Fd2ZYc1Z6bHIzRktCZkJPYUtFamtzYVhQMlU",
-    "native_id": "CBMifEFVX3lxTE5UcmpQdjdoMzZtS2lVQUx6b2VaU0g0UkdISjFFQzI0UjZBUVZ0RzR5amlzM3pmTFhoRmxPa3QyNzNsTW9SZko3QUQ1dktBSlRhRUpTdTlxMWhYcXlmVkpMZE9Fd2ZYc1Z6bHIzRktCZkJPYUtFamtzYVhQMlU",
-    "published_at": "2026-11-27T09:53:54+00:00",
-    "published_raw": "Fri, 27 Nov 2026 09:53:54 GMT",
-    "summary": "JFTC Reviews the Proposed Acquisition of Shares of Fuji Pack Co., Ltd. by SEIREN CO., LTD. 公正取引委員会",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Japan Fair Trade Commission (official-site news mirror)",
-      "jurisdiction": "JP",
-      "family": "competition_and_enforcement"
-    },
-    "primary_source_id": "jp-jftc-gnews",
-    "n": 13007,
-    "first_seen": "2026-11-27T21:58:58.067934+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
-    "source_ids": [
-      "jp-jftc-gnews"
-    ]
-  },
-  {
-    "title": "Services domestic regulation disciplines enter into force for Kazakhstan",
-    "url": "https://www.wto.org/english/news_e/news26_e/jssdr_25nov26_566_e.htm",
-    "native_id": "https://www.wto.org/english/news_e/news26_e/jssdr_25nov26_566_e.htm",
-    "published_at": "2026-11-25T00:00:00+00:00",
-    "published_raw": "Wed, 25 Nov 2026 00:00:00 GMT",
-    "summary": "On 25 November, Kazakhstan notified WTO members that, following conclusion of its domestic approval procedures, the disciplines on services domestic regulation had taken legal effect and had been incorporated into Kazakhstan's schedule under the General Agreement on Trade in Services (GATS) as of 27 October 2026. These disciplines, which entered into force at the 13th WTO Ministerial Conference (MC13) in February 2024, have the potential to reduce global trade costs by USD 127 billion.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "World Trade Organization disputes and decisions",
-      "jurisdiction": "INT",
-      "family": "trade_and_dispute_decisions"
-    },
-    "primary_source_id": "io-wto-497f28e20d",
-    "n": 13008,
-    "first_seen": "2026-11-27T21:58:58.067934+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
-    "source_ids": [
-      "io-wto-497f28e20d"
+      "nz-rbnz-gnews"
     ]
   }
 ]

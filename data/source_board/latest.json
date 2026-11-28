@@ -1,6 +1,6 @@
 {
- "date": "2026-11-27",
- "generated_at": "2026-11-27T21:59:17.826660+00:00",
+ "date": "2026-11-28",
+ "generated_at": "2026-11-28T08:56:35.663020+00:00",
  "catalog": {
   "generated_at": "2026-11-21T20:07:43.335432+00:00",
   "channels": 365,
@@ -34,60 +34,47 @@
   }
  },
  "collect": {
-  "generated_at": "2026-11-27T21:58:58.067934+00:00",
+  "generated_at": "2026-11-28T08:55:55.608112+00:00",
   "enabled_sources": 115,
   "sources_ok": 115,
   "sources_failed": 0,
   "coverage_status": "degraded",
   "counts": {
-   "observed": 1926,
-   "old": 1139,
+   "observed": 1805,
+   "old": 1116,
    "future": 0,
-   "undated": 339,
-   "new": 50,
-   "duplicates": 737
+   "undated": 289,
+   "new": 11,
+   "duplicates": 678
   },
-  "current_dated_documents": 584
+  "current_dated_documents": 479
  },
  "new_today": {
-  "count": 50,
+  "count": 11,
   "by_source": {
-   "uk-govuk-product_safety_alert_report_recall": 11,
-   "in-rbi-738b09bded": 10,
-   "in-rbi-cc71120b98": 7,
-   "us-fcc-e95ecda3bb": 5,
-   "eu-council-9d9e9444da": 4,
-   "eu-commission-07d4f58ccf": 3,
-   "us-fdic-index": 2,
-   "uk-govuk-decision": 1,
-   "uk-govuk-consultation_outcome": 1,
-   "uk-govuk-international_treaty": 1,
-   "us-fda-5696b24295": 1,
-   "us-fcc-685c5e7dd2": 1,
+   "us-govinfo-bills": 7,
+   "us-fdic-index": 1,
+   "us-fda-2cdcdcca63": 1,
    "eu-ecb-991c113079": 1,
-   "jp-jftc-gnews": 1,
-   "io-wto-497f28e20d": 1
+   "nz-rbnz-gnews": 1
   },
   "by_class": {
-   "routine": 18,
-   "high": 7,
-   "watch": 24,
-   "noise": 1
+   "routine": 8,
+   "high": 1,
+   "watch": 2
   }
  },
  "parsed_today": {
-  "count": 91,
+  "count": 8,
   "by_class": {
-   "high": 26,
-   "routine": 32,
-   "noise": 3,
-   "watch": 31
+   "routine": 7,
+   "watch": 1
   }
  },
  "n_failures": 0,
  "dates": [
-  "2026-11-27"
+  "2026-11-28"
  ],
- "href": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/source_board/2026-11-27.json",
+ "href": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/source_board/2026-11-28.json",
  "pages": "https://sroyaltyy.github.io/fullscan/dashboard/source-board/"
 }

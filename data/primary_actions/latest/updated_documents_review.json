@@ -1,234 +1,122 @@
 [
   {
-    "title": "Drugs@FDA Data Files",
-    "url": "http://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
-    "native_id": "http://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
-    "published_at": "2026-11-27T14:18:07+00:00",
-    "published_raw": "Fri, 27 Nov 2026 09:18:07 EST",
-    "summary": "Drugs@FDA Downloadable Data File in ZIP format, Data Definitions, and Entity Relationship Diagram (ERD)",
+    "title": "Office of Therapeutic Products (OTP) Events, Meetings, and Workshops",
+    "url": "http://www.fda.gov/vaccines-blood-biologics/workshops-meetings-conferences-biologics/office-therapeutic-products-otp-events-meetings-and-workshops",
+    "native_id": "http://www.fda.gov/vaccines-blood-biologics/workshops-meetings-conferences-biologics/office-therapeutic-products-otp-events-meetings-and-workshops",
+    "published_at": "2026-11-27T13:47:14+00:00",
+    "published_raw": "Fri, 27 Nov 2026 08:47:14 EST",
+    "summary": "Office of Therapeutic Products Events, Meetings, and Workshops",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
       "jurisdiction": "US",
       "family": "product_permissions_and_safety"
     },
-    "primary_source_id": "us-fda-5696b24295",
-    "n": 1398,
-    "first_seen": "2026-10-15T10:17:11.133023+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
+    "primary_source_id": "us-fda-03f7703006",
+    "n": 8115,
+    "first_seen": "2026-11-02T22:20:55.750782+00:00",
+    "last_seen": "2026-11-28T08:55:55.608112+00:00",
     "source_ids": [
-      "us-fda-03f7703006",
-      "us-fda-5696b24295"
+      "us-fda-03f7703006"
     ]
   },
   {
-    "title": "Company Names Tribunal undefended decisions and orders",
-    "url": "https://www.gov.uk/government/publications/company-names-tribunal-undefended-decisions-and-orders",
-    "native_id": "/government/publications/company-names-tribunal-undefended-decisions-and-orders",
-    "published_at": "2026-11-27T09:58:15+00:00",
-    "published_raw": "2026-11-27T09:58:15Z",
-    "document_type": "decision",
-    "issuer": "Company Names Tribunal",
-    "issuer_ids": [
-      "uk-gov:company-names-tribunal"
-    ],
-    "summary": "Decisions and orders of the Company Names Tribunal - undefended.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Company Names Tribunal",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 2103,
-    "first_seen": "2026-10-15T12:16:32.997656+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Deep Drilling Screening Directions – 2026",
-    "url": "https://www.gov.uk/government/publications/deep-drilling-screening-directions-2026",
-    "native_id": "/government/publications/deep-drilling-screening-directions-2026",
-    "published_at": "2026-11-27T13:20:39+00:00",
-    "published_raw": "2026-11-27T13:20:39Z",
-    "document_type": "decision",
-    "issuer": "Offshore Petroleum Regulator for Environment and Decommissioning",
-    "issuer_ids": [
-      "uk-gov:offshore-petroleum-regulator-for-environment-and-decommissioning"
-    ],
-    "summary": "Screening Directions",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Offshore Petroleum Regulator for Environment and Decommissioning",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 3303,
-    "first_seen": "2026-10-16T10:36:18.842579+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Que no lo dejen colgado esta temporada festiva con regalos inseguros: Compre de fuentes confiables",
-    "url": "https://www.cpsc.gov/es/Newsroom/News-Releases/2026/Dont-Be-Left-Out-in-the-Cold-This-Holiday-Season-with-Unsafe-Presents-Buy-from-Trusted-Sources",
-    "native_id": "https://www.cpsc.gov/_6d039050-7fba-4cdf-8361-f7db2f5e3963",
-    "published_at": null,
-    "published_raw": "Tue, 12/09/2025 - 12:00",
-    "summary": "La CPSC les recuerda a los consumidores comprar de manera segura esta temporada festiva",
+    "title": "Reserve Bank of India (Payment Banks - Know Your Customer) Amendment Directions, 2026",
+    "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13768&Mode=0",
+    "native_id": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13768&Mode=0",
+    "published_at": "2026-11-27T20:45:00+00:00",
+    "published_raw": "Fri, 27 Nov 2026 20:45:00",
+    "summary": "RBI/2026-27/316 DoR.AML.REC.No.266/14-01-001/2026-27 November 27, 2026 Reserve Bank of India (Payment Banks - Know Your Customer) Amendment Directions, 2026 The Reserve Bank has issued instructions on ‘Operation of Bank Accounts and Money Mules’ in its Reserve Bank of India (Payment Banks – Know Your Customer) Directions, 2025 , where under banks have been directed to undertake diligence measures, monitor the transactions meticulously to identify the accounts, which are operated as Money Mules and take appropriate action. The extant instructions have since been reviewed, and it has been decided to amend the Directions and direct banks by way of a Standard Operating Procedure (SOP) to identify, while protecting genuine customers from inconvenience, highly suspicious transaction / account, including those linked to money mule activity, cyber enabled and other financial frauds, or relating to transactions involving terrorist financing on one’s own behalf or on behalf of another person. It also puts in place a uniform, time-bound procedure for actions to be taken with respect to such transaction / account, including placing debit hold. 2. In exercise of the powers conferred by Section ",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Consumer Product Safety Commission",
-      "jurisdiction": "US",
-      "family": "product_safety"
+      "issuer": "Reserve Bank of India",
+      "jurisdiction": "IN",
+      "family": "monetary_and_supervisory"
     },
-    "primary_source_id": "us-cpsc-08fe06e2e6",
-    "n": 3537,
-    "first_seen": "2026-10-16T10:36:18.842579+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
+    "primary_source_id": "in-rbi-738b09bded",
+    "n": 12997,
+    "first_seen": "2026-11-27T21:58:58.067934+00:00",
+    "last_seen": "2026-11-28T08:55:55.608112+00:00",
     "source_ids": [
-      "us-cpsc-08fe06e2e6"
+      "in-rbi-738b09bded"
     ]
   },
   {
-    "title": "Ponga la seguridad en el menú para unas felices fiestas: la Comisión de Seguridad de Productos del Consumidor ofrece consejos para cocinar con seguridad",
-    "url": "https://www.cpsc.gov/es/Newsroom/News-Releases/2026/Put-Safety-on-the-Menu-Consumer-Product-Safety-Commission-Offers-Safe-Cooking-Tips-for-a-Joyful-Holiday-Season",
-    "native_id": "https://www.cpsc.gov/_59de4207-4ace-44ca-ace0-3cde0cfb8ddb",
-    "published_at": null,
-    "published_raw": "Wed, 11/19/2025 - 12:00",
-    "summary": "WASHINGTON, D.C. – A medida que las familias de todo Estados Unidos se preparan para reunirse en Acción de Gracias, la Comisión de Seguridad de Productos del Consumidor de Estados Unidos (CPSC, por sus siglas en inglés) emite un recordatorio urgente: la",
+    "title": "Reserve Bank of India (Regional Rural Banks - Know Your Customer) Second Amendment Directions, 2026",
+    "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13766&Mode=0",
+    "native_id": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13766&Mode=0",
+    "published_at": "2026-11-27T20:45:00+00:00",
+    "published_raw": "Fri, 27 Nov 2026 20:45:00",
+    "summary": "RBI/2026-27/314 DoR.AML.REC.No.265/14-01-001/2026-27 November 27, 2026 Reserve Bank of India (Regional Rural Banks - Know Your Customer) Second Amendment Directions, 2026 The Reserve Bank has issued instructions on ‘Operation of Bank Accounts and Money Mules’ in its Reserve Bank of India (Regional Rural Banks – Know Your Customer) Directions, 2025 , where under banks have been directed to undertake diligence measures, monitor the transactions meticulously to identify the accounts, which are operated as Money Mules and take appropriate action. The extant instructions have since been reviewed, and it has been decided to amend the Directions and direct banks by way of a Standard Operating Procedure (SOP) to identify, while protecting genuine customers from inconvenience, highly suspicious transaction / account, including those linked to money mule activity, cyber enabled and other financial frauds, or relating to transactions involving terrorist financing on one’s own behalf or on behalf of another person. It also puts in place a uniform, time-bound procedure for actions to be taken with respect to such transaction / account, including placing debit hold. 2. In exercise of the powers ",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Consumer Product Safety Commission",
-      "jurisdiction": "US",
-      "family": "product_safety"
+      "issuer": "Reserve Bank of India",
+      "jurisdiction": "IN",
+      "family": "monetary_and_supervisory"
     },
-    "primary_source_id": "us-cpsc-08fe06e2e6",
-    "n": 3538,
-    "first_seen": "2026-10-16T10:36:18.842579+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
+    "primary_source_id": "in-rbi-738b09bded",
+    "n": 12999,
+    "first_seen": "2026-11-27T21:58:58.067934+00:00",
+    "last_seen": "2026-11-28T08:55:55.608112+00:00",
     "source_ids": [
-      "us-cpsc-08fe06e2e6"
+      "in-rbi-738b09bded"
     ]
   },
   {
-    "title": "Untitled Letters",
-    "url": "http://www.fda.gov/drugs/warning-letters-and-notice-violation-letters-pharmaceutical-companies/untitled-letters",
-    "native_id": "http://www.fda.gov/drugs/warning-letters-and-notice-violation-letters-pharmaceutical-companies/untitled-letters",
-    "published_at": "2026-11-27T16:20:01+00:00",
-    "published_raw": "Fri, 27 Nov 2026 11:20:01 EST",
-    "summary": "These letters are supplied by the CDER Freedom of Information Office and only cover Office of Prescription Drug Promotion's untitled letters. FDA may have redacted or edited some of the letters to remove confidential information.",
+    "title": "Reserve Bank of India (Local Area Banks - Know Your Customer) Second Amendment Directions, 2026",
+    "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13765&Mode=0",
+    "native_id": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13765&Mode=0",
+    "published_at": "2026-11-27T20:45:00+00:00",
+    "published_raw": "Fri, 27 Nov 2026 20:45:00",
+    "summary": "RBI/2026-27/313 DoR.AML.REC.No.264/14-01-001/2026-27 November 27, 2026 Reserve Bank of India (Local Area Banks - Know Your Customer) Second Amendment Directions, 2026 The Reserve Bank has issued instructions on ‘Operation of Bank Accounts and Money Mules’ in its Reserve Bank of India (Local Area Banks – Know Your Customer) Directions, 2025 , where under banks have been directed to undertake diligence measures, monitor the transactions meticulously to identify the accounts, which are operated as Money Mules and take appropriate action. The extant instructions have since been reviewed, and it has been decided to amend the Directions and direct banks by way of a Standard Operating Procedure (SOP) to identify, while protecting genuine customers from inconvenience, highly suspicious transaction / account, including those linked to money mule activity, cyber enabled and other financial frauds, or relating to transactions involving terrorist financing on one’s own behalf or on behalf of another person. It also puts in place a uniform, time-bound procedure for actions to be taken with respect to such transaction / account, including placing debit hold. 2. In exercise of the powers conferre",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Drugs",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
+      "issuer": "Reserve Bank of India",
+      "jurisdiction": "IN",
+      "family": "monetary_and_supervisory"
     },
-    "primary_source_id": "us-fda-5696b24295",
-    "n": 5191,
-    "first_seen": "2026-10-17T11:48:15.567792+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
+    "primary_source_id": "in-rbi-738b09bded",
+    "n": 13000,
+    "first_seen": "2026-11-27T21:58:58.067934+00:00",
+    "last_seen": "2026-11-28T08:55:55.608112+00:00",
     "source_ids": [
-      "us-fda-5696b24295"
+      "in-rbi-738b09bded"
     ]
   },
   {
-    "title": "Forward look: 30 November - 13 December 2026",
-    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/27/forward-look-2026/",
-    "native_id": "139339",
-    "published_at": "2026-11-27T16:30:00+00:00",
-    "published_raw": "2026-11-27T17:30:00+01:00",
-    "summary": "Overview of the main subjects to be discussed at meetings of the Council of the EU over the next two weeks and upcoming media events.",
+    "title": "Reserve Bank of India (Commercial Banks - Know Your Customer) Second Amendment Directions, 2026",
+    "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13763&Mode=0",
+    "native_id": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13763&Mode=0",
+    "published_at": "2026-11-27T20:45:00+00:00",
+    "published_raw": "Fri, 27 Nov 2026 20:45:00",
+    "summary": "RBI/2026-27/311 DoR.AML.REC.No.263/14-01-001/2026-27 November 27, 2026 Reserve Bank of India (Commercial Banks - Know Your Customer) Second Amendment Directions, 2026 The Reserve Bank has issued instructions on ‘Operation of Bank Accounts and Money Mules’ in its Reserve Bank of India (Commercial Banks – Know Your Customer) Directions, 2025 , where under banks have been directed to undertake diligence measures, monitor the transactions meticulously to identify the accounts, which are operated as Money Mules and take appropriate action. The extant instructions have since been reviewed, and it has been decided to amend the Directions and direct banks by way of a Standard Operating Procedure (SOP) to identify, while protecting genuine customers from inconvenience, highly suspicious transaction / account, including those linked to money mule activity, cyber enabled and other financial frauds, or relating to transactions involving terrorist financing on one’s own behalf or on behalf of another person. It also puts in place a uniform, time-bound procedure for actions to be taken with respect to such transaction / account, including placing debit hold. 2. In exercise of the powers conferre",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Council of the European Union",
-      "jurisdiction": "EU",
-      "family": "sanctions_and_legislation"
+      "issuer": "Reserve Bank of India",
+      "jurisdiction": "IN",
+      "family": "monetary_and_supervisory"
     },
-    "primary_source_id": "eu-council-9d9e9444da",
-    "n": 5222,
-    "first_seen": "2026-10-17T12:51:21.988058+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
+    "primary_source_id": "in-rbi-738b09bded",
+    "n": 13002,
+    "first_seen": "2026-11-27T21:58:58.067934+00:00",
+    "last_seen": "2026-11-28T08:55:55.608112+00:00",
     "source_ids": [
-      "eu-council-9d9e9444da"
-    ]
-  },
-  {
-    "title": "Generic Drug Facilities, Sites and Organization Lists",
-    "url": "http://www.fda.gov/industry/generic-drug-user-fee-amendments/generic-drug-facilities-sites-and-organization-lists",
-    "native_id": "http://www.fda.gov/industry/generic-drug-user-fee-amendments/generic-drug-facilities-sites-and-organization-lists",
-    "published_at": "2026-11-27T17:11:44+00:00",
-    "published_raw": "Fri, 27 Nov 2026 12:11:44 EST",
-    "summary": "Generic Drug Facilities, Sites and Organization Lists",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Drugs",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-5696b24295",
-    "n": 6652,
-    "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
-    "source_ids": [
-      "us-fda-5696b24295"
-    ]
-  },
-  {
-    "title": "Medical devices given exceptional use authorisations",
-    "url": "https://www.gov.uk/government/publications/medical-devices-given-exceptional-use-authorisations",
-    "native_id": "/government/publications/medical-devices-given-exceptional-use-authorisations",
-    "published_at": "2026-11-27T10:47:34+00:00",
-    "published_raw": "2026-11-27T10:47:34Z",
-    "document_type": "decision",
-    "issuer": "Medicines and Healthcare products Regulatory Agency",
-    "issuer_ids": [
-      "uk-gov:medicines-and-healthcare-products-regulatory-agency"
-    ],
-    "summary": "List of manufacturers and their medical devices granted an exemption by MHRA. The list also includes manufacturers whose exemption expired or was cancelled.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Medicines and Healthcare products Regulatory Agency",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 6834,
-    "first_seen": "2026-10-27T18:43:32.673853+00:00",
-    "last_seen": "2026-11-27T21:58:58.067934+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
+      "in-rbi-738b09bded"
     ]
   }
 ]

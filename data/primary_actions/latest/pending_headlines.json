@@ -1,176 +1,92 @@
 [
   {
-    "n": 12959,
-    "title": "Company Names Tribunal decision: Amazon Curier Ltd",
-    "url": "https://www.gov.uk/government/publications/company-names-tribunal-decision-amazon-curier-ltd",
-    "published_at": "2026-11-27T09:58:45+00:00",
-    "official_issuer": "Company Names Tribunal",
-    "document_type": "decision",
-    "document_stage": "decision_published",
+    "n": 13009,
+    "title": "H.R. 11126 (IH) - Families Fly Together Act of 2026",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11126ih",
+    "published_at": "2026-11-28T04:15:00+00:00",
+    "official_issuer": "Congressional Bills",
+    "document_type": "bill",
+    "document_stage": "legislative_document_published",
     "source_ids": [
-      "uk-govuk-decision"
+      "us-govinfo-bills"
     ]
   },
   {
-    "n": 12960,
-    "title": "IFRS 18 Exposure Draft",
-    "url": "https://www.gov.uk/government/consultations/ifrs-18-presentation-and-disclosure-in-financial-statements-exposure-draft",
-    "published_at": "2026-11-27T16:15:05+00:00",
-    "official_issuer": "HM Treasury",
-    "document_type": "consultation_outcome",
-    "document_stage": "consultation_response_published",
+    "n": 13010,
+    "title": "H.R. 11124 (IH) - Providing Relief, Opportunity, and Temporary Extensions for Countries in Turmoil Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11124ih",
+    "published_at": "2026-11-28T04:15:00+00:00",
+    "official_issuer": "Congressional Bills",
+    "document_type": "bill",
+    "document_stage": "legislative_document_published",
     "source_ids": [
-      "uk-govuk-consultation_outcome"
+      "us-govinfo-bills"
     ]
   },
   {
-    "n": 12961,
-    "title": "Product Recall: Next Baby Sleep Bags (2611-0216)",
-    "url": "https://www.gov.uk/product-safety-alerts-reports-recalls/product-recall-next-baby-sleep-bags-2611-0216",
-    "published_at": "2026-11-27T16:56:51+00:00",
-    "official_issuer": "Office for Product Safety and Standards",
-    "document_type": "product_safety_alert_report_recall",
-    "document_stage": "requires_semantic_review",
+    "n": 13011,
+    "title": "H.R. 11165 (IH) - To amend the Egg Products Inspection Act to protect the sale by small farms and use of ungraded shell eggs that are clean, sound, and clearly labeled, and for other purposes.",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11165ih",
+    "published_at": "2026-11-28T04:15:00+00:00",
+    "official_issuer": "Congressional Bills",
+    "document_type": "bill",
+    "document_stage": "legislative_document_published",
     "source_ids": [
-      "uk-govuk-product_safety_alert_report_recall"
+      "us-govinfo-bills"
     ]
   },
   {
-    "n": 12962,
-    "title": "Product Safety Report: Electric Blender (2611-0126)",
-    "url": "https://www.gov.uk/product-safety-alerts-reports-recalls/product-safety-report-electric-blender-2611-0126",
-    "published_at": "2026-11-27T12:46:09+00:00",
-    "official_issuer": "Office for Product Safety and Standards",
-    "document_type": "product_safety_alert_report_recall",
-    "document_stage": "requires_semantic_review",
+    "n": 13012,
+    "title": "H.R. 11127 (IH) - Cyber Resilience for Critical Infrastructure Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11127ih",
+    "published_at": "2026-11-28T04:15:00+00:00",
+    "official_issuer": "Congressional Bills",
+    "document_type": "bill",
+    "document_stage": "legislative_document_published",
     "source_ids": [
-      "uk-govuk-product_safety_alert_report_recall"
+      "us-govinfo-bills"
     ]
   },
   {
-    "n": 12963,
-    "title": "Product Safety Report: Qiao Jing Ling Mini-Flight Indoor Micro Air Vehicle sold via Amazon (2611-0161)",
-    "url": "https://www.gov.uk/product-safety-alerts-reports-recalls/product-safety-report-qiao-jing-ling-mini-flight-indoor-micro-air-vehicle-sold-via-amazon-2611-0161",
-    "published_at": "2026-11-27T12:43:21+00:00",
-    "official_issuer": "Office for Product Safety and Standards",
-    "document_type": "product_safety_alert_report_recall",
-    "document_stage": "requires_semantic_review",
+    "n": 13013,
+    "title": "H.R. 11122 (IH) - To direct the Secretary of Energy to develop and maintain a website containing information regarding data centers and LEED certifications, and for other purposes.",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11122ih",
+    "published_at": "2026-11-28T04:15:00+00:00",
+    "official_issuer": "Congressional Bills",
+    "document_type": "bill",
+    "document_stage": "legislative_document_published",
     "source_ids": [
-      "uk-govuk-product_safety_alert_report_recall"
+      "us-govinfo-bills"
     ]
   },
   {
-    "n": 12964,
-    "title": "Product Safety Report: Rattle Box Safe Teethers sold via Amazon (2611-0155)",
-    "url": "https://www.gov.uk/product-safety-alerts-reports-recalls/product-safety-report-rattle-box-safe-teethers-sold-via-amazon-2611-0155",
-    "published_at": "2026-11-27T12:39:46+00:00",
-    "official_issuer": "Office for Product Safety and Standards",
-    "document_type": "product_safety_alert_report_recall",
-    "document_stage": "requires_semantic_review",
+    "n": 13014,
+    "title": "H.R. 11125 (IH) - Transboundary Groundwater Research and Mapping Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11125ih",
+    "published_at": "2026-11-28T04:15:00+00:00",
+    "official_issuer": "Congressional Bills",
+    "document_type": "bill",
+    "document_stage": "legislative_document_published",
     "source_ids": [
-      "uk-govuk-product_safety_alert_report_recall"
+      "us-govinfo-bills"
     ]
   },
   {
-    "n": 12965,
-    "title": "Product Safety Report: Feytory Angle Grinder (2611-0044)",
-    "url": "https://www.gov.uk/product-safety-alerts-reports-recalls/product-safety-report-feytory-angle-grinder-2611-0044",
-    "published_at": "2026-11-27T12:36:53+00:00",
-    "official_issuer": "Office for Product Safety and Standards",
-    "document_type": "product_safety_alert_report_recall",
-    "document_stage": "requires_semantic_review",
+    "n": 13015,
+    "title": "H.R. 11123 (IH) - Enhancing Oversight to End Discrimination in Policing Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr11123ih",
+    "published_at": "2026-11-28T04:15:00+00:00",
+    "official_issuer": "Congressional Bills",
+    "document_type": "bill",
+    "document_stage": "legislative_document_published",
     "source_ids": [
-      "uk-govuk-product_safety_alert_report_recall"
+      "us-govinfo-bills"
     ]
   },
   {
-    "n": 12966,
-    "title": "Product Safety Report: WHSCwp Light String Garland (2611-0048)",
-    "url": "https://www.gov.uk/product-safety-alerts-reports-recalls/product-safety-report-whscwp-light-string-garland-2611-0048",
-    "published_at": "2026-11-27T12:35:32+00:00",
-    "official_issuer": "Office for Product Safety and Standards",
-    "document_type": "product_safety_alert_report_recall",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "uk-govuk-product_safety_alert_report_recall"
-    ]
-  },
-  {
-    "n": 12967,
-    "title": "Product Safety Report: Evercross Children’s Electric Motorcycle (2610-0120)",
-    "url": "https://www.gov.uk/product-safety-alerts-reports-recalls/product-safety-report-evercross-childrens-electric-motorcycle-2610-0120",
-    "published_at": "2026-11-27T12:33:42+00:00",
-    "official_issuer": "Office for Product Safety and Standards",
-    "document_type": "product_safety_alert_report_recall",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "uk-govuk-product_safety_alert_report_recall"
-    ]
-  },
-  {
-    "n": 12968,
-    "title": "Product Safety Report: Cordless Chainsaw and AC/DC Adaptor (2610-0250)",
-    "url": "https://www.gov.uk/product-safety-alerts-reports-recalls/product-safety-report-cordless-chainsaw-and-ac-slash-dc-adaptor-2610-0250",
-    "published_at": "2026-11-27T10:49:36+00:00",
-    "official_issuer": "Office for Product Safety and Standards",
-    "document_type": "product_safety_alert_report_recall",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "uk-govuk-product_safety_alert_report_recall"
-    ]
-  },
-  {
-    "n": 12969,
-    "title": "Product Safety Report: Electric Pruning Shears and AC/DC Adaptor sold via Amazon (2610-0253)",
-    "url": "https://www.gov.uk/product-safety-alerts-reports-recalls/product-safety-report-electric-pruning-shears-and-ac-slash-dc-adaptor-2610-0253",
-    "published_at": "2026-11-27T10:43:58+00:00",
-    "official_issuer": "Office for Product Safety and Standards",
-    "document_type": "product_safety_alert_report_recall",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "uk-govuk-product_safety_alert_report_recall"
-    ]
-  },
-  {
-    "n": 12970,
-    "title": "Product Recall: Tesco Witch Hat with Hair Assortment (2611-0192)",
-    "url": "https://www.gov.uk/product-safety-alerts-reports-recalls/product-recall-tesco-witch-hat-with-hair-assortment-2611-0192",
-    "published_at": "2026-11-27T10:38:58+00:00",
-    "official_issuer": "Office for Product Safety and Standards",
-    "document_type": "product_safety_alert_report_recall",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "uk-govuk-product_safety_alert_report_recall"
-    ]
-  },
-  {
-    "n": 12971,
-    "title": "Product Recall: Hobbycraft Create & Celebrate Warm White LED Curtain Lights (2611-0148)",
-    "url": "https://www.gov.uk/product-safety-alerts-reports-recalls/product-recall-hobbycraft-create-and-celebrate-warm-white-led-curtain-lights-2611-0148",
-    "published_at": "2026-11-27T10:36:57+00:00",
-    "official_issuer": "Office for Product Safety and Standards",
-    "document_type": "product_safety_alert_report_recall",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "uk-govuk-product_safety_alert_report_recall"
-    ]
-  },
-  {
-    "n": 12972,
-    "title": "Estonia: tax treaties",
-    "url": "https://www.gov.uk/government/publications/estonia-tax-treaties",
-    "published_at": "2026-11-27T11:51:28+00:00",
-    "official_issuer": "HM Revenue & Customs",
-    "document_type": "international_treaty",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "uk-govuk-international_treaty"
-    ]
-  },
-  {
-    "n": 12973,
-    "title": "FDIC Publishes October Enforcement Actions",
-    "url": "https://www.fdic.gov/news/press-releases/2026/fdic-publishes-october-enforcement-actions",
+    "n": 13016,
+    "title": "First-Citizens Bank & Trust Company, Raleigh, North Carolina Assumes Subst…",
+    "url": "https://www.fdic.gov/news/press-releases/2026/first-citizens-bank-trust-company-raleigh-north-carolina-assumes",
     "published_at": "2026-11-27T00:00:00+00:00",
     "official_issuer": "Federal Deposit Insurance Corporation",
     "document_type": "official_announcement",
@@ -180,118 +96,22 @@
     ]
   },
   {
-    "n": 12974,
-    "title": "FDIC Seeks Input Regarding Information Technology Examinations",
-    "url": "https://www.fdic.gov/news/press-releases/2026/fdic-seeks-input-regarding-information-technology-examinations",
-    "published_at": "2026-11-27T00:00:00+00:00",
-    "official_issuer": "Federal Deposit Insurance Corporation",
+    "n": 13017,
+    "title": "Abdallah Candies Issues a Voluntary Recall of Plain Chocolate Fudge Due to undeclared allergen",
+    "url": "http://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/abdallah-candies-issues-voluntary-recall-plain-chocolate-fudge-due-undeclared-allergen",
+    "published_at": "2026-11-27T18:45:00+00:00",
+    "official_issuer": "Food and Drug Administration — Food Safety Recalls",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "us-fdic-index"
+      "us-fda-2cdcdcca63"
     ]
   },
   {
-    "n": 12975,
-    "title": "GDUFA II Enhanced Accountability & Reporting",
-    "url": "http://www.fda.gov/industry/generic-drug-user-fee-amendments/gdufa-ii-enhanced-accountability-reporting",
-    "published_at": "2026-11-27T14:41:17+00:00",
-    "official_issuer": "Food and Drug Administration — What's New: Drugs",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "us-fda-5696b24295"
-    ]
-  },
-  {
-    "n": 12982,
-    "title": "Keynote speech by Commissioner Albuquerque at the Training Day' of the 10th Anniversary of the ECB Simulation Conference for University Students",
-    "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2613",
-    "published_at": "2026-11-27T12:48:42+00:00",
-    "official_issuer": "European Commission press and decisions",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "eu-commission-07d4f58ccf"
-    ]
-  },
-  {
-    "n": 12983,
-    "title": "Daily News 27 / 11 / 2026",
-    "url": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2609",
-    "published_at": "2026-11-27T10:27:23+00:00",
-    "official_issuer": "European Commission press and decisions",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "eu-commission-07d4f58ccf"
-    ]
-  },
-  {
-    "n": 12984,
-    "title": "Commission unconditionally approves Deutsche Börse's acquisition of Allfunds",
-    "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2592",
-    "published_at": "2026-11-26T23:00:00+00:00",
-    "official_issuer": "European Commission press and decisions",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "eu-commission-07d4f58ccf"
-    ]
-  },
-  {
-    "n": 12985,
-    "title": "Media advisory - Transport, Telecommunications and Energy Council (Transport and Telecommunications) of 30 November and 1 December 2026",
-    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/27/media-advisory-transport-telecommunications-and-energy-council-transport-and-telecommunications-of-30-november-and-1-december-2026/",
-    "published_at": "2026-11-27T16:20:00+00:00",
-    "official_issuer": "Council of the European Union",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "eu-council-9d9e9444da"
-    ]
-  },
-  {
-    "n": 12986,
-    "title": "Media advisory - Foreign Affairs Council (Trade) 30 November 2026",
-    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/27/media-advisory-foreign-affairs-council-trade-of-30-november-2026/",
-    "published_at": "2026-11-27T16:10:00+00:00",
-    "official_issuer": "Council of the European Union",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "eu-council-9d9e9444da"
-    ]
-  },
-  {
-    "n": 12987,
-    "title": "Weekly schedule of President António Costa",
-    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/27/weekly-schedule-of-president-antonio-costa/",
-    "published_at": "2026-11-27T15:00:00+00:00",
-    "official_issuer": "Council of the European Union",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "eu-council-9d9e9444da"
-    ]
-  },
-  {
-    "n": 12988,
-    "title": "Press briefing - Competitiveness Council of 3 and 4 December 2026",
-    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/11/27/press-briefing-competitiveness-council-of-3-and-4-december-2026/",
-    "published_at": "2026-11-27T10:15:00+00:00",
-    "official_issuer": "Council of the European Union",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "eu-council-9d9e9444da"
-    ]
-  },
-  {
-    "n": 12989,
-    "title": "Decisions taken by the Governing Council of the ECB (in addition to decisions setting interest rates)",
-    "url": "https://www.ecb.europa.eu//press/govcdec/otherdec/2026/html/ecb.gc261127~13ecadc0f2.en.html",
-    "published_at": "2026-11-27T14:00:00+00:00",
+    "n": 13018,
+    "title": "Boris Vujčić: Interview with Kurier",
+    "url": "https://www.ecb.europa.eu//press/inter/date/2026/html/ecb.in261128~10e11f78f1.en.html",
+    "published_at": "2026-11-28T08:00:00+00:00",
     "official_issuer": "European Central Bank",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
@@ -300,231 +120,15 @@
     ]
   },
   {
-    "n": 12990,
-    "title": "RBI Issues Amendment Directions on ‘Suspected Money Mule Accounts to Prevent Cyber-enabled Financial Frauds’",
-    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64062",
-    "published_at": "2026-11-27T20:45:00+00:00",
-    "official_issuer": "Reserve Bank of India",
+    "n": 13019,
+    "title": "Upcoming speaking engagements for December 2026 and January 2027 - Reserve Bank of New Zealand",
+    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPSnRBWFJkQ1QyV1RVWDV2MHNNX05hNWd2ektFdWR1cXp3Mm5NM1QtNE1JdklMejZGVkt0X0xaM2h4b1Z2bzY0ZGtHcGM1SXhtS3dSdE1LTHVBOXA3dEMzWEJUQnRpalFRM1NZSDF1UFg3T184Y0tfSXU1SDYyYUFGbVVpcU5NS0lDTmdnNHBzR1o5TGFOSXU3V3Y0UmQ4aXhESDdqaWJ2eEpmMGtRV1VFZFBPN1VGQnM",
+    "published_at": "2026-11-26T04:13:21+00:00",
+    "official_issuer": "Reserve Bank of New Zealand (official-site news mirror)",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "in-rbi-cc71120b98"
-    ]
-  },
-  {
-    "n": 12991,
-    "title": "RBI to conduct Overnight Variable Rate Repo (VRR) auction under LAF on November 30, 2026",
-    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64061",
-    "published_at": "2026-11-27T19:45:00+00:00",
-    "official_issuer": "Reserve Bank of India",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "in-rbi-cc71120b98"
-    ]
-  },
-  {
-    "n": 12992,
-    "title": "Auction of State Government Securities",
-    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64060",
-    "published_at": "2026-11-27T19:00:00+00:00",
-    "official_issuer": "Reserve Bank of India",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "in-rbi-cc71120b98"
-    ]
-  },
-  {
-    "n": 12993,
-    "title": "Thirty First Meeting of the Standing Advisory Committee (SAC) to Review the Flow of Credit to the MSME Sector in Kolkata on November 27, 2026",
-    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64059",
-    "published_at": "2026-11-27T18:25:00+00:00",
-    "official_issuer": "Reserve Bank of India",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "in-rbi-cc71120b98"
-    ]
-  },
-  {
-    "n": 12994,
-    "title": "Auction of 91-Day, 182-Day and 364-Day Treasury Bills",
-    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64058",
-    "published_at": "2026-11-27T17:35:00+00:00",
-    "official_issuer": "Reserve Bank of India",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "in-rbi-cc71120b98"
-    ]
-  },
-  {
-    "n": 12995,
-    "title": "Reserve Bank of India – Bulletin Weekly Statistical Supplement – Extract",
-    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64057",
-    "published_at": "2026-11-27T17:00:00+00:00",
-    "official_issuer": "Reserve Bank of India",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "in-rbi-cc71120b98"
-    ]
-  },
-  {
-    "n": 12996,
-    "title": "Government Stock - Full Auction Results",
-    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=64056",
-    "published_at": "2026-11-27T15:35:00+00:00",
-    "official_issuer": "Reserve Bank of India",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "in-rbi-cc71120b98"
-    ]
-  },
-  {
-    "n": 12997,
-    "title": "Reserve Bank of India (Payment Banks - Know Your Customer) Amendment Directions, 2026",
-    "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13768&Mode=0",
-    "published_at": "2026-11-27T20:45:00+00:00",
-    "official_issuer": "Reserve Bank of India",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "in-rbi-738b09bded"
-    ]
-  },
-  {
-    "n": 12998,
-    "title": "Reserve Bank of India (Urban Co-operative Banks - Know Your Customer) Second Amendment Directions, 2026",
-    "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13767&Mode=0",
-    "published_at": "2026-11-27T20:45:00+00:00",
-    "official_issuer": "Reserve Bank of India",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "in-rbi-738b09bded"
-    ]
-  },
-  {
-    "n": 12999,
-    "title": "Reserve Bank of India (Regional Rural Banks - Know Your Customer) Second Amendment Directions, 2026",
-    "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13766&Mode=0",
-    "published_at": "2026-11-27T20:45:00+00:00",
-    "official_issuer": "Reserve Bank of India",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "in-rbi-738b09bded"
-    ]
-  },
-  {
-    "n": 13000,
-    "title": "Reserve Bank of India (Local Area Banks - Know Your Customer) Second Amendment Directions, 2026",
-    "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13765&Mode=0",
-    "published_at": "2026-11-27T20:45:00+00:00",
-    "official_issuer": "Reserve Bank of India",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "in-rbi-738b09bded"
-    ]
-  },
-  {
-    "n": 13001,
-    "title": "Reserve Bank of India (Small Finance Banks - Know Your Customer) Second Amendment Directions, 2026",
-    "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13764&Mode=0",
-    "published_at": "2026-11-27T20:45:00+00:00",
-    "official_issuer": "Reserve Bank of India",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "in-rbi-738b09bded"
-    ]
-  },
-  {
-    "n": 13002,
-    "title": "Reserve Bank of India (Commercial Banks - Know Your Customer) Second Amendment Directions, 2026",
-    "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13763&Mode=0",
-    "published_at": "2026-11-27T20:45:00+00:00",
-    "official_issuer": "Reserve Bank of India",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "in-rbi-738b09bded"
-    ]
-  },
-  {
-    "n": 13003,
-    "title": "Reserve Bank of India (White Label ATM Operators) Directions, 2026",
-    "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13762&Mode=0",
-    "published_at": "2026-11-27T17:30:00+00:00",
-    "official_issuer": "Reserve Bank of India",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "in-rbi-738b09bded"
-    ]
-  },
-  {
-    "n": 13004,
-    "title": "Reserve Bank of India (Cash Withdrawal Transactions through Automated Teller Machines and Point of Sale Terminals) Directions, 2026",
-    "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13761&Mode=0",
-    "published_at": "2026-11-27T17:30:00+00:00",
-    "official_issuer": "Reserve Bank of India",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "in-rbi-738b09bded"
-    ]
-  },
-  {
-    "n": 13005,
-    "title": "Reserve Bank of India (Digital Payments – Card-based transaction) Directions, 2026",
-    "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13760&Mode=0",
-    "published_at": "2026-11-27T17:30:00+00:00",
-    "official_issuer": "Reserve Bank of India",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "in-rbi-738b09bded"
-    ]
-  },
-  {
-    "n": 13006,
-    "title": "Section 42(1) of the Reserve Bank of India Act, 1934 - Change in Daily Minimum Cash Reserve Maintenance Requirement",
-    "url": "https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13759&Mode=0",
-    "published_at": "2026-11-27T16:55:00+00:00",
-    "official_issuer": "Reserve Bank of India",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "in-rbi-738b09bded"
-    ]
-  },
-  {
-    "n": 13007,
-    "title": "JFTC Reviews the Proposed Acquisition of Shares of Fuji Pack Co., Ltd. by SEIREN CO., LTD. - 公正取引委員会",
-    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5UcmpQdjdoMzZtS2lVQUx6b2VaU0g0UkdISjFFQzI0UjZBUVZ0RzR5amlzM3pmTFhoRmxPa3QyNzNsTW9SZko3QUQ1dktBSlRhRUpTdTlxMWhYcXlmVkpMZE9Fd2ZYc1Z6bHIzRktCZkJPYUtFamtzYVhQMlU",
-    "published_at": "2026-11-27T09:53:54+00:00",
-    "official_issuer": "Japan Fair Trade Commission (official-site news mirror)",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "jp-jftc-gnews"
-    ]
-  },
-  {
-    "n": 13008,
-    "title": "Services domestic regulation disciplines enter into force for Kazakhstan",
-    "url": "https://www.wto.org/english/news_e/news26_e/jssdr_25nov26_566_e.htm",
-    "published_at": "2026-11-25T00:00:00+00:00",
-    "official_issuer": "World Trade Organization disputes and decisions",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "io-wto-497f28e20d"
+      "nz-rbnz-gnews"
     ]
   }
 ]
