@@ -1,6 +1,6 @@
 {
   "stage": "outcome",
-  "fetched_at": "2026-11-27T19:06:21.045279-05:00",
+  "fetched_at": "2026-11-27T22:27:45.855438-05:00",
   "fred": {
     "DGS30": {
       "available": true,
@@ -490,27 +490,27 @@
       "per_index": {
         "Nikkei": {
           "available": true,
-          "date": "2026-11-26",
-          "last": 57499.16,
-          "pct_1d": 0.86
+          "date": "2026-11-27",
+          "last": 58711.11,
+          "pct_1d": 2.11
         },
         "Hang Seng": {
           "available": true,
-          "date": "2026-11-26",
-          "last": 22226.88,
-          "pct_1d": 1.19
+          "date": "2026-11-27",
+          "last": 22694.77,
+          "pct_1d": 2.11
         },
         "Shanghai": {
           "available": true,
-          "date": "2026-11-26",
-          "last": 3476.88,
-          "pct_1d": 0.01
+          "date": "2026-11-27",
+          "last": 3606.49,
+          "pct_1d": 3.73
         },
         "Kospi": {
           "available": true,
-          "date": "2026-11-26",
-          "last": 4711.21,
-          "pct_1d": 0.29
+          "date": "2026-11-27",
+          "last": 4915.68,
+          "pct_1d": 4.34
         },
         "ASX200": {
           "available": true,
@@ -519,36 +519,36 @@
           "pct_1d": 0.8
         }
       },
-      "composite_avg": 0.63
+      "composite_avg": 2.62
     },
     "europe": {
       "per_index": {
         "FTSE": {
           "available": true,
-          "date": "2026-11-26",
-          "last": 10609.3,
-          "pct_1d": 1.75
+          "date": "2026-11-27",
+          "last": 10698.8,
+          "pct_1d": 0.84
         },
         "DAX": {
           "available": true,
-          "date": "2026-11-26",
-          "last": 25215.52,
-          "pct_1d": 2.08
+          "date": "2026-11-27",
+          "last": 25441.24,
+          "pct_1d": 0.9
         },
         "CAC": {
           "available": true,
-          "date": "2026-11-26",
-          "last": 8108.74,
-          "pct_1d": 1.61
+          "date": "2026-11-27",
+          "last": 8156.09,
+          "pct_1d": 0.58
         },
         "EuroStoxx50": {
           "available": true,
-          "date": "2026-11-26",
-          "last": 6014.74,
-          "pct_1d": 2.04
+          "date": "2026-11-27",
+          "last": 6089.2,
+          "pct_1d": 1.24
         }
       },
-      "composite_avg": 1.87
+      "composite_avg": 0.89
     }
   },
   "etf_premarket": {},
