@@ -1,6 +1,6 @@
 {
   "stage": "outcome",
-  "fetched_at": "2026-11-27T16:53:08.731728-05:00",
+  "fetched_at": "2026-11-27T19:06:21.045279-05:00",
   "fred": {
     "DGS30": {
       "available": true,
@@ -525,30 +525,30 @@
       "per_index": {
         "FTSE": {
           "available": true,
-          "date": "2026-11-27",
-          "last": 10698.81,
-          "pct_1d": 0.84
+          "date": "2026-11-26",
+          "last": 10609.3,
+          "pct_1d": 1.75
         },
         "DAX": {
           "available": true,
-          "date": "2026-11-27",
-          "last": 25441.24,
-          "pct_1d": 0.9
+          "date": "2026-11-26",
+          "last": 25215.52,
+          "pct_1d": 2.08
         },
         "CAC": {
           "available": true,
-          "date": "2026-11-27",
-          "last": 8156.09,
-          "pct_1d": 0.58
+          "date": "2026-11-26",
+          "last": 8108.74,
+          "pct_1d": 1.61
         },
         "EuroStoxx50": {
           "available": true,
-          "date": "2026-11-27",
-          "last": 6089.2,
-          "pct_1d": 1.24
+          "date": "2026-11-26",
+          "last": 6014.74,
+          "pct_1d": 2.04
         }
       },
-      "composite_avg": 0.89
+      "composite_avg": 1.87
     }
   },
   "etf_premarket": {},
