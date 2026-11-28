@@ -22,7 +22,7 @@
         "3d": -0.45,
         "5d": 1.15
       },
-      "mfe_pct": 2.36,
+      "mfe_pct": 2.37,
       "mfe_day": "2026-11-27",
       "ever_profitable": true,
       "first_profitable_day": "2026-11-19"
@@ -178,7 +178,7 @@
         "3d": -1.46,
         "5d": 0.0
       },
-      "mfe_pct": 0.91,
+      "mfe_pct": 0.9,
       "mfe_day": "2026-11-27",
       "ever_profitable": true,
       "first_profitable_day": "2026-11-19"
@@ -568,7 +568,7 @@
         "3d": 9.23,
         "5d": 11.66
       },
-      "mfe_pct": 11.98,
+      "mfe_pct": 12.1,
       "mfe_day": "2026-11-27",
       "ever_profitable": true,
       "first_profitable_day": "2026-11-19"
@@ -1296,7 +1296,7 @@
         "3d": -2.66,
         "5d": -0.68
       },
-      "mfe_pct": 0.25,
+      "mfe_pct": 0.3,
       "mfe_day": "2026-11-27",
       "ever_profitable": true,
       "first_profitable_day": "2026-11-27"
@@ -1400,7 +1400,7 @@
         "3d": -1.64,
         "5d": 4.4
       },
-      "mfe_pct": 4.96,
+      "mfe_pct": 4.98,
       "mfe_day": "2026-11-27",
       "ever_profitable": true,
       "first_profitable_day": "2026-11-19"
@@ -1426,10 +1426,10 @@
         "3d": -4.44,
         "5d": -1.06
       },
-      "mfe_pct": 0.0,
-      "mfe_day": null,
-      "ever_profitable": false,
-      "first_profitable_day": null
+      "mfe_pct": 0.03,
+      "mfe_day": "2026-11-27",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-11-27"
     },
     {
       "signal_date": "2026-11-19",
@@ -1504,7 +1504,7 @@
         "3d": -4.38,
         "5d": 1.02
       },
-      "mfe_pct": 1.17,
+      "mfe_pct": 1.18,
       "mfe_day": "2026-11-27",
       "ever_profitable": true,
       "first_profitable_day": "2026-11-19"
@@ -1556,7 +1556,7 @@
         "3d": -0.06,
         "5d": 1.56
       },
-      "mfe_pct": 1.68,
+      "mfe_pct": 1.7,
       "mfe_day": "2026-11-27",
       "ever_profitable": true,
       "first_profitable_day": "2026-11-25"
@@ -2785,8 +2785,8 @@
     "n_suggestions": 106,
     "ever_profitable": {
       "n": 106,
-      "wins": 100,
-      "win_rate": 94.3
+      "wins": 101,
+      "win_rate": 95.3
     },
     "close_1d": {
       "n": 106,
@@ -2811,10 +2811,10 @@
     "side_buy": {
       "n": 67,
       "ever_profitable": {
-        "n": 61,
-        "wins": 61,
+        "n": 62,
+        "wins": 62,
         "win_rate": 100.0,
-        "avg": 2.26
+        "avg": 2.22
       },
       "close_5d": {
         "n": 67,
@@ -2829,7 +2829,7 @@
         "n": 39,
         "wins": 39,
         "win_rate": 100.0,
-        "avg": 8.1
+        "avg": 8.11
       },
       "close_5d": {
         "n": 39,
